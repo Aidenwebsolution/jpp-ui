@@ -1,0 +1,78 @@
+<section>
+  <div class="banner-title">
+    <img src="img/banner/news-media.jpg" class="img-responsive" title="NEWS & MEDIA" alt="NEWS & MEDIA">
+  </div>
+
+</section>
+<section>
+  <div class="page-title text-center">
+    <div class="border-blue"></div>
+    <div class="panther-punch">
+      <img src="img/object/punch.jpg" title="Panther-Punch" alt="Panther-Punch">
+    </div>
+    <div class="title-name">
+      <h2>NEWS & MEDIA</h2>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6" ng-repeat="data in news track by $index">
+            <div class="new-image">
+              <img ng-src="{{data.image}}" class="img-responsive">
+            </div>
+            <div class="news-title">
+              <h5>{{data.title}}</h5>
+              <span>{{data.date}}</span>
+            </div>
+            <div class="news-short-desc">
+              <p>{{data.desc}}</p>
+            </div>
+            <div class="read-more">
+              <button type="button" class="btn btn-primary">Read More</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="archive-title">
+          <h4>ARCHIVES</h4>
+        </div>
+        <div class="archive-list">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">AUGUST 2015</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">SEPTEMBER 2015</label>
+          </div>
+          <div class="checkbox ">
+            <label>
+              <input type="checkbox" value="" >OCTOBER 2015</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">NOVEMBER 2015</label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="">DECEMBER 2015</label>
+          </div>
+          <div class="checkbox ">
+            <label>
+              <input type="checkbox" value="" >JANUARY 2016</label>
+          </div>
+          <div class="checkbox ">
+            <label>
+              <input type="checkbox" value="" >FEBRUARY 2016</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

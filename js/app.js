@@ -23,6 +23,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'PlayersCtrl'
     })
+    .state('news-media', {
+        url: "/news-media",
+        templateUrl: "views/template.html",
+        controller: 'NewsMediaCtrl'
+    })
+    .state('news-detail', {
+        url: "/news-detail",
+        templateUrl: "views/template.html",
+        controller: 'NewsDetailCtrl'
+    })
 
     .state('about-us', {
         url: "/about-us",

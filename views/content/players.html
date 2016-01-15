@@ -21,7 +21,7 @@
       <div class="col-md-4" ng-repeat="data in player track by $index">
         <div class="player-box text-center">
           <div class="player-image">
-            <img ng-src="{{data.image}}" >
+            <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}">
           </div>
           <div class="player-name">
             <h4>{{data.name}}</h4>
