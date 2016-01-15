@@ -33,6 +33,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'WallpapperInnerCtrl'
     })
+    .state('gallery', {
+        url: "/gallery",
+        templateUrl: "views/template.html",
+        controller: 'GalleryCtrl'
+    })
     .state('news-media', {
         url: "/news-media",
         templateUrl: "views/template.html",
