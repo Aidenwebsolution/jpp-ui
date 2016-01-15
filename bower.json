@@ -1,11 +1,11 @@
 {
-  "name": "AngularFrameworkFrontend",
+  "name": "Jaipur Pink Panthers",
   "version": "0.0.1",
   "homepage": "https://www.wohlig.com",
   "authors": [
     "tushar@wohlig.com"
   ],
-  "description": "Angular Framework Frontend",
+  "description": "Jaipur Pink Panthers",
   "license": "MIT",
   "ignore": [
     "**/.*",

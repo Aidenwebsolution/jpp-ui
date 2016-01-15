@@ -1,6 +1,6 @@
 <section>
   <div class="banner-title">
-    <img src="img/banner/ticket-merchandize.jpg" class="img-responsive" title="ticket & merchandize" alt="ticket & merchandize">
+    <img src="img/banner/wallpapper.jpg" class="img-responsive" title="WALLPAPERS" alt="WALLPAPERS">
   </div>
 
 </section>
@@ -11,7 +11,7 @@
       <img src="img/object/punch.jpg" title="Panther-Punch" alt="Panther-Punch">
     </div>
     <div class="title-name">
-      <h2>TICKETS & MERCHANDISE</h2>
+      <h2>WALLPAPERS</h2>
     </div>
   </div>
 </section>
@@ -24,33 +24,26 @@
         </div>
       </div>
     </div>
-  </div>
-
-</section>
-<section>
-  <div class="row-flex">
-    <div class="col-flex">
-      <div class="img-box">
-        <img src="img/Tickets-&-Merchandize/m1.jpg" class="img-responsive">
+    <div class="row">
+      <div class="col-md-4" ng-repeat="data in wallpapper track by $index">
+        <div class="wallpapper-data text-center">
+        <div class="wallpapper-img">
+          <img ng-src="{{data.image}}" class="img-responsive">
+        </div>
+        <div class="wall-title">
+          <h4>{{data.name}}</h4>
+          <span>{{data.desc}}</span>
+        </div>
+        </div>
       </div>
     </div>
-    <div class="col-flex">
-      <div class="img-box">
-        <img src="img/Tickets-&-Merchandize/m1.jpg" class="img-responsive">
+    <div class="row">
+      <div class="col-md-offset-8 col-md-4">
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary">View More</button>
+        </div>
       </div>
     </div>
+  </div>
 
-    </div>
-<div class="row-flex">
-  <div class="col-flex">
-    <div class="img-box">
-      <img src="img/Tickets-&-Merchandize/m1.jpg" class="img-responsive">
-    </div>
-  </div>
-  <div class="col-flex">
-    <div class="img-box">
-      <img src="img/Tickets-&-Merchandize/m1.jpg" class="img-responsive">
-    </div>
-</div>
-  </div>
 </section>

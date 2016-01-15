@@ -14,6 +14,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
     ];
   })
+.controller('WallpapperCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("wallpapper");
+    $scope.menutitle = NavigationService.makeactive("Wallpapper");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+    $scope.wallpapper = [{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    }]
+
+  })
 .controller('TicketMerchandizeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("ticket-merchandize");
