@@ -1,0 +1,152 @@
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider'])
+
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("home");
+  $scope.menutitle = NavigationService.makeactive("Home");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.mySlides = [
+    'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+    'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+    'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+    'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+  ];
+})
+.controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("about-us");
+  $scope.menutitle = NavigationService.makeactive("About-Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  $scope.team = [{
+
+    name: "LOREM IPSUM ",
+    desg: "Owner",
+    image: "img/team/p1.png",
+    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+
+  },{
+
+    name: "LOREM IPSUM ",
+    desg: "CEO",
+    image: "img/team/p1.png",
+    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+
+  },{
+
+    name: "LOREM IPSUM ",
+    desg: "Team Coach",
+    image: "img/team/p1.png",
+    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+
+  },{
+
+    name: "LOREM IPSUM ",
+    desg: "Team Coach",
+    image: "img/team/p1.png",
+    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+
+  }];
+})
+
+.controller('headerctrl', function($scope, TemplateService) {
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $(window).scrollTop(0);
+    });
+  })
+.controller('footerctrl', function($scope, TemplateService) {
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $(window).scrollTop(0);
+    });
+
+    $scope.logo = [{
+
+      name: "Jio Chat",
+      url: "img/logo/l1.png"
+
+    }, {
+
+      name: "Manforce",
+      url: "img/logo/l2.png"
+
+    }, {
+
+      name: "Shakti",
+      url: "img/logo/l3.png"
+
+    }, {
+
+      name: "Kalyan Jewellers",
+      url: "img/logo/l4.png"
+
+    },{
+
+      name: "Jio Chat",
+      url: "img/logo/l1.png"
+
+    }, {
+
+      name: "Manforce",
+      url: "img/logo/l2.png"
+
+    }, {
+
+      name: "Shakti",
+      url: "img/logo/l3.png"
+
+    }, {
+
+      name: "Kalyan Jewellers",
+      url: "img/logo/l4.png"
+
+    }];
+  })
+  .controller('Menuctrl', function($scope, TemplateService) {
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+      $(window).scrollTop(0);
+    });
+
+    $scope.navigation = [{
+
+      name: "News",
+      url: "#/News"
+
+    }, {
+
+      name: "Fixtures & Results",
+      url: "#/Fixtures-Results"
+
+    }, {
+
+      name: "Players",
+      url: "#/Players"
+
+    }, {
+
+      name: "Gallery ",
+      url: "#/Gallery "
+
+    }, {
+
+      name: "Fan Corner",
+      url: "#/Fan-Corner"
+
+    }, {
+
+      name: "About Us",
+      url: "#/About-Us"
+
+    }, {
+
+      name: "Tickets & Merchandize",
+      url: "#/Tickets-Merchandize"
+
+    }];
+  })
+
+;

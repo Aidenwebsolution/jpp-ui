@@ -1,0 +1,11 @@
+<ul class="nav navbar-nav" ng-controller="Menuctrl">
+    <li ng-repeat="menu in navigation" class="{{menu.classis}}">
+        <a href="{{menu.url}}">{{menu.name}}</a>
+        <!-- <ul class="dropdown-menu" ng-if="menu.subnav!='';">
+            <li ng-repeat="submenu in menu.subnav">
+                <a href="{{submenu.link}}">{{submenu.name}}</a>
+            </li>
+        </ul> -->
+    </li>
+
+</ul>

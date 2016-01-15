@@ -1,0 +1,54 @@
+<footer ng-controller="footerctrl">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="name-sponser">
+            <h4>SPONSORS:</h4>
+          </div>
+          <div class="sponser-logo">
+            <ul>
+              <li ng-repeat="data in logo track by $index">
+                <a href="">
+                  <img ng-src="{{data.url}}" alt="{{data.name}}" title={{data.name}}>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pink-name">
+            <span>© 2015 jaipurpinkpanther.com</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="follow">
+            <span>FOLLOW US ON</span>
+          </div>
+          <div class="social-link">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li><a href="">
+                <i class="fa fa-twitter"></i>
+              </a></li>
+              <li><a href="">
+                <i class="fa fa-instagram"></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ting">
+            <a href="http://ting-in.staticmagick.in/" target="_blank">Designed by Ting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
