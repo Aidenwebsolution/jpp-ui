@@ -28,6 +28,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'WallpapperCtrl'
     })
+    .state('wallpapper-inner', {
+        url: "/wallpapper-inner",
+        templateUrl: "views/template.html",
+        controller: 'WallpapperInnerCtrl'
+    })
     .state('news-media', {
         url: "/news-media",
         templateUrl: "views/template.html",

@@ -69,6 +69,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }]
 
   })
+.controller('WallpapperInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("wallpapper-inner");
+    $scope.menutitle = NavigationService.makeactive("Wallpapper-Inner");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+    $scope.wallpapper = [{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w2.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w3.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    },{
+      image: "img/wallpapper/w1.jpg",
+      name: "ABHISHEK BACHAN",
+      desc: "10 Wallpapers"
+
+    }]
+
+  })
 .controller('TicketMerchandizeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("ticket-merchandize");

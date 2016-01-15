@@ -1,0 +1,86 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wall-title">
+          <h3>ABHISHEK BACHAN</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wallpapper-img">
+          <img src="img/wallpapper/main.jpg" class="img-responsive" alt="wallpapper-name" title="wallpapper-name">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="wallpapper-select">
+          <form>
+          <div class="form-group">
+          <select class="form-control" id="sel1">
+              <option>1024 x 768</option>
+              <option>1024 x 768</option>
+              <option>1024 x 768</option>
+              <option>1024 x 768</option>
+            </select>
+          </div>
+        </form>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="wallpapper-download">
+          <a href=""><img src="img/object/download.png"></a>
+        </div>
+        <div class="wallpapper-count">
+          <span>25</span>
+        </div>
+      </div>
+      <div class="col-md-offset-1 col-md-4" >
+        <div class="social-icon">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" ng-repeat="data in wallpapper track by $index">
+        <div class="wallpapper-data text-center">
+        <div class="wallpapper-img">
+          <img ng-src="{{data.image}}" class="img-responsive">
+        </div>
+      
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-8 col-md-4">
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary">View More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
