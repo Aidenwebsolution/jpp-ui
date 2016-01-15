@@ -14,6 +14,87 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
   ];
 })
+.controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("players");
+  $scope.menutitle = NavigationService.makeactive("Players");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  $scope.player = [{
+
+      image:"img/player/p1.png",
+      name:"Gangadhari Mallesh",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p2.png",
+      name:"RAJESH NARWAL",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p3.png",
+      name:"ROHIT RANA",
+      desg:"DEFENDER"
+
+  },{
+
+      image:"img/player/p4.png",
+      name:"RAN SINGH",
+      desg:"DEFENDER"
+
+  },{
+
+      image:"img/player/p5.png",
+      name:"BALBIR SINGH",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p6.png",
+      name:"JASVIR SINGH",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p1.png",
+      name:"Gangadhari Mallesh",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p2.png",
+      name:"RAJESH NARWAL",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p3.png",
+      name:"ROHIT RANA",
+      desg:"DEFENDER"
+
+  },{
+
+      image:"img/player/p4.png",
+      name:"RAN SINGH",
+      desg:"DEFENDER"
+
+  },{
+
+      image:"img/player/p5.png",
+      name:"BALBIR SINGH",
+      desg:"Raider"
+
+  },{
+
+      image:"img/player/p6.png",
+      name:"JASVIR SINGH",
+      desg:"Raider"
+
+  }];
+})
 .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("about-us");

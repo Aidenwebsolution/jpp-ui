@@ -18,6 +18,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
     })
+    .state('players', {
+        url: "/players",
+        templateUrl: "views/template.html",
+        controller: 'PlayersCtrl'
+    })
 
     .state('about-us', {
         url: "/about-us",
