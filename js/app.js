@@ -38,6 +38,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'GalleryCtrl'
     })
+    .state('fixtures', {
+        url: "/fixtures",
+        templateUrl: "views/template.html",
+        controller: 'FixturesCtrl'
+    })
     .state('news-media', {
         url: "/news-media",
         templateUrl: "views/template.html",
