@@ -14,6 +14,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
     ];
   })
+.controller('TicketMerchandizeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("ticket-merchandize");
+    $scope.menutitle = NavigationService.makeactive("Ticket-Merchandize");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+    $scope.mySlides = [
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+      'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    ];
+  })
   .controller('NewsMediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("news-media");

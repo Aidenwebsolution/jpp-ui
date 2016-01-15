@@ -35,3 +35,10 @@ nav li:hover .dropdown-menu {
   display: block;
 }
 /* Start writing sass here */
+.row-flex {
+  @include display(flex);
+}
+.col-flex {
+  @include flex(1);
+  position: relative;
+}
