@@ -1,22 +1,60 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,300,600,700,500);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
-
 /* Bootstrap Variables Goes Here */
-
-$brand-primary: #0d9dff !default;
-$brand-success: #84ce3c !default;
+$brand-primary: #b41e72 !default;
+$brand-success: #4ecaf5 !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
-
+$base: #262626 !default;
+$white: #fff !default;
+$pink: #ee4a9b !default;
+$font-light: 300 !default;
+$font-family-sans-serif: "Oswald", "Hind","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Oswald", "Hind", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+/* mixing*/
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+@mixin x-appearance ($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
 
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+.row-flex {
+  @include display(flex);
+}
+
+.col-flex {
+  @include flex(1);
+  position: relative;
+}
 body {
-  padding-top: 70px;
+  padding-top: 0;
+  font-family: $font-family-sans-serif;
+  color: $base;
 }
 img.loading {
   text-align: center;
@@ -35,10 +73,114 @@ nav li:hover .dropdown-menu {
   display: block;
 }
 /* Start writing sass here */
-.row-flex {
-  @include display(flex);
+.padding0 {
+  padding: 0;
 }
-.col-flex {
-  @include flex(1);
+.margin0 {
+  margin: 0;
+}
+.navbar-default {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+.navbar-brand {
+  padding: 0 7px;
+}
+.head-menu {
+  padding: 18px 0 17px;
+  li {
+    font-size: 24px;
+    padding: 0 5px;
+    font-weight: $font-light;
+    a {
+      color: $white !important;
+    }
+  }
+}
+.banner-title {
+  border-bottom: 4px solid $brand-success;
   position: relative;
+}
+.page-title {
+  position: absolute;
+  width: 100%;
+  bottom: -40px;
+}
+.title-name {
+  background-color: $brand-success;
+  @include transition(all 0.5s ease);
+  color: $pink;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  padding: 17px 70px 16px;
+  &:before {
+    left: -16px;
+    height: 100%;
+    width: 32px;
+    position: absolute;
+    content: "";
+    top: 0;
+    background-color: $brand-success;
+    -webkit-transform: skew(-20deg);
+-moz-transform: skew(-20deg);
+-o-transform: skew(-20deg);
+-ms-transform: skew(-20deg);
+transform: skew(-20deg);
+    z-index: -1;
+    @include transition(all 0.5s ease);
+    z-index: 9;
+  }
+  &:after {
+    right: -16px;
+    height: 100%;
+    width: 32px;
+    position: absolute;
+    content: "";
+    top: 0;
+    background-color: $brand-success;
+    -webkit-transform: skew(-20deg);
+-moz-transform: skew(-20deg);
+-o-transform: skew(-20deg);
+-ms-transform: skew(-20deg);
+transform: skew(-20deg);
+    z-index: -1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 9;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+.bold-mrgin {
+  font-weight: 600;
+  margin: 0;
+}
+.f40{
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.color-pink{
+  color:$pink;
+}
+.panther-punch {
+  position: relative;
+  margin-bottom: -8px;
+  z-index: 9;
+  img {
+    width: 72px;
+  }
+}
+.about-content {
+    margin: 90px 0px 50px 0px;
+
+}
+.font-base{
+  p{
+    font-size: 16px;
+font-weight: 300;
+  }
 }
