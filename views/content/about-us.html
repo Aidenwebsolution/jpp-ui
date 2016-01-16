@@ -31,33 +31,38 @@
       <div class="row">
         <div class="col-md-12">
           <div class="team-title text-center">
-            <h2 class="bold-mrgin f40 color-pink">Team</h2>
+            <h2 class="bold-mrgin f40 color-pink mb50">Team</h2>
           </div>
         </div>
       </div>
 
     </section>
-    <section>
+    <section class="mb50">
       <div class="row">
+      
         <div class="col-md-6" ng-repeat="data in team track by $index">
           <div class="row">
+
             <div class="col-md-5">
-              <div class="team-img">
+              <div class="team-img margin-auto">
                 <div class="thumbnail">
                   <img ng-src="{{data.image}}">
                 </div>
               </div>
             </div>
             <div class="col-md-7">
-              <div class="team-info">
-                <h4>{{data.name}} <span>({{data.desg}})</span></h4>
+              <div class="mb50">
+              <div class="team-info ">
+                <h4 class="color-primary">{{data.name}} <span>({{data.desg}})</span></h4>
               </div>
-              <div class="team-desc">
-              <p>{{data.Desc}}</p>
+              <div class="team-desc font-base">
+              <p class="mr70">{{data.Desc}}</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </div>

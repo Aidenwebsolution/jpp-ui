@@ -38,15 +38,12 @@ $font-family-serif: "Oswald", "Hind", "Advent Pro", Georgia, "Times New Roman", 
   -moz-appearance: $value;
   appearance: $value;
 }
-
 @mixin skew ($x, $y) {
-   @include transform(skew(#{$x}deg, #{$y}deg));
+  @include transform(skew(#{$x}deg, #{$y}deg));
 }
-
 .row-flex {
   @include display(flex);
 }
-
 .col-flex {
   @include flex(1);
   position: relative;
@@ -68,6 +65,14 @@ img {
 }
 img.doneLoading {
   opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: $base;
+  &:hover {
+    text-decoration: none;
+    color: $base;
+  }
 }
 nav li:hover .dropdown-menu {
   display: block;
@@ -123,10 +128,10 @@ nav li:hover .dropdown-menu {
     top: 0;
     background-color: $brand-success;
     -webkit-transform: skew(-20deg);
--moz-transform: skew(-20deg);
--o-transform: skew(-20deg);
--ms-transform: skew(-20deg);
-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform: skew(-20deg);
     z-index: -1;
     @include transition(all 0.5s ease);
     z-index: 9;
@@ -140,10 +145,10 @@ transform: skew(-20deg);
     top: 0;
     background-color: $brand-success;
     -webkit-transform: skew(-20deg);
--moz-transform: skew(-20deg);
--o-transform: skew(-20deg);
--ms-transform: skew(-20deg);
-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform: skew(-20deg);
     z-index: -1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -152,19 +157,22 @@ transform: skew(-20deg);
     z-index: 9;
   }
   h1 {
-    font-size: 40px;
+    font-size: 34px;
   }
 }
 .bold-mrgin {
   font-weight: 600;
   margin: 0;
 }
-.f40{
-  font-size: 40px;
+.f40 {
+  font-size: 34px;
   text-transform: uppercase;
 }
-.color-pink{
-  color:$pink;
+.color-pink {
+  color: $pink;
+}
+.color-primary {
+  color: $brand-primary;
 }
 .panther-punch {
   position: relative;
@@ -175,12 +183,98 @@ transform: skew(-20deg);
   }
 }
 .about-content {
-    margin: 90px 0px 50px 0px;
+  margin: 100px 0 65px;
+}
+.font-base {
+  p {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+.thumbnail {
+  width: 180px;
+  text-align: center;
+  height: 180px;
+  overflow: hidden;
+  border: 0 solid;
+  margin: 0 auto;
+  img {
+    margin: 0 auto;
+  }
+}
+.margin-auto {
+  text-align: center;
+  margin: 0 auto;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+.mb75 {
+  margin-bottom: 75px;
+}
+.mr70 {
+  margin-right: 70px;
+}
+.display-inline {
+  display: inline-block;
+}
+.custom-list {
+  ul {
+    list-style: none;
+    display: block;
+    li {
+      display: inline-block;
+    }
+  }
+}
+.f20 {
+  font-size: 20px;
+}
+.sponser-logo {
+  padding: 18px 0;
+}
+.first-footer {
+  background-color: #e3e3e3;
+}
+.li-footer {
+  width: 60px;
+  height: 25px;
+  overflow: hidden;
+  margin: 0 20px;
+  vertical-align: sub;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+  }
+}
+.second-footer {
+  background-color: $brand-success;
+}
+.font-f {
+  font-family: 'hind';
+}
+.social-link {
+  ul {
+    li {
+      a {
+        i {
+          background: $base;
+          color: #fff;
+          border-radius: 100%;
+          height: 30px;
+          width: 30px;
+          padding: 8px 9px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+.pr15{
+  padding-right: 15px;
 
 }
-.font-base{
-  p{
-    font-size: 16px;
-font-weight: 300;
-  }
+.pall35{
+      padding:42px 0px 35px; 
 }

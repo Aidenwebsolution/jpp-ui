@@ -431,6 +431,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "Kalyan Jewellers",
       url: "img/logo/l4.png"
 
+    },{
+
+      name: "tyka",
+      url: "img/logo/l5.png"
+
     }, {
 
       name: "Jio Chat",
@@ -450,6 +455,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
       name: "Kalyan Jewellers",
       url: "img/logo/l4.png"
+
+    },{
+
+      name: "tyka",
+      url: "img/logo/l5.png"
 
     }];
   })
