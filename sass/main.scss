@@ -15,9 +15,19 @@ $base: #262626 !default;
 $white: #fff !default;
 $pink: #ee4a9b !default;
 $font-light: 300 !default;
-$font-family-sans-serif: "Oswald", "Hind","Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Oswald", "Hind", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+/* font-family-serif*/
+
+@font-face {
+  font-family: "Voyage Fantastique";
+  src: url("../fonts/voyagefantstraight.ttf");
+  src: url("../fonts/voyagefantstraight.eot#iefix") format("embedded-opentype"), url("../fonts/voyagefantstraight.woff") format("woff"), url("../fonts/voyagefantstraight.ttf") format("truetype"), url("../fonts/voyagefantstraight.svg") format("svg");
+
+}
+
+
 /* mixing*/
 @mixin placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
@@ -27,6 +37,7 @@ $font-family-serif: "Oswald", "Hind", "Advent Pro", Georgia, "Times New Roman", 
     }
   }
 }
+
 @mixin transition($transition...) {
   -moz-transition: $transition;
   -o-transition: $transition;
@@ -72,6 +83,9 @@ a {
   &:hover {
     text-decoration: none;
     color: $base;
+  }
+  &:focus{
+      text-decoration: none;
   }
 }
 nav li:hover .dropdown-menu {
@@ -158,6 +172,7 @@ nav li:hover .dropdown-menu {
   }
   h1 {
     font-size: 34px;
+    font-family: "Oswald";
   }
 }
 .bold-mrgin {
@@ -173,6 +188,9 @@ nav li:hover .dropdown-menu {
 }
 .color-primary {
   color: $brand-primary;
+}
+.color-success {
+  color: $brand-success;
 }
 .panther-punch {
   position: relative;
@@ -276,5 +294,48 @@ nav li:hover .dropdown-menu {
 
 }
 .pall35{
-      padding:42px 0px 35px; 
+      padding:42px 0px 35px;
+}
+.mb10{
+  margin-bottom: 10px;
+}
+.pad5{
+  padding: 0px 5px;
+}
+.mt100{
+margin-top: 100px;
+}
+.player-image {
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+}
+.player-box{
+  background-color: #e5f7fe;
+  padding: 20px 0px;
+  margin: 0px 6px 15px 0px;
+  border:2px solid #fff;
+    @include transition(all 300ms ease);
+  &:hover{
+    border:2px solid $brand-primary;
+  }
+}
+.f30{
+  font-size: 30px;
+}
+.f25{
+  font-size: 25px;
+}
+.voyeg-font{
+  font-family: "Voyage Fantastique";
+text-transform: uppercase;
+letter-spacing: 2px;
+font-style: italic;
+
 }

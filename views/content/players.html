@@ -1,35 +1,38 @@
 <section>
   <div class="banner-title">
     <img src="img/banner/player.jpg" class="img-responsive" title="Players" alt="Players">
+    <section>
+      <div class="page-title text-center">
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Panther-Punch">
+        </div>
+        <div class="title-name">
+          <h1 class="bold-mrgin">KNOW YOUR PANTHERS</h1>
+        </div>
+      </div>
+    </section>
+
   </div>
 
 </section>
-<section>
-  <div class="page-title text-center">
-    <div class="border-blue"></div>
-    <div class="panther-punch">
-      <img src="img/object/punch.jpg" title="Panther-Punch" alt="Panther-Punch">
-    </div>
-    <div class="title-name">
-      <h2>KNOW YOUR PANTHERS</h2>
-    </div>
-  </div>
-</section>
-<section>
+
+<section class="mt100 pro-pad mb50">
   <div class="container">
     <div class="row">
-      <div class="col-md-4" ng-repeat="data in player track by $index">
-        <div class="player-box text-center">
-          <div class="player-image">
-            <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}">
+      <div class="col-md-4 pad5" ng-repeat="data in player track by $index">
+<a href="">
+          <div class="player-box text-center mb10">
+            <div class="player-image">
+              <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
+            </div>
+            <div class="player-name">
+              <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{data.name}}</h1>
+            </div>
+            <div class="player-desg">
+              <h6 class="voyeg-font f25 margin0 color-success">{{data.desg}}</h6>
+            </div>
           </div>
-          <div class="player-name">
-            <h4>{{data.name}}</h4>
-          </div>
-          <div class="player-desg">
-            <h6>{{data.desg}}</h6>
-          </div>
-        </div>
+</a>
       </div>
     </div>
   </div>
