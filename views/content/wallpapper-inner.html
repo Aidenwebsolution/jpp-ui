@@ -1,19 +1,20 @@
-<section>
+<section class="mt100">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="wall-title">
-          <h3>ABHISHEK BACHAN</h3>
+        <div class="wall-titles mt-l100">
+          <h1 class="color-pink">ABHISHEK BACHAN</h1>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div class="wallpapper-img">
+        <div class="wallpapper-image">
           <img src="img/wallpapper/main.jpg" class="img-responsive" alt="wallpapper-name" title="wallpapper-name">
         </div>
       </div>
     </div>
+    <div class="martop">
     <div class="row">
       <div class="col-md-3">
         <div class="wallpapper-select">
@@ -31,54 +32,57 @@
 
       </div>
       <div class="col-md-3">
-        <div class="wallpapper-download">
+        <div class="wallpapper-download display-inline">
           <a href=""><img src="img/object/download.png"></a>
         </div>
-        <div class="wallpapper-count">
+        <div class="wallpapper-count display-inline">
           <span>25</span>
         </div>
       </div>
-      <div class="col-md-offset-1 col-md-4" >
-        <div class="social-icon">
+      <div class="col-md-offset-1 col-md-5" >
+        <div class="social-icon custom-list pull-right">
           <ul>
             <li>
               <a href="">
-                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook facbook"></i>
               </a>
             </li>
             <li>
               <a href="">
-                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter twitter"></i>
               </a>
             </li>
             <li>
               <a href="">
-                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-google-plus google"></i>
               </a>
             </li>
             <li>
               <a href="">
-                <i class="fa fa-pinterest-p"></i>
+                <i class="fa fa-pinterest-p pintrest"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+</div>
+<hr class="mb36">
+
     <div class="row">
       <div class="col-md-4" ng-repeat="data in wallpapper track by $index">
-        <div class="wallpapper-data text-center">
+        <div class="wallpapper-data text-center mb36">
         <div class="wallpapper-img">
           <img ng-src="{{data.image}}" class="img-responsive">
         </div>
-      
+
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-offset-8 col-md-4">
-        <div class="pull-right">
-            <button type="button" class="btn btn-primary">View More</button>
+        <div class="pull-right mb100">
+            <button type="button" class="btn btn-primary f20">View More</button>
         </div>
       </div>
     </div>

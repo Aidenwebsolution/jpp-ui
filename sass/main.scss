@@ -18,6 +18,11 @@ $pink: #ee4a9b !default;
 $font-light: 300 !default;
 $font-grey: #676767 !default;
 
+$facebook: #3d5b97 !default;
+$twitter: #25a8e0 !default;
+$google: #ce3633 !default;
+$pintrest: #cf2228 !default;
+
 $font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -444,4 +449,88 @@ hr {
   @extend .btn-pink;
   background-color: $brand-primary;
   border: 1px solid $brand-primary;
+}
+.mt-l100{
+      margin: 100px 0px 20px 0px;
+}
+.wallpapper-download{
+  img{
+    height: 30px;
+    vertical-align: text-bottom;
+  }
+}
+.wallpapper-count {
+    border: 1px solid;
+    padding: 4px 10px 4px 10px;
+        margin-left: 20px;
+    span{
+      font-size: 24px;
+    }
+}
+.wallpapper-select{
+  select{
+    background-color:$brand-success;
+font-size: 20px;
+@include appearance(none);
+cursor: pointer;
+
+  }
+  .form-control{
+    height: 42px;
+    border: 1px solid $brand-success;
+   border-radius: 0px;
+
+  }
+&:after{
+  position: absolute;
+    top: 32%;
+    right: 24px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid;
+    border-right: 12px solid rgba(0, 0, 0, 0);
+    border-left: 12px solid rgba(0, 0, 0, 0);
+    color: #FFF;
+    content: "";
+    pointer-events: none;
+}
+}
+.facbook{
+  background-color: $facebook
+}
+.twitter{
+  background-color: $twitter;
+}
+.google{
+  background-color: $google
+}
+.pintrest{
+  background-color: $pintrest;
+}
+.social-icon{
+  ul{
+    li{
+          margin: 0px 2px;
+      a{
+        i{
+
+color: #fff;
+font-size: 26px;
+height: 41px;
+width: 40px;
+padding: 8px 9px;
+        }
+      }
+    }
+  }
+}
+.martop {
+    margin: 20px 0px 24px 0px;
+}
+.mb36{
+  margin-bottom: 36px
+}
+.mb100{
+  margin-bottom: 100px;
 }
