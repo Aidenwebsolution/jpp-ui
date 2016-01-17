@@ -5,6 +5,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+
 /* Bootstrap Variables Goes Here */
 $brand-primary: #b41e72 !default;
 $brand-success: #4ecaf5 !default;
@@ -46,17 +47,21 @@ $font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgi
   -webkit-transition: $transition;
   transition: $transition;
 }
+
 @mixin x-appearance ($value) {
   -webkit-appearance: $value;
   -moz-appearance: $value;
   appearance: $value;
 }
+
 @mixin skew ($x, $y) {
   @include transform(skew(#{$x}deg, #{$y}deg));
 }
+
 .row-flex {
   @include display(flex);
 }
+
 .col-flex {
   @include flex(1);
   position: relative;
@@ -220,6 +225,9 @@ nav li:hover .dropdown-menu {
     font-size: 16px;
     font-weight: 300;
   }
+}
+.font-light{
+  font-weight: 300;
 }
 .thumbnail {
   width: 180px;
@@ -423,4 +431,17 @@ font-size: 18px;
 hr {
 
     border-top: 2px solid $brand-success;
+}
+.wallpapper-img {
+  @extend .new-image;
+    height: 221px;
+
+}
+.wall-title {
+    padding: 10px 0px 40px 0px;
+}
+.btn-primary{
+  @extend .btn-pink;
+  background-color: $brand-primary;
+  border: 1px solid $brand-primary;
 }
