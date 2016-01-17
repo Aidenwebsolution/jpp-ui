@@ -13,9 +13,7 @@
       </div>
     </section>
   </div>
-
 </section>
-
 <section class="mt100">
   <div class="container">
     <div class="row">
@@ -24,71 +22,69 @@
 
           <div class="col-md-6" ng-repeat="data in news track by $index">
             <div class="mb50">
-            <div class="new-image">
-              <img ng-src="{{data.image}}" class="img-responsive">
-            </div>
-            <div class="news-title">
-              <h4 class="display-inline color-primary">{{data.title}}</h4>
-              <span class="display-inline pull-right color-grey pt5">{{data.date}}</span>
-            </div>
-            <div class="news-short-desc font-base">
-              <p class="line140">{{data.desc}}</p>
-            </div>
-            <div class="read-more">
-              <button type="button" class="btn btn-pink">Read More</button>
+              <div class="new-image">
+                <img ng-src="{{data.image}}" class="img-responsive">
+              </div>
+              <div class="news-title">
+                <h4 class="display-inline color-primary">{{data.title}}</h4>
+                <span class="display-inline pull-right color-grey pt5">{{data.date}}</span>
+              </div>
+              <div class="news-short-desc font-base">
+                <p class="line140">{{data.desc}}</p>
+              </div>
+              <div class="read-more">
+                <button type="button" class="btn btn-pink">Read More</button>
+              </div>
             </div>
           </div>
-</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="archives">
+          <div class="archive-title">
+            <h4 class="color-primary f20 m15">ARCHIVES</h4>
+          </div>
 
+          <div class="pro-cat">
+            <form action="demo_form.asp" method="get">
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>AUGUST 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-2" class="checkbox-custom dis-none" name="checkbox-2" type="checkbox">
+              <label for="checkbox-2" class="checkbox-custom-label checkbox-custom">
+                <span>SEPTEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-3" class="checkbox-custom dis-none" name="checkbox-3" type="checkbox">
+              <label for="checkbox-3" class="checkbox-custom-label checkbox-custom">
+                <span>OCTOBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>NOVEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>DECEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>JANUARY 2016</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>FEBRUARY 2016</span>
+              </label>
 
-        <div class="archive-title">
-          <h4 class="color-primary f20 m15">ARCHIVES</h4>
+            </form>
+          </div>
         </div>
-
-        <div class="pro-cat">
-                    <form action="demo_form.asp" method="get">
-                        <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
-                        <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
-                            <span>AUGUST 2015</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-2" class="checkbox-custom dis-none" name="checkbox-2" type="checkbox">
-                        <label for="checkbox-2" class="checkbox-custom-label checkbox-custom">
-                            <span>SEPTEMBER 2015</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-3" class="checkbox-custom dis-none" name="checkbox-3" type="checkbox">
-                        <label for="checkbox-3" class="checkbox-custom-label checkbox-custom">
-                            <span>OCTOBER 2015</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
-                        <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
-                            <span>NOVEMBER 2015</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
-                        <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
-                            <span>DECEMBER 2015</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
-                        <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
-                            <span>JANUARY 2016</span>
-                        </label>
-                        <br>
-                        <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
-                        <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
-                            <span>FEBRUARY 2016</span>
-                        </label>
-
-                    </form>
-                </div>
-                </div>
       </div>
     </div>
   </div>
