@@ -1,0 +1,39 @@
+<div class="player-slider" ng-controller="PlayersCtrl">
+  <flex-slider class="carousel" flex-slide="dataitem in player track by $index" animation="slide">
+    <li>
+      <div class="player-image">
+        <img ng-src="{{dataitem.image}}" alt="">
+        <hr class="border-player">
+      </div>
+      <div class="cont">
+        <div class="player-name text-center">
+          <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name}}</h1>
+        </div>
+        <div class="player-desg text-center">
+          <h6 class="voyeg-font f25 margin0 color-success">{{dataitem.desg}}</h6>
+        </div>
+        <div class="player-data">
+          <ul>
+            <li><span class="label">nationality:</span> {{dataitem.nationality}}</li>
+            <li><span class="label">Born:</span>{{dataitem.dob}}</li>
+            <li><span class="label">Jersery number:</span> {{dataitem.jersyno}}</li>
+          </ul>
+        </div>
+        <div class="player-desc text-justify">
+          <p>{{dataitem.desp}}</p>
+        </div>
+      </div>
+    </li>
+  </flex-slider>
+  <!-- <flex-slider flex-slide="s in mySlides track by $index">
+      <li class="relative">
+          <img ng-src="{{s.src|serverimage}}">
+          <div class="text-on">
+              <h3 class="high-light">{{s.head}}</h3>
+              <p class="para">
+                  {{s.subhead}}
+              </p>
+          </div>
+      </li>
+  </flex-slider> -->
+</div>
