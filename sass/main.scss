@@ -93,6 +93,7 @@ a {
   }
   &:focus {
     text-decoration: none;
+    outline: 0;
   }
 }
 nav li:hover .dropdown-menu {
@@ -563,9 +564,18 @@ hr {
     .schedule {
       font-size: 30px;
       font-weight: 300;
+      &:focus {
+        outline: 0;
+      }
     }
     &:focus {
       outline: 0;
+    }
+    h2{
+      &:focus {
+        outline: 0;
+      }
+
     }
   }
   .panel-heading {
