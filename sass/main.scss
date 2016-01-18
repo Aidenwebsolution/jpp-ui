@@ -18,6 +18,8 @@ $pink: #ee4a9b !default;
 $font-light: 300 !default;
 $font-grey: #676767 !default;
 
+$panel-head: #83daf8 !default;
+
 $facebook: #3d5b97 !default;
 $twitter: #25a8e0 !default;
 $google: #ce3633 !default;
@@ -567,5 +569,23 @@ padding: 8px 9px;
   }
   .panel-body {
     padding: 0;
+}
+.panel-title{
+  .schedule{
+    font-size: 30px;
+font-weight: 300;
+  }
+  &:focus{
+    outline: 0;
+  }
+}
+.panel-heading {
+    color:$base;
+    background-color: $panel-head;
+    border-color:$panel-head;
+    padding: 15px 15px;
+border-bottom: 1px solid transparent;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
 }
 }
