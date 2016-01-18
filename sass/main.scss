@@ -150,11 +150,7 @@ nav li:hover .dropdown-menu {
     content: "";
     top: 0;
     background-color: $brand-success;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    -o-transform: skew(-20deg);
-    -ms-transform: skew(-20deg);
-    transform: skew(-20deg);
+    @include transform(skew(-20deg));
     z-index: -1;
     @include transition(all 0.5s ease);
     z-index: 9;
@@ -534,7 +530,7 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  @include transform(translate(-50%,-50%));
 }
 .vs {
   line-height: 23;
@@ -610,10 +606,7 @@ hr {
     background-size: cover;
   }
   .carousel-control.left {
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-repeat: none;
+    background: none;
     filter:none;
     left: -122px;
   }
@@ -634,10 +627,7 @@ hr {
     @include transform(translateY(-50%));
   }
   .carousel-control.right {
-    background-image: none;
-    background-image: none;
-    background-image: none;
-    background-repeat: none;
+    background: none;
     filter:none;
     right: -122px;
     overflow: hidden;
@@ -690,7 +680,7 @@ img.fancybox-image {
     background:transparent;
     color: #444;
     text-shadow: none;
-  border-radius:0px;
+    @include border-radius(0px);
     @include box-shadow(rgba(0, 0, 0, 0.5) 0 0px 0px);
    padding: 0px !important;
    margin: 15px;
