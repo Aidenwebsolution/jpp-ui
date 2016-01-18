@@ -5,7 +5,6 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
-
 /* Bootstrap Variables Goes Here */
 $brand-primary: #b41e72 !default;
 $brand-success: #4ecaf5 !default;
@@ -17,27 +16,20 @@ $white: #fff !default;
 $pink: #ee4a9b !default;
 $font-light: 300 !default;
 $font-grey: #676767 !default;
-
 $panel-head: #83daf8 !default;
-
 $facebook: #3d5b97 !default;
 $twitter: #25a8e0 !default;
 $google: #ce3633 !default;
 $pintrest: #cf2228 !default;
-
 $font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 /* font-family-serif*/
-
 @font-face {
   font-family: "Voyage Fantastique";
-  src: url("../fonts/voyagefantstraight.ttf");
-  src: url("../fonts/voyagefantstraight.eot#iefix") format("embedded-opentype"), url("../fonts/voyagefantstraight.woff") format("woff"), url("../fonts/voyagefantstraight.ttf") format("truetype"), url("../fonts/voyagefantstraight.svg") format("svg");
-
+  src: url(../fonts/voyagefantstraight.ttf);
+  src: url(../fonts/voyagefantstraight.eot#iefix) format("embedded-opentype"), url(../fonts/voyagefantstraight.woff) format("woff"), url(../fonts/voyagefantstraight.ttf) format("truetype"), url(../fonts/voyagefantstraight.svg) format("svg");
 }
-
-
 /* mixing*/
 @mixin placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
@@ -47,28 +39,23 @@ $font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgi
     }
   }
 }
-
 @mixin transition($transition...) {
   -moz-transition: $transition;
   -o-transition: $transition;
   -webkit-transition: $transition;
   transition: $transition;
 }
-
 @mixin x-appearance ($value) {
   -webkit-appearance: $value;
   -moz-appearance: $value;
   appearance: $value;
 }
-
 @mixin skew ($x, $y) {
   @include transform(skew(#{$x}deg, #{$y}deg));
 }
-
 .row-flex {
   @include display(flex);
 }
-
 .col-flex {
   @include flex(1);
   position: relative;
@@ -98,8 +85,8 @@ a {
     text-decoration: none;
     color: $base;
   }
-  &:focus{
-      text-decoration: none;
+  &:focus {
+    text-decoration: none;
   }
 }
 nav li:hover .dropdown-menu {
@@ -133,7 +120,7 @@ nav li:hover .dropdown-menu {
 .banner-title {
   border-bottom: 4px solid $brand-success;
   position: relative;
-      margin-top: 86px;
+  margin-top: 86px;
 }
 .page-title {
   position: absolute;
@@ -210,11 +197,11 @@ nav li:hover .dropdown-menu {
 .color-grey {
   color: $font-grey;
 }
-.pt5{
-  padding-top:5px
+.pt5 {
+  padding-top: 5px;
 }
-.line140{
-      line-height: 140%;
+.line140 {
+  line-height: 140%;
 }
 .panther-punch {
   position: relative;
@@ -233,7 +220,7 @@ nav li:hover .dropdown-menu {
     font-weight: 300;
   }
 }
-.font-light{
+.font-light {
   font-weight: 300;
 }
 .thumbnail {
@@ -316,81 +303,79 @@ nav li:hover .dropdown-menu {
     }
   }
 }
-.pr15{
+.pr15 {
   padding-right: 15px;
-
 }
-.pall35{
-      padding:42px 0px 35px;
+.pall35 {
+  padding: 42px 0 35px;
 }
-.mb10{
+.mb10 {
   margin-bottom: 10px;
 }
-.pad5{
-  padding: 0px 5px;
+.pad5 {
+  padding: 0 5px;
 }
-.mt100{
-margin-top: 100px;
+.mt100 {
+  margin-top: 100px;
 }
-.mb200{
-margin-bottom: 200px;
+.mb200 {
+  margin-bottom: 200px;
 }
 .player-image {
-    height: 300px;
-    display: block;
-    overflow: hidden;
-    text-align: center;
-    img{
-      max-width: 100%;
-      max-height: 100%;
-      margin: 0 auto;
-    }
-}
-.player-box{
-  background-color: #e5f7fe;
-  padding: 20px 0px;
-  margin: 0px 6px 15px 0px;
-  border:2px solid #fff;
-    @include transition(all 300ms ease);
-  &:hover{
-    border:2px solid $brand-primary;
+  height: 300px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
   }
 }
-.f30{
+.player-box {
+  background-color: #e5f7fe;
+  padding: 20px 0;
+  margin: 0 6px 15px 0;
+  border: 2px solid #fff;
+  @include transition(all 300ms ease);
+  &:hover {
+    border: 2px solid $brand-primary;
+  }
+}
+.f30 {
   font-size: 30px;
 }
-.f25{
+.f25 {
   font-size: 25px;
 }
-.voyeg-font{
+.voyeg-font {
   font-family: "Voyage Fantastique";
-text-transform: uppercase;
-letter-spacing: 2px;
-font-style: italic;
-
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
 }
 .new-image {
-    height: 330px;
-    overflow: hidden;
-    display: block;
-    img{
-      max-width: 100%;
-      max-height: 100%;
-    }
+  height: 330px;
+  overflow: hidden;
+  display: block;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
-.btn-pink{
+.btn-pink {
   color: #fff;
-    background-color:$pink;
-    border-color: $pink;
-    text-transform: uppercase;
-    border-radius: 0px;
-    padding: 5px 15px;
-&:hover{
-  color:$white;
-}
-&:focus{
-  outline: 0;
-}
+  background-color: $pink;
+  border-color: $pink;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 5px 15px;
+  &:hover {
+    color: $white;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 .pro-cat {
   .checkbox-custom {
@@ -421,73 +406,69 @@ font-style: italic;
   .checkbox-custom:checked + .checkbox-custom-label:before {
     background: $brand-primary;
   }
-  label{
-    span{
+  label {
+    span {
       font-weight: 300;
-font-size: 18px;
+      font-size: 18px;
     }
   }
 }
-.m15{
-      margin: 0px 0px 15px;
+.m15 {
+  margin: 0 0 15px;
 }
 .archives {
-    background-color: #a6e4fa;
-    padding: 30px 0px 30px 40px;
+  background-color: #a6e4fa;
+  padding: 30px 0 30px 40px;
 }
-.pad-view{
-      padding: 0px 0px 30px 14px;
+.pad-view {
+  padding: 0 0 30px 14px;
 }
 hr {
-
-    border-top: 2px solid $brand-success;
+  border-top: 2px solid $brand-success;
 }
 .wallpapper-img {
   @extend .new-image;
-    height: 221px;
-
+  height: 221px;
 }
 .wall-title {
-    padding: 10px 0px 40px 0px;
+  padding: 10px 0 40px;
 }
-.btn-primary{
+.btn-primary {
   @extend .btn-pink;
   background-color: $brand-primary;
   border: 1px solid $brand-primary;
 }
-.mt-l100{
-      margin: 100px 0px 20px 0px;
+.mt-l100 {
+  margin: 100px 0 20px;
 }
-.wallpapper-download{
-  img{
+.wallpapper-download {
+  img {
     height: 30px;
     vertical-align: text-bottom;
   }
 }
 .wallpapper-count {
-    border: 1px solid;
-    padding: 4px 10px 4px 10px;
-        margin-left: 20px;
-    span{
-      font-size: 24px;
-    }
-}
-.wallpapper-select{
-  select{
-    background-color:$brand-success;
-font-size: 20px;
-@include appearance(none);
-cursor: pointer;
-
+  border: 1px solid;
+  padding: 4px 10px;
+  margin-left: 20px;
+  span {
+    font-size: 24px;
   }
-  .form-control{
+}
+.wallpapper-select {
+  select {
+    background-color: $brand-success;
+    font-size: 20px;
+    @include appearance(none);
+    cursor: pointer;
+  }
+  .form-control {
     height: 42px;
     border: 1px solid $brand-success;
-   border-radius: 0px;
-
+    border-radius: 0;
   }
-&:after{
-  position: absolute;
+  &:after {
+    position: absolute;
     top: 32%;
     right: 24px;
     margin-top: -3px;
@@ -499,49 +480,48 @@ cursor: pointer;
     color: #FFF;
     content: "";
     pointer-events: none;
+  }
 }
+.facbook {
+  background-color: $facebook;
 }
-.facbook{
-  background-color: $facebook
-}
-.twitter{
+.twitter {
   background-color: $twitter;
 }
-.google{
-  background-color: $google
+.google {
+  background-color: $google;
 }
-.pintrest{
+.pintrest {
   background-color: $pintrest;
 }
-.social-icon{
-  ul{
-    li{
-          margin: 0px 2px;
-      a{
-        i{
-
-color: #fff;
-font-size: 26px;
-height: 41px;
-width: 40px;
-padding: 8px 9px;
+.social-icon {
+  ul {
+    li {
+      margin: 0 2px;
+      a {
+        i {
+          color: #fff;
+          font-size: 26px;
+          height: 41px;
+          width: 40px;
+          padding: 8px 9px;
         }
       }
     }
   }
 }
 .martop {
-    margin: 20px 0px 24px 0px;
+  margin: 20px 0 24px;
 }
-.mb36{
-  margin-bottom: 36px
+.mb36 {
+  margin-bottom: 36px;
 }
-.mb100{
+.mb100 {
   margin-bottom: 100px;
 }
 .fix-banner {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 .fixture-match {
   position: absolute;
@@ -550,107 +530,114 @@ padding: 8px 9px;
   transform: translate(-50%,-50%);
 }
 .vs {
-    line-height: 23;
-    img{
-          display: inline-block;
-    }
-}
-.match-time{
-  h1{
-    color: $white;
-
+  line-height: 23;
+  img {
+    display: inline-block;
   }
-
 }
-.upper{
+.match-time {
+  h1 {
+    color: $white;
+  }
+}
+.upper {
   text-transform: uppercase;
 }
-.capital{
+.capital {
   text-transform: capitalize;
 }
-.fixture{
-  .panel{
-        border: 0px solid transparent;
+.fixture {
+  .panel {
+    border: 0 solid transparent;
   }
   .panel-body {
     padding: 0;
-}
-.panel-title{
-  .schedule{
-    font-size: 30px;
-font-weight: 300;
   }
-  &:focus{
-    outline: 0;
+  .panel-title {
+    .schedule {
+      font-size: 30px;
+      font-weight: 300;
+    }
+    &:focus {
+      outline: 0;
+    }
   }
-}
-.panel-heading {
-    color:$base;
+  .panel-heading {
+    color: $base;
     background-color: $panel-head;
-    border-color:$panel-head;
-    padding: 15px 15px;
-border-bottom: 1px solid transparent;
-border-top-right-radius: 0px;
-border-top-left-radius: 0px;
-}
-}
-.slider{
-  .glyphicon-chevron-left:before{
-  content: '';
-display: inline-block;
-background: url(../img/arrow-left.png);
-background-repeat: no-repeat;
-height: 93px;
-width: 50px;
-z-index: 999;
-background-size: cover;
+    border-color: $panel-head;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
-.glyphicon-chevron-right:before{
-  content: '';
-display: inline-block;
-background: url(../img/arrow-right.png);
-background-repeat: no-repeat;
-height: 93px;
-width: 50px;
-z-index: 999;
-background-size: cover;
 }
-.carousel-control.left {
+.slider {
+  .glyphicon-chevron-left:before {
+    content: '';
+    display: inline-block;
+    background: url(../img/arrow-left.png);
+    background-repeat: no-repeat;
+    height: 93px;
+    width: 50px;
+    z-index: 999;
+    background-size: cover;
+  }
+  .glyphicon-chevron-right:before {
+    content: '';
+    display: inline-block;
+    background: url(../img/arrow-right.png);
+    background-repeat: no-repeat;
+    height: 93px;
+    width: 50px;
+    z-index: 999;
+    background-size: cover;
+  }
+  .carousel-control.left {
     background-image: none;
-    background-image:none;
     background-image: none;
-    background-repeat:none;
-    filter: none;
+    background-image: none;
+    background-repeat: none;
+    filter:none;
     left: -122px;
+  }
+  .glyphicon-chevron-left {
+    width: 50px;
+    height: 93px;
+    margin-top: 0;
+    font-size: 30px;
+    left: 50%;
+    @include transform(translateY(-50%));
+    overflow: hidden;
+  }
+  .carousel-control {
+    width: 10%;
+    opacity: 1;
+    height: 22%;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+  .carousel-control.right {
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: none;
+    filter:none;
+    right: -122px;
+    overflow: hidden;
+  }
+  .glyphicon-chevron-right {
+    width: 50px;
+    height: 93px;
+    margin-top: 0;
+    font-size: 30px;
+    right: 50%;
+    @include transform(translateY(-50%));
+  }
+  .carousel-indicators{
+    display: none;
+  }
 }
-.glyphicon-chevron-left{
-  width: 50px;
-  height: 93px;
-margin-top: -10px;
-font-size: 30px;
-left: 50%;
-transform: translateY(-50%);
-overflow: hidden;
-}
-.carousel-control{
-  width: 10%;
-      opacity: 1;
-}
-.carousel-control.right{
-  background-image: none;
-  background-image:none;
-  background-image: none;
-  background-repeat:none;
-  filter: none;
-  right: -122px;
-  overflow: hidden;
-}
-.glyphicon-chevron-right{
-  width: 50px;
-  height: 93px;
-margin-top: -10px;
-font-size: 30px;
-right: 50%;
-transform: translateY(-50%);
-}
+.img-slide-padding {
+  padding: 0 7px 14px;
 }
