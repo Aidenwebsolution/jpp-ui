@@ -4,6 +4,8 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "../bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #b41e72 !default;
@@ -65,6 +67,7 @@ body {
   font-family: $font-family-sans-serif;
   color: $base;
 }
+
 img.loading {
   text-align: center;
   opacity: 1;
@@ -112,7 +115,7 @@ nav li:hover .dropdown-menu {
 .head-menu {
   padding: 18px 0 17px;
   li {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0 5px;
     font-weight: $font-light;
     a {
@@ -643,4 +646,21 @@ hr {
 }
 .img-slide-padding {
   padding: 0 7px 14px;
+}
+img.fancybox-image {
+  opacity: 1;
+}
+#fancybox-thumbs.bottom img {
+  opacity: 1;
+}
+.fancybox-nav {
+  span {
+      visibility: visible !important;
+  }
+}
+.fancybox-next {
+    right: -85px;
+}
+.fancybox-prev {
+    left: -85px;
 }
