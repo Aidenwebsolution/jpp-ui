@@ -332,6 +332,9 @@ nav li:hover .dropdown-menu {
 .mt100{
 margin-top: 100px;
 }
+.mb200{
+margin-bottom: 200px;
+}
 .player-image {
     height: 300px;
     display: block;
@@ -547,8 +550,10 @@ padding: 8px 9px;
   transform: translate(-50%,-50%);
 }
 .vs {
-
     line-height: 23;
+    img{
+          display: inline-block;
+    }
 }
 .match-time{
   h1{
@@ -589,3 +594,7 @@ border-top-right-radius: 0px;
 border-top-left-radius: 0px;
 }
 }
+// .fix-logo {
+//   @extend .new-image;
+//   height: 312px;
+// }
