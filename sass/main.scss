@@ -538,3 +538,34 @@ padding: 8px 9px;
     position: relative;
     width: 100%;
 }
+.fixture-match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.vs {
+
+    line-height: 23;
+}
+.match-time{
+  h1{
+    color: $white;
+
+  }
+
+}
+.upper{
+  text-transform: uppercase;
+}
+.capital{
+  text-transform: capitalize;
+}
+.fixture{
+  .panel{
+        border: 0px solid transparent;
+  }
+  .panel-body {
+    padding: 0;
+}
+}
