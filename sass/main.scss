@@ -680,7 +680,7 @@ img.fancybox-image {
     background:transparent;
     color: #444;
     text-shadow: none;
-    @include border-radius(0px);
+  border-radius:0px;
     @include box-shadow(rgba(0, 0, 0, 0.5) 0 0px 0px);
    padding: 0px !important;
    margin: 15px;
@@ -693,4 +693,12 @@ img.fancybox-image {
 }
 .fancybox-prev span, .fancybox-next span, .fancybox-close  {
     background-image: url('../img/fancybox_sprite.png');
+}
+.border-player{
+  border: 1px solid #B41E72;
+z-index: 999;
+position: relative;
+width: 40%;
+text-align: center;
+margin: 0 auto;
 }
