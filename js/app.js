@@ -15,7 +15,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
     .state('home', {
       url: "/home",
-      templateUrl: "views/template-home.html",
+      templateUrl: "views/template.html",
       controller: 'HomeCtrl'
     })
     .state('players', {
@@ -82,8 +82,8 @@ firstapp.directive('fancyboxThumb', function() {
             type: 'outside'
           },
           thumbs: {
-            width: 50,
-            height: 50
+            width: 70,
+            height: 70
           }
         }
       });
