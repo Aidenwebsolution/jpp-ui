@@ -1,7 +1,7 @@
 {
-  "name": "Jaipur Pink Panthers",
+  "name": "JPP",
   "version": "0.0.1",
-  "description": "Jaipur Pink Panthers",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "crypto-js": "^3.1.6",
