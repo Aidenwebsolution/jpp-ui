@@ -653,6 +653,17 @@ img.fancybox-image {
 #fancybox-thumbs.bottom img {
   opacity: 1;
 }
+#fancybox-thumbs{
+  ul{
+    li{
+          transform: scale(0.8);
+
+    }
+  }
+}
+#fancybox-thumbs ul li.active{
+    transform: scale(1);
+}
 .fancybox-nav {
   span {
       visibility: visible !important;
@@ -663,4 +674,27 @@ img.fancybox-image {
 }
 .fancybox-prev {
     left: -85px;
+}
+.fancybox-skin {
+    position: relative;
+    background: rgba(249, 249, 249, 0);
+    color: #444;
+    text-shadow: none;
+    -webkit-border-radius:0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+   -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+   padding: 0px !important;
+   margin: 15px;
+   border: 1px solid #fff;
+
+}
+.fancybox-close {
+  top: 0px;
+    right: 0px;
+}
+.fancybox-prev span, .fancybox-next span, .fancybox-close  {
+    background-image: url('../img/fancybox_sprite.png');
 }
