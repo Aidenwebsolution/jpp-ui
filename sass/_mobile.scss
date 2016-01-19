@@ -219,6 +219,9 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .marginzero{
+    margin: 0px;
+  }
   .martop {
     margin: 15px 0 10px;
 }
