@@ -54,6 +54,50 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
+  .mb36 {
+    margin-bottom: 30px;
+}
+  .mb100 {
+    margin-bottom: 50px;
+}
+  .wallpapper-select {
+    .form-control {
+      height: 38px;
+
+  }
+  select {
+    font-size: 17px;
+}
+&:after{
+  top: 45%;
+}
+  }
+  .wallpapper-count {
+    span {
+      font-size: 20px;
+  }
+  }
+  .social-icon{
+    ul{
+      li{
+      a{
+        i {
+
+          font-size: 20px;
+          height: 36px;
+          width: 35px;
+
+      }
+      }
+      }
+    }
+  }
+  .mt-l100 {
+    margin: 60px 0 10px;
+}
+  .font-28{
+    font-size: 28px;
+  }
   .font-20{
     font-size: 16px;
   }
@@ -175,6 +219,48 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .martop {
+    margin: 15px 0 10px;
+}
+  .mt-10{
+    margin-top: 10px;
+  }
+  .fl-left{
+    float: left !important;
+margin-top: 16px;
+  }
+  .padzero{
+    padding: 0px;
+  }
+  .mb36 {
+    margin-bottom: 15px;
+}
+  .social-icon ul li a i {
+    font-size: 15px;
+    height: 28px;
+    width: 29px;
+}
+  .wallpapper-count {
+    span {
+      font-size: 15px;
+  }
+  }
+  .font-28 {
+    font-size: 20px;
+}
+.mt-l100 {
+    margin: 50px 0 0px;
+}
+.wallpapper-select{
+  select {
+     font-size: 14px;
+ }
+}
+.wallpapper-download {
+  img {
+      height: 25px;
+  }
+}
   .wall-title {
     padding: 0px 0 30px;
 }
