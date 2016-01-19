@@ -4,6 +4,18 @@ $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 
 @media (max-width: $screen-lg) {
+  .slider {
+    .carousel-control.right {
+      right: -100px !important;
+  }
+  }
+.slider {
+  .carousel-control.left {
+
+    left: -100px !important;
+
+  }
+}
   // Header
 .head-menu {
     li {
@@ -29,6 +41,21 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-md-max){
+  .mb200 {
+    margin-bottom:100px;
+}
+  .slider {
+    .carousel-control.right {
+      right: -70px !important;
+  }
+  }
+.slider {
+  .carousel-control.left {
+
+    left: -70px !important;
+
+  }
+}
   .font-20{
     font-size: 20px;
   }
@@ -54,6 +81,24 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
+  .mb200 {
+    margin-bottom: 50px;
+}
+  .img-slide-padding {
+    padding: 0 3px 3px;
+}
+  .slider {
+    .carousel-control.right {
+      right: -40px !important;
+  }
+  }
+.slider {
+  .carousel-control.left {
+
+    left: -40px !important;
+
+  }
+}
   .mb36 {
     margin-bottom: 30px;
 }
@@ -219,6 +264,15 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .fancybox-nav {
+      width: 18%;
+  }
+  .fancybox-next {
+    right: -10px;
+}
+.fancybox-prev {
+    left: -10px;
+}
   .marginzero{
     margin: 0px;
   }
