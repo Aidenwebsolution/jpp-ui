@@ -7,12 +7,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
-    $scope.mySlides = [
-      'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-      'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-      'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-      'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-    ];
+    // $scope.mySlides = [
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    // ];
+
+    $scope.news = [{
+      image: "img/wallpapper/w1.jpg",
+      title: "New from the camp",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      date: "MONDAY, NOVEMBER 30, 2015",
+    }, {
+      image: "img/wallpapper/w1.jpg",
+      title: "New from the camp",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      date: "MONDAY, NOVEMBER 30, 2015",
+    }, {
+      image: "img/wallpapper/w1.jpg",
+      title: "New from the camp",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      date: "MONDAY, NOVEMBER 30, 2015",
+    }, ];
+    $scope.wallpapper = [{
+      img: "img/wallpapper/w4.jpg"
+    }, {
+      img: "img/wallpapper/w5.jpg"
+    }, {
+      img: "img/wallpapper/w6.jpg"
+    }, {
+      img: "img/wallpapper/w7.jpg"
+    }, {
+      img: "img/wallpapper/w4.jpg"
+    }, {
+      img: "img/wallpapper/w5.jpg"
+    }, {
+      img: "img/wallpapper/w6.jpg"
+    }, {
+      img: "img/wallpapper/w7.jpg"
+    }, ];
   })
   .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -244,7 +278,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       title: "LOREM IPSUM",
       date: "14 August 2015",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-    }]
+    }];
 
   })
   .controller('NewsDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {

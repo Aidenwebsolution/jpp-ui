@@ -1,12 +1,11 @@
 <div class="section1" auto-height>
   <div class="logo text-center">
-    <img src="img/logo.png" alt="logo"/>
+    <img src="img/logo.png" alt="logo" />
   </div>
 
   <div class="scroll text-center">
     Scroll
-    <img src="img/mouse.png" alt="Scroll Down"/>
-    down
+    <img src="img/mouse.png" alt="Scroll Down" /> down
   </div>
 </div>
 
@@ -14,24 +13,168 @@
 
 <div class="section2">
   <div class="custom-slider">
-    <div class="image-holder">
-      <img src="img/home/home-slide.jpg" alt="Lorem Ipsum" />
-    </div>
-    <div class="content-scroll">
-      <div class="news-list">
-        <div class="new-item">
-          <h3>New from the camp</h3>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </h2>
-          <div class="date">
-            MONDAY, NOVEMBER 30, 2015
+    <div class="row margin0">
+      <div class="col-md-8 padding0">
+        <div class="image-holder">
+          <img src="img/home/home-slide.jpg" alt="Lorem Ipsum" class="img-responsive" />
+        </div>
+      </div>
+      <div class="col-md-4 padding0">
+        <div class="content-scroll">
+          <div class="news-list" ng-repeat="data in news track by $index">
+            <div class="new-item">
+              <h3>{{data.title}}</h3>
+              <h2>
+                {{data.desc}}
+              </h2>
+              <div class="date">
+                {{data.date}}
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="new-runner">
-    
+    <ul class="list-inline">
+      <li>NEXT MATCH ON 2ND FEB, PATNA PIRATES VS PINK PANTHERS</li>
+      <li>NEXT MATCH ON 4TH FEB, DABANG DELHI VS PINK PANTHERS</li>
+      <li>NEXT MATCH ON 6ND FEB, PUNERI PALTAN VS TELGU</li>
+    </ul>
   </div>
-</div>
+  <div class="home-player-slider">
+    <h2 class="text-center">OUR PANTHERS</h2>
+    <div class="slider">
+
+    </div>
+  </div>
+  <div class="box-home">
+    <div class="row margin0">
+      <div class="col-md-6 padding0">
+        <div class="cont-box">
+          <div class="img-holder">
+            <img src="img/home/box1.jpg" alt="home-box" class="img-responsive">
+          </div>
+          <div class="badge-class blue">
+            FIXTURES
+          </div>
+          <div class="date">
+            JAN 30, 20:00(IST)
+          </div>
+          <div class="venu">Gazchibowli Indoor Stadium, Hyderabad</div>
+        </div>
+      </div>
+      <div class="col-md-6 padding0">
+        <div class="cont-box">
+          <div class="img-holder">
+            <img src="img/home/box2.jpg" alt="home-box" class="img-responsive">
+          </div>
+          <div class="badge-class pink">
+            TICKETS &amp; MERCHANDIZE
+          </div>
+        </div>
+        <h3 class=""> TICKETS &amp; MERCHANDIZE</h3>
+      </div>
+    </diV>
+    <div class="row margin0">
+      <div class="col-md-6 padding0">
+        <div class="cont-box">
+          <div class="img-holder">
+            <img src="img/home/box2.jpg" alt="home-box" class="img-responsive">
+          </div>
+          <div class="badge-class pink">
+            NEWS &amp; MEDIA
+          </div>
+          <div class="list-item">
+            <div class="img-holder-left">
+              <img src="img/home/bachan.jpg" alt="home-box">
+            </div>
+            <div class="cont-img">
+              <div class="head-fixture">
+                <div class="label">NEW DELHI: </div>
+                <div class="date">14 August 2015</div>
+              </div>
+            </div>
+          </div>
+          <div class="desc">
+            <p>Pro-Kabaddi League (PKL) franchise Jaipur Pink Panthers' official jersey has been unveiled by the team owner, actor Abhishek...</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 padding0">
+        <div class="img-holder">
+          <img src="img/home/box1.jpg" alt="home-box" class="img-responsive">
+        </div>
+        <div class="badge-class blue">
+          GALLERY
+        </div>
+        <div class="gallery-head">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+      </div>
+    </div>
+    <div class="fan-corner">
+      <div class="bold-mrgin color-primary voyeg-font f30 margin0 text-center">
+        Fan Corner</div>
+      <div class="row margin0">
+        <div class="col-md-4">
+          <div class="fan-week">
+            <h4 class="color-primary text-center">
+              FAN OF THE WEEK
+            </h4>
+            <div class="text-center">
+              <img src="img/home/fan.jpg" alt="" class="img-circle">
+            </div>
+            <div class="cont-fan">
+              <h5 class="color-primary text-center">PRAVEEN HIRAY</h5>
+              <p class="cont">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="button text-center">
+              <a href="" class="btn btn-primary">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wallpaper">
+            <h4 class="color-primary text-center">
+              Wallpapers
+            </h4>
+            <div class="img-gallery">
+              <div class="row">
+                <div class="col-md-3 padding0" ng-repeat="data in wallpapper">
+                  <div class="block-img">
+                    <img ng-src="{{data.img}}" alt="" class="img-responsive">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="button text-center">
+              <a href="" class="btn btn-primary">
+                Download Wallpaper
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social-hub text-center">
+            <h4 class="color-primary text-center">
+              SOCIAL HUB
+            </h4>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
