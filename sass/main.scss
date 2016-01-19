@@ -702,3 +702,21 @@ width: 40%;
 text-align: center;
 margin: 0 auto;
 }
+.player-slider {
+.modal-content {
+ background-color: transparent!important;
+}
+.player-image {
+ img {
+   width: auto!important;
+ }
+}
+.flexslider {
+ background: transparent!important;
+ margin: 0 0 10px;
+ border: 0;
+ .flex-control-nav.flex-control-paging {
+   display: none;
+ }
+}
+}    
