@@ -16,20 +16,21 @@
 </section>
 <section class="mt100">
   <div class="container">
+
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-sm-8 col-xs-12">
         <div class="row">
 
-          <div class="col-md-6" ng-repeat="data in news track by $index">
+          <div class="col-md-6 col-sm-6 col-xs-6" ng-repeat="data in news track by $index">
             <div class="mb50">
-              <div class="new-image">
+              <div class="new-images">
                 <img ng-src="{{data.image}}" class="img-responsive">
               </div>
               <div class="news-title">
-                <h4 class="display-inline color-primary">{{data.title}}</h4>
-                <span class="display-inline pull-right color-grey pt5">{{data.date}}</span>
+                <h4 class="display-inline color-primary f15 w70 title-margin0">{{data.title}}</h4>
+                <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.date}}</span>
               </div>
-              <div class="news-short-desc font-base">
+              <div class="news-short-desc font-base desc-padtop">
                 <p class="line140">{{data.desc}}</p>
               </div>
               <div class="read-more">
@@ -39,8 +40,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="archives">
+      <!-- //hidden in xs -->
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="archives mb-footer">
           <div class="archive-title">
             <h4 class="color-primary f20 m15">ARCHIVES</h4>
           </div>
@@ -87,5 +89,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>

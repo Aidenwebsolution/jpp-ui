@@ -19,18 +19,18 @@
   <div class="container">
       <div class="mb50">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-sm-8 col-xs-12">
 
-        <div class="new-image">
+        <div class="new-images">
           <img ng-src="{{newsMedia.image}}" class="img-responsive">
         </div>
         <div class="news-title">
-          <h4 class="display-inline color-primary">{{newsMedia.title}}</h4>
-          <span class="display-inline pull-right color-grey pt5">{{newsMedia.date}}</span>
+          <h4 class="display-inline color-primary f15 w70 title-margin0">{{newsMedia.title}}</h4>
+          <span class="display-inline pull-right color-grey pt5 f12 date-float">{{newsMedia.date}}</span>
         </div>
-        <div class="news-short-desc line140 font-base" ng-bind-html="newsMedia.desc"></div>
+        <div class="news-short-desc line140 font-base desc-padtop mb-footer" ng-bind-html="newsMedia.desc"></div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="archives">
           <div class="archive-title">
             <h4 class="color-primary f20 m15">ARCHIVES</h4>
@@ -83,17 +83,17 @@
       <div class="mb50">
     <div class="row">
       <div class="also-view">
-        <h3 class="color-pink pad-view">ALSO VIEW</h3>
+        <h3 class="color-pink pad-view title-margin0 title-font">ALSO VIEW</h3>
       </div>
-      <div class="col-md-4" ng-repeat="data in news track by $index">
-        <div class="new-image">
+      <div class="col-md-4 col-sm-4 mb-footer" ng-repeat="data in news track by $index">
+        <div class="new-images">
           <img ng-src="{{data.image}}" class="img-responsive">
         </div>
         <div class="news-title">
-          <h4 class="display-inline color-primary">{{data.title}}</h4>
-          <span class="display-inline pull-right color-grey pt5">{{data.date}}</span>
+          <h4 class="display-inline color-primary f15 w70 title-margin0">{{data.title}}</h4>
+          <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.date}}</span>
         </div>
-        <div class="news-short-desc">
+        <div class="news-short-desc desc-padtop">
           <p class="line140">{{data.desc}}</p>
         </div>
         <div class="read-more">

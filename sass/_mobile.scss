@@ -29,7 +29,9 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-md-max){
-
+  .w70 {
+      width: 60%;
+  }
   .navbar-brand {
     padding: 3px 0px !important;
 }
@@ -49,6 +51,21 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
+  .pro-cat label span {
+    font-size: 14px;
+}
+  .f12{
+    font-size: 12px;
+  }
+  .f15{
+    font-size: 15px;
+  }
+  .mb-footer{
+    margin-bottom: 50px;
+  }
+  .mt100 {
+    margin-top: 50px;
+}
   .f16{
     font-size: 16px;
   }
@@ -81,11 +98,15 @@ $screen-lg: 1200px !default;
   // Header
   .navbar-toggle {
     border-color: #4ECAF5 !important;
+    transition: all 0.3s ease;
     .icon-bar {
     background-color: #4ECAF5 !important;
 }
 &:focus{
       background-color: #B41E72 !important;
+}
+&:hover{
+      background-color: #83305F !important;
 }
 }
   .head-menu {
@@ -145,6 +166,25 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .title-font{
+    font-size: 20px;
+  }
+  .title-margin0{
+    margin: 5px 0px 0px 0px;
+  }
+  .desc-padtop{
+    padding-top: 22px;
+  }
+  .date-float{
+    float: left !important;
+padding: 0;
+  }
+  .w70 {
+    width: 100%;
+}
+  .btn{
+    font-size: 11px;
+  }
   .font-base{
     p {
      font-size: 14px;
