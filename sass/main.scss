@@ -142,6 +142,8 @@ nav li:hover .dropdown-menu {
   text-transform: uppercase;
   position: relative;
   padding: 17px 70px 16px;
+  z-index: 9;
+
   &:before {
     left: -16px;
     height: 100%;
