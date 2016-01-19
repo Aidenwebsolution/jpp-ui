@@ -29,6 +29,9 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-md-max){
+  .font-20{
+    font-size: 20px;
+  }
   .w70 {
       width: 60%;
   }
@@ -51,6 +54,12 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
+  .font-20{
+    font-size: 16px;
+  }
+  .font-14{
+    font-size: 14px;
+  }
   .pro-cat label span {
     font-size: 14px;
 }
@@ -166,6 +175,15 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .wall-title {
+    padding: 0px 0 30px;
+}
+  .font-20{
+    font-size: 13px;
+  }
+  .font-14{
+    font-size: 12px;
+  }
   .title-font{
     font-size: 20px;
   }
@@ -200,7 +218,7 @@ padding: 0;
   }
   }
   .page-title {
-    bottom: -15px;
+    bottom: -21px;
 }
   .title-name{
         padding: 9px 18px 7px;

@@ -430,8 +430,9 @@ hr {
   border-top: 2px solid $brand-success;
 }
 .wallpapper-img {
-  @extend .new-image;
-  height: 221px;
+img{
+  width: 100%;
+}
 }
 .wall-title {
   padding: 10px 0 40px;
