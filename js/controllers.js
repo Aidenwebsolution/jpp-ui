@@ -6,6 +6,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    // TemplateService.header = "";
 
     // $scope.mySlides = [
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
