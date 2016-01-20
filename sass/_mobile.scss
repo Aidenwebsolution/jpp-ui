@@ -4,6 +4,12 @@ $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 
 @media (max-width: $screen-lg) {
+  .vs {
+    margin-top: 95%;
+}
+  .fixture-match{
+    zoom:0.7;
+  }
   .slider {
     .carousel-control.right {
       right: -100px !important;
@@ -41,6 +47,12 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-md-max){
+  // .fixture-match{
+  //   zoom:0.6;
+  // }
+  .pnl-title{
+    font-size: 25px;
+  }
   .mb200 {
     margin-bottom:100px;
 }
@@ -81,6 +93,19 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
+  // .pnl-title{
+  //   font-size: 20px;
+  // }
+  .mar-top{
+    margin-top: 10px;
+  }
+  .f-23{
+    font-size: 25px;
+margin: 8px 0px 0px;
+  }
+  .fixture-match{
+    zoom:0.5;
+  }
   .mb200 {
     margin-bottom: 50px;
 }
@@ -264,6 +289,23 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+  .pnl-title {
+    font-size: 14px;
+}
+  .fixture .panel-title .schedule {
+    font-size: 20px;
+
+}
+  .vs {
+    margin-top: 200%;
+}
+.f-23 {
+    font-size: 18px;
+}
+.mar-top {
+
+    font-size: 18px;
+}
   .fancybox-nav {
       width: 18%;
   }

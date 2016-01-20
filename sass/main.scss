@@ -601,6 +601,8 @@ hr {
 .fix-banner {
   position: relative;
   width: 100%;
+  margin: 0 auto;
+
 }
 .fixture-match {
   position: absolute;
@@ -609,11 +611,13 @@ hr {
   @include transform(translate(-50%,-50%));
 }
 .vs {
-  line-height: 23;
-  img {
-    display: inline-block;
-  }
+margin-top: 70%;
 }
+// .fixture-data{
+//   background: url(../img/fixture/banner.jpg);
+//   background-repeat: no-repeat;
+//   background-size: contain;
+// }
 .match-time {
   h1 {
     color: $white;
