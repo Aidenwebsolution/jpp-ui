@@ -425,9 +425,13 @@ nav li:hover .dropdown-menu {
 }
 .f30 {
   font-size: 30px;
+  overflow: hidden;
+text-overflow: ellipsis;
 }
 .f25 {
   font-size: 25px;
+  overflow: hidden;
+text-overflow: ellipsis;
 }
 .voyeg-font {
   font-family: "Voyage Fantastique";

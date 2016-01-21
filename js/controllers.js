@@ -559,37 +559,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = [{
 
       name: "News",
-      url: "#/News"
+      url: "#/news-media"
 
     }, {
 
       name: "Fixtures & Results",
-      url: "#/Fixtures-Results"
+      url: "#/fixtures"
 
     }, {
 
       name: "Players",
-      url: "#/Players"
+      url: "#/players"
 
     }, {
 
       name: "Gallery ",
-      url: "#/Gallery "
+      url: "#/gallery "
 
     }, {
 
       name: "Fan Corner",
-      url: "#/Fan-Corner"
+      url: "#/fan-Corner"
 
     }, {
 
       name: "About Us",
-      url: "#/About-Us"
+      url: "#/about-us"
 
     }, {
 
       name: "Tickets & Merchandize",
-      url: "#/Tickets-Merchandize"
+      url: "#/ticket-merchandize"
 
     }];
   })
