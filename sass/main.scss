@@ -880,7 +880,6 @@ img.fancybox-image {
 	min-height: 300px;
 .social-link-right {
   position: absolute;
-//  z-index: 9999;
   right: 5px;
   ul {
     list-style: none;
@@ -891,13 +890,22 @@ img.fancybox-image {
 		  height: 45px;
       a {
 			color: #fff;
+		  display: block;
         &:hover {
 			i{
 				width: 45px;
     			height: 45px;
-				font-size: 22px!important;
          	 background-color: $brand-success;
         }
+			i.fa{
+							font-size: 22px;
+			}
+			[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 24px;
+}
 			span{
 				color: $brand-success;
 				opacity: 1;
@@ -1047,7 +1055,7 @@ margin-right: 5px;
 				    background: $brand-primary;
 				color: #fff;
 				&:after{
-    background-image: linear-gradient(to bottom, $brand-primary 00%, $brand-primary 100%);
+    @include background-image (linear-gradient(to bottom, $brand-primary 0%, $brand-primary 100%));
 			}
 			}
 }
