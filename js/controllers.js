@@ -48,6 +48,71 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/wallpapper/w7.jpg"
     }, ];
+	
+	
+	 $scope.player = [{
+      image: "img/player/p1.png",
+      name: "Gangadhari Mallesh",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p2.png",
+      name: "RAJESH NARWAL",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p3.png",
+      name: "ROHIT RANA",
+      desg: "DEFENDER",
+    }, {
+
+      image: "img/player/p4.png",
+      name: "RAN SINGH",
+      desg: "DEFENDER",
+    }, {
+
+      image: "img/player/p5.png",
+      name: "BALBIR SINGH",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p6.png",
+      name: "JASVIR SINGH",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p1.png",
+      name: "Gangadhari Mallesh",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p2.png",
+      name: "RAJESH NARWAL",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p3.png",
+      name: "ROHIT RANA",
+      desg: "DEFENDER",
+    }, {
+
+      image: "img/player/p4.png",
+      name: "RAN SINGH",
+      desg: "DEFENDER",
+    }, {
+
+      image: "img/player/p5.png",
+      name: "BALBIR SINGH",
+      desg: "Raider",
+    }, {
+
+      image: "img/player/p6.png",
+      name: "JASVIR SINGH",
+      desg: "Raider",
+	}];			
+						
+						
+						
   })
   .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file

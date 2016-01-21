@@ -52,7 +52,25 @@
 <div class="section3">
 <div class="home-player-slider">
   <h2 class="text-center color-pink bold">OUR PANTHERS</h2>
-  <div class="slider">
+  <div class="slider-social">
+   <div class="slider">
+        <flex-slider flex-slide="data in player track by $index" animation="slide" animation-loop="false" item-width="200" item-margin="0" as-nav-for="#slider" slideshow="false">
+          <li class="">
+            <div class="player-slide text-center mb10">
+              <div class="player-image">
+                <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
+              </div>
+              <hr class="border-player">
+              <div class="player-name">
+                <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{data.name}}</h1>
+              </div>
+              <div class="player-desg">
+                <h6 class="voyeg-font f25 margin0 color-success">{{data.desg}}</h6>
+              </div>
+            </div>
+          </li>
+        </flex-slider>
+	  </div>
     <div class="social-link-right">
       <ul>
         <li>

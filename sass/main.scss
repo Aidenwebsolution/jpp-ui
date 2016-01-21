@@ -875,12 +875,18 @@ img.fancybox-image {
   }
 
 }
+.home-player-slider {
+    position: relative;
 .slider{
 	position: relative;
 	min-height: 300px;
+	    width: 80%;
+}
 .social-link-right {
   position: absolute;
   right: 5px;
+	z-index: -1;
+	    top: 0;
   ul {
     list-style: none;
 	      text-align: right;
@@ -939,7 +945,6 @@ img.fancybox-image {
    }
 }
 }
-
 
 .mt10{
 margin-top: 5px;
@@ -1196,5 +1201,9 @@ line-height: 130%;
 @extend .border-player;
   width: 27%;
 top: 130px;
+}
+.section2,section3,.section4,.section5 {
+    z-index: -1;
+    position: relative;
 }
 @import "mobile";
