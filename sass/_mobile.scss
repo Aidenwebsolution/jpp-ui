@@ -10,15 +10,19 @@ $screen-lg: 1200px !default;
   .fixture-match{
     zoom:0.7;
   }
+  .sliders .carousel-control {
+    width: 11%;
+}
+
   .slider {
     .carousel-control.right {
-      right: -100px !important;
+      right: -70px;
   }
   }
 .slider {
   .carousel-control.left {
 
-    left: -100px !important;
+    left: -70px;
 
   }
 }
@@ -47,6 +51,36 @@ $screen-lg: 1200px !default;
 
 }
 @media (max-width: $screen-md-max){
+  .sliders{
+    .glyphicon-chevron-right:before {
+     zoom: 0.7;
+     background-repeat: no-repeat;
+ }
+ .glyphicon-chevron-left:before {
+  zoom: 0.7;
+  background-repeat: no-repeat;
+}
+  }
+  .sliders{
+    .carousel-control.right {
+        right: -76px;
+    }
+    .carousel-control.left {
+      left: -76px;
+  }
+  }
+
+  .slider {
+    .carousel-control {
+      width: 10% !important;
+    }
+  }
+  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -29px;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -29px;
+}
   .f30 {
     font-size: 18px;
   }
@@ -63,18 +97,7 @@ $screen-lg: 1200px !default;
   .mb200 {
     margin-bottom:100px;
 }
-  .slider {
-    .carousel-control.right {
-      right: -70px !important;
-  }
-  }
-.slider {
-  .carousel-control.left {
 
-    left: -70px !important;
-
-  }
-}
   .font-20{
     font-size: 20px;
   }
@@ -100,9 +123,10 @@ $screen-lg: 1200px !default;
 }
 }
 @media (max-width: $screen-sm-max) {
-  // .pnl-title{
-  //   font-size: 20px;
-  // }
+  .slider .carousel-control {
+    width: 16% !important;
+  }
+
   .mar-top{
     margin-top: 10px;
   }
@@ -121,16 +145,15 @@ margin: 8px 0px 0px;
 }
   .slider {
     .carousel-control.right {
-      right: -40px !important;
+      right: -40px;
   }
-  }
-.slider {
   .carousel-control.left {
 
-    left: -40px !important;
+    left: -40px;
 
   }
-}
+  }
+
   .mb36 {
     margin-bottom: 30px;
 }
@@ -296,6 +319,7 @@ display: block;
  }
 
 @media (max-width: $screen-xs-max) {
+
   .pnl-title {
     font-size: 14px;
 }
@@ -421,5 +445,14 @@ padding: 0;
 }
 
 @media (max-width: 480px) {
+  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -7px;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -7px;
+}
+  .slider .carousel-control {
+    height: 40%;
+  }
   .f-23, .mar-top { font-size: 12px; }
 }
