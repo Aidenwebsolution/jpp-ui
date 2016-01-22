@@ -117,9 +117,69 @@ a {
     outline: 0;
   }
 }
-nav li:hover .dropdown-menu {
-  display: block;
+.head-menu {
+  padding:  0 ;
 }
+
+nav{ 
+li.dropdown-menu:nth-child(odd) {
+	a{
+  color: green!important;
+	}
+}
+li.dropdown-menu:nth-child(even) {
+	a{
+  color: red;
+	}
+}
+}
+nav{ 
+	li{
+	font-size: 20px;
+    padding: 0 5px;
+    font-weight: $font-light;
+	margin-right: 20px;
+	&:hover 
+		{
+			.dropdown-menu
+			{
+			display: block;
+			}
+			a.menu-custom{
+				background: -webkit-linear-gradient(#4ac3ed, #217d9e);
+			&:before{
+			    left: -15px;
+    			height: 100%;
+    			width: 30px;
+    			position: absolute;
+    			content: "";
+    			top: 0;
+				@include background-image (linear-gradient(to bottom, #4ac3ed 0%, #217d9e 100%));
+    			@include  transform(skew(20deg));
+    			z-index: -1;
+    			@include transition(all 0.5s ease);
+			}
+			&:after{
+			right: -15px;
+    		height: 100%;
+    		width: 30px;
+    		position: absolute;
+    		content: "";
+    		top: 0;
+			@include background-image (linear-gradient(to bottom, #4ac3ed 0%, #217d9e 100%));
+ 			@include  transform(skew(20deg));
+    		z-index: -1;
+			@include transition( all 0.5s ease);
+			}
+		}
+			}
+		}
+		a.menu-custom{
+			padding: 30px 8px!important;
+			 color: $white !important;
+	}
+}
+
 /* Start writing sass here */
 .padding0 {
   padding: 0;
@@ -142,6 +202,9 @@ nav li:hover .dropdown-menu {
 }
 .navbar-brand {
   padding: 0 7px;
+	img{
+    width: 185px;
+	}
 }
 .sticky-bottom .navbar-fixed-top {
   top: calc(100% - 0px);
@@ -153,13 +216,17 @@ nav li:hover .dropdown-menu {
   z-index: 9999;
   @include transition(all 700ms ease);
 }
-.sticky-bottom.affix .navbar-fixed-top {
-  position: fixed;
-  top: 0;
-  z-index: 999;
+.affix{
+	position: fixed;
+	width: 100%;
+  	top: 0;
+	z-index: 999;
+	background-color: $brand-primary;
+  	border-color: $brand-primary;
 }
+
 .head-menu {
-  padding: 18px 0 17px;
+  padding: 0;
   li {
     font-size: 20px;
     padding: 0 5px;
@@ -192,12 +259,12 @@ nav li:hover .dropdown-menu {
   }
 }
 .section2.home {
-  padding-top: 85px;
+  padding-top: 81px;
 }
 .banner-title {
   border-bottom: 4px solid $brand-success;
   position: relative;
-  margin-top: 86px;
+  margin-top: 81px;
   img{
     width: 100%;
   }
@@ -372,14 +439,20 @@ nav li:hover .dropdown-menu {
     li {
       a {
         i {
-          background: $base;
+          background: #2b9ec6;
           color: #fff;
           border-radius: 100%;
           height: 30px;
           width: 30px;
           padding: 8px 9px;
           font-size: 15px;
+			@include transition(all ease 300ms);
         }
+		  &:hover{
+			  i{
+		  background: darken(#2b9ec6, 20%);
+			  }
+		  }
       }
     }
   }
@@ -805,14 +878,14 @@ img.fancybox-image {
     overflow: hidden;
   }
   .new-runner {
-    ul {
-      background: $brand-success;
+          background: $brand-success;
+	  ul {
       li {
-        padding: 5px 0;
+        padding: 15px 0;
         &:before {
-          content: url(../img/panther.png);
+          content: url(../img/home/pantherplam.png);
           padding: 0 10px;
-          @include transform(scale(0.5));
+          @include transform(scale(0.8));
           display: inline-block;
           vertical-align: middle;
         }
@@ -887,11 +960,13 @@ img.fancybox-image {
 	min-height: 300px;
 	    width: 80%;
 }
+	ol.flex-control-nav.flex-control-paging {
+    display: none;
+}
 .social-link-right {
   position: absolute;
   right: 5px;
-	z-index: -1;
-	    top: 0;
+	    top: 30px;
   ul {
     list-style: none;
 	      text-align: right;
@@ -957,6 +1032,7 @@ margin-top: 5px;
 .mr10{
 margin-right: 5px;
 }
+
 .cont-box {
     position: relative;
 	.ab-middle{
@@ -1059,7 +1135,7 @@ margin-right: 5px;
 				    background: $brand-success;
 				   color: #000;
 				&:after{
-    background-image: linear-gradient(to bottom, $brand-success 0%, $brand-success 100%);
+    @include background-image (linear-gradient(to bottom, $brand-success 0%, $brand-success 100%));
 				}		}
 			&.pink{
 				    background: $brand-primary;
@@ -1240,8 +1316,31 @@ line-height: 130%;
   width: 21%;
 top: 105px;
 }
-.section2,section3,.section4,.section5 {
-    z-index: -1;
-    position: relative;
+.marquee {
+ height: 60px;	
+ overflow: hidden;
+ position: relative;
+ ul {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position */	
+ @include transform(translateX(100%));
+ /* Apply animation to this element */	
+  @include animation(scroll-left 20s linear infinite);
 }
+}
+/* Move it (define the animation) */
+@include keyframes (scroll-left) {
+  0% {
+     @include transform(translateX(100%));
+  }
+  100% {
+    @include transform(translateX(-100%)); 
+  }
+}
+
+
 @import "mobile";
