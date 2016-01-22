@@ -61,8 +61,8 @@
  			<img id="next" src="demo_files/images/next.gif" onclick="boutique_next()" />
  			<!-- The Boutique HTML: -->
  			<ul id="boutique">
- 				<li><img src="demo_files/images/image3.jpg" width="280" height="400"></li>
- 				<li><img src="demo_files/images/image4.jpg" width="280" height="400"></li>
+ 				<li ng-repeat="data in player track by $index"><img ng-src="{{data.image}}" width="280" height="400"></li>
+ 				<!-- <li><img src="demo_files/images/image4.jpg" width="280" height="400"></li> -->
  			</ul>
  		</div>
 	  </div>
