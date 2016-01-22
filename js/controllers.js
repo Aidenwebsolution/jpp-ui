@@ -377,6 +377,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       date: "14 August 2015",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
     }]
+	
+	$('#boutique').boutique(); 
 
   })
   .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
