@@ -624,8 +624,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = [{
 
       name: "News",
-      url: "#/news-media"
-
+      url: "#/news-media",
+      subnav: [{
+      name: "Subnav1",
+      classis: "active",
+      link: "#/Press Release"
+    },{
+      name: "Subnav2",
+      classis: "active",
+      link: "#/Interviews"
+    }]
     }, {
 
       name: "Fixtures & Results",
