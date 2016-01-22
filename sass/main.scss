@@ -820,6 +820,11 @@ img.fancybox-image {
     }
   }
 }
+.img-box{
+  img{
+    width: 100%;
+  }
+}
 .news-us {
   padding: 0 20px;
   @include transition(all ease 300ms);
