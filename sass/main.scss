@@ -7,6 +7,7 @@
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 @import "../bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../css/boutique.css";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #b41e72 !default;
 $brand-success: #4ecaf5 !default;
@@ -1369,5 +1370,5 @@ margin: 0px 20px 0px -75px;
     width: 100%;
 }
 
-@import "boutique.css";
+
 @import "mobile";

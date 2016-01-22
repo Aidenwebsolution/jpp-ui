@@ -14,6 +14,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
     // ];
+    $scope.ooo = function(){
+    $(document).ready(function(){
+      $('#boutique').boutique();
+    });
+  }
+  $scope.$on('$viewContentLoaded', function(){
+  $timeout(function(){
+    console.log("timeout");
+      $('#boutique').boutique();
+  },3000)
+
+
+  });
 
     $scope.news = [{
       image: "img/wallpapper/w1.jpg",
@@ -48,8 +61,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       img: "img/wallpapper/w7.jpg"
     }, ];
-	
-	
+
+
 	 $scope.player = [{
       image: "img/player/p1.png",
       name: "Gangadhari Mallesh",
@@ -109,10 +122,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       image: "img/player/p6.png",
       name: "JASVIR SINGH",
       desg: "Raider",
-	}];			
-						
-						
-						
+	}];
+
+
+
   })
   .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -377,8 +390,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       date: "14 August 2015",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
     }]
-	
-	$('#boutique').boutique(); 
+
+	$('#boutique').boutique();
 
   })
   .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {

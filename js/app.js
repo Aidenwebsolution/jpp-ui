@@ -91,7 +91,6 @@ firstapp.directive('fancyboxThumb', function() {
     }
   };
 });
-
 firstapp.directive('img', function($compile, $parse) {
   return {
     restrict: 'E',
@@ -131,6 +130,9 @@ firstapp.directive("scroll", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
       var windowHeight = $(window).height();
+      if (windowHeight>600) {
+
+      }
       if (this.pageYOffset >= windowHeight) {
         console.log(windowHeight);
         element.addClass('affix');

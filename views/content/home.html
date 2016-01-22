@@ -54,7 +54,12 @@
   <h2 class="text-center color-pink bold">OUR PANTHERS</h2>
   <div class="slider-social">
    <div class="slider">
-   			<ul id="boutique">
+     <div id="parent">
+       <img id="prev" src="demo_files/images/previous.gif" onclick="boutique_previous()" />
+       <img id="next" src="demo_files/images/next.gif" onclick="boutique_next()" />
+       <!-- The Boutique HTML: -->
+
+   			<ul class="boutique" id="boutique">
 				<li ng-repeat="data in player track by $index">
 					<a href="#frame1">
 						<img ng-src="{{data.image}}" width="280" height="400" alt="Optional header">
@@ -80,6 +85,7 @@
 				</li>
 -->
 			</ul>
+         </div>
 <!--
         <flex-slider flex-slide="data in player track by $index" animation="slide" animation-loop="false" item-width="200" item-margin="0" as-nav-for="#slider" slideshow="false">
           <li class="player-slide text-center mb10">
