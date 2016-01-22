@@ -131,7 +131,7 @@ firstapp.directive("scroll", function($window) {
     angular.element($window).bind("scroll", function() {
       var windowHeight = $(window).height();
       if (windowHeight>600) {
-
+$('#boutique').boutique();
       }
       if (this.pageYOffset >= windowHeight) {
         console.log(windowHeight);

@@ -14,18 +14,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
     // ];
-    $scope.ooo = function(){
-    $(document).ready(function(){
-      $('#boutique').boutique();
-    });
-  }
   $scope.$on('$viewContentLoaded', function(){
   $timeout(function(){
     console.log("timeout");
       $('#boutique').boutique();
   },3000)
-
-
   });
 
     $scope.news = [{
