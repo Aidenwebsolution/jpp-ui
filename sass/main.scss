@@ -121,7 +121,7 @@ a {
   padding:  0 ;
 }
 
-nav{ 
+nav{
 li.dropdown-menu:nth-child(odd) {
 	a{
   color: green!important;
@@ -133,13 +133,13 @@ li.dropdown-menu:nth-child(even) {
 	}
 }
 }
-nav{ 
+nav{
 	li{
 	font-size: 20px;
     padding: 0 5px;
     font-weight: $font-light;
 	margin-right: 20px;
-	&:hover 
+	&:hover
 		{
 			.dropdown-menu
 			{
@@ -1317,7 +1317,7 @@ line-height: 130%;
 top: 105px;
 }
 .marquee {
- height: 60px;	
+ height: 60px;
  overflow: hidden;
  position: relative;
  ul {
@@ -1326,9 +1326,9 @@ top: 105px;
  height: 100%;
  margin: 0;
  text-align: center;
- /* Starting position */	
+ /* Starting position */
  @include transform(translateX(100%));
- /* Apply animation to this element */	
+ /* Apply animation to this element */
   @include animation(scroll-left 20s linear infinite);
 }
 }
@@ -1338,9 +1338,31 @@ top: 105px;
      @include transform(translateX(100%));
   }
   100% {
-    @include transform(translateX(-100%)); 
+    @include transform(translateX(-100%));
   }
 }
-
+.my-li{
+  background: transparent;
+padding: 0px;
+  li{
+    font-size: 18px;
+text-align: center;
+    &:nth-child(odd){
+      background: url(../img/odd.png);
+      background-repeat: no-repeat;
+background-size: 100% 100%;
+padding: 8px 25px 8px 25px;
+margin: -7px 0px 0px -45px;
+    }
+    &:nth-child(even){
+      background: url(../img/even.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+/* margin: 0px 0px 0px -26px; */
+padding: 8px 26px 8px 25px;
+margin: 0px 20px 0px -75px;
+    }
+  }
+}
 
 @import "mobile";
