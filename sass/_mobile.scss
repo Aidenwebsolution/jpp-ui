@@ -3,9 +3,15 @@ $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 
-@media (max-width: $screen-lg) {
+@media (max-width: $screen-lg) {	
   .vs {
     margin-top: 95%;
+}
+	.navbar-nav {
+    float: none;
+	}
+	nav a.menu-custom {
+    padding: 25px 3px !important;
 }
   .fixture-match{
     zoom:0.7;
@@ -24,11 +30,6 @@ $screen-lg: 1200px !default;
   }
 }
   // Header
-.head-menu {
-    li {
-        padding: 0 0px;
-  }
-  }
   .navbar-brand {
     padding: 8px 0px;
 }
@@ -289,18 +290,38 @@ margin: 8px 0px 0px;
 }
   .head-menu {
       li {
-        font-size: 16px;
-        padding: 5px 0px;
-text-align: center
+        font-size: 14px;
+		text-align: center
     }
     }
+	.section2.home {
+    padding-top: 50px;
+}
   .nav{
     li{
-      a {
-       padding: 0px 8px;
+		padding-right: 20px;
+		&:hover,
+		&.active
+		  {
+    		  a {
+       padding: 15px 4px!important;
+		 a.menu-custom{
+			&:before{
+			    left: -9px;
+    			width: 25px;
+				}			
+			&:after{
+			    right: -9px;
+    			width: 25px;
+			}
+		  }
+   		}
+     }
    }
-    }
-  }
+ }
+.section2.home {
+    padding-top: 50px;
+}
   .banner-title {
     margin-top: 52px;
 }
@@ -310,10 +331,6 @@ text-align: center
       zoom:0.4;
     }
 }
-// .navbar {
-//     min-height: 70px;
-//
-// }
 .navbar-collapse {
     border-top: 0px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);

@@ -118,11 +118,6 @@ a {
     outline: 0;
   }
 }
-.head-menu {
-  padding:  0 ;
-}
-
-
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     background-color: transparent!important;
 }
@@ -130,10 +125,10 @@ a {
 nav{
 	li{
 	font-size: 20px;
-    padding: 0 5px;
     font-weight: $font-light;
-	margin-right: 20px;
-	&:hover
+	padding-right: 25px;
+	&:hover,
+	&.active
 		{
 			.dropdown-menu
 			{
@@ -142,9 +137,9 @@ nav{
 			a.menu-custom{
 				background: -webkit-linear-gradient(#4ac3ed, #217d9e);
 			&:before{
-			    left: -15px;
+			    left: -12px;
     			height: 100%;
-    			width: 30px;
+    			width: 25px;
     			position: absolute;
     			content: "";
     			top: 0;
@@ -152,11 +147,11 @@ nav{
     			@include  transform(skew(20deg));
     			z-index: -1;
     			@include transition(all 0.5s ease);
-			}
+				}
 			&:after{
-			right: -15px;
+			right: -12px;
     		height: 100%;
-    		width: 30px;
+    		width: 25px;
     		position: absolute;
     		content: "";
     		top: 0;
@@ -169,8 +164,7 @@ nav{
 			}
 		}
 		a.menu-custom{
-			padding: 30px 8px!important;
-			 color: $white !important;
+			padding: 25px 8px!important;
 	}
 }
 
@@ -197,7 +191,7 @@ nav{
 .navbar-brand {
   padding: 0 7px;
 	img{
-    width: 185px;
+    width: 170px;
 	}
 }
 .sticky-bottom .navbar-fixed-top {
@@ -221,14 +215,9 @@ nav{
 
 .head-menu {
   padding: 0;
-  li {
-    font-size: 20px;
-    padding: 0 5px;
-    font-weight: $font-light;
     a {
       color: $white !important;
     }
-  }
 }
 .center-position {
   .logo {
@@ -253,12 +242,12 @@ nav{
   }
 }
 .section2.home {
-  padding-top: 81px;
+  padding-top: 70px;
 }
 .banner-title {
   border-bottom: 4px solid $brand-success;
   position: relative;
-  margin-top: 81px;
+  margin-top: 70px;
   img{
     width: 100%;
   }
@@ -1366,9 +1355,11 @@ margin: 0px 20px 0px -75px;
     }
   }
 }
-.block-img img {
+.block-img {
+    height: 95px;
+    overflow: hidden;
+img {
     width: 100%;
 }
-
-
+}
 @import "mobile";
