@@ -212,7 +212,10 @@ nav{
 	background-color: $brand-primary;
   	border-color: $brand-primary;
 }
-
+.custom-slider {
+    height: 450px;
+    overflow: hidden;
+}
 .head-menu {
   padding: 0;
     a {
@@ -940,7 +943,7 @@ img.fancybox-image {
     position: relative;
 .slider{
 	position: relative;
-	min-height: 300px;
+	min-height: 550px;
 	    width: 80%;
 }
 	ol.flex-control-nav.flex-control-paging {
