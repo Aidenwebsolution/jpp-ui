@@ -1,35 +1,32 @@
-<div class="player-slider sliders mobslider" ng-controller="PlayersCtrl">
-
+<div class="player-slider sliders carousel-fade mobslider" ng-controller="PlayersCtrl">
   <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="dataitem in player" active="slide.active" index="slide.id">
       <div class="player-det">
-
-      <div class="play-img">
-      <img ng-src="{{dataitem.image}}" class="img-responsive">
-      </div>
-<hr class="border-players">
-      <div class="inner-data">
-
-        <div class="player-name text-center">
-          <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name}}</h1>
+        <div class="play-img">
+          <img ng-src="{{dataitem.image}}" class="img-responsive">
         </div>
-        <div class="player-desg text-center">
-          <h6 class="voyeg-font f25 margin0 color-success">{{dataitem.desg}}</h6>
+        <hr class="border-players">
+        <div class="inner-data">
+          <div class="player-name text-center">
+            <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name}}</h1>
+          </div>
+          <div class="player-desg text-center">
+            <h6 class="voyeg-font f25 margin0 color-success">{{dataitem.desg}}</h6>
+          </div>
+          <div class="player-data custom-list">
+            <ul class="ul-border">
+              <li class="li-info">
+                <span class="label label-nation">nationality:</span> {{dataitem.nationality}}</li>
+              <li class="li-info">
+                <span class="label label-nation">Born:</span>{{dataitem.dob}}</li>
+              <li class="li-info">
+                <span class="label label-nation">Jersery number:</span> {{dataitem.jersyno}}</li>
+            </ul>
+          </div>
+          <div class="player-desc text-justify font-base">
+            <p>{{dataitem.desp}}</p>
+          </div>
         </div>
-        <div class="player-data custom-list">
-          <ul class="ul-border">
-            <li class="li-info">
-              <span class="label label-nation">nationality:</span> {{dataitem.nationality}}</li>
-            <li class="li-info">
-              <span class="label label-nation">Born:</span>{{dataitem.dob}}</li>
-            <li class="li-info">
-              <span class="label label-nation">Jersery number:</span> {{dataitem.jersyno}}</li>
-          </ul>
-        </div>
-        <div class="player-desc text-justify font-base">
-          <p>{{dataitem.desp}}</p>
-        </div>
-      </div>
       </div>
     </uib-slide>
   </uib-carousel>

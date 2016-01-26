@@ -7,7 +7,7 @@
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 @import "../bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
-@import "../css/boutique.css";
+//@import "../css/boutique.css";
 /* Bootstrap Variables Goes Here */
 $brand-primary: #b41e72 !default;
 $brand-success: #4ecaf5 !default;
@@ -135,7 +135,7 @@ nav{
 			display: block;
 			}
 			a.menu-custom{
-				background: -webkit-linear-gradient(#4ac3ed, #217d9e);
+        	@include background-image (linear-gradient(#4ac3ed, #217d9e));
 			&:before{
 			    left: -12px;
     			height: 100%;
@@ -196,6 +196,9 @@ nav{
 }
 .sticky-bottom .navbar-fixed-top {
   top: calc(100% - 0px);
+}
+.navbar-fixed-top{
+    border-width: 0 0 0px;
 }
 .sticky-bottom .navbar-fixed-top {
   position: absolute;
@@ -478,6 +481,7 @@ nav{
   margin: 0 6px 15px 0;
   border: 2px solid #fff;
   @include transition(all 300ms ease);
+  cursor: pointer;
   &:hover {
     border: 2px solid $brand-primary;
   }
@@ -910,9 +914,10 @@ img.fancybox-image {
   }
   .hover-plam {
     position: absolute;
-    left: -25px;
-    top: 15px;
-    width: 30px;
+    left: -15px;
+    top: 50%;
+    @include transform(translateY(-50%));
+    width: 20px;
     opacity: 0;
   }
   .new-item {
@@ -1188,6 +1193,9 @@ padding: 20px 0;
     left: 50%;
     transform: translate(-50%,-50%)!important;
 }
+.modal-content {
+border-radius: 0px;
+}
 .sliders{
   .glyphicon-chevron-left:before {
     content: '';
@@ -1309,7 +1317,7 @@ top: 105px;
  position: relative;
  ul {
  position: absolute;
- width: 100%;
+ width: 2500px;
  height: 100%;
  margin: 0;
  text-align: center;
@@ -1364,5 +1372,48 @@ margin: 0px 20px 0px -75px;
 img {
     width: 100%;
 }
+}
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity!important;
+        }
+        .item,
+         .active.left,
+        .active.right {
+          transition-property: opacity!important;
+            opacity: 0!important;
+        }
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1!important;
+        }
+
+        // .next,
+        // .prev,
+        // .active.left,
+        // .active.right {
+        //     left: 0;
+        //     transform: translate3d(0, 0, 0);
+        // }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+.fade-animation.ng-hide-add,
+.fade-animation.ng-hide-remove {
+  -webkit-transition:0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition:0.5s linear all;
+
+  display:block !important;
+  opacity:1;
+}
+.fade-animation.ng-hide {
+  opacity:0;
 }
 @import "mobile";

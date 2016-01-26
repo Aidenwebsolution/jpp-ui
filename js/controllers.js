@@ -14,28 +14,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
     // ];
-  $scope.$on('$viewContentLoaded', function(){
-  $timeout(function(){
-    console.log("timeout");
-      $('#boutique').boutique();
-  },3000)
-  });
+//  $scope.$on('$viewContentLoaded', function(){
+//  $timeout(function(){
+//    console.log("timeout");
+//      $('#boutique').boutique();
+//  },3000)
+//  });
 
     $scope.news = [{
       image: "img/wallpapper/w1.jpg",
-      title: "New from the camp",
+      // title: "New from the camp",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      date: "MONDAY, NOVEMBER 30, 2015",
+      // date: "MONDAY, NOVEMBER 30, 2015",
     }, {
       image: "img/wallpapper/w1.jpg",
-      title: "New from the camp",
+      // title: "New from the camp",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      date: "MONDAY, NOVEMBER 30, 2015",
+      // date: "MONDAY, NOVEMBER 30, 2015",
     }, {
       image: "img/wallpapper/w1.jpg",
-      title: "New from the camp",
+      // title: "New from the camp",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      date: "MONDAY, NOVEMBER 30, 2015",
+      // date: "MONDAY, NOVEMBER 30, 2015",
+    },{
+      image: "img/wallpapper/w1.jpg",
+      // title: "New from the camp",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      // date: "MONDAY, NOVEMBER 30, 2015",
     }, ];
     $scope.wallpapper = [{
       img: "img/wallpapper/w4.jpg"
@@ -384,8 +389,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
     }]
 
-	$('#boutique').boutique();
-
   })
   .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
@@ -634,11 +637,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "News",
       url: "#/news-media",
       subnav: [{
-      name: "Subnav1",
+      name: "Press Release",
       classis: "active",
       link: "#/Press Release"
     },{
-      name: "Subnav2",
+      name: "Interviews",
       classis: "active",
       link: "#/Interviews"
     }]
@@ -657,12 +660,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "Gallery ",
       url: "#/gallery "
 
-    }, {
-
-      name: "Fan Corner",
-      url: "#/fan-Corner"
-
-    }, {
+    }
+//						 ,{
+//
+//      name: "Fan Corner",
+//      url: "#/fan-Corner"
+//
+//    }
+						 , {
 
       name: "About Us",
       url: "#/about-us"

@@ -131,7 +131,7 @@ firstapp.directive("scroll", function($window) {
     angular.element($window).bind("scroll", function() {
       var windowHeight = $(window).height();
       if (windowHeight>600) {
-$('#boutique').boutique();
+//$('#boutique').boutique();
       }
       if (this.pageYOffset >= windowHeight) {
         console.log(windowHeight);
@@ -140,5 +140,35 @@ $('#boutique').boutique();
         element.removeClass('affix');
       }
     });
+  };
+});
+
+
+firstapp.directive('galleryExample', function($interval, $window){
+  return {
+    restrict: 'EA',
+    scope: {
+      images: '='
+    },
+    link: function(scope, element, attributes){
+      // Initialise the nowshowing variable to show the first image.
+      scope.nowShowing = 0;
+
+      // Set an interval to show the next image every couple of seconds.
+      $interval(function showNext(){
+        // Make sure we loop back to the start.
+        if(scope.nowShowing != scope.images.length - 1){
+          scope.nowShowing ++;
+        }
+        else{
+          scope.nowShowing = 0;
+        }
+      }, 2000);
+
+      // Image click behaviour
+      scope.openInNewWindow = function(index){
+        $window.open(scope.images[index].url);
+      }
+    }
   };
 });
