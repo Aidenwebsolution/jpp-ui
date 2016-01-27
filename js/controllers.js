@@ -23,34 +23,42 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   //  });
   $scope.slideSet = [{
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p2.png',
     name: 'Mallesh Gangadhari ',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p3.png',
     name: 'Gangadhari',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Mallesh Gangadhari Mallesh',
     desg: 'Raider'
   }, {
     src: 'img/player-slide.png',
+    src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }];

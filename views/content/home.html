@@ -59,10 +59,11 @@
     <div class="slider-social">
       <div class="slider pt50">
         <div class="row">
-          <div class="col-md-offset-2 col-md-8">
+          <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
             <flex-slider flex-slide="s in slideSet track by $index">
               <li>
-                <img ng-src="{{s.src}}">
+                <img ng-src="{{s.src}}" class="hidden-xs">
+                <img ng-src="{{s.src2}}"  class="hidden-sm hideen-md hidden-lg visible-xs">
                 <div class="player-det text-center">
                   <div class="player-name">
                     <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{s.name}}</h1>
@@ -289,7 +290,7 @@
             <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers" data-widget-id="692273446991073280">Tweets by @JaipurPanthers</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </div>
-          <div class="facebook-tab pt20" ng-show="tab2=='insta'">
+          <div class="facebook-tab pt20" ng-show="tab2=='insta'" style="overflow-y:scroll;">
 <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/857a172c731d5929b28a94186a3ce08d.html" id="instansive_857a172c73" name="instansive_857a172c73"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 450px; border: 0; overflow: hidden;"></iframe>
           </div>
         </div>
