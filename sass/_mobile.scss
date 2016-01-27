@@ -470,8 +470,10 @@ $screen-lg: 1200px !default;
   //end menu
   .sliders .play-img {
     height: 50px;
+    height: 200px;
     top: 0;
   }
+
   .sliders .carousel-control.left {
     background: none;
     filter:none;
@@ -617,6 +619,12 @@ $screen-lg: 1200px !default;
       background: url(/img/play-left.png)no-repeat;
       zoom: 0.5;
     }
+  }
+  .sliders .play-img {
+     margin-bottom: -50px;
+   }
+   .modal-dialog {
+     width: 75%;
   }
   .flex-next {
     &:before {
