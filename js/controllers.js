@@ -137,10 +137,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
   };
 
-  $scope.slideSet = [{
-    src: 'img/player-slide.png',
-    name: 'Gangadhari Mallesh',
-    desg: 'Raider'
+  $scope.wallpapper = [{
+img: "img/wallpapper/w5.jpg"
   }, {
     img: "img/wallpapper/w5.jpg"
   }, {
