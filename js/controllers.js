@@ -319,56 +319,19 @@ img: "img/wallpapper/w5.jpg"
   var slides = $scope.slides = [];
   var currIndex = 0;
   $scope.slides = [{
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g1.jpg"
-  }, {
-    galleryimg: "img/gallery/g2.jpg"
-  }, {
-    galleryimg: "img/gallery/g3.jpg"
+img:'img/gallery/c1.jpg',
+title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
+  },{
+img:'img/gallery/c1.jpg',
+title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
+  },{
+img:'img/gallery/c1.jpg',
+title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
+  },{
+img:'img/gallery/c1.jpg',
+title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
   }];
-  $scope.slides = _.chunk($scope.slides, 8);
-  console.log($scope.slides);
-  for (var i = 0; i < $scope.slides.length; i++) {
-    $scope.slides[i] = _.chunk($scope.slides[i], 4);
-  }
-  console.log($scope.slides);
+
 })
 
 .controller('WallpapperCtrl', function($scope, TemplateService, NavigationService, $timeout) {

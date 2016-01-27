@@ -16,15 +16,15 @@
 
 </section>
 
-<section class="mt100">
+<section class="mt100 mb50">
   <div class="container">
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 mb15" ng-repeat="data in slides track by $index">
       <div class="gallery-album">
         <div class="album-cover">
-          <img src="img/gallery/c1.jpg" class="img-responsive">
+          <img ng-src="{{data.img}}" class="img-responsive">
           <div class="album-title text-center">
-            <h4>LOREM IPSUM IS SIMPLY DUMMY TEXT</h4>
+            <h4>{{data.title}}</h4>
           </div>
         </div>
 
