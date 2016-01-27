@@ -1,21 +1,23 @@
 var jsArray = [
   './bower_components/jquery/dist/jquery.min.js',
   './bower_components/fancyBox/source/jquery.fancybox.js',
-  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+  './bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.js',
+  './bower_components/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js',
   './bower_components/flexslider/jquery.flexslider-min.js',
+  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+
   './bower_components/angular/angular.min.js',
   './bower_components/angular-sanitize/angular-sanitize.min.js',
-  './bower_components/angular-animate/angular-animate.min.js',
-  './bower_components/angular-bootstrap/ui-bootstrap.min.js',
-  './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-  './bower_components/ui-router/release/angular-ui-router.min.js',
   './bower_components/angular-flexslider/angular-flexslider.js',
-  '.https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.js',
+  './bower_components/ui-router/release/angular-ui-router.min.js',
+  './bower_components/angular-bootstrap/ui-bootstrap.min.js',
+  './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
   './bower_components/lodash/lodash.js',
+
   './js/app.js',
   './js/controllers.js',
-  './js/templateservice.js',
   './js/navigation.js',
+  './js/templateservice.js',
 
   //please do not change it
   './w/js/templates.js',
