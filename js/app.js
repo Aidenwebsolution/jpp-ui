@@ -12,57 +12,65 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   $httpProvider.defaults.withCredentials = true;
 
   $stateProvider
-
     .state('home', {
       url: "/home",
       templateUrl: "views/template-home.html",
       controller: 'HomeCtrl'
     })
-    .state('players', {
-      url: "/players",
-      templateUrl: "views/template.html",
-      controller: 'PlayersCtrl'
-    })
-    .state('wallpapper', {
-      url: "/wallpapper",
-      templateUrl: "views/template.html",
-      controller: 'WallpapperCtrl'
-    })
-    .state('gallery-inner', {
-      url: "/gallery-inner",
-      templateUrl: "views/template.html",
-      controller: 'GalleryInnerCtrl'
-    })
-    .state('wallpapper-inner', {
-      url: "/wallpapper-inner",
-      templateUrl: "views/template.html",
-      controller: 'WallpapperInnerCtrl'
-    })
-    .state('gallery', {
-      url: "/gallery",
-      templateUrl: "views/template.html",
-      controller: 'GalleryCtrl'
-    })
-    .state('fixtures', {
-      url: "/fixtures",
-      templateUrl: "views/template.html",
-      controller: 'FixturesCtrl'
-    })
-    .state('news-media', {
-      url: "/news-media",
-      templateUrl: "views/template.html",
-      controller: 'NewsMediaCtrl'
-    })
-    .state('news-detail', {
-      url: "/news-detail",
-      templateUrl: "views/template.html",
-      controller: 'NewsDetailCtrl'
-    })
-    .state('ticket-merchandize', {
-      url: "/ticket-merchandize",
-      templateUrl: "views/template.html",
-      controller: 'TicketMerchandizeCtrl'
-    })
+
+  .state('players', {
+    url: "/players",
+    templateUrl: "views/template.html",
+    controller: 'PlayersCtrl'
+  })
+
+  .state('wallpapper', {
+    url: "/wallpapper",
+    templateUrl: "views/template.html",
+    controller: 'WallpapperCtrl'
+  })
+
+  .state('gallery-inner', {
+    url: "/gallery-inner",
+    templateUrl: "views/template.html",
+    controller: 'GalleryInnerCtrl'
+  })
+
+  .state('wallpapper-inner', {
+    url: "/wallpapper-inner",
+    templateUrl: "views/template.html",
+    controller: 'WallpapperInnerCtrl'
+  })
+
+  .state('gallery', {
+    url: "/gallery",
+    templateUrl: "views/template.html",
+    controller: 'GalleryCtrl'
+  })
+
+  .state('fixtures', {
+    url: "/fixtures",
+    templateUrl: "views/template.html",
+    controller: 'FixturesCtrl'
+  })
+
+  .state('news-media', {
+    url: "/news-media",
+    templateUrl: "views/template.html",
+    controller: 'NewsMediaCtrl'
+  })
+
+  .state('news-detail', {
+    url: "/news-detail",
+    templateUrl: "views/template.html",
+    controller: 'NewsDetailCtrl'
+  })
+
+  .state('ticket-merchandize', {
+    url: "/ticket-merchandize",
+    templateUrl: "views/template.html",
+    controller: 'TicketMerchandizeCtrl'
+  })
 
   .state('about-us', {
     url: "/about-us",
