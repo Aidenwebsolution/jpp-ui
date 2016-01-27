@@ -960,63 +960,63 @@ img.fancybox-image {
 }
 .home-player-slider {
   position: relative;
-      padding-top: 30px;
-  .slider {
-    position: relative;
-    padding-bottom: 50px;
-    width: 80%;
-    margin: 0 auto;
-    .flexslider {
-          margin: 0 0 0px;
-  border: none;
-  overflow: hidden;
-  .flex-direction-nav {
-    a {
-      height: 45px;
-      color: transparent;
-      text-shadow: none;
-      &:before {
-        font-size: 40px;
-        color: transparent;
-        text-shadow: none;
-
-      }
-    }
-    .flex-prev {
-      left: 0px ;
-      opacity: 1 !important;
-
-    height: 86px;
-width: 60px;
-      &:before {
-        background: url(../img/play-left.png)no-repeat;
-        height: 86px;
-width: 59px;
-      }
-    }
-    .flex-next {
-      right: 0px !important;
-      opacity: 1 !important;
-
-
-    height: 86px;
-width: 60px;
-      &:before {
-        background: url(../img/play-right.png)no-repeat;
-        height: 86px;
-width: 60px;
-      }
-    }
-  }
-
-  .slides{
-        margin: 0px 60px;
-  }
-}
-  }
-  ol.flex-control-nav.flex-control-paging {
-    display: none;
-  }
+      // padding-top: 30px;
+//   .slider {
+//     position: relative;
+//     padding-bottom: 50px;
+//     width: 80%;
+//     margin: 0 auto;
+//     .flexslider {
+//           margin: 0 0 0px;
+//   border: none;
+//   overflow: hidden;
+//   .flex-direction-nav {
+//     a {
+//       height: 45px;
+//       color: transparent;
+//       text-shadow: none;
+//       &:before {
+//         font-size: 40px;
+//         color: transparent;
+//         text-shadow: none;
+//
+//       }
+//     }
+//     .flex-prev {
+//       left: 0px ;
+//       opacity: 1 !important;
+//
+//     height: 86px;
+// width: 60px;
+//       &:before {
+//         background: url(../img/play-left.png)no-repeat;
+//         height: 86px;
+// width: 59px;
+//       }
+//     }
+//     .flex-next {
+//       right: 0px !important;
+//       opacity: 1 !important;
+//
+//
+//     height: 86px;
+// width: 60px;
+//       &:before {
+//         background: url(../img/play-right.png)no-repeat;
+//         height: 86px;
+// width: 60px;
+//       }
+//     }
+//   }
+//
+//   .slides{
+//         margin: 0px 60px;
+//   }
+// }
+//   }
+//   ol.flex-control-nav.flex-control-paging {
+//     display: none;
+//   }
     .social-link-right {
         position: fixed;
         right: 5px;
