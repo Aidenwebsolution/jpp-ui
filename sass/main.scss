@@ -701,6 +701,11 @@ hr {
   text-transform: capitalize;
 }
 .fixture {
+  .panel-open {
+    .panel-heading {
+      display: none;
+    }
+  }
   .panel {
     border: 0 solid transparent;
   }
