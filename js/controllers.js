@@ -153,7 +153,7 @@ img: "img/wallpapper/w5.jpg"
     img: "img/wallpapper/w6.jpg"
   }, {
     img: "img/wallpapper/w7.jpg"
-  }, ];
+  } ];
 
 
   $scope.player = [{
