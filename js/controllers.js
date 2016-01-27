@@ -20,6 +20,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 //      $('#boutique').boutique();
 //  },3000)
 //  });
+
+$scope.tab2 = 'fb';
+$scope.classa = 'actives';
+$scope.classb = '';
+$scope.classc = '';
+
+$scope.tabchange = function(tab, a) {
+    //        console.log(tab);
+    $scope.result = [];
+    $scope.allresult = [];
+    $scope.tab2 = tab;
+    if (a == 1) {
+        $scope.classa = "actives";
+        $scope.classb = '';
+        $scope.classc = '';
+    } else if (a == 2) {
+
+      $scope.classb = "actives";
+      $scope.classa = '';
+      $scope.classc = '';
+    } else {
+
+        $scope.classa = '';
+        $scope.classc = "actives";
+        $scope.classb = '';
+    }
+};
+
 $scope.slideSet = [{
   src: 'img/player-slide.png',
   name:'Gangadhari Mallesh',
