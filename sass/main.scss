@@ -1017,10 +1017,12 @@ width: 60px;
   ol.flex-control-nav.flex-control-paging {
     display: none;
   }
-  .social-link-right {
-    position: absolute;
-    right: 5px;
-    top: 30px;
+    .social-link-right {
+        position: fixed;
+        right: 5px;
+        top: 50%;
+      @include transform(translateY(-50%));
+      z-index: 999999;
     ul {
       list-style: none;
       text-align: right;
