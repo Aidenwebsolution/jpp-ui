@@ -1311,18 +1311,13 @@ width: 60px;
   .carousel-indicators {
     display: none;
   }
-  .carousel-inner {
-    overflow: visible;
-  }
   .play-img {
     height: 250px;
     overflow: hidden;
     display: block;
     text-align: center;
     margin: 0 auto;
-    position: absolute;
     width: 100%;
-    top: -145px;
     img {
       max-height: 100%;
       max-width: 100%;
@@ -1462,5 +1457,17 @@ width: 60px;
 }
 .content-scroll {
   background-color: black;
+}
+.gallery-album {
+    position: relative;
+}
+.album-cover {
+    position: relative;
+}
+.album-title.text-center {
+    position: absolute;
+    bottom: 0;
+    background: rgba(78, 202, 245, 0.88);
+    width: 100%;
 }
 @import "mobile";
