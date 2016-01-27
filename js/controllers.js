@@ -1,177 +1,186 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("home");
-    $scope.menutitle = NavigationService.makeactive("Home");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-    // TemplateService.header = "";
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("home");
+  $scope.menutitle = NavigationService.makeactive("Home");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  // TemplateService.header = "";
 
-    // $scope.mySlides = [
-    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-    // ];
-//  $scope.$on('$viewContentLoaded', function(){
-//  $timeout(function(){
-//    console.log("timeout");
-//      $('#boutique').boutique();
-//  },3000)
-//  });
-$scope.slideSet = [{
-  src: 'img/player-slide.png',
-  name:'Gangadhari Mallesh',
-  desg:'Raider'
+  // $scope.mySlides = [
+  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+  // ];
+  //  $scope.$on('$viewContentLoaded', function(){
+  //  $timeout(function(){
+  //    console.log("timeout");
+  //      $('#boutique').boutique();
+  //  },3000)
+  //  });
+  $scope.slideSet = [{
+    src: 'img/player-slide.png',
+    name: 'Gangadhari Mallesh',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Mallesh Gangadhari ',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Gangadhari',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Gangadhari Mallesh',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Gangadhari Mallesh',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Gangadhari Mallesh',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Mallesh Gangadhari Mallesh',
+    desg: 'Raider'
+  }, {
+    src: 'img/player-slide.png',
+    name: 'Gangadhari Mallesh',
+    desg: 'Raider'
+  }];
+
+  $scope.news = [{
+    id: 0,
+    image: "img/banner/01_banner.jpg",
+    // title: "New from the camp",
+    desc: "View all fixtures of season 3",
+    active: false
+    // date: "MONDAY, NOVEMBER 30, 2015",
+  }, {
+    id: 1,
+    image: "img/banner/02_banner.jpg",
+    // title: "New from the camp",
+    desc: "Download exclusive wallpapers for desktop and mobile",
+    active: true
+    // date: "MONDAY, NOVEMBER 30, 2015",
+  }, {
+    id: 2,
+    image: "img/banner/03_banner.jpg",
+    // title: "New from the camp",
+    desc: "Know your panthers",
+    active: false
+    // date: "MONDAY, NOVEMBER 30, 2015",
+  }, {
+    id: 3,
+    image: "img/banner/04_banner.jpg",
+    // title: "New from the camp",
+    desc: "Purchase exclusive JPP Merchandise",
+    active: false
+    // date: "MONDAY, NOVEMBER 30, 2015",
+  }, {
+    id: 4,
+    image: "img/banner/05_banner.jpg",
+    // title: "New from the camp",
+    desc: "Book match tickets",
+    active: false
+    // date: "MONDAY, NOVEMBER 30, 2015",
+  }];
+
+$scope.wallpapper = [{
+  img: "img/wallpapper/w4.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Mallesh Gangadhari ',
-  desg:'Raider'
+  img: "img/wallpapper/w5.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Gangadhari',
-  desg:'Raider'
+  img: "img/wallpapper/w6.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Gangadhari Mallesh',
-  desg:'Raider'
+  img: "img/wallpapper/w7.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Gangadhari Mallesh',
-  desg:'Raider'
+  img: "img/wallpapper/w4.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Gangadhari Mallesh',
-  desg:'Raider'
+  img: "img/wallpapper/w5.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Mallesh Gangadhari Mallesh',
-  desg:'Raider'
+  img: "img/wallpapper/w6.jpg"
 }, {
-  src: 'img/player-slide.png',
-  name:'Gangadhari Mallesh',
-  desg:'Raider'
+  img: "img/wallpapper/w7.jpg"
+}, ];
+
+
+$scope.player = [{
+  image: "img/player/p1.png",
+  name: "Gangadhari Mallesh",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p2.png",
+  name: "RAJESH NARWAL",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p3.png",
+  name: "ROHIT RANA",
+  desg: "DEFENDER",
+}, {
+
+  image: "img/player/p4.png",
+  name: "RAN SINGH",
+  desg: "DEFENDER",
+}, {
+
+  image: "img/player/p5.png",
+  name: "BALBIR SINGH",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p6.png",
+  name: "JASVIR SINGH",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p1.png",
+  name: "Gangadhari Mallesh",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p2.png",
+  name: "RAJESH NARWAL",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p3.png",
+  name: "ROHIT RANA",
+  desg: "DEFENDER",
+}, {
+
+  image: "img/player/p4.png",
+  name: "RAN SINGH",
+  desg: "DEFENDER",
+}, {
+
+  image: "img/player/p5.png",
+  name: "BALBIR SINGH",
+  desg: "Raider",
+}, {
+
+  image: "img/player/p6.png",
+  name: "JASVIR SINGH",
+  desg: "Raider",
 }];
 
+$scope.scrollTo = function(image, ind) {
+$scope.listposition = {
+  left: (IMAGE_WIDTH * ind * -1) + "px"
+};
+$scope.selected = image;
+}
 
 
-
-    $scope.news = [{
-      image: "img/banner/01_banner.jpg",
-      // title: "New from the camp",
-      desc: "View all fixtures of season 3",
-      // date: "MONDAY, NOVEMBER 30, 2015",
-    }, {
-      image: "img/banner/02_banner.jpg",
-      // title: "New from the camp",
-      desc: "Download exclusive wallpapers for desktop and mobile",
-      // date: "MONDAY, NOVEMBER 30, 2015",
-    }, {
-      image: "img/banner/03_banner.jpg",
-      // title: "New from the camp",
-      desc: "Know your panthers",
-      // date: "MONDAY, NOVEMBER 30, 2015",
-    },{
-      image: "img/banner/04_banner.jpg",
-      // title: "New from the camp",
-      desc: "Purchase exclusive JPP Merchandise",
-      // date: "MONDAY, NOVEMBER 30, 2015",
-    },{
-      image: "img/banner/05_banner.jpg",
-      // title: "New from the camp",
-      desc: "Book match tickets",
-      // date: "MONDAY, NOVEMBER 30, 2015",
-    }];
-
-    $scope.wallpapper = [{
-      img: "img/wallpapper/w4.jpg"
-    }, {
-      img: "img/wallpapper/w5.jpg"
-    }, {
-      img: "img/wallpapper/w6.jpg"
-    }, {
-      img: "img/wallpapper/w7.jpg"
-    }, {
-      img: "img/wallpapper/w4.jpg"
-    }, {
-      img: "img/wallpapper/w5.jpg"
-    }, {
-      img: "img/wallpapper/w6.jpg"
-    }, {
-      img: "img/wallpapper/w7.jpg"
-    }, ];
-
-
-	 $scope.player = [{
-      image: "img/player/p1.png",
-      name: "Gangadhari Mallesh",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p2.png",
-      name: "RAJESH NARWAL",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p3.png",
-      name: "ROHIT RANA",
-      desg: "DEFENDER",
-    }, {
-
-      image: "img/player/p4.png",
-      name: "RAN SINGH",
-      desg: "DEFENDER",
-    }, {
-
-      image: "img/player/p5.png",
-      name: "BALBIR SINGH",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p6.png",
-      name: "JASVIR SINGH",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p1.png",
-      name: "Gangadhari Mallesh",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p2.png",
-      name: "RAJESH NARWAL",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p3.png",
-      name: "ROHIT RANA",
-      desg: "DEFENDER",
-    }, {
-
-      image: "img/player/p4.png",
-      name: "RAN SINGH",
-      desg: "DEFENDER",
-    }, {
-
-      image: "img/player/p5.png",
-      name: "BALBIR SINGH",
-      desg: "Raider",
-    }, {
-
-      image: "img/player/p6.png",
-      name: "JASVIR SINGH",
-      desg: "Raider",
-	}];
-
-  $scope.scrollTo = function(image,ind) {
-      $scope.listposition = {left:(IMAGE_WIDTH * ind * -1) + "px"};
-      $scope.selected = image;
-  }
-
-
-  })
-  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+})
+.controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("fixtures");
     $scope.menutitle = NavigationService.makeactive("Fixtures");
@@ -680,50 +689,51 @@ $scope.slideSet = [{
 
     $scope.navigation = [{
 
-      name: "News",
-      url: "#/news-media",
-      subnav: [{
-      name: "Press Release",
-      classis: "active",
-      link: "#/Press Release"
-    },{
-      name: "Interviews",
-      classis: "active",
-      link: "#/Interviews"
-    }]
-    }, {
+        name: "News",
+        url: "#/news-media",
+        subnav: [{
+          name: "Press Release",
+          classis: "active",
+          link: "#/Press Release"
+        }, {
+          name: "Interviews",
+          classis: "active",
+          link: "#/Interviews"
+        }]
+      }, {
 
-      name: "Fixtures & Results",
-      url: "#/fixtures"
+        name: "Fixtures & Results",
+        url: "#/fixtures"
 
-    }, {
+      }, {
 
-      name: "Players",
-      url: "#/players"
+        name: "Players",
+        url: "#/players"
 
-    }, {
+      }, {
 
-      name: "Gallery ",
-      url: "#/gallery "
+        name: "Gallery ",
+        url: "#/gallery "
 
-    }
-//						 ,{
-//
-//      name: "Fan Corner",
-//      url: "#/fan-Corner"
-//
-//    }
-						 , {
+      }
+      //						 ,{
+      //
+      //      name: "Fan Corner",
+      //      url: "#/fan-Corner"
+      //
+      //    }
+      , {
 
-      name: "About Us",
-      url: "#/about-us"
+        name: "About Us",
+        url: "#/about-us"
 
-    }, {
+      }, {
 
-      name: "Tickets & Merchandize",
-      url: "#/ticket-merchandize"
+        name: "Tickets & Merchandize",
+        url: "#/ticket-merchandize"
 
-    }];
+      }
+    ];
   })
 
 ;
