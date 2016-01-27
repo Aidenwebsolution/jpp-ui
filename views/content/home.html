@@ -18,14 +18,13 @@
       <div class="col-sm-8 padding0">
         <div class="image-holder">
           <uib-carousel>
-            <uib-slide ng-repeat="new in news track by $index">
+            <uib-slide ng-repeat="new in news track by $index" active="new.active" index="new.id">
               <img ng-src="{{new.image}}" class="gallery-image">
             </uib-slide>
           </uib-carousel>
         </div>
       </div>
       <div class="col-sm-4 padding0">
-        {{slides}}
         <div class="content-scroll">
           <div class="news-us" ng-repeat="new in news track by $index">
             <img src="img/home/panther-right.png" alt="" class="hover-plam">
