@@ -21,6 +21,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   //      $('#boutique').boutique();
   //  },3000)
   //  });
+
   $scope.image = [{
     src: 'img/player-slide.png',
     src2: 'img/player/p1.png',
@@ -67,42 +68,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     id: 0,
     image: "img/banner/01_banner.jpg",
     // title: "New from the camp",
-    desc: "View all fixtures of season 3",
+    desc: "View All Fixtures of Season 3",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
     id: 1,
     image: "img/banner/02_banner.jpg",
     // title: "New from the camp",
-    desc: "Download exclusive wallpapers for desktop and mobile",
+    desc: "Download Exclusive Wallpapers for Desktop & Mobile",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
     id: 2,
     image: "img/banner/03_banner.jpg",
     // title: "New from the camp",
-    desc: "Know your panthers",
+    desc: "Know Your Panthers",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
     id: 3,
     image: "img/banner/04_banner.jpg",
     // title: "New from the camp",
-    desc: "Purchase exclusive JPP Merchandise",
+    desc: "Purchase Exclusive JPP Merchandise",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
     id: 4,
     image: "img/banner/05_banner.jpg",
     // title: "New from the camp",
-    desc: "Book match tickets",
+    desc: "Book Match Tickets",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }];
 
+  var clickCount = 0;
   $scope.changeSlide = function(data) {
     $scope.currentActive = data;
-    $scope.currentActive.active = true;
+    if (clickCount == 0) {
+
+    }
+      $scope.currentActive.active = true;
   }
 
   $scope.tab2 = 'fb';
@@ -740,54 +745,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
   });
-
-  $scope.navigation = [{
-
-      name: "News",
-      url: "#/news-media",
-      subnav: [{
-        name: "Press Release",
-        classis: "active",
-        link: "#/Press Release"
-      }, {
-        name: "Interviews",
-        classis: "active",
-        link: "#/Interviews"
-      }]
-    }, {
-
-      name: "Fixtures & Results",
-      url: "#/fixtures"
-
-    }, {
-
-      name: "Players",
-      url: "#/players"
-
-    }, {
-
-      name: "Gallery ",
-      url: "#/gallery "
-
-    }
-    //						 ,{
-    //
-    //      name: "Fan Corner",
-    //      url: "#/fan-Corner"
-    //
-    //    }
-    , {
-
-      name: "About Us",
-      url: "#/about-us"
-
-    }, {
-
-      name: "Tickets & Merchandize",
-      url: "#/ticket-merchandize"
-
-    }
-  ];
 })
 
 ;

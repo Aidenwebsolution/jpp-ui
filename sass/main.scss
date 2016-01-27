@@ -216,6 +216,7 @@ nav {
 }
 .custom-slider {
   overflow: hidden;
+  background-color: black;
 }
 .head-menu {
   padding: 0;
@@ -908,7 +909,7 @@ img.fancybox-image {
       }
       h3 {
         color: #000;
-      } 
+      }
     }
     .hover-plam {
       opacity: 1;
@@ -928,7 +929,7 @@ img.fancybox-image {
     border-bottom: 1px solid #666666;
     @include transition(all ease 300ms);
     h3 {
-      color: $brand-primary;
+      color: $pink;
       font-size: 16px;
       line-height: 1.5;
     }
