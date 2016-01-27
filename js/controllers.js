@@ -1,6 +1,7 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("home");
   $scope.menutitle = NavigationService.makeactive("Home");
@@ -93,6 +94,59 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 $scope.wallpapper = [{
   img: "img/wallpapper/w4.jpg"
+
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("home");
+    $scope.menutitle = NavigationService.makeactive("Home");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    // TemplateService.header = "";
+
+    // $scope.mySlides = [
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+    //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+    // ];
+//  $scope.$on('$viewContentLoaded', function(){
+//  $timeout(function(){
+//    console.log("timeout");
+//      $('#boutique').boutique();
+//  },3000)
+//  });
+
+$scope.tab2 = 'fb';
+$scope.classa = 'actives';
+$scope.classb = '';
+$scope.classc = '';
+
+$scope.tabchange = function(tab, a) {
+    //        console.log(tab);
+    $scope.result = [];
+    $scope.allresult = [];
+    $scope.tab2 = tab;
+    if (a == 1) {
+        $scope.classa = "actives";
+        $scope.classb = '';
+        $scope.classc = '';
+    } else if (a == 2) {
+
+      $scope.classb = "actives";
+      $scope.classa = '';
+      $scope.classc = '';
+    } else {
+
+        $scope.classa = '';
+        $scope.classc = "actives";
+        $scope.classb = '';
+    }
+};
+
+$scope.slideSet = [{
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+>>>>>>> origin/master
 }, {
   img: "img/wallpapper/w5.jpg"
 }, {
