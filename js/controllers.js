@@ -21,7 +21,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   //      $('#boutique').boutique();
   //  },3000)
   //  });
-  $scope.slideSet = [{
+  $scope.image = [{
     src: 'img/player-slide.png',
     src2: 'img/player/p1.png',
     name: 'Gangadhari Mallesh',
