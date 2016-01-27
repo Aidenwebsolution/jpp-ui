@@ -61,21 +61,18 @@ $screen-lg: 1200px !default;
   .flex-prev {
     &:before {
       background: url(/img/play-left.png)no-repeat;
-      zoom:0.6;
+      zoom: 0.6;
     }
   }
   .flex-next {
-
     &:before {
       background: url(/img/play-right.png)no-repeat;
-zoom:0.6;
+      zoom: 0.6;
     }
   }
   .home-player-slider .slider {
-
     min-height: 300px;
-
-}
+  }
   .slider {
     .carousel-control {
       width: 11% !important;
@@ -431,6 +428,19 @@ zoom:0.6;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .flex-prev {
+    left: 30px !important;
+    &:before {
+      background: url(/img/play-left.png)no-repeat;
+      zoom: 0.5;
+    }
+  }
+  .flex-next {
+    &:before {
+      background: url(/img/play-right.png)no-repeat;
+      zoom: 0.5;
+    }
+  }
   //menu
   nav {
     li {
