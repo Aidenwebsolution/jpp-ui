@@ -215,7 +215,6 @@ nav {
   border-color: $brand-primary;
 }
 .custom-slider {
-  height: 450px;
   overflow: hidden;
 }
 .head-menu {
@@ -866,7 +865,7 @@ img.fancybox-image {
   .image-holder {
     overflow: hidden;
 
-    .carousel-control {
+    .carousel-indicators, .carousel-control {
       display: none;
     }
   }
@@ -996,7 +995,7 @@ width: 60px;
       }
     }
   }
-  
+
   .slides{
         margin: 0px 60px;
   }
@@ -1452,5 +1451,8 @@ width: 60px;
 }
 .pt20{
   padding-top: 20px;
+}
+.content-scroll {
+  background-color: black;
 }
 @import "mobile";

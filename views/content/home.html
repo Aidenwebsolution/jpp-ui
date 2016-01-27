@@ -16,7 +16,7 @@
   <div class="custom-slider">
     <div class="row margin0">
       <div class="col-sm-8 padding0">
-        <div class="image-holder">
+        <div class="image-holder parent-height">
           <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
               <img ng-src="{{new.image}}" class="gallery-image">
@@ -25,9 +25,9 @@
         </div>
       </div>
       <div class="col-sm-4 padding0">
-        <div class="content-scroll">
+        <div class="content-scroll" child-height>
 
-          <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);">
+          <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
             <img src="img/home/panther-right.png" alt="" class="hover-plam">
             <div class="news-list">
               <div class="new-item padding10">

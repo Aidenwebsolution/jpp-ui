@@ -118,10 +118,25 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
-      $element.css("min-height", windowHeight);
-      setTimeout(function() {
+      var addHeight = function() {
         $element.css("min-height", windowHeight);
-      });
+      };
+      addHeight();
+    }
+  };
+});
+
+firstapp.directive('childHeight', function($compile, $parse) {
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      var parentHeight = $('.parent-height').height();
+      var addHeight = function() {
+        $element.css("height", parentHeight);
+      };
+      addHeight();
     }
   };
 });
@@ -130,8 +145,8 @@ firstapp.directive("scroll", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
       var windowHeight = $(window).height();
-      if (windowHeight>600) {
-//$('#boutique').boutique();
+      if (windowHeight > 600) {
+        //$('#boutique').boutique();
       }
       if (this.pageYOffset >= windowHeight) {
         console.log(windowHeight);
