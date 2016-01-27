@@ -128,11 +128,13 @@ nav {
     font-size: 20px;
     font-weight: $font-light;
     padding-right: 25px;
-    &:hover,
-    &.active {
+    &:hover {
       .dropdown-menu {
         display: block;
       }
+    }
+    &:hover,
+    &.active {
       a.menu-custom {
         @include background-image (linear-gradient(#4ac3ed, #217d9e));
         &:before {
@@ -977,7 +979,7 @@ img.fancybox-image {
     height: 86px;
 width: 60px;
       &:before {
-        background: url(/img/play-left.png)no-repeat;
+        background: url(../img/play-left.png)no-repeat;
         height: 86px;
 width: 59px;
       }
@@ -990,7 +992,7 @@ width: 59px;
     height: 86px;
 width: 60px;
       &:before {
-        background: url(/img/play-right.png)no-repeat;
+        background: url(../img/play-right.png)no-repeat;
         height: 86px;
 width: 60px;
       }

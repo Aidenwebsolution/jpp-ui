@@ -232,7 +232,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("fixtures");
-  $scope.menutitle = NavigationService.makeactive("Fixtures");
+  $scope.menutitle = NavigationService.makeactive("Fixtures & Results");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.accordian = [];
@@ -369,7 +369,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('WallpapperInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("wallpapper-inner");
-  $scope.menutitle = NavigationService.makeactive("Wallpapper-Inner");
+  $scope.menutitle = NavigationService.makeactive("Wallpappers");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -425,7 +425,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('TicketMerchandizeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("ticket-merchandize");
-  $scope.menutitle = NavigationService.makeactive("Ticket-Merchandize");
+  $scope.menutitle = NavigationService.makeactive("Tickets & Merchandize");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -440,7 +440,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('NewsMediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("news-media");
-  $scope.menutitle = NavigationService.makeactive("News-Media");
+  $scope.menutitle = NavigationService.makeactive("News");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -471,7 +471,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('NewsDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("news-detail");
-  $scope.menutitle = NavigationService.makeactive("News-Detail");
+  $scope.menutitle = NavigationService.makeactive("News");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 
@@ -640,7 +640,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("about-us");
-  $scope.menutitle = NavigationService.makeactive("About-Us");
+  $scope.menutitle = NavigationService.makeactive("About Us");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.team = [{
