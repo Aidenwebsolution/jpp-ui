@@ -122,6 +122,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desg: "Raider",
 	}];
 
+  $scope.scrollTo = function(image,ind) {
+      $scope.listposition = {left:(IMAGE_WIDTH * ind * -1) + "px"};
+      $scope.selected = image;
+  }
 
 
   })
