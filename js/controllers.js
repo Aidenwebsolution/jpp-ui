@@ -7,21 +7,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-  // TemplateService.header = "";
-
-  // $scope.mySlides = [
-  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-  //   'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-  // ];
-  //  $scope.$on('$viewContentLoaded', function(){
-  //  $timeout(function(){
-  //    console.log("timeout");
-  //      $('#boutique').boutique();
-  //  },3000)
-  //  });
-
   $scope.image = [{
     src: 'img/player-slide.png',
     src2: 'img/player/p1.png',
@@ -769,6 +754,4 @@ title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
   });
-})
-
-;
+});
