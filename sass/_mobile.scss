@@ -426,21 +426,22 @@ $screen-lg: 1200px !default;
   .block-img {
     height: 50px;
   }
-}
-@media (max-width: $screen-xs-max) {
   .flex-prev {
-    left: 30px !important;
+    left: 10px !important;
     &:before {
       background: url(/img/play-left.png)no-repeat;
-      zoom: 0.5;
+      zoom: 0.6;
     }
   }
   .flex-next {
     &:before {
       background: url(/img/play-right.png)no-repeat;
-      zoom: 0.5;
+      zoom: 0.6;
     }
   }
+}
+@media (max-width: $screen-xs-max) {
+
   //menu
   nav {
     li {
@@ -617,6 +618,19 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .flex-prev {
+    left: 30px !important;
+    &:before {
+      background: url(/img/play-left.png)no-repeat;
+      zoom: 0.5;
+    }
+  }
+  .flex-next {
+    &:before {
+      background: url(/img/play-right.png)no-repeat;
+      zoom: 0.5;
+    }
+  }
   .sliders .glyphicon-chevron-right:before {
     zoom: 0.5;
   }
