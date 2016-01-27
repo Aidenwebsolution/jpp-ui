@@ -944,10 +944,58 @@ img.fancybox-image {
 }
 .home-player-slider {
   position: relative;
+      padding-top: 30px;
   .slider {
     position: relative;
     min-height: 550px;
     width: 80%;
+    margin: 0 auto;
+    .flexslider {
+          margin: 0 0 0px;
+  border: none;
+  overflow: hidden;
+  .flex-direction-nav {
+    a {
+      height: 45px;
+      color: transparent;
+      text-shadow: none;
+      &:before {
+        font-size: 40px;
+        color: transparent;
+        text-shadow: none;
+
+      }
+    }
+    .flex-prev {
+      left: 0px !important;
+      opacity: 1 !important;
+
+    height: 86px;
+width: 60px;
+      &:before {
+        background: url(/img/play-left.png)no-repeat;
+        height: 86px;
+width: 59px;
+      }
+    }
+    .flex-next {
+      right: 0px !important;
+      opacity: 1 !important;
+
+
+    height: 86px;
+width: 60px;
+      &:before {
+        background: url(/img/play-right.png)no-repeat;
+        height: 86px;
+width: 60px;
+      }
+    }
+  }
+  .slides{
+        margin: 0px 60px;
+  }
+}
   }
   ol.flex-control-nav.flex-control-paging {
     display: none;
@@ -1026,6 +1074,7 @@ img.fancybox-image {
   margin-left: 2px;
 }
 .cont-box {
+  cursor: pointer;
   position: relative;
   .ab-middle {
     position: absolute;
@@ -1103,6 +1152,7 @@ img.fancybox-image {
   }
   .badge-class {
     position: absolute;
+    cursor: pointer;
     left: 0;
     top: 0;
     padding: 12px 30px;
@@ -1386,5 +1436,8 @@ img.fancybox-image {
   .carousel-control {
     z-index: 2;
   }
+}
+.pt50{
+  padding-top: 50px;
 }
 @import "mobile";

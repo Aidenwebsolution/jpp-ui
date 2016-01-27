@@ -20,6 +20,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 //      $('#boutique').boutique();
 //  },3000)
 //  });
+$scope.slideSet = [{
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Mallesh Gangadhari ',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Gangadhari',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Mallesh Gangadhari Mallesh',
+  desg:'Raider'
+}, {
+  src: 'img/player-slide.png',
+  name:'Gangadhari Mallesh',
+  desg:'Raider'
+}];
+
 
     $scope.news = [{
       image: "img/wallpapper/w1.jpg",
