@@ -67,7 +67,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     image: "img/banner/02_banner.jpg",
     // title: "New from the camp",
     desc: "Download exclusive wallpapers for desktop and mobile",
-    active: true
+    active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
     id: 2,
@@ -92,6 +92,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       // date: "MONDAY, NOVEMBER 30, 2015",
   }];
 
+  $scope.changeSlide = function(data) {
+    $scope.currentActive = data;
+    $scope.currentActive.active = true;
+  }
 
   $scope.tab2 = 'fb';
   $scope.classa = 'actives';
