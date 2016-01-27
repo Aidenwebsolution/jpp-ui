@@ -865,6 +865,10 @@ img.fancybox-image {
 .section2.home {
   .image-holder {
     overflow: hidden;
+
+    .carousel-control {
+      display: none;
+    }
   }
   .new-runner {
     background: $brand-success;

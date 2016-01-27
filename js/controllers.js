@@ -55,27 +55,35 @@ $scope.slideSet = [{
 }];
 
 
+
+
     $scope.news = [{
-      image: "img/wallpapper/w1.jpg",
+      image: "img/banner/01_banner.jpg",
       // title: "New from the camp",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      desc: "View all fixtures of season 3",
       // date: "MONDAY, NOVEMBER 30, 2015",
     }, {
-      image: "img/wallpapper/w1.jpg",
+      image: "img/banner/02_banner.jpg",
       // title: "New from the camp",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      desc: "Download exclusive wallpapers for desktop and mobile",
       // date: "MONDAY, NOVEMBER 30, 2015",
     }, {
-      image: "img/wallpapper/w1.jpg",
+      image: "img/banner/03_banner.jpg",
       // title: "New from the camp",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      desc: "Know your panthers",
       // date: "MONDAY, NOVEMBER 30, 2015",
     },{
-      image: "img/wallpapper/w1.jpg",
+      image: "img/banner/04_banner.jpg",
       // title: "New from the camp",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      desc: "Purchase exclusive JPP Merchandise",
       // date: "MONDAY, NOVEMBER 30, 2015",
-    }, ];
+    },{
+      image: "img/banner/05_banner.jpg",
+      // title: "New from the camp",
+      desc: "Book match tickets",
+      // date: "MONDAY, NOVEMBER 30, 2015",
+    }];
+
     $scope.wallpapper = [{
       img: "img/wallpapper/w4.jpg"
     }, {
