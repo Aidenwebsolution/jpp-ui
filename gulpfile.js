@@ -6,7 +6,8 @@ var jsArray = [
   './bower_components/flexslider/jquery.flexslider-min.js',
   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 
-  './bower_components/angular/angular.min.js',
+  './bower_components/angular/angular.js',
+  './bower_components/angular-animate/angular-animate.js',
   './bower_components/angular-sanitize/angular-sanitize.min.js',
   './bower_components/angular-flexslider/angular-flexslider.js',
   './bower_components/ui-router/release/angular-ui-router.min.js',
