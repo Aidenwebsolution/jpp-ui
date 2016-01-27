@@ -244,6 +244,69 @@ img: "img/wallpapper/w5.jpg"
   });
 
 })
+.controller('GalleryInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("gallery-inner");
+  $scope.menutitle = NavigationService.makeactive("Gallery");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  $scope.myInterval = 5000;
+  $scope.noWrapSlides = false;
+  var slides = $scope.slides = [];
+  var currIndex = 0;
+  $scope.slides = [{
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g1.jpg"
+  }, {
+    galleryimg: "img/gallery/g2.jpg"
+  }, {
+    galleryimg: "img/gallery/g3.jpg"
+  }];
+  $scope.slides = _.chunk($scope.slides, 8);
+  console.log($scope.slides);
+  for (var i = 0; i < $scope.slides.length; i++) {
+    $scope.slides[i] = _.chunk($scope.slides[i], 4);
+  }
+  console.log($scope.slides);
+
+})
 
 .controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
