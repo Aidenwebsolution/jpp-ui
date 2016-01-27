@@ -17,36 +17,26 @@
     <div class="row margin0">
       <div class="col-sm-8 padding0">
         <div class="image-holder">
-          <img ng-src="{{data.image}}" class="gallery-image">
-          <!-- <img src="img/home/home-slide.jpg" alt="Lorem Ipsum" class="img-responsive" /> -->
+          <uib-carousel>
+            <uib-slide ng-repeat="new in news track by $index">
+              <img ng-src="{{new.image}}" class="gallery-image">
+            </uib-slide>
+          </uib-carousel>
         </div>
       </div>
       <div class="col-sm-4 padding0">
+        {{slides}}
         <div class="content-scroll">
-          <div class="news-us active">
+          <div class="news-us" ng-repeat="new in news track by $index">
             <img src="img/home/panther-right.png" alt="" class="hover-plam">
             <div class="news-list">
               <div class="new-item padding10">
-                <!-- <h4 class="margin0 upper">New from the camp</h4> -->
+                <!-- <h4 class="margin0 upper">{{new.title}}</h4> -->
                 <h3 class="margin0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  {{new.desc}}
                 </h3>
                 <!-- <div class="date">
-                 MONDAY, NOVEMBER 30, 2015
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="news-us" ng-repeat="data in news track by $index">
-            <img src="img/home/panther-right.png" alt="" class="hover-plam">
-            <div class="news-list">
-              <div class="new-item padding10">
-                <!-- <h4 class="margin0 upper">{{data.title}}</h4> -->
-                <h3 class="margin0">
-                  {{data.desc}}
-                </h3>
-                <!-- <div class="date">
-                  {{data.date}}
+                  {{new.date}}
                 </div> -->
               </div>
             </div>
