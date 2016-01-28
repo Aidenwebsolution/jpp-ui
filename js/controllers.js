@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,$filter) {
 
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("home");
@@ -48,47 +48,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }];
-
-  $scope.news = [{
-    id: 0,
-    image: "img/banner/05_banner.jpg",
-    // title: "New from the camp",
-    desc: "Book Match Tickets",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-
-  }, {
-    id: 1,
-    image: "img/banner/03_banner.jpg",
-    // title: "New from the camp",
-    desc: "Know Your Panthers",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-
-  }, {
-    id: 2,
-    image: "img/banner/01_banner.jpg",
-    // title: "New from the camp",
-    desc: "Season 3 All Fixtures",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-  }, {
-    id: 3,
-    image: "img/banner/02_banner.jpg",
-    // title: "New from the camp",
-    desc: "Wallpapers for Desktop & Mobile",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-
-  }, {
-    id: 4,
-    image: "img/banner/04_banner.jpg",
-    // title: "New from the camp",
-    desc: "Purchase Exclusive JPP Merchandise",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-  }];
-
+  NavigationService.getAllSliders(function(data){
+    $scope.news=data;
+    $scope.news = $filter('orderBy')($scope.news, "order");
+  })
+  NavigationService.getallpoint(function(data){
+    $scope.table = data;
+    $scope.table = $filter('orderBy')($scope.table, "id");
+  })
   var clickCount = 0;
   $scope.changeSlide = function(data) {
     $scope.currentActive = data;
@@ -204,50 +171,6 @@ img: "img/wallpapper/w5.jpg"
     name: "JASVIR SINGH",
     desg: "Raider",
   }];
-  $scope.table = [{
-    no: '1',
-    name: 'UMumba',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },{
-    no: '2',
-    name: 'Telgu Titans',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },{
-    no: '3',
-    name: 'Bangluru Bulls',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },{
-    no: '4',
-    name: 'Patan Pirates',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },{
-    no: '5',
-    name: 'Delhi',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },{
-    no: '6',
-    name: 'Jaipur Pink Panther',
-    match: '14',
-    won: '12',
-    lost:'2',
-    total:'60',
-  },
-];
   $scope.scrollTo = function(image, ind) {
     $scope.listposition = {
       left: (IMAGE_WIDTH * ind * -1) + "px"
@@ -492,34 +415,18 @@ title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
   ];
 })
 
-.controller('NewsMediaCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('NewsMediaCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("news-media");
   $scope.menutitle = NavigationService.makeactive("News");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-
-  $scope.news = [{
-    image: "img/news/n1.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }, {
-    image: "img/news/n2.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }, {
-    image: "img/news/n1.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }, {
-    image: "img/news/n2.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }];
+  $scope.news=[];
+  NavigationService.getallnews(function(data){
+    $scope.news=data;
+    $scope.news = $filter('orderBy')($scope.news, "id");
+    console.log($scope.news);
+  });
 
 })
 

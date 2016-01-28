@@ -16,7 +16,6 @@
 </section>
 <section class="mt100">
   <div class="container">
-
     <!-- <div class="row"> -->
       <!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
         <div class="row">
@@ -24,17 +23,18 @@
           <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in news track by $index">
             <div class="mb50">
               <div class="new-images">
-                <img ng-src="{{data.image}}" class="img-responsive">
+                <img ng-src="{{data.image | serverimage}}" class="img-responsive">
               </div>
               <div class="news-title">
-                <h4 class="display-inline color-primary f15 w70 title-margin0">{{data.title}}</h4>
-                <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.date}}</span>
+
+                <h4 class="display-inline color-primary f15 w70 title-margin0">{{data.name}}</h4>
+                <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.timestamp}}</span>
               </div>
               <div class="news-short-desc font-base desc-padtop">
-                <p class="line140">{{data.desc}}</p>
+                <p class="line140">{{data.content}}</p>
               </div>
               <div class="read-more">
-                <a href=""><button type="button" class="btn btn-pink">Read More</button></a>
+                <a href="{{data.link}}" target="_blank"><button type="button" class="btn btn-pink">Read More</button></a>
               </div>
             </div>
           </div>

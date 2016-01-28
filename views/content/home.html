@@ -19,8 +19,8 @@
         <div class="image-holder parent-height">
           <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
-              <a href="#">
-              <img ng-src="{{new.image}}" class="gallery-image">
+              <a href="{{new.link}}">
+              <img ng-src="{{new.image | serverimage}}" class="gallery-image">
             </a>
             </uib-slide>
           </uib-carousel>
@@ -34,7 +34,7 @@
               <div class="new-item padding20">
                 <!-- <h4 class="margin0 upper">{{new.title}}</h4> -->
                 <h3 class="margin0">
-                  {{new.desc}}
+                  {{new.name}}
                 </h3>
                 <!-- <div class="date">
                   {{new.date}}
@@ -241,13 +241,16 @@
               </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="data in table">
-              <td>{{data.no}}</td>
-              <td>{{data.name}}</td>
-              <td>{{data.match}}</td>
-              <td>{{data.won}}</td>
+              <tr class="text-center"  ng-if="table.length<=0">
+                  Points table not found
+              </tr>
+            <tr ng-repeat="data in table" ng-if="table.length>0">
+              <td>{{data.id}}</td>
+              <td>{{data.name || 'Loading..'}}</td>
+              <td>{{data.played}}</td>
+              <td>{{data.wins}}</td>
               <td>{{data.lost}}</td>
-              <td>{{data.total}}</td>
+              <td>{{data.point}}</td>
             </tr>
           </tbody>
           </table>

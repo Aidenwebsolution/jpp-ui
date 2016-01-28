@@ -123,7 +123,15 @@ firstapp.directive('img', function($compile, $parse) {
     }
   };
 });
-
+firstapp.filter('serverimage', function() {
+  return function(input) {
+    if (input) {
+      return imgurl + input;
+    } else {
+      return "";
+    }
+  };
+});
 firstapp.directive('autoHeight', function($compile, $parse) {
   return {
     restrict: 'EA',

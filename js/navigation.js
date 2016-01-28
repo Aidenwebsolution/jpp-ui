@@ -1,6 +1,13 @@
+// var mainurl = "http://wohlig.io:81/callApi/takecare/";
+// var mainurl = "http://moviewsapp.com/jppbackend/index.php/";
+var mainurl = "http://localhost/jppbackend/index.php/";
+// var imgurl = "http://moviewsapp.com/jppbackend/uploads/";
+var imgurl = "http://localhost/jppbackend/uploads/";
+// var imgurl="";
+var adminurl=mainurl+"json/";
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
       name: "News",
       url: "#/news-media",
@@ -47,6 +54,15 @@ var navigationservice = angular.module('navigationservice', [])
   return {
     getnav: function() {
       return navigation;
+    },
+    getAllSliders:function(callback){
+      $http.get(adminurl+"getAllSliders").success(callback);
+    },
+    getallpoint:function(callback){
+      $http.get(adminurl+"getallpoint").success(callback);
+    },
+    getallnews:function(callback){
+      $http.get(adminurl+"getallnews").success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
