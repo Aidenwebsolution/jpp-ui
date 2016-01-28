@@ -1498,7 +1498,7 @@ img.fancybox-image {
 }
 .points-table {
   background: #B41E72;
-  padding: 10px;
+  padding: 20px;
   color: #fff;
   margin: 10px;
   .head {
@@ -1533,6 +1533,32 @@ img {
 }
 .padding20 {
     padding: 20px 0;
+}
+.wallpapper-data.text-center.mb36 {
+    position: relative;
+    &:hover .layer-second{
+      opacity: 1;
+    }
+}
+.wall-pos{
+  position: relative;
+}
+.layer-second {
+  opacity: 0;
+    position: absolute;
+    top: 0;
+    background: rgba(78, 202, 245, 0.74);
+    width: 100%;
+    height: 100%;
+    @include transition(all 0.3s ease-in-out);
+    cursor: pointer;
+    img {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 }
 // body{
 //  cursor: url(../img/home/pantherplam.png), auto;
