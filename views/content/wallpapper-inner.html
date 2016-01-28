@@ -82,8 +82,8 @@
       <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index">
         <div class="wallpapper-data text-center mb36">
           <div class="wallpapper-img">
-            <a href="">
-              <img ng-src="{{data.image}}" class="img-responsive">
+            <a href="{{data.image | serverimage}}" download>
+              <img ng-src="{{data.image | serverimage}}" class="img-responsive">
             </a>
             <!-- <div class="layer-second">
               <img src="img/object/download.png">
@@ -91,6 +91,9 @@
           </div>
 
         </div>
+      </div>
+      <div class="clear-fix">
+
       </div>
     </div>
     <div class="row">

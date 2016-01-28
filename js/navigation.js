@@ -1,7 +1,7 @@
 // var mainurl = "http://wohlig.io:81/callApi/takecare/";
-var mainurl = "http://192.198.0.124/jppbackend/index.php/";
+var mainurl = "http://localhost/jppbackend/index.php/";
 // var mainurl = "http://localhost/jppbackend/index.php/";
-var imgurl = "http://192.198.0.124/jppbackend/uploads/";
+var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl="";
 var adminurl=mainurl+"json/";
@@ -69,6 +69,9 @@ var navigationservice = angular.module('navigationservice', [])
     },
     getGallerySlide: function (request, callback) {
       $http.get(adminurl+"getGallerySlide?galleryid="+request).success(callback);
+    },
+    getWallpaper: function (request, callback) {
+      $http.get(adminurl+"getWallpaper?type="+request).success(callback);
     },
     getSchedule: function ( callback) {
       $http.get(adminurl+"getSchedule").success(callback);

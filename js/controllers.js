@@ -276,14 +276,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.getGallerySlide($scope.galleryid, function(data) {
             console.log(data);
             $scope.slides = data;
-            $scope.slides = _.chunk($scope.slides, 8);
-            console.log($scope.slides);
-            for (var i = 0; i < $scope.slides.length; i++) {
-                $scope.slides[i] = _.chunk($scope.slides[i], 4);
-            }
-            console.log($scope.slides);
         });
-        var currIndex = 0;
 
 
 
@@ -333,59 +326,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('WallpapperInnerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('WallpapperInnerCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper-inner");
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.wallpaperid=$stateParams.id;
+    NavigationService.getWallpaper($scope.wallpaperid, function(data) {
+        console.log(data);
+        $scope.wallpapper=data;
+    });
 
-    $scope.wallpapper = [{
-        image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }]
 
 })
 
