@@ -449,6 +449,9 @@ $screen-lg: 1200px !default;
 }
 @media (max-width: $screen-xs-max) {
 
+.font-16{
+  font-size: 16px;
+}
   //menu
   nav {
     li {
@@ -632,6 +635,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .news-logo.text-center {
+    zoom: 0.6;
+}
   .new-images {
     height: 115px;
 }

@@ -1560,6 +1560,16 @@ img {
     transform: translate(-50%,-50%);
 }
 }
+.news-logo.text-center {
+    height: 100px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 10px;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+}
 // body{
 //  cursor: url(../img/home/pantherplam.png), auto;
 // }
