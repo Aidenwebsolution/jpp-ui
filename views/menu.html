@@ -2,11 +2,11 @@
     <li ng-repeat="menu in navigation" class="{{menu.classis}} menu-custom-li">
         <a href="{{menu.url}}" class="menu-custom">
         {{menu.name}}</a>
-         <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
+         <!-- <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
             <li ng-repeat="submenu in menu.subnav">
                 <a href="{{submenu.link}}">{{submenu.name}}</a>
             </li>
-        </ul>
+        </ul> -->
     </li>
 
 </ul>
