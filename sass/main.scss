@@ -233,14 +233,14 @@ nav {
     left: 50%;
     @include transform(translate(-50%,-50%));
     img {
-      width: 70%;
+      // width: 100%;
     }
   }
   .scroll {
     position: absolute;
     bottom: 20px;
     left: 50%;
-    @include transform(translateX(-50%));
+    @include transform(translateX(-62%));
     cursor: pointer;
     img {
       width: 20px;
