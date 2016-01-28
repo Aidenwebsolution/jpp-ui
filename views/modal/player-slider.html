@@ -1,6 +1,6 @@
 <div class="player-slider sliders carousel-fade mobslider" ng-controller="PlayersCtrl">
   <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-    <uib-slide ng-repeat="dataitem in player track by $index" active="dataitem.active" index="dataitem.id">
+    <uib-slide ng-repeat="dataitem in players2 track by $index">
 
       <div class="player-det">
         <div class="play-img">
@@ -17,7 +17,7 @@
           <div class="player-data custom-list">
             <ul class="ul-border">
               <li class="li-info">
-                <span class="label label-nation">nationality:</span> {{dataitem.nationality}}</li>
+                <span class="label label-nation">Native Place:</span> {{dataitem.nationality}}</li>
               <li class="li-info">
                 <span class="label label-nation">Age:</span>{{dataitem.dob}}</li>
               <li class="li-info">
@@ -25,7 +25,8 @@
             </ul>
           </div>
           <div class="player-desc text-justify font-base">
-            <p>{{dataitem.desp}}</p>
+            <p><strong>Tournaments Played:</strong> {{dataitem.desp}}</p>
+            <p><strong>Achievements:</strong> {{dataitem.desp2}}</p>
           </div>
         </div>
       </div>
