@@ -29,7 +29,9 @@
     </div>
     <div class="row">
       <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index">
-        <a href="#/wallpapper-inner">
+        <a ui-sref="wallpapper-inner({
+          id: data.id
+        })">
           <div class="wallpapper-data text-center">
         <div class="wallpapper-img">
           <img ng-src="{{data.image}}" class="img-responsive">
@@ -41,13 +43,6 @@
         </div>
         </div>
       </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-offset-8 col-md-4 col-offset-sm-8 col-sm-4">
-        <div class="pull-right mb50">
-            <button type="button" class="btn btn-primary f20">View More</button>
-        </div>
       </div>
     </div>
   </div>

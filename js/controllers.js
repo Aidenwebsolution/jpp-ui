@@ -183,10 +183,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
+         $scope.oneAtATime = true;
         $scope.template = TemplateService.changecontent("fixtures");
         $scope.menutitle = NavigationService.makeactive("Fixtures & Results");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        $scope.schedules=[];
+        var i=0;
+        NavigationService.getSchedule(function(data){
+          $scope.schedules=data;
+          _.each($scope.schedules,function(key){
+            key.team1img=_.find($scope.teams,{
+              "name":key.team1
+            }).image;
+            key.team2img=_.find($scope.teams,{
+              "name":key.team2
+            }).image;
+            key.isFirstOpen=false;
+            key.isFirstDisabled=false;
+            console.log(key);
+          })
+        });
         $scope.accordian = [];
         $scope.accordian.push({
             isFirstOpen: true,
@@ -196,7 +213,55 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             isFirstOpen: true,
             isFirstDisabled: false
         });
-
+        $scope.teams = [{
+            "id": "1",
+            "type": "0",
+            "name": "Patna Pirates",
+            "image": "img/team/5.png",
+            "content": ""
+        }, {
+            "id": "2",
+            "type": "0",
+            "name": "Bengaluru Bulls",
+            "image": "img/team/1.png",
+            "content": ""
+        }, {
+            "id": "3",
+            "type": "0",
+            "name": "Bengal Warriors",
+            "image": "img/team/2.png",
+            "content": ""
+        }, {
+            "id": "4",
+            "type": "0",
+            "name": "Dabang Delhi",
+            "image": "img/team/3.png",
+            "content": ""
+        }, {
+            "id": "5",
+            "type": "0",
+            "name": "Jaipur Pink Panthers",
+            "image": "img/team/4.png",
+            "content": ""
+        }, {
+            "id": "6",
+            "type": "0",
+            "name": "Puneri Paltan",
+            "image": "img/team/6.png",
+            "content": ""
+        }, {
+            "id": "7",
+            "type": "0",
+            "name": "Telegu Titans",
+            "image": "img/team/7.png",
+            "content": ""
+        }, {
+            "id": "8",
+            "type": "0",
+            "name": "U Mumba",
+            "image": "img/team/8.png",
+            "content": ""
+        }];
     })
     .controller('GalleryInnerCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
         //Used to name the .html file
@@ -251,50 +316,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.wallpapper = [{
         image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
+        name: "Desktop",
+        desc: "10 Wallpapers",
+         id:2
     }, {
         image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
+        name: "Android",
+        desc: "10 Wallpapers",
+        id:1
     }, {
         image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }, {
-        image: "img/wallpapper/w1.jpg",
-        name: "ABHISHEK BACHAN",
-        desc: "10 Wallpapers"
-
-    }]
+        name: "iOS",
+        desc: "10 Wallpapers",
+        id:3
+    }];
 
 })
 
@@ -428,152 +463,188 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.slideindex = 0;
         }
         $scope.player = [{
-
+            id:1,
             image: "img/player/p1.png",
             name: "Anil Patil",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Mumbai",
             dob: "33",
             jersyno: "01",
-            desp: "Senior National- (2007-2009,2011-2012), Departmental National (2006,2010,2013-2015).Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position.",
+            desp: "Senior National- (2007-2009,2011-2012), Departmental National (2006,2010,2013-2015)",
+            desp2: "Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position."
 
         }, {
-
+            id:2,
             image: "img/player/p13.png",
             name: "C. Arun",
             desg: "Defender",
-            nationality: "Indian",
+            nationality: "Thiruvarur",
             dob: "22",
             jersyno: "03",
             desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).All India University (2012) - 1st Position.",
+            desp2: "All India University (2012) - 1st Position."
 
         },{
 
             image: "img/player/p2.png",
             name: "Gangadhari Mallesh",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Choutapally",
             dob: "22",
             jersyno: "10",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009), School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position",
+            desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009)",
+            desp2: "School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position"
+
+        },{
+
+            image: "img/player/p17.png",
+            name: "HWAN GI AHN",
+            desg: "All Rounder",
+            nationality: "GYOUNG JU",
+            dob: "32",
+            jersyno: "17",
+            desp: "NA",
+            desp2: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)-Bronze Medal"
 
         },{
 
             image: "img/player/p14.png",
             name: "Jagdeesha K.K",
             desg: "Defender,",
-            nationality: "Indian",
-            dob: "NA",
+            nationality: "Koipaddy",
+            dob: "41",
             jersyno: "09",
-            desp: "Departmental National Campionship- (2015-1999),Senior National (2013-1999),National Games (2003-1999), Senior Federation Cup (2006-2003), Asian Cup(2002),Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position",
+            desp: "Departmental National Campionship- (2015-1999),Senior National (2013-1999),National Games (2003-1999), Senior Federation Cup (2006-2003), Asian Cup(2002).",
+            desp2: "Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position"
 
         }, {
 
             image: "img/player/p3.png",
             name: "Jasvir Singh",
             desg: "Raider",
-            nationality: "Indian",
+            nationality: "Panipat",
             dob: "31",
             jersyno: "02",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2013), National Game (2011), Indoor Asian Game (2013), Asian Game (2014).Pro-kabaddi (2014)- 1st Position,Senior National (2013) - 1st Position, National Game (2011)- 1st Position, Indoor Asian Game (2013) - 1st Position, Asian Game (2014) - 1st Position.",
+            desp: "Pro-Kabaddi (2015-2014),Senior National (2013), National Game (2011), Indoor Asian Game (2013), Asian Game (2014)",
+            desp2: "Pro-kabaddi (2014)- 1st Position,Senior National (2013) - 1st Position, National Game (2011)- 1st Position, Indoor Asian Game (2013) - 1st Position, Asian Game (2014) - 1st Position."
 
         }, {
 
             image: "img/player/p4.png",
             name: "Kuldeep Singh",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Sonipat",
             dob: "23",
             jersyno: "08",
-            desp: "Pro-Kabaddi (2015),National Game (2011), National (2008-15), Dept. National (2008-09).National (2012-13) - 1st Position, National Game (2011) - 3rd Position, Dept. National (2008)- 2nd Position, (2009)- 1st Position.",
+            desp: "Pro-Kabaddi (2015),National Game (2011), National (2008-15), Dept. National (2008-09).",
+            desp2: "National (2012-13) - 1st Position, National Game (2011) - 3rd Position, Dept. National (2008)- 2nd Position, (2009)- 1st Position."
+        },{
+
+            image: "img/player/p16.png",
+            name: "MOHAMMAD MAGHSOUDLOU",
+            desg: "All Rounder",
+            nationality: "GORGAN",
+            dob: "25",
+            jersyno: "23",
+            desp: "NA",
+            desp2: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position"
         }, {
 
             image: "img/player/p5.png",
             name: "Navneet Gautam",
             desg: "Defender",
-            nationality: "Indian",
+            nationality: "Jaipur",
             dob: "32",
             jersyno: "07",
-            desp: "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.",
+            desp: "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).",
+            desp2: "Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position."
 
         }, {
 
             image: "img/player/p6.png",
             name: "Rajesh Narwal",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Sonipat",
             dob: "25",
             jersyno: "11",
-            desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position.",
+            desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position."
 
         }, {
             image: "img/player/p7.png",
             name: "Raju Lal Choudhary",
             desg: "Defender",
-            nationality: "Indian",
+            nationality: "Jaipur",
             dob: "26",
             jersyno: "12",
-            desp: "Pro-Kabaddi (2015-2014)National Games (2011), Senior National Games (2015), All India Police Games (2008-15).Pro-kabaddi (2014)- 1st Position,National Games (2011)-1st Position, Senior National (2015) - 3rd Position",
+            desp: "Pro-Kabaddi (2015-2014)National Games (2011), Senior National Games (2015), All India Police Games (2008-15).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2011)-1st Position, Senior National (2015) - 3rd Position"
 
         }, {
 
             image: "img/player/p8.png",
             name: "Ran Singh",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Sangrur",
             dob: "28",
             jersyno: "33",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2002-08), Senior National (2014), Dept. National Tournament  (2014), All India Police Tournanment (2008-11).Pro-kabaddi (2014)- 1st Position,Senior National (2007) - 2nd Position, Senior National (2006) - 3rd Position, All India Police Tournament (2008) (2011) - 1st Position, All India Police Tournament (2009-10) - 3rd Position, Dept. National Tournament (2014) - 2nd Position",
+            desp: "Pro-Kabaddi (2015-2014),Senior National (2002-08), Senior National (2014), Dept. National Tournament  (2014), All India Police Tournanment (2008-11).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,Senior National (2007) - 2nd Position, Senior National (2006) - 3rd Position, All India Police Tournament (2008) (2011) - 1st Position, All India Police Tournament (2009-10) - 3rd Position, Dept. National Tournament (2014) - 2nd Position"
 
         }, {
 
             image: "img/player/p9.png",
             name: "Rohit Kumar Prajapat",
             desg: "Raider",
-            nationality: "Indian",
+            nationality: "Jaipur",
             dob: "19",
             jersyno: "14",
-            desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position",
+            desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).",
+            desp2: "Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position"
 
         }, {
 
             image: "img/player/p10.png",
             name: "Rohit Rana",
             desg: "Defender",
-            nationality: "Indian",
+            nationality: "Dharmshala",
             dob: "27",
             jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
 
         },{
 
             image: "img/player/p12.png",
             name: "Samarjeet Singh",
             desg: "All Rounder",
-            nationality: "Indian",
+            nationality: "Khedi Daulatpur",
             dob: "29",
             jersyno: "77",
-            desp: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013).Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013).",
+            desp: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013)",
+            desp2: "Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013)."
 
         },{
 
             image: "img/player/p15.png",
             name: "Satish kumar",
             desg: "Raider",
-            nationality: "Indian",
+            nationality: "Rohera",
             dob: "31",
             jersyno: "06",
-            desp: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008).Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position",
+            desp: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008).",
+            desp2: "Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position"
 
         },  {
 
             image: "img/player/p11.png",
             name: "Sonu Narwal",
             desg: "Raider",
-            nationality: "Indian",
+            nationality: "Sonipat",
             dob: "29",
             jersyno: "22",
-            desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.",
+            desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).",
+            desp2: "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position."
 
         }];
         var i = 0;
@@ -586,8 +657,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
     $scope.getPlayers();
 
-    $scope.openPlayers = function(index) {
-        $scope.slideindex = index;
+    $scope.openPlayers = function(data,index) {
+        // $scope.slideindex = index;
+        data.active = true;
+        $scope.players = $scope.player;
+        var startArr = _.slice($scope.players ,0, index);
+        var endArr = _.slice($scope.players , index);
+
+
+        $scope.players2 = _.union(endArr,startArr);
+
         $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/player-slider.html',
@@ -595,7 +674,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             scope: $scope,
             resolve: {
                 slideindex: function() {
-                    return index;
+                    return $scope.players;
                 }
             }
         })

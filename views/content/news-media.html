@@ -44,7 +44,7 @@
           <div class="col-md-6 col-sm-6" ng-repeat="data in news track by $index">
             <div class="news-det mb50">
               <div class="news-logo text-center">
-                <img src="img/news/l1.png">
+                <img ng-src="{{data.logo | serverimage}}">
               </div>
               <div class="news-img">
                 <img ng-src="{{data.image | serverimage}}" class="img-responsive">

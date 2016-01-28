@@ -70,6 +70,9 @@ var navigationservice = angular.module('navigationservice', [])
     getGallerySlide: function (request, callback) {
       $http.get(adminurl+"getGallerySlide?galleryid="+request).success(callback);
     },
+    getSchedule: function ( callback) {
+      $http.get(adminurl+"getSchedule").success(callback);
+    },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {
