@@ -69,10 +69,10 @@
     <!-- <h2 class="text-center color-pink bold">OUR PANTHERS</h2> -->
     <div class="slider-social">
       <a href="#/players">
-      <div class="banner-home">
-        <img src="img/home/Players-Banner.jpg" alt="" class="img-responsive">
-      </div>
-    </a>
+        <div class="banner-home">
+          <img src="img/home/Players-Banner.jpg" alt="" class="img-responsive">
+        </div>
+      </a>
       <!-- <div class="slider pt50">
         <div class="row">
           <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
@@ -93,7 +93,7 @@
           </div>
         </div>
       </div> -->
-      <div class="social-link-right">
+      <div class="social-link-right hidden-xs">
         <ul>
           <li>
             <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
@@ -216,15 +216,35 @@
     </div>
   </div>
 </div>
-<div class="section5">
+<div class "section5">
   <div class="fan-corner">
     <div class="color-pink f30 bold text-center upper head ptb">
       Fan Corner
     </div>
     <div class="row margin0">
-      <div class="col-sm-4 bt ptb">
-
-        <div class="fan-week min-hgt">
+      <div class="col-sm-4">
+<div class="points-table">
+  <div class="head text-center"><h5>table</h5></div>
+  <table class="table">
+    <tr>
+      <th>No.</th>
+      <th>Team</th>
+      <th>P</th>
+      <th>W</th>
+      <th>L</th>
+      <th>PTS</th>
+    </tr>
+    <tr ng-repeat="data in table">
+      <td>{{data.no}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.match}}</td>
+      <td>{{data.won}}</td>
+      <td>{{data.lost}}</td>
+      <td>{{data.total}}</td>
+    </tr>
+  </table>
+</div>
+        <!-- <div class="fan-week min-hgt">
           <h4 class="color-pink text-center upper">
             FAN OF THE WEEK
           </h4>
@@ -237,13 +257,12 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-          <!-- <div class="button text-center">
+          <div class="button text-center">
             <a href="" class="btn btn-primary">
                 View
               </a>
-          </div> -->
-        </div>
-
+          </div>
+        </div> -->
       </div>
       <div class="col-sm-4 br bt bl ptb">
         <div class="wallpaper min-hgt">
@@ -267,13 +286,12 @@
           <div class="button text-center">
             <a href="#/wallpapper" class="btn btn-primary">
                 Download Wallpapers
-              </a>
+            </a>
           </div>
         </div>
       </div>
       <div class="col-sm-4 bt ptb">
         <div class="social-hub ptb text-center min-hgt">
-
           <h4 class="color-pink text-center upper">
             SOCIAL HUB
           </h4>
@@ -300,10 +318,23 @@
           </div>
           <div class="facebook-tab pt20" ng-show="tab2=='tw'">
             <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers" data-widget-id="692273446991073280">Tweets by @JaipurPanthers</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script>
+              ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = p + "://platform.twitter.com/widgets.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, "script", "twitter-wjs");
+            </script>
           </div>
           <div class="facebook-tab pt20" ng-show="tab2=='insta'" style="overflow-y:scroll;">
-<!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/857a172c731d5929b28a94186a3ce08d.html" id="instansive_857a172c73" name="instansive_857a172c73"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 450px; border: 0; overflow: hidden;"></iframe>
+            <!-- INSTANSIVE WIDGET -->
+            <script src="//instansive.com/widget/js/instansive.js"></script>
+            <iframe src="//instansive.com/widgets/857a172c731d5929b28a94186a3ce08d.html" id="instansive_857a172c73" name="instansive_857a172c73" scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 450px; border: 0; overflow: hidden;"></iframe>
           </div>
         </div>
       </div>

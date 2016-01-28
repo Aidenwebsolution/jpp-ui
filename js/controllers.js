@@ -201,7 +201,50 @@ img: "img/wallpapper/w5.jpg"
     name: "JASVIR SINGH",
     desg: "Raider",
   }];
-
+  $scope.table = [{
+    no: '1',
+    name: 'UMumba',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },{
+    no: '2',
+    name: 'Telgu Titans',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },{
+    no: '3',
+    name: 'Bangluru Bulls',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },{
+    no: '4',
+    name: 'Patan Pirates',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },{
+    no: '5',
+    name: 'Delhi',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },{
+    no: '6',
+    name: 'Jaipur Pink Panther',
+    match: '14',
+    won: '12',
+    lost:'2',
+    total:'60',
+  },
+];
   $scope.scrollTo = function(image, ind) {
     $scope.listposition = {
       left: (IMAGE_WIDTH * ind * -1) + "px"
