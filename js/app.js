@@ -24,11 +24,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'PlayersCtrl'
   })
 
-  .state('wallpapper', {
-    url: "/wallpapper",
-    templateUrl: "views/template.html",
-    controller: 'WallpapperCtrl'
-  })
+  // .state('wallpapper', {
+  //   url: "/wallpapper",
+  //   templateUrl: "views/template.html",
+  //   controller: 'WallpapperCtrl'
+  // })
 
   .state('gallery-inner', {
     url: "/gallery-inner",
@@ -37,7 +37,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('wallpapper-inner', {
-    url: "/wallpapper-inner",
+    url: "/wallpapper",
     templateUrl: "views/template.html",
     controller: 'WallpapperInnerCtrl'
   })
