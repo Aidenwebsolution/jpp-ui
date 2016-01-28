@@ -19,7 +19,9 @@
         <div class="image-holder parent-height">
           <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
+              <a href="#">
               <img ng-src="{{new.image}}" class="gallery-image">
+            </a>
             </uib-slide>
           </uib-carousel>
         </div>
@@ -29,7 +31,7 @@
           <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
             <img src="img/home/panther-right.png" alt="" class="hover-plam">
             <div class="news-list">
-              <div class="new-item padding10">
+              <div class="new-item padding20">
                 <!-- <h4 class="margin0 upper">{{new.title}}</h4> -->
                 <h3 class="margin0">
                   {{new.desc}}
