@@ -41,32 +41,16 @@
         <!-- //new UI  -->
 
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-6" ng-repeat="data in news track by $index">
             <div class="news-det mb50">
               <div class="news-logo text-center">
                 <img src="img/news/l1.png">
               </div>
               <div class="news-img">
-                <img src="img/news/n4.jpg" class="img-responsive">
+                <img ng-src="{{data.image | serverimage}}" class="img-responsive">
               </div>
               <div class="news-title">
-                <h4 class="font-16">Students get hands on experience playing Kabbadi with JPP Players, joined by Abhishek Bachchan</h4>
-              </div>
-              <div class="read-more">
-                <a href="{{data.link}}" target="_blank"><button type="button" class="btn btn-pink">VIEW STORY</button></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="news-det mb50">
-              <div class="news-logo text-center">
-                <img src="img/news/l2.png">
-              </div>
-              <div class="news-img">
-                <img src="img/news/n5.png" class="img-responsive">
-              </div>
-              <div class="news-title">
-                <h4 class="font-16">Students get hands on experience playing Kabbadi with JPP Players, joined by Abhishek Bachchan</h4>
+                <h4 class="font-16">{{data.name}}</h4>
               </div>
               <div class="read-more">
                 <a href="{{data.link}}" target="_blank"><button type="button" class="btn btn-pink">VIEW STORY</button></a>
