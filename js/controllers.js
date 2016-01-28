@@ -51,37 +51,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.news = [{
     id: 0,
-    image: "img/banner/01_banner.jpg",
+    image: "img/banner/05_banner.jpg",
     // title: "New from the camp",
-    desc: "View All Fixtures of Season 3",
+    desc: "Book Match Tickets",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
+
   }, {
     id: 1,
-    image: "img/banner/02_banner.jpg",
-    // title: "New from the camp",
-    desc: "Download Exclusive Wallpapers for Desktop & Mobile",
-    active: false
-      // date: "MONDAY, NOVEMBER 30, 2015",
-  }, {
-    id: 2,
     image: "img/banner/03_banner.jpg",
     // title: "New from the camp",
     desc: "Know Your Panthers",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
+
   }, {
-    id: 3,
-    image: "img/banner/04_banner.jpg",
+    id: 2,
+    image: "img/banner/01_banner.jpg",
     // title: "New from the camp",
-    desc: "Purchase Exclusive JPP Merchandise",
+    desc: "Season 3 All Fixtures",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }, {
-    id: 4,
-    image: "img/banner/05_banner.jpg",
+    id: 3,
+    image: "img/banner/02_banner.jpg",
     // title: "New from the camp",
-    desc: "Book Match Tickets",
+    desc: "Wallpapers for Desktop & Mobile",
+    active: false
+      // date: "MONDAY, NOVEMBER 30, 2015",
+
+  }, {
+    id: 4,
+    image: "img/banner/04_banner.jpg",
+    // title: "New from the camp",
+    desc: "Purchase Exclusive JPP Merchandise",
     active: false
       // date: "MONDAY, NOVEMBER 30, 2015",
   }];
