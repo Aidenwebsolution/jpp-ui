@@ -13,16 +13,12 @@
       </div>
     </section>
   </div>
-
 </section>
-
 <section class="mt100 mb100">
   <div class="container">
     <div class="row">
     <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index">
-    <a ui-sref="gallery-inner({
-      id:data.id
-    })">
+    <a ui-sref="gallery-inner({id:data.id})">
         <div class="gallery-album">
         <div class="album-cover">
           <img ng-src="{{data.image | serverimage}}" class="img-responsive">
