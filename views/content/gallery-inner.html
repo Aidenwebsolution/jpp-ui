@@ -37,12 +37,12 @@
           <div class="slider">
             <div>
               <uib-carousel interval="myInterval"  no-wrap="noWrapSlides">
-                <uib-slide active="slide.active" ng-repeat="slide in slides"  index="slide.id">
-                  <div class="row" ng-repeat="rows in slide">
-                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="item in rows">
+                <uib-slide active="slide.active" ng-repeat="slide in slides track by $index"  index="slide.id">
+                  <div class="row" ng-repeat="rows in slide track by $index">
+                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="item in rows track by $index">
                       <div class="slider-imgholder">
-                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{item.galleryimg}}" title="{{gallery.alternate}}">
-                        <img ng-src="{{item.galleryimg}}" alt="{{gallery.alternate}}" class="img-responsive">
+                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{item.image | serverimage}}" title="{{gallery.alternate}}">
+                        <img ng-src="{{item.image | serverimage}}" alt="{{gallery.alternate}}" class="img-responsive">
                       </a>
                       </div>
                     </div>

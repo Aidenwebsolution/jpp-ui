@@ -31,7 +31,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('gallery-inner', {
-    url: "/gallery-inner",
+    url: "/gallery-inner/:id",
     templateUrl: "views/template.html",
     controller: 'GalleryInnerCtrl'
   })

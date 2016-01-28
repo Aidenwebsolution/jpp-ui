@@ -61,8 +61,14 @@ var navigationservice = angular.module('navigationservice', [])
     getallpoint:function(callback){
       $http.get(adminurl+"getallpoint").success(callback);
     },
+    getAllGallery:function(callback){
+      $http.get(adminurl+"getAllGallery").success(callback);
+    },
     getallnews:function(callback){
       $http.get(adminurl+"getallnews").success(callback);
+    },
+    getGallerySlide: function (request, callback) {
+      $http.get(adminurl+"getGallerySlide?galleryid="+request).success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
