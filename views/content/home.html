@@ -222,28 +222,30 @@
       Fan Corner
     </div>
     <div class="row margin0">
-      <div class="col-sm-4">
-<div class="points-table">
-  <div class="head text-center"><h5>table</h5></div>
-  <table class="table">
-    <tr>
-      <th>No.</th>
-      <th>Team</th>
-      <th>P</th>
-      <th>W</th>
-      <th>L</th>
-      <th>PTS</th>
-    </tr>
-    <tr ng-repeat="data in table">
-      <td>{{data.no}}</td>
-      <td>{{data.name}}</td>
-      <td>{{data.match}}</td>
-      <td>{{data.won}}</td>
-      <td>{{data.lost}}</td>
-      <td>{{data.total}}</td>
-    </tr>
-  </table>
-</div>
+      <div class="col-sm-4 bt">
+        <h4 class="color-pink text-center upper">
+          table
+        </h4>
+        <div class="points-table">
+          <table class="table">
+            <tr>
+              <th>No.</th>
+              <th>Team</th>
+              <th>P</th>
+              <th>W</th>
+              <th>L</th>
+              <th>PTS</th>
+            </tr>
+            <tr ng-repeat="data in table">
+              <td>{{data.no}}</td>
+              <td>{{data.name}}</td>
+              <td>{{data.match}}</td>
+              <td>{{data.won}}</td>
+              <td>{{data.lost}}</td>
+              <td>{{data.total}}</td>
+            </tr>
+          </table>
+        </div>
         <!-- <div class="fan-week min-hgt">
           <h4 class="color-pink text-center upper">
             FAN OF THE WEEK
