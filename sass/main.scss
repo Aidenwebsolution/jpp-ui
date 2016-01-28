@@ -1499,21 +1499,23 @@ img.fancybox-image {
   background: #B41E72;
   padding: 10px;
   color: #fff;
+  margin: 10px;
   .head {
     text-transform: uppercase;
     padding: 2px;
     margin: 14px auto;
-
-    // background: #fff;
     color: #fff;
-    h5 {
-      font-size: 15px;
-      width: 80px;
-      height: 30px;
-      margin: 0 auto;
-      background: #fff;
-      color: #4ECAF5;
-      padding: 8px 0;
+  }
+  .table {
+    th {
+      border-bottom: 5px solid #B41E72;
+    }
+    td {
+      border-bottom: 2px solid #B41E72;
+    }
+    td,
+    th {
+      background: lighten(#B41E72,10%);
     }
   }
 }

@@ -222,20 +222,23 @@
       Fan Corner
     </div>
     <div class="row margin0">
-      <div class="col-sm-4 bt">
+      <div class="col-sm-4 bt ptb">
         <h4 class="color-pink text-center upper">
           table
         </h4>
         <div class="points-table">
           <table class="table">
-            <tr>
-              <th>No.</th>
-              <th>Team</th>
-              <th>P</th>
-              <th>W</th>
-              <th>L</th>
-              <th>PTS</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PTS</th>
+              </tr>
+            </thead>
+            <tbody>
             <tr ng-repeat="data in table">
               <td>{{data.no}}</td>
               <td>{{data.name}}</td>
@@ -244,6 +247,7 @@
               <td>{{data.lost}}</td>
               <td>{{data.total}}</td>
             </tr>
+          </tbody>
           </table>
         </div>
         <!-- <div class="fan-week min-hgt">
