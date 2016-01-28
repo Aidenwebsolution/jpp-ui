@@ -3,6 +3,7 @@ $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
 @media (max-width: $screen-lg) {
+
   .flex-prev {
     &:before {
       background: url(/img/play-left.png)no-repeat;
@@ -57,6 +58,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-md-max) {
+  .new-images {
+    height: 270px;
+}
   .flex-prev {
     &:before {
       background: url(/img/play-left.png)no-repeat;
@@ -131,6 +135,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
+  .new-images {
+    height: 204px;
+}
   .slider .carousel-control {
     height: 90%;
   }
@@ -625,6 +632,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .new-images {
+    height: 115px;
+}
   .flex-prev {
     left: 30px !important;
     &:before {
