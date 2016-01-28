@@ -439,6 +439,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         }, {
 
+            image: "img/player/p13.png",
+            name: "C. Arun",
+            desg: "Defender",
+            nationality: "Indian",
+            dob: "22",
+            jersyno: "03",
+            desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).All India University (2012) - 1st Position.",
+
+        },{
+
             image: "img/player/p2.png",
             name: "Gangadhari Mallesh",
             desg: "All Rounder",
@@ -446,6 +456,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             dob: "22",
             jersyno: "10",
             desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009), School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position",
+
+        },{
+
+            image: "img/player/p14.png",
+            name: "Jagdeesha K.K",
+            desg: "Defender,",
+            nationality: "Indian",
+            dob: "NA",
+            jersyno: "09",
+            desp: "Departmental National Campionship- (2015-1999),Senior National (2013-1999),National Games (2003-1999), Senior Federation Cup (2006-2003), Asian Cup(2002),Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position",
 
         }, {
 
@@ -525,7 +545,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             jersyno: "05",
             desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion",
 
-        }, {
+        },{
+
+            image: "img/player/p12.png",
+            name: "Samarjeet Singh",
+            desg: "All Rounder",
+            nationality: "Indian",
+            dob: "29",
+            jersyno: "77",
+            desp: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013).Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013).",
+
+        },{
+
+            image: "img/player/p15.png",
+            name: "Satish kumar",
+            desg: "Raider",
+            nationality: "Indian",
+            dob: "31",
+            jersyno: "06",
+            desp: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008).Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position",
+
+        },  {
 
             image: "img/player/p11.png",
             name: "Sonu Narwal",
@@ -535,15 +575,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             jersyno: "22",
             desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.",
 
-        }, {
-
-            image: "img/player/p6.png",
-            name: "JASVIR SINGH",
-            desg: "Raider",
-            nationality: "Indian",
-            dob: "jun 08,1993",
-            jersyno: "10",
-            desp: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         }];
         var i = 0;
         _.each($scope.player, function(key) {
