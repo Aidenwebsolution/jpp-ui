@@ -1,6 +1,6 @@
 <div class="player-slider sliders carousel-fade mobslider" ng-controller="PlayersCtrl">
   <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-    <uib-slide ng-repeat="dataitem in player" active="slide.active" index="slide.id">
+    <uib-slide ng-repeat="dataitem in player track by $index" active="slide.active" index="slide.id">
       <div class="player-det">
         <div class="play-img">
           <img ng-src="{{dataitem.image}}" class="img-responsive">
@@ -18,7 +18,7 @@
               <li class="li-info">
                 <span class="label label-nation">nationality:</span> {{dataitem.nationality}}</li>
               <li class="li-info">
-                <span class="label label-nation">Born:</span>{{dataitem.dob}}</li>
+                <span class="label label-nation">Age:</span>{{dataitem.dob}}</li>
               <li class="li-info">
                 <span class="label label-nation">Jersery number:</span> {{dataitem.jersyno}}</li>
             </ul>
