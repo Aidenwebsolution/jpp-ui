@@ -1,6 +1,7 @@
 <div class="player-slider sliders carousel-fade mobslider" ng-controller="PlayersCtrl">
   <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-    <uib-slide ng-repeat="dataitem in player track by $index" active="slide.active" index="slideindex">
+    <uib-slide ng-repeat="dataitem in player track by $index" active="dataitem.active" index="dataitem.id">
+
       <div class="player-det">
         <div class="play-img">
           <img ng-src="{{dataitem.image}}" class="img-responsive">
@@ -8,7 +9,7 @@
         <hr class="border-players">
         <div class="inner-data">
           <div class="player-name text-center">
-            <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name}}</h1>
+            <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.id}}{{dataitem.name}}</h1>
           </div>
           <div class="player-desg text-center">
             <h6 class="voyeg-font f25 margin0 color-success">{{dataitem.desg}}</h6>

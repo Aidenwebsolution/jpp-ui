@@ -562,126 +562,137 @@ title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
   $scope.menutitle = NavigationService.makeactive("Players");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.getPlayers = function () {
+    if($scope.slideindex == undefined){
+      $scope.slideindex=0;
+    }
+    $scope.player = [{
 
-  $scope.player = [{
+      image: "img/player/p1.png",
+      name: "Anil Patil",
+      desg: "All Rounder",
+      nationality: "Indian",
+      dob: "33",
+      jersyno: "01",
+      desp: "Senior National- (2007-2009,2011-2012), Departmental National (2006,2010,2013-2015).Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position.",
 
-    image: "img/player/p1.png",
-    name: "Anil Patil",
-    desg: "All Rounder",
-    nationality: "Indian",
-    dob: "33",
-    jersyno: "01",
-    desp: "Senior National- (2007-2009,2011-2012), Departmental National (2006,2010,2013-2015).Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position.",
+    }, {
 
-  }, {
+      image: "img/player/p2.png",
+      name: "Gangadhari Mallesh",
+      desg: "All Rounder",
+      nationality: "Indian",
+      dob: "22",
+      jersyno: "10",
+      desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009), School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position",
 
-    image: "img/player/p2.png",
-    name: "Gangadhari Mallesh",
-    desg: "All Rounder",
-    nationality: "Indian",
-    dob: "22",
-    jersyno: "10",
-    desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009), School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position",
+    }, {
 
-  }, {
+      image: "img/player/p3.png",
+      name: "Jasvir Singh",
+      desg: "Raider",
+      nationality: "Indian",
+      dob: "31",
+      jersyno: "02",
+      desp: "Pro-Kabaddi (2015-2014),Senior National (2013), National Game (2011), Indoor Asian Game (2013), Asian Game (2014).Pro-kabaddi (2014)- 1st Position,Senior National (2013) - 1st Position, National Game (2011)- 1st Position, Indoor Asian Game (2013) - 1st Position, Asian Game (2014) - 1st Position.",
 
-    image: "img/player/p3.png",
-    name: "Jasvir Singh",
-    desg: "Raider",
-    nationality: "Indian",
-    dob: "31",
-    jersyno: "02",
-    desp: "Pro-Kabaddi (2015-2014),Senior National (2013), National Game (2011), Indoor Asian Game (2013), Asian Game (2014).Pro-kabaddi (2014)- 1st Position,Senior National (2013) - 1st Position, National Game (2011)- 1st Position, Indoor Asian Game (2013) - 1st Position, Asian Game (2014) - 1st Position.",
+    }, {
 
-  }, {
+      image: "img/player/p4.png",
+      name: "Kuldeep Singh",
+      desg: "All Rounder",
+      nationality: "Indian",
+      dob: "23",
+      jersyno: "08",
+      desp: "Pro-Kabaddi (2015),National Game (2011), National (2008-15), Dept. National (2008-09).National (2012-13) - 1st Position, National Game (2011) - 3rd Position, Dept. National (2008)- 2nd Position, (2009)- 1st Position.",
+    }, {
 
-    image: "img/player/p4.png",
-    name: "Kuldeep Singh",
-    desg: "All Rounder",
-    nationality: "Indian",
-    dob: "23",
-    jersyno: "08",
-    desp: "Pro-Kabaddi (2015),National Game (2011), National (2008-15), Dept. National (2008-09).National (2012-13) - 1st Position, National Game (2011) - 3rd Position, Dept. National (2008)- 2nd Position, (2009)- 1st Position.",
-  }, {
+      image: "img/player/p5.png",
+      name: "Navneet Gautam",
+      desg: "Defender",
+      nationality: "Indian",
+      dob: "32",
+      jersyno: "07",
+      desp: "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.",
 
-    image: "img/player/p5.png",
-    name: "Navneet Gautam",
-    desg: "Defender",
-    nationality: "Indian",
-    dob: "32",
-    jersyno: "07",
-    desp: "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.",
+    }, {
 
-  }, {
+      image: "img/player/p6.png",
+      name: "Rajesh Narwal",
+      desg: "All Rounder",
+      nationality: "Indian",
+      dob: "25",
+      jersyno: "11",
+      desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position.",
 
-    image: "img/player/p6.png",
-    name: "Rajesh Narwal",
-    desg: "All Rounder",
-    nationality: "Indian",
-    dob: "25",
-    jersyno: "11",
-    desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position.",
+    }, {
+      image: "img/player/p7.png",
+      name: "Raju Lal Choudhary",
+      desg: "Defender",
+      nationality: "Indian",
+      dob: "26",
+      jersyno: "12",
+      desp: "Pro-Kabaddi (2015-2014)National Games (2011), Senior National Games (2015), All India Police Games (2008-15).Pro-kabaddi (2014)- 1st Position,National Games (2011)-1st Position, Senior National (2015) - 3rd Position",
 
-  }, {
+    }, {
 
-    image: "img/player/p7.png",
-    name: "Raju Lal Choudhary",
-    desg: "Defender",
-    nationality: "Indian",
-    dob: "26",
-    jersyno: "12",
-    desp: "Pro-Kabaddi (2015-2014)National Games (2011), Senior National Games (2015), All India Police Games (2008-15).Pro-kabaddi (2014)- 1st Position,National Games (2011)-1st Position, Senior National (2015) - 3rd Position",
+      image: "img/player/p8.png",
+      name: "Ran Singh",
+      desg: "All Rounder",
+      nationality: "Indian",
+      dob: "28",
+      jersyno: "33",
+      desp: "Pro-Kabaddi (2015-2014),Senior National (2002-08), Senior National (2014), Dept. National Tournament  (2014), All India Police Tournanment (2008-11).Pro-kabaddi (2014)- 1st Position,Senior National (2007) - 2nd Position, Senior National (2006) - 3rd Position, All India Police Tournament (2008) (2011) - 1st Position, All India Police Tournament (2009-10) - 3rd Position, Dept. National Tournament (2014) - 2nd Position",
 
-  }, {
+    }, {
 
-    image: "img/player/p8.png",
-    name: "Ran Singh",
-    desg: "All Rounder",
-    nationality: "Indian",
-    dob: "28",
-    jersyno: "33",
-    desp: "Pro-Kabaddi (2015-2014),Senior National (2002-08), Senior National (2014), Dept. National Tournament  (2014), All India Police Tournanment (2008-11).Pro-kabaddi (2014)- 1st Position,Senior National (2007) - 2nd Position, Senior National (2006) - 3rd Position, All India Police Tournament (2008) (2011) - 1st Position, All India Police Tournament (2009-10) - 3rd Position, Dept. National Tournament (2014) - 2nd Position",
+      image: "img/player/p9.png",
+      name: "Rohit Kumar Prajapat",
+      desg: "Raider",
+      nationality: "Indian",
+      dob: "19",
+      jersyno: "14",
+      desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position",
 
-  }, {
+    }, {
 
-    image: "img/player/p9.png",
-    name: "Rohit Kumar Prajapat",
-    desg: "Raider",
-    nationality: "Indian",
-    dob: "19",
-    jersyno: "14",
-    desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position",
+      image: "img/player/p10.png",
+      name: "Rohit Rana",
+      desg: "Defender",
+      nationality: "Indian",
+      dob: "27",
+      jersyno: "05",
+      desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion",
 
-  }, {
+    }, {
 
-    image: "img/player/p10.png",
-    name: "Rohit Rana",
-    desg: "Defender",
-    nationality: "Indian",
-    dob: "27",
-    jersyno: "05",
-    desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion",
+      image: "img/player/p11.png",
+      name: "Sonu Narwal",
+      desg: "Raider",
+      nationality: "Indian",
+      dob: "29",
+      jersyno: "22",
+      desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.",
 
-  }, {
+    }, {
 
-    image: "img/player/p11.png",
-    name: "Sonu Narwal",
-    desg: "Raider",
-    nationality: "Indian",
-    dob: "29",
-    jersyno: "22",
-    desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.",
+      image: "img/player/p6.png",
+      name: "JASVIR SINGH",
+      desg: "Raider",
+      nationality: "Indian",
+      dob: "jun 08,1993",
+      jersyno: "10",
+      desp: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    }];
+    var i=0;
+    _.each($scope.player,function(key){
+      key.id=i;
+      i++;
+    });
 
-  }, {
-
-    image: "img/player/p6.png",
-    name: "JASVIR SINGH",
-    desg: "Raider",
-    nationality: "Indian",
-    dob: "jun 08,1993",
-    jersyno: "10",
-    desp: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  }];
+    //write code to reindex player by slideindex
+  }
+  $scope.getPlayers();
 
   $scope.openPlayers = function(index) {
     $scope.slideindex = index;
@@ -689,7 +700,12 @@ title:'LOREM IPSUM IS SIMPLY DUMMY TEXT'
       animation: true,
       templateUrl: 'views/modal/player-slider.html',
       controller: 'PlayersCtrl',
-      scope:$scope
+      scope:$scope,
+      resolve: {
+        slideindex :   function(){
+          return index;
+        }
+      }
     })
   };
 })
