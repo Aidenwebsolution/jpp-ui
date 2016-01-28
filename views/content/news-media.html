@@ -31,7 +31,7 @@
                 <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.timestamp}}</span>
               </div>
               <div class="news-short-desc font-base desc-padtop">
-                <p class="line140">{{data.content}}</p>
+                <p class="line140">{{data.content | cut:true:180:' ...'}}</p>
               </div>
               <div class="read-more">
                 <a href="{{data.link}}" target="_blank"><button type="button" class="btn btn-pink">Read More</button></a>
