@@ -25,7 +25,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('wallpapper', {
-    url: "/wallpapper",
+    url: "/wallpaper",
     templateUrl: "views/template.html",
     controller: 'WallpapperCtrl'
   })
@@ -37,7 +37,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('wallpapper-inner', {
-    url: "/wallpapper-inner/:id",
+    url: "/wallpaper-inner/:id",
     templateUrl: "views/template.html",
     controller: 'WallpapperInnerCtrl'
   })
