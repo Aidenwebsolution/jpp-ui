@@ -38,7 +38,7 @@
 
 
                   <div class="row" >
-                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="slide in rows track by $index">
+                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="slide in slides track by $index">
                       <div class="slider-imgholder">
                         <a class="fancybox-thumb" rel="fancybox-thumb" href="{{slide.image | serverimage}}" title="{{gallery.alternate}}">
                         <img ng-src="{{slide.image | serverimage}}" alt="{{gallery.alternate}}" class="img-responsive">

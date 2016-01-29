@@ -71,6 +71,9 @@ var navigationservice = angular.module('navigationservice', [])
     getallnews: function(callback) {
       $http.get(adminurl + "getallnews").success(callback);
     },
+    getSchedule: function(callback) {
+      $http.get(adminurl + "getSchedule").success(callback);
+    },
     getGallerySlide: function(request, callback) {
       $http.get(adminurl + "getGallerySlide?galleryid=" + request).success(callback);
     },    getWallpaper: function (request, callback) {
