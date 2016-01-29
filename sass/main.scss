@@ -1371,29 +1371,17 @@ img.fancybox-image {
 }
 .marquee {
   height: 60px;
-  overflow: hidden;
-  position: relative;
-  ul {
-    position: absolute;
-    width: 2500px;
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    /* Starting position */
-    @include transform(translateX(100%));
-    /* Apply animation to this element */
-    @include animation(scroll-left 40s infinite);
-  }
+
 }
 /* Move it (define the animation) */
-@include keyframes (scroll-left) {
-  0% {
-    @include transform(translateX(100%));
-  }
-  100% {
-    @include transform(translateX(-100%));
-  }
-}
+// @include keyframes (scroll-left) {
+//   0% {
+//     @include transform(translateX(100%));
+//   }
+//   100% {
+//     @include transform(translateX(-100%));
+//   }
+// }
 .my-li {
   background: transparent;
   padding: 0;
