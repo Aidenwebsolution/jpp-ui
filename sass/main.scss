@@ -1575,6 +1575,7 @@ img {
 .active-li{
   border-bottom: 2px solid $brand-primary;
 }
+
 .gallery-tab{
   ul{
     li{
@@ -1591,6 +1592,17 @@ img {
 
     }
   }
+}
+.fix-logo {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: block;
+}
+
+.fix-logo {
+    max-width: 100%;
+    max-height: 100%;
 }
 .close-btn {
     position: absolute;

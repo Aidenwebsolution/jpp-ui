@@ -2,6 +2,11 @@ $screen-xs: 480px !default;
 $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1500px){
+.fixture-match{
+  zoom:0.7;
+}
+}
 @media (max-width: $screen-lg) {
 
   .flex-prev {
@@ -640,6 +645,10 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .fix-logo {
+    height: 120px;
+
+}
   .close-btn {
     position: absolute;
     right: 2px;
@@ -787,6 +796,7 @@ $screen-lg: 1200px !default;
     left: -60px;
   }
 }
+
 @media only screen and (min-device-width: 500px) and (max-device-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
   .slider .carousel-control.right {
     right: -60px;
