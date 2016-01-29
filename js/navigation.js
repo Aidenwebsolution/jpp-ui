@@ -1,8 +1,8 @@
 // var mainurl = "http://wohlig.io:81/callApi/takecare/";
-var mainurl = "http://wohlig.co.in/jppbackend/index.php/";
-// var mainurl = "http://localhost/jppbackend/index.php/";
-var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
-// var imgurl = "http://localhost/jppbackend/uploads/";
+// var mainurl = "http://wohlig.co.in/jppbackend/index.php/";
+var mainurl = "http://localhost/jppbackend/index.php/";
+// var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
+var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
