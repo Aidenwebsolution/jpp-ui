@@ -58,6 +58,11 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-md-max) {
+  .close-btn {
+    position: absolute;
+    right: 2px;
+    top: 100px;
+}
   .new-images {
     height: 270px;
 }
@@ -635,6 +640,11 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .close-btn {
+    position: absolute;
+    right: 2px;
+    top: 152px;
+}
   .news-logo.text-center {
     zoom: 0.6;
 }
