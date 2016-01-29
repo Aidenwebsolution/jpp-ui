@@ -28,7 +28,10 @@
     </div>
     </div> -->
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index">
+      <div class="text-center" ng-if="wallpapper.length <=0">
+        No videos found.
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index" ng-if="wallpapper.length >0">
         <a class="pointer" ui-sref="wallpapper-inner({
           id:data.id
         })">

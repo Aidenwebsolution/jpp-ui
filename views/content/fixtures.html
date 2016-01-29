@@ -18,10 +18,10 @@
 
 <section class="mb100">
   <div class="fixture">
-    <uib-accordion close-others="true">
-      <uib-accordion-group is-open="true" class="text-center" ng-repeat="item in schedules" is-open="item.isFirstOpen"  is-disabled="item.isFirstDisabled">
-        <uib-accordion-heading>
-          <h2 class="color-primary margin0 pnl-title">{{item.team1}} VS {{item.team2}}</h2>
+    <uib-accordion close-others="oneAtATime">
+      <uib-accordion-group class="text-center" ng-repeat="item in schedules" is-open="item.isOpen">
+        <uib-accordion-heading ng-click="openAccordion(item)">
+          <h2 class="color-primary uppercase-text margin0 pnl-title">{{item.team1}} VS {{item.team2}}</h2>
           <span class="schedule">{{item.starttimedate}}</span>
         </uib-accordion-heading>
         <div class="fixture-data">

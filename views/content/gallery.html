@@ -18,10 +18,10 @@
   <div class="gallery-tab text-center custom-list">
     <ul class="padding0">
       <li ng-click="changeTab(true)">
-        <h1 class="color-primary active-li">PHOTOS</h1>
+        <h1 class="color-primary " ng-class="{'active-li':photos}">PHOTOS</h1>
       </li>
       <li ng-click="changeTab(false)">
-        <h1 class="color-primary">
+        <h1 class="color-primary" ng-class="{'active-li':!photos}">
         VIDEOS
       </h1>
     </li>
@@ -31,7 +31,10 @@
 <section class="mt100 mb100">
   <div class="container" ng-show="photos">
     <div class="row">
-      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index">
+      <div class="text-center" ng-if="slides.length <=0">
+        No videos found.
+      </div>
+      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index" ng-if="slides.length>0">
         <a ui-sref="gallery-inner({id:data.id})">
           <div class="gallery-album">
             <div class="album-cover">
@@ -48,8 +51,11 @@
   </div>
   <div class="container" ng-show="!photos">
     <div class="row">
-      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index">
-        <a>
+      <div class="text-center" ng-if="videos.length <=0">
+        No videos found.
+      </div>
+      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index" ng-if="videos.length>0">
+        <a href="https://www.youtube.com/watch?v={{data.url}}" target="_blank">
           <div class="gallery-album">
             <div class="album-cover">
               <img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg" class="img-responsive">
@@ -57,7 +63,6 @@
                 <h4 class="color-primary f20">{{data.name}}</h4>
               </div>
             </div>
-
           </div>
         </a>
       </div>

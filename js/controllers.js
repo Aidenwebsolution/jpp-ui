@@ -54,7 +54,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     })
     NavigationService.getallpoint(function(data) {
         $scope.table = data;
-        $scope.table = $filter('orderBy')($scope.table, "id");
+        $scope.table=_.sortBy($scope.table, function(o) { return o.point; });
     })
     var clickCount = 0;
     $scope.changeSlide = function(data) {
@@ -190,6 +190,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
         $scope.schedules=[];
         var i=0;
+        $scope.openAccordion= function(item){
+          item.isOpen=true;
+        };
         NavigationService.getSchedule(function(data){
           $scope.schedules=data;
           _.each($scope.schedules,function(key){
@@ -199,10 +202,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             key.team2img=_.find($scope.teams,{
               "name":key.team2
             }).image;
-            key.isFirstOpen=false;
-            key.isFirstDisabled=false;
+
             console.log(key);
           })
+          $scope.openAccordion($scope.schedules[0]);
         });
         $scope.accordian = [];
         $scope.accordian.push({
@@ -213,6 +216,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             isFirstOpen: true,
             isFirstDisabled: false
         });
+
         $scope.teams = [{
             "id": "1",
             "type": "0",
@@ -354,7 +358,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.wallpapper = [{
+        image: "img/wallpapper/w1.jpg",
+        name: "Desktop",
+        desc: "10 Wallpapers",
+         id:2
+    }, {
+        image: "img/wallpapper/w2.jpg",
+        name: "Android",
+        desc: "10 Wallpapers",
+        id:1
+    }, {
+        image: "img/wallpapper/w3.jpg",
+        name: "iOS",
+        desc: "10 Wallpapers",
+        id:3
+    }];
     $scope.wallpaperid=$stateParams.id;
+
+    $scope.wallpapercategory=_.find($scope.wallpapper,{
+      "id":parseInt($scope.wallpaperid)
+    }).name;
     NavigationService.getWallpaper($scope.wallpaperid, function(data) {
         console.log(data);
         $scope.wallpapper=data;
