@@ -376,9 +376,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.lastpage=false;
     $scope.wallpaperid=$stateParams.id;
 
-    // $scope.wallpapercategory=_.find($scope.wallpapper,{
-    //   "id":parseInt($scope.wallpaperid)
-    // }).name;
+
+    NavigationService.getWallpaperCategoryForDesktop(function(data) {
+      $scope.wallpapper=data;
+      $scope.wallpapercategory=_.find($scope.wallpapper,{
+        "id":$scope.wallpaperid
+      }).name;
+    })
+
     $scope.getWallpapers = function(page){
       $scope.lastpage=false;
       $scope.request={
