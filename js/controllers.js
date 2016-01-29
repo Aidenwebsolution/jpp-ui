@@ -496,7 +496,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "Thiruvarur",
             dob: "22",
             jersyno: "03",
-            desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).All India University (2012) - 1st Position.",
+            desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).",
             desp2: "All India University (2012) - 1st Position."
 
         },{
@@ -508,7 +508,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             dob: "22",
             jersyno: "10",
             desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009)",
-            desp2: "School Nationals(2009-2009).Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position"
+            desp2: "Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position"
 
         },{
 
@@ -615,7 +615,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             dob: "19",
             jersyno: "14",
             desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).",
-            desp2: "Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position"
+            desp2: "Sub Junior National Under 16  (2012) - 2nd Position, Under 19 School national (2012)- 3rd PositionJunior National Federation Cup (2014)- 3rd Position, Senior West Zone (2015) - 3rd Position."
 
         }, {
 
