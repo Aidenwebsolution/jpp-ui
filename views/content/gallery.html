@@ -8,29 +8,43 @@
           <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Panther-Punch">
         </div>
         <div class="title-name">
-          <h1  class="bold-mrgin">Gallery</h1>
+          <h1 class="bold-mrgin">Gallery</h1>
         </div>
       </div>
     </section>
   </div>
 </section>
+<section class="mt100">
+  <div class="gallery-tab text-center custom-list">
+    <ul class="padding0">
+      <li>
+        <h1 class="color-primary active-li">PHOTOS</h1>
+      </li>
+      <li>
+        <h1 class="color-primary">
+        VIDEOS
+      </h1>
+    </li>
+    </ul>
+  </div>
+</section>
 <section class="mt100 mb100">
   <div class="container">
     <div class="row">
-    <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index">
-    <a ui-sref="gallery-inner({id:data.id})">
-        <div class="gallery-album">
-        <div class="album-cover">
-          <img ng-src="{{data.image | serverimage}}" class="img-responsive">
-          <div class="album-title text-center">
-            <h4 class="color-primary f20">{{data.name}}</h4>
-          </div>
-        </div>
+      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index">
+        <a ui-sref="gallery-inner({id:data.id})">
+          <div class="gallery-album">
+            <div class="album-cover">
+              <img ng-src="{{data.image | serverimage}}" class="img-responsive">
+              <div class="album-title text-center">
+                <h4 class="color-primary f20">{{data.name}}</h4>
+              </div>
+            </div>
 
+          </div>
+        </a>
       </div>
-      </a>
-    </div>
-    <div class="col-md-6"></div>
+      <div class="col-md-6"></div>
     </div>
   </div>
 </section>

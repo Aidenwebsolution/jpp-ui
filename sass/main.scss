@@ -487,7 +487,7 @@ nav {
   }
 }
 .f30 {
-  font-size: 30px;
+  font-size: 28px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -1581,6 +1581,26 @@ img {
     &:focus{
       outline: 0;
       color:$white;
+    }
+  }
+}
+.active-li{
+  border-bottom: 2px solid $brand-primary;
+}
+.gallery-tab{
+  ul{
+    li{
+      padding: 0px 15px;
+      border-right: 3px solid $brand-success;
+      h1{
+        margin: 0px;
+        line-height: 120%;
+        cursor: pointer;
+      }
+      &:last-child{
+        border-right: 0px solid;
+      }
+
     }
   }
 }
