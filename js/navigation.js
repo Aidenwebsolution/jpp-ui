@@ -82,8 +82,9 @@ var navigationservice = angular.module('navigationservice', [])
     },
     getGallerySlide: function(request, callback) {
       $http.get(adminurl + "getGallerySlide?galleryid=" + request).success(callback);
-    },    getallwallpaper: function (request, callback) {
-      $http.get(adminurl+"getallwallpaper?wallpapercategory="+request).success(callback);
+    },
+    getallwallpaper: function (request, callback) {
+      $http.get(adminurl+"getallwallpaper?wallpapercategory="+request.wallpaperid+"&pageno="+request.pageno).success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {

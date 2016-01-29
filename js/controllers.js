@@ -371,32 +371,36 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.wallpapper = [{
-        image: "img/wallpapper/w1.jpg",
-        name: "Desktop",
-        desc: "10 Wallpapers",
-         id:2
-    }, {
-        image: "img/wallpapper/w2.jpg",
-        name: "Android",
-        desc: "10 Wallpapers",
-        id:1
-    }, {
-        image: "img/wallpapper/w3.jpg",
-        name: "iOS",
-        desc: "10 Wallpapers",
-        id:3
-    }];
+    $scope.wallpapper= [];
+    var pageNo=1;
+    $scope.lastpage=false;
     $scope.wallpaperid=$stateParams.id;
 
-    $scope.wallpapercategory=_.find($scope.wallpapper,{
-      "id":parseInt($scope.wallpaperid)
-    }).name;
-    NavigationService.getallwallpaper($scope.wallpaperid, function(data) {
-        console.log(data);
-        $scope.wallpapper=data;
-    });
-
+    // $scope.wallpapercategory=_.find($scope.wallpapper,{
+    //   "id":parseInt($scope.wallpaperid)
+    // }).name;
+    $scope.getWallpapers = function(page){
+      $scope.lastpage=false;
+      $scope.request={
+        pageno:page,
+        wallpaperid:$scope.wallpaperid
+      };
+      NavigationService.getallwallpaper($scope.request, function(data) {
+          var temp=data.queryresult;
+          if(temp.length == 0){
+            $scope.lastpage=true;
+          }else{
+            _.each(temp,function(key){
+              $scope.wallpapper.push(key);
+            })
+          }
+      });
+    }
+    $scope.getWallpapers(pageNo);
+    $scope.viewMore=function(){
+      pageNo++;
+      $scope.getWallpapers(pageNo);
+    };
 
 })
 
