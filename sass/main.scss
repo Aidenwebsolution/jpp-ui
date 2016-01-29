@@ -1624,6 +1624,17 @@ transform: translate(-50%,-50%);
     right: 2px;
     top: 150px;
 }
+img.loading {
+    text-align: center;
+    opacity: 1;
+    width: 200px !important;
+    height: auto;
+    margin: 0px 0px 90px 0px;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    min-height: 200px;
+}
 // body{
 //  cursor: url(../img/home/pantherplam.png), auto;
 // }
