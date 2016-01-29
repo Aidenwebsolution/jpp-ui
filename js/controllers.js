@@ -497,7 +497,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             id:2,
             image: "img/player/p13.png",
             name: "C. Arun",
-            desg: "Defender",
+            desg: "Defender,Left Cover",
             nationality: "Thiruvarur",
             dob: "22",
             jersyno: "03",
@@ -530,7 +530,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             image: "img/player/p14.png",
             name: "Jagdeesha K.K",
-            desg: "Defender,",
+            desg: "Defender,Right Corner",
             nationality: "Koipaddy",
             dob: "41",
             jersyno: "09",
@@ -572,7 +572,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             image: "img/player/p5.png",
             name: "Navneet Gautam",
-            desg: "Defender",
+            desg: "Defender, Left Corner",
             nationality: "Jaipur",
             dob: "32",
             jersyno: "07",
@@ -593,7 +593,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             image: "img/player/p7.png",
             name: "Raju Lal Choudhary",
-            desg: "Defender",
+            desg: "Defender,Right Corner",
             nationality: "Jaipur",
             dob: "26",
             jersyno: "12",
@@ -626,7 +626,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             image: "img/player/p10.png",
             name: "Rohit Rana",
-            desg: "Defender",
+            desg: "Defender,Left Cover",
             nationality: "Dharmshala",
             dob: "27",
             jersyno: "05",
