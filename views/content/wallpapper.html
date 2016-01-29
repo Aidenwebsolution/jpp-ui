@@ -37,12 +37,12 @@
         })">
           <div class="wallpapper-data text-center">
         <div class="wallpapper-img">
-          <img ng-src="{{data.image}}" class="img-responsive">
+          <img ng-src="{{data.image | serverimage}}" class="img-responsive">
 
         </div>
         <div class="wall-title">
           <h3 class="color-primary margin0 line140 font-20">{{data.name}}</h3>
-          <h4 class="margin0 font-light f20 font-14">{{data.desc}}</h4>
+          <h4 class="margin0 font-light f20 font-14">{{data.wallpapercount[0].wallpapercount}} wallpapers</h4>
         </div>
         </div>
       </a>

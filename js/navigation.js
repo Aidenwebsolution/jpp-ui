@@ -1,8 +1,8 @@
 // var mainurl = "http://wohlig.io:81/callApi/takecare/";
-var mainurl = "http://wohlig.co.in/jppbackend/index.php/";
-// var mainurl = "http://localhost/jppbackend/index.php/";
-var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
-// var imgurl = "http://localhost/jppbackend/uploads/";
+// var mainurl = "http://wohlig.co.in/jppbackend/index.php/";
+var mainurl = "http://localhost/jppbackend/index.php/";
+// var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
+var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
@@ -15,6 +15,10 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
       name: "Players",
       url: "#/players",
+      classis: "active"
+    }, {
+      name: "Gallery",
+      url: "#/gallery",
       classis: "active"
     }, {
       name: "Wallpapers",
@@ -33,10 +37,6 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/Interviews"
       }]
-    }, {
-      name: "Gallery",
-      url: "#/gallery",
-      classis: "active"
     }, {
       name: "Tickets & Merchandize",
       url: "#/ticket-merchandize",
@@ -68,19 +68,22 @@ var navigationservice = angular.module('navigationservice', [])
     getAllGallery: function(callback) {
       $http.get(adminurl + "getAllGallery").success(callback);
     },
-    getAllVideoGallery: function(callback) {
-      $http.get(adminurl + "getAllVideoGallery").success(callback);
+    getAllGallery: function(callback) {
+      $http.get(adminurl + "getAllGallery").success(callback);
     },
     getallnews: function(callback) {
       $http.get(adminurl + "getallnews").success(callback);
+    },
+    getWallpaperCategoryForDesktop: function(callback) {
+      $http.get(adminurl + "getWallpaperCategoryForDesktop").success(callback);
     },
     getSchedule: function(callback) {
       $http.get(adminurl + "getSchedule").success(callback);
     },
     getGallerySlide: function(request, callback) {
       $http.get(adminurl + "getGallerySlide?galleryid=" + request).success(callback);
-    },    getWallpaper: function (request, callback) {
-      $http.get(adminurl+"getWallpaper?type="+request).success(callback);
+    },    getallwallpaper: function (request, callback) {
+      $http.get(adminurl+"getallwallpaper?wallpapercategory="+request).success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {

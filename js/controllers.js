@@ -195,6 +195,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
         NavigationService.getSchedule(function(data){
           $scope.schedules=data;
+          var upcoming=false;
           _.each($scope.schedules,function(key){
             key.team1img=_.find($scope.teams,{
               "name":key.team1
@@ -202,10 +203,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             key.team2img=_.find($scope.teams,{
               "name":key.team2
             }).image;
-
-            console.log(key);
+            var matchdate=new Date(key.starttimedate);
+            var today = new Date();
+            if(today < matchdate && upcoming == false){
+              console.log("here");
+              upcoming = true;
+              key.visible=true;
+              $scope.openAccordion(key);
+            }else if(upcoming ==  false){
+              key.visible=false;
+            }else{
+              key.visible=true;
+            }
           })
-          $scope.openAccordion($scope.schedules[0]);
         });
         $scope.accordian = [];
         $scope.accordian.push({
@@ -332,7 +342,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Wallpapper");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-
+    NavigationService.getWallpaperCategoryForDesktop(function(data) {
+      $scope.wallpapper=data;
+      console.log(data)
+    })
     $scope.wallpapper = [{
         image: "img/wallpapper/w1.jpg",
         name: "Desktop",
@@ -379,7 +392,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.wallpapercategory=_.find($scope.wallpapper,{
       "id":parseInt($scope.wallpaperid)
     }).name;
-    NavigationService.getWallpaper($scope.wallpaperid, function(data) {
+    NavigationService.getallwallpaper($scope.wallpaperid, function(data) {
         console.log(data);
         $scope.wallpapper=data;
     });
