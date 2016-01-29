@@ -503,7 +503,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "GYOUNG JU",
             dob: "32",
             jersyno: "17",
-            // desp: "NA",
+            desp: "",
             desp2: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)-Bronze Medal"
 
         },{
@@ -546,7 +546,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "GORGAN",
             dob: "25",
             jersyno: "23",
-            // desp: "NA",
+            desp: "",
             desp2: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position"
         }, {
 
@@ -678,7 +678,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.players2 = _.union(endArr,startArr);
 
-        $uibModal.open({
+        var modalInstance = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/player-slider.html',
             controller: 'PlayersCtrl',
@@ -689,6 +689,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 }
             }
         })
+
     };
 })
 

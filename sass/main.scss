@@ -412,13 +412,18 @@ nav {
 .li-footer {
   height: 60px;
   overflow: hidden;
-  margin: 0 20px;
+margin: 7px 20px 5px 20px;
   vertical-align: sub;
   img {
     max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
   }
+}
+.f-span{
+  display: block;
+font-size: 12px;
+font-weight: 300;
 }
 .second-footer {
   background-color: $brand-success;
@@ -1623,6 +1628,7 @@ transform: translate(-50%,-50%);
     position: absolute;
     right: 2px;
     top: 150px;
+    cursor: pointer;
 }
 img.loading {
     text-align: center;

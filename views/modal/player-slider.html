@@ -8,9 +8,9 @@
         </div>
         <hr class="border-players">
         <div class="inner-data">
-          <!-- <div class="close-btn">
+          <div class="close-btn" ng-click="$dismiss()">
             <img src="img/close.png">
-          </div> -->
+          </div>
           <div class="player-name text-center">
             <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name}}</h1>
           </div>
@@ -28,7 +28,7 @@
             </ul>
           </div>
           <div class="player-desc text-justify font-base">
-            <p><strong>Tournaments Played:</strong> {{dataitem.desp}}</p>
+            <p ng-if="!dataitem.desp=='';"><strong>Tournaments Played:</strong> {{dataitem.desp}}</p>
             <p><strong>Achievements:</strong> {{dataitem.desp2}}</p>
           </div>
         </div>
