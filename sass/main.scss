@@ -1459,6 +1459,9 @@ img.fancybox-image {
 }
 .album-cover {
   position: relative;
+  img{
+    width: 100%;
+  }
 }
 .album-title.text-center {
   position: absolute;
