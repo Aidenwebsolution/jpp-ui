@@ -470,7 +470,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "Mumbai",
             dob: "33",
             jersyno: "01",
-            desp: "Senior National- (2007-2009,2011-2012), Departmental National (2006,2010,2013-2015)",
+            desp: "Senior National-(2007-2009,2011-2012), Departmental National (2006,2010,2013-2015).",
             desp2: "Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position."
 
         }, {
@@ -503,7 +503,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "GYOUNG JU",
             dob: "32",
             jersyno: "17",
-            desp: "NA",
+            // desp: "NA",
             desp2: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)-Bronze Medal"
 
         },{
@@ -546,7 +546,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "GORGAN",
             dob: "25",
             jersyno: "23",
-            desp: "NA",
+            // desp: "NA",
             desp2: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position"
         }, {
 
@@ -612,6 +612,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             jersyno: "05",
             desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
             desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
+        },{
+
+            image: "img/player/p18.png",
+            name: "Sanjay Shrestha",
+            desg: "All Rounder",
+            nationality: "Dhanusha",
+            dob: "31",
+            jersyno: "04",
+            desp: "Pro-Kabaddi (2015-2014),World Cup ( , 9th Safe game, 10th Safe Game, 11th Safe Game.",
+            desp2: "Pro-kabaddi (2014)- 1st Position."
 
         },{
 
