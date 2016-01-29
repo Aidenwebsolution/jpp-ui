@@ -1382,7 +1382,7 @@ img.fancybox-image {
     /* Starting position */
     @include transform(translateX(100%));
     /* Apply animation to this element */
-    @include animation(scroll-left 50s infinite);
+    @include animation(scroll-left 40s infinite);
   }
 }
 /* Move it (define the animation) */
