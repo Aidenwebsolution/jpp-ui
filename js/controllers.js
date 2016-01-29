@@ -54,7 +54,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     })
     NavigationService.getallpoint(function(data) {
         $scope.table = data;
-        $scope.table=_.sortBy($scope.table, function(o) { return o.point; });
+        $scope.table = $filter('orderBy')($scope.table, "order");
     })
     var clickCount = 0;
     $scope.changeSlide = function(data) {

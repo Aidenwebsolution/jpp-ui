@@ -241,11 +241,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="text-center"  ng-if="table.length<=0">
-                  Points table not found
-              </tr>
             <tr ng-repeat="data in table" ng-if="table.length>0">
-              <td>{{data.id}}</td>
+              <td>{{$index +1}}</td>
               <td>{{data.name || 'Loading..'}}</td>
               <td>{{data.played}}</td>
               <td>{{data.wins}}</td>
