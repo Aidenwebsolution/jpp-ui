@@ -195,7 +195,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
         NavigationService.getSchedule(function(data){
           $scope.schedules=data;
-          var upcoming=false;
           _.each($scope.schedules,function(key){
             key.team1img=_.find($scope.teams,{
               "name":key.team1
@@ -203,28 +202,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             key.team2img=_.find($scope.teams,{
               "name":key.team2
             }).image;
-            var matchdate=new Date(key.starttimedate);
-            var today = new Date();
-            if(today < matchdate && upcoming == false){
-              console.log("here");
-              upcoming = true;
-              key.visible=true;
-              $scope.openAccordion(key);
-            }else if(upcoming ==  false){
-              key.visible=false;
-            }else{
-              key.visible=true;
-            }
           })
-        });
-        $scope.accordian = [];
-        $scope.accordian.push({
-            isFirstOpen: true,
-            isFirstDisabled: false
-        });
-        $scope.accordian.push({
-            isFirstOpen: true,
-            isFirstDisabled: false
+          $scope.openAccordion($scope.schedules[0]);
         });
 
         $scope.teams = [{
