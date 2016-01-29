@@ -290,13 +290,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
+    $scope.photos=true;
+    $scope.getPhotos=function(){
+      NavigationService.getAllGallery(function(data) {
+          $scope.slides = data;
+          $scope.slides = $filter('orderBy')($scope.slides, "order");
+          console.log($scope.slides);
+      });
+    };
+    $scope.getPhotos();
     var slides = $scope.slides = [];
+    $scope.videos=[];
     var currIndex = 0;
-    NavigationService.getAllGallery(function(data) {
-        $scope.slides = data;
-        $scope.slides = $filter('orderBy')($scope.slides, "order");
-        console.log($scope.slides);
-    })
+
+    $scope.getVideos=function(){
+      NavigationService.getAllVideoGallery(function(data) {
+          $scope.videos = data;
+          $scope.videos = $filter('orderBy')($scope.videos, "order");
+          console.log($scope.videos);
+      });
+    };
+    $scope.changeTab=function(value){
+      if(value == true){
+        $scope.photos=true;
+        $scope.getPhotos();
+      }else{
+        $scope.photos=false;
+        $scope.getVideos();
+      }
+    };
 
 })
 

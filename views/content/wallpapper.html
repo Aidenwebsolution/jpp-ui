@@ -29,7 +29,9 @@
     </div> -->
     <div class="row">
       <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index">
-        <a href="#/wallpaper-inner">
+        <a class="pointer" ui-sref="wallpapper-inner({
+          id:data.id
+        })">
           <div class="wallpapper-data text-center">
         <div class="wallpapper-img">
           <img ng-src="{{data.image}}" class="img-responsive">

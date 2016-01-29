@@ -17,10 +17,10 @@
 <section class="mt100">
   <div class="gallery-tab text-center custom-list">
     <ul class="padding0">
-      <li>
+      <li ng-click="changeTab(true)">
         <h1 class="color-primary active-li">PHOTOS</h1>
       </li>
-      <li>
+      <li ng-click="changeTab(false)">
         <h1 class="color-primary">
         VIDEOS
       </h1>
@@ -29,7 +29,7 @@
   </div>
 </section>
 <section class="mt100 mb100">
-  <div class="container">
+  <div class="container" ng-show="photos">
     <div class="row">
       <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index">
         <a ui-sref="gallery-inner({id:data.id})">
@@ -44,7 +44,23 @@
           </div>
         </a>
       </div>
-      <div class="col-md-6"></div>
+    </div>
+  </div>
+  <div class="container" ng-show="!photos">
+    <div class="row">
+      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index">
+        <a>
+          <div class="gallery-album">
+            <div class="album-cover">
+              <img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg" class="img-responsive">
+              <div class="album-title text-center">
+                <h4 class="color-primary f20">{{data.name}}</h4>
+              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
