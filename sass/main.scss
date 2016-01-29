@@ -1569,6 +1569,21 @@ img {
       max-height: 100%;
     }
 }
+.btn:hover, .btn:focus, .btn.focus {
+    color: $white;
+    text-decoration: none;
+}
+.read-more{
+  a{
+    &:hover{
+      color:$white;
+    }
+    &:focus{
+      outline: 0;
+      color:$white;
+    }
+  }
+}
 // body{
 //  cursor: url(../img/home/pantherplam.png), auto;
 // }
