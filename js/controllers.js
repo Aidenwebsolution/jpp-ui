@@ -268,6 +268,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.noWrapSlides = false;
         $scope.galleryid = $stateParams.id;
         console.log($scope.galleryid);
+        NavigationService.getAllGallery(function(data) {
+          $scope.galleryArr=data;
+          $scope.gallerycategory=_.find($scope.galleryArr,{
+            "id":$scope.galleryid
+          }).name;
+        })
         NavigationService.getGallerySlide($scope.galleryid, function(data) {
             console.log(data);
             $scope.slides = data;
