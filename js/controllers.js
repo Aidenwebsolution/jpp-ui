@@ -193,6 +193,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         var i=0;
         $scope.openAccordion= function(item){
           item.isOpen=true;
+          item.classes="panel-open";
         };
         NavigationService.getSchedule(function(data){
           $scope.schedules=data;
