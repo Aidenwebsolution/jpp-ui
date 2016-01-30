@@ -276,6 +276,15 @@ nav {
   position: relative;
   padding: 17px 70px 16px;
   z-index: 9;
+  a{
+    color:$pink;
+    &:focus{
+      color:$pink;
+    }
+    &:hover{
+        color:$pink;
+    }
+  }
   &:before {
     left: -16px;
     height: 100%;
