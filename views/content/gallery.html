@@ -24,7 +24,7 @@
         <h1 class="color-primary" ng-class="{'active-li':!photos}">
         VIDEOS
       </h1>
-    </li>
+      </li>
     </ul>
   </div>
 </section>
@@ -58,9 +58,9 @@
         <a href="https://www.youtube.com/watch?v={{data.url}}" target="_blank">
           <div class="gallery-album">
             <div class="album-cover">
-              <img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg" class="img-responsive">
+              <a class="various fancybox.iframe" fancybox ng-href="http://www.youtube.com/embed/{{data.url}}?autoplay=1" ><img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg " class="img-responsive "></a>
               <div class="album-title text-center">
-                <h4 class="color-primary f20">{{data.name}}</h4>
+                <h4 class="color-primary f20 ">{{data.name}}</h4>
               </div>
             </div>
           </div>
