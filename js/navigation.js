@@ -38,7 +38,7 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/Interviews"
       }]
     }, {
-      name: "Tickets & Merchandize",
+      name: "Tickets & Merchandise",
       url: "#/ticket-merchandize",
       classis: "active"
     }
