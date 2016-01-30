@@ -189,12 +189,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.schedules=[];
+        $scope.loaded = false;
         var i=0;
         $scope.openAccordion= function(item){
           item.isOpen=true;
         };
         NavigationService.getSchedule(function(data){
           $scope.schedules=data;
+          $scope.schedules[0].isOpen = false;
           _.each($scope.schedules,function(key){
             key.team1img=_.find($scope.teams,{
               "name":key.team1
