@@ -70,7 +70,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('ticket-merchandize', {
-        url: "/ticket-merchandize",
+        url: "/ticket-merchandise",
         templateUrl: "views/template.html",
         controller: 'TicketMerchandizeCtrl'
     })

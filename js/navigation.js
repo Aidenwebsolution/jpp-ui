@@ -39,7 +39,7 @@ var navigationservice = angular.module('navigationservice', [])
       }]
     }, {
       name: "Tickets & Merchandise",
-      url: "#/ticket-merchandize",
+      url: "#/ticket-merchandise",
       classis: "active"
     }
     //						 ,{
