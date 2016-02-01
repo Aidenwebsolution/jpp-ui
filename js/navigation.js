@@ -1,7 +1,7 @@
 var mainurl = "http://jaipurpinkpanthers.com/admin/index.php/";
 // var mainurl = "http://localhost/jppbackend/index.php/";
-var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
-//var imgurl = "http://localhost/jppbackend/uploads/";
+var imgurl = "http://jaipurpinkpanthers.com/admin/uploads/";
+// var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])

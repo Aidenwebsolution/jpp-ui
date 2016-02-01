@@ -134,6 +134,15 @@ firstapp.filter('serverimage', function() {
         }
     };
 });
+firstapp.filter('thumbimage', function() {
+    return function(input) {
+        if (input) {
+            return mainurl + 'image/index?name=' +input+ '&width=400'; 
+        } else {
+            return "";
+        }
+    };
+});
 firstapp.directive('autoHeight', function($compile, $parse) {
     return {
         restrict: 'EA',

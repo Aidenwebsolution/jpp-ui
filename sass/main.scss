@@ -92,10 +92,11 @@ body {
   color: $base;
 }
 img.loading {
-  text-align: center;
-  opacity: 1;
-  width: 32px !important;
-  height: auto;
+    text-align: center;
+    opacity: 1;
+    width: 100px !important;
+    height: auto;
+    position: relative;
 }
 .content {
   min-height: 600px;
@@ -1644,15 +1645,6 @@ transform: translate(-50%,-50%);
     right: 2px;
     top: 150px;
     cursor: pointer;
-}
-img.loading {
-    text-align: center;
-    opacity: 1;
-    width: 200px !important;
-    height: auto;
-    margin: 0px 0px 90px 0px;
-    position: relative;
-    min-height: 200px;
 }
 .news-title{
   h4{
