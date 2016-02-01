@@ -1,8 +1,7 @@
-// var mainurl = "http://wohlig.io:81/callApi/takecare/";
-// var mainurl = "http://wohlig.co.in/jppbackend/index.php/";
 var mainurl = "http://jaipurpinkpanthers.com/admin/index.php/";
-// var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
-var imgurl = "http://localhost/jppbackend/uploads/";
+// var mainurl = "http://localhost/jppbackend/index.php/";
+var imgurl = "http://wohlig.co.in/jppbackend/uploads/";
+//var imgurl = "http://localhost/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
@@ -83,8 +82,8 @@ var navigationservice = angular.module('navigationservice', [])
     getGallerySlide: function(request, callback) {
       $http.get(adminurl + "getGallerySlide?galleryid=" + request).success(callback);
     },
-    getallwallpaper: function (request, callback) {
-      $http.get(adminurl+"getallwallpaper?wallpapercategory="+request.wallpaperid+"&pageno="+request.pageno).success(callback);
+    getallwallpaper: function(request, callback) {
+      $http.get(adminurl + "getallwallpaper?wallpapercategory=" + request.wallpaperid + "&pageno=" + request.pageno).success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
