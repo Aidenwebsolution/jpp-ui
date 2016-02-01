@@ -506,17 +506,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         },{
 
-            image: "img/player/p17.png",
-            name: "HWAN GI AHN",
-            desg: "All Rounder",
-            nationality: "GYOUNG JU",
-            dob: "32",
-            jersyno: "17",
-            desp: "",
-            desp2: "Incheon indoor game- Bronze Medal, National Championship (2011,2012,2013)-2nd Position, Asian Games (2014)-Bronze Medal"
-
-        },{
-
             image: "img/player/p14.png",
             name: "Jagdeesha K.K",
             desg: "Defender,Right Corner",
