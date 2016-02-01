@@ -241,7 +241,7 @@
               </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="data in table" ng-if="table.length>0">
+            <tr ng-repeat="data in table | orderBy:'$index':true" ng-if="table.length>0">
               <td>{{$index +1}}</td>
               <td>{{data.name || 'Loading..'}}</td>
               <td>{{data.played}}</td>
