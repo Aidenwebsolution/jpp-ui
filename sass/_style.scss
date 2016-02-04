@@ -1,4 +1,5 @@
 .fixture {
+
   // .panel-open {
   //   .panel-heading {
   //     display: none;
@@ -35,5 +36,29 @@
     border-bottom: 1px solid transparent;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+  }
+  .team-head {
+    font-size: 20px;
+    text-transform: uppercase;
+    img {
+      width: 75px;
+    }
+  }
+  .fix-logos {
+    text-align: center;
+    img {
+      width: 110px;
+      display: inline-block;
+    }
+  }
+  .score-points {
+    font-size: 40px;
+  }
+  .vs {
+    width: 80%;
+    margin: 25px auto 0;
+  }
+  .fixture-match {
+    top: 30%;
   }
 }
