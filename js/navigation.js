@@ -52,6 +52,11 @@ var navigationservice = angular.module('navigationservice', [])
       url: "#/about-us",
       classis: "active"
     }
+    , {
+      name: "Fan Corner",
+      url: "#/fan-corner",
+      classis: "active"
+    }
   ];
 
   return {
