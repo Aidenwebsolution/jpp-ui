@@ -1,0 +1,39 @@
+.fixture {
+  // .panel-open {
+  //   .panel-heading {
+  //     display: none;
+  //   }
+  // }
+  .panel {
+    border: 0 solid transparent;
+  }
+  .panel-body {
+    padding: 0;
+  }
+  .panel-title {
+    .schedule {
+      font-size: 30px;
+      font-weight: 300;
+      &:focus {
+        outline: 0;
+      }
+    }
+    &:focus {
+      outline: 0;
+    }
+    h2 {
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+  .panel-heading {
+    color: $base;
+    background-color: $panel-head;
+    border-color: $panel-head;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
