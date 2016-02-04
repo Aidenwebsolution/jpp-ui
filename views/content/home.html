@@ -108,15 +108,15 @@
     </div>
   </div>
 </div>
-<section>
+<section class="marg-section">
   <div class="point-bkp">
     <div class="container">
-      <div class="row">
+      <div class="row padding40">
         <div class="col-md-6">
           <div class="head-table text-center">
-            <h1>POINTS TABLE</h1>
+            <h1 class="color-white">POINTS TABLE</h1>
           </div>
-          <div class="point-tbl">
+          <div class="point-tbl mt30">
             <div class="points-table">
               <!-- <h4>POINTS TABLE</h4> -->
               <table class="table">
@@ -130,7 +130,7 @@
                     <th>PTS</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="odd-even">
                   <tr ng-repeat="data in table | orderBy:'$index':true" ng-if="table.length>0">
                     <td>{{$index +1}}</td>
                     <td>{{data.name || 'Loading..'}}</td>
@@ -147,9 +147,9 @@
         <div class="col-md-6">
           <div class="nxt-match">
             <div class="head-table text-center">
-              <h1>NEXT MATCH</h1>
+              <h1 class="color-white">NEXT MATCH</h1>
             </div>
-            <div class="match-schd">
+            <div class="match-schd mt30">
               <div class="row">
                 <div class="col-md-4 padding0">
                   <div class="new-logo">
@@ -157,7 +157,9 @@
                   </div>
                 </div>
                 <div class="col-md-4 padding0">
+                  <div class="mt30">
                   <img src="img/object/back-vs.png" class="img-responsive">
+                  </div>
                 </div>
                 <div class="col-md-4 padding0">
                   <div class="new-logo">
@@ -170,17 +172,17 @@
               <ul class="padding0">
                 <li>
                   <div class="time-hrs">
-                    <h1>34</h1>
+                    <h1 class="color-white"><span>34</span><b>:</b></h1>
                   </div>
                 </li>
                 <li>
                   <div class="time-hrs">
-                    <h1>25</h1>
+                    <h1 class="color-white"><span>25</span><b>:</b></h1>
                   </div>
                 </li>
                 <li>
                   <div class="time-hrs">
-                    <h1>00</h1>
+                    <h1 class="color-white"><span>00</span></h1>
                   </div>
                 </li>
               </ul>
@@ -360,11 +362,47 @@
   <div class="back-img">
     <div class="container">
       <div class="row">
-        <div class="col-md-5"></div>
-        <div class="col-md-7">
+        <div class="col-md-4">
+          <div class="">
+            <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive">
+          </div>
+          <div class="text-center">
+            <h4>
+
+              Get exclusive JPP Wallpapers for your Desktop and Mobile.
+            </h4>
+          </div>
+          <div class="button text-center">
+            <a href="#/wallpaper" class="btn btn-primary">
+                Download Wallpapers
+            </a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
           <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="cell-img">
+                <img src="img/object/phone.png" class="img-responsive">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="download-link">
+                <h2>Download the JPP App</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="play-store">
+                    <img src="img/object/play-store.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="app-store">
+                    <img src="img/object/app-store.png" class="img-responsive">
+                  </div>
+                </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
