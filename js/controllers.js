@@ -215,48 +215,56 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "type": "0",
             "name": "Patna Pirates",
             "image": "img/team/5.png",
+            "image-logo": "img/fixtures/team/5.png",
             "content": ""
         }, {
             "id": "2",
             "type": "0",
             "name": "Bengaluru Bulls",
             "image": "img/team/1.png",
+            "image-logo": "img/fixtures/team/1.png",
             "content": ""
         }, {
             "id": "3",
             "type": "0",
             "name": "Bengal Warriors",
             "image": "img/team/2.png",
+            "image-logo": "img/fixtures/team/2.png",
             "content": ""
         }, {
             "id": "4",
             "type": "0",
             "name": "Dabang Delhi",
             "image": "img/team/3.png",
+            "image-logo": "img/fixtures/team/3.png",
             "content": ""
         }, {
             "id": "5",
             "type": "0",
             "name": "Jaipur Pink Panthers",
             "image": "img/team/4.png",
+            "image-logo": "img/fixtures/team/4.png",
             "content": ""
         }, {
             "id": "6",
             "type": "0",
             "name": "Puneri Paltan",
             "image": "img/team/6.png",
+            "image-logo": "img/fixtures/team/6.png",
             "content": ""
         }, {
             "id": "7",
             "type": "0",
             "name": "Telegu Titans",
             "image": "img/team/7.png",
+            "image-logo": "img/fixtures/team/7.png",
             "content": ""
         }, {
             "id": "8",
             "type": "0",
             "name": "U Mumba",
             "image": "img/team/8.png",
+            "image-logo": "img/fixtures/team/8.png",
             "content": ""
         }];
     })

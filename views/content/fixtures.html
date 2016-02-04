@@ -14,18 +14,51 @@
     </section>
   </div>
 </section>
-<section class="mb100">
+<section class="mb100 mt100">
   <div class="fixture">
     <uib-accordion close-others="oneAtATime">
       <uib-accordion-group class="text-center {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen">
-        <uib-accordion-heading ng-click="openAccordion(item)"  ng-show="item.visible" >{{item.visible}}
-          <h2 class="color-primary uppercase-text margin0 pnl-title">{{item.team1}} VS {{item.team2}}</h2>
-          <span class="schedule">{{item.starttimedate}}</span>
+
+        <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
+          <div class="row">
+            <div class="col-xs-2">
+              <span class="schedule">{{item.starttimedate}}</span>
+            </div>
+            <div class="col-xs-3">
+              <div class="team-head">
+                {{item.team1}}
+                <img ng-src="{{item.team1img}}" class="">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <span>vs</span>
+              <span>35 - 34</span>
+            </div>
+            <div class="col-xs-3">
+              <div class="team-head">
+                {{item.team2}}
+                <img ng-src="{{item.team2img}}" class="">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="match-center">Match Centre <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+          <!-- <img ng-src="{{item.team1img}}" class="img-responsive"> -->
+          <!-- <h2 class="color-primary uppercase-text margin0 pnl-title">{{item.team1}}
+            <span>VS</span>
+            <span></span>
+            {{item.team2}}
+          </h2> -->
+          <!-- <span class="schedule">{{item.starttimedate}}</span> -->
+          <!-- <img ng-src="{{item.team2img}}" class="img-responsive"> -->
         </uib-accordion-heading>
+
+
         <div class="fixture-data">
           <div class="fix-banner">
             <img src="img/fixture/banner.jpg" class="img-responsive">
-
             <div class="container fixture-match text-center ">
               <div class="row">
                 <div class="col-xs-5">
@@ -55,12 +88,9 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </uib-accordion-group>
     </uib-accordion>
-
   </div>
 </section>
