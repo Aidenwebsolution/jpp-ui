@@ -1588,6 +1588,9 @@ img.fancybox-image {
 .mt30 {
   margin-top: 30px;
 }
+.mt50 {
+  margin-top: 50px;
+}
 .time-hrs {
   h1 {
     span {
@@ -1640,6 +1643,27 @@ img.fancybox-image {
 .feed-social{
     background: #fff;
     padding: 5px 0px 5px 0px;
+}
+.form-submit{
+  span{
+    font-weight: 400;
+font-size: 16px;
+
+  }
+  .form-control{
+    border: 1px solid #4ECAF5;
+border-radius: 0px;
+-webkit-box-shadow: inset 0 0px 0px rgb(78, 202, 245);
+box-shadow: inset 0 0px 0px rgb(78, 202, 245);
+margin-top: 5px;
+  }
+}
+.pad30{
+  ul{
+    li{
+      padding: 0px 30px;
+    }
+  }
 }
 @import "mobile";
 @import "style";

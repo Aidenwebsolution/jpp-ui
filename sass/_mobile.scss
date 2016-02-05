@@ -401,7 +401,7 @@ $screen-lg: 1200px !default;
     padding-top: 50px;
   }
   .banner-title {
-    margin-top: 52px;
+    margin-top: 51px;
   }
   .navbar-brand {
     padding: 10px 0;
@@ -458,7 +458,15 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
-
+.font-mob{
+  font-size: 22px;
+}
+.font-new{
+  font-size: 16px;
+}
+.font-stay{
+  font-size: 18px;
+}
 .font-16{
   font-size: 16px;
 }
@@ -642,6 +650,10 @@ $screen-lg: 1200px !default;
   }
   .block-img {
     height: 75px;
+  }
+  .mini-text{
+    text-align: center;
+    margin-top: 10px;
   }
 }
 @media (max-width: 480px) {
