@@ -1,41 +1,146 @@
 .fixture {
-
-  // .panel-open {
-  //   .panel-heading {
-  //     display: none;
-  //   }
-  // }
+  .fixtures-done {
+    .panel {
+      border: 0 solid transparent;
+    }
+    .panel-body {
+      padding: 0;
+    }
+    .panel-title {
+      .schedule {
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 10px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      &:focus {
+        outline: 0;
+      }
+      h2 {
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+    .panel-heading {
+      color: $base;
+      background-color: $panel-head;
+      border-color: $panel-head;
+      padding: 15px;
+      border-bottom: 1px solid transparent;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+    .team-head {
+      font-size: 20px;
+      text-transform: uppercase;
+      img {
+        width: 75px;
+      }
+      span {
+        margin-top: 25px;
+      }
+    }
+    .score-points {
+      margin-top: 8px;
+      font-size: 45px;
+    }
+    .float-left {
+      float: left;
+    }
+    .float-right {
+      float: right;
+    }
+    .fix-logos {
+      text-align: center;
+      margin-top: 30px;
+      span {
+        font-size: 50px;
+        text-shadow: 1px 1px white, -1px -1px #fff;
+        vertical-align: middle;
+      }
+      .jpp {
+        color: #ee4a9b;
+      }
+      .patna {
+        color: #078042;
+      }
+      .bengaluru {
+        color: #B01D21;
+      }
+      .bengal {
+        color: #f26724;
+      }
+      .delhi {
+        color: #d91f2d;
+      }
+      .puneri {
+        color: #f58220;
+      }
+      .telgu {
+        color: #da2131;
+      }
+      .mumba {
+        color: #da2131;
+      }
+      img {
+        width: 150px;
+        display: inline-block;
+      }
+    }
+    .score-points {
+      margin-top: 8px;
+      font-size: 45px;
+    }
+    .vs {
+      text-align: center;
+      margin-top: 65px;
+      img {
+        width: 120px;
+        display: inline-block;
+      }
+    }
+    .fixture-match {
+      top: 25%;
+    }
+    .match-center {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .fixture-willbdone {
+    .panel-heading {
+      color: #262626;
+      background-color: #83daf8;
+      border-color: #83daf8;
+      padding: 15px;
+      border-bottom: 1px solid transparent;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
   .panel {
     border: 0 solid transparent;
   }
   .panel-body {
     padding: 0;
   }
-  .panel-title {
-    .schedule {
-      font-size: 30px;
-      font-weight: 300;
-      &:focus {
-        outline: 0;
-      }
-    }
-    &:focus {
-      outline: 0;
-    }
-    h2 {
-      &:focus {
-        outline: 0;
-      }
-    }
+  .panel-title .schedule {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 10px;
   }
-  .panel-heading {
-    color: $base;
-    background-color: $panel-head;
-    border-color: $panel-head;
-    padding: 15px;
-    border-bottom: 1px solid transparent;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+  .panel-title .schedule:focus {
+    outline: 0;
+  }
+  .panel-title:focus {
+    outline: 0;
+  }
+  .panel-title h2:focus {
+    outline: 0;
   }
   .team-head {
     font-size: 20px;
@@ -43,22 +148,18 @@
     img {
       width: 75px;
     }
-  }
-  .fix-logos {
-    text-align: center;
-    img {
-      width: 110px;
-      display: inline-block;
+    span {
+      margin-top: 25px;
     }
   }
   .score-points {
-    font-size: 40px;
+    margin-top: 8px;
+    font-size: 45px;
   }
-  .vs {
-    width: 80%;
-    margin: 25px auto 0;
+  .float-left {
+    float: left;
   }
-  .fixture-match {
-    top: 30%;
+  .float-right {
+    float: right;
   }
 }
