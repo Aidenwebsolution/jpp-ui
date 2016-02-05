@@ -475,6 +475,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .pad30 ul li {
+    padding: 0px 12px;
+}
   .download-link{
     text-align: center;
   }
@@ -700,6 +703,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .pad30 ul li {
+    padding: 0px 12px;
+}
   .download-link{
     text-align: center;
   }
