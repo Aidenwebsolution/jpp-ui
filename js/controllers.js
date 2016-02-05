@@ -436,6 +436,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
 })
+.controller('FanCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("fan-corner");
+    $scope.menutitle = NavigationService.makeactive("Fan Corner");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.news = [];
+    NavigationService.getallnews(function(data) {
+        $scope.news = data;
+        $scope.news = $filter('orderBy')($scope.news, "id");
+        console.log($scope.news);
+    });
+
+})
 
 .controller('NewsDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
