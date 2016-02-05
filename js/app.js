@@ -44,6 +44,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         templateUrl: "views/template.html",
         controller: 'WallpapperInnerCtrl'
     })
+    .state('fan-corner', {
+        url: "/fan-corner",
+        templateUrl: "views/template.html",
+        controller: 'FanCornerCtrl'
+    })
 
     .state('gallery', {
         url: "/gallery",
@@ -137,7 +142,7 @@ firstapp.filter('serverimage', function() {
 firstapp.filter('thumbimage', function() {
     return function(input) {
         if (input) {
-            return mainurl + 'image/index?name=' +input+ '&width=400'; 
+            return mainurl + 'image/index?name=' +input+ '&width=400';
         } else {
             return "";
         }
