@@ -84,6 +84,7 @@ $font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgi
   @include flex(1);
   position: relative;
 }
+
 body {
   padding-top: 0;
   font-family: $font-family-sans-serif;

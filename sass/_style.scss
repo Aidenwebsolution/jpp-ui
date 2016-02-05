@@ -43,10 +43,6 @@
         margin-top: 25px;
       }
     }
-    .score-points {
-      margin-top: 8px;
-      font-size: 45px;
-    }
     .float-left {
       float: left;
     }
@@ -60,6 +56,8 @@
         font-size: 50px;
         text-shadow: 1px 1px white, -1px -1px #fff;
         vertical-align: middle;
+        display: inline-block;
+        margin-top: 20px;
       }
       .jpp {
         color: #ee4a9b;
@@ -91,19 +89,19 @@
       }
     }
     .score-points {
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 45px;
     }
     .vs {
       text-align: center;
-      margin-top: 65px;
+      margin-top: 75px;
       img {
         width: 120px;
         display: inline-block;
       }
     }
     .fixture-match {
-      top: 25%;
+      top: 42%;
     }
     .match-center {
       margin-top: 25px;
@@ -153,7 +151,7 @@
     }
   }
   .score-points {
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 45px;
   }
   .float-left {
@@ -162,4 +160,19 @@
   .float-right {
     float: right;
   }
+  .match-center {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 300;
+}
+}
+.row.fixture-cont {
+  padding-top: 28px;
+}
+.topscore {
+  font-size: 20px;
+}
+.head-pink {
+  font-size: 20px;
+  color: #af1d6f;
 }
