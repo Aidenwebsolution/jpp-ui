@@ -8,7 +8,9 @@ $screen-lg: 1200px !default;
 // }
 // }
 @media (max-width: $screen-lg) {
-
+  nav li {
+    padding-right: 16px;
+  }
   .flex-prev {
     &:before {
       background: url(/img/play-left.png)no-repeat;
@@ -43,12 +45,10 @@ $screen-lg: 1200px !default;
       left: -70px;
     }
   }
-
   // Header
   .navbar-brand {
     padding: 8px 0;
   }
-
   //page
   .title-name {
     h1 {
@@ -63,14 +63,17 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-md-max) {
+  .font-app {
+    font-size: 24px;
+  }
   .close-btn {
     position: absolute;
     right: 2px;
     top: 100px;
-}
+  }
   .new-images {
     height: 270px;
-}
+  }
   .flex-prev {
     &:before {
       background: url(/img/play-left.png)no-repeat;
@@ -110,7 +113,6 @@ $screen-lg: 1200px !default;
   .f25 {
     font-size: 17px;
   }
-
   // .fixture-match{
   //   zoom:0.6;
   // }
@@ -135,7 +137,6 @@ $screen-lg: 1200px !default;
   .li-footer {
     margin: 0 10px 4px 0;
   }
-
   //page
   .title-name {
     padding: 17px 50px 16px;
@@ -145,9 +146,27 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
+  .font-excl {
+    font-size: 15px;
+  }
+  .font-app {
+    font-size: 18px;
+  }
+  .margin-all {
+    padding-top: 50px;
+  }
+  .points-table .table th {
+    font-size: 16px;
+  }
+  .odd-even tr {
+    font-size: 16px;
+  }
+  .font-tbl {
+    font-size: 30px;
+  }
   .new-images {
     height: 204px;
-}
+  }
   .slider .carousel-control {
     height: 90%;
   }
@@ -350,7 +369,6 @@ $screen-lg: 1200px !default;
       font-size: 18px;
     }
   }
-
   // Header
   .navbar-toggle {
     border-color: #4ECAF5 !important;
@@ -376,7 +394,7 @@ $screen-lg: 1200px !default;
   }
   .nav {
     li {
-      padding-right: 20px;
+      padding-right: 13px;
       a {
         padding: 16px 4px !important;
       }
@@ -422,7 +440,6 @@ $screen-lg: 1200px !default;
   .mr70 {
     margin-right: 0;
   }
-
   // /footer
   .name-sponser {
     text-align: center;
@@ -458,18 +475,29 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
-.font-mob{
-  font-size: 22px;
+  .feed-social {
+    background: transparent;
+    padding: 5px 0px 5px 0px;
 }
-.font-new{
-  font-size: 16px;
+  .social-logo{
+    padding-top: 20px;
 }
-.font-stay{
-  font-size: 18px;
+
+  .font-tbl {
+    font-size: 26px;
 }
-.font-16{
-  font-size: 16px;
-}
+  .font-mob {
+    font-size: 22px;
+  }
+  .font-new {
+    font-size: 16px;
+  }
+  .font-stay {
+    font-size: 18px;
+  }
+  .font-16 {
+    font-size: 16px;
+  }
   //menu
   nav {
     li {
@@ -490,9 +518,7 @@ $screen-lg: 1200px !default;
         li {
           background: -webkit-linear-gradient(#4ac3ed, #217d9e)!important;
           background: linear-gradient(#4ac3ed, #217d9e)!important;
-          a {
-
-          }
+          a {}
         }
       }
     }
@@ -507,7 +533,6 @@ $screen-lg: 1200px !default;
   .navbar .col-md-10 {
     padding: 0;
   }
-
   //end menu
   .sliders .play-img {
     height: 50px;
@@ -651,7 +676,7 @@ $screen-lg: 1200px !default;
   .block-img {
     height: 75px;
   }
-  .mini-text{
+  .mini-text {
     text-align: center;
     margin-top: 10px;
   }
@@ -659,19 +684,18 @@ $screen-lg: 1200px !default;
 @media (max-width: 480px) {
   .fix-logo {
     height: 120px;
-
-}
+  }
   .close-btn {
     position: absolute;
     right: 2px;
     top: 152px;
-}
+  }
   .news-logo.text-center {
     zoom: 0.6;
-}
+  }
   .new-images {
     height: 115px;
-}
+  }
   .flex-prev {
     left: 30px !important;
     &:before {
@@ -776,7 +800,6 @@ $screen-lg: 1200px !default;
   .modal-dialog {
     width: 70%;
   }
-
   //     .slider .carousel-control.right {
   //     right: -48px;
   // }
@@ -808,7 +831,6 @@ $screen-lg: 1200px !default;
     left: -60px;
   }
 }
-
 @media only screen and (min-device-width: 500px) and (max-device-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
   .slider .carousel-control.right {
     right: -60px;
