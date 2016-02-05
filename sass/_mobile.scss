@@ -475,6 +475,24 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .download-link{
+    text-align: center;
+  }
+  .play-store img {
+    margin: 0 auto;
+}
+  .cell-img {
+    padding-top: 50px;
+}
+  .font-app {
+    font-size: 25px;
+}
+  .social-hub{
+    h1{
+        font-size: 24px;
+    }
+
+  }
   .feed-social {
     background: transparent;
     padding: 5px 0px 5px 0px;
@@ -682,6 +700,30 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
+  .download-link{
+    text-align: center;
+  }
+  .play-store img {
+    margin: 0 auto;
+}
+  .cell-img {
+    padding-top: 50px;
+}
+  .font-app {
+    font-size: 25px;
+}
+  .social-hub{
+    h1{
+        font-size: 24px;
+    }
+
+  }
+  .odd-even tr {
+    font-size: 13px;
+}
+  .font-tbl {
+    font-size: 20px;
+}
   .fix-logo {
     height: 120px;
   }
