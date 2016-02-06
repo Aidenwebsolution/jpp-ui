@@ -3,12 +3,15 @@
     .panel {
       border: 0 solid transparent;
     }
+    .panel + .panel {
+      margin-top: 0 !important;
+    }
     .panel-body {
       padding: 0;
     }
     .panel-title {
       .schedule {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 300;
         margin-top: 10px;
         &:focus {
@@ -26,15 +29,13 @@
     }
     .panel-heading {
       color: $base;
-      background-color: $panel-head;
-      border-color: $panel-head;
       padding: 15px;
       border-bottom: 1px solid transparent;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
     }
     .team-head {
-      font-size: 20px;
+      font-size: 18px;
       text-transform: uppercase;
       img {
         width: 75px;
@@ -51,15 +52,15 @@
     }
     .fix-logos {
       text-align: center;
-      margin-top: 30px;
       span {
         font-size: 50px;
         text-shadow: 1px 1px white, -1px -1px #fff;
         vertical-align: middle;
         display: inline-block;
-        margin-top: 20px;
+
+        // margin-top: 20px;
       }
-      .jpp {
+      .jaipur {
         color: #ee4a9b;
       }
       .patna {
@@ -94,26 +95,39 @@
     }
     .vs {
       text-align: center;
-      margin-top: 75px;
       img {
-        width: 120px;
+        width: 160px;
         display: inline-block;
       }
     }
     .fixture-match {
-      top: 42%;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      min-height: 408px;
     }
     .match-center {
-      margin-top: 25px;
+      margin-top: 30px;
       font-size: 18px;
       font-weight: 300;
+      i {
+        margin-left: 15px;
+        font-size: 25px;
+        vertical-align: middle;
+      }
+    }
+    .todo {
+      position: absolute;
+      top: 130px;
+      width: 100%;
+      .row.fixture-cont {
+        padding-top: 20px;
+      }
     }
   }
   .fixture-willbdone {
     .panel-heading {
       color: #262626;
-      background-color: #83daf8;
-      border-color: #83daf8;
       padding: 15px;
       border-bottom: 1px solid transparent;
       border-top-right-radius: 0;
@@ -123,11 +137,14 @@
   .panel {
     border: 0 solid transparent;
   }
+  .panel + .panel {
+    margin-top: 0 !important;
+  }
   .panel-body {
     padding: 0;
   }
   .panel-title .schedule {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 300;
     margin-top: 10px;
   }
@@ -141,7 +158,7 @@
     outline: 0;
   }
   .team-head {
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     img {
       width: 75px;
@@ -161,18 +178,51 @@
     float: right;
   }
   .match-center {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 18px;
     font-weight: 300;
+    i {
+      margin-left: 15px;
+      font-size: 25px;
+      vertical-align: middle;
+    }
+  }
 }
+.mt15 {
+  margin-top: 15px;
 }
-.row.fixture-cont {
-  padding-top: 28px;
-}
+
+// .row.fixture-cont {
+//   padding-top: 28px;
+// }
 .topscore {
   font-size: 20px;
+}
+.bold {
+  font-weight: 600;
+  color: #000;
 }
 .head-pink {
   font-size: 20px;
   color: #af1d6f;
+}
+
+// .panel-default > .panel-heading {
+//   background-color: $panel-head-odd;
+//   border-color: $panel-head-odd;
+// }
+// .panel-default:nth-child(even) > .panel-heading {
+//   background-color: $panel-head-even;
+//   border-color: $panel-head-even;
+// }
+.fixture .panel:nth-child(odd) .panel-heading {
+  background-color: $panel-head-odd;
+  border-color: $panel-head-odd;
+}
+.fixture .panel:nth-child(even) .panel-heading {
+  background-color: $panel-head-even;
+  border-color: $panel-head-even;
+}
+.fix-logo.vs {
+  margin-top: 25px;
 }

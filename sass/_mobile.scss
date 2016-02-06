@@ -2,6 +2,7 @@ $screen-xs: 480px !default;
 $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
+
 // @media only screen and (min-device-width: 1200px) and (max-device-width: 1500px){
 // .fixture-match{
 //   zoom:0.7;
@@ -23,18 +24,16 @@ $screen-lg: 1200px !default;
       zoom: 0.7;
     }
   }
-  .vs {
-    margin-top: 95%;
-  }
   .navbar-nav {
     float: none;
   }
   nav a.menu-custom {
     padding: 25px 3px !important;
   }
-  .fixture-match {
-    zoom: 0.7;
-  }
+
+  // .fixture-match {
+  //   zoom: 0.7;
+  // }
   .slider {
     .carousel-control.right {
       right: -70px;
@@ -45,10 +44,12 @@ $screen-lg: 1200px !default;
       left: -70px;
     }
   }
+
   // Header
   .navbar-brand {
     padding: 8px 0;
   }
+
   //page
   .title-name {
     h1 {
@@ -113,6 +114,7 @@ $screen-lg: 1200px !default;
   .f25 {
     font-size: 17px;
   }
+
   // .fixture-match{
   //   zoom:0.6;
   // }
@@ -137,6 +139,7 @@ $screen-lg: 1200px !default;
   .li-footer {
     margin: 0 10px 4px 0;
   }
+
   //page
   .title-name {
     padding: 17px 50px 16px;
@@ -262,9 +265,10 @@ $screen-lg: 1200px !default;
     font-size: 25px;
     margin: 8px 0 0;
   }
-  .fixture-match {
-    zoom: 0.5;
-  }
+
+  // .fixture-match {
+  //   zoom: 0.5;
+  // }
   .mb200 {
     margin-bottom: 50px;
   }
@@ -369,6 +373,7 @@ $screen-lg: 1200px !default;
       font-size: 18px;
     }
   }
+
   // Header
   .navbar-toggle {
     border-color: #4ECAF5 !important;
@@ -440,6 +445,7 @@ $screen-lg: 1200px !default;
   .mr70 {
     margin-right: 0;
   }
+
   // /footer
   .name-sponser {
     text-align: center;
@@ -474,39 +480,67 @@ $screen-lg: 1200px !default;
     }
   }
 }
+@media (max-width: $screen-lg) {
+  .fixture {
+    .fixtures-done {
+      .fixture-match {
+        top: 62%!important;
+      }
+      .fix-logos img {
+        width: 110px !important;
+      }
+      .vs img {
+        width: 120px!important;
+      }
+      .todo {
+        top: 105px!important;
+        .row.fixture-cont {
+          padding-top: 12px !important;
+        }
+      }
+    }
+  }
+  .fixture {
+    .score-points {
+      margin-top: 10px !important;
+      font-size: 32px!important;
+    }
+    .team-head {
+      font-size: 14px!important;
+    }
+  }
+}
 @media (max-width: $screen-xs-max) {
   .pad30 ul li {
-    padding: 0px 12px;
-}
-  .download-link{
+    padding: 0 12px;
+  }
+  .download-link {
     text-align: center;
   }
   .play-store img {
     margin: 0 auto;
-}
+  }
   .cell-img {
     padding-top: 50px;
-}
+  }
   .font-app {
     font-size: 25px;
-}
-  .social-hub{
-    h1{
-        font-size: 24px;
+  }
+  .social-hub {
+    h1 {
+      font-size: 24px;
     }
-
   }
   .feed-social {
     background: transparent;
-    padding: 5px 0px 5px 0px;
-}
-  .social-logo{
+    padding: 5px 0;
+  }
+  .social-logo {
     padding-top: 20px;
-}
-
+  }
   .font-tbl {
     font-size: 26px;
-}
+  }
   .font-mob {
     font-size: 22px;
   }
@@ -519,6 +553,7 @@ $screen-lg: 1200px !default;
   .font-16 {
     font-size: 16px;
   }
+
   //menu
   nav {
     li {
@@ -539,7 +574,9 @@ $screen-lg: 1200px !default;
         li {
           background: -webkit-linear-gradient(#4ac3ed, #217d9e)!important;
           background: linear-gradient(#4ac3ed, #217d9e)!important;
-          a {}
+          a {
+
+          }
         }
       }
     }
@@ -554,6 +591,7 @@ $screen-lg: 1200px !default;
   .navbar .col-md-10 {
     padding: 0;
   }
+
   //end menu
   .sliders .play-img {
     height: 50px;
@@ -577,9 +615,6 @@ $screen-lg: 1200px !default;
   }
   .fixture .panel-title .schedule {
     font-size: 20px;
-  }
-  .vs {
-    margin-top: 180%;
   }
   .f-23 {
     font-size: 14px;
@@ -704,32 +739,31 @@ $screen-lg: 1200px !default;
 }
 @media (max-width: 480px) {
   .pad30 ul li {
-    padding: 0px 12px;
-}
-  .download-link{
+    padding: 0 12px;
+  }
+  .download-link {
     text-align: center;
   }
   .play-store img {
     margin: 0 auto;
-}
+  }
   .cell-img {
     padding-top: 50px;
-}
+  }
   .font-app {
     font-size: 25px;
-}
-  .social-hub{
-    h1{
-        font-size: 24px;
+  }
+  .social-hub {
+    h1 {
+      font-size: 24px;
     }
-
   }
   .odd-even tr {
     font-size: 13px;
-}
+  }
   .font-tbl {
     font-size: 20px;
-}
+  }
   .fix-logo {
     height: 120px;
   }
@@ -848,6 +882,7 @@ $screen-lg: 1200px !default;
   .modal-dialog {
     width: 70%;
   }
+
   //     .slider .carousel-control.right {
   //     right: -48px;
   // }
@@ -893,5 +928,85 @@ $screen-lg: 1200px !default;
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-next {
     margin-left: -30px;
+  }
+}
+@media (max-width: 992px) {
+  .fixture .fixtures-done .panel-title .schedule {
+    font-size: 18px!important;
+  }
+  .fixture .fixtures-done .team-head img {
+    width: 55px!important;
+  }
+  .fixture .team-head {
+    font-size: 10px !important;
+  }
+  .fixture .score-points {
+    margin-top: 15px !important;
+    font-size: 26px !important;
+  }
+  .fixture .fixtures-done .match-center {
+    margin-top: 18px !important;
+    font-size: 15px!important;
+    i {
+      margin-left: 5px !important;
+      font-size: 25px!important;
+    }
+  }
+  .fixture .team-head {
+    font-size: 10px !important;
+  }
+  .fixture .score-points {
+    margin-top: 20px !important;
+    font-size: 20px !important;
+  }
+  .fixture .fixtures-done .fix-logos img {
+    width: 70px !important;
+  }
+  .fixture .fixtures-done .vs img {
+    width: 80px !important;
+  }
+  .fixture .fixtures-done .fix-logos span {
+    font-size: 30px;
+  }
+  .fixture .fixtures-done .todo {
+    top: 80px !important;
+  }
+  .topscore {
+    font-size: 14px!important;
+  }
+  .head-pink {
+    font-size: 14px!important;
+  }
+  .fixture .fixtures-done .fix-logos span {
+    font-size: 30px!important;
+  }
+  .fixture .fixtures-done .fixture-match {
+    top: 84% !important;
+  }
+  .fixture .fixtures-done .todo {
+    top: 75px !important;
+  }
+  .fixture .fixtures-done .todo .row.fixture-cont {
+    padding-top: 10px !important;
+  }
+}
+@media (max-width: 767px) {
+  .panel-group {
+    zoom: 0.8!important;
+  }
+}
+@media (max-width: 550px) {
+  .fixture {
+    zoom: 0.7!important;
+  }
+}
+@media (max-width: 480px) {
+  .fixture {
+    zoom: 0.6!important;
+  }
+}
+@media (max-width: 320px) {
+  .fixture {
+    zoom: 0.6!important;
   }
 }

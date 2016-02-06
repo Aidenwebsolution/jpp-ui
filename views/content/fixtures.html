@@ -14,7 +14,7 @@
     </section>
   </div>
 </section>
-<section class="mb100 mt100">
+<section class="mb100 mt100 container">
   <div class="fixture">
     <uib-accordion close-others="oneAtATime">
       <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen">
@@ -22,12 +22,12 @@
         <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
           <div class="row">
             <div class="col-xs-2">
-              <!-- <div class="schedule">{{item.starttimedate}}(IST)</div> -->
-              <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div>
+              <div class="schedule">{{item.starttimedate}}(IST)</div>
+              <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
             </div>
             <div class="col-xs-3">
               <div class="team-head">
-                <img ng-src="{{item.team1img}}" class="float-left">
+                <img ng-src="{{item.team1imglogo}}" class="float-left">
                 <span class="float-right">{{item.team1}}</span>
               </div>
             </div>
@@ -41,11 +41,13 @@
             <div class="col-xs-3">
               <div class="team-head">
                 <span class="float-left">{{item.team2}}</span>
-                <img ng-src="{{item.team2img}}" class="float-right">
+                <img ng-src="{{item.team2imglogo}}" class="float-right">
               </div>
             </div>
             <div class="col-md-2">
-              <div class="match-center">Match Centre <i class="fa fa-play"></i>
+              <div class="match-center">Match Centre
+                <i class="fa " ng-class="{'fa-caret-down': status.open, 'fa-caret-right': !status.open}"></i>
+                <!-- <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"> -->
               </div>
             </div>
           </div>
@@ -53,13 +55,13 @@
 
         <div class="fixture-data">
           <div class="fix-banner">
-            <img src="img/fixture/banner.jpg" class="img-responsive">
-            <div class="container fixture-match text-center ">
+            <img src="img/fixture/banners.jpg" class="img-responsive">
+            <div class="fixture-match text-center ">
               <div class="row">
                 <div class="col-xs-3 col-xs-offset-1">
                   <div class="fix-logos">
                     <img ng-src="{{item.team1img}}" class="img-responsive">
-                    <span class="bengaluru">38</span>
+                    <span class="{{item.team1color}}">38</span>
                   </div>
                 </div>
                 <div class="col-xs-3">
@@ -69,14 +71,15 @@
                 </div>
                 <div class="col-xs-3">
                   <div class="fix-logos">
-                    <span class="jpp">25</span>
+                    <span class="{{item.team2color}}">25</span>
                     <img ng-src="{{item.team2img}}" class="img-responsive">
                   </div>
                 </div>
               </div>
+               <div class="todo">
               <div class="row fixture-cont">
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>Jasvir</span>
                     <span>10</span> |
                     <span>Rana</span>
@@ -84,12 +87,12 @@
                   </div>
                 </div>
                 <div class="col-xs-3">
-                  <div class="head-pink">
+                  <div class="head-pink bold">
                     Top point-scorers
                   </div>
                 </div>
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>Darshan</span>
                     <span>10</span> |
                     <span>Deepak</span>
@@ -99,73 +102,74 @@
               </div>
               <div class="row fixture-cont">
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>10</span>
                   </div>
                 </div>
                 <div class="col-xs-3">
-                  <div class="head-pink">
+                  <div class="head-pink bold">
                     Raid Points
                   </div>
                 </div>
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>10</span>
                   </div>
                 </div>
               </div>
               <div class="row fixture-cont">
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>10</span>
                   </div>
                 </div>
                 <div class="col-xs-3">
-                  <div class="head-pink">
+                  <div class="head-pink bold">
                     Tackle Points
                   </div>
                 </div>
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>10</span>
                   </div>
                 </div>
               </div>
               <div class="row fixture-cont">
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>2</span>
                   </div>
                 </div>
                 <div class="col-xs-3">
-                  <div class="head-pink">
+                  <div class="head-pink bold">
                     All Out Points
                   </div>
                 </div>
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>5</span>
                   </div>
                 </div>
               </div>
               <div class="row fixture-cont">
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>3</span>
                   </div>
                 </div>
                 <div class="col-xs-3">
-                  <div class="head-pink">
+                  <div class="head-pink bold">
                     Extra Points
                   </div>
                 </div>
                 <div class="col-xs-4">
-                  <div class="topscore">
+                  <div class="topscore bold">
                     <span>0</span>
                   </div>
                 </div>
               </div>
-              <!-- <div class="row">
+            </div>
+            <!-- <div class="row">
                 <div class="col-xs-12">
                   <div class="text-center match-time">
                     <h1 class="capital f-23">
@@ -175,85 +179,85 @@
                   </div>
                 </div>
               </div> -->
-            </div>
           </div>
         </div>
-      </uib-accordion-group>
+  </div>
+  </uib-accordion-group>
 
 
-      <uib-accordion-group class="text-center fixture-willbdone {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen">
-        <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
-          <div class="row">
-            <div class="col-xs-2">
-              <!-- <div class="schedule">{{item.starttimedate}}(IST)</div> -->
-              <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div>
-            </div>
-            <div class="col-xs-3">
-              <div class="team-head">
-                <img ng-src="{{item.team1img}}" class="float-left">
-                <span class="float-right">{{item.team1}}</span>
-              </div>
-            </div>
-            <div class="col-xs-2">
-              <div class="score-points text-center">
-                <!-- <span>35</span> -
+  <uib-accordion-group class="text-center fixture-willbdone {{item.classes}}" ng-repeat="item in schedules track by $index">
+    <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
+      <div class="row">
+        <div class="col-xs-2">
+          <div class="schedule">{{item.starttimedate}}(IST)</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="team-head">
+            <img ng-src="{{item.team1imglogo}}" class="float-left">
+            <span class="float-right">{{item.team1}}</span>
+          </div>
+        </div>
+        <div class="col-xs-2">
+          <div class="score-points text-center">
+            <!-- <span>35</span> -
                 <span>34</span> -->
-                <span>vs</span>
+            <span>vs</span>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="team-head">
+            <span class="float-left">{{item.team2}}</span>
+            <img ng-src="{{item.team2imglogo}}" class="float-right">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="match-center">Match Centre
+            <!-- <i class="fa fa-play"></i> -->
+            <i class="fa " ng-class="{'fa-caret-down': status.open, 'fa-caret-right': !status.open}"></i>
+          </div>
+        </div>
+      </div>
+    </uib-accordion-heading>
+
+
+    <div class="fixture-data">
+      <div class="fix-banner">
+        <img src="img/fixture/banner1.jpg" class="img-responsive">
+        <div class="fixture-match text-center ">
+          <div class="row">
+            <div class="col-xs-5">
+              <div class="fix-logo pull-right">
+                <img ng-src="{{item.team1img}}" class="img-responsive">
               </div>
             </div>
-            <div class="col-xs-3">
-              <div class="team-head">
-                <span class="float-left">{{item.team2}}</span>
-                <img ng-src="{{item.team2img}}" class="float-right">
+            <div class="col-xs-2">
+              <div class="fix-logo vs">
+                <img src="img/object/vs.png" class="img-responsive">
               </div>
             </div>
-            <div class="col-md-2">
-              <div class="match-center">Match Centre <i class="fa fa-play"></i>
+            <div class="col-xs-5">
+              <div class="fix-logo pull-left">
+                <img ng-src="{{item.team2img}}" class="img-responsive">
               </div>
             </div>
           </div>
-        </uib-accordion-heading>
-
-
-        <div class="fixture-data">
-          <div class="fix-banner">
-            <img src="img/fixture/banner1.jpg" class="img-responsive">
-            <div class="container fixture-match text-center ">
-              <div class="row">
-                <div class="col-xs-5">
-                  <div class="fix-logo pull-right">
-                    <img ng-src="{{item.team1img}}" class="img-responsive">
-                  </div>
-                </div>
-                <div class="col-xs-2">
-                  <div class="vs">
-                    <img src="img/object/vs.png" class="img-responsive">
-                  </div>
-                </div>
-                <div class="col-xs-5">
-                  <div class="fix-logo pull-left">
-                    <img ng-src="{{item.team2img}}" class="img-responsive">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="text-center match-time">
-                    <h1 class="capital f-23">
-                      <!-- {{item.stadium}} -->
-                      Gazchibowli Indoor Stadium, Hyderabad
-                    </h1>
-                    <h1 class="upper mar-top">
-                      <!-- {{item.starttimedate}} -->
-                      THU 4 FEB 2016, 20:00(IST)
-                    </h1>
-                  </div>
-                </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text-center match-time">
+                <h1 class="capital f-23">
+                  {{item.stadium}}
+                </h1>
+                <h1 class="upper mar-top">
+                  {{item.starttimedate}} (IST)
+                </h1>
+                <button class="btn btn-sucess mt15">BOOK TICKETS</button>
               </div>
             </div>
           </div>
         </div>
-      </uib-accordion-group>
-    </uib-accordion>
+      </div>
+    </div>
+  </uib-accordion-group>
+  </uib-accordion>
   </div>
 </section>
