@@ -66,8 +66,18 @@ var navigationservice = angular.module('navigationservice', [])
     getAllSliders: function(callback) {
       $http.get(adminurl + "getAllSliders").success(callback);
     },
+    contactus: function(register, callback) {
+            $http({
+                url: adminurl + 'contactus',
+                method: 'POST',
+                data: register
+            }).success(callback);
+        },
     getallpoint: function(callback) {
       $http.get(adminurl + "getallpoint").success(callback);
+    },
+    getLatestMatch: function(callback) {
+      $http.get(adminurl + "getLatestMatch").success(callback);
     },
     getAllGallery: function(callback) {
       $http.get(adminurl + "getAllGallery").success(callback);
