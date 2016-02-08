@@ -509,6 +509,16 @@ $screen-lg: 1200px !default;
       font-size: 14px!important;
     }
   }
+  .fix-logo {
+    width: 100px!important;
+    height: 100px!important;
+  }
+  .match-time h1 {
+    font-size: 24px!important;
+    .capital {
+      font-size: 20px!important;
+    }
+  }
 }
 @media (max-width: $screen-xs-max) {
   .pad30 ul li {
@@ -931,10 +941,10 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 992px) {
-  .fixture .fixtures-done .panel-title .schedule {
+  .fixture .panel-title .schedule {
     font-size: 18px!important;
   }
-  .fixture .fixtures-done .team-head img {
+  .fixture .team-head img {
     width: 55px!important;
   }
   .fixture .team-head {
@@ -944,7 +954,7 @@ $screen-lg: 1200px !default;
     margin-top: 15px !important;
     font-size: 26px !important;
   }
-  .fixture .fixtures-done .match-center {
+  .fixture .match-center {
     margin-top: 18px !important;
     font-size: 15px!important;
     i {
@@ -989,10 +999,23 @@ $screen-lg: 1200px !default;
   .fixture .fixtures-done .todo .row.fixture-cont {
     padding-top: 10px !important;
   }
+  .fix-logo.vs {
+    margin-top: 0px!important;
+}
 }
 @media (max-width: 767px) {
   .panel-group {
     zoom: 0.8!important;
+  }
+  .mobile {
+    display: none;
+  }
+  .fix-banner {
+    min-height: 250px;
+    background: #4ecaf5;
+  }
+  .fixture .team-head img {
+    width: 45px !important;
   }
 }
 @media (max-width: 550px) {
@@ -1005,8 +1028,22 @@ $screen-lg: 1200px !default;
     zoom: 0.6!important;
   }
 }
+@media (max-width: 420px) {
+  .fixture {
+    zoom: 0.4!important;
+  }
+  .team-head img {
+    display: none;
+  }
+}
 @media (max-width: 320px) {
   .fixture {
-    zoom: 0.6!important;
+    zoom: 0.4!important;
+  }
+  .team-head img {
+    display: none;
+  }
+  .fixture .fixtures-done .fixture-match {
+    top: 75% !important;
   }
 }
