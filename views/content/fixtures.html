@@ -20,7 +20,7 @@
       <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen">
 
         <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
-          <div class="row">
+          <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
             <div class="col-xs-2">
               <div class="schedule">{{item.starttimedate}}(IST)</div>
               <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
@@ -51,9 +51,39 @@
               </div>
             </div>
           </div>
+          <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+            <div class="col-xs-2">
+              <div class="schedule">{{item.starttimedate}}(IST)</div>
+            </div>
+            <div class="col-xs-3">
+              <div class="team-head">
+                <img ng-src="{{item.team1imglogo}}" class="float-left">
+                <span class="float-right">{{item.team1}}</span>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="score-points text-center">
+                <!-- <span>35</span> -
+                    <span>34</span> -->
+                <span>vs</span>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="team-head">
+                <span class="float-left">{{item.team2}}</span>
+                <img ng-src="{{item.team2imglogo}}" class="float-right">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="match-center">Match Centre
+                <!-- <i class="fa fa-play"></i> -->
+                <i class="fa " ng-class="{'fa-caret-down': status.open, 'fa-caret-right': !status.open}"></i>
+              </div>
+            </div>
+          </div>
         </uib-accordion-heading>
 
-        <div class="fixture-data">
+        <div class="fixture-data" ng-if="item.fixture.id != null || item.fixture.id != undefined">
           <div class="fix-banner">
             <img src="img/fixture/banners.jpg" class="img-responsive mobile">
             <div class="fixture-match text-center">
@@ -181,46 +211,9 @@
               </div> -->
           </div>
         </div>
-  </div>
-  </uib-accordion-group>
-
-
-  <uib-accordion-group class="text-center fixture-willbdone {{item.classes}}" ng-repeat="item in schedules track by $index">
-    <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
-      <div class="row">
-        <div class="col-xs-2">
-          <div class="schedule">{{item.starttimedate}}(IST)</div>
-        </div>
-        <div class="col-xs-3">
-          <div class="team-head">
-            <img ng-src="{{item.team1imglogo}}" class="float-left">
-            <span class="float-right">{{item.team1}}</span>
-          </div>
-        </div>
-        <div class="col-xs-2">
-          <div class="score-points text-center">
-            <!-- <span>35</span> -
-                <span>34</span> -->
-            <span>vs</span>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="team-head">
-            <span class="float-left">{{item.team2}}</span>
-            <img ng-src="{{item.team2imglogo}}" class="float-right">
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="match-center">Match Centre
-            <!-- <i class="fa fa-play"></i> -->
-            <i class="fa " ng-class="{'fa-caret-down': status.open, 'fa-caret-right': !status.open}"></i>
-          </div>
-        </div>
       </div>
-    </uib-accordion-heading>
 
-
-    <div class="fixture-data">
+<div class="fixture-data" ng-if="item.fixture.id == null || item.fixture.id == undefined">
       <div class="fix-banner">
         <img src="img/fixture/banner1.jpg" class="img-responsive mobile">
         <div class="fixture-match text-center ">
@@ -257,7 +250,12 @@
         </div>
       </div>
     </div>
+
+
   </uib-accordion-group>
+
+
+
   </uib-accordion>
   </div>
 </section>
