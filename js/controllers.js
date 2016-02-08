@@ -274,7 +274,7 @@
 
   })
 
-  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService,$stateParams, $timeout) {
       //Used to name the .html file
       $scope.oneAtATime = true;
       $scope.template = TemplateService.changecontent("fixtures");
@@ -283,6 +283,7 @@
       $scope.navigation = NavigationService.getnav();
       $scope.schedules = [];
       $scope.loaded = false;
+      $scope.fixtureid=$stateParams.id;
       var i = 0;
       $scope.openAccordion = function(item) {
         item.isOpen = true;
@@ -312,9 +313,23 @@
             "name": key.team2
           }).colorpoint;
         })
-        $scope.openAccordion($scope.schedules[0]);
-      });
+        if($scope.fixtureid == 1){
+          $scope.openAccordion($scope.schedules[0]);
 
+        }else{
+          $scope.openAccordionById($scope.fixtureid)
+        }
+      });
+      $scope.openAccordionById=function(id){
+        console.log(id);
+      _.each($scope.schedules,function(key){
+        if(key.id == $scope.fixtureid){
+          key.isOpen=true; 
+          key.classes="panel-open";
+        }
+
+      });
+      }
       $scope.teams = [{
         "id": "1",
         "type": "0",

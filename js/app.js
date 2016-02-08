@@ -57,7 +57,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('fixtures', {
-        url: "/fixtures",
+        url: "/fixtures/:id",
         templateUrl: "views/template.html",
         controller: 'FixturesCtrl'
     })

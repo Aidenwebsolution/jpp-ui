@@ -34,7 +34,7 @@
       <div class="text-center" ng-if="slides.length <=0">
         <h1 class="color-primary">No Data found.</h1>
       </div>
-      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in slides track by $index" ng-if="slides.length>0">
+      <div class="col-xs-6 mb15" ng-repeat="data in slides track by $index" ng-if="slides.length>0" ng-class="{'col-xs-12': data.type=='big'}">
         <a ui-sref="gallery-inner({id:data.id})">
           <div class="gallery-album">
             <div class="album-cover">

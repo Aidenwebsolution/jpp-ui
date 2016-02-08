@@ -9,7 +9,7 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function($http) {
   var navigation = [{
       name: "Fixtures & Results",
-      url: "#/fixtures",
+      url: "#/fixtures/1",
       classis: "active"
     }, {
       name: "Players",
