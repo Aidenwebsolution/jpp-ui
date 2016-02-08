@@ -26,14 +26,21 @@ $facebook: #3d5b97 !default;
 $twitter: #25a8e0 !default;
 $google: #ce3633 !default;
 $pintrest: #cf2228 !default;
-$font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Advent Pro", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Kenyan Coffee", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Kenyan Coffee", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 /* font-family-serif*/
 @font-face {
   font-family: "Voyage Fantastique";
   src: url(../fonts/voyagefantstraight.ttf);
   src: url(../fonts/voyagefantstraight.eot#iefix) format("embedded-opentype"), url(../fonts/voyagefantstraight.ttf) format("truetype"), url(../fonts/voyagefantstraight.svg) format("svg");
+}
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url(../fonts/kenyancoffeerg.ttf);
+  src: url(kenyancoffeerg.eot#iefix) format("embedded-opentype"), url(../fonts/kenyancoffeerg.ttf) format("truetype"), url(../fonts/truetype.ttf) format("truetype"), url(../fonts/truetype.svg) format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Flaticon";
@@ -1388,6 +1395,11 @@ img.fancybox-image {
 .actives {
   i {
     background: #b41e72 !important;
+  }
+}
+.topscore{
+  span{
+    text-transform: capitalize;;
   }
 }
 .pt20 {

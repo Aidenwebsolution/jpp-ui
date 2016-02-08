@@ -290,6 +290,7 @@
       };
       NavigationService.getSchedule(function(data) {
         $scope.schedules = data;
+        console.log(data);
         $scope.schedules[0].isOpen = false;
         _.each($scope.schedules, function(key) {
           key.team1img = _.find($scope.teams, {
