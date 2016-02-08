@@ -569,9 +569,6 @@
           console.log(data);
           if (data.value == true) {
             $scope.showmsg = true;
-            $timeout(function() {
-              $scope.showmsg = false
-            }, 3000);
           }
         })
       }

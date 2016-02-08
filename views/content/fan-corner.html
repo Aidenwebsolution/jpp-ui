@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <form name="myForm" novalidate>
+    <form name="myForm" ng-hide="showmsg">
       <div class="row mt30">
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
@@ -74,12 +74,20 @@
           <a href="">
             <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">SUBMIT</button>
           </a>
-<div class="succes-msg text-center" ng-show="showmsg">
-  <h1 class="color-primary">Registartion Success</h1>
-</div>
+
         </div>
       </div>
     </form>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="succes-msg text-center mt30" ng-show="showmsg" style="min-height:200px;">
+          <div class="img-reg">
+            <img src="img/logo.png">
+          </div>
+          <h1 class="color-primary">Registarion Successfull !!</h1>
+        </div>
+      </div>
+    </div>
     <div class="row mt30">
       <div class="col-md-12">
 
