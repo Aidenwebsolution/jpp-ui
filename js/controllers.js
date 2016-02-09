@@ -665,7 +665,7 @@
         id: 2,
         image: "img/player/p19.png",
         name: "David Tsai ",
-        desg: "N/A",
+        desg: "All Rounder",
         nationality: "Taiwan",
         dob: "26",
         jersyno: "20",
