@@ -324,7 +324,7 @@
         console.log(id);
       _.each($scope.schedules,function(key){
         if(key.id == $scope.fixtureid){
-          key.isOpen=true; 
+          key.isOpen=true;
           key.classes="panel-open";
         }
 
@@ -464,7 +464,7 @@
   .controller('WallpapperCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper");
-    $scope.menutitle = NavigationService.makeactive("Wallpapper");
+    $scope.menutitle = NavigationService.makeactive("Wallpapers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     NavigationService.getWallpaperCategoryForDesktop(function(data) {
@@ -857,7 +857,7 @@
   .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("about-us");
-    $scope.menutitle = NavigationService.makeactive("About Us");
+    $scope.menutitle = NavigationService.makeactive("About");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.team = [{
