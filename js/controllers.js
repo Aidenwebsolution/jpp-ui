@@ -68,13 +68,13 @@
     })
     $scope.refreshTimer = function(eventTime) {
       eventTime = new Date(eventTime);
+      console.log(eventTime);
       $scope.rightNow = new Date();
       $scope.diffTime = eventTime - $scope.rightNow;
       var duration = moment.duration($scope.diffTime, 'milliseconds');
       $interval(function() {
 
         duration = moment.duration(duration - 1000, 'milliseconds');
-        console.log(duration);
         $scope.countdown.hours = duration.hours() + (duration.days() * 24);
         $scope.countdown.minutes = duration.minutes();
         $scope.countdown.seconds = duration.seconds();
@@ -518,6 +518,8 @@
       };
       NavigationService.getallwallpaper($scope.request, function(data) {
         var temp = data.queryresult;
+        console.log(page);
+        console.log(temp);
         if (temp.length == 0) {
           $scope.lastpage = true;
         } else {
