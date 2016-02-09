@@ -7,7 +7,7 @@
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    
+
     $scope.latestmatch = {};
     $scope.countdown = {};
     $scope.image = [{
@@ -275,7 +275,7 @@
 
   })
 
-  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService,$stateParams, $timeout) {
+  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService,$stateParams, $timeout,$filter) {
       //Used to name the .html file
       $scope.oneAtATime = true;
       $scope.template = TemplateService.changecontent("fixtures");
@@ -295,6 +295,8 @@
         console.log(data);
         $scope.schedules[0].isOpen = false;
         _.each($scope.schedules, function(key) {
+          key.starttimedate=new Date(key.starttimedate);
+          key.starttimedate=$filter('date')(key.starttimedate,'EEE d MMM yyyy, H:mm');
           key.team1img = _.find($scope.teams, {
             "name": key.team1
           }).image;
@@ -658,6 +660,17 @@
         jersyno: "03",
         desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).",
         desp2: "All India University (2012) - 1st Position."
+
+      },{
+        id: 2,
+        image: "img/player/p19.png",
+        name: "David Tsai ",
+        desg: "N/A",
+        nationality: "Taiwan",
+        dob: "26",
+        jersyno: "20",
+        desp: "N/A",
+        desp2: "N/A"
 
       }, {
 
