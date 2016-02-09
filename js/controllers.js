@@ -7,6 +7,7 @@
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    
     $scope.latestmatch = {};
     $scope.countdown = {};
     $scope.image = [{
