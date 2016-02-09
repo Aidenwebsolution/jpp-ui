@@ -20,25 +20,31 @@
 
     <!-- //new UI  -->
 
-    <!-- <div class="row">
+    <div class="row">
           <div class="col-md-6 col-sm-6" ng-repeat="data in news track by $index">
-            <div class="news-det mb50">
-              <div class="news-logo text-center">
-                <img ng-src="{{data.logo | serverimage}}">
-              </div>
+            <div class="news-det mb100">
+
               <div class="news-img">
                 <img ng-src="{{data.image | serverimage}}" class="img-responsive">
               </div>
+                <div class="new-logo news-med">
+              <div class="news-logo">
+                <img ng-src="{{data.logo | serverimage}}">
+              </div>
+              <div class="news-date">
+                <span>{{data.timestamp}}</span>
+              </div>
+            </div>
               <div class="news-title">
                 <h4 class="font-16">{{data.name}}</h4>
               </div>
               <div class="read-more">
-                <a href="{{data.link}}" target="_blank"><button type="button" class="btn btn-pink">VIEW STORY</button></a>
+                <a ng-href="{{data.content}}" target="_blank"><button type="button" class="btn btn-pink">VIEW STORY</button></a>
               </div>
             </div>
           </div>
-        </div> -->
-    <div class="row">
+        </div>
+    <!-- <div class="row">
       <div class="col-md-6 col-sm-6">
         <div class="news-det mb100">
 
@@ -70,8 +76,8 @@
           <div class="news-img">
             <img src="img/news/n6.jpg" class="img-responsive">
           </div>
-          <div class="new-logo">
-            <div class="news-logo news-med">
+          <div class="new-logo news-med">
+            <div class="news-logo ">
               <img src="img/news/l3.jpg">
             </div>
             <div class="news-date">
@@ -97,8 +103,8 @@
           <div class="news-img">
             <img src="img/news/n5.png" class="img-responsive">
           </div>
-          <div class="new-logo">
-            <div class="news-logo news-med">
+          <div class="new-logo news-med">
+            <div class="news-logo ">
               <img src="img/news/l4.jpg">
             </div>
             <div class="news-date">
@@ -117,14 +123,12 @@
       </div>
       <div class="col-md-6 col-sm-6">
         <div class="news-det mb50">
-          <!-- <div class="news-logo text-center">
-            <img src="img/news/l5.jpg">
-          </div> -->
+
           <div class="news-img">
             <img src="img/news/n5.png" class="img-responsive">
           </div>
-          <div class="new-logo">
-            <div class="news-logo news-med">
+          <div class="new-logo news-med">
+            <div class="news-logo ">
               <img src="img/news/l5.jpg">
             </div>
             <div class="news-date">
@@ -141,7 +145,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </section>

@@ -149,6 +149,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
+  .news-logo {
+  zoom:0.8;
+  }
   .font-excl {
     font-size: 15px;
   }
@@ -746,8 +749,14 @@ $screen-lg: 1200px !default;
     text-align: center;
     margin-top: 10px;
   }
+.news-logo {
+  zoom: 0.6;
+}
 }
 @media (max-width: 480px) {
+  // .news-logo {
+  // zoom:0.5;
+  // }
   .pad30 ul li {
     padding: 0 12px;
   }
