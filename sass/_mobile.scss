@@ -150,7 +150,7 @@ $screen-lg: 1200px !default;
 }
 @media (max-width: $screen-sm-max) {
   .news-logo {
-  zoom:0.8;
+    zoom: 0.8;
   }
   .font-excl {
     font-size: 15px;
@@ -749,11 +749,12 @@ $screen-lg: 1200px !default;
     text-align: center;
     margin-top: 10px;
   }
-.news-logo {
-  zoom: 0.6;
-}
+  .news-logo {
+    zoom: 0.6;
+  }
 }
 @media (max-width: 480px) {
+
   // .news-logo {
   // zoom:0.5;
   // }
@@ -1009,47 +1010,146 @@ $screen-lg: 1200px !default;
     padding-top: 10px !important;
   }
   .fix-logo.vs {
-    margin-top: 0px!important;
-}
+    margin-top: 0 !important;
+  }
 }
 @media (max-width: 767px) {
-  .panel-group {
-    zoom: 0.8!important;
-  }
-  .mobile {
-    display: none;
-  }
-  .fix-banner {
-    min-height: 250px;
-    background: #4ecaf5;
-    overflow: scroll;
+
+  // .panel-group {
+  //   zoom: 0.8!important;
+  // }
+  // .mobile {
+  //   display: none;
+  // }
+  .fixture .panel-title .schedule {
+    font-size: 12px !important;
   }
   .fixture .team-head img {
     width: 45px !important;
   }
-}
-@media (max-width: 550px) {
-  .fixture {
-    zoom: 0.7!important;
+  .fixture .team-head {
+    font-size: 10px !important;
+  }
+  .fixture .team-head img {
+    width: 35px !important;
+  }
+  .fixture .fixtures-done .team-head span {
+    margin-top: 15px !important;
+  }
+  .fixture .score-points {
+    margin-top: 12px !important;
+    font-size: 16px !important;
+  }
+  .fixture .match-center {
+    margin-top: 12px !important;
+    font-size: 12px !important;
+  }
+  .fixture .fixtures-done .fixture-match {
+    min-height: 250px!important;
+  }
+  .fixture .fixtures-done .todo {
+    top: 65px !important;
+  }
+  .fixture .fixtures-done .todo .row.fixture-cont {
+    padding-top: 4px !important;
+  }
+  .contain-fixtures {
+    width: 580px;
+  }
+  .fixture .fixtures-done .fixture-match {
+    top: 64% !important;
+  }
+  .match-time h1 {
+    font-size: 15px !important;
+  }
+  .fix-logo {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 580px) {
+  .contain-fixtures {
+    width: auto;
+  }
+  .min-w.ng-scope {
+    overflow: auto;
+  }
+  .over-fl {
+    min-width: 320px;
+    max-width: 480px;
+  }
+  .fixture .panel {
+    width: 480px;
+  }
   .fixture {
-    zoom: 0.6!important;
+
+    // width: 320px;
+    // overflow: hidden;
+    .fixtures-done .todo {
+      top: 55px !important;
+    }
+  }
+  .fixture .fixtures-done .fixture-match {
+    top: 56% !important;
+  }
+  .fixture .fixtures-done .todo .row.fixture-cont {
+    padding-top: 3px !important;
+  }
+  .head-pink {
+    font-size: 12px !important;
+  }
+  .fixture .fixtures-done .vs img {
+    width: 60px !important;
+  }
+  .fixture .fixtures-done .fix-logos img {
+    width: 50px !important;
+  }
+  .fixture .fixtures-done .todo {
+    top: 52px !important;
+  }
+  .fixture .fixtures-done .vs {
+    text-align: center;
+    margin-top: -3px;
+  }
+  .fixture .score-points {
+    font-size: 12px !important;
+  }
+  .fixture .panel-title .schedule {
+    font-size: 10px !important;
+  }
+  .fixture .team-head img {
+    display: none;
+  }
+  .fixture .match-center i {
+    margin-left: 2px !important;
+    font-size: 20px !important;
+  }
+  .fixture .fixtures-done .fix-logos span {
+    font-size: 20px !important;
+  }
+  .fixture .fixtures-done .fixture-match {
+    min-height: 180px !important;
+  }
+  .topscore {
+    font-size: 12px !important;
+  }
+  .fixture .match-center {
+    font-size: 8px !important;
+  }
+  .match-time h1 {
+    font-size: 15px !important;
+  }
+  .fix-logo {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
 @media (max-width: 420px) {
-  .fixture {
-    zoom: 0.4!important;
-  }
   .team-head img {
     display: none;
   }
 }
 @media (max-width: 320px) {
-  .fixture {
-    zoom: 0.4!important;
-  }
   .team-head img {
     display: none;
   }
