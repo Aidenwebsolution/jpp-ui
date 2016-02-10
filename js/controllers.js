@@ -430,12 +430,17 @@
     $scope.menutitle = NavigationService.makeactive("Gallery");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.msg="";
+    $scope.msg2="";
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.photos = true;
     $scope.getPhotos = function() {
       NavigationService.getAllGallery(function(data) {
         $scope.slides = data;
+        if(data.length == 0){
+          $scope.msg = "No Data Found";
+        }
         $scope.slides = $filter('orderBy')($scope.slides, "order");
         console.log($scope.slides);
       });
@@ -448,6 +453,9 @@
     $scope.getVideos = function() {
       NavigationService.getAllVideoGallery(function(data) {
         $scope.videos = data;
+        if(data.length == 0){
+            $scope.msg2="No Data Found."
+        }
         $scope.videos = $filter('orderBy')($scope.videos, "order");
         console.log($scope.videos);
       });
@@ -499,6 +507,7 @@
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.msg="";
     $scope.wallpapper = [];
     $scope.wallpaperArr = [];
     var pageNo = 1;
@@ -521,6 +530,9 @@
       };
       NavigationService.getallwallpaper($scope.request, function(data) {
         var temp = data.queryresult;
+        if($scope.wallpapper.length == 0){
+          $scope.msg ="No wallpapers found."
+        }
         console.log(page);
         console.log(temp);
         if (temp.length == 0) {

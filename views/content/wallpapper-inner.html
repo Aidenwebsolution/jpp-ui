@@ -80,7 +80,7 @@
 
     <div class="row">
       <h1 class="text-center color-primary" ng-if="wallpapper.length <= 0">
-        No wallpapers found
+      {{msg}}
       </h1>
       <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="data in wallpapper track by $index">
         <div class="wallpapper-data text-center mb36">
