@@ -295,6 +295,17 @@ firstapp.directive('fancybox', function ($compile, $parse) {
         }
     };
 });
+firstapp.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+});
 firstapp.directive("scroll", function($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
