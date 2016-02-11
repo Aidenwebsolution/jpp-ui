@@ -9,52 +9,52 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function($http) {
   var navigation = [{
       name: "Fixtures & Results",
-      url: "/fixtures/1",
+      url: "#/fixtures/1",
       classis: "active"
     }, {
       name: "Players",
-      url: "/players",
+      url: "#/players",
       classis: "active"
     }, {
       name: "Gallery",
-      url: "/gallery",
+      url: "#/gallery",
       classis: "active"
     }, {
       name: "Wallpapers",
-      url: "/wallpaper",
+      url: "#/wallpaper",
       classis: "active"
     }, {
       name: "News",
-      url: "/news-media",
+      url: "#/news-media",
       classis: "active",
       subnav: [{
         name: "Press Release",
         classis: "active",
-        link: "/Press Release"
+        link: "#/Press Release"
       }, {
         name: "Interviews",
         classis: "active",
-        link: "/Interviews"
+        link: "#/Interviews"
       }]
     }, {
       name: "Tickets & Merchandise",
-      url: "/ticket-merchandise",
+      url: "#/ticket-merchandise",
       classis: "active"
     }
     //						 ,{
     //
     //      name: "Fan Corner",
-    //      url: "/fan-Corner"
+    //      url: "#/fan-Corner"
     //
     //    }
     , {
       name: "About",
-      url: "/about-us",
+      url: "#/about-us",
       classis: "active"
     }
     , {
       name: "Fan Corner",
-      url: "/fan-corner",
+      url: "#/fan-corner",
       classis: "active"
     }
   ];
