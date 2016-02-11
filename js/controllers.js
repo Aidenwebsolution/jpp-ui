@@ -673,17 +673,6 @@
         desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).",
         desp2: "All India University (2012) - 1st Position."
 
-      },{
-        id: 2,
-        image: "img/player/p19.png",
-        name: "David Tsai ",
-        desg: "All Rounder",
-        nationality: "Taiwan",
-        dob: "26",
-        jersyno: "20",
-        desp: "N/A",
-        desp2: "N/A"
-
       }, {
 
         image: "img/player/p2.png",
@@ -735,7 +724,7 @@
         nationality: "GORGAN",
         dob: "25",
         jersyno: "23",
-        desp: "",
+        desp: "Asian game 2010, Beach game haiyang 2012, Indoor game 2013, Asian game 2014, Prokabaddi season 2 & 3",
         desp2: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position"
       }, {
 
@@ -845,6 +834,17 @@
         jersyno: "22",
         desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).",
         desp2: "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position."
+
+      },{
+        id: 2,
+        image: "img/player/p19.png",
+        name: "Wei Yang Tsai ",
+        desg: "All Rounder",
+        nationality: "Taiwan",
+        dob: "26",
+        jersyno: "20",
+        desp: "",
+        desp2: "Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1"
 
       }];
       var i = 0;
