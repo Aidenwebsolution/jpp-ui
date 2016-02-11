@@ -287,8 +287,8 @@
       $scope.fixtureid=$stateParams.id;
       var i = 0;
       $scope.openAccordion = function(item) {
-        item.isOpen = true;
-        item.classes = "panel-open";
+        item.isOpen = false;
+        // item.classes = "panel-open";
       };
       NavigationService.getSchedule(function(data) {
         $scope.schedules = data;
