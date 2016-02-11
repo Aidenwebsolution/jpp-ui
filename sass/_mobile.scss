@@ -951,6 +951,10 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 992px) {
+  .mobile-font-h1,
+  .gallery-tab ul li h1 {
+    font-size: 24px;
+  }
   .fixture .panel-title .schedule {
     font-size: 18px!important;
   }
@@ -1014,13 +1018,10 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 767px) {
-
-  // .panel-group {
-  //   zoom: 0.8!important;
-  // }
-  // .mobile {
-  //   display: none;
-  // }
+  a.navbar-brand {
+    position: relative;
+    z-index: 1;
+  }
   .fixture .panel-title .schedule {
     font-size: 12px !important;
   }
@@ -1143,17 +1144,20 @@ $screen-lg: 1200px !default;
     width: 50px !important;
     height: 50px !important;
   }
+  .li-footer {
+    margin: 0 10px 10px 0;
+    width: 25%;
+  }
+  .custom-list ul {
+    padding: 0;
+  }
 }
 @media (max-width: 420px) {
-  .team-head img {
-    display: none;
+  .f-span {
+    font-size: 10px;
   }
-}
-@media (max-width: 320px) {
-  .team-head img {
-    display: none;
-  }
-  .fixture .fixtures-done .fixture-match {
-    top: 75% !important;
+  .play-store img {
+    margin: 0 auto;
+    width: 50%;
   }
 }
