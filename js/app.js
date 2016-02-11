@@ -7,7 +7,7 @@ var firstapp = angular.module('firstapp', [
     'angular-loading-bar'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider, $locationProvider) {
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
@@ -87,6 +87,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     });
 
     $urlRouterProvider.otherwise("/home");
+    $locationProvider.html5Mode(true);
 
 });
 firstapp.directive('fancyboxThumb', function() {
