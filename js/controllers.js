@@ -66,6 +66,9 @@
       }).image;
       $scope.refreshTimer($scope.latestmatch.starttimedate);
       console.log($scope.latestmatch);
+
+      $scope.calendardate = new Date($scope.latestmatch.starttimedate);
+      console.log($scope.calendardate);
     })
     $scope.refreshTimer = function(eventTime) {
       eventTime = new Date(eventTime);

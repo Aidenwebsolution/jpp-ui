@@ -45,14 +45,14 @@
   </div>
   <div class="new-runner marquee" style="width:100%;overflow:hidden;">
     <ul class="list-inline" mycircle style="width:12000px;">
-      <li class="bold">Jaipur Pink Panthers VS. U Mumba on 31st January</li>
+      <!-- <li class="bold">Jaipur Pink Panthers VS. U Mumba on 31st January</li>
       <li class="bold">Jaipur Pink Panthers VS. Patna Pirates on 1st February</li>
       <li class="bold">Jaipur Pink Panthers VS. Bengaluru Bulls on 5th February</li>
       <li class="bold">Jaipur Pink Panthers VS. Dabang Delhi on 7th February</li>
       <li class="bold">Jaipur Pink Panthers VS. Bengal Warriors on 10th February</li>
       <li class="bold">Jaipur Pink Panthers VS. Puneri Paltans on 12th February</li>
       <li class="bold">Jaipur Pink Panthers VS. Telugu Titans on 13th February</li>
-      <li class="bold">Jaipur Pink Panthers VS. Telugu Titans on 16th February</li>
+      <li class="bold">Jaipur Pink Panthers VS. Telugu Titans on 16th February</li> -->
       <li class="bold">Jaipur Pink Panthers VS. Bengaluru Bulls on 20th February</li>
       <li class="bold">Jaipur Pink Panthers VS. Puneri Paltans on 21st February</li>
       <li class="bold">Jaipur Pink Panthers VS. Bengal Warriors on 22nd February</li>
@@ -174,7 +174,7 @@
                     <h1 class="color-white font-tbl">
                       <span>{{countdown.seconds}}</span>
                     </h1>
-                    <span class="color-white">SECONDS</span>
+                    <span class="color-white">SECONDS{{starttimedate | date}}</span>
                   </div>
                 </li>
               </ul>
@@ -182,6 +182,7 @@
 
             <div class="text-center" ng-if="latestmatch.ishome == '1'">
               <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank">BOOK TICKETS</a>
+              <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates=20160217T143000Z/20160217T152000Z&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
             </div>
 
           </div>
