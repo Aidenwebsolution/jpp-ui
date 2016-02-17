@@ -67,8 +67,16 @@
       $scope.refreshTimer($scope.latestmatch.starttimedate);
       console.log($scope.latestmatch);
 
-      $scope.calendardate = new Date($scope.latestmatch.starttimedate);
-      console.log($scope.calendardate);
+      $scope.calendarDate = {};
+      var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
+      var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+      var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
+      var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+      console.log(date1);
+      console.log(date2);
+      $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss")+"Z";
+      $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss")+"Z";
+      console.log($scope.calendarDate);
     })
     $scope.refreshTimer = function(eventTime) {
       eventTime = new Date(eventTime);
@@ -279,7 +287,7 @@
 
   })
 
-  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService,$stateParams, $timeout,$filter) {
+  .controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
       //Used to name the .html file
       $scope.oneAtATime = true;
       $scope.template = TemplateService.changecontent("fixtures");
@@ -288,7 +296,7 @@
       $scope.navigation = NavigationService.getnav();
       $scope.schedules = [];
       $scope.loaded = false;
-      $scope.fixtureid=$stateParams.id;
+      $scope.fixtureid = $stateParams.id;
       var i = 0;
       $scope.openAccordion = function(item) {
         item.isOpen = false;
@@ -299,8 +307,8 @@
         console.log(data);
         $scope.schedules[0].isOpen = false;
         _.each($scope.schedules, function(key) {
-          key.starttimedate=new Date(key.starttimedate);
-          key.starttimedate=$filter('date')(key.starttimedate,'EEE d MMM yyyy, H:mm');
+          key.starttimedate = new Date(key.starttimedate);
+          key.starttimedate = $filter('date')(key.starttimedate, 'EEE d MMM yyyy, H:mm');
           key.team1img = _.find($scope.teams, {
             "name": key.team1
           }).image;
@@ -320,22 +328,22 @@
             "name": key.team2
           }).colorpoint;
         })
-        if($scope.fixtureid == 1){
+        if ($scope.fixtureid == 1) {
           $scope.openAccordion($scope.schedules[0]);
 
-        }else{
+        } else {
           $scope.openAccordionById($scope.fixtureid)
         }
       });
-      $scope.openAccordionById=function(id){
+      $scope.openAccordionById = function(id) {
         console.log(id);
-      _.each($scope.schedules,function(key){
-        if(key.id == $scope.fixtureid){
-          key.isOpen=true;
-          key.classes="panel-open";
-        }
+        _.each($scope.schedules, function(key) {
+          if (key.id == $scope.fixtureid) {
+            key.isOpen = true;
+            key.classes = "panel-open";
+          }
 
-      });
+        });
       }
       $scope.teams = [{
         "id": "1",
@@ -434,15 +442,15 @@
     $scope.menutitle = NavigationService.makeactive("Gallery");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.msg="";
-    $scope.msg2="";
+    $scope.msg = "";
+    $scope.msg2 = "";
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.photos = true;
     $scope.getPhotos = function() {
       NavigationService.getAllGallery(function(data) {
         $scope.slides = data;
-        if(data.length == 0){
+        if (data.length == 0) {
           $scope.msg = "No Data Found";
         }
         $scope.slides = $filter('orderBy')($scope.slides, "order");
@@ -457,8 +465,8 @@
     $scope.getVideos = function() {
       NavigationService.getAllVideoGallery(function(data) {
         $scope.videos = data;
-        if(data.length == 0){
-            $scope.msg2="No Data Found."
+        if (data.length == 0) {
+          $scope.msg2 = "No Data Found."
         }
         $scope.videos = $filter('orderBy')($scope.videos, "order");
         console.log($scope.videos);
@@ -511,7 +519,7 @@
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.msg="";
+    $scope.msg = "";
     $scope.wallpapper = [];
     $scope.wallpaperArr = [];
     var pageNo = 1;
@@ -534,8 +542,8 @@
       };
       NavigationService.getallwallpaper($scope.request, function(data) {
         var temp = data.queryresult;
-        if($scope.wallpapper.length == 0){
-          $scope.msg ="No wallpapers found."
+        if ($scope.wallpapper.length == 0) {
+          $scope.msg = "No wallpapers found."
         }
         console.log(page);
         console.log(temp);
@@ -839,7 +847,7 @@
         desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).",
         desp2: "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position."
 
-      },{
+      }, {
         id: 2,
         image: "img/player/p19.png",
         name: "Wei Yang Tsai ",
