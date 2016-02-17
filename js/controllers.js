@@ -76,7 +76,8 @@
       $interval(function() {
 
         duration = moment.duration(duration - 1000, 'milliseconds');
-        $scope.countdown.hours = duration.hours() + (duration.days() * 24);
+        $scope.countdown.days = duration.days();
+        $scope.countdown.hours = duration.hours();
         $scope.countdown.minutes = duration.minutes();
         $scope.countdown.seconds = duration.seconds();
       }, 1000)
