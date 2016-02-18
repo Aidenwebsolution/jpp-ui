@@ -148,6 +148,51 @@ firstapp.filter('thumbimage', function() {
         }
     };
 });
+
+
+firstapp.filter('teamImg', function() {
+    return function(input) {
+      console.log(input);
+      var returnImg = "img/team/";
+      switch(input)
+      {
+        case "1":
+        returnImg += "5.png";
+        break;
+
+        case "2":
+        returnImg += "1.png";
+        break;
+
+        case "3":
+        returnImg += "2.png";
+        break;
+
+        case "4":
+        returnImg += "3.png";
+        break;
+
+        case "5":
+        returnImg += "4.png";
+        break;
+
+        case "6":
+        returnImg += "6.png";
+        break;
+
+        case "7":
+        returnImg += "7.png";
+        break;
+
+        case "8":
+        returnImg += "8.png";
+        break;
+
+      }
+      return returnImg;
+    };
+});
+
 firstapp.directive('autoHeight', function($compile, $parse) {
     return {
         restrict: 'EA',
@@ -222,7 +267,7 @@ firstapp.directive('mycircle', function ($compile, $parse) {
                        var elewidth = $elementli.eq(0).width();
                        //                        console.log(elewidth);
                        var num = amount % elewidth;
-                       if (num == 0 && amount > 0) {
+                       if (num === 0 && amount > 0) {
                            amount = -15;
                            //                            console.log(amount);
                            var $firstelement = $elementli.eq(0);

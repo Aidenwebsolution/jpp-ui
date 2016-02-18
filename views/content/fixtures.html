@@ -31,7 +31,7 @@
               </div>
               <div class="col-xs-3">
                 <div class="team-head">
-                  <img ng-src="{{item.team1imglogo}}" class="float-left">
+                  <img ng-src="{{item.team1id|teamImg}}" class="float-left">
                   <span class="float-right">{{item.team1}}</span>
                 </div>
               </div>
@@ -45,7 +45,7 @@
               <div class="col-xs-3">
                 <div class="team-head">
                   <span class="float-left">{{item.team2}}</span>
-                  <img ng-src="{{item.team2imglogo}}" class="float-right">
+                  <img ng-src="{{item.team2id|teamImg}}" class="float-right">
                 </div>
               </div>
               <div class="col-md-2">
@@ -61,7 +61,7 @@
               </div>
               <div class="col-xs-3">
                 <div class="team-head">
-                  <img ng-src="{{item.team1imglogo}}" class="float-left">
+                  <img ng-src="{{item.team1id|teamImg}}" class="float-left">
                   <span class="float-right">{{item.team1}}</span>
                 </div>
               </div>
@@ -75,7 +75,7 @@
               <div class="col-xs-3">
                 <div class="team-head">
                   <span class="float-left">{{item.team2}}</span>
-                  <img ng-src="{{item.team2imglogo}}" class="float-right">
+                  <img ng-src="{{item.team2id|teamImg}}" class="float-right">
                 </div>
               </div>
               <div class="col-md-2">
@@ -94,7 +94,7 @@
                 <div class="row">
                   <div class="col-xs-3 col-xs-offset-1">
                     <div class="fix-logos">
-                      <img ng-src="{{item.team1img}}" class="img-responsive">
+                      <img ng-src="{{item.team1id|teamImg}}" class="img-responsive">
                       <span class="{{item.team1color}}">{{item.score1}}</span>
                     </div>
                   </div>
@@ -106,7 +106,7 @@
                   <div class="col-xs-3">
                     <div class="fix-logos">
                       <span class="{{item.team2color}}">{{item.score2}}</span>
-                      <img ng-src="{{item.team2img}}" class="img-responsive">
+                      <img ng-src="{{item.team2id|teamImg}}" class="img-responsive">
                     </div>
                   </div>
                 </div>
@@ -223,7 +223,7 @@
                 <div class="row">
                   <div class="col-xs-5">
                     <div class="fix-logo pull-right">
-                      <img ng-src="{{item.team1img}}" class="img-responsive">
+                      <img ng-src="{{item.team1id|teamImg}}" class="img-responsive">
                     </div>
                   </div>
                   <div class="col-xs-2">
@@ -233,7 +233,7 @@
                   </div>
                   <div class="col-xs-5">
                     <div class="fix-logo pull-left">
-                      <img ng-src="{{item.team2img}}" class="img-responsive">
+                      <img ng-src="{{item.team2id|teamImg}}" class="img-responsive">
                     </div>
                   </div>
                 </div>

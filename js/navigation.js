@@ -40,19 +40,18 @@ var navigationservice = angular.module('navigationservice', [])
       name: "Tickets & Merchandise",
       url: "#/ticket-merchandise",
       classis: "active"
-    }
+    },
     //						 ,{
     //
     //      name: "Fan Corner",
     //      url: "#/fan-Corner"
     //
     //    }
-    , {
+    {
       name: "About",
       url: "#/about-us",
       classis: "active"
-    }
-    , {
+    }, {
       name: "Fan Corner",
       url: "#/fan-corner",
       classis: "active"

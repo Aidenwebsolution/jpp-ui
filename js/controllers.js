@@ -24,7 +24,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           js.src = p + "://platform.twitter.com/widgets.js";
           fjs.parentNode.insertBefore(js, fjs);
         }
-      }(document, "script", "twitter-wjs");
+      } (document, "script", "twitter-wjs");
     }, 100);
   });
 
@@ -79,7 +79,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   NavigationService.getAllSliders(function(data) {
     $scope.news = data;
     $scope.news = $filter('orderBy')($scope.news, "order");
-  })
+  });
   NavigationService.getLatestMatch(function(data) {
     $scope.latestmatch = data;
     // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
@@ -102,7 +102,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
     $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
     console.log($scope.calendarDate);
-  })
+  });
   $scope.refreshTimer = function(eventTime) {
     eventTime = new Date(eventTime);
     console.log(eventTime);
@@ -116,21 +116,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.countdown.hours = duration.hours();
       $scope.countdown.minutes = duration.minutes();
       $scope.countdown.seconds = duration.seconds();
-    }, 1000)
-  }
+    }, 1000);
+  };
   NavigationService.getallpoint(function(data) {
     $scope.table = data;
     $scope.table = $filter('orderBy')($scope.table, "order");
     console.log($scope.table);
-  })
+  });
   var clickCount = 0;
   $scope.changeSlide = function(data) {
     $scope.currentActive = data;
-    if (clickCount == 0) {
+    if (clickCount === 0) {
 
     }
     $scope.currentActive.active = true;
-  }
+  };
 
   $scope.tab2 = 'fb';
   $scope.classa = 'actives';
@@ -243,7 +243,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       left: (IMAGE_WIDTH * ind * -1) + "px"
     };
     $scope.selected = image;
-  }
+  };
   $scope.teams = [{
     "id": "1",
     "type": "0",
@@ -352,12 +352,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       key.team2color = _.find($scope.teams, {
         "name": key.team2
       }).colorpoint;
-    })
+    });
     if ($scope.fixtureid == 1) {
       $scope.openAccordion($scope.schedules[0]);
 
     } else {
-      $scope.openAccordionById($scope.fixtureid)
+      $scope.openAccordionById($scope.fixtureid);
     }
   });
   $scope.openAccordionById = function(id) {
@@ -369,7 +369,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }
 
     });
-  }
+  };
   $scope.teams = [{
     "id": "1",
     "type": "0",
@@ -452,7 +452,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.gallerycategory = _.find($scope.galleryArr, {
       "id": $scope.galleryid
     }).name;
-  })
+  });
   NavigationService.getGallerySlide($scope.galleryid, function(data) {
     console.log(data);
     $scope.slides = data;
@@ -476,7 +476,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.getPhotos = function() {
     NavigationService.getAllGallery(function(data) {
       $scope.slides = data;
-      if (data.length == 0) {
+      if (data.length === 0) {
         $scope.msg = "No Data Found";
       }
       console.log($scope.slides);
@@ -490,14 +490,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.getVideos = function() {
     NavigationService.getAllVideoGallery(function(data) {
       $scope.videos = data;
-      if (data.length == 0) {
-        $scope.msg2 = "No Data Found."
+      if (data.length === 0) {
+        $scope.msg2 = "No Data Found.";
       }
       console.log($scope.videos);
     });
   };
   $scope.changeTab = function(value) {
-    if (value == true) {
+    if (value === true) {
       $scope.photos = true;
       $scope.getPhotos();
     } else {
@@ -516,8 +516,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
   NavigationService.getWallpaperCategoryForDesktop(function(data) {
     $scope.wallpapper = data;
-    console.log(data)
-  })
+    console.log(data);
+  });
   $scope.wallpapper = [{
     image: "img/wallpapper/w1.jpg",
     name: "Desktop",
@@ -556,7 +556,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.wallpapercategory = _.find($scope.wallpaperArr, {
       "id": $scope.wallpaperid
     }).name;
-  })
+  });
 
   $scope.getWallpapers = function(page) {
     $scope.lastpage = false;
@@ -566,20 +566,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
     NavigationService.getallwallpaper($scope.request, function(data) {
       var temp = data.queryresult;
-      if ($scope.wallpapper.length == 0) {
-        $scope.msg = "No wallpapers found."
+      if ($scope.wallpapper.length === 0) {
+        $scope.msg = "No wallpapers found.";
       }
       console.log(page);
       console.log(temp);
-      if (temp.length == 0) {
+      if (temp.length === 0) {
         $scope.lastpage = true;
       } else {
         _.each(temp, function(key) {
           $scope.wallpapper.push(key);
-        })
+        });
       }
     });
-  }
+  };
   $scope.getWallpapers(pageNo);
   $scope.viewMore = function() {
     pageNo++;
@@ -636,11 +636,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.doRegister = function() {
       NavigationService.contactus($scope.register, function(data) {
         console.log(data);
-        if (data.value == true) {
+        if (data.value === true) {
           $scope.showmsg = true;
         }
-      })
-    }
+      });
+    };
 
   })
 
@@ -656,7 +656,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     title: "LOREM IPSUM",
     date: "14 August 2015",
     desc: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
-  }
+  };
 
   $scope.news = [{
     image: "img/news/n1.jpg",
@@ -673,7 +673,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     title: "LOREM IPSUM",
     date: "14 August 2015",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }]
+  }];
 
 })
 
@@ -684,7 +684,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.getPlayers = function() {
-    if ($scope.slideindex == undefined) {
+    if ($scope.slideindex === undefined) {
       $scope.slideindex = 0;
     }
     $scope.player = [{
@@ -890,7 +890,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
     //write code to reindex player by slideindex
-  }
+  };
   $scope.getPlayers();
 
   $scope.openPlayers = function(data, index) {
@@ -913,7 +913,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           return $scope.players;
         }
       }
-    })
+    });
 
   };
 })
