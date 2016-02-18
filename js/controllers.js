@@ -104,6 +104,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.rightNow = new Date();
     $scope.diffTime = eventTime - $scope.rightNow;
     var duration = moment.duration($scope.diffTime, 'milliseconds');
+
+
+    if(duration._milliseconds > 0 )
+    {
+
+      $scope.latestMatchOn = false;
+    }
+    else {
+
+      $scope.latestMatchOn = true;
+    }
     $interval(function() {
 
       duration = moment.duration(duration - 1000, 'milliseconds');
