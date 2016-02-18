@@ -27,8 +27,8 @@ $facebook: #3d5b97 !default;
 $twitter: #25a8e0 !default;
 $google: #ce3633 !default;
 $pintrest: #cf2228 !default;
-$font-family-sans-serif: "Oswald", "Hind","Voyage Fantastique","Kenyan Coffee", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Oswald", "Hind", "Voyage Fantastique ","Kenyan Coffee", "Advent Pro", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Oswald",  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Oswald", Georgia, "Times New Roman", Times, serif !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 /* font-family-serif*/
 @font-face {
@@ -1747,6 +1747,11 @@ top: 50%;
   .btn + .btn {
     margin-left: 10px;
   }
+}
+.scorer {
+  font-family: 'Kenyan Coffee';
+  font-size: 50px;
+  color: white;
 }
 @import "mobile";
 @import "style";
