@@ -119,7 +119,7 @@
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
                     <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
-                    <div class="scorer text-center">33</div>
+                    <!-- <div class="scorer text-center">{{latestmatch.score1}}</div> -->
                   </div>
                 </div>
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -130,13 +130,14 @@
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
                     <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
-                    <div class="scorer text-center">33</div>
+                    <!-- <div class="scorer text-center">{{latestmatch.score2}}</div> -->
                   </div>
                 </div>
               </div>
             </div>
 
               <div class="text-center color-white">
+                <!-- <div class="biger">{{latestmatch.matchtime}}</div> -->
                 {{latestmatch.starttimedate}} (IST) <br>
                 {{latestmatch.stadium}}
               </div>
