@@ -374,3 +374,10 @@ firstapp.filter('spaceToPlus', function () {
 			       return str;
         };
 });
+firstapp.filter('spaceLessFive', function () {
+        return function (text) {
+			       var str = text.replace(/\s+/g, '').toLowerCase();
+             str = str.slice(0,5);
+			       return str;
+        };
+});
