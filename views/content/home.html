@@ -119,6 +119,7 @@
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
                     <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
+                    <div class="scorer text-center">33</div>
                   </div>
                 </div>
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -129,6 +130,7 @@
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
                     <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
+                    <div class="scorer text-center">33</div>
                   </div>
                 </div>
               </div>
@@ -139,7 +141,8 @@
                 {{latestmatch.stadium}}
               </div>
 
-            <div class="count-time custom-list text-center">
+          <div class="next-match">
+              <div class="count-time custom-list text-center">
               <!-- <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer> -->
               <ul class="padding0">
                 <li>
@@ -184,6 +187,7 @@
               <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank">BOOK TICKETS</a>
               <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
             </div>
+          </div>
 
           </div>
         </div>
