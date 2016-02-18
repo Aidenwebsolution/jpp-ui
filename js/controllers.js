@@ -479,7 +479,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       if (data.length == 0) {
         $scope.msg = "No Data Found";
       }
-      $scope.slides = $filter('orderBy')($scope.slides, "order");
       console.log($scope.slides);
     });
   };
@@ -494,7 +493,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       if (data.length == 0) {
         $scope.msg2 = "No Data Found."
       }
-      $scope.videos = $filter('orderBy')($scope.videos, "order");
       console.log($scope.videos);
     });
   };

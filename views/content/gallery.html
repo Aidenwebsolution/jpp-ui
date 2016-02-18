@@ -35,7 +35,7 @@
       <div class="text-center" ng-if="slides.length <=0">
         <h1 class="color-primary">{{msg}}</h1>
       </div>
-      <div class="col-md-6 mb15 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0" ng-class="{'col-xs-12': data.type=='big'}">
+      <div class="col-md-6 mb15 col-xs-12" ng-repeat="data in slides" ng-if="slides.length>0" ng-class="{'col-xs-12': data.type=='big'}">
         <a ui-sref="gallery-inner({id:data.id})">
           <div class="gallery-album">
             <div class="album-cover">
