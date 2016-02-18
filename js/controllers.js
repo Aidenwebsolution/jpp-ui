@@ -83,12 +83,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   NavigationService.getLatestMatch(function(data) {
     $scope.latestmatch = data;
     // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
-    $scope.latestmatch.team1img = _.find($scope.teams, {
-      "name": $scope.latestmatch.team1
-    }).image;
-    $scope.latestmatch.team2img = _.find($scope.teams, {
-      "name": $scope.latestmatch.team2
-    }).image;
+
     $scope.refreshTimer($scope.latestmatch.starttimedate);
     console.log($scope.latestmatch);
 
@@ -334,18 +329,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     _.each($scope.schedules, function(key) {
       key.starttimedate = new Date(key.starttimedate);
       key.starttimedate = $filter('date')(key.starttimedate, 'EEE d MMM yyyy, H:mm');
-      key.team1img = _.find($scope.teams, {
-        "name": key.team1
-      }).image;
-      key.team2img = _.find($scope.teams, {
-        "name": key.team2
-      }).image;
-      key.team1imglogo = _.find($scope.teams, {
-        "name": key.team1
-      }).imagelogo;
-      key.team2imglogo = _.find($scope.teams, {
-        "name": key.team2
-      }).imagelogo;
+      
       key.team1color = _.find($scope.teams, {
         "name": key.team1
       }).colorpoint;

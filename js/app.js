@@ -152,7 +152,7 @@ firstapp.filter('thumbimage', function() {
 
 firstapp.filter('teamImg', function() {
     return function(input) {
-      console.log(input);
+
       var returnImg = "img/team/";
       switch(input)
       {
