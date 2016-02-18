@@ -239,71 +239,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
     $scope.selected = image;
   };
-  $scope.teams = [{
-    "id": "1",
-    "type": "0",
-    "name": "Patna Pirates",
-    "image": "img/team/5.png",
-    "imagelogo": "img/team/55.png",
-    "colorpoint": "patna",
-    "content": ""
-  }, {
-    "id": "2",
-    "type": "0",
-    "name": "Bengaluru Bulls",
-    "image": "img/team/1.png",
-    "imagelogo": "img/team/11.png",
-    "colorpoint": "bengaluru",
-    "content": ""
-  }, {
-    "id": "3",
-    "type": "0",
-    "name": "Bengal Warriors",
-    "image": "img/team/2.png",
-    "imagelogo": "img/team/22.png",
-    "colorpoint": "bengal",
-    "content": ""
-  }, {
-    "id": "4",
-    "type": "0",
-    "name": "Dabang Delhi",
-    "image": "img/team/3.png",
-    "imagelogo": "img/team/33.png",
-    "colorpoint": "delhi",
-    "content": ""
-  }, {
-    "id": "5",
-    "type": "0",
-    "name": "Jaipur Pink Panthers",
-    "image": "img/team/4.png",
-    "imagelogo": "img/team/44.png",
-    "colorpoint": "jaipur",
-    "content": ""
-  }, {
-    "id": "6",
-    "type": "0",
-    "name": "Puneri Paltan",
-    "image": "img/team/6.png",
-    "imagelogo": "img/team/66.png",
-    "colorpoint": "puneri",
-    "content": ""
-  }, {
-    "id": "7",
-    "type": "0",
-    "name": "Telegu Titans",
-    "image": "img/team/7.png",
-    "imagelogo": "img/team/77.png",
-    "colorpoint": "telgu",
-    "content": ""
-  }, {
-    "id": "8",
-    "type": "0",
-    "name": "U Mumba",
-    "image": "img/team/8.png",
-    "imagelogo": "img/team/88.png",
-    "colorpoint": "mumba",
-    "content": ""
-  }];
 
 })
 
@@ -329,13 +264,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     _.each($scope.schedules, function(key) {
       key.starttimedate = new Date(key.starttimedate);
       key.starttimedate = $filter('date')(key.starttimedate, 'EEE d MMM yyyy, H:mm');
-      
-      key.team1color = _.find($scope.teams, {
-        "name": key.team1
-      }).colorpoint;
-      key.team2color = _.find($scope.teams, {
-        "name": key.team2
-      }).colorpoint;
+      console.log(key);
+      // key.team1color = _.find($scope.teams, {
+      //   "is": key.team1id
+      // });
+      //
+      // key.team1color = key.team1color.colorpoint;
+      // key.team2color = _.find($scope.teams, {
+      //   "id": key.team2id
+      // });
+      // key.team2color = key.team2color.colorpoint;
     });
     if ($scope.fixtureid == 1) {
       $scope.openAccordion($scope.schedules[0]);
@@ -354,71 +292,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     });
   };
-  $scope.teams = [{
-    "id": "1",
-    "type": "0",
-    "name": "Patna Pirates",
-    "image": "img/team/5.png",
-    "imagelogo": "img/team/55.png",
-    "colorpoint": "patna",
-    "content": ""
-  }, {
-    "id": "2",
-    "type": "0",
-    "name": "Bengaluru Bulls",
-    "image": "img/team/1.png",
-    "imagelogo": "img/team/11.png",
-    "colorpoint": "bengaluru",
-    "content": ""
-  }, {
-    "id": "3",
-    "type": "0",
-    "name": "Bengal Warriors",
-    "image": "img/team/2.png",
-    "imagelogo": "img/team/22.png",
-    "colorpoint": "bengal",
-    "content": ""
-  }, {
-    "id": "4",
-    "type": "0",
-    "name": "Dabang Delhi",
-    "image": "img/team/3.png",
-    "imagelogo": "img/team/33.png",
-    "colorpoint": "delhi",
-    "content": ""
-  }, {
-    "id": "5",
-    "type": "0",
-    "name": "Jaipur Pink Panthers",
-    "image": "img/team/4.png",
-    "imagelogo": "img/team/44.png",
-    "colorpoint": "jaipur",
-    "content": ""
-  }, {
-    "id": "6",
-    "type": "0",
-    "name": "Puneri Paltan",
-    "image": "img/team/6.png",
-    "imagelogo": "img/team/66.png",
-    "colorpoint": "puneri",
-    "content": ""
-  }, {
-    "id": "7",
-    "type": "0",
-    "name": "Telegu Titans",
-    "image": "img/team/7.png",
-    "imagelogo": "img/team/77.png",
-    "colorpoint": "telgu",
-    "content": ""
-  }, {
-    "id": "8",
-    "type": "0",
-    "name": "U Mumba",
-    "image": "img/team/8.png",
-    "imagelogo": "img/team/88.png",
-    "colorpoint": "mumba",
-    "content": ""
-  }];
+
 })
 
 .controller('GalleryInnerCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {

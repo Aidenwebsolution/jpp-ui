@@ -150,6 +150,50 @@ firstapp.filter('thumbimage', function() {
 });
 
 
+firstapp.filter('teamColor', function() {
+    return function(input) {
+
+      var returnImg = "";
+      switch(input)
+      {
+        case "1":
+        returnImg += "patna";
+        break;
+
+        case "2":
+        returnImg += "bengaluru";
+        break;
+
+        case "3":
+        returnImg += "bengal";
+        break;
+
+        case "4":
+        returnImg += "delhi";
+        break;
+
+        case "5":
+        returnImg += "jaipur";
+        break;
+
+        case "6":
+        returnImg += "puneri";
+        break;
+
+        case "7":
+        returnImg += "telgu";
+        break;
+
+        case "8":
+        returnImg += "mumba";
+        break;
+
+      }
+      return returnImg;
+    };
+});
+
+
 firstapp.filter('teamImg', function() {
     return function(input) {
 
