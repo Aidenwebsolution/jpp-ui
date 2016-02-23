@@ -86,10 +86,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'AboutUsCtrl'
     });
 
-    // if(isproduction)
-    {
-      $locationProvider.html5Mode(true);
-    }
+    //  if(isproduction)
+    // {
+    //   $locationProvider.html5Mode(true);
+    // }
 
     $urlRouterProvider.otherwise("/home");
 
