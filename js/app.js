@@ -27,7 +27,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'PlayersCtrl'
     })
 
-    .state('wallpapper', {
+    .state('wallpaper', {
         url: "/wallpaper",
         templateUrl: "views/template.html",
         controller: 'WallpapperCtrl'
@@ -74,7 +74,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'NewsDetailCtrl'
     })
 
-    .state('ticket-merchandize', {
+    .state('ticket-merchandise', {
         url: "/ticket-merchandise",
         templateUrl: "views/template.html",
         controller: 'TicketMerchandizeCtrl'

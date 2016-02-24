@@ -1,6 +1,6 @@
 <ul class="nav navbar-nav head-menu">
     <li ng-repeat="menu in navigation" class="{{menu.classis}} menu-custom-li">
-        <a href="{{menu.url}}" class="menu-custom">
+        <a ui-sref="{{menu.url}}" class="menu-custom">
         {{menu.name}}</a>
          <!-- <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
             <li ng-repeat="submenu in menu.subnav">
