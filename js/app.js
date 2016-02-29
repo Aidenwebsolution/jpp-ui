@@ -419,13 +419,16 @@ firstapp.directive("scroll", function($window) {
 
 firstapp.filter('spaceToPlus', function () {
         return function (text) {
-			       var str = text.replace(/\s+/g, '+');
-			       return str;
+          if (text) {
+            var str = text.replace('/\s+/g', '+');
+            return str;
+          }
+
         };
 });
 firstapp.filter('spaceLessFive', function () {
         return function (text) {
-			       var str = text.replace(/\s+/g, '').toLowerCase();
+			       var str = text.replace('/\s+/g', '').toLowerCase();
              str = str.slice(0,5);
 			       return str;
         };
