@@ -105,14 +105,17 @@
           <div class="nxt-match">
             <div class="head-table text-center">
               <h1 class="color-white font-tbl" ng-hide="latestMatchOn">NEXT MATCH</h1>
-              <h1 class="color-white font-tbl" ng-show="latestMatchOn">LIVE UPDATES</h1>
+              <!-- <h1 class="color-white font-tbl" ng-show="latestMatchOn">LIVE UPDATES</h1> -->
+              <h1 class="color-white font-tbl" ng-show="latestMatchOn">LATEST UPDATE</h1>
             </div>
             <div class="match-schd mt30">
               <div class="row">
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
-                    <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
-                    <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score1}}</div>
+                    <!-- <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive"> -->
+                      <img src="img/team/8.png" class="img-responsive">
+                    <!-- <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score1}}</div> -->
+                    <div class="scorer text-center" ng-show="latestMatchOn">35</div>
                   </div>
                 </div>
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -122,23 +125,28 @@
                 </div>
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
-                    <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
-                    <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score2}}</div>
+                    <!-- <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive"> -->
+                    <img src="img/team/4.png" class="img-responsive">
+                    <!-- <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score2}}</div> -->
+                    <div class="scorer text-center" ng-show="latestMatchOn">21</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="text-center color-white">
+            <!-- <div class="text-center color-white">
+
+            </div> -->
+            <!-- <div class="text-center color-white">
               <div class="biger" ng-show="latestMatchOn">{{latestmatch.totalmatchtime}}</div>
               {{latestmatch.starttimedate}}
               (IST)
               <br>
               {{latestmatch.stadium}}
-            </div>
+            </div> -->
 
-            <div class="next-match" ng-hide="latestMatchOn">
+            <!-- <div class="next-match" ng-hide="latestMatchOn">
               <div class="count-time custom-list text-center">
-                <!-- <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer> -->
+                <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer>
                 <ul class="padding0">
                   <li>
                     <div class="time-hrs">
@@ -182,7 +190,7 @@
                 <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
                 <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
