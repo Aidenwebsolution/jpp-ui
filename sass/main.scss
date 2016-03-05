@@ -344,7 +344,7 @@ nav {
   text-transform: uppercase;
 }
 .color-pink {
-  color: $pink;
+  color: $pink !important;
 }
 .color-primary {
   color: $brand-primary;
@@ -889,6 +889,10 @@ img.fancybox-image {
     ul {
       li {
         padding: 15px 0;
+        color: $pink;
+        span {
+          color: #919191;
+        }
         &:before {
           content: url(../img/home/pantherplam.png);
           padding: 0 10px;
