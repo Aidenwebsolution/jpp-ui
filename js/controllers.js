@@ -76,6 +76,120 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     name: 'Gangadhari Mallesh',
     desg: 'Raider'
   }];
+
+  $scope.matchData = [{
+    team1score: '27',
+    team2score: '18',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/8.png',
+    stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
+    galleryid: 5
+  },
+  {
+    team1score: '29',
+    team2score: '28',
+    team1img: 'img/team/5.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
+    galleryid: 7
+  },
+  {
+    team1score: '36',
+    team2score: '26',
+    team1img: 'img/team/1.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Sree Kanteerava Stadium, Jaipur',
+    galleryid: 6
+  },
+  {
+    team1score: '39',
+    team2score: '34',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/3.png',
+    stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
+    galleryid: 4
+  },
+  {
+    team1score: '34',
+    team2score: '20',
+    team1img: 'img/team/2.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
+    galleryid: 8
+  },
+  {
+    team1score: '32',
+    team2score: '32',
+    team1img: 'img/team/6.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
+    galleryid: 9
+  },
+  {
+    team1score: '25',
+    team2score: '27',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/7.png',
+    stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
+    galleryid: 10
+  },
+  {
+    team1score: '26',
+    team2score: '35',
+    team1img: 'img/team/7.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Patilputra Sports Complex, Patna',
+    galleryid: 11
+  },
+  {
+    team1score: '30',
+    team2score: '21',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/1.png',
+    stadium: 'Sawai Mansingh Stadium, Jaipur',
+    galleryid: 12
+  },
+  {
+    team1score: '18',
+    team2score: '33',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/6.png',
+    stadium: 'Sawai Mansingh Stadium, Jaipur',
+    galleryid: 13
+  },
+  {
+    team1score: '18',
+    team2score: '34',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/2.png',
+    stadium: 'Sawai Mansingh Stadium, Jaipur',
+    galleryid: 14
+  },
+  {
+    team1score: '24',
+    team2score: '47',
+    team1img: 'img/team/4.png',
+    team2img: 'img/team/5.png',
+    stadium: 'Sawai Mansingh Stadium, Jaipur',
+    galleryid: 15
+  },
+  {
+    team1score: '21',
+    team2score: '21',
+    team1img: 'img/team/3.png',
+    team2img: 'img/team/4.png',
+    stadium: 'Thyagaraj Sports Complex, Delhi',
+    galleryid: 16
+  },
+  {
+    team1score: '35',
+    team2score: '21',
+    team1img: 'img/team/8.png',
+    team2img: 'img/team/4.png',
+    stadium: 'DOME@NSCI SVP Stadium, Mumbai',
+    galleryid: 17
+  }];
+
   NavigationService.getAllSliders(function(data) {
     $scope.news = data;
     $scope.news = $filter('orderBy')($scope.news, "order");
