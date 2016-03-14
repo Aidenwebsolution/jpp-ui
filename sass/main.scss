@@ -84,6 +84,14 @@ $font-family-serif: "Oswald", Georgia, "Times New Roman", Times, serif !default;
   -moz-appearance: $value;
   appearance: $value;
 }
+@mixin text-stroke ($width, $color) {
+  $negwidth: -$width;
+  text-shadow:
+  $negwidth+px $negwidth+px 0 $color,
+  $width+px $negwidth+px 0 $color,
+  $negwidth+px $width+px 0 $color,
+  $width+px  $width+px 0 $color;
+}
 @mixin skew ($x, $y) {
   @include transform(skew(#{$x}deg, #{$y}deg));
 }
@@ -1760,6 +1768,32 @@ top: 50%;
 .disableSave {
   -webkit-user-select:none;
   -webkit-touch-callout:none;
+}
+.font-big {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.stroke {
+  @include text-stroke(2, #d3f3ff);
+}
+.relative {
+  position: relative;
+}
+.gradient-bar {
+    color: $brand-primary;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    @include background-image(linear-gradient(to right, transparent 0%, #a2efff 40%, #a2efff 50%, #a2efff 60%,transparent 100%));
+    @include transform(translateY(-50%));
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    z-index: 0;
+    padding: 4px 0;
+}
+.high-z {
+  z-index: 1;
 }
 @import "mobile";
 @import "style";

@@ -1,3 +1,27 @@
+.jaipur {
+  color: #ee4a9b;
+}
+.patna {
+  color: #078042;
+}
+.bengaluru {
+  color: #B01D21;
+}
+.bengal {
+  color: #f26724;
+}
+.delhi {
+  color: #d91f2d;
+}
+.puneri {
+  color: #f58220;
+}
+.telgu {
+  color: #da2131;
+}
+.mumba {
+  color: #da2131;
+}
 .fixture {
   .fixtures-done {
     .panel {
@@ -54,36 +78,12 @@
       text-align: center;
       span {
         font-size: 50px;
-        text-shadow: 1px 1px white, -1px -1px #fff;
+        @include text-stroke(2, #d3f3ff);
         vertical-align: middle;
         display: inline-block;
             font-family: 'Kenyan Coffee';
 
         // margin-top: 20px;
-      }
-      .jaipur {
-        color: #ee4a9b;
-      }
-      .patna {
-        color: #078042;
-      }
-      .bengaluru {
-        color: #B01D21;
-      }
-      .bengal {
-        color: #f26724;
-      }
-      .delhi {
-        color: #d91f2d;
-      }
-      .puneri {
-        color: #f58220;
-      }
-      .telgu {
-        color: #da2131;
-      }
-      .mumba {
-        color: #da2131;
       }
       img {
         width: 150px;
