@@ -612,6 +612,48 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.news = $filter('orderBy')($scope.news, "id");
       console.log($scope.news);
     });
+    $scope.register = "";
+    $scope.register.favouriteplayer = "";
+    $scope.changeSelected = function() {
+      $scope.register.favouriteplayer = _.map(_.filter($scope.players,"status"),"name").toString();
+    };
+    $scope.players = [{
+      name: "Anil Patil"
+    }, {
+      name: "C. Arun"
+    }, {
+      name: "Gangadhari Mallesh"
+    }, {
+      name: "Jagdeesha K.K"
+    }, {
+      name: "Jasvir Singh"
+    }, {
+      name: "Kuldeep Singh"
+    }, {
+      name: "Mohammad Maghsodlou"
+    }, {
+      name: "Navneet Gautam"
+    }, {
+      name: "Rajesh Narwal"
+    }, {
+      name: "Raju Lal Choudhary"
+    }, {
+      name: "Ran Singh"
+    }, {
+      name: "Rohit Kumar Prajapat"
+    }, {
+      name: "Rohit Rana"
+    }, {
+      name: "Sanjay Shrestha"
+    }, {
+      name: "Samarjeet Singh"
+    }, {
+      name: "Satish kumar"
+    }, {
+      name: "Sonu Narwal"
+    }, {
+      name: "Wei Yang Tsai"
+    }];
 
     $scope.register = {};
     $scope.showmsg = false;
@@ -633,30 +675,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("News");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-
-  $scope.newsMedia = {
-    image: "img/news/n3.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
-  };
-
-  $scope.news = [{
-    image: "img/news/n1.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }, {
-    image: "img/news/n2.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }, {
-    image: "img/news/n1.jpg",
-    title: "LOREM IPSUM",
-    date: "14 August 2015",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-  }];
 
 })
 
@@ -907,35 +925,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("About");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
-  $scope.team = [{
-
-    name: "LOREM IPSUM ",
-    desg: "Owner",
-    image: "img/team/p1.png",
-    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-
-  }, {
-
-    name: "LOREM IPSUM ",
-    desg: "CEO",
-    image: "img/team/p1.png",
-    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-
-  }, {
-
-    name: "LOREM IPSUM ",
-    desg: "Team Coach",
-    image: "img/team/p1.png",
-    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-
-  }, {
-
-    name: "LOREM IPSUM ",
-    desg: "Team Coach",
-    image: "img/team/p1.png",
-    Desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-
-  }];
 })
 
 .controller('headerctrl', function($scope, TemplateService) {

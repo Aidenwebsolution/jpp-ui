@@ -18,21 +18,22 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="sign-up text-center">
+        <div class="sign-up text-left">
           <h2 class="color-primary font-mob">SIGN UP</h2>
-          <h4 class="line140 font-new">Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets. </h4>
+          <h4 class="line140 font-new">Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.
+          </h4>
         </div>
       </div>
     </div>
     <form name="myForm" ng-hide="showmsg">
       <div class="row mt30">
-        <div class="col-md-offset-2 col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
               <span>First Name</span>
               <input type="text" name="firstname" class="form-control" ng-model="register.firstname" id="" required>
             </div>
-               <p class="colpad" ng-show="myForm.firstname.$error.required && myForm.firstname.$dirty">First Name is required</p>
+            <p class="colpad" ng-show="myForm.firstname.$error.required && myForm.firstname.$dirty">First Name is required</p>
 
           </div>
         </div>
@@ -47,14 +48,14 @@
         </div>
       </div>
       <div class="row mt30">
-        <div class="col-md-offset-2 col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
               <span>Mobile Number</span>
-              <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10"  ng-maxlength="10" maxlength="10" id="" required only-digits>
+              <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" id="" required only-digits>
             </div>
- <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">Mobile Number is required</p>
-  <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">Mobile Number must be 10 digit</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">Mobile Number is required</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">Mobile Number must be 10 digit</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
@@ -63,8 +64,38 @@
               <span>Email Address</span>
               <input type="email" name="email" class="form-control" ng-model="register.email" id="" required>
               <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-               <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email address</p>
+              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email address</p>
             </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>City</span>
+              <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
+            </div>
+            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">City is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-10 col-sm-12">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>Choose Your Favourite Panthers</span>
+              <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">Please select your favourite Panther</p>
+            </div>
+            <ul class="check-lists">
+              <li class="checkbox" ng-repeat="player in players">
+                <label>
+                  <input type="checkbox" ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}">
+                  {{player.name}}
+                </label>
+              </li>
+            </ul>
 
           </div>
         </div>
@@ -99,22 +130,28 @@
             <li>
               <div class="social-logo">
                 <span>
-                    <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank"><i class="fa fa-facebook"></i></a>
-                  </span>
+                  <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </span>
               </div>
             </li>
             <li>
               <div class="social-logo">
                 <span>
-                    <a href="https://twitter.com/JaipurPanthers" target="_blank"><i class="fa fa-twitter"></i></a>
-                  </span>
+                  <a href="https://twitter.com/JaipurPanthers" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </span>
               </div>
             </li>
             <li>
               <div class="social-logo">
                 <span>
-                    <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank"><i class="fa fa-instagram"></i></a>
-                  </span>
+                  <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </span>
               </div>
             </li>
           </ul>
