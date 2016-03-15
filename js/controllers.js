@@ -82,6 +82,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '18',
     team1img: 'img/team/4.png',
     team2img: 'img/team/8.png',
+    team1class: "jaipur",
+    team2class: "mumba",
     stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
     galleryid: 5
   },
@@ -90,6 +92,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '28',
     team1img: 'img/team/5.png',
     team2img: 'img/team/4.png',
+    team1class: "patna",
+    team2class: "jaipur",
     stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
     galleryid: 7
   },
@@ -98,6 +102,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '26',
     team1img: 'img/team/1.png',
     team2img: 'img/team/4.png',
+    team1class: "bengaluru",
+    team2class: "jaipur",
     stadium: 'Sree Kanteerava Stadium, Jaipur',
     galleryid: 6
   },
@@ -106,6 +112,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '34',
     team1img: 'img/team/4.png',
     team2img: 'img/team/3.png',
+    team1class: "jaipur",
+    team2class: "delhi",
     stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
     galleryid: 4
   },
@@ -114,6 +122,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '20',
     team1img: 'img/team/2.png',
     team2img: 'img/team/4.png',
+    team1class: "bengal",
+    team2class: "jaipur",
     stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
     galleryid: 8
   },
@@ -122,6 +132,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '32',
     team1img: 'img/team/6.png',
     team2img: 'img/team/4.png',
+    team1class: "puneri",
+    team2class: "jaipur",
     stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
     galleryid: 9
   },
@@ -130,6 +142,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '27',
     team1img: 'img/team/4.png',
     team2img: 'img/team/7.png',
+    team1class: "jaipur",
+    team2class: "telgu",
     stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
     galleryid: 10
   },
@@ -138,6 +152,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '35',
     team1img: 'img/team/7.png',
     team2img: 'img/team/4.png',
+    team1class: "telgu",
+    team2class: "jaipur",
     stadium: 'Patilputra Sports Complex, Patna',
     galleryid: 11
   },
@@ -146,6 +162,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '21',
     team1img: 'img/team/4.png',
     team2img: 'img/team/1.png',
+    team1class: "jaipur",
+    team2class: "bengaluru",
     stadium: 'Sawai Mansingh Stadium, Jaipur',
     galleryid: 12
   },
@@ -154,6 +172,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '33',
     team1img: 'img/team/4.png',
     team2img: 'img/team/6.png',
+    team1class: "jaipur",
+    team2class: "puneri",
     stadium: 'Sawai Mansingh Stadium, Jaipur',
     galleryid: 13
   },
@@ -162,6 +182,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '34',
     team1img: 'img/team/4.png',
     team2img: 'img/team/2.png',
+    team1class: "jaipur",
+    team2class: "bengal",
     stadium: 'Sawai Mansingh Stadium, Jaipur',
     galleryid: 14
   },
@@ -170,6 +192,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '47',
     team1img: 'img/team/4.png',
     team2img: 'img/team/5.png',
+    team1class: "jaipur",
+    team2class: "patna",
     stadium: 'Sawai Mansingh Stadium, Jaipur',
     galleryid: 15
   },
@@ -178,6 +202,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '21',
     team1img: 'img/team/3.png',
     team2img: 'img/team/4.png',
+    team1class: "delhi",
+    team2class: "jaipur",
     stadium: 'Thyagaraj Sports Complex, Delhi',
     galleryid: 16
   },
@@ -186,6 +212,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     team2score: '21',
     team1img: 'img/team/8.png',
     team2img: 'img/team/4.png',
+    team1class: "mumba",
+    team2class: "jaipur",
     stadium: 'DOME@NSCI SVP Stadium, Mumbai',
     galleryid: 17
   }];
