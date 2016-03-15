@@ -753,7 +753,8 @@ hr {
 .modal-content {
   background: transparent;
   border: 0;
-  box-shadow: none;
+  box-shadow: 0 0px 0px rgba(0,0,0,.5) !important;
+  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,.5) !important;
 }
 .slider {
   .glyphicon-chevron-left:before {
