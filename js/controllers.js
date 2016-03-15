@@ -648,8 +648,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       name: "Samarjeet Singh"
     }, {
-      name: "Satish kumar"
-    }, {
       name: "Sonu Narwal"
     }, {
       name: "Wei Yang Tsai"
@@ -850,18 +848,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013)",
       desp2: "Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013)."
 
-    }, {
-
-      image: "img/player/p15.png",
-      name: "Satish kumar",
-      desg: "Raider",
-      nationality: "Rohera",
-      dob: "31",
-      jersyno: "06",
-      desp: "Senior National -(2007,2008,2011,2015),Senior Federation Cup (2006), Beach Kabaddi National Campionship(2008).",
-      desp2: "Senior National (2007,2008,2011)- 1st Positon, Senior National (2015)- 2nd Position,Senior Federation (2006) - 3rd Position, Beach Kabaddi National Campionship (2008) - 1st Position"
-
-    }, {
+    },  {
 
       image: "img/player/p11.png",
       name: "Sonu Narwal",
