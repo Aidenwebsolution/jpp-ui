@@ -76,6 +76,9 @@
     }
     .fix-logos {
       text-align: center;
+      &.text-right {
+        text-align: right;
+      }
       span {
         font-size: 50px;
         @include text-stroke(2, #d3f3ff);
