@@ -524,6 +524,15 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .pink-splasher {
+    max-width: 170px;
+    display: block;
+    margin: 0 auto;
+  }
+  .mbanner {
+    padding: 5px 0 0;
+    font-size: 24px
+  }
   .pad30 ul li {
     padding: 0 12px;
   }
