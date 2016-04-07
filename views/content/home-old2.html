@@ -121,92 +121,40 @@
         <div class="col-md-6 col-sm-6 padding40 m-box-l">
         <div class="white-line-pad">
             <div class="head-table text-center">
-            <h1 class="color-white font-tbl">SEASON 4 OPENER</h1>
+            <h1 class="color-white font-tbl">POINTS TABLE</h1>
           </div>
-
-          <div class="nxt-match">
-            <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
-
-              <li>
-                <div class="match-schd mt30">
-                  <div class="row">
-                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                      <div class="new-logo">
-                        <img ng-src="{{s.team1img}}" class="img-responsive">
-                      </div>
-                    </div>
-                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                      <div class="mt30">
-                        <img src="img/object/back-vs.png" class="img-responsive">
-                      </div>
-                    </div>
-                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                      <div class="new-logo">
-                        <img ng-src="{{s.team2img}}" class="img-responsive">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="text-center color-white font-big mt15">
-                  {{s.stadium}}
-                </div>
-                <div class="next-match">
-                  <div class="count-time custom-list text-center">
-                    <ul class="padding0">
-                      <li>
-                        <div class="time-hrs">
-                          <h1 class="color-white font-tbl">
-                            <span>{{countdown.days}}</span>
-                            <b>:</b>
-                          </h1>
-                          <span class="color-white pr20">DAYS</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="time-hrs">
-                          <h1 class="color-white font-tbl">
-                            <span>{{countdown.hours}}</span>
-                            <b>:</b>
-                          </h1>
-                          <span class="color-white pr20">HOURS</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="time-hrs">
-                          <h1 class="color-white font-tbl">
-                            <span>{{countdown.minutes}}</span>
-                            <b>:</b>
-                          </h1>
-                          <span class="color-white pr20">MINUTES</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="time-hrs">
-                          <h1 class="color-white font-tbl">
-                            <span>{{countdown.seconds}}</span>
-                          </h1>
-                          <span class="color-white">SECONDS{{starttimedate | date}}</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="text-center">
-                    <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
-                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
-                  </div>
-                </div>
-              </li>
-
-            </flex-slider>
+          <div class="point-tbl mt30">
+            <div class="points-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>PTS</th>
+                  </tr>
+                </thead>
+                <tbody class="odd-even">
+                  <tr class="{{ data.name | limitTo: 3 }}" ng-repeat="data in table" ng-if="table.length>0">
+                    <td>{{$index +1}}</td>
+                    <td>{{data.name || 'Loading..'}}</td>
+                    <td>{{data.played}}</td>
+                    <td>{{data.wins}}</td>
+                    <td>{{data.lost}}</td>
+                    <td>{{data.point}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-
         </div>
         </div>
         <div class="col-md-6 col-sm-6 padding40 m-box-r">
           <div class="nxt-match white-line-pad">
             <div class="head-table text-center">
-              <h1 class="color-white font-tbl">SEASON 4 HOME GAME</h1>
+              <h1 class="color-white font-tbl">SEASON 3 REVIEW</h1>
             </div>
 
             <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
@@ -231,14 +179,25 @@
                     </div>
                   </div>
 
+                  <div class="home-score relative">
+                    <div class="row high-z relative">
+                      <div class="col-xs-4">
+                        <div class="scorer text-center {{s.team1class}} stroke">{{s.team1score}}</div>
+                      </div>
+                      <div class="col-xs-4 col-xs-offset-4">
+                        <div class="scorer text-center {{s.team2class}} stroke">{{s.team2score}}</div>
+                      </div>
+                    </div>
+                    <div class="gradient-bar">
+                      Fulltime
+                    </div>
+                  </div>
                 </div>
                 <div class="text-center color-white font-big mt15">
-                  {{s.stadium}} <br>
-                  JUNE 20 2016, 20:00 (IST)
+                  {{s.stadium}}
                 </div>
                 <div class="text-center">
-                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a>
-                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a>
+                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">View Gallery</a>
                 </div>
               </li>
 

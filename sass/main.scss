@@ -1641,11 +1641,14 @@ overflow: hidden;
 }
 .time-hrs {
   h1 {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-right: 5px;
     span {
-      background: #b41e72;
-      padding: 6px 16px;
-      border-radius: 4px;
-      min-width: 70px;
+      background-image: linear-gradient($pink 50%, darken($pink, 10%) 50%);
+      padding: 5px 5px;
+      border-radius: 0;
+      min-width: 50px;
       display: inline-block;
     }
     b {
