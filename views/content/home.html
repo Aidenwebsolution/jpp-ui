@@ -111,7 +111,7 @@
     </ul>
   </div>
 </div>
-<section class="marg-section relative">
+<section class="marg-section no-mb relative">
   <div class="whiteline hidden-xs"></div>
   <div class="box-right boxer hidden-xs"></div>
   <div class="box-left boxer hidden-xs"></div>
@@ -125,14 +125,14 @@
           </div>
 
           <div class="nxt-match">
-            <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
+            <!-- <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
 
-              <li>
+              <li> -->
                 <div class="match-schd mt30">
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{s.team1img}}" class="img-responsive">
+                        <img ng-src="img/team/4.png" class="img-responsive">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -142,13 +142,13 @@
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{s.team2img}}" class="img-responsive">
+                        <img ng-src="img/team/5.png" class="img-responsive">
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="text-center color-white font-big mt15">
-                  {{s.stadium}}
+                  {{s.stadium}}Rajiv Gandhi Indoor Stadium, Vishakapatnam 
                 </div>
                 <div class="next-match">
                   <div class="count-time custom-list text-center">
@@ -159,7 +159,7 @@
                             <span>{{countdown.days}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">DAYS</span>
+                          <span class="color-white pr20">MONTHS</span>
                         </div>
                       </li>
                       <li>
@@ -168,7 +168,7 @@
                             <span>{{countdown.hours}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">HOURS</span>
+                          <span class="color-white pr20">DAYS</span>
                         </div>
                       </li>
                       <li>
@@ -177,7 +177,7 @@
                             <span>{{countdown.minutes}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">MINUTES</span>
+                          <span class="color-white pr20">HOURS</span>
                         </div>
                       </li>
                       <li>
@@ -185,7 +185,7 @@
                           <h1 class="color-white font-tbl">
                             <span>{{countdown.seconds}}</span>
                           </h1>
-                          <span class="color-white">SECONDS{{starttimedate | date}}</span>
+                          <span class="color-white">MINS</span>
                         </div>
                       </li>
                     </ul>
@@ -196,9 +196,9 @@
                     <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
                   </div>
                 </div>
-              </li>
+              <!-- </li>
 
-            </flex-slider>
+            </flex-slider> -->
           </div>
 
         </div>
@@ -232,7 +232,7 @@
                   </div>
 
                 </div>
-                <div class="text-center color-white font-big mt15">
+                <div class="text-center color-white font-big marginal">
                   {{s.stadium}} <br>
                   JUNE 20 2016, 20:00 (IST)
                 </div>
@@ -254,7 +254,17 @@
 </div>
 </div>
 </section>
-<div class="section3 marg-section">
+
+<div class="mbanner">
+  <div class="container">
+    <span>Sign up and stand a chance to win JPP merchandise!</span>
+    <div class="pink-splasher">
+      <a ui-sref="ticket-merchandise" class="btn btn-sucess big-btn">CLICK HERE</a>
+    </div>
+  </div>
+</div>
+
+<div class="section3 no-mt marg-section">
 <div class="home-player-slider">
 <div class="slider-social">
 <a ui-sref="players">

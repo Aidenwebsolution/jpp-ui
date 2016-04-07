@@ -1,4 +1,4 @@
-<div ng-right-click oncontextmenu="return false;" class="disableSave">
+<div>
 <section>
   <div class="banner-title">
     <img src="img/banner/gallery.jpg" class="img-responsive" title="gallery" alt="gallery">
@@ -15,7 +15,7 @@
     </section>
   </div>
 </section>
-<section class="mt70">
+<!-- <section class="mt70">
   <div class="gallery-tab text-center custom-list">
     <ul class="padding0">
       <li ng-click="changeTab(true)">
@@ -28,9 +28,9 @@
       </li>
     </ul>
   </div>
-</section>
-<section class="mt50 mb100">
-  <div class="container" ng-show="photos">
+</section> -->
+<section class="mt70 mb100">
+  <div class="container">
     <div class="row">
       <div class="text-center" ng-if="slides.length <=0">
         <h1 class="color-primary">{{msg}}</h1>
@@ -45,25 +45,6 @@
               </div>
             </div>
 
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="container" ng-show="!photos">
-    <div class="row">
-      <div class="text-center" ng-if="videos.length <=0">
-        <h1 class="color-primary">{{msg2}}</h1>
-      </div>
-      <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index" ng-if="videos.length>0">
-        <a href="https://www.youtube.com/watch?v={{data.url}}" target="_blank">
-          <div class="gallery-album">
-            <div class="album-cover">
-              <a class="various fancybox.iframe" fancybox ng-href="http://www.youtube.com/embed/{{data.url}}?autoplay=1" ><img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg " class="img-responsive "></a>
-              <div class="album-title text-center">
-                <h4 class="color-primary f20 ">{{data.name}}</h4>
-              </div>
-            </div>
           </div>
         </a>
       </div>

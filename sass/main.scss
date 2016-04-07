@@ -183,6 +183,7 @@ nav {
   }
   a.menu-custom {
     padding: 25px 8px !important;
+    font-size: 16px;
   }
 }
 /* Start writing sass here */
@@ -1431,11 +1432,14 @@ img.fancybox-image {
     width: 100%;
   }
 }
-.album-title.text-center {
-  position: absolute;
-  bottom: 0;
-  background: rgba(78, 202, 245, 0.88);
+.album-title {
   width: 100%;
+  &.video {
+    h4 {
+      height: 44px;
+      overflow: hidden;
+    }  
+  }
 }
 .mb15 {
   margin-bottom: 15px;
@@ -1908,6 +1912,57 @@ top: 50%;
     left: 0;
     background-image: url(../img/bgbox-left.jpg);
   }
+}
+.marginal {
+    margin: 34px 0px;
+}
+.no-mt {
+  margin-top: 0;
+}
+.no-mb {
+  margin-bottom: 0;
+}
+.mbanner {
+  color: $pink;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.pink-splasher {
+  display: inline-block;
+  padding: 30px;
+  background-image: url("../img/pink-splash.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 50px;
+}
+.pink-text {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0 25px;
+    color: $pink;
+}
+.small-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 960px;
+}
+.block-rel {
+  position: relative;
+  display: block;
+}
+.play-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url('../img/play-icon.png');
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @import "mobile";
 @import "style";

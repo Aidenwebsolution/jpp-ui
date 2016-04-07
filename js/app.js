@@ -80,6 +80,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'TicketMerchandizeCtrl'
     })
 
+    .state('jpp-tv', {
+        url: "/jpp-tv",
+        templateUrl: "views/template.html",
+        controller: 'JPPTVCtrl'
+    })
+
     .state('about-us', {
         url: "/about-us",
         templateUrl: "views/template.html",
