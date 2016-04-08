@@ -271,17 +271,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           console.log($scope.calendarDate);
     });
     NavigationService.getHomeGameSeason4(function(data){
-      console.log("getHomeGameSeason4");
-      $scope.homegame = data[0];
-      $scope.calendarDatehome = {};
-          var oldDateObj1 = new Date($scope.homegame.starttimedate);
-          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-          var oldDateObj2 = new Date($scope.homegame.starttimedate);
-          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-          console.log(date1);
-          console.log(date2);
-            $scope.calendarDatehome.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-          $scope.calendarDatehome.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+      $scope.homegame = data;
+      $scope.calendarDatehome = [];
+      var i=0;
+          _.each($scope.homegame,function(key){
+            var oldDateObj1 = new Date(key.starttimedate);
+            var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+            var oldDateObj2 = new Date(key.starttimedate);
+            var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+            $scope.calendarDatehome.push({
+              from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+              to:$filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+            });
+
+            i++;
+          })
+          console.log("calendar dates");
           console.log($scope.calendarDatehome);
     });
     NavigationService.getallpoint(function(data) {

@@ -209,14 +209,14 @@
               <h1 class="color-white font-tbl">SEASON 4 HOME GAME</h1>
             </div>
 
-            <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
+            <flex-slider flex-slide="game in homegame track by $index" slideshow="false" prev-text=" " next-text=" ">
 
               <li>
                 <div class="match-schd mt30">
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{homegame.team1id | teamImg}}" class="img-responsive">
+                        <img ng-src="{{game.team1id | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -226,21 +226,21 @@
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{homegame.team2id | teamImg}}" class="img-responsive">
+                        <img ng-src="{{game.team2id | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                   </div>
 
                 </div>
                 <div class="text-center color-white font-big marginal">
-                  {{homegame.starttimedate}} <br>
-
+                  {{game.stadium}} <br>
+                  {{game.starttimedate}}(IST)
                 </div>
                 <div class="text-center">
                   <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a> -->
                   <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a> -->
-                  <a ng-href="{{homegame.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank">BOOK TICKETS</a>
-                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{homegame.team1 | spaceToPlus}}+vs+{{homegame.team2 | spaceToPlus}}&dates={{calendarDatehome.from}}/{{calendarDatehome.to}}&location={{homegame.stadium | spaceToPlus}}&details={{homegame.team1 | spaceToPlus}}+vs+{{homegame.team2 | spaceToPlus}}+{{homegame.starttimedate | spaceToPlus}}+(IST)+{{homegame.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
+                  <a ng-href="{{game.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank">BOOK TICKETS</a>
+                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}&dates={{calendarDatehome[$index].from}}/{{calendarDatehome[$index].to}}&location={{game.stadium | spaceToPlus}}&details={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}+{{game.starttimedate | spaceToPlus}}+(IST)+{{game.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
 
                 </div>
               </li>
