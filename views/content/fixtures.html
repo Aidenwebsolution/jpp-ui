@@ -33,7 +33,7 @@
             <div class="fixture" ng-show="season==4">
                 <uib-accordion close-others="oneAtATime">
 
-                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == '2'">
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 2">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
@@ -279,12 +279,12 @@
             <div class="fixture" ng-show="season==3">
                 <uib-accordion close-others="oneAtATime">
 
-                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == '1'">
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 1">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{$index}}{{item.starttimedate}}(IST)</div>
+                                        <div class="schedule">{{item.starttimedate}}(IST)</div>
                                         <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
                                     </div>
                                     <div class="col-xs-3">
