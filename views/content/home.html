@@ -132,7 +132,7 @@
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="img/team/4.png" class="img-responsive">
+                        <img ng-src="{{openers.team1id  | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -142,13 +142,13 @@
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="img/team/5.png" class="img-responsive">
+                        <img ng-src="{{openers.team2id  | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="text-center color-white font-big mt15">
-                  {{s.stadium}}Rajiv Gandhi Indoor Stadium, Vishakapatnam 
+                  {{openers.stadium}}
                 </div>
                 <div class="next-match">
                   <div class="count-time custom-list text-center">
@@ -156,7 +156,7 @@
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.days}}</span>
+                            <span>{{countdown.months}}</span>
                             <b>:</b>
                           </h1>
                           <span class="color-white pr20">MONTHS</span>
@@ -165,7 +165,7 @@
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.hours}}</span>
+                            <span>{{countdown.days}}</span>
                             <b>:</b>
                           </h1>
                           <span class="color-white pr20">DAYS</span>
@@ -174,7 +174,7 @@
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.minutes}}</span>
+                            <span>{{countdown.hours}}</span>
                             <b>:</b>
                           </h1>
                           <span class="color-white pr20">HOURS</span>
@@ -183,7 +183,7 @@
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.seconds}}</span>
+                            <span>{{countdown.minutes}}</span>
                           </h1>
                           <span class="color-white">MINS</span>
                         </div>
@@ -192,8 +192,8 @@
                   </div>
 
                   <div class="text-center">
-                    <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
-                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
+                    <a ng-href="{{o.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
+                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{openers.stadium | spaceToPlus}}&details={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}+{{openers.starttimedate | spaceToPlus}}+(IST)+{{openers.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
                   </div>
                 </div>
               <!-- </li>
@@ -216,7 +216,7 @@
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{s.team1img}}" class="img-responsive">
+                        <img ng-src="{{homegame.team1id | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -226,19 +226,22 @@
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{s.team2img}}" class="img-responsive">
+                        <img ng-src="{{homegame.team2id | teamImg}}" class="img-responsive">
                       </div>
                     </div>
                   </div>
 
                 </div>
                 <div class="text-center color-white font-big marginal">
-                  {{s.stadium}} <br>
-                  JUNE 20 2016, 20:00 (IST)
+                  {{homegame.starttimedate}} <br>
+
                 </div>
                 <div class="text-center">
-                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a>
-                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a>
+                  <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a> -->
+                  <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a> -->
+                  <a ng-href="{{homegame.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank">BOOK TICKETS</a>
+                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{homegame.team1 | spaceToPlus}}+vs+{{homegame.team2 | spaceToPlus}}&dates={{calendarDatehome.from}}/{{calendarDatehome.to}}&location={{homegame.stadium | spaceToPlus}}&details={{homegame.team1 | spaceToPlus}}+vs+{{homegame.team2 | spaceToPlus}}+{{homegame.starttimedate | spaceToPlus}}+(IST)+{{homegame.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
+
                 </div>
               </li>
 

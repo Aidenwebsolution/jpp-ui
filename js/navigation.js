@@ -1,7 +1,7 @@
-var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
-// var mainurl = "http://192.168.0.133/jppbackend/index.php/";
-var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
-// var imgurl = "http://192.168.0.133/jppbackend/uploads/";
+// var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
+var mainurl = "http://192.168.1.128/jppbackend/index.php/";
+// var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
+var imgurl = "http://192.168.1.128/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
@@ -64,6 +64,12 @@ var navigationservice = angular.module('navigationservice', [])
         },
         getLatestMatch: function(callback) {
             $http.get(adminurl + "getLatestMatch").success(callback);
+        },
+        getScheduleSeason4: function(callback) {
+            $http.get(adminurl + "getScheduleSeason4").success(callback);
+        },
+        getHomeGameSeason4: function(callback) {
+            $http.get(adminurl + "getHomeGameSeason4").success(callback);
         },
         getAllGallery: function(callback) {
             $http.get(adminurl + "getAllGallery").success(callback);

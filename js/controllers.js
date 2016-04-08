@@ -3,7 +3,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout) {
 
     //Used to name the .html file
-
+    $scope.openers = {};
+    $scope.homegame = {};
     $scope.$on('$viewContentLoaded', function(event) {
         $timeout(function() {
             (function(d, s, id) {
@@ -209,24 +210,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.news = data;
         $scope.news = $filter('orderBy')($scope.news, "order");
     });
-    NavigationService.getLatestMatch(function(data) {
-        $scope.latestmatch = data;
-        // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
-
-        $scope.refreshTimer($scope.latestmatch.starttimedate);
-        console.log($scope.latestmatch);
-
-        $scope.calendarDate = {};
-        var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
-        var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-        var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
-        var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-        console.log(date1);
-        console.log(date2);
-        $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-        $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-        console.log($scope.calendarDate);
-    });
+    // NavigationService.getLatestMatch(function(data) {
+    //     $scope.latestmatch = data;
+    //     // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
+    //
+    //     // $scope.refreshTimer($scope.latestmatch.starttimedate);
+    //     console.log($scope.latestmatch);
+    //
+    //     $scope.calendarDate = {};
+    //     var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
+    //     var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+    //     var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
+    //     var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+    //     console.log(date1);
+    //     console.log(date2);
+    //       $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+    //     $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+    //     console.log($scope.calendarDate);
+    // });
     $scope.refreshTimer = function(eventTime) {
         eventTime = new Date(eventTime);
         console.log(eventTime);
@@ -245,12 +246,44 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $interval(function() {
 
             duration = moment.duration(duration - 1000, 'milliseconds');
+
+            $scope.countdown.months = duration.months();
             $scope.countdown.days = duration.days();
             $scope.countdown.hours = duration.hours();
             $scope.countdown.minutes = duration.minutes();
             $scope.countdown.seconds = duration.seconds();
         }, 1000);
     };
+    NavigationService.getScheduleSeason4(function(data){
+      console.log("getScheduleSeason4");
+      $scope.openers = data[0];
+      console.log($scope.openers);
+      $scope.refreshTimer($scope.openers.starttimedate);
+      $scope.calendarDate = {};
+          var oldDateObj1 = new Date($scope.openers.starttimedate);
+          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+          var oldDateObj2 = new Date($scope.openers.starttimedate);
+          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+          console.log(date1);
+          console.log(date2);
+            $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+          $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+          console.log($scope.calendarDate);
+    });
+    NavigationService.getHomeGameSeason4(function(data){
+      console.log("getHomeGameSeason4");
+      $scope.homegame = data[0];
+      $scope.calendarDatehome = {};
+          var oldDateObj1 = new Date($scope.homegame.starttimedate);
+          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+          var oldDateObj2 = new Date($scope.homegame.starttimedate);
+          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+          console.log(date1);
+          console.log(date2);
+            $scope.calendarDatehome.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+          $scope.calendarDatehome.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+          console.log($scope.calendarDatehome);
+    });
     NavigationService.getallpoint(function(data) {
         $scope.table = data;
         $scope.table = $filter('orderBy')($scope.table, "order");
