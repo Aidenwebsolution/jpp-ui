@@ -551,7 +551,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('JPPTVCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("jpp-tv");
-    $scope.menutitle = NavigationService.makeactive("JPP 'TV'");
+    $scope.menutitle = NavigationService.makeactive("JPP TV");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.msg = "";

@@ -32,7 +32,7 @@ var navigationservice = angular.module('navigationservice', [])
         url: "ticket-merchandise",
         classis: "active"
     }, {
-        name: "JPP 'TV'",
+        name: "JPP TV",
         url: "jpp-tv",
         classis: "active"
     }, {
