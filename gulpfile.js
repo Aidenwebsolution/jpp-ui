@@ -29,9 +29,9 @@ var replacehostFrom = "http://localhost/demo/";
 var replacehostTo = "http://wohlig.co.in/demo2/";
 
 
-// var ftpString = "U2FsdGVkX19fEFj78reyTrJyfkOEEctph92umHAjaf/rXGqTYgQzZT6pPOTndWeyDn/lTiKeNgaTCaxaW8/Gy5b4nXScjllI5MZ23pXfRZyylbHA/Y9MM1Gsw+xjb57V7IBPn1KplgEWyIQEbo+f/w==";
-var ftpString = "U2FsdGVkX1/ytzzmQjz8vb/D0vYksZDN5680DnkiecoGqk50bo0m7nb1yxKVvx7CavLIm4r3m+oA7JphPCy7B4DGlNDMVVh2VTpPgHeuINwIInWDLjw6dH21cHCLHWec";
-var uploadingFolder = "jpp";
+var ftpString = "U2FsdGVkX19fEFj78reyTrJyfkOEEctph92umHAjaf/rXGqTYgQzZT6pPOTndWeyDn/lTiKeNgaTCaxaW8/Gy5b4nXScjllI5MZ23pXfRZyylbHA/Y9MM1Gsw+xjb57V7IBPn1KplgEWyIQEbo+f/w==";
+// var ftpString = "U2FsdGVkX1/ytzzmQjz8vb/D0vYksZDN5680DnkiecoGqk50bo0m7nb1yxKVvx7CavLIm4r3m+oA7JphPCy7B4DGlNDMVVh2VTpPgHeuINwIInWDLjw6dH21cHCLHWec";
+var uploadingFolder = "test";
 var password = "";
 
 
