@@ -1965,5 +1965,24 @@ top: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
+.with-ribbon {
+  .panel-heading {
+    overflow: hidden;
+    position: relative;
+    padding-left: 25px !important;
+  }
+}
+
+.home-ribbon {
+    position: absolute;
+    left: -22px;
+    top: 8px;
+    color: white;
+    padding: 4px 25px;
+    background-color: $brand-primary;
+    font-size: 12px;
+    z-index: 1;
+    transform: rotate(-45deg);
+}
 @import "mobile";
 @import "style";

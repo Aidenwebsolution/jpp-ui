@@ -31,11 +31,12 @@
         <section class="mb100 mt50 container contain-fixtures">
 
             <div class="fixture" ng-show="season==4">
-                <uib-accordion close-others="oneAtATime">
+                <uib-accordion close-others="oneAtATime" class="with-ribbon">
 
                     <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 2">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
+                              <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
                                         <div class="schedule">{{item.starttimedate}}(IST)</div>
@@ -91,11 +92,14 @@
                                             <img ng-src="{{item.team2id|teamImg}}" class="float-right">
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <div class="match-center">Match Centre
-                                            <!-- <i class="fa fa-play"></i> -->
+                                    <div class="col-xs-2">
+                                        <div class="match-center" ng-class="{'no-mgin':item.ishome=='1'}">
+                                          Match Centre
                                             <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                         </div>
+                                        <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess">
+                                            BOOK TICKETS
+                                        </a>
                                     </div>
                                 </div>
                             </uib-accordion-heading>
@@ -262,8 +266,8 @@
                                                         {{item.starttimedate}}
                                                         (IST)
                                                     </h1>
-                                                    <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank">
-                                                        <button class="btn btn-sucess mt15">BOOK TICKETS</button>
+                                                    <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess mt15">
+                                                        BOOK TICKETS
                                                     </a>
                                                 </div>
                                             </div>
