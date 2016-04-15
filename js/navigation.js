@@ -16,8 +16,12 @@ var navigationservice = angular.module('navigationservice', [])
         url: "players",
         classis: "active"
     }, {
-        name: "Gallery",
+        name: "Photo Gallery",
         url: "gallery",
+        classis: "active"
+    }, {
+        name: "JPP TV",
+        url: "jpp-tv",
         classis: "active"
     }, {
         name: "Wallpapers",
@@ -30,10 +34,6 @@ var navigationservice = angular.module('navigationservice', [])
     }, {
         name: "Tickets & Merchandise",
         url: "ticket-merchandise",
-        classis: "active"
-    }, {
-        name: "JPP TV",
-        url: "jpp-tv",
         classis: "active"
     }, {
         name: "About",

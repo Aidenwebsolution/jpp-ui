@@ -208,7 +208,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     NavigationService.getAllSliders(function(data) {
         $scope.news = data;
-        $scope.news = $filter('orderBy')($scope.news, "order");
     });
     // NavigationService.getLatestMatch(function(data) {
     //     $scope.latestmatch = data;
@@ -505,7 +504,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("gallery");
-    $scope.menutitle = NavigationService.makeactive("Gallery");
+    $scope.menutitle = NavigationService.makeactive("Photo Gallery");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.msg = "";
@@ -672,8 +671,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.news = [];
         NavigationService.getallnews(function(data) {
             $scope.news = data;
-            $scope.news = $filter('orderBy')($scope.news, "id");
-            console.log($scope.news);
         });
 
     })
@@ -686,8 +683,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.news = [];
         NavigationService.getallnews(function(data) {
             $scope.news = data;
-            $scope.news = $filter('orderBy')($scope.news, "id");
-            console.log($scope.news);
         });
         $scope.register = "";
         $scope.register.favouriteplayer = "";
