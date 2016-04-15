@@ -265,7 +265,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
           console.log(date1);
           console.log(date2);
-            $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+          $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
           $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
           console.log($scope.calendarDate);
     });
