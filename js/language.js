@@ -1,4 +1,5 @@
 var LanguageEnglish = {
+  "languageCSS":"english",
   "ABOUT": "About",
   "Fixtures & Results": "Fixtures & Results",
   "Fixtures": "Fixtures",
@@ -11,9 +12,18 @@ var LanguageEnglish = {
   "SEASON 3 REVIEW": "SEASON 3 REVIEW",
   "Photo Gallery": "Photo Gallery",
   "KNOW YOUR PANTHERS": "KNOW YOUR PANTHERS",
+  "WALLPAPERS": "WALLPAPERS",
+  "NEWS & MEDIA": "NEWS & MEDIA",
+  "VIEW STORY": "VIEW STORY",
+  "SOCIAL HUB": "SOCIAL HUB",
+  "Get exclusive JPP Wallpapers for your Desktop and Mobile": "Get exclusive JPP Wallpapers for your Desktop and Mobile",
+  "Download Wallpapers": "Download Wallpapers",
+  "Download the JPP App": "Download the JPP App",
+  "CLICK HERE": "CLICK HERE",
 };
 
 var LanguageHindi = {
+  "languageCSS":"hindi",
   "ABOUT": "बारे में",
   "About": "बारे में",
   "Fixtures & Results": "प्रतियोगिता एवं परिणाम",
@@ -28,4 +38,12 @@ var LanguageHindi = {
   "SEASON 3 REVIEW": "सीज़न 3 की समीक्षा",
   "Photo Gallery": "गैलरी देखें",
   "KNOW YOUR PANTHERS": "हमारे पैंथर्स",
+  "WALLPAPERS": "वॉलपेपर्स",
+  "NEWS & MEDIA": "ख़बर एवं मीडिया ",
+  "VIEW STORY": "और अधिक जानें ",
+  "SOCIAL HUB": "सामाजिक केंद्र",
+  "Get exclusive JPP Wallpapers for your Desktop and Mobile": "अपने डेस्कटॉप /कम्प्यूटर और मोबाइल के लिए विशेष JPP वॉलपेपर पाएँ",
+  "Download Wallpapers": "वॉलपेपर डाउनलोड करें",
+  "Download the JPP App": "JPP ऐप डाउनलोड करें",
+  "CLICK HERE": "प्रवेश करें",
 };
