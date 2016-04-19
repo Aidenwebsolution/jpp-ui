@@ -748,6 +748,9 @@ hr {
 .upper {
   text-transform: uppercase;
 }
+.btn+.btn {
+    margin-left: 5px;
+}
 .capital {
   text-transform: capitalize;
 }
