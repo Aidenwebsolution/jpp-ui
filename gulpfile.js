@@ -1,5 +1,6 @@
 var jsArray = [
   './bower_components/jquery/dist/jquery.min.js',
+  './bower_components/jStorage/jstorage.js',
   './bower_components/fancyBox/source/jquery.fancybox.js',
   './bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.js',
   './bower_components/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js',
@@ -16,8 +17,10 @@ var jsArray = [
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
   './bower_components/lodash/lodash.js',
   './bower_components/moment/moment.js',
+  './bower_components/angular-translate/angular-translate.js',
 
   './js/app.js',
+  './js/language.js',
   './js/controllers.js',
   './js/navigation.js',
   './js/templateservice.js',

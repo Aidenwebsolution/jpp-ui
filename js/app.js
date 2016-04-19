@@ -4,10 +4,13 @@ var firstapp = angular.module('firstapp', [
     'phonecatControllers',
     'templateservicemod',
     'navigationservice',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    'pascalprecht.translate'
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider,$locationProvider) {
+
+
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
@@ -438,4 +441,10 @@ firstapp.filter('spaceLessFive', function () {
              str = str.slice(0,5);
 			       return str;
         };
+});
+
+firstapp.config(function ($translateProvider) {
+  $translateProvider.translations('en', LanguageEnglish);
+  $translateProvider.translations('hi', LanguageHindi);
+  $translateProvider.preferredLanguage('en');
 });

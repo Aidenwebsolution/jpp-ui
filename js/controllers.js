@@ -1,3 +1,4 @@
+var translate = {};
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout) {
@@ -284,7 +285,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
 
             i++;
-          })
+          });
           console.log("calendar dates");
           console.log($scope.calendarDatehome);
     });
@@ -986,13 +987,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("About");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+
 })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function($scope, TemplateService,$translate,$rootScope) {
+
+    $scope.changeTranslate = function() {
+      if(!$.jStorage.get("language")){
+        $translate.use("hi");
+        $.jStorage.set("language","hi");
+      }
+      else {
+        if($.jStorage.get("language") == "en")
+        {
+          $translate.use("hi");
+          $.jStorage.set("language","hi");
+        }
+        else {
+          $translate.use("en");
+          $.jStorage.set("language","en");
+        }
+      }
+      $rootScope.$apply();
+    };
+
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+
+})
+.controller('languageCtrl', function($scope, TemplateService,$translate,$rootScope) {
+
+    $scope.changeLanguage = function() {
+      console.log("Language CLicked");
+
+      if(!$.jStorage.get("language")){
+        $translate.use("hi");
+        $.jStorage.set("language","hi");
+      }
+      else {
+        if($.jStorage.get("language") == "en")
+        {
+          $translate.use("hi");
+          $.jStorage.set("language","hi");
+        }
+        else {
+          $translate.use("en");
+          $.jStorage.set("language","en");
+        }
+      }
+    //  $rootScope.$apply();
+    };
+
+
 })
 
 .controller('footerctrl', function($scope, TemplateService) {
