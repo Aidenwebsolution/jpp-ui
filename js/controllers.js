@@ -436,19 +436,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.schedules = data;
         console.log(data);
         $scope.schedules[0].isOpen = false;
+        var i=0;
+        $scope.calendarDate = [];
         _.each($scope.schedules, function(key) {
+          var oldDateObj1 = new Date(key.starttimedate);
+          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+          var oldDateObj2 = new Date(key.starttimedate);
+          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+          $scope.calendarDate.push({
+            from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+            to:$filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+          });
+
             key.starttimedate = new Date(key.starttimedate);
             key.starttimedate = $filter('date')(key.starttimedate, 'EEE d MMM yyyy, H:mm');
-            console.log(key);
-            // key.team1color = _.find($scope.teams, {
-            //   "is": key.team1id
-            // });
-            //
-            // key.team1color = key.team1color.colorpoint;
-            // key.team2color = _.find($scope.teams, {
-            //   "id": key.team2id
-            // });
-            // key.team2color = key.team2color.colorpoint;
+
         });
         if ($scope.fixtureid == 1) {
             $scope.openAccordion($scope.schedules[0]);
