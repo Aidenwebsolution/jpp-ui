@@ -1,7 +1,31 @@
 var LanguageEnglish = {
   "ABOUT": "About",
+  "Fixtures & Results": "Fixtures & Results",
+  "Fixtures": "Fixtures",
+  "Players": "Players",
+  "Photo Gallery": "Photo Gallery",
+  "Wallpapers": "Wallpapers",
+  "News": "News",
+  "Tickets & Merchandise": "Tickets & Merchandise",
+  "Fan Corner": "Fan Corner",
+  "SEASON 3 REVIEW": "SEASON 3 REVIEW",
+  "Photo Gallery": "Photo Gallery",
+  "KNOW YOUR PANTHERS": "KNOW YOUR PANTHERS",
 };
 
 var LanguageHindi = {
   "ABOUT": "बारे में",
+  "About": "बारे में",
+  "Fixtures & Results": "प्रतियोगिता एवं परिणाम",
+  "Fixtures": "प्रतियोगिता",
+  "Players": "खिलाड़ी",
+  "Photo Gallery": "गैलरी वॉलपेपर",
+  "JPP TV": "JPP TV",
+  "Wallpapers": "वॉलपेपर",
+  "News": "समाचार",
+  "Tickets & Merchandise": "टिकट एवं वस्तुएं",
+  "Fan Corner": "प्रशंसकों के लियें",
+  "SEASON 3 REVIEW": "सीज़न 3 की समीक्षा",
+  "Photo Gallery": "गैलरी देखें",
+  "KNOW YOUR PANTHERS": "हमारे पैंथर्स",
 };
