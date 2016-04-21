@@ -1853,11 +1853,8 @@ top: 50%;
     }
 }
 .white-line-pad {
-  padding-right: 30px;
-  &.nxt-match {
-    padding-left: 30px;
-    padding-right: 0px;
-  }
+  max-width: 570px;
+  margin: 0 auto;
 }
 .whiteline {
     position: absolute;
@@ -1872,12 +1869,6 @@ top: 50%;
 @media (max-width:$screen-xs-max) {
   .check-lists {
     @include column-count(2);
-  }
-  .white-line-pad {
-    padding-right: 0px;
-    &.nxt-match {
-      padding-left: 0px;
-    }
   }
   .m-box-r, .m-box-l {
     background-repeat: no-repeat;
