@@ -225,7 +225,7 @@ nav {
   position: absolute;
   width: 100%;
   left: 0;
-  z-index: 9999;
+  z-index: 99;
   @include transition(all 700ms ease);
 }
 .affix {
@@ -1913,6 +1913,28 @@ top: 50%;
 .no-mt {
   margin-top: 0;
 }
+.stadium-banner {
+  background-image: url(../img/bgbox-left.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  h1 {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .logo-1 {
+    max-width: 160px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    color: black;
+    min-width: 90px;
+  }
+}
 .no-mb {
   margin-bottom: 0;
 }
@@ -1980,6 +2002,14 @@ top: 50%;
 }
 a {
   cursor: pointer;
+}
+.flex-direction-nav {
+  .flex-prev {
+    left: 0px;
+  }
+  .flex-next {
+    right: 0px;
+  }
 }
 @import "mobile";
 @import "style";

@@ -254,40 +254,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.countdown.seconds = duration.seconds();
         }, 1000);
     };
-    NavigationService.getScheduleSeason4(function(data){
-      console.log("getScheduleSeason4");
-      $scope.openers = data[0];
-      console.log($scope.openers);
-      $scope.refreshTimer($scope.openers.starttimedate);
-      $scope.calendarDate = {};
-          var oldDateObj1 = new Date($scope.openers.starttimedate);
-          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-          var oldDateObj2 = new Date($scope.openers.starttimedate);
-          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-          console.log(date1);
-          console.log(date2);
-          $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-          $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-          console.log($scope.calendarDate);
+    NavigationService.getScheduleSeason4(function(data) {
+        console.log("getScheduleSeason4");
+        $scope.openers = data[0];
+        console.log($scope.openers);
+        $scope.refreshTimer($scope.openers.starttimedate);
+        $scope.calendarDate = {};
+        var oldDateObj1 = new Date($scope.openers.starttimedate);
+        var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+        var oldDateObj2 = new Date($scope.openers.starttimedate);
+        var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+        console.log(date1);
+        console.log(date2);
+        $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+        $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+        console.log($scope.calendarDate);
     });
-    NavigationService.getHomeGameSeason4(function(data){
-      $scope.homegame = data;
-      $scope.calendarDatehome = [];
-      var i=0;
-          _.each($scope.homegame,function(key){
+    NavigationService.getHomeGameSeason4(function(data) {
+        $scope.homegame = data;
+        $scope.calendarDatehome = [];
+        var i = 0;
+        _.each($scope.homegame, function(key) {
             var oldDateObj1 = new Date(key.starttimedate);
             var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
             var oldDateObj2 = new Date(key.starttimedate);
             var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
             $scope.calendarDatehome.push({
-              from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
-              to:$filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+                from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+                to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
             });
 
             i++;
-          });
-          console.log("calendar dates");
-          console.log($scope.calendarDatehome);
+        });
+        console.log("calendar dates");
+        console.log($scope.calendarDatehome);
     });
     NavigationService.getallpoint(function(data) {
         $scope.table = data;
@@ -437,17 +437,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.schedules = data;
         console.log(data);
         $scope.schedules[0].isOpen = false;
-        var i=0;
+        var i = 0;
         $scope.calendarDate = [];
         _.each($scope.schedules, function(key) {
-          var oldDateObj1 = new Date(key.starttimedate);
-          var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-          var oldDateObj2 = new Date(key.starttimedate);
-          var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-          $scope.calendarDate.push({
-            from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
-            to:$filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
-          });
+            var oldDateObj1 = new Date(key.starttimedate);
+            var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+            var oldDateObj2 = new Date(key.starttimedate);
+            var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+            $scope.calendarDate.push({
+                from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+                to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+            });
 
             key.starttimedate = new Date(key.starttimedate);
             key.starttimedate = $filter('date')(key.starttimedate, 'EEE d MMM yyyy, H:mm');
@@ -471,9 +471,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
     $scope.season = 4;
-    $scope.changeTab = function (data) {
-      $scope.season = data;
-      console.log($scope.season);
+    $scope.changeTab = function(data) {
+        $scope.season = data;
+        console.log($scope.season);
     };
 
 })
@@ -991,56 +991,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('headerctrl', function($scope, TemplateService,$translate,$rootScope) {
+.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
 
-    $scope.changeTranslate = function() {
-      if(!$.jStorage.get("language")){
-        $translate.use("hi");
-        $.jStorage.set("language","hi");
-      }
-      else {
-        if($.jStorage.get("language") == "en")
-        {
-          $translate.use("hi");
-          $.jStorage.set("language","hi");
-        }
-        else {
-          $translate.use("en");
-          $.jStorage.set("language","en");
-        }
-      }
-      $rootScope.$apply();
-    };
-
+    var languagePicker = {};
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
 
 })
-.controller('languageCtrl', function($scope, TemplateService,$translate,$rootScope) {
 
-    $scope.changeLanguage = function() {
-      console.log("Language CLicked");
+.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
 
-      if(!$.jStorage.get("language")){
-        $translate.use("hi");
-        $.jStorage.set("language","hi");
-      }
-      else {
-        if($.jStorage.get("language") == "en")
-        {
-          $translate.use("hi");
-          $.jStorage.set("language","hi");
-        }
-        else {
-          $translate.use("en");
-          $.jStorage.set("language","en");
-        }
-      }
-    //  $rootScope.$apply();
+    var languagePicker = {};
+    $scope.changeLanguage = function(val) {
+      console.log("Change languageSet" + " "+val);
+        $translate.use(val);
+        $.jStorage.set("languageSet", "hi");
+        languagePicker.close();
     };
 
+
+
+    $scope.languagePicker = function() {
+
+        languagePicker = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/language-picker.html',
+            size: 'md',
+            backdrop: 'static',
+            scope: $scope,
+            keyboard: false
+        });
+    };
+
+    var siteLanguage = $.jStorage.get('languageSet');
+    if (!siteLanguage) {
+        console.log('siteLanguage');
+        console.log(siteLanguage);
+        $scope.languagePicker();
+    }
 
 })
 
