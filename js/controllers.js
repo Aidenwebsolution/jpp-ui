@@ -1002,19 +1002,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
+    var siteLanguage = $.jStorage.get('languageSet');
+    $scope.language = 'img/lan-'+siteLanguage+'.jpg';
+    if (siteLanguage) {
+      $translate.use(siteLanguage);
+      $.jStorage.set("languageSet", siteLanguage);
+    }
 
     var languagePicker = {};
     $scope.changeLanguage = function(val) {
-      console.log("Change languageSet" + " "+val);
         $translate.use(val);
-        $.jStorage.set("languageSet", "hi");
+        $.jStorage.set("languageSet", val);
+        $scope.language = 'img/lan-'+val+'.jpg';
         languagePicker.close();
     };
 
-
-
     $scope.languagePicker = function() {
-
         languagePicker = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/language-picker.html',
@@ -1025,10 +1028,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
-    var siteLanguage = $.jStorage.get('languageSet');
     if (!siteLanguage) {
-        console.log('siteLanguage');
-        console.log(siteLanguage);
         $scope.languagePicker();
     }
 

@@ -2011,5 +2011,43 @@ a {
     right: 0px;
   }
 }
+
+.language-holder {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    background-color: $brand-primary;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    &:hover .hover-select {
+        display: block;
+    }
+}
+.hover-select {
+    display: none;
+    position: absolute;
+    left: -50px;
+    top: 42px;
+    background-color: $brand-primary;
+    color: white;
+    padding: 10px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      min-width: 70px;
+      li {
+        padding: 5px 0;
+        img {
+          margin-right: 5px;
+          width: 18px;
+        }
+      }
+      li+li {
+        border-top: 1px solid white;
+      }
+    }
+}
 @import "mobile";
 @import "style";
