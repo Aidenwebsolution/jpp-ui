@@ -71,5 +71,5 @@ var LanguageHindi = {
   "Home ground": "होम ग्राउंड",
   "Sawai Mansingh stadium": "सवाई मानसिंग स्टेडियम",
   "Jaipur": "जयपुर",
-  "Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.": "जयपुर पिंक पैन्थर्स प्रो-कबड्डी  लीग -2014 के प्रथम सीज़न के चैम्पियन्स हैं । ",
+  "Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.": "जयपुर पिंक पैन्थर्स प्रो-कबड्डी  लीग -2014 के प्रथम सीज़न के चैम्पियन्स हैं ।",
 };
