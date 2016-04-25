@@ -19,8 +19,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="sign-up text-left">
-          <h2 class="color-primary font-mob">SIGN UP</h2>
-          <h4 class="line140 font-new">Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.
+          <h2 class="color-primary font-mob">{{'SIGN UP'|translate}}</h2>
+          <h4 class="line140 font-new">
+            {{'Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.'|translate}}
           </h4>
         </div>
       </div>
@@ -30,17 +31,18 @@
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
-              <span>First Name</span>
+              <span>{{'First Name'|translate}}</span>
               <input type="text" name="firstname" class="form-control" ng-model="register.firstname" id="" required>
             </div>
-            <p class="colpad" ng-show="myForm.firstname.$error.required && myForm.firstname.$dirty">First Name is required</p>
+
+            <p class="colpad" ng-show="myForm.firstname.$error.required && myForm.firstname.$dirty">{{'First Name is required'|translate}}</p>
 
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
-              <span>Last Name</span>
+              <span>{{'Last Name'|translate}}</span>
               <input type="text" name="lastname" class="form-control" ng-model="register.lastname" id="">
             </div>
 
@@ -51,20 +53,20 @@
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
-              <span>Mobile Number</span>
+              <span>{{'Mobile Number'|translate}}</span>
               <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" id="" required only-digits>
             </div>
-            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">Mobile Number is required</p>
-            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">Mobile Number must be 10 digit</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">{{'Mobile Number is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">{{'Mobile Number must be 10 digit'|translate}}</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
-              <span>Email Address</span>
+              <span>{{'Email Address'|translate}}</span>
               <input type="email" name="email" class="form-control" ng-model="register.email" id="" required>
-              <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email address</p>
+              <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email is required'|translate}}</p>
+              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid email address'|translate}}</p>
             </div>
 
           </div>
@@ -74,10 +76,10 @@
         <div class="col-md-4 col-sm-6">
           <div class="form-submit">
             <div class="form-group">
-              <span>City</span>
+              <span>{{'City'|translate}}</span>
               <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
             </div>
-            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">City is required</p>
+            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City is required'|translate}}</p>
           </div>
         </div>
       </div>
@@ -85,8 +87,8 @@
         <div class="col-md-10 col-sm-12">
           <div class="form-submit">
             <div class="form-group">
-              <span>Choose Your Favourite Panthers</span>
-              <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">Please select your favourite Panther</p>
+              <span>{{'Choose Your Favourite Panthers'|translate}}</span>
+              <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">{{'Please select your favourite Panther'|translate}}</p>
             </div>
             <ul class="check-lists">
               <li class="checkbox" ng-repeat="player in players">
@@ -103,7 +105,7 @@
       <div class="row mt30">
         <div class="col-md-12 text-center">
           <a href="">
-            <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">SUBMIT</button>
+            <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">{{'SUBMIT'|translate}}</button>
           </a>
 
         </div>
@@ -115,7 +117,7 @@
           <div class="img-reg">
             <img src="img/logo.png">
           </div>
-          <h1 class="color-primary">Registration Successfull !!</h1>
+          <h1 class="color-primary">{{'Registration Successfull !!'|translate}}</h1>
         </div>
       </div>
     </div>
@@ -123,7 +125,7 @@
       <div class="col-md-12">
 
         <div class="desc-sub mt50 text-center">
-          <h3 class="color-primary font-stay">Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise!</h3>
+          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise!'|translate}}</h3>
         </div>
         <div class="text-center custom-list pad30 mt30 mb100">
           <ul class="padding0">
