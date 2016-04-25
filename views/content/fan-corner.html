@@ -94,7 +94,7 @@
               <li class="checkbox" ng-repeat="player in players">
                 <label>
                   <input type="checkbox" ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}">
-                  {{player.name}}
+                  {{player.name|translate}}
                 </label>
               </li>
             </ul>

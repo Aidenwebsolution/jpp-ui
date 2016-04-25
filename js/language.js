@@ -44,6 +44,9 @@ var LanguageEnglish = {
   "Mohammad Maghsodlou": "Mohammad Maghsodlou",
   "Rohit Rana": "Rohit Rana",
   "Choose Your Favourite Panthers": "Choose Your Favourite Panthers",
+  "C. Arun": "C. Arun",
+  "Sanjay Shrestha": "Sanjay Shrestha",
+  "Gangadhari Mallesh": "Gangadhari Mallesh",
 };
 
 var LanguageHindi = {
@@ -94,4 +97,7 @@ var LanguageHindi = {
   "Mohammad Maghsodlou": "मोहम्मद मकसूदलौ ",
   "Rohit Rana": "रोहित राणा  ",
   "Choose Your Favourite Panthers": "अपना पसंदीदा पैन्थर चुनें ",
+  "C. Arun": "सी . अरुण ",
+  "Sanjay Shrestha": "संजय श्रेष्ठा ",
+  "Gangadhari Mallesh": "गंगाधारी मल्लेश",
 };
