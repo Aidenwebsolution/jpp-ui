@@ -33,6 +33,17 @@ var LanguageEnglish = {
   "Sawai Mansingh stadium": "Sawai Mansingh stadium",
   "Jaipur": "Jaipur",
   "Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.": "Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.",
+  "SIGN UP": "SIGN UP",
+  "Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.": "Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.",
+  "First Name": "First Name",
+  "Last Name": "Last Name",
+  "Mobile Number": "Mobile Number",
+  "Email Address": "Email Address",
+  "City": "City",
+  "Anil Patil": "Anil Patil",
+  "Mohammad Maghsodlou": "Mohammad Maghsodlou",
+  "Rohit Rana": "Rohit Rana",
+  "Choose Your Favourite Panthers": "Choose Your Favourite Panthers",
 };
 
 var LanguageHindi = {
@@ -72,4 +83,15 @@ var LanguageHindi = {
   "Sawai Mansingh stadium": "सवाई मानसिंग स्टेडियम",
   "Jaipur": "जयपुर",
   "Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.": "जयपुर पिंक पैन्थर्स प्रो-कबड्डी  लीग -2014 के प्रथम सीज़न के चैम्पियन्स हैं ।",
+  "SIGN UP": "शामिल हों ",
+  "Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.": "पंजीकरण करें और जयपुर पिंक पैन्थर के विशिष्ट सामान जीतने का , खिलाड़ियों से मिलने एवं उनका अभिवादन करने का मौका पायें और घरेलू मैचों की टिकट जीतें ।  ",
+  "First Name": "प्रथम नाम",
+  "Last Name": "उपनाम",
+  "Mobile Number": "मोबाइल नंबर ",
+  "Email Address": "ईमेल ऐड्रेस ",
+  "City": "शहर",
+  "Anil Patil": "अनिल पाटिल ",
+  "Mohammad Maghsodlou": "मोहम्मद मकसूदलौ ",
+  "Rohit Rana": "रोहित राणा  ",
+  "Choose Your Favourite Panthers": "अपना पसंदीदा पैन्थर चुनें ",
 };
