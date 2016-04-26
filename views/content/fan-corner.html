@@ -56,8 +56,8 @@
               <span>{{'Mobile Number'|translate}}</span>
               <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" id="" required only-digits>
             </div>
-            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">{{'Mobile Number is required'|translate}}</p>
-            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">{{'Mobile Number must be 10 digit'|translate}}</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">{{'Mobile Number'|translate}} {{'is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">{{'Mobile Number'|translate}} {{'Invalid'|translate}}</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
@@ -65,8 +65,8 @@
             <div class="form-group">
               <span>{{'Email Address'|translate}}</span>
               <input type="email" name="email" class="form-control" ng-model="register.email" id="" required>
-              <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email is required'|translate}}</p>
-              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid email address'|translate}}</p>
+              <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email Address'|translate}} {{'is required'|translate}}</p>
+              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid'|translate}} {{'Email Address'|translate}}</p>
             </div>
 
           </div>
@@ -79,7 +79,7 @@
               <span>{{'City'|translate}}</span>
               <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
             </div>
-            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City'|translate}} {{'is required'|translate}}</p>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
           <div class="img-reg">
             <img src="img/logo.png">
           </div>
-          <h1 class="color-primary">{{'Registration Successfull !!'|translate}}</h1>
+          <h1 class="color-primary">{{'Registration Successfull '|translate}} !!</h1>
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@
       <div class="col-md-12">
 
         <div class="desc-sub mt50 text-center">
-          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise!'|translate}}</h3>
+          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise'|translate}}!</h3>
         </div>
         <div class="text-center custom-list pad30 mt30 mb100">
           <ul class="padding0">
