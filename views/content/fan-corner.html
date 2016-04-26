@@ -65,10 +65,10 @@
             <div class="form-group">
               <span>{{'Email Address'|translate}}</span>
               <input type="email" name="email" class="form-control" ng-model="register.email" id="" required>
-              <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email Address'|translate}} {{'is required'|translate}}</p>
-              <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid'|translate}} {{'Email Address'|translate}}</p>
-            </div>
 
+            </div>
+            <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email Address'|translate}} {{'is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid'|translate}} {{'Email Address'|translate}}</p>
           </div>
         </div>
       </div>

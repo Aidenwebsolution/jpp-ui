@@ -62,6 +62,10 @@ var LanguageEnglish = {
   "Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise": "Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise",
   "is required": "is required",
   "Invalid": "Invalid",
+  "Desktop": "Desktop",
+  "ANDROID": "ANDROID",
+  "IOS": "IOS",
+  "BUY NOW": "BUY NOW",
 };
 
 var LanguageHindi = {
@@ -76,6 +80,9 @@ var LanguageHindi = {
   "Wallpapers": "वॉलपेपर",
   "News": "समाचार",
   "Tickets & Merchandise": "टिकट एवं वस्तुएं",
+  "Tickets": "टिकट",
+  "&": "एवं",
+  "Merchandise": "वस्तुएं",
   "Fan Corner": "प्रशंसकों के लियें",
   "SEASON 3 REVIEW": "सीज़न 3 की समीक्षा",
   "Photo Gallery": "गैलरी देखें",
@@ -130,4 +137,9 @@ var LanguageHindi = {
   "Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise": "सोशल मीडिया पर हमारी साप्ताहिक प्रतियोगिता देखते रहें और ढेरों सामान जीतने का मौका पायें !",
   "is required": "आवश्यक है",
   "Invalid": "अमान्यै",
+  "Desktop": "डेस्कटॉप",
+  "ANDROID": "एंड्रॉयड",
+  "IOS": "आईओएस",
+  "BUY NOW": "आईओएस",
+  "COMING SOON": "आईओएस",
 };
