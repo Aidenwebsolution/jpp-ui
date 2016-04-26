@@ -705,7 +705,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "Kuldeep Singh"
         }, {
-            name: "Mohammad Maghsodlou"
+            name: "Mohammad Maghsoudlou"
         }, {
             name: "Navneet Gautam"
         }, {
