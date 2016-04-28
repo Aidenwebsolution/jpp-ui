@@ -10,7 +10,6 @@ var LanguageEnglish = {
   "Tickets & Merchandise": "Tickets & Merchandise",
   "Fan Corner": "Fan Corner",
   "SEASON 3 REVIEW": "SEASON 3 REVIEW",
-  "Photo Gallery": "Photo Gallery",
   "KNOW YOUR PANTHERS": "KNOW YOUR PANTHERS",
   "WALLPAPERS": "WALLPAPERS",
   "NEWS & MEDIA": "NEWS & MEDIA",
@@ -112,7 +111,6 @@ var LanguageEnglish = {
   "Asian game 2010, Beach game haiyang 2012, Indoor game 2013, Asian game 2014, Prokabaddi season 2 & 3":"Asian game 2010, Beach game haiyang 2012, Indoor game 2013, Asian game 2014, Prokabaddi season 2 & 3",
   "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position":"Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position",
   "07":"07",
-  "Jaipur":"Jaipur",
   "32":"32",
   "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).":"Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).",
   "Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.":"Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.",
@@ -156,6 +154,10 @@ var LanguageEnglish = {
   "Taiwan":"Taiwan",
   "20":"20",
   "Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1":"Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1",
+  "box1": "box1",
+  "box2": "box2",
+  "box3": "box3",
+  "box4": "box4",
 
 };
 
@@ -176,7 +178,6 @@ var LanguageHindi = {
   "Merchandise": "वस्तुएं",
   "Fan Corner": "प्रशंसकों के लियें",
   "SEASON 3 REVIEW": "सीज़न 3 की समीक्षा",
-  "Photo Gallery": "गैलरी देखें",
   "KNOW YOUR PANTHERS": "हमारे पैंथर्स",
   "WALLPAPERS": "वॉलपेपर्स",
   "NEWS & MEDIA": "ख़बर एवं मीडिया ",
@@ -279,7 +280,6 @@ var LanguageHindi = {
   "Asian game 2010, Beach game haiyang 2012, Indoor game 2013, Asian game 2014, Prokabaddi season 2 & 3":"एशियन गेम्स(2010), बीच गेम हाइयांग 2012 , इनडोर गेम 2013, एशियन गेम्स 2014, प्रो-कबड्डी सीज़न 2 एवं 3",
   "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position":"एशियन इनडोर कबड्डी गेम्स इंचोन (2014) - द्वितीय स्थान ,  एशियन बीच कबड्डी गेम्स चाइना (2012) - प्रथम स्थान, नेशनल कबड्डी चैम्पियनशिप (2008,2009,2010,2011,2012) - प्रथम स्थान, नेशनल कबड्डी प्रीमियर लीग (2006, 2007) - प्रथम स्थान",
   "07":"07",
-  "Jaipur":"जयपुर",
   "32":"32",
   "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).":"प्रो-कबड्डी  (2015-2014), एशियन गेम्स (2006 -10 -14), वर्ल्ड कप (2004)(2007), इनडोर एशियन गेम्स (2007) (2009).",
   "Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position.":"प्रो-कबड्डी  (2014)- प्रथम स्थान,  अर्जुन पुरस्कार विजेता  - (2007), एशियन गेम्स (2006-10-14) - प्रथम स्थान, वर्ल्ड कप (2004) (2007) - प्रथम स्थान, इनडोर एशियन गेम्स (2007)(2009) - प्रथम स्थान ।",
@@ -316,12 +316,14 @@ var LanguageHindi = {
 
   "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013)":"प्रो - कबड्डी (2015-2014),एशियन  गेम्स  (2010),इनडोर एशियन गेम्स  (2010), सैफ गेम्स  (2010), इनडोर एशियन गेम्स  (2013)",
   "Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013).":"प्रो - कबड्डी (2014)- प्रथम स्थान ,एशियन  गेम्स  (2010) - प्रथम स्थान  , इनडोर एशियन गेम्स  (2010) - प्रथम स्थान , सैफ गेम्स  (2010) -प्रथम स्थान , इनडोर एशियन गेम्स  (2013).",
-
   "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).":"प्रो - कबड्डी (2015),सीनियर नेशनल गेम (2008-09), एशियन  चैम्पियनशिप (2005), एशियन  गेम (2010), बीच एशियन  गेम(2011), ऑल इंडिया पुलिस कबड्डी (2009-10-11).",
   "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position.":"ऑल इंडिया पुलिस (2009) - प्रथम स्थान , एशियन  चैम्पियनशिप  (2005) - प्रथम स्थान  , एशियन  गेम्स  (2010)- प्रथम स्थान , बीच एशियन  गेम्स  (2011) - द्वितीय स्थान .",
-
   "Taiwan":"ताइवान",
   "20":"20",
   "Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1":" प्रेसीडेंशियल कप- गोल्ड मेडल  2015 नवंबर, कोरिया , जापान , थाइलैंड के विरुद्ध मैत्री खेल – सिल्वर मेडल – नवंबर 2015, सीनेटर कप-गोल्ड मेडल -  अप्रैल 2015, कॉलेज गेम्स -गोल्ड मेडल - फरवरी 2015, प्रो – कबड्डी सीज़न 1",
-
+  
+  "box1": "box-h1",
+  "box2": "box-h2",
+  "box3": "box-h3",
+  "box4": "box-h4",
 };
