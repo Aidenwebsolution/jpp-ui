@@ -112,7 +112,7 @@
                                             <div class="col-xs-3 col-xs-offset-1">
                                                 <div class="fix-logos">
                                                     <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
-                                                    <span class="{{item.team1id|teamColor}}">{{item.score1}}</span>
+                                                    <span class="{{item.team1id|teamColor}}">{{item.score1|translate}}</span>
                                                 </div>
                                             </div>
                                             <div class="col-xs-4">
@@ -131,11 +131,11 @@
                                             <div class="row fixture-cont">
                                                 <div class="col-xs-4">
                                                     <div class="topscore bold">
-                                                        <span>{{item.fixture.team1player1name}}</span>
-                                                        <span>{{item.fixture.team1player1score}}</span>
+                                                        <span>{{item.fixture.team1player1name|translate}}</span>
+                                                        <span>{{item.fixture.team1player1score|translate}}</span>
                                                         |
-                                                        <span>{{item.fixture.team1player2name}}</span>
-                                                        <span>{{item.fixture.team1player2score}}</span>
+                                                        <span>{{item.fixture.team1player2name|translate}}</span>
+                                                        <span>{{item.fixture.team1player2score|translate}}</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4">
@@ -260,12 +260,12 @@
                                             <div class="col-xs-12">
                                                 <div class="text-center match-time">
                                                     <h1 class="capital f-23">
-                                                      {{item.team1 | spaceToPlus}} <br>
-                                                        {{item.stadium}}
+                                                      {{item.team1 | spaceToPlus|translate}} <br>
+                                                        {{item.stadium|translate}}
                                                     </h1>
                                                     <h1 class="upper mar-top">
-                                                        {{item.starttimedate}}
-                                                        (IST)
+                                                        {{item.starttimedate|translate}}
+                                                        ({{'IST'|translate}})
                                                     </h1>
                                                     <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess mt15">
                                                         BOOK TICKETS
