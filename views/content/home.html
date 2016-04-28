@@ -21,7 +21,7 @@
           <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
               <a href="{{new.link}}">
-                <img ng-src="{{new.image | serverimage}}" class="gallery-image">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jpp Banner">
               </a>
             </uib-slide>
           </uib-carousel>
@@ -30,7 +30,7 @@
       <div class="col-sm-4 padding0">
         <div class="content-scroll">
           <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
-            <img src="img/home/panther-right.png" alt="" class="hover-plam">
+            <img src="img/home/panther-right.png" alt="panther-punch" class="hover-plam">
             <div class="news-list">
               <div class="new-item padding20">
                 <h3 class="margin0">
@@ -132,17 +132,17 @@
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{openers.team1id  | teamImg}}" class="img-responsive">
+                        <img ng-src="{{openers.team1id  | teamImg}}" class="img-responsive" alt="{{openers.team1id  | teamImg}}">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="mt30">
-                        <img src="img/object/back-vs.png" class="img-responsive">
+                        <img src="img/object/back-vs.png" class="img-responsive" alt="vs">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{openers.team2id  | teamImg}}" class="img-responsive">
+                        <img ng-src="{{openers.team2id  | teamImg}}" class="img-responsive" alt="{{openers.team2id  | teamImg}}">
                       </div>
                     </div>
                   </div>
@@ -216,17 +216,17 @@
                   <div class="row">
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{game.team1id | teamImg}}" class="img-responsive">
+                        <img ng-src="{{game.team1id | teamImg}}" class="img-responsive" alt="{{game.team1id | teamImg}}">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="mt30">
-                        <img src="img/object/back-vs.png" class="img-responsive">
+                        <img src="img/object/back-vs.png" class="img-responsive" alt="vs">
                       </div>
                     </div>
                     <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                       <div class="new-logo">
-                        <img ng-src="{{game.team2id | teamImg}}" class="img-responsive">
+                        <img ng-src="{{game.team2id | teamImg}}" class="img-responsive" alt="{{game.team2id | teamImg}}">
                       </div>
                     </div>
                   </div>
@@ -328,7 +328,7 @@
 <div class="container">
 
 <div class="text-center social-bk">
-  <img src="img/object/back-pink.png" class="img-responsive">
+  <img src="img/object/back-pink.png" class="img-responsive" alt="social-hub">
   <div class="social-hub">
     <h1 class="color-white"> {{'SOCIAL HUB'|translate}}</h1>
   </div>
@@ -387,7 +387,7 @@
 <div class="row">
   <div class="col-md-4 col-sm-4">
     <div class="">
-      <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive">
+      <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive" alt="wallpapper">
     </div>
     <div class="text-center">
       <h4 class="line140 font-excl">
@@ -406,7 +406,7 @@
     <div class="row">
       <div class="col-md-6 col-sm-6">
         <div class="cell-img">
-          <img src="img/object/phone.png" class="img-responsive">
+          <img src="img/object/phone.png" class="img-responsive" alt="android-ios">
         </div>
       </div>
       <div class="col-md-6 col-sm-6">
@@ -418,13 +418,13 @@
             <div class="col-md-6 col-sm-6">
               <div class="play-store">
                 <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
-                  <img src="img/object/play-store.png" class="img-responsive">
+                  <img src="img/object/play-store.png" class="img-responsive" alt="play-store">
                 </a>
               </div>
             </div>
             <div class="col-md-6 col-sm-6">
               <div class="app-store play-store">
-                <img src="img/object/app-store.png" class="img-responsive">
+                <img src="img/object/app-store.png" class="img-responsive" alt="app-store">
               </div>
             </div>
           </div>
