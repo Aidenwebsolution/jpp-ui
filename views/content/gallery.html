@@ -39,7 +39,7 @@
         <a ui-sref="gallery-inner({id:data.id})">
           <div class="gallery-album">
             <div class="album-cover">
-              <img ng-src="{{data.image | serverimage}}" class="img-responsive">
+              <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
               <div class="album-title text-center">
                 <h4 class="color-primary f20">{{data.name}}</h4>
               </div>
