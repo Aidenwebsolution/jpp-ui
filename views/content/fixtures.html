@@ -17,7 +17,7 @@
     <div class="gallery-tab text-center custom-list">
         <ul class="padding0">
             <li ng-click="changeTab(4)">
-                <h3 class="color-primary " ng-class="{'active-li':season==4}">SEASON 4 SCHEDULE</h3>
+                <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4 SCHEDULE'|translate}}</h3>
             </li>
             <li ng-click="changeTab(3)">
                 <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 REVIEW'|translate}}</h3>
@@ -39,13 +39,13 @@
                               <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate}}(IST)</div>
+                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
                                         <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
                                             <img ng-src="{{item.team1id|teamImg}}" class="float-left" alt="{{item.team1id|teamImg}}">
-                                            <span class="float-right">{{item.team1}}</span>
+                                            <span class="float-right">{{item.team1|translate}}</span>
                                         </div>
                                     </div>
                                     <div class="col-xs-2">
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
-                                            <span class="float-left">{{item.team2}}</span>
+                                            <span class="float-left">{{item.team2|translate}}</span>
                                             <img ng-src="{{item.team2id|teamImg}}" class="float-right" alt="{{item.team2id|teamImg}}">
                                         </div>
                                     </div>
