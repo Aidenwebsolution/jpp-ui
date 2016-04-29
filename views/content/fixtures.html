@@ -1,10 +1,10 @@
 <div class="banner-title">
-    <img src="img/banner/fixtures.jpg" class="img-responsive" title="fixtures" alt="fixtures">
+    <img src="img/banner/fixtures.jpg" class="img-responsive" title="fixtures" alt="Jaipur Pink Panthers">
     <section>
         <div class="page-title text-center">
             <div class="border-blue"></div>
             <div class="panther-punch">
-                <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Panther-Punch">
+                <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
             </div>
             <div class="title-name">
                 <h1 class="bold-mrgin"> {{'Fixtures'|translate}}</h1>
@@ -63,7 +63,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <div class="match-center">Match Centre
+                                        <div class="match-center">{{'Match Centre'|translate}}
                                             <i class="fa fa-caret-down" ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                             <!-- <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"> -->
                                         </div>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate}}(IST)</div>
+                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
@@ -94,11 +94,11 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <div class="match-center" ng-class="{'no-mgin':item.ishome=='1'}">
-                                          Match Centre
+                                          {{'Match Centre'|translate}}
                                             <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                         </div>
                                         <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess">
-                                            BOOK TICKETS
+                                            {{'BOOK TICKETS'|translate}}
                                         </a>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
 
                             <div class="fixture-data" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                 <div class="fix-banner">
-                                    <img src="img/fixture/banners.jpg" class="img-responsive mobile" alt="banner">
+                                    <img src="img/fixture/banners.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
                                     <div class="fixture-match text-center">
                                         <div class="row">
                                             <div class="col-xs-3 col-xs-offset-1">
@@ -117,12 +117,12 @@
                                             </div>
                                             <div class="col-xs-4">
                                                 <div class="vs">
-                                                    <img src="img/object/vs.png" class="img-responsive" alt="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
                                                 </div>
                                             </div>
                                             <div class="col-xs-3">
                                                 <div class="fix-logos text-right">
-                                                    <span class="{{item.team2id|teamColor}}">{{item.score2}}</span>
+                                                    <span class="{{item.team2id|teamColor}}">{{item.score2|translate}}</span>
                                                     <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
                                                 </div>
                                             </div>
@@ -237,7 +237,7 @@
                             </div>
                             <div class="fixture-data" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                 <div class="fix-banner">
-                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="banner">
+                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
                                     <div class="fixture-match text-center ">
                                         <div class="row">
                                             <div class="col-xs-5">
@@ -247,7 +247,7 @@
                                             </div>
                                             <div class="col-xs-2">
                                                 <div class="fix-logo vs">
-                                                    <img src="img/object/vs.png" class="img-responsive" alt="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
                                                 </div>
                                             </div>
                                             <div class="col-xs-5">
@@ -268,10 +268,10 @@
                                                         ({{'IST'|translate}})
                                                     </h1>
                                                     <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess mt15">
-                                                        BOOK TICKETS
+                                                        {{'BOOK TICKETS'|translate}}
                                                     </a>
                                                     <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}&dates={{calendarDate[$index].from}}/{{calendarDate[$index].to}}&location={{item.stadium | spaceToPlus}}&details={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}+{{item.starttimedate | spaceToPlus}}+(IST)+{{item.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" target="_blank"  class="btn btn-sucess mt15">
-                                                        ADD TO CALENDAR
+                                                        {{'ADD TO CALENDAR'|translate}}
                                                     </a>
                                                 </div>
                                             </div>
@@ -292,7 +292,7 @@
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate}}(IST)</div>
+                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
                                         <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
                                     </div>
                                     <div class="col-xs-3">
@@ -316,7 +316,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <div class="match-center">Match Centre
+                                        <div class="match-center">{{'Match Centre'|translate}}
                                             <i class="fa fa-caret-down" ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                             <!-- <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"> -->
                                         </div>
@@ -324,7 +324,7 @@
                                 </div>
                                 <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate}}(IST)</div>
+                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
@@ -346,7 +346,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <div class="match-center">Match Centre
+                                        <div class="match-center">{{'Match Centre'|translate}}
                                             <!-- <i class="fa fa-play"></i> -->
                                             <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                         </div>
@@ -367,7 +367,7 @@
                                             </div>
                                             <div class="col-xs-4">
                                                 <div class="vs">
-                                                    <img src="img/object/vs.png" class="img-responsive" alt="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
                                                 </div>
                                             </div>
                                             <div class="col-xs-3">
@@ -487,7 +487,7 @@
                             </div>
                             <div class="fixture-data" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                 <div class="fix-banner">
-                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile">
+                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
                                     <div class="fixture-match text-center ">
                                         <div class="row">
                                             <div class="col-xs-5">
@@ -497,7 +497,7 @@
                                             </div>
                                             <div class="col-xs-2">
                                                 <div class="fix-logo vs">
-                                                    <img src="img/object/vs.png" class="img-responsive" alt="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
                                                 </div>
                                             </div>
                                             <div class="col-xs-5">
@@ -510,14 +510,14 @@
                                             <div class="col-xs-12">
                                                 <div class="text-center match-time">
                                                     <h1 class="capital f-23">
-                                                        {{item.stadium}}
+                                                        {{item.stadium|translate}}
                                                     </h1>
                                                     <h1 class="upper mar-top">
                                                         {{item.starttimedate}}
-                                                        (IST)
+                                                        ({{'IST'|translate}})
                                                     </h1>
                                                     <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank">
-                                                        <button class="btn btn-sucess mt15">BOOK TICKETS</button>
+                                                        <button class="btn btn-sucess mt15">{{'BOOK TICKETS'|translate}}</button>
                                                     </a>
                                                 </div>
                                             </div>

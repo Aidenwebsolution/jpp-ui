@@ -205,10 +205,12 @@ var LanguageEnglish = {
   "FOLLOW US ON":"FOLLOW US ON",
   "Scroll":"Scroll",
   "down":"down",
+  "Match Centre":"Match Centre",
 
 };
 
 var LanguageHindi = {
+  "Match Centre":"मैच केंद्र",
   "Scroll":"पुस्तक ",
   "down":"नीचे",
   "FOLLOW US ON":"यहाँ हमारा अनुसरण करें ",
