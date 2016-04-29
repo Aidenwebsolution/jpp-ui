@@ -5,9 +5,9 @@
     </div>
 
     <div class="scroll text-center color-primary upper">
-      Scroll
+      {{'Scroll'|translate}}
       <img src="img/mouse.png" alt="Scroll Down"/>
-      down
+      {{'down'|translate}}
     </div>
   </div>
 </div>
@@ -121,7 +121,7 @@
         <div class="col-md-6 col-sm-6 padding40 m-box-l">
         <div class="white-line-pad">
             <div class="head-table text-center">
-            <h1 class="color-white font-tbl">SEASON 4 OPENER</h1>
+            <h1 class="color-white font-tbl">{{'SEASON 4 OPENER'|translate}}</h1>
           </div>
 
           <div class="nxt-match">
@@ -148,7 +148,7 @@
                   </div>
                 </div>
                 <div class="text-center color-white font-big mt15">
-                  {{openers.stadium}}
+                  {{openers.stadium|translate}}
                 </div>
                 <div class="next-match">
                   <div class="count-time custom-list text-center">
@@ -156,44 +156,44 @@
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.months}}</span>
+                            <span>{{countdown.months|translate}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">MONTHS</span>
+                          <span class="color-white pr20">{{'MONTHS'|translate}}</span>
                         </div>
                       </li>
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.days}}</span>
+                            <span>{{countdown.days|translate}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">DAYS</span>
+                          <span class="color-white pr20">{{'DAYS'|translate}}</span>
                         </div>
                       </li>
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.hours}}</span>
+                            <span>{{countdown.hours|translate}}</span>
                             <b>:</b>
                           </h1>
-                          <span class="color-white pr20">HOURS</span>
+                          <span class="color-white pr20">{{'HOURS'|translate}}</span>
                         </div>
                       </li>
                       <li>
                         <div class="time-hrs">
                           <h1 class="color-white font-tbl">
-                            <span>{{countdown.minutes}}</span>
+                            <span>{{countdown.minutes|translate}}</span>
                           </h1>
-                          <span class="color-white">MINS</span>
+                          <span class="color-white">{{'MINS'|translate}}</span>
                         </div>
                       </li>
                     </ul>
                   </div>
 
                   <div class="text-center">
-                    <a ng-href="{{o.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
-                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{openers.stadium | spaceToPlus}}&details={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}+{{openers.starttimedate | spaceToPlus}}+(IST)+{{openers.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
+                    <a ng-href="{{o.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">{{'BOOK TICKETS'|translate}}</a>
+                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{openers.stadium | spaceToPlus}}&details={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}+{{openers.starttimedate | spaceToPlus}}+(IST)+{{openers.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">{{'ADD TO CALENDAR'|translate}}</a>
                   </div>
                 </div>
               <!-- </li>
@@ -206,7 +206,7 @@
         <div class="col-md-6 col-sm-6 padding40 m-box-r">
           <div class="nxt-match white-line-pad">
             <div class="head-table text-center">
-              <h1 class="color-white font-tbl">SEASON 4 HOME GAMES</h1>
+              <h1 class="color-white font-tbl">{{'SEASON 4 HOME GAMES'|translate}}</h1>
             </div>
 
             <flex-slider flex-slide="game in homegame track by $index" slideshow="false" prev-text=" " next-text=" ">
@@ -233,14 +233,14 @@
 
                 </div>
                 <div class="text-center color-white font-big marginal">
-                  {{game.stadium}} <br>
-                  {{game.starttimedate}}(IST)
+                  {{game.stadium|translate}} <br>
+                  {{game.starttimedate|translate}}({{'IST'|translate}})
                 </div>
                 <div class="text-center">
                   <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a> -->
                   <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a> -->
-                  <a ng-href="{{game.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank">BOOK TICKETS</a>
-                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}&dates={{calendarDatehome[$index].from}}/{{calendarDatehome[$index].to}}&location={{game.stadium | spaceToPlus}}&details={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}+{{game.starttimedate | spaceToPlus}}+(IST)+{{game.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
+                  <a ng-href="{{game.bookticket}}" class="btn btn-sucess big-btn mt15" target="_blank">{{'BOOK TICKETS'|translate}}</a>
+                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}&dates={{calendarDatehome[$index].from}}/{{calendarDatehome[$index].to}}&location={{game.stadium | spaceToPlus}}&details={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}+{{game.starttimedate | spaceToPlus}}+(IST)+{{game.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">{{'ADD TO CALENDAR'|translate}}</a>
 
                 </div>
               </li>
@@ -260,7 +260,7 @@
 
 <div class="mbanner">
   <div class="container">
-    <span>Sign up and stand a chance to win JPP merchandise!</span>
+    <span>{{'Sign up and stand a chance to win JPP merchandise'|translate}}!</span>
     <div class="pink-splasher">
       <a ui-sref="fan-corner" class="btn btn-sucess big-btn">{{'CLICK HERE'|translate}}</a>
     </div>
