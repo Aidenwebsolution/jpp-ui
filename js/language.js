@@ -223,7 +223,7 @@ var LanguageHindi = {
   "Fixtures & Results": "प्रतियोगिता एवं परिणाम",
   "Fixtures": "प्रतियोगिता",
   "Players": "खिलाड़ी",
-  "Photo Gallery": "गैलरी वॉलपेपर",
+  "Photo Gallery": "चित्र प्रदर्शनी",
   "JPP TV": "जेपीपी टीवी ",
   "Wallpapers": "वॉलपेपर",
   "News": "समाचार",
