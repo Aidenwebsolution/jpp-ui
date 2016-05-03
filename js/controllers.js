@@ -1,4 +1,5 @@
 var translate = {};
+var globalFunc = {};
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout) {
@@ -206,10 +207,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         stadium: 'DOME@NSCI SVP Stadium, Mumbai',
         galleryid: 17
     }];
+    globalFunc.changeSlides = function(lang){
+      console.log(lang);
+      NavigationService.getAllSliders(function(data) {
+        $scope.news = [];
+          $scope.news = _.filter(data,function(key){
+            return key.type == ((lang == 'hi')?'2':'1');
+          });
+      });
+    };
 
-    NavigationService.getAllSliders(function(data) {
-        $scope.news = data;
-    });
     // NavigationService.getLatestMatch(function(data) {
     //     $scope.latestmatch = data;
     //     // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
@@ -1007,11 +1014,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     if (siteLanguage) {
       $translate.use(siteLanguage);
       $.jStorage.set("languageSet", siteLanguage);
+      globalFunc.changeSlides(siteLanguage);
     }
 
     var languagePicker = {};
     $scope.changeLanguage = function(val) {
         $translate.use(val);
+        globalFunc.changeSlides(val);
         $.jStorage.set("languageSet", val);
         $scope.language = 'img/lan-'+val+'.jpg';
         languagePicker.close();
