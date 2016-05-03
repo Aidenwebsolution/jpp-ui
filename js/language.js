@@ -206,11 +206,23 @@ var LanguageEnglish = {
   "Scroll":"Scroll",
   "down":"down",
   "Match Centre":"Match Centre",
+  "JPP ANDROID APP":"JPP ANDROID APP",
+  "JPP GALLERY":"JPP GALLERY",
+  "WALLPAPERS FOR DESKTOP & MOBILE":"WALLPAPERS FOR DESKTOP & MOBILE",
+  "LATEST NEWS OF JPP":"LATEST NEWS OF JPP",
+  "TUNE INTO JPP TV":"TUNE INTO JPP TV",
+  "CONTACT US":"CONTACT US",
 
 };
 
 var LanguageHindi = {
+  "CONTACT US":"हमसे संपर्क करें",
+  "TUNE INTO JPP TV":"TUNE INTO JPP TV",
+  "LATEST NEWS OF JPP":"जेपीपी की ताजा खबर",
+  "WALLPAPERS FOR DESKTOP & MOBILE":"डेस्कटॉप और मोबाइल के लिए वॉलपेपर",
+  "JPP GALLERY":"जेपीपी प्रदर्शन",
   "Match Centre":"मैच केंद्र",
+  "JPP ANDROID APP":"जेपीपी एंड्रॉयड ऐप",
   "Scroll":"पुस्तक ",
   "down":"नीचे",
   "FOLLOW US ON":"यहाँ हमारा अनुसरण करें ",

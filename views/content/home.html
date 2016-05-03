@@ -21,7 +21,7 @@
           <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
               <a href="{{new.link}}">
-                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
+                <img ng-src="{{new.image}}" class="gallery-image" alt="Jaipur Pink Panthers">
               </a>
             </uib-slide>
           </uib-carousel>
@@ -33,8 +33,8 @@
             <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
             <div class="news-list">
               <div class="new-item padding20">
-                <h3 class="margin0">
-                  {{new.name}}
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name|translate}}
                 </h3>
               </div>
             </div>

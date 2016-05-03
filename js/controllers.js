@@ -207,15 +207,136 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         stadium: 'DOME@NSCI SVP Stadium, Mumbai',
         galleryid: 17
     }];
-    globalFunc.changeSlides = function(lang){
-      console.log(lang);
-      NavigationService.getAllSliders(function(data) {
-        $scope.news = [];
-          $scope.news = _.filter(data,function(key){
-            return key.type == ((lang == 'hi')?'2':'1');
-          });
-          $scope.changeSlide($scope.news[0]);
-      });
+    $scope.englishbanner = [{
+        "id": "9",
+        "name": "Season 4 Schedule",
+        "image": "img/homebanner/Season_4_Schedule.jpg",
+        "order": "1",
+        "status": "1",
+        "link": "\/fixtures\/1",
+        "type": "0"
+    }, {
+        "id": "7",
+        "name": "JPP ANDROID APP",
+        "image": "img/homebanner/Banners_new.jpg",
+        "order": "2",
+        "status": "1",
+        "link": "https:\/\/play.google.com\/store\/apps\/details?id=com.jaipurpinkpanthers.android",
+        "type": "0"
+    }, {
+        "id": "2",
+        "name": "JPP Gallery",
+        "image": "img/homebanner/Action_Season_3.jpg",
+        "order": "3",
+        "status": "1",
+        "link": "\/gallery",
+        "type": "1"
+    }, {
+        "id": "3",
+        "name": "Know your panthers",
+        "image": "img/homebanner/03_banner.jpg",
+        "order": "4",
+        "status": "1",
+        "link": "\/players",
+        "type": "2"
+    }, {
+        "id": "10",
+        "name": "Tune into JPP TV",
+        "image": "img/homebanner/Tune_in_to_jpp_TV.jpg",
+        "order": "5",
+        "status": "1",
+        "link": "\/jpp-tv",
+        "type": "0"
+    }, {
+        "id": "5",
+        "name": "Wallpapers for Desktop & Mobile",
+        "image": "img/homebanner/02_banner1.jpg",
+        "order": "7",
+        "status": "1",
+        "link": "\/wallpaper",
+        "type": "0"
+    }, {
+        "id": "8",
+        "name": "LATEST NEWS OF JPP",
+        "image": "img/homebanner/Banners_news.jpg",
+        "order": "8",
+        "status": "1",
+        "link": "\/news-media",
+        "type": "0"
+    }];
+    $scope.hindibanner = [{
+        "id": "9",
+        "name": "SEASON 4 SCHEDULE",
+        "image": "img/homebanner/season_hindi.jpg",
+        "order": "1",
+        "status": "1",
+        "link": "\/fixtures\/1",
+        "type": "0"
+    }, {
+        "id": "7",
+        "name": "JPP ANDROID APP",
+        "image": "img/homebanner/banner_hindi.jpg",
+        "order": "2",
+        "status": "1",
+        "link": "https:\/\/play.google.com\/store\/apps\/details?id=com.jaipurpinkpanthers.android",
+        "type": "0"
+    }, {
+        "id": "2",
+        "name": "JPP GALLERY",
+        "image": "img/homebanner/season_hindi.jpg",
+        "order": "3",
+        "status": "1",
+        "link": "\/gallery",
+        "type": "1"
+    }, {
+        "id": "3",
+        "name": "KNOW YOUR PANTHERS",
+        "image": "img/homebanner/know_hindi.jpg",
+        "order": "4",
+        "status": "1",
+        "link": "\/players",
+        "type": "2"
+    }, {
+        "id": "10",
+        "name": "TUNE INTO JPP TV",
+        "image": "img/homebanner/tv_hindi.jpg",
+        "order": "5",
+        "status": "1",
+        "link": "\/jpp-tv",
+        "type": "0"
+    }, {
+        "id": "5",
+        "name": "WALLPAPERS FOR DESKTOP & MOBILE",
+        "image": "img/homebanner/banner2_hindi.jpg",
+        "order": "7",
+        "status": "1",
+        "link": "\/wallpaper",
+        "type": "0"
+    }, {
+        "id": "8",
+        "name": "LATEST NEWS OF JPP",
+        "image": "img/homebanner/news_hindi.jpg",
+        "order": "8",
+        "status": "1",
+        "link": "\/news-media",
+        "type": "0"
+    }];
+    globalFunc.changeSlides = function(lang) {
+        // console.log(lang);
+        // NavigationService.getAllSliders(function(data) {
+        //     $scope.news = [];
+        //     $scope.news = _.filter(data, function(key) {
+        //         return key.type == ((lang == 'hi') ? '2' : '1');
+        //     });
+        // });
+        if (lang == 'hi') {
+            $scope.news = $scope.hindibanner;
+        } else if (lang == 'en') {
+            $scope.news = $scope.englishbanner;
+
+        }
+        $scope.changeSlide($scope.news[0]);
+
     };
 
     // NavigationService.getLatestMatch(function(data) {
@@ -1011,11 +1132,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
     var siteLanguage = $.jStorage.get('languageSet');
-    $scope.language = 'img/lan-'+siteLanguage+'.jpg';
+    $scope.language = 'img/lan-' + siteLanguage + '.jpg';
     if (siteLanguage) {
-      $translate.use(siteLanguage);
-      $.jStorage.set("languageSet", siteLanguage);
-      globalFunc.changeSlides(siteLanguage);
+        $translate.use(siteLanguage);
+        $.jStorage.set("languageSet", siteLanguage);
+        globalFunc.changeSlides(siteLanguage);
     }
 
     var languagePicker = {};
@@ -1023,7 +1144,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $translate.use(val);
         globalFunc.changeSlides(val);
         $.jStorage.set("languageSet", val);
-        $scope.language = 'img/lan-'+val+'.jpg';
+        $scope.language = 'img/lan-' + val + '.jpg';
         languagePicker.close();
     };
 
