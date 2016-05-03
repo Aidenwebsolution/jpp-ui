@@ -214,6 +214,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           $scope.news = _.filter(data,function(key){
             return key.type == ((lang == 'hi')?'2':'1');
           });
+          $scope.changeSlide($scope.news[0]);
       });
     };
 
