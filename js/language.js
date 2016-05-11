@@ -212,12 +212,16 @@ var LanguageEnglish = {
   "LATEST NEWS OF JPP":"LATEST NEWS OF JPP",
   "TUNE INTO JPP TV":"TUNE INTO JPP TV",
   "CONTACT US":"CONTACT US",
+  "SPONSORS":"SPONSORS",
+  "Kitting Partner":"Kitting Partner",
 
 };
 
 var LanguageHindi = {
+  "Kitting Partner":"किट सहयोगी",
+  "SPONSORS":"प्रायोजक",
   "CONTACT US":"हमसे संपर्क करें",
-  "TUNE INTO JPP TV":"TUNE INTO JPP TV",
+  "TUNE INTO JPP TV":"जेपीपी टीवी से जुड़ें",
   "LATEST NEWS OF JPP":"जेपीपी की ताजा खबर",
   "WALLPAPERS FOR DESKTOP & MOBILE":"डेस्कटॉप और मोबाइल के लिए वॉलपेपर",
   "JPP GALLERY":"जेपीपी प्रदर्शन",
