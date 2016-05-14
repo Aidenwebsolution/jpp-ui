@@ -20,7 +20,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     $stateProvider
         .state('home', {
             url: "/home",
-            templateUrl: "views/template-home.html",
+            templateUrl: "views/template.html",
             controller: 'HomeCtrl'
         })
 
