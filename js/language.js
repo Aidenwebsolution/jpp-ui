@@ -187,7 +187,7 @@ var LanguageEnglish = {
   "Wed 13 Jul 2016, 20:00":"Wed 13 Jul 2016, 20:00",
   "Sat 16 Jul 2016, 20:00":"Sat 16 Jul 2016, 20:00",
   "Sun 17 Jul 2016, 20:00":"Sun 17 Jul 2016, 20:00",
-  "Thu 21 Jul 2016, 20:00":"Sun 17 Jul 2016, 20:00",
+  "Thu 21 Jul 2016, 20:00":"Sun 21 Jul 2016, 20:00",
   "Fri 22 Jul 2016, 20:00":"Fri 22 Jul 2016, 20:00",
   "Sun 24 Jul 2016, 21:00":"Sun 24 Jul 2016, 21:00",
   "SEASON 4 OPENER":"SEASON 4 OPENER",
