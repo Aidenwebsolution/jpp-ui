@@ -1,6 +1,6 @@
 <section>
   <div class="banner-title">
-    <img src="img/banner/player.jpg" class="img-responsive" title="Players" alt="Jaipur Pink Panthers">
+    <img src="img/banner/players.jpg" class="img-responsive" title="Players" alt="Jaipur Pink Panthers">
     <section>
       <div class="page-title text-center">
         <div class="panther-punch">
@@ -18,7 +18,8 @@
     <a ng-click="">
       <div class="row">
         <div class="col-md-4 pad5 col-sm-4" ng-repeat="data in player track by $index">
-          <a href="" ng-click="openPlayers(data,$index);">
+          <a href="">
+          <!-- <a href="" ng-click="openPlayers(data,$index);"> -->
             <div class="player-box text-center mb10">
               <div class="player-image">
                 <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">

@@ -1023,7 +1023,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             image: "img/player/p10.png",
             name: "Rohit Rana",
-            desg: "Defender,Left Cover",
+            desg: "Defender",
             nationality: "Dharmshala",
             dob: "27",
             jersyno: "05",
@@ -1074,6 +1074,50 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             desp: "",
             desp2: "Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1"
 
+        }, {
+            image: "img/player/p20.png",
+            name: "Amit Nagar",
+            desg: "Raider"
+        }, {
+            image: "img/player/p20.png",
+            name: "Parvesh",
+            desg: "Defender"
+        }, {
+            image: "img/player/p20.png",
+            name: "Parveen Narwal",
+            desg: "All Rounder"
+        }, {
+            image: "img/player/p20.png",
+            name: " David Tsai",
+            desg: "Defender"
+        }, {
+            image: "img/player/p20.png",
+            name: "Shabeer Bapu Sharfudheen",
+            desg: "Raider"
+        }, {
+            image: "img/player/p20.png",
+            name: "Mahipal Narwal",
+            desg: "Raider"
+        }, {
+            image: "img/player/p20.png",
+            name: "Amit Hooda",
+            desg: "Defender"
+        }, {
+            image: "img/player/p20.png",
+            name: "Shrikant  Tewthia",
+            desg: "All Rounder"
+        }, {
+            image: "img/player/p20.png",
+            name: "Tushar Patil",
+            desg: "All Rounder"
+        }, {
+            image: "img/player/p20.png",
+            name: "Lo Chia Wei",
+            desg: "Raider"
+        }, {
+            image: "img/player/p20.png",
+            name: "Masayuki Shimokawa ",
+            desg: "Raider"
         }];
         var i = 0;
         _.each($scope.player, function(key) {
