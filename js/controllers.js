@@ -1174,19 +1174,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
+.controller('languageCtrl', function($scope,$state, TemplateService, $translate, $rootScope, $uibModal) {
     var siteLanguage = $.jStorage.get('languageSet');
+    console.log($state);
+
     $scope.language = 'img/lan-' + siteLanguage + '.jpg';
     if (siteLanguage) {
         $translate.use(siteLanguage);
         $.jStorage.set("languageSet", siteLanguage);
-        globalFunc.changeSlides(siteLanguage);
+        if($state.current.name == 'home'){
+          globalFunc.changeSlides(siteLanguage);
+        }
     }
 
     var languagePicker = {};
     $scope.changeLanguage = function(val) {
         $translate.use(val);
-        globalFunc.changeSlides(val);
+        if($state.current.name == 'home'){
+          globalFunc.changeSlides(val);
+        }
         $.jStorage.set("languageSet", val);
         $scope.language = 'img/lan-' + val + '.jpg';
         languagePicker.close();

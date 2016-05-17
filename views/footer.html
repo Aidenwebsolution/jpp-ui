@@ -1,7 +1,8 @@
+
 <footer ng-controller="footerctrl">
   <section ng-controller="languageCtrl">
     <div class="language-holder">
-      <img ng-src="{{language}}">
+      <img ng-src="{{language}}" ng-controller="HomeCtrl">
       <div class="hover-select">
         <ul>
           <li ng-click="changeLanguage('hi');"><img src="img/lan-hi.jpg">Hindi</li>
