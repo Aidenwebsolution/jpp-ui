@@ -17,11 +17,11 @@
 <section class="mt50">
   <div class="small-container">
     <div class="pink-text">
-      Browse through the videos to know more about Jaipur Pink Panthers
+      {{'Browse through the videos to know more about Jaipur Pink Panthers' | translate}}
     </div>
     <div class="row">
       <div class="text-center" ng-if="videos == []">
-        <h1 class="color-primary">{{msg}}</h1>
+        <h1 class="color-primary">{{msg | translate}}</h1>
       </div>
       <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index" ng-if="videos.length>0">
         <a href="https://www.youtube.com/watch?v={{data.url}}" target="_blank">
@@ -32,7 +32,7 @@
                 <div class="play-btn"></div>
               </a>
               <div class="album-title video">
-                <h4 class="f20 text-center">{{data.name}}</h4>
+                <h4 class="f20 text-center">{{data.name | translate}}</h4>
               </div>
             </div>
           </div>
