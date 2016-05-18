@@ -822,39 +822,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.register.favouriteplayer = _.map(_.filter($scope.players, "status"), "name").toString();
         };
         $scope.players = [{
-            name: "Anil Patil"
-        }, {
-            name: "C. Arun"
-        }, {
-            name: "Gangadhari Mallesh"
-        }, {
-            name: "Jagdeesha K.K"
-        }, {
             name: "Jasvir Singh"
-        }, {
-            name: "Kuldeep Singh"
-        }, {
-            name: "Mohammad Maghsoudlou"
-        }, {
-            name: "Navneet Gautam"
         }, {
             name: "Rajesh Narwal"
         }, {
-            name: "Raju Lal Choudhary"
-        }, {
             name: "Ran Singh"
         }, {
-            name: "Rohit Kumar Prajapat"
+          name: "Rohit Rana"
         }, {
-            name: "Rohit Rana"
+            name: "Amit Nagar"
         }, {
-            name: "Sanjay Shrestha"
+            name: "Parvesh"
         }, {
-            name: "Samarjeet Singh"
+          name: "Parveen Narwal"
         }, {
-            name: "Sonu Narwal"
+            name: " David Tsai"
         }, {
-            name: "Wei Yang Tsai"
+            name: "Shabeer Bapu Sharfudheen"
+        }, {
+            name: "Mahipal Narwal"
+        }, {
+          name: "Amit Hooda"
+        }, {
+          name: "Shrikant  Tewthia"
+        }, {
+            name: "Tushar Patil"
+        }, {
+          name: "Lo Chia Wei"
+        }, {
+          name: "Masayuki Shimokawa "
         }];
 
         $scope.register = {};
@@ -947,7 +943,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Parveen Narwal",
             desg: "All Rounder"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p19.png",
             name: " David Tsai",
             desg: "Defender"
         }, {
