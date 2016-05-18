@@ -891,50 +891,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.slideindex = 0;
         }
         $scope.player = [{
-            id: 1,
-            image: "img/player/p1.png",
-            name: "Anil Patil",
-            desg: "All Rounder",
-            nationality: "Mumbai",
-            dob: "33",
-            jersyno: "01",
-            desp: "Senior National-(2007-2009,2011-2012), Departmental National (2006,2010,2013-2015).",
-            desp2: "Senior National(2007)-1st Position,Senior National (2011, 2012)- 3rd Position ,Departmental National (2014)- 3rd Position."
-
-        }, {
-            id: 2,
-            image: "img/player/p13.png",
-            name: "C. Arun",
-            desg: "Defender,Left Cover",
-            nationality: "Thiruvarur",
-            dob: "22",
-            jersyno: "03",
-            desp: "Pro-Kabaddi (2015),All India University (2012), Senior National (2015).",
-            desp2: "All India University (2012) - 1st Position."
-
-        }, {
-
-            image: "img/player/p2.png",
-            name: "Gangadhari Mallesh",
-            desg: "All Rounder",
-            nationality: "Choutapally",
-            dob: "22",
-            jersyno: "10",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2015-2012),Junior National Championship (2012-2009)",
-            desp2: "Pro-kabaddi (2014)- 1st Position,School Nationals(2008) -3rd Position"
-
-        }, {
-
-            image: "img/player/p14.png",
-            name: "Jagdeesha K.K",
-            desg: "Defender,Right Corner",
-            nationality: "Koipaddy",
-            dob: "41",
-            jersyno: "09",
-            desp: "Departmental National Campionship- (2015-1999),Senior National (2013-1999),National Games (2003-1999), Senior Federation Cup (2006-2003), Asian Cup(2002).",
-            desp2: "Departmental National Campionship (2014-2012) - 2nd Position, Departmental National Campionship (2006-2002)- 1st Position, Asian Cup (2002)- 1st Position, Senior National (2005-2003) -1st Position, Senior Federation Cup (2003)- 1st Position"
-
-        }, {
 
             image: "img/player/p3.png",
             name: "Jasvir Singh",
@@ -947,37 +903,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         }, {
 
-            image: "img/player/p4.png",
-            name: "Kuldeep Singh",
-            desg: "All Rounder",
-            nationality: "Sonipat",
-            dob: "23",
-            jersyno: "08",
-            desp: "Pro-Kabaddi (2015),National Game (2011), National (2008-15), Dept. National (2008-09).",
-            desp2: "National (2012-13) - 1st Position, National Game (2011) - 3rd Position, Dept. National (2008)- 2nd Position, (2009)- 1st Position."
-        }, {
-
-            image: "img/player/p16.png",
-            name: "MOHAMMAD MAGHSOUDLOU",
-            desg: "All Rounder",
-            nationality: "GORGAN",
-            dob: "25",
-            jersyno: "23",
-            desp: "Asian game 2010, Beach game haiyang 2012, Indoor game 2013, Asian game 2014, Prokabaddi season 2 & 3",
-            desp2: "Asian Indoor Kabaddi Games Incheon (2014)-2nd Position, Asian Beach Kabaddi Games China (2012)-1st Position, National Kabaddi Championship (2008,2009,2010,2011,2012)-1st Position, National Kabaddi Premier League (2006,2007)-1st Position"
-        }, {
-
-            image: "img/player/p5.png",
-            name: "Navneet Gautam",
-            desg: "Defender, Left Corner",
-            nationality: "Jaipur",
-            dob: "32",
-            jersyno: "07",
-            desp: "Pro-Kabaddi (2015-2014), Asian Games (2006 -10 -14), WorldCup (2004)(2007), Indoor Asian Games (2007))(2009).",
-            desp2: "Pro-kabaddi (2014)- 1st Position, Arjun Awardee - (2007), Asian Games (2006-10-14) - 1st Position, World Cup (2004) (2007) - 1st Position, Indoor Asian Game (2007)(2009) - 1st Position."
-
-        }, {
-
             image: "img/player/p6.png",
             name: "Rajesh Narwal",
             desg: "All Rounder",
@@ -986,16 +911,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             jersyno: "11",
             desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).",
             desp2: "Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position."
-
-        }, {
-            image: "img/player/p7.png",
-            name: "Raju Lal Choudhary",
-            desg: "Defender,Right Corner",
-            nationality: "Jaipur",
-            dob: "26",
-            jersyno: "12",
-            desp: "Pro-Kabaddi (2015-2014)National Games (2011), Senior National Games (2015), All India Police Games (2008-15).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2011)-1st Position, Senior National (2015) - 3rd Position"
 
         }, {
 
@@ -1010,17 +925,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         }, {
 
-            image: "img/player/p9.png",
-            name: "Rohit Kumar Prajapat",
-            desg: "Raider",
-            nationality: "Jaipur",
-            dob: "19",
-            jersyno: "14",
-            desp: "Pro-Kabaddi (2015), Under 20 Junior National (2012-14), All India University kabbadi tournament(2014), Under 19 School National(2012), Under 16 Sub Juniour National(2011), Junior National Federation cup (2014), Senior West Zone (2015).",
-            desp2: "Sub Junior National Under 16  (2012) - 2nd Position, Under 19 School national (2012)- 3rd PositionJunior National Federation Cup (2014)- 3rd Position, Senior West Zone (2015) - 3rd Position."
-
-        }, {
-
             image: "img/player/p10.png",
             name: "Rohit Rana",
             desg: "Defender",
@@ -1029,50 +933,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             jersyno: "05",
             desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
             desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-
-            image: "img/player/p18.png",
-            name: "Sanjay Shrestha",
-            desg: "All Rounder",
-            nationality: "Dhanusha",
-            dob: "31",
-            jersyno: "04",
-            desp: "Pro-Kabaddi (2015-2014),World Cup ( , 9th Safe game, 10th Safe Game, 11th Safe Game.",
-            desp2: "Pro-kabaddi (2014)- 1st Position."
-
-        }, {
-
-            image: "img/player/p12.png",
-            name: "Samarjeet Singh",
-            desg: "All Rounder",
-            nationality: "Khedi Daulatpur",
-            dob: "29",
-            jersyno: "77",
-            desp: "Pro-Kabaddi (2015-2014),Asian Games (2010),Indoor Asian Games (2010), Safe Games (2010), Indoor Asian Games (2013)",
-            desp2: "Pro-kabaddi (2014)- 1st Position,Asian Games (2010) - 1st Position , Indoor Asian Games (2010) - 1st Postion, Safe Games (2010) -1st Position, Indoor Asian Games (2013)."
-
-        }, {
-
-            image: "img/player/p11.png",
-            name: "Sonu Narwal",
-            desg: "Raider",
-            nationality: "Sonipat",
-            dob: "29",
-            jersyno: "22",
-            desp: "Pro-Kabaddi (2015),Senior National Game (2008-09), Asian Championship(2005), Asian Game (2010), Beach Asian Game(2011), All India Police Kabaddi (2009-10-11).",
-            desp2: "All India Police (2009) - 1st Position, Asian Championship (2005) - 1st Position , Asian Games (2010)- 1st Position, Beach Asian Games (2011) - 2nd Position."
-
-        }, {
-            id: 2,
-            image: "img/player/p19.png",
-            name: "Wei Yang Tsai ",
-            desg: "All Rounder",
-            nationality: "Taiwan",
-            dob: "26",
-            jersyno: "20",
-            desp: "",
-            desp2: "Presidential cup- gold medal 2015 November, Friendly game against korea,japan, thailand-silver medal 2015 November, Senator cup-gold medal 2015 april, College games-gold medal 2015 February, Prokabaddi season 1"
 
         }, {
             image: "img/player/p20.png",
