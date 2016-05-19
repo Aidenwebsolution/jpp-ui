@@ -279,7 +279,6 @@ var LanguageEnglish = {
 "Quiz Part 1":"Quiz Part 1",
 "Quiz Part 2":"Quiz Part 2",
 "Browse through the videos to know more about Jaipur Pink Panthers":"Browse through the videos to know more about Jaipur Pink Panthers",
-
 };
 
 var LanguageHindi = {
@@ -299,8 +298,8 @@ var LanguageHindi = {
   "Developed":"विकसित ",
   "by":"द्वारा",
   "languageCSS":"hindi",
-  "ABOUT": "बारे में",
-  "About": "बारे में",
+  "ABOUT": "हमें जानें",
+  "About": "हमें जानें",
   "Fixtures & Results": "प्रतियोगिता एवं परिणाम",
   "Fixtures": "प्रतियोगिता",
   "Players": "खिलाड़ी",
@@ -506,7 +505,7 @@ var LanguageHindi = {
   "BOOK TICKETS":"टिकट बुक करें ",
   "ADD TO CALENDAR":"कैलेंडर में दर्ज़ करें ",
   "SEASON 4 HOME GAMES":"सीज़न 4 के होम मैच ",
-  "Sign up and stand a chance to win JPP merchandise":"साईन अप करें और जेपीपी के सामान जीतने का मौका पायें",
+  "Sign up and stand a chance to win JPP merchandise":"साईन अप करें और जेपीपी के इनाम जीतने का मौका पायें",
   "Sun 31 Jan 2016, 20:00":"रविवार 31 जनवरी 2016 , 20:00",
   "Mon 1 Feb 2016, 21:00":"सोमवार 1 फरवरी 2016 , 21:00",
   "Fri 5 Feb 2016, 21:00":"शुक्रवार 5 फरवरी 2016 , 21:00",
