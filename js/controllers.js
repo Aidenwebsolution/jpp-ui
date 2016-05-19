@@ -322,6 +322,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         "type": "0"
     }];
 
+    // $translate.use('en');
+    // $.jStorage.set("languageSet", 'en');
+    // $scope.news = $scope.englishbanner;
+
     globalFunc.changeSlides = function(lang) {
         // console.log(lang);
         // NavigationService.getAllSliders(function(data) {
