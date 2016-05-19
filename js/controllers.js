@@ -2,7 +2,7 @@ var translate = {};
 var globalFunc = {};
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout,$translate) {
 
     //Used to name the .html file
     $scope.openers = {};
@@ -321,6 +321,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         "link": "\/news-media",
         "type": "0"
     }];
+
     globalFunc.changeSlides = function(lang) {
         // console.log(lang);
         // NavigationService.getAllSliders(function(data) {
