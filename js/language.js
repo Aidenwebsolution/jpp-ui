@@ -279,6 +279,18 @@ var LanguageEnglish = {
 "Quiz Part 1":"Quiz Part 1",
 "Quiz Part 2":"Quiz Part 2",
 "Browse through the videos to know more about Jaipur Pink Panthers":"Browse through the videos to know more about Jaipur Pink Panthers",
+"Amit Nagar":"Amit Nagar",
+"Parvesh":"Parvesh",
+"Parveen Narwal":"Parveen Narwal",
+"David Tsai":"David Tsai",
+"Shabeer Bapu Sharfudheen":"Shabeer Bapu Sharfudheen",
+"Mahipal Narwal":"Mahipal Narwal",
+"Amit Hooda":"Amit Hooda",
+"Shrikant Tewthia":"Shrikant Tewthia",
+"Tushar Patil":"Tushar Patil",
+"Lo Chia Wei":"Lo Chia Wei",
+"Masayuki Shimokawa":"Masayuki Shimokawa",
+"Balwan Singh":"Balwan Singh"
 };
 
 var LanguageHindi = {
@@ -571,6 +583,16 @@ var LanguageHindi = {
 "Quiz Part 1":"क्विज़ / प्रश्नोत्तरी भाग 1",
 "Quiz Part 2":"क्विज़ / प्रश्नोत्तरी भाग 2",
 "Browse through the videos to know more about Jaipur Pink Panthers":"वीडियो के माध्यम से जयपुर पिंक पैंथर्स के बारे में और अधिक जानें",
-
-
+"Amit Nagar":"अमित नागर",
+"Parvesh":"परवेश",
+"Parveen Narwal":"परवीन नरवाल",
+"David Tsai":"डेविड त्सय",
+"Shabeer Bapu Sharfudheen":"शब्बीर बापू शरफूद्दीन",
+"Mahipal Narwal":"महिपाल नरवाल",
+"Amit Hooda":"अमित हुडा",
+"Shrikant Tewthia":"रीकांत तेवथीय",
+"Tushar Patil":"तुषार पाटील",
+"Lo Chia Wei":"लो चीया वेई",
+"Masayuki Shimokawa":"मसायुकी शिमोकावा",
+"Balwan Singh":"बलवान सिंह",
 };

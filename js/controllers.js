@@ -841,7 +841,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
           name: "Parveen Narwal"
         }, {
-            name: " David Tsai"
+            name: "David Tsai"
         }, {
             name: "Shabeer Bapu Sharfudheen"
         }, {
@@ -849,13 +849,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
           name: "Amit Hooda"
         }, {
-          name: "Shrikant  Tewthia"
+          name: "Shrikant Tewthia"
         }, {
             name: "Tushar Patil"
         }, {
           name: "Lo Chia Wei"
         }, {
-          name: "Masayuki Shimokawa "
+          name: "Masayuki Shimokawa"
         }];
 
         $scope.register = {};
@@ -949,7 +949,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             desg: "All Rounder"
         }, {
             image: "img/player/p19.png",
-            name: " David Tsai",
+            name: "David Tsai",
             desg: "Defender"
         }, {
             image: "img/player/p20.png",
@@ -965,7 +965,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             desg: "Defender"
         }, {
             image: "img/player/p20.png",
-            name: "Shrikant  Tewthia",
+            name: "Shrikant Tewthia",
             desg: "All Rounder"
         }, {
             image: "img/player/p20.png",
@@ -977,7 +977,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             desg: "Raider"
         }, {
             image: "img/player/p20.png",
-            name: "Masayuki Shimokawa ",
+            name: "Masayuki Shimokawa",
             desg: "Raider"
         }];
         var i = 0;
