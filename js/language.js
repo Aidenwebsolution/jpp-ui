@@ -70,6 +70,7 @@ var LanguageEnglish = {
   "BUY NOW": "BUY NOW",
   "All Rounder":"All Rounder",
   "RAIDER":"RAIDER",
+  "Defender":"Defender",
   "Defender,Left Cover":"Defender,Left Cover",
   "Defender,Left Corner":"Defender,Left Corner",
   "Defender,Right Corner":"Defender,Right Corner",
@@ -290,7 +291,7 @@ var LanguageEnglish = {
 "Tushar Patil":"Tushar Patil",
 "Lo Chia Wei":"Lo Chia Wei",
 "Masayuki Shimokawa":"Masayuki Shimokawa",
-"Balwan Singh":"Balwan Singh"
+"Balwan Singh":"Balwan Singh",
 };
 
 var LanguageHindi = {
@@ -385,6 +386,7 @@ var LanguageHindi = {
   "COMING SOON": "जल्द उपलब्ध",
   "All Rounder":"ऑलराउंडर",
   "Raider":"राइडर",
+  "Defender":"डिफ़ेंडर",
   "Defender,Left Cover":"डिफ़ेंडर,लेफ़्ट कवर",
   "Defender, Left Corner":"डिफ़ेंडर,लेफ़्ट कॉर्नर",
   "Defender,Right Corner":"डिफ़ेंडर,राइट कॉर्नर",
