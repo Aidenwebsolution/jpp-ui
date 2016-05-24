@@ -1037,6 +1037,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('languageCtrl', function($scope,$state, TemplateService, $translate, $rootScope, $uibModal) {
     var siteLanguage = $.jStorage.get('languageSet');
+    $scope.languageActive = siteLanguage;
+
     console.log($state);
 
     $scope.language = 'img/lan-' + siteLanguage + '.jpg';
@@ -1057,6 +1059,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $.jStorage.set("languageSet", val);
         $scope.language = 'img/lan-' + val + '.jpg';
         languagePicker.close();
+    };
+    $scope.changeLanguage2 = function(val) {
+        $translate.use(val);
+        if($state.current.name == 'home'){
+          globalFunc.changeSlides(val);
+        }
+        $.jStorage.set("languageSet", val);
+        $scope.languageActive = val;
     };
 
     $scope.languagePicker = function() {

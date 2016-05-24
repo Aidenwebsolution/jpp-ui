@@ -140,6 +140,9 @@ a {
 .dropdown-menu > li > a:focus {
   background-color: transparent!important;
 }
+.navbar {
+  margin: 0;
+}
 nav {
   li {
     font-size: 20px;
@@ -270,7 +273,7 @@ nav {
   }
 }
 .section2.home {
-  padding-top: 70px;
+  padding-top: 109px;
 }
 .banner-title {
   border-bottom: 4px solid $brand-success;
@@ -2018,16 +2021,35 @@ a {
 }
 
 .language-holder {
-    position: absolute;
-    top: 100px;
-    right: 0;
-    background-color: $brand-primary;
-    padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $brand-success;
+  padding: 10px;
+  cursor: default;
+  z-index: 100;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  height: 39px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  span {
+    text-transform: none;
     cursor: pointer;
-    z-index: 100;
-    &:hover .hover-select {
-        display: block;
+    padding: 0 5px;
+    &.selected {
+      color: $brand-primary;
+      font-weight: bold;
     }
+  }
+  &:hover .hover-select {
+      display: block;
+  }
+}
+.navbar-fixed-top {
+  top: 39px;
 }
 .hover-select {
     display: none;
