@@ -1059,6 +1059,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $.jStorage.set("languageSet", val);
         $scope.language = 'img/lan-' + val + '.jpg';
         languagePicker.close();
+        $scope.languageActive = val;
     };
     $scope.changeLanguage2 = function(val) {
         $translate.use(val);
