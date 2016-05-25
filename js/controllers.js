@@ -386,6 +386,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.countdown.hours = duration.hours();
             $scope.countdown.minutes = duration.minutes();
             $scope.countdown.seconds = duration.seconds();
+            
         }, 1000);
     };
     NavigationService.getScheduleSeason4(function(data) {
