@@ -397,7 +397,7 @@ $screen-lg: 1200px !default;
       text-align: center;
     }
   }
-  .section2.home {
+  .home{
     padding-top: 50px;
   }
   .nav {
@@ -423,7 +423,7 @@ $screen-lg: 1200px !default;
       }
     }
   }
-  .section2.home {
+  .home{
     padding-top: 50px;
   }
   .banner-title {
@@ -524,6 +524,19 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .language-holder {
+    height: auto;
+  }
+  .language-holder .pull-right {
+      float: none !important;
+      margin: 5px 0 0;
+  }
+  .navbar-fixed-top {
+      top: 63px;
+  }
+  .home {
+      padding-top: 114px;
+  }
   .gallery-tab ul li {
     border-right: 0;
   }
