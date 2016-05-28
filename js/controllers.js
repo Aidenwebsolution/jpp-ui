@@ -386,7 +386,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.countdown.hours = duration.hours();
             $scope.countdown.minutes = duration.minutes();
             $scope.countdown.seconds = duration.seconds();
-            
+
         }, 1000);
     };
     NavigationService.getScheduleSeason4(function(data) {
@@ -937,15 +937,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
 
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p21.png",
             name: "Amit Nagar",
             desg: "Raider"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p22.png",
             name: "Parvesh",
             desg: "Defender"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p23.png",
             name: "Parveen Narwal",
             desg: "All Rounder"
         }, {
@@ -953,23 +953,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "David Tsai",
             desg: "Defender"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p24.png",
             name: "Shabeer Bapu Sharfudheen",
             desg: "Raider"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p25.png",
             name: "Mahipal Narwal",
             desg: "Raider"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p26.png",
             name: "Amit Hooda",
             desg: "Defender"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p27.png",
             name: "Shrikant Tewthia",
             desg: "All Rounder"
         }, {
-            image: "img/player/p20.png",
+            image: "img/player/p28.png",
             name: "Tushar Patil",
             desg: "All Rounder"
         }, {
