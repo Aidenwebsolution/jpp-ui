@@ -1,8 +1,11 @@
 var translate = {};
 var globalFunc = {};
+var currentlang = '';
+var globalLocale = moment.locale('hi');
+var localLocale = moment();
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout,$translate) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate) {
 
     //Used to name the .html file
     $scope.openers = {};
@@ -562,6 +565,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.schedules = [];
     $scope.loaded = false;
+
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
+
     $scope.fixtureid = $stateParams.id;
     var i = 0;
     $scope.openAccordion = function(item) {
@@ -622,12 +635,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.galleryid = $stateParams.id;
+
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
     console.log($scope.galleryid);
     NavigationService.getAllGallery(function(data) {
         $scope.galleryArr = data;
         $scope.gallerycategory = _.find($scope.galleryArr, {
             "id": $scope.galleryid
         }).name;
+        $scope.hindigallerycategory = _.find($scope.galleryArr, {
+            "id": $scope.galleryid
+        }).hindiname;
     });
     NavigationService.getGallerySlide($scope.galleryid, function(data) {
         console.log(data);
@@ -650,6 +675,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.photos = true;
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
     $scope.getPhotos = function() {
         NavigationService.getAllGallery(function(data) {
             $scope.slides = data;
@@ -693,6 +725,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.msg = "";
     $scope.videos = [];
+
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
     $scope.getVideos = function() {
         NavigationService.getAllVideoGallery(function(data) {
             $scope.videos = data;
@@ -712,6 +753,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Wallpapers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
+
     NavigationService.getWallpaperCategoryForDesktop(function(data) {
         $scope.wallpapper = data;
     });
@@ -748,11 +799,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.wallpaperid = $stateParams.id;
 
 
+    $scope.currentlang = $.jStorage.get("languageSet");
+
+    console.log(currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
+
+
     NavigationService.getWallpaperCategoryForDesktop(function(data) {
         $scope.wallpaperArr = data;
         $scope.wallpapercategory = _.find($scope.wallpaperArr, {
             "id": $scope.wallpaperid
         }).name;
+        $scope.hindiwallpapercategory = _.find($scope.wallpaperArr, {
+            "id": $scope.wallpaperid
+        }).hname;
     });
 
     $scope.getWallpapers = function(page) {
@@ -807,8 +871,123 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.news = [];
+        $scope.getm = [];
+
+        //
+
+        $scope.currentlang = $.jStorage.get("languageSet");
+
+        console.log(currentlang);
+        globalFunc.changeLang = function() {
+            $scope.currentlang = currentlang;
+
+        }
+        $scope.news2 = [];
         NavigationService.getallnews(function(data) {
             $scope.news = data;
+
+            // console.log(data[0].timestamp);
+            $scope.getMonthName = function(val) {
+                switch (val) {
+                    case 0:
+                        day = "जनवरी";
+                        break;
+                    case 1:
+                        day = "फरवरी";
+                        break;
+                    case 2:
+                        day = "मार्च";
+                        break;
+                    case 3:
+                        day = "अप्रैल";
+                        break;
+                    case 4:
+                        day = "मई";
+                        break;
+                    case 5:
+                        day = "जून";
+                        break;
+                    case 6:
+                        day = "जुलाई";
+                        break;
+                    case 7:
+                        day = "अगस्त";
+                        break;
+                    case 8:
+                        day = "सितम्बर";
+                        break;
+                    case 9:
+                        day = "अक्टूबर";
+                        break;
+                    case 10:
+                        day = "नवंबर";
+                        break;
+                    case 11:
+                        day = "दिसंबर";
+                        break;
+                };
+                console.log(day);
+                $scope.dday = day;
+            }
+            // $scope.test = "12";
+            // for(i=0;i<$scope.news.length;i++){
+            //   // console.log($scope.news.length);
+            //   $scope.getm=$scope.news[i].timestamp;
+            //   // console.log($scope.getm);
+            //   var day=$scope.getm;
+            //   // $scope.news.timestamp=day;
+            //      console.log(day);
+            //   switch (day.getMonth()) {
+            //      case 1:
+            //          day = "जनवरी";
+            //          break;
+            //      case 2:
+            //          day = "फरवरी";
+            //          break;
+            //      case 3:
+            //          day = "मार्च";
+            //          break;
+            //      case 4:
+            //          day = "अप्रैल";
+            //          break;
+            //      case 5:
+            //          day = "मई";
+            //          break;
+            //      case  7:
+            //          day = "जून";
+            //          break;
+            //      case  8:
+            //          day = "जुलाई";
+            //          break;
+            //      case  9:
+            //          day = "अगस्त";
+            //          break;
+            //      case  10:
+            //          day = "सितम्बर";
+            //          break;
+            //      case  11:
+            //          day = "अक्टूबर";
+            //          break;
+            //      case  12:
+            //          day = "नवंबर";
+            //          break;
+            //      case  12:
+            //          day = "दिसंबर";
+            //          break;
+            //   };
+            //
+            // }
+            // $scope.news2 = data[0];
+            // console.log($scope.news2);
+            // console.log('globalLocale',globalLocale);
+            //             localLocale.locale('hi'); // set this instance to use French
+            //   console.log(localLocale.format('LLLL')); // dimanche 15 juillet 2012 11:01
+            //   globalLocale.format('LLLL'); // Sunday, July 15 2012 11:01 AM
+            //
+            //             $scope.newst=
+            // localLocale.format('LLLL');
+            //             // $scope.news.timestamp=$scope.newst;
+
         });
 
     })
@@ -834,13 +1013,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "Ran Singh"
         }, {
-          name: "Rohit Rana"
+            name: "Rohit Rana"
         }, {
             name: "Amit Nagar"
         }, {
             name: "Parvesh"
         }, {
-          name: "Parveen Narwal"
+            name: "Parveen Narwal"
         }, {
             name: "David Tsai"
         }, {
@@ -848,15 +1027,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "Mahipal Narwal"
         }, {
-          name: "Amit Hooda"
+            name: "Amit Hooda"
         }, {
-          name: "Shrikant Tewthia"
+            name: "Shrikant Tewthia"
         }, {
             name: "Tushar Patil"
         }, {
-          name: "Lo Chia Wei"
+            name: "Lo Chia Wei"
         }, {
-          name: "Masayuki Shimokawa"
+            name: "Masayuki Shimokawa"
         }];
 
         $scope.register = {};
@@ -1036,7 +1215,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('languageCtrl', function($scope,$state, TemplateService, $translate, $rootScope, $uibModal) {
+.controller('languageCtrl', function($scope, $state, TemplateService, $translate, $rootScope, $uibModal) {
     var siteLanguage = $.jStorage.get('languageSet');
     $scope.languageActive = siteLanguage;
 
@@ -1046,16 +1225,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     if (siteLanguage) {
         $translate.use(siteLanguage);
         $.jStorage.set("languageSet", siteLanguage);
-        if($state.current.name == 'home'){
-          globalFunc.changeSlides(siteLanguage);
+        if ($state.current.name == 'home') {
+            globalFunc.changeSlides(siteLanguage);
         }
     }
 
     var languagePicker = {};
     $scope.changeLanguage = function(val) {
         $translate.use(val);
-        if($state.current.name == 'home'){
-          globalFunc.changeSlides(val);
+        if ($state.current.name == 'home') {
+            globalFunc.changeSlides(val);
         }
         $.jStorage.set("languageSet", val);
         $scope.language = 'img/lan-' + val + '.jpg';
@@ -1063,12 +1242,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.languageActive = val;
     };
     $scope.changeLanguage2 = function(val) {
+        currentlang = val;
+        console.log('currentlang', currentlang);
         $translate.use(val);
-        if($state.current.name == 'home'){
-          globalFunc.changeSlides(val);
+        if ($state.current.name == 'home') {
+            globalFunc.changeSlides(val);
         }
         $.jStorage.set("languageSet", val);
         $scope.languageActive = val;
+        globalFunc.changeLang();
     };
 
     $scope.languagePicker = function() {

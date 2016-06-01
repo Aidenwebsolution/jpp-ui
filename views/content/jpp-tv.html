@@ -32,7 +32,8 @@
                 <div class="play-btn"></div>
               </a>
               <div class="album-title video">
-                <h4 class="f20 text-center">{{data.name | translate}}</h4>
+                <h4 class="f20 text-center" ng-if="currentlang=='en'">{{data.name}}</h4>
+                <h4 class="f20 text-center" ng-if="currentlang=='hi'">{{data.hname}}</h4>
               </div>
             </div>
           </div>

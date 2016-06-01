@@ -8,7 +8,7 @@ var firstapp = angular.module('firstapp', [
     'pascalprecht.translate'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider,$locationProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider, $locationProvider) {
 
 
 
@@ -43,15 +43,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('wallpapper-inner', {
-        url: "/wallpaper-inner/:id",
-        templateUrl: "views/template.html",
-        controller: 'WallpapperInnerCtrl'
-    })
-    .state('fan-corner', {
-        url: "/fan-corner",
-        templateUrl: "views/template.html",
-        controller: 'FanCornerCtrl'
-    })
+            url: "/wallpaper-inner/:id",
+            templateUrl: "views/template.html",
+            controller: 'WallpapperInnerCtrl'
+        })
+        .state('fan-corner', {
+            url: "/fan-corner",
+            templateUrl: "views/template.html",
+            controller: 'FanCornerCtrl'
+        })
 
     .state('gallery', {
         url: "/gallery",
@@ -95,9 +95,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'AboutUsCtrl'
     });
 
-     if(isproduction)
-    {
-      $locationProvider.html5Mode(true);
+    if (isproduction) {
+        $locationProvider.html5Mode(true);
     }
 
     $urlRouterProvider.otherwise("/home");
@@ -156,7 +155,7 @@ firstapp.filter('serverimage', function() {
 firstapp.filter('thumbimage', function() {
     return function(input) {
         if (input) {
-            return mainurl + 'image/index?name=' +input+ '&width=400';
+            return mainurl + 'image/index?name=' + input + '&width=400';
         } else {
             return "";
         }
@@ -167,43 +166,42 @@ firstapp.filter('thumbimage', function() {
 firstapp.filter('teamColor', function() {
     return function(input) {
 
-      var returnImg = "";
-      switch(input)
-      {
-        case "1":
-        returnImg += "patna";
-        break;
+        var returnImg = "";
+        switch (input) {
+            case "1":
+                returnImg += "patna";
+                break;
 
-        case "2":
-        returnImg += "bengaluru";
-        break;
+            case "2":
+                returnImg += "bengaluru";
+                break;
 
-        case "3":
-        returnImg += "bengal";
-        break;
+            case "3":
+                returnImg += "bengal";
+                break;
 
-        case "4":
-        returnImg += "delhi";
-        break;
+            case "4":
+                returnImg += "delhi";
+                break;
 
-        case "5":
-        returnImg += "jaipur";
-        break;
+            case "5":
+                returnImg += "jaipur";
+                break;
 
-        case "6":
-        returnImg += "puneri";
-        break;
+            case "6":
+                returnImg += "puneri";
+                break;
 
-        case "7":
-        returnImg += "telgu";
-        break;
+            case "7":
+                returnImg += "telgu";
+                break;
 
-        case "8":
-        returnImg += "mumba";
-        break;
+            case "8":
+                returnImg += "mumba";
+                break;
 
-      }
-      return returnImg;
+        }
+        return returnImg;
     };
 });
 
@@ -211,43 +209,42 @@ firstapp.filter('teamColor', function() {
 firstapp.filter('teamImg', function() {
     return function(input) {
 
-      var returnImg = "img/team/";
-      switch(input)
-      {
-        case "1":
-        returnImg += "5.png";
-        break;
+        var returnImg = "img/team/";
+        switch (input) {
+            case "1":
+                returnImg += "5.png";
+                break;
 
-        case "2":
-        returnImg += "1.png";
-        break;
+            case "2":
+                returnImg += "1.png";
+                break;
 
-        case "3":
-        returnImg += "2.png";
-        break;
+            case "3":
+                returnImg += "2.png";
+                break;
 
-        case "4":
-        returnImg += "3.png";
-        break;
+            case "4":
+                returnImg += "3.png";
+                break;
 
-        case "5":
-        returnImg += "4.png";
-        break;
+            case "5":
+                returnImg += "4.png";
+                break;
 
-        case "6":
-        returnImg += "6.png";
-        break;
+            case "6":
+                returnImg += "6.png";
+                break;
 
-        case "7":
-        returnImg += "7.png";
-        break;
+            case "7":
+                returnImg += "7.png";
+                break;
 
-        case "8":
-        returnImg += "8.png";
-        break;
+            case "8":
+                returnImg += "8.png";
+                break;
 
-      }
-      return returnImg;
+        }
+        return returnImg;
     };
 });
 
@@ -298,62 +295,62 @@ firstapp.filter('cut', function() {
         return value + (tail || ' …');
     };
 });
-firstapp.directive('mycircle', function ($compile, $parse) {
-   return {
-       restrict: 'EA',
-       replace: false,
-       link: function ($scope, element, attrs) {
-           var $element = $(element);
-           var amount = 1;
-           var myinterval = {};
-           $element.ready(function () {
-               console.log("DEMO");
+firstapp.directive('mycircle', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            var amount = 1;
+            var myinterval = {};
+            $element.ready(function() {
+                console.log("DEMO");
 
-               $element.hover(function () {
-                   clearInterval(myinterval);
-               }, function () {
-
-
-                   myinterval = setInterval(function () {
-                       var $element = $(element);
-                       var $elementli = $element.children("li");
-                       $abc = $elementli;
+                $element.hover(function() {
+                    clearInterval(myinterval);
+                }, function() {
 
 
-
-                       amount++;
-                       var elewidth = $elementli.eq(0).width();
-                       //                        console.log(elewidth);
-                       var num = amount % elewidth;
-                       if (num === 0 && amount > 0) {
-                           amount = -15;
-                           //                            console.log(amount);
-                           var $firstelement = $elementli.eq(0);
-                           $element.append("<li>" + $firstelement.html() + "</li>");
-                           $firstelement.eq(0).remove();
-                       }
+                    myinterval = setInterval(function() {
+                        var $element = $(element);
+                        var $elementli = $element.children("li");
+                        $abc = $elementli;
 
 
 
-                       for (var i = 0; i < $elementli.length; i++) {
-                           $elementli.eq(i).css("transform", "translateX(" + (-1 * amount) + "px)");
-                           $elementli.eq(i).css("-webkit-transform", "translateX(" + (-1 * amount) + "px)");
-                           $elementli.eq(i).css("-moz-transform", "translateX(" + (-1 * amount) + "px)");
-                           $elementli.eq(i).css("-ms-transform", "translateX(" + (-1 * amount) + "px)");
-                           $elementli.eq(i).css("-o-transform", "translateX(" + (-1 * amount) + "px)");
-                       }
-
-                   }, 10);
-
-               });
-
-               $element.trigger("mouseleave");
+                        amount++;
+                        var elewidth = $elementli.eq(0).width();
+                        //                        console.log(elewidth);
+                        var num = amount % elewidth;
+                        if (num === 0 && amount > 0) {
+                            amount = -15;
+                            //                            console.log(amount);
+                            var $firstelement = $elementli.eq(0);
+                            $element.append("<li>" + $firstelement.html() + "</li>");
+                            $firstelement.eq(0).remove();
+                        }
 
 
-           });
 
-       }
-   };
+                        for (var i = 0; i < $elementli.length; i++) {
+                            $elementli.eq(i).css("transform", "translateX(" + (-1 * amount) + "px)");
+                            $elementli.eq(i).css("-webkit-transform", "translateX(" + (-1 * amount) + "px)");
+                            $elementli.eq(i).css("-moz-transform", "translateX(" + (-1 * amount) + "px)");
+                            $elementli.eq(i).css("-ms-transform", "translateX(" + (-1 * amount) + "px)");
+                            $elementli.eq(i).css("-o-transform", "translateX(" + (-1 * amount) + "px)");
+                        }
+
+                    }, 10);
+
+                });
+
+                $element.trigger("mouseleave");
+
+
+            });
+
+        }
+    };
 });
 firstapp.directive('onlyDigits', function() {
     return {
@@ -375,14 +372,14 @@ firstapp.directive('onlyDigits', function() {
         }
     };
 });
-firstapp.directive('fancybox', function ($compile, $parse) {
+firstapp.directive('fancybox', function($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function ($scope, element, attrs) {
+        link: function($scope, element, attrs) {
             $element = $(element);
             console.log("Checking Fancybox");
-            setTimeout(function () {
+            setTimeout(function() {
                 $(".various").fancybox({
                     maxWidth: 800,
                     maxHeight: 600,
@@ -404,7 +401,9 @@ firstapp.directive('ngRightClick', function($parse) {
         element.bind('contextmenu', function(event) {
             scope.$apply(function() {
                 event.preventDefault();
-                fn(scope, {$event:event});
+                fn(scope, {
+                    $event: event
+                });
             });
         });
     };
@@ -426,25 +425,143 @@ firstapp.directive("scroll", function($window) {
     };
 });
 
-firstapp.filter('spaceToPlus', function () {
-        return function (text) {
-          if (text) {
+firstapp.filter('spaceToPlus', function() {
+    return function(text) {
+        if (text) {
             var str = text.replace('/\s+/g', '+');
             return str;
-          }
+        }
 
-        };
+    };
 });
-firstapp.filter('spaceLessFive', function () {
-        return function (text) {
-			       var str = text.replace('/\s+/g', '').toLowerCase();
-             str = str.slice(0,5);
-			       return str;
-        };
+firstapp.filter('spaceLessFive', function() {
+    return function(text) {
+        var str = text.replace('/\s+/g', '').toLowerCase();
+        str = str.slice(0, 5);
+        return str;
+    };
+});
+firstapp.filter('hindimonth', function() {
+    return function(date, onlymonth) {
+      date = new Date(date);
+      var onlyday = date.getDate();
+      var onlyyear = date.getFullYear();
+      var day = "";
+      var dayname= "";
+        if (date) {
+            if (onlymonth) {
+
+                switch (date.getMonth()) {
+                    case 0:
+                        day = "जनवरी";
+                        break;
+                    case 1:
+                        day = "फरवरी";
+                        break;
+                    case 2:
+                        day = "मार्च";
+                        break;
+                    case 3:
+                        day = "अप्रैल";
+                        break;
+                    case 4:
+                        day = "मई";
+                        break;
+                    case 5:
+                        day = "जून";
+                        break;
+                    case 6:
+                        day = "जुलाई";
+                        break;
+                    case 7:
+                        day = "अगस्त";
+                        break;
+                    case 8:
+                        day = "सितम्बर";
+                        break;
+                    case 9:
+                        day = "अक्टूबर";
+                        break;
+                    case 10:
+                        day = "नवंबर";
+                        break;
+                    case 11:
+                        day = "दिसंबर";
+                        break;
+                };
+                return onlyday + " " + day + " " + onlyyear;
+            }else{
+              switch (date.getMonth()) {
+                  case 0:
+                      day = "जनवरी";
+                      break;
+                  case 1:
+                      day = "फरवरी";
+                      break;
+                  case 2:
+                      day = "मार्च";
+                      break;
+                  case 3:
+                      day = "अप्रैल";
+                      break;
+                  case 4:
+                      day = "मई";
+                      break;
+                  case 5:
+                      day = "जून";
+                      break;
+                  case 6:
+                      day = "जुलाई";
+                      break;
+                  case 7:
+                      day = "अगस्त";
+                      break;
+                  case 8:
+                      day = "सितम्बर";
+                      break;
+                  case 9:
+                      day = "अक्टूबर";
+                      break;
+                  case 10:
+                      day = "नवंबर";
+                      break;
+                  case 11:
+                      day = "दिसंबर";
+                      break;
+              };
+              switch (date.getDay()) {
+                  case 0:
+                      dayname = "रविवार";
+                      break;
+                  case 1:
+                      dayname = "सोमवार";
+                      break;
+                  case 2:
+                      dayname = "मंगलवर";
+                      break;
+                  case 3:
+                      dayname = "बुधवार";
+                      break;
+                  case 4:
+                      dayname = "गुरुवार";
+                      break;
+
+                  case 5:
+                      dayname = "शुक्रवार";
+                      break;
+                  case 6:
+                      dayname = "शनिवार";
+                      break;
+              };
+  return onlyday + " " + day + " " + onlyyear + " - " + dayname;
+
+            }
+        }
+    };
 });
 
-firstapp.config(function ($translateProvider) {
-  $translateProvider.translations('en', LanguageEnglish);
-  $translateProvider.translations('hi', LanguageHindi);
-  $translateProvider.preferredLanguage('en');
+firstapp.config(function($translateProvider) {
+    $translateProvider.translations('en', LanguageEnglish);
+    $translateProvider.translations('hi', LanguageHindi);
+    $translateProvider.preferredLanguage('en');
 });

@@ -41,7 +41,8 @@
 
         </div>
         <div class="wall-title">
-          <h3 class="color-primary margin0 line140 font-20">{{data.name|translate}}</h3>
+          <h3 class="color-primary margin0 line140 font-20" ng-if="currentlang=='en'">{{data.name}}</h3>
+          <h3 class="color-primary margin0 line140 font-20" ng-if="currentlang=='hi'">{{data.hname}}</h3>
           <h4 class="margin0 font-light f20 font-14">{{data.wallpapercount[0].wallpapercount}} {{'WALLPAPERS'|translate}}</h4>
         </div>
         </div>

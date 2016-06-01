@@ -41,7 +41,12 @@
             <div class="album-cover">
               <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
               <div class="album-title text-center">
-                <h4 class="color-primary f20">{{data.name | translate}}</h4>
+                <div ng-if="currentlang=='en'">
+                <h4 class="color-primary f20">{{data.name}}</h4>
+              </div>
+                <div ng-if="currentlang=='hi'">
+                <h4 class="color-primary f20">{{data.hindiname}}</h4>
+              </div>
               </div>
             </div>
 

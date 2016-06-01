@@ -34,7 +34,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-          <h1 class="color-primary uppercase-text mobile-font-h1" >{{gallerycategory}}</h1>
+          <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='en'">{{gallerycategory}}</h1>
+          <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='hi'">{{hindigallerycategory}}</h1>
       </div>
     </div>
   </div>

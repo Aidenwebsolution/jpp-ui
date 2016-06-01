@@ -31,7 +31,7 @@
     "angular-animate": "~1.4.6",
     "angular-loading-bar": "~0.8.0",
     "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5",
-    "moment": "^2.11.2",
+    "moment": "^2.13.0",
     "angular-translate": "^2.11.0",
     "jStorage": "https://github.com/andris9/jStorage.git#^0.4.12"
   }

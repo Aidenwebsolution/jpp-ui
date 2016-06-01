@@ -31,11 +31,16 @@
                 <img ng-src="{{data.logo | serverimage}}" alt="{{data.logo | serverimage}}">
               </div>
               <div class="news-date">
-                <span>{{data.timestamp}}</span>
+                <!-- {{data.timestamp|translate}}({{'IST'|translate}}) -->
+                <span ng-if="currentlang=='en'">{{data.timestamp}}</span>
+                <span ng-if="currentlang=='hi'">{{data.timestamp | hindimonth:false}}</span>
+
+<!-- moment("20111031", "YYYYMMDD").fromNow(); -->
               </div>
             </div>
               <div class="news-title">
-                <h4 class="font-16">{{data.name}}</h4>
+                <h4 class="font-16" ng-if="currentlang=='en'">{{data.name}}</h4>
+                <h4 class="font-16" ng-if="currentlang=='hi'">{{data.hname}}</h4>
               </div>
               <div class="read-more">
                 <a ng-href="{{data.content}}" target="_blank"><button type="button" class="btn btn-pink"> {{'VIEW STORY'|translate}}</button></a>
