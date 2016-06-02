@@ -39,7 +39,8 @@
                               <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate|translate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate| hindimonth:false}}</div>
                                         <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
                                     </div>
                                     <div class="col-xs-3">
@@ -73,7 +74,9 @@
                                 </div>
                                 <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate| hindimonth:false}}</div>
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
@@ -274,9 +277,17 @@
                                                       {{item.hinditeam1 | spaceToPlus}} <br>
                                                         {{item.hindistadium}}
                                                     </h1>
-                                                    <h1 class="upper mar-top">
+                                                    <!-- <h1 class="upper mar-top">
                                                         {{item.starttimedate|translate}}
                                                         ({{'IST'|translate}})
+                                                    </h1> -->
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='en'">
+                                                        {{item.starttimedate}}
+                                                        ({{'IST'}})
+                                                    </h1>
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                                                        {{item.starttimedate | hindimonth:false}}
+
                                                     </h1>
                                                     <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess mt15">
                                                         {{'BOOK TICKETS'|translate}}
@@ -303,7 +314,9 @@
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate | hindimonth:false}}</div>
                                         <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
                                     </div>
                                     <div class="col-xs-3">
@@ -337,7 +350,9 @@
                                 </div>
                                 <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
                                     <div class="col-xs-2">
-                                        <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div>
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate | hindimonth:false}}</div>
                                     </div>
                                     <div class="col-xs-3">
                                         <div class="team-head">
@@ -534,9 +549,12 @@
                                                     <h1 class="capital f-23" ng-if="currentlang=='hi'">
                                                         {{item.hindistadium}}
                                                     </h1>
-                                                    <h1 class="upper mar-top">
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='en'">
                                                         {{item.starttimedate}}
-                                                        ({{'IST'|translate}})
+                                                        ({{'IST'}})
+                                                    </h1>
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                                                        {{item.starttimedate | hindimonth:false}}
                                                     </h1>
                                                     <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank">
                                                         <button class="btn btn-sucess mt15">{{'BOOK TICKETS'|translate}}</button>

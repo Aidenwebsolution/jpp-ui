@@ -33,7 +33,7 @@
               <div class="news-date">
                 <!-- {{data.timestamp|translate}}({{'IST'|translate}}) -->
                 <span ng-if="currentlang=='en'">{{data.timestamp}}</span>
-                <span ng-if="currentlang=='hi'">{{data.timestamp | hindimonth:false}}</span>
+                <span ng-if="currentlang=='hi'">{{data.timestamp | hindimonth:true}}</span>
 
 <!-- moment("20111031", "YYYYMMDD").fromNow(); -->
               </div>

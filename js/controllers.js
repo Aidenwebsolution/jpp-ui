@@ -565,10 +565,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.schedules = [];
     $scope.loaded = false;
-
+  console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
-
-    console.log(currentlang);
+    console.log($scope.currentlang);
     globalFunc.changeLang = function() {
         $scope.currentlang = currentlang;
 

@@ -553,7 +553,7 @@ firstapp.filter('hindimonth', function() {
                       dayname = "शनिवार";
                       break;
               };
-  return onlyday + " " + day + " " + onlyyear + " - " + dayname;
+  return dayname +" " + onlyday + " " + day + " " + onlyyear;
 
             }
         }
