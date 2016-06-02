@@ -1,5 +1,5 @@
 var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
-// var mainurl = "http://192.168.1.112/jppbackend/index.php/";
+// var mainurl = "http://192.168.1.137/jppbackend/index.php/";
 var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
 // var imgurl = "http://192.168.1.112/jppbackend/uploads/";
 // var imgurl="";
