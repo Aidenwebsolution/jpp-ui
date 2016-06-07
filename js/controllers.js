@@ -565,7 +565,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.schedules = [];
     $scope.loaded = false;
-  console.log(currentlang);
+    console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
     globalFunc.changeLang = function() {
@@ -887,105 +887,105 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             // console.log(data[0].timestamp);
             $scope.getMonthName = function(val) {
-                switch (val) {
-                    case 0:
-                        day = "जनवरी";
-                        break;
-                    case 1:
-                        day = "फरवरी";
-                        break;
-                    case 2:
-                        day = "मार्च";
-                        break;
-                    case 3:
-                        day = "अप्रैल";
-                        break;
-                    case 4:
-                        day = "मई";
-                        break;
-                    case 5:
-                        day = "जून";
-                        break;
-                    case 6:
-                        day = "जुलाई";
-                        break;
-                    case 7:
-                        day = "अगस्त";
-                        break;
-                    case 8:
-                        day = "सितम्बर";
-                        break;
-                    case 9:
-                        day = "अक्टूबर";
-                        break;
-                    case 10:
-                        day = "नवंबर";
-                        break;
-                    case 11:
-                        day = "दिसंबर";
-                        break;
-                };
-                console.log(day);
-                $scope.dday = day;
-            }
-            // $scope.test = "12";
-            // for(i=0;i<$scope.news.length;i++){
-            //   // console.log($scope.news.length);
-            //   $scope.getm=$scope.news[i].timestamp;
-            //   // console.log($scope.getm);
-            //   var day=$scope.getm;
-            //   // $scope.news.timestamp=day;
-            //      console.log(day);
-            //   switch (day.getMonth()) {
-            //      case 1:
-            //          day = "जनवरी";
-            //          break;
-            //      case 2:
-            //          day = "फरवरी";
-            //          break;
-            //      case 3:
-            //          day = "मार्च";
-            //          break;
-            //      case 4:
-            //          day = "अप्रैल";
-            //          break;
-            //      case 5:
-            //          day = "मई";
-            //          break;
-            //      case  7:
-            //          day = "जून";
-            //          break;
-            //      case  8:
-            //          day = "जुलाई";
-            //          break;
-            //      case  9:
-            //          day = "अगस्त";
-            //          break;
-            //      case  10:
-            //          day = "सितम्बर";
-            //          break;
-            //      case  11:
-            //          day = "अक्टूबर";
-            //          break;
-            //      case  12:
-            //          day = "नवंबर";
-            //          break;
-            //      case  12:
-            //          day = "दिसंबर";
-            //          break;
-            //   };
-            //
-            // }
-            // $scope.news2 = data[0];
-            // console.log($scope.news2);
-            // console.log('globalLocale',globalLocale);
-            //             localLocale.locale('hi'); // set this instance to use French
-            //   console.log(localLocale.format('LLLL')); // dimanche 15 juillet 2012 11:01
-            //   globalLocale.format('LLLL'); // Sunday, July 15 2012 11:01 AM
-            //
-            //             $scope.newst=
-            // localLocale.format('LLLL');
-            //             // $scope.news.timestamp=$scope.newst;
+                    switch (val) {
+                        case 0:
+                            day = "जनवरी";
+                            break;
+                        case 1:
+                            day = "फरवरी";
+                            break;
+                        case 2:
+                            day = "मार्च";
+                            break;
+                        case 3:
+                            day = "अप्रैल";
+                            break;
+                        case 4:
+                            day = "मई";
+                            break;
+                        case 5:
+                            day = "जून";
+                            break;
+                        case 6:
+                            day = "जुलाई";
+                            break;
+                        case 7:
+                            day = "अगस्त";
+                            break;
+                        case 8:
+                            day = "सितम्बर";
+                            break;
+                        case 9:
+                            day = "अक्टूबर";
+                            break;
+                        case 10:
+                            day = "नवंबर";
+                            break;
+                        case 11:
+                            day = "दिसंबर";
+                            break;
+                    };
+                    console.log(day);
+                    $scope.dday = day;
+                }
+                // $scope.test = "12";
+                // for(i=0;i<$scope.news.length;i++){
+                //   // console.log($scope.news.length);
+                //   $scope.getm=$scope.news[i].timestamp;
+                //   // console.log($scope.getm);
+                //   var day=$scope.getm;
+                //   // $scope.news.timestamp=day;
+                //      console.log(day);
+                //   switch (day.getMonth()) {
+                //      case 1:
+                //          day = "जनवरी";
+                //          break;
+                //      case 2:
+                //          day = "फरवरी";
+                //          break;
+                //      case 3:
+                //          day = "मार्च";
+                //          break;
+                //      case 4:
+                //          day = "अप्रैल";
+                //          break;
+                //      case 5:
+                //          day = "मई";
+                //          break;
+                //      case  7:
+                //          day = "जून";
+                //          break;
+                //      case  8:
+                //          day = "जुलाई";
+                //          break;
+                //      case  9:
+                //          day = "अगस्त";
+                //          break;
+                //      case  10:
+                //          day = "सितम्बर";
+                //          break;
+                //      case  11:
+                //          day = "अक्टूबर";
+                //          break;
+                //      case  12:
+                //          day = "नवंबर";
+                //          break;
+                //      case  12:
+                //          day = "दिसंबर";
+                //          break;
+                //   };
+                //
+                // }
+                // $scope.news2 = data[0];
+                // console.log($scope.news2);
+                // console.log('globalLocale',globalLocale);
+                //             localLocale.locale('hi'); // set this instance to use French
+                //   console.log(localLocale.format('LLLL')); // dimanche 15 juillet 2012 11:01
+                //   globalLocale.format('LLLL'); // Sunday, July 15 2012 11:01 AM
+                //
+                //             $scope.newst=
+                // localLocale.format('LLLL');
+                //             // $scope.news.timestamp=$scope.newst;
 
         });
 
@@ -1006,7 +1006,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.register.favouriteplayer = _.map(_.filter($scope.players, "status"), "name").toString();
         };
         $scope.players = [{
+            name: "Amit Hooda"
+        }, {
+            name: "Amit Nagar"
+        }, {
+            name: "David Tsai"
+        }, {
             name: "Jasvir Singh"
+        }, {
+            name: "Lo Chia Wei"
+        }, {
+            name: "Mahipal Narwal"
+        }, {
+            name: "Masayuki Shimokawa"
+        }, {
+            name: "Parveen Narwal"
+        }, {
+            name: "Parvesh"
         }, {
             name: "Rajesh Narwal"
         }, {
@@ -1014,27 +1030,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "Rohit Rana"
         }, {
-            name: "Amit Nagar"
-        }, {
-            name: "Parvesh"
-        }, {
-            name: "Parveen Narwal"
-        }, {
-            name: "David Tsai"
-        }, {
             name: "Shabeer Bapu Sharfudheen"
-        }, {
-            name: "Mahipal Narwal"
-        }, {
-            name: "Amit Hooda"
         }, {
             name: "Shrikant Tewthia"
         }, {
             name: "Tushar Patil"
-        }, {
-            name: "Lo Chia Wei"
-        }, {
-            name: "Masayuki Shimokawa"
         }];
 
         $scope.register = {};
@@ -1071,22 +1071,101 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.slideindex = 0;
         }
         $scope.player = [{
+            image: "img/player/p26.png",
+            name: "Amit Hooda",
+            desg: "Defender",
+            nationality: "Haryana",
+            dob: "20",
+            jersyno: "10",
+            desp: "2015-16 Pro Kabaddi League (Patna Pirates), 2010-16 Senior State Campionship, 2015 Senior Nationals, 2016 Departmental Nationals, 2016 Federation Cup",
+            desp2: "2016 Pro Kabaddi League (Gold), 2015 Senior Nationals (Bronze), 2016 Federation Cup (Silver), 2016 Departmental Nationals (Gold), 2012,14,16 Senior State Championship (Silver), 2013 Senior State Championship (Gold)"
+
+        }, {
+            image: "img/player/p21.png",
+            name: "Amit Nagar",
+            desg: "Raider",
+            nationality: "New Delhi",
+            dob: "18",
+            jersyno: "04",
+            desp: "2014-15 Junior National Games, 2015 U-19 School Games, 2016 Junior Asian Championship",
+            desp2: "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)"
+
+        }, {
+            image: "img/player/p19.png",
+            name: "David Tsai",
+            desg: "Defender",
+            nationality: "Taiwan",
+            dob: "26",
+            jersyno: "20",
+            desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
+            desp2: "2014 Pro Kabaddi League (Gold)"
+
+        }, {
 
             image: "img/player/p3.png",
             name: "Jasvir Singh",
             desg: "Raider",
-            nationality: "Panipat",
-            dob: "31",
+            nationality: "Haryana",
+            dob: "32",
             jersyno: "02",
             desp: "2004-2016 Senior Nationals, 2007,2009,2013 Indoor Asian Games, 2014 Asian Games, 2009-15 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
             desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
+
+        }, {
+            image: "img/player/p20.png",
+            name: "Lo Chia Wei",
+            desg: "Raider",
+            nationality: "New Taipei City",
+            dob: "26",
+            jersyno: "09",
+            desp: "2016 Pro Kabaddi League (Dabang Delhi K.C.)"
+
+        }, {
+            image: "img/player/p25.png",
+            name: "Mahipal Narwal",
+            desg: "Raider",
+            nationality: "Haryana",
+            dob: "24",
+            jersyno: "12",
+            desp: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games",
+            desp2: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Championship (Silver), 2010 All India University (Gold), 2010 National Games (Gold)."
+
+        }, {
+            image: "img/player/p20.png",
+            name: "Masayuki Shimokawa",
+            desg: "Raider",
+            nationality: "Tokyo",
+            dob: "27",
+            desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
+            desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
+
+        }, {
+            image: "img/player/p23.png",
+            name: "Parveen Narwal",
+            desg: "All Rounder",
+            nationality: "Haryana",
+            dob: "20",
+            jersyno: "07",
+            desp: "2009 Rural State Championship, 2009 U-17 National Games, 2010 U-19 School Games, 2012,2015 Senior State Championship",
+            desp2: "2009 Rural State Championship(Gold), 2009 U-17 National Games (Silver), 2010 U-19 School Games(Gold), 2012,2015 Senior State Championship(Gold)"
+
+        }, {
+            image: "img/player/p22.png",
+            name: "Parvesh",
+            desg: "Defender",
+            nationality: "Haryana",
+            dob: "19",
+            jersyno: "06",
+            desp: "2015-16 All India University, 2016 Junior National Games, 2016 Junior Asian Championship",
+            desp2: "2015-16 All India Univerisity(gold),2016 Junior Asian Championship(gold), 2015 Junior National Games(Gold)"
+
 
         }, {
 
             image: "img/player/p6.png",
             name: "Rajesh Narwal",
             desg: "All Rounder",
-            nationality: "Sonipat",
+            nationality: "Haryana",
             dob: "25",
             jersyno: "11",
             desp: "2007 Federation Cup, 2007 U-17 School Games, 2004 Junior Rural National Championship, 2006-2015 Senior State Championship, 2008 All India University, 2014 - Beach Asian Games, 2014-16 - Super National Games , 2010-16 - Dept. Nationals Games , 2015 - National Games , 2016 - Federations Cup , 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
@@ -1097,134 +1176,51 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             image: "img/player/p8.png",
             name: "Ran Singh",
             desg: "All Rounder",
-            nationality: "Sangrur",
-            dob: "28",
-            jersyno: "33",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2002-08), Senior National (2014), Dept. National Tournament  (2014), All India Police Tournanment (2008-11).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,Senior National (2007) - 2nd Position, Senior National (2006) - 3rd Position, All India Police Tournament (2008) (2011) - 1st Position, All India Police Tournament (2009-10) - 3rd Position, Dept. National Tournament (2014) - 2nd Position"
+            nationality: "Punjab",
+            dob: "29",
+            jersyno: "13",
+            desp: "2014-2016 Pro Kabaddi League (Jaipur Pink Panthers),2002-08 Senior National Games, 2014 Senior National Games, 2014 Departmental National Games, 2008-2011 All India Police Tournament",
+            desp2: "2014 Pro Kabaddi League (Gold), 2007 Senior National Games (Silver), 2006 Senior National Games (Bronze), 2008,2011 All India Police Tournament (Gold), 2009,2010 All India Police Tournament (Bronze), 2014 Departmental National Tournament (Silver)"
 
         }, {
-
             image: "img/player/p10.png",
             name: "Rohit Rana",
             desg: "Defender",
-            nationality: "Dharmshala",
-            dob: "27",
+            nationality: "Himachal Pradesh",
+            dob: "28",
             jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p21.png",
-            name: "Amit Nagar",
-            desg: "Raider",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p22.png",
-            name: "Parvesh",
-            desg: "Defender",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-
-        }, {
-            image: "img/player/p23.png",
-            name: "Parveen Narwal",
-            desg: "All Rounder",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p19.png",
-            name: "David Tsai",
-            desg: "Defender",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+            desp: "2006-2010 Senior Nationals, 2010-14 Beach Kabaddi, 2011-16 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers), 2015 National Games.",
+            desp2: "2014 Pro Kabaddi League (Gold) , 2015 National Games (Bronze), 2011-2014 Departmental Nationals (Gold)"
 
         }, {
             image: "img/player/p24.png",
             name: "Shabeer Bapu Sharfudheen",
             desg: "Raider",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p25.png",
-            name: "Mahipal Narwal",
-            desg: "Raider",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p26.png",
-            name: "Amit Hooda",
-            desg: "Defender",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+            nationality: "kerela",
+            dob: "29",
+            jersyno: "03",
+            desp: "2004-2006 All India University, 2013-16 Departmental National Games, 2009-16 Senior National Games, 2015 National Games , 2014-16 Pro Kabaddi League",
+            desp2: "2016 Pro Kabaddi League (Silver), 2015 Pro Kabaddi League(Gold), 2014 Pro Kabaddi League(Silver),2015 National Games(silver),2014 Departmental National Games (Gold)"
 
         }, {
             image: "img/player/p27.png",
             name: "Shrikant Tewthia",
             desg: "All Rounder",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
+            nationality: "Uttar Pradesh",
+            dob: "23",
+            jersyno: "08",
+            desp: "2007 Junior Nationals, 2009 All India University, 2011 National Championship, 2013 Senior Nationals, 2015 Senior Nationals, 2016 Federations Cup, 2014-15 Pro Kabaddi League (Dabang Delhi), 2016 Pro Kabaddi League (Bengluru Bulls), 2016 Pro Kabaddi League (Jaipur Pink Panthers)",
+            desp2: "2009 All India University(Silver),2013 Senior Nationals(Bronze), 2015 Senior Nationals (Gold), 2016 Federations Cup(Bronze)"
 
         }, {
             image: "img/player/p28.png",
             name: "Tushar Patil",
             desg: "All Rounder",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p20.png",
-            name: "Lo Chia Wei",
-            desg: "Raider",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
-
-        }, {
-            image: "img/player/p20.png",
-            name: "Masayuki Shimokawa",
-            desg: "Raider",
-            nationality: "Dharmshala",
-            dob: "27",
-            jersyno: "05",
-            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+            nationality: "Maharashtra",
+            dob: "21",
+            jersyno: "99",
+            desp: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games",
+            desp2: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)"
 
         }];
         var i = 0;
