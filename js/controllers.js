@@ -1078,8 +1078,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "Panipat",
             dob: "31",
             jersyno: "02",
-            desp: "Pro-Kabaddi (2015-2014),Senior National (2013), National Game (2011), Indoor Asian Game (2013), Asian Game (2014)",
-            desp2: "Pro-kabaddi (2014)- 1st Position,Senior National (2013) - 1st Position, National Game (2011)- 1st Position, Indoor Asian Game (2013) - 1st Position, Asian Game (2014) - 1st Position."
+            desp: "2004-2016 Senior Nationals, 2007,2009,2013 Indoor Asian Games, 2014 Asian Games, 2009-15 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
+            desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
 
         }, {
 
@@ -1089,8 +1089,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             nationality: "Sonipat",
             dob: "25",
             jersyno: "11",
-            desp: "Pro-Kabaddi (2015-2014),Beach Asian Game (2014), National Games (2011) (2015), Senior National (2008-15).",
-            desp2: "Pro-kabaddi (2014)- 1st Position,Beach Asian Games (2014) - 3rd Position, National Games (2015) - 1st Position, (2011) - 3rd Position, Senior National (2013-15) - 2nd Position."
+            desp: "2007 Federation Cup, 2007 U-17 School Games, 2004 Junior Rural National Championship, 2006-2015 Senior State Championship, 2008 All India University, 2014 - Beach Asian Games, 2014-16 - Super National Games , 2010-16 - Dept. Nationals Games , 2015 - National Games , 2016 - Federations Cup , 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
+            desp2: "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)"
 
         }, {
 
@@ -1117,47 +1117,115 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             image: "img/player/p21.png",
             name: "Amit Nagar",
-            desg: "Raider"
+            desg: "Raider",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p22.png",
             name: "Parvesh",
-            desg: "Defender"
+            desg: "Defender",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
+
         }, {
             image: "img/player/p23.png",
             name: "Parveen Narwal",
-            desg: "All Rounder"
+            desg: "All Rounder",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p19.png",
             name: "David Tsai",
-            desg: "Defender"
+            desg: "Defender",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p24.png",
             name: "Shabeer Bapu Sharfudheen",
-            desg: "Raider"
+            desg: "Raider",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p25.png",
             name: "Mahipal Narwal",
-            desg: "Raider"
+            desg: "Raider",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p26.png",
             name: "Amit Hooda",
-            desg: "Defender"
+            desg: "Defender",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p27.png",
             name: "Shrikant Tewthia",
-            desg: "All Rounder"
+            desg: "All Rounder",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
+
         }, {
             image: "img/player/p28.png",
             name: "Tushar Patil",
-            desg: "All Rounder"
+            desg: "All Rounder",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p20.png",
             name: "Lo Chia Wei",
-            desg: "Raider"
+            desg: "Raider",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }, {
             image: "img/player/p20.png",
             name: "Masayuki Shimokawa",
-            desg: "Raider"
+            desg: "Raider",
+            nationality: "Dharmshala",
+            dob: "27",
+            jersyno: "05",
+            desp: "Pro-Kabaddi (2015-2014), National Games (2010-15), Senior National  (2010-14), Dept National (2011-14).",
+            desp2: "Pro-kabaddi (2014)- 1st Position,National Games (2014) - 3rd Position, Dept. National (2011-14) - 1st Postion"
+
         }];
         var i = 0;
         _.each($scope.player, function(key) {
