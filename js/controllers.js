@@ -1022,7 +1022,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "Parveen Narwal"
         }, {
-            name: "Parvesh"
+            name: "Parvesh Malik"
         }, {
             name: "Rajesh Narwal"
         }, {
@@ -1151,7 +1151,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         }, {
             image: "img/player/p22.png",
-            name: "Parvesh",
+            name: "Parvesh Malik",
             desg: "Defender",
             nationality: "Haryana",
             dob: "19",
