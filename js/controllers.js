@@ -220,11 +220,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         "type": "0"
     }, {
         "id": "7",
-        "name": "JPP ANDROID APP",
-        "image": "img/homebanner/Banners_new.jpg",
+        "name": "JPP IOS APP",
+        "image": "img/homebanner/Banner_English.jpg",
         "order": "2",
         "status": "1",
-        "link": "https:\/\/play.google.com\/store\/apps\/details?id=com.jaipurpinkpanthers.android",
+        "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
         "type": "0"
     }, {
         "id": "2",
@@ -277,11 +277,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         "type": "0"
     }, {
         "id": "7",
-        "name": "JPP ANDROID APP",
-        "image": "img/homebanner/banner_hindi.jpg",
+        "name": "JPP IOS APP",
+        "image": "img/homebanner/Hindi.jpg",
         "order": "2",
         "status": "1",
-        "link": "https:\/\/play.google.com\/store\/apps\/details?id=com.jaipurpinkpanthers.android",
+        "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
         "type": "0"
     }, {
         "id": "2",

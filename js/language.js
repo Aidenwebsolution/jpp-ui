@@ -8,6 +8,7 @@ var LanguageEnglish = {
   "Wallpapers": "Wallpapers",
   "News": "News",
   "JPP TV": "JPP TV",
+  "JPP IOS APP":"JPP IOS APP",
   "SEASON 4 SCHEDULE": "SEASON 4 SCHEDULE",
   "Tickets & Merchandise": "Tickets & Merchandise",
   "Fan Corner": "Fan Corner",
@@ -348,6 +349,7 @@ var LanguageEnglish = {
 };
 
 var LanguageHindi = {
+  "JPP IOS APP":"जेपीपी आईओएस ऐप",
   "Kitting Partner":"किट सहयोगी",
   "SPONSORS":"प्रायोजक",
   "CONTACT US":"हमसे संपर्क करें",

@@ -845,6 +845,8 @@ $screen-lg: 1200px !default;
   }
   .modal-dialog {
     width: 75%;
+    top: 0;
+    @include transform(translate(-50%, -0%)!important);
   }
   .flex-next {
     &:before {
@@ -1101,6 +1103,9 @@ $screen-lg: 1200px !default;
   .fix-logo {
     width: 50px !important;
     height: 50px !important;
+  }
+  .email-foot{
+    text-align: center;
   }
 }
 @media (max-width: 580px) {
