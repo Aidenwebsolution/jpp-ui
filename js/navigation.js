@@ -92,6 +92,9 @@ var navigationservice = angular.module('navigationservice', [])
         getallwallpaper: function(request, callback) {
             $http.get(adminurl + "getallwallpaper?wallpapercategory=" + request.wallpaperid + "&pageno=" + request.pageno).success(callback);
         },
+        getSlider: function(callback) {
+            $http.get(adminurl + "getAllSliders").success(callback);
+        },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

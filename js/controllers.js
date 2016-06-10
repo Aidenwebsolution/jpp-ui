@@ -7,6 +7,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate) {
 
+  $scope.currentlang = $.jStorage.get("languageSet");
+  console.log($scope.currentlang);
+  globalFunc.changeLang = function() {
+      $scope.currentlang = currentlang;
+
+  }
+NavigationService.getSlider(function(data){
+  $scope.sliderdata=data;
+  console.log('$scope.sliderdata',$scope.sliderdata);
+})
+
     //Used to name the .html file
     $scope.openers = {};
     $scope.homegame = {};

@@ -19,6 +19,53 @@
       <div class="col-sm-8 padding0">
         <div class="image-holder parent-height">
           <uib-carousel interval="3000">
+            <uib-slide ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
+              </a>
+            </uib-slide>
+
+            <uib-slide ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
+              </a>
+            </uib-slide>
+          </uib-carousel>
+        </div>
+      </div>
+      <div class="col-sm-4 padding0">
+        <div class="content-scroll">
+
+          <div class="news-us" ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img ng-src="{{new.image | serverimage}}" alt="Jaipur Pink Panthers" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-us" ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img ng-src="{{new.image | serverimage}}" alt="Jaipur Pink Panthers" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="custom-slider">
+    <div class="row margin0">
+      <div class="col-sm-8 padding0">
+        <div class="image-holder parent-height">
+          <uib-carousel interval="3000">
             <uib-slide ng-repeat="new in news track by $index" active="new.active">
               <a href="{{new.link}}">
                 <img ng-src="{{new.image}}" class="gallery-image" alt="Jaipur Pink Panthers">
@@ -42,7 +89,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="new-runner marquee" style="width:100%;overflow:hidden;">
     <ul class="list-inline lined" mycircle style="width:18000px;">
       <li>
