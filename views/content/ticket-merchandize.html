@@ -18,9 +18,8 @@
 <section class="mt100 mb100">
   <div class="container">
     <div class="" ng-repeat="item in schedules track by $index">
-      {{item.fixture.id}}
       <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
-      <div  ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+      <div  ng-if="item.ishome=='1'" class="fixture-data pb">
         <div class="fix-banner">
           <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
           <div class="fixture-match text-center fixture-match1">
