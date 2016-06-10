@@ -8,7 +8,8 @@
           <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
         </div>
         <div class="title-name">
-          <h1 class="bold-mrgin"> {{'Tickets'|translate}} {{'&'|translate}} {{'Merchandise'|translate}}</h1>
+          <!-- <h1 class="bold-mrgin"> {{'Tickets'|translate}} {{'&'|translate}} {{'Merchandise'|translate}}</h1> -->
+          <h1 class="bold-mrgin"> {{'Home'|translate}} {{'GAME'|translate}} {{'Tickets'|translate}}</h1>
         </div>
       </div>
     </section>
@@ -17,34 +18,105 @@
 </section>
 
 <section class="mt100 mb100">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-sm-6">
-      <div class="new-ticket text-center">
-        <div class="ticket-title">
-        <h1 class="color-primary"> {{'Tickets'|translate}}</h1>
-        </div>
-        <div class="ticket-img">
-          <img src="img/Tickets-&-Merchandize/t1.png" alt="Tickets" title="Tickets">
-        </div>
-        <div class="ticket-btn">
-          <a href="http://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116" target="_blank"><button class="btn btn-primary btn-by"> {{'BUY NOW'|translate}}</button></a>
+  <div class="container">
+    <div class="" ng-repeat="item in schedules track by $index">
+      <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
+      <div  ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+        <div class="fix-banner">
+          <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+          <div class="fixture-match text-center fixture-match1">
+            <div class="matchnumber">
+              <div class="matcn-number-box"></div>
+              <p>{{'Match'|translate}} - {{item.index}}</p>
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="fix-logo fix-logo-change pull-right">
+                  <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <div class="fix-logo fix-logo-change vs">
+                  <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                </div>
+              </div>
+              <div class="col-xs-5">
+                <div class="fix-logo fix-logo-change pull-left">
+                  <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="text-center match-time">
+                  <h1 class="capital f-23" ng-if="currentlang=='en'">
+                            {{item.team1 | spaceToPlus}}<br>
+                              {{item.stadium}}
+                          </h1>
+                  <h1 class="capital f-23" ng-if="currentlang=='hi'">
+                            {{item.hinditeam1 | spaceToPlus}} <br>
+                              {{item.hindistadium}}
+                          </h1>
+                  <!-- <h1 class="upper mar-top">
+                              {{item.starttimedate|translate}}
+                              ({{'IST'|translate}})
+                          </h1> -->
+                  <h1 class="upper mar-top" ng-if="currentlang=='en'">
+                              {{item.starttimedate}}
+                              ({{'IST'}})
+                          </h1>
+                  <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                              {{item.starttimedate | hindimonth:false}}
+
+                          </h1>
+                  <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
+                              {{'BOOK TICKETS'|translate}}
+                          </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-sm-6">
-      <div class="new-ticket text-center">
-        <div class="ticket-title">
-        <h1 class="color-primary"> {{'Merchandise'|translate}}</h1>
+    <div class="fixtures-make">
+      <img src="img/merchant.jpg" alt="merchant jpp" class="img-responsive">
+    </div>
+  </div>
+</section>
+<!-- <section class="mt100 mb100">
+  <div class="container">
+    <div class="tickets-main">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="new-ticket text-center">
+            <div class="ticket-title">
+              <h1 class="color-primary"> {{'Tickets'|translate}}</h1>
+            </div>
+            <div class="ticket-img">
+              <img src="img/Tickets-&-Merchandize/t1.png" alt="Tickets" title="Tickets">
+            </div>
+            <div class="ticket-btn">
+              <a href="http://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116" target="_blank">
+                <button class="btn btn-primary btn-by"> {{'BUY NOW'|translate}}</button>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="ticket-img">
-          <img src="img/Tickets-&-Merchandize/m1.png" alt="Merchandize" title="Merchandize">
-        </div>
-        <div class="ticket-btn">
-<button class="btn btn-primary btn-by grey-btn" disabled> {{'COMING SOON'|translate}}</button>
+        <div class="col-md-6 col-sm-6">
+          <div class="new-ticket text-center">
+            <div class="ticket-title">
+              <h1 class="color-primary"> {{'Merchandise'|translate}}</h1>
+            </div>
+            <div class="ticket-img">
+              <img src="img/Tickets-&-Merchandize/m1.png" alt="Merchandize" title="Merchandize">
+            </div>
+            <div class="ticket-btn">
+              <button class="btn btn-primary btn-by grey-btn" disabled> {{'COMING SOON'|translate}}</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</section>
+</section> -->
