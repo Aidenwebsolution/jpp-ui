@@ -14,12 +14,11 @@
       </div>
     </section>
   </div>
-
 </section>
-
 <section class="mt100 mb100">
   <div class="container">
     <div class="" ng-repeat="item in schedules track by $index">
+      {{item.fixture.id}}
       <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
       <div  ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
         <div class="fix-banner">
@@ -69,7 +68,7 @@
                               {{item.starttimedate | hindimonth:false}}
 
                           </h1>
-                  <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
+                  <a ng-href="{{item.bookticket}}" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
                               {{'BOOK TICKETS'|translate}}
                           </a>
                 </div>
@@ -79,8 +78,11 @@
         </div>
       </div>
     </div>
-    <div class="fixtures-make">
+    <div class="fixtures-make pb" ng-if="currentlang == 'en'">
       <img src="img/merchant.jpg" alt="merchant jpp" class="img-responsive">
+    </div>
+    <div class="fixtures-make pb" ng-if="currentlang == 'hi'">
+      <img src="img/Merchandise.jpg" alt="merchant jpp" class="img-responsive">
     </div>
   </div>
 </section>

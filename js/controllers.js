@@ -879,7 +879,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   console.log($scope.currentlang);
   globalFunc.changeLang = function() {
     $scope.currentlang = currentlang;
-
+    console.log($scope.currentlang);
   }
 
 
@@ -889,7 +889,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     item.isOpen = false;
     // item.classes = "panel-open";
   };
-  NavigationService.getSchedule(function(data) {
+  NavigationService.getScheduleSeason4(function(data) {
     $scope.schedules = data;
     console.log(data);
     $scope.schedules[0].isOpen = false;
