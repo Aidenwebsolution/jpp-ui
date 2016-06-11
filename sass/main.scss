@@ -731,9 +731,10 @@ hr {
   left: 50%;
   @include transform(translate(-50%,-50%));
   width: 100%;
-  // &.fixture-match1 {
-  //   top: 50%;
-  // }
+  &.fixture-match1 {
+    top: 50%;
+    height: 100%;
+  }
 }
 // .fixture-data{
 //   background: url(../img/fixture/banner.jpg);
@@ -1605,6 +1606,9 @@ img.fancybox-image {
   display: block;
   &.fix-logo-change {
     height: 160px;
+    &.vs {
+      margin-top: 0;
+    }
     img {
       width: 85%;
       margin: 0 auto;
@@ -2090,7 +2094,7 @@ a {
 }
 .matchnumber {
   position: relative;
-  top: 22px;
+  top: 0;
   .matcn-number-box {
     border-bottom: 50px solid $pink;
     border-left: 15px solid transparent;

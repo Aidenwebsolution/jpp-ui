@@ -17,60 +17,64 @@
 </section>
 <section class="mt100 mb100">
   <div class="container">
-    <div class="" ng-repeat="item in schedules track by $index">
-      {{item.fixture.id}}
-      <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
-      <div  ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
-        <div class="fix-banner">
-          <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
-          <div class="fixture-match text-center fixture-match1">
-            <div class="matchnumber">
-              <div class="matcn-number-box"></div>
-              <p>{{'Match'|translate}} - {{item.index}}</p>
-            </div>
-            <div class="row">
-              <div class="col-xs-5">
-                <div class="fix-logo fix-logo-change pull-right">
-                  <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+    <div class="min-w">
+      <div class="over-fl">
+        <div class="merchandise-ticket" ng-repeat="item in schedules track by $index">
+          <!-- {{item.fixture.id}} -->
+          <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
+          <div ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+            <div class="fix-banner">
+              <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+              <div class="fixture-match text-center fixture-match1">
+                <div class="matchnumber">
+                  <div class="matcn-number-box"></div>
+                  <p>{{'Match'|translate}} - {{item.index}}</p>
                 </div>
-              </div>
-              <div class="col-xs-2">
-                <div class="fix-logo fix-logo-change vs">
-                  <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                <div class="row">
+                  <div class="col-xs-5">
+                    <div class="fix-logo fix-logo-change pull-right">
+                      <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                    </div>
+                  </div>
+                  <div class="col-xs-2">
+                    <div class="fix-logo fix-logo-change vs">
+                      <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    <div class="fix-logo fix-logo-change pull-left">
+                      <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xs-5">
-                <div class="fix-logo fix-logo-change pull-left">
-                  <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="text-center match-time">
-                  <h1 class="capital f-23" ng-if="currentlang=='en'">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="text-center match-time">
+                      <h1 class="capital f-23" ng-if="currentlang=='en'">
                             {{item.team1 | spaceToPlus}}<br>
                               {{item.stadium}}
                           </h1>
-                  <h1 class="capital f-23" ng-if="currentlang=='hi'">
+                      <h1 class="capital f-23" ng-if="currentlang=='hi'">
                             {{item.hinditeam1 | spaceToPlus}} <br>
                               {{item.hindistadium}}
                           </h1>
-                  <!-- <h1 class="upper mar-top">
+                      <!-- <h1 class="upper mar-top">
                               {{item.starttimedate|translate}}
                               ({{'IST'|translate}})
                           </h1> -->
-                  <h1 class="upper mar-top" ng-if="currentlang=='en'">
+                      <h1 class="upper mar-top" ng-if="currentlang=='en'">
                               {{item.starttimedate}}
                               ({{'IST'}})
                           </h1>
-                  <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                      <h1 class="upper mar-top" ng-if="currentlang=='hi'">
                               {{item.starttimedate | hindimonth:false}}
 
                           </h1>
-                  <a ng-href="{{item.bookticket}}" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
+                      <a ng-href="{{item.bookticket}}" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
                               {{'BOOK TICKETS'|translate}}
                           </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

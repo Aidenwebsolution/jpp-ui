@@ -2,7 +2,6 @@ $screen-xs: 480px !default;
 $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default;
-
 // @media only screen and (min-device-width: 1200px) and (max-device-width: 1500px){
 // .fixture-match{
 //   zoom:0.7;
@@ -30,7 +29,6 @@ $screen-lg: 1200px !default;
   nav a.menu-custom {
     padding: 25px 3px !important;
   }
-
   // .fixture-match {
   //   zoom: 0.7;
   // }
@@ -44,12 +42,10 @@ $screen-lg: 1200px !default;
       left: -70px;
     }
   }
-
   // Header
   .navbar-brand {
     padding: 8px 0;
   }
-
   //page
   .title-name {
     h1 {
@@ -114,7 +110,6 @@ $screen-lg: 1200px !default;
   .f25 {
     font-size: 17px;
   }
-
   // .fixture-match{
   //   zoom:0.6;
   // }
@@ -139,7 +134,6 @@ $screen-lg: 1200px !default;
   .li-footer {
     margin: 0 10px 4px 0;
   }
-
   //page
   .title-name {
     padding: 17px 50px 16px;
@@ -149,6 +143,21 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
+  .merchandise-ticket {
+    .fix-logo {
+      height: 80px !important;
+    }
+    .fix-logo {
+      width: 100px !important;
+      height: 80px !important;
+    }
+    .match-time h1 {
+      font-size: 15px !important;
+    }
+    .mt15 {
+      margin-top: 8px;
+    }
+  }
   .news-logo {
     zoom: 0.8;
   }
@@ -268,7 +277,6 @@ $screen-lg: 1200px !default;
     font-size: 25px;
     margin: 8px 0 0;
   }
-
   // .fixture-match {
   //   zoom: 0.5;
   // }
@@ -376,7 +384,6 @@ $screen-lg: 1200px !default;
       font-size: 18px;
     }
   }
-
   // Header
   .navbar-toggle {
     border-color: #4ECAF5 !important;
@@ -397,7 +404,7 @@ $screen-lg: 1200px !default;
       text-align: center;
     }
   }
-  .home{
+  .home {
     padding-top: 50px;
   }
   .nav {
@@ -423,7 +430,7 @@ $screen-lg: 1200px !default;
       }
     }
   }
-  .home{
+  .home {
     padding-top: 50px;
   }
   .banner-title {
@@ -448,7 +455,6 @@ $screen-lg: 1200px !default;
   .mr70 {
     margin-right: 0;
   }
-
   // /footer
   .name-sponser {
     text-align: center;
@@ -524,32 +530,55 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .merchandise-ticket {
+    .matchnumber {
+      .matcn-number-box {
+        border-bottom: 25px solid #ee4a9b;
+        width: 100px;
+      }
+      p {
+        font-size: 12px;
+        top: 4px;
+      }
+    }
+    .fix-logo {
+      height: 45px !important;
+    }
+    .match-time h1 {
+      font-size: 11px !important;
+      margin-bottom: 0;
+    }
+    .fix-logo.fix-logo-change img {
+      width: 50%;
+    }
+    .fix-logo.fix-logo-change.vs img {
+      margin-top: 10px;
+    }
+  }
   .language-holder {
     height: auto;
   }
   .language-holder .pull-right {
-      float: none !important;
-      margin: 5px 0 0;
+    float: none !important;
+    margin: 5px 0 0;
   }
   .navbar-fixed-top {
-      top: 63px;
+    top: 63px;
   }
   .home {
-      padding-top: 114px;
+    padding-top: 114px;
   }
   .gallery-tab ul li {
     border-right: 0;
   }
-
   .match-center+.btn-sucess {
     display: block;
     font-size: 7px;
     padding: 1px 2px;
   }
-
-.home-ribbon {
+  .home-ribbon {
     font-size: 9px;
-}
+  }
   .pink-splasher {
     max-width: 170px;
     display: block;
@@ -557,7 +586,7 @@ $screen-lg: 1200px !default;
   }
   .mbanner {
     padding: 5px 0 0;
-    font-size: 24px
+    font-size: 24px;
   }
   .pad30 ul li {
     padding: 0 12px;
@@ -601,7 +630,6 @@ $screen-lg: 1200px !default;
   .font-16 {
     font-size: 16px;
   }
-
   //menu
   nav {
     li {
@@ -622,9 +650,7 @@ $screen-lg: 1200px !default;
         li {
           background: -webkit-linear-gradient(#4ac3ed, #217d9e)!important;
           background: linear-gradient(#4ac3ed, #217d9e)!important;
-          a {
-
-          }
+          a {}
         }
       }
     }
@@ -639,7 +665,6 @@ $screen-lg: 1200px !default;
   .navbar .col-md-10 {
     padding: 0;
   }
-
   //end menu
   .sliders .play-img {
     height: 50px;
@@ -789,7 +814,6 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: 480px) {
-
   // .news-logo {
   // zoom:0.5;
   // }
@@ -939,7 +963,6 @@ $screen-lg: 1200px !default;
   .modal-dialog {
     width: 70%;
   }
-
   //     .slider .carousel-control.right {
   //     right: -48px;
   // }
@@ -1104,15 +1127,20 @@ $screen-lg: 1200px !default;
     width: 50px !important;
     height: 50px !important;
   }
-  .email-foot{
+  .email-foot {
     text-align: center;
   }
 }
 @media (max-width: 580px) {
+  .merchandise-ticket {
+    .fix-banner {
+      width: 420px;
+    }
+  }
   .contain-fixtures {
     width: auto;
   }
-  .min-w.ng-scope {
+  .min-w {
     overflow: auto;
   }
   .over-fl {
@@ -1123,7 +1151,6 @@ $screen-lg: 1200px !default;
     width: 480px;
   }
   .fixture {
-
     // width: 320px;
     // overflow: hidden;
     .fixtures-done .todo {
