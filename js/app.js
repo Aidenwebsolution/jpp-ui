@@ -5,13 +5,12 @@ var firstapp = angular.module('firstapp', [
     'templateservicemod',
     'navigationservice',
     'angular-loading-bar',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'angulartics',
+    'angulartics.google.analytics'
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider, $locationProvider) {
-
-
-
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
     cfpLoadingBarProvider.includeBar = true;
@@ -19,7 +18,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
 
     $stateProvider
         .state('home', {
-            url: "/home",
+            url: "/",
             templateUrl: "views/template.html",
             controller: 'HomeCtrl'
         })
@@ -43,15 +42,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('wallpapper-inner', {
-            url: "/wallpaper-inner/:id",
-            templateUrl: "views/template.html",
-            controller: 'WallpapperInnerCtrl'
-        })
-        .state('fan-corner', {
-            url: "/fan-corner",
-            templateUrl: "views/template.html",
-            controller: 'FanCornerCtrl'
-        })
+        url: "/wallpaper-inner/:id",
+        templateUrl: "views/template.html",
+        controller: 'WallpapperInnerCtrl'
+    })
+
+    .state('fan-corner', {
+        url: "/fan-corner",
+        templateUrl: "views/template.html",
+        controller: 'FanCornerCtrl'
+    })
 
     .state('gallery', {
         url: "/gallery",
@@ -99,7 +99,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         $locationProvider.html5Mode(true);
     }
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
 
 });
 firstapp.directive('fancyboxThumb', function() {
@@ -443,11 +443,11 @@ firstapp.filter('spaceLessFive', function() {
 });
 firstapp.filter('hindimonth', function() {
     return function(date, onlymonth) {
-      date = new Date(date);
-      var onlyday = date.getDate();
-      var onlyyear = date.getFullYear();
-      var day = "";
-      var dayname= "";
+        date = new Date(date);
+        var onlyday = date.getDate();
+        var onlyyear = date.getFullYear();
+        var day = "";
+        var dayname = "";
         if (date) {
             if (onlymonth) {
 
@@ -490,70 +490,70 @@ firstapp.filter('hindimonth', function() {
                         break;
                 };
                 return onlyday + " " + day + " " + onlyyear;
-            }else{
-              switch (date.getMonth()) {
-                  case 0:
-                      day = "जनवरी";
-                      break;
-                  case 1:
-                      day = "फरवरी";
-                      break;
-                  case 2:
-                      day = "मार्च";
-                      break;
-                  case 3:
-                      day = "अप्रैल";
-                      break;
-                  case 4:
-                      day = "मई";
-                      break;
-                  case 5:
-                      day = "जून";
-                      break;
-                  case 6:
-                      day = "जुलाई";
-                      break;
-                  case 7:
-                      day = "अगस्त";
-                      break;
-                  case 8:
-                      day = "सितम्बर";
-                      break;
-                  case 9:
-                      day = "अक्टूबर";
-                      break;
-                  case 10:
-                      day = "नवंबर";
-                      break;
-                  case 11:
-                      day = "दिसंबर";
-                      break;
-              };
-              switch (date.getDay()) {
-                  case 0:
-                      dayname = "रविवार";
-                      break;
-                  case 1:
-                      dayname = "सोमवार";
-                      break;
-                  case 2:
-                      dayname = "मंगलवर";
-                      break;
-                  case 3:
-                      dayname = "बुधवार";
-                      break;
-                  case 4:
-                      dayname = "गुरुवार";
-                      break;
+            } else {
+                switch (date.getMonth()) {
+                    case 0:
+                        day = "जनवरी";
+                        break;
+                    case 1:
+                        day = "फरवरी";
+                        break;
+                    case 2:
+                        day = "मार्च";
+                        break;
+                    case 3:
+                        day = "अप्रैल";
+                        break;
+                    case 4:
+                        day = "मई";
+                        break;
+                    case 5:
+                        day = "जून";
+                        break;
+                    case 6:
+                        day = "जुलाई";
+                        break;
+                    case 7:
+                        day = "अगस्त";
+                        break;
+                    case 8:
+                        day = "सितम्बर";
+                        break;
+                    case 9:
+                        day = "अक्टूबर";
+                        break;
+                    case 10:
+                        day = "नवंबर";
+                        break;
+                    case 11:
+                        day = "दिसंबर";
+                        break;
+                };
+                switch (date.getDay()) {
+                    case 0:
+                        dayname = "रविवार";
+                        break;
+                    case 1:
+                        dayname = "सोमवार";
+                        break;
+                    case 2:
+                        dayname = "मंगलवर";
+                        break;
+                    case 3:
+                        dayname = "बुधवार";
+                        break;
+                    case 4:
+                        dayname = "गुरुवार";
+                        break;
 
-                  case 5:
-                      dayname = "शुक्रवार";
-                      break;
-                  case 6:
-                      dayname = "शनिवार";
-                      break;
-              };
-  return dayname +" " + onlyday + " " + day + " " + onlyyear;
+                    case 5:
+                        dayname = "शुक्रवार";
+                        break;
+                    case 6:
+                        dayname = "शनिवार";
+                        break;
+                };
+                return dayname + " " + onlyday + " " + day + " " + onlyyear;
 
             }
         }

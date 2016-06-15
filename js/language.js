@@ -346,6 +346,7 @@ var LanguageEnglish = {
   "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)": "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)",
   "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)": "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)",
   "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)": "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)",
+  "Sign up and become part of the Panther Family. Exclusive offers and lots more": "Sign up and become part of the Panther Family. Exclusive offers and lots more",
 };
 
 var LanguageHindi = {
@@ -707,4 +708,5 @@ var LanguageHindi = {
   "Home": " होम",
   "GAME": "गेम",
   "Match": "मैच",
+  "Sign up and become part of the Panther Family. Exclusive offers and lots more":"साइन अप करें और पैंथर परिवार का हिस्सा बनो। विशेष प्रस्तावों और बहुत अधिक",
 };
