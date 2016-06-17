@@ -1422,10 +1422,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.friends = {};
   var friendsjson = {"name":"","email":""};
   $scope.friends.json = [];
+  $scope.friends.json.push(friendsjson);
+
   $scope.addFriend = function(){
     console.log(friendsjson);
     friendsjson = {"name":"","email":""};
-
     $scope.friends.json.push(friendsjson);
   };
   $scope.submitFriends = function(){
@@ -1439,9 +1440,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
   }
   $scope.cancelFrnd = function(index){
-    console.log("clicked");
-    console.log(index);
-    $scope.friends.json.splice(index,1);
+    if ($scope.friends.json.length == 1) {
+      $scope.friends.json = [];
+      $scope.friends.json.push({"name":"","email":""});
+    }else {
+      $scope.friends.json.splice(index,1);
+    }
   }
 
 
