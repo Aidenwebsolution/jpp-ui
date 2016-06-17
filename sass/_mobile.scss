@@ -531,6 +531,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .opi {
+    display: none;
+  }
   .iheader h1.pink-smoke:before {
     display: none;
   }

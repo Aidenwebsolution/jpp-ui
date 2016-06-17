@@ -2229,5 +2229,11 @@ a.ilogo {
 .iform {
     padding-bottom: 20px;
 }
+.form-group {
+  position: relative;
+}
+.errmsg {
+  color: $brand-danger;
+}
 @import "mobile";
 @import "style";
