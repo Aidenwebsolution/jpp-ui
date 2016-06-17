@@ -531,6 +531,9 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .iheader h1.pink-smoke:before {
+    display: none;
+  }
   .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 400px;
   }
@@ -784,7 +787,7 @@ $screen-lg: 1200px !default;
     width: 100%;
   }
   .btn {
-    font-size: 11px;
+    font-size: 14px;
   }
   .font-base {
     p {
