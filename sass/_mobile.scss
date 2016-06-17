@@ -143,6 +143,7 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
+
   .merchandise-ticket {
     .fix-logo {
       height: 80px !important;
@@ -530,6 +531,14 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-xs-max) {
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 400px;
+  }
+  nav li.high:before {
+    height: 22px;
+    top: -4px;
+    left: 0;
+  }
   .merchandise-ticket {
     .matchnumber {
       .matcn-number-box {

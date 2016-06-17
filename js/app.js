@@ -71,6 +71,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'NewsMediaCtrl'
     })
 
+    .state('invite-friends', {
+        url: "/invite-friends",
+        templateUrl: "views/template.html",
+        controller: 'InviteFriendsCtrl'
+    })
+
     .state('news-detail', {
         url: "/news-detail",
         templateUrl: "views/template.html",

@@ -1409,6 +1409,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+.controller('InviteFriendsCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("invite-friends");
+  $scope.menutitle = NavigationService.makeactive("Invite Friends");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+
+  TemplateService.header = "";
+  TemplateService.footer = "";
+
+
+})
+
 .controller('footerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
