@@ -21,38 +21,38 @@
       <div class="col-md-6">
         <div class="form-group">
             <label class="control-label">Your Details</label>
-            <input type="text" class="form-control" placeholder="First Name" name="firstname" ng-model="inviteForm.firstname" required>
+            <input type="text" class="form-control" placeholder="First Name" name="firstname" ng-model="friends.name" required>
             <p class="errmsg" ng-show="invite.firstname.$error.required && invite.firstname.$dirty">Above field is required!</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label class="control-label opi">Details</label>
-            <input type="email" class="form-control" placeholder="Email Address" name="email" ng-model="inviteForm.email" required>
+            <input type="email" class="form-control" placeholder="Email Address" name="email" ng-model="friends.email" required>
             <p class="errmsg" ng-show="invite.email.$error.required && invite.email.$dirty">Above field is required!</p>
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" ng-repeat="frnd in friends.json track by $index">
       <div class="col-md-6">
         <div class="form-group">
-            <label class="control-label">Friends Details</label>
-            <input type="text" class="form-control" placeholder="First Name" name="firstnamefriend" ng-model="inviteForm.firstnamefriend" required>
+            <label class="control-label">Friend Details</label>
+            <input type="text" class="form-control" placeholder="First Name" name="firstnamefriend" ng-model="frnd.name" required>
             <p class="errmsg" ng-show="invite.firstnamefriend.$error.required && invite.firstnamefriend.$dirty">Above field is required!</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label class="control-label opi">Details</label>
-            <input type="email" class="form-control" placeholder="Email Address" name="emailfriend" ng-model="inviteForm.emailfriend" required>
+            <input type="email" class="form-control" placeholder="Email Address" name="emailfriend" ng-model="frnd.email" required>
             <p class="errmsg" ng-show="invite.emailfriend.$error.required && invite.emailfriend.$dirty">Above field is required!</p>
         </div>
       </div>
     </div>
 
-    <button class="btn btn-primary btn-by"><img src="img/plus-circle.png" alt="Plus Circle" ng-click="">Add a friend</button>
-    <button class="btn btn-primary btn-by" ng-disabled="invite.$invalid">Submit</button>
+    <button class="btn btn-primary btn-by" ng-click="addFriend()"><img src="img/plus-circle.png" alt="Plus Circle">Add a friend</button>
+    <button class="btn btn-primary btn-by" ng-disabled="invite.$invalid" ng-click="submitFriends()">Submit</button>
 
   </div>
 </form>
