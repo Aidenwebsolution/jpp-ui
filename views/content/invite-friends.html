@@ -37,8 +37,7 @@
     <div class="row" ng-repeat="frnd in friends.json track by $index">
       <div class="col-md-6">
         <div class="form-group">
-            <label class="control-label">Friend Details</label>
-            <label class="control-label errmsg" ng-click="cancelFrnd($index)">    ---</label>
+            <label class="control-label">Friend Details <span class="pointer" ng-click="cancelFrnd($index)"><i class="fa fa-trash-o"></i></span></label>
             <input type="text" class="form-control" placeholder="First Name" ng-model="frnd.name" required>
             <p class="errmsg" ng-show="invite.firstnamefriend.$error.required && invite.firstnamefriend.$dirty">Above field is required!</p>
         </div>

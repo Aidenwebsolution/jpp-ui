@@ -2235,5 +2235,8 @@ a.ilogo {
 .errmsg {
   color: $brand-danger;
 }
+.pointer {
+  cursor: pointer;
+}
 @import "mobile";
 @import "style";
