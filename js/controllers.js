@@ -1409,7 +1409,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('InviteFriendsCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+.controller('InviteFriendsCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter, $uibModal) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("invite-friends");
   $scope.menutitle = NavigationService.makeactive("Invite Friends");
@@ -1429,16 +1429,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     friendsjson = {"name":"","email":""};
     $scope.friends.json.push(friendsjson);
   };
+  $scope.success = function() {
+    languagePicker = $uibModal.open({
+      animation: true,
+      templateUrl: 'views/modal/success.html',
+      size: 'md',
+      scope: $scope
+    });
+  };
   $scope.submitFriends = function(){
 
     NavigationService.submitFriends($scope.friends, function(data){
       if (data.value) {
-        alert("Thank You");
-      }else {
-        alert("Sorry Try later.");
+        $scope.successmsg = "Thank you for inviting your friend";
+        $scope.success();
+      } else {
+        $scope.successmsg = "Sorry, Try again later";
+        $scope.success();
       }
     });
-  }
+  };
   $scope.cancelFrnd = function(index){
     if ($scope.friends.json.length == 1) {
       $scope.friends.json = [];
@@ -1446,7 +1456,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }else {
       $scope.friends.json.splice(index,1);
     }
-  }
+  };
+
 
 
 })

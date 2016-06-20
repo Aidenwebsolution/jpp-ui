@@ -2238,5 +2238,19 @@ a.ilogo {
 .pointer {
   cursor: pointer;
 }
+.primary-bg {
+  color: white;
+  background-color: $brand-primary;
+  position: relative;
+}
+.padder {
+  padding: 40px;
+}
+.pa-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
 @import "mobile";
 @import "style";
