@@ -1442,6 +1442,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     NavigationService.submitFriends($scope.friends, function(data){
       if (data.value) {
         $scope.successmsg = "Thank you for inviting your friend";
+        $( '#invite' ).each(function(){
+    this.reset();
+});
+        // $scope.friends.email = "";
+        // $scope.friends.name = "";
+        $scope.friends.json = [];
+        friendsjson = {"name":"","email":""};
+        $scope.friends.json.push(friendsjson);
         $scope.success();
       } else {
         $scope.successmsg = "Sorry, Try again later";
