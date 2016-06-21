@@ -347,6 +347,18 @@ var LanguageEnglish = {
   "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)": "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)",
   "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)": "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)",
   "Sign up and become part of the Panther Family. Exclusive offers and lots more": "Sign up and become part of the Panther Family. Exclusive offers and lots more",
+
+  "Ajay Kumar": "Ajay Kumar",
+
+
+  "School u19 (Gold) 4-10-2011 to 8-10-2011, Junior National Championship 27-12-2011 to 30-12-2011  (Bronze), Senior National Championship 24-11-2015 to 29-11-2015 (Bronze), Federation cup 1-5-2016 to 5-5-2016 (Gold)": "School u19 (Gold) 4-10-2011 to 8-10-2011, Junior National Championship 27-12-2011 to 30-12-2011  (Bronze), Senior National Championship 24-11-2015 to 29-11-2015 (Bronze), Federation cup 1-5-2016 to 5-5-2016 (Gold)",
+
+
+  "Jawahar": "Jawahar",
+
+  "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015":"Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015",
+
+
 };
 
 var LanguageHindi = {
@@ -708,5 +720,12 @@ var LanguageHindi = {
   "Home": " होम",
   "GAME": "गेम",
   "Match": "मैच",
-  "Sign up and become part of the Panther Family. Exclusive offers and lots more":"साइन अप करें और पैंथर परिवार का हिस्सा बनो। विशेष प्रस्तावों और बहुत अधिक",
+  "Sign up and become part of the Panther Family. Exclusive offers and lots more": "साइन अप करें और पैंथर परिवार का हिस्सा बनो। विशेष प्रस्तावों और बहुत अधिक",
+  "Ajay Kumar": "अजय कुमार",
+
+  "School u19 (Gold) 4-10-2011 to 8-10-2011, Junior National Championship 27-12-2011 to 30-12-2011  (Bronze), Senior National Championship 24-11-2015 to 29-11-2015 (Bronze), Federation cup 1-5-2016 to 5-5-2016 (Gold)": "स्कूल अंडर 19 (गोल्ड) 4-10-2011 से 8-10-2011, जूनियर नेशनल चैम्पियनशिप 27-12-2011 से 30-12-2011  (ब्रोंज़), सीनियर नेशनल चैम्पियनशिप 24-11-2015 से 29-11-2015 (ब्रोंज़), फ़ेडरेशन कप 1-5-2016 से 5-5-2016 (गोल्ड)",
+
+  "Jawahar": "जवाहर",
+
+  "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015":"सिल्वर पदक - 45 th हरयाणा स्टेट स्कूल टूर्नामेंट ब्रोंज़ पदक - हिमाचल प्रदेश मे आयोजित 56 th नेशनल स्कूल गेम्स 2010 - 11 प्रतिभागी 46 th हरयाणा स्टेट स्कूल टूर्नामेंट 2011 - 12 प्रतिभागी दिल्ली स्टेट कबड्डी चैम्पियनशिप 2012 - 13 गोल्ड - हरयाणा स्टेट चैम्पियनशिप 2013 - 14 सिल्वर पदक - 61 st सीनियर नेशनल कबड्डी चैम्पियनशिप 2013 - 14 सिल्वर पदक - 62 nd सीनियर नेशनल कबड्डी चैम्पियनशिप 2014 - 15 सिल्वर पदक - 35 th नेशनल गेम्स केरल 2015 ",
 };
