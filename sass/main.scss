@@ -2250,6 +2250,9 @@ a.ilogo {
   position: absolute;
   top: 0;
   right: 0;
+  line-height: 0;
+  font-size: 18px;
+  padding: 5px;
   cursor: pointer;
 }
 @import "mobile";
