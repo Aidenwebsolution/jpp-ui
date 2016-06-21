@@ -1163,6 +1163,17 @@ $screen-lg: 1200px !default;
     }
   }
 }
+.mobile-hide{
+  display: none;
+}
+.desktop-hide{
+  display: block;
+  text-align: center;
+  .height-made{
+    width: 290px;
+    height: 170px;
+  }
+}
   .contain-fixtures {
     width: auto;
   }

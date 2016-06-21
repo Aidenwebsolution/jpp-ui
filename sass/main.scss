@@ -2255,5 +2255,11 @@ a.ilogo {
   padding: 5px;
   cursor: pointer;
 }
+.mobile-hide{
+  display: block;
+}
+.desktop-hide{
+  display: none;
+}
 @import "mobile";
 @import "style";
