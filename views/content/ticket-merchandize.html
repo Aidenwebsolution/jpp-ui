@@ -17,14 +17,14 @@
 </section>
 <section class="mt100 mb100">
   <div class="container">
-    <div class="min-w">
-      <div class="over-fl">
+    <div class="merchant-flow">
+      <div class="">
         <div class="merchandise-ticket" ng-repeat="item in schedules track by $index">
           <!-- {{item.fixture.id}} -->
           <!-- <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div> -->
           <div ng-if="item.ishome=='1'" class="fixture-data pb" ng-if="item.fixture.id == null || item.fixture.id == undefined">
             <div class="fix-banner">
-              <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+              <img src="img/fixture/banner1.jpg" class="img-responsive mobile mobile-img" alt="Jaipur Pink Panthers">
               <div class="fixture-match text-center fixture-match1">
                 <div class="matchnumber">
                   <div class="matcn-number-box"></div>
@@ -83,10 +83,14 @@
       </div>
     </div>
     <div class="fixtures-make pb" ng-if="currentlang == 'en'">
-      <img src="img/merchant.jpg" alt="merchant jpp" class="img-responsive">
+      <a href="http://www.didasportswear.com/jaipur-pink-panthers.html" target="_blank">
+        <img src="img/Merchandise_English.jpg" alt="merchant jpp" class="img-responsive">
+      </a>
     </div>
     <div class="fixtures-make pb" ng-if="currentlang == 'hi'">
-      <img src="img/Merchandise.jpg" alt="merchant jpp" class="img-responsive">
+      <a href="http://www.didasportswear.com/jaipur-pink-panthers.html" target="_blank">
+        <img src="img/Merchandise_Hindi.jpg" alt="merchant jpp" class="img-responsive">
+      </a>
     </div>
   </div>
 </section>

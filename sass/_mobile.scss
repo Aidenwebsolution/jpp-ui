@@ -1152,9 +1152,17 @@ $screen-lg: 1200px !default;
   }
   .merchandise-ticket {
     .fix-banner {
-      width: 420px;
+      width: 290px;
+    }
+    .mobile-img{
+      height: 170px;
+    }
+    .vs{
+      img{
+      width: 300px!important;
     }
   }
+}
   .contain-fixtures {
     width: auto;
   }
