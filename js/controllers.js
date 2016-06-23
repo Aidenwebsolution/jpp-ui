@@ -352,30 +352,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.news = $scope.hindibanner;
     } else if (lang == 'en') {
       $scope.news = $scope.englishbanner;
-
     }
     $scope.changeSlide($scope.news[0]);
 
   };
 
-  // NavigationService.getLatestMatch(function(data) {
-  //     $scope.latestmatch = data;
-  //     // $scope.schedule = $filter('orderBy')($scope.schedule, "order");
-  //
-  //     // $scope.refreshTimer($scope.latestmatch.starttimedate);
-  //     console.log($scope.latestmatch);
-  //
-  //     $scope.calendarDate = {};
-  //     var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
-  //     var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-  //     var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
-  //     var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-  //     console.log(date1);
-  //     console.log(date2);
-  //       $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-  //     $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-  //     console.log($scope.calendarDate);
-  // });
+  NavigationService.getLatestMatch(function(data) {
+    console.log(data);
+      $scope.latestmatch = data;
+      $scope.schedule = $filter('orderBy')($scope.schedule, "order");
+
+      $scope.refreshTimer($scope.latestmatch.starttimedate);
+      console.log($scope.latestmatch);
+
+      $scope.calendarDate = {};
+      var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
+      var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+      var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
+      var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+      console.log(date1);
+      console.log(date2);
+        $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+      $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+      console.log($scope.calendarDate);
+  });
   $scope.refreshTimer = function(eventTime) {
     eventTime = new Date(eventTime);
     console.log(eventTime);
@@ -403,41 +403,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     }, 1000);
   };
-  NavigationService.getScheduleSeason4(function(data) {
-    console.log("getScheduleSeason4");
-    $scope.openers = data[0];
-    console.log($scope.openers);
-    $scope.refreshTimer($scope.openers.starttimedate);
-    $scope.calendarDate = {};
-    var oldDateObj1 = new Date($scope.openers.starttimedate);
-    var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-    var oldDateObj2 = new Date($scope.openers.starttimedate);
-    var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-    console.log(date1);
-    console.log(date2);
-    $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-    $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-    console.log($scope.calendarDate);
-  });
-  NavigationService.getHomeGameSeason4(function(data) {
-    $scope.homegame = data;
-    $scope.calendarDatehome = [];
-    var i = 0;
-    _.each($scope.homegame, function(key) {
-      var oldDateObj1 = new Date(key.starttimedate);
-      var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-      var oldDateObj2 = new Date(key.starttimedate);
-      var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-      $scope.calendarDatehome.push({
-        from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
-        to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
-      });
-
-      i++;
-    });
-    console.log("calendar dates");
-    console.log($scope.calendarDatehome);
-  });
+  // NavigationService.getScheduleSeason4(function(data) {
+  //   console.log("getScheduleSeason4");
+  //   $scope.openers = data[0];
+  //   console.log($scope.openers);
+  //   $scope.refreshTimer($scope.openers.starttimedate);
+  //   $scope.calendarDate = {};
+  //   var oldDateObj1 = new Date($scope.openers.starttimedate);
+  //   var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+  //   var oldDateObj2 = new Date($scope.openers.starttimedate);
+  //   var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+  //   console.log(date1);
+  //   console.log(date2);
+  //   $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+  //   $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+  //   console.log($scope.calendarDate);
+  // });
+  // NavigationService.getHomeGameSeason4(function(data) {
+  //   $scope.homegame = data;
+  //   $scope.calendarDatehome = [];
+  //   var i = 0;
+  //   _.each($scope.homegame, function(key) {
+  //     var oldDateObj1 = new Date(key.starttimedate);
+  //     var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+  //     var oldDateObj2 = new Date(key.starttimedate);
+  //     var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+  //     $scope.calendarDatehome.push({
+  //       from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+  //       to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+  //     });
+  //
+  //     i++;
+  //   });
+  //   console.log("calendar dates");
+  //   console.log($scope.calendarDatehome);
+  // });
   NavigationService.getallpoint(function(data) {
     $scope.table = data;
     $scope.table = $filter('orderBy')($scope.table, "order");
