@@ -431,7 +431,15 @@ firstapp.directive("scroll", function($window) {
         });
     };
 });
-
+firstapp.filter('twodigit',function(){
+  return function(value) {
+      if(value < 10){
+        return '0'+value;
+      }else{
+        return value;
+      }
+  };
+});
 firstapp.filter('spaceToPlus', function() {
     return function(text) {
         if (text) {

@@ -375,6 +375,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
       $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
       console.log($scope.calendarDate);
+      $scope.latestMatchOn = false;
   });
   $scope.refreshTimer = function(eventTime) {
     eventTime = new Date(eventTime);
@@ -382,8 +383,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.rightNow = new Date();
     $scope.diffTime = eventTime - $scope.rightNow;
     var duration = moment.duration($scope.diffTime, 'milliseconds');
-
-
 
     $interval(function() {
 

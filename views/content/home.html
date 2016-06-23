@@ -207,7 +207,6 @@
 
               <div class="head-table text-center">
                 <h1 class="color-white font-tbl" ng-hide="latestMatchOn">{{'NEXT MATCH'|translate}}</h1>
-                <!-- <h1 class="color-white font-tbl" ng-show="latestMatchOn">LIVE UPDATES</h1> -->
                 <h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'LIVE UPDATE'|translate}}</h1>
               </div>
               <div class="match-schd mt30">
@@ -215,9 +214,7 @@
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                     <div class="new-logo">
                       <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
-                      <!-- <img src="img/team/8.png" class="img-responsive"> -->
-                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score1}}</div>
-                      <!-- <div class="scorer text-center" ng-show="latestMatchOn">35</div> -->
+                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score1 || '0'}}</div>
                     </div>
                   </div>
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -228,9 +225,7 @@
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                     <div class="new-logo">
                       <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
-                      <!-- <img src="img/team/4.png" class="img-responsive"> -->
-                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score2}}</div>
-                      <!-- <div class="scorer text-center" ng-show="latestMatchOn">21</div> -->
+                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score2 || '0'}}</div>
                     </div>
                   </div>
                 </div>
@@ -253,7 +248,7 @@
                     <li>
                       <div class="time-hrs">
                         <h1 class="color-white font-tbl">
-                          <span>{{countdown.days}}</span>
+                          <span>{{countdown.days | twodigit}}</span>
                           <b>:</b>
                         </h1>
                         <span class="color-white pr20">DAYS</span>
@@ -262,7 +257,7 @@
                     <li>
                       <div class="time-hrs">
                         <h1 class="color-white font-tbl">
-                          <span>{{countdown.hours}}</span>
+                          <span>{{countdown.hours | twodigit}}</span>
                           <b>:</b>
                         </h1>
                         <span class="color-white pr20">HOURS</span>
@@ -271,7 +266,7 @@
                     <li>
                       <div class="time-hrs">
                         <h1 class="color-white font-tbl">
-                          <span>{{countdown.minutes}}</span>
+                          <span>{{countdown.minutes | twodigit}}</span>
                           <b>:</b>
                         </h1>
                         <span class="color-white pr20">MINUTES</span>
@@ -280,7 +275,7 @@
                     <li>
                       <div class="time-hrs">
                         <h1 class="color-white font-tbl">
-                          <span>{{countdown.seconds}}</span>
+                          <span>{{countdown.seconds | twodigit}}</span>
                         </h1>
                         <span class="color-white">SECONDS{{starttimedate | date}}</span>
                       </div>
