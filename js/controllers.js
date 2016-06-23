@@ -384,17 +384,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     var duration = moment.duration($scope.diffTime, 'milliseconds');
 
 
-    if (duration._milliseconds > 0) {
 
-      $scope.latestMatchOn = false;
-    } else {
-
-      $scope.latestMatchOn = true;
-    }
     $interval(function() {
 
       duration = moment.duration(duration - 1000, 'milliseconds');
+      if (duration._milliseconds > 0) {
 
+        $scope.latestMatchOn = false;
+      } else {
+
+        $scope.latestMatchOn = true;
+      }
       $scope.countdown.months = duration.months();
       $scope.countdown.days = duration.days();
       $scope.countdown.hours = duration.hours();

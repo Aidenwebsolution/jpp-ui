@@ -1,7 +1,7 @@
-var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
-// var mainurl = "http://192.168.1.106/jppbackend/index.php/";
-var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
-// var imgurl = "http://192.168.1.112/jppbackend/uploads/";
+// var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
+var mainurl = "http://192.168.1.107/jppbackend/index.php/";
+// var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
+var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
