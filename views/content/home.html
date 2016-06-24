@@ -214,7 +214,6 @@
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                     <div class="new-logo">
                       <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
-                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score1 || '0'}}</div>
                     </div>
                   </div>
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -225,9 +224,25 @@
                   <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                     <div class="new-logo">
                       <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
-                      <div class="scorer text-center" ng-show="latestMatchOn">{{latestmatch.score2 || '0'}}</div>
                     </div>
                   </div>
+                </div>
+                <div class="gradient-bar homeie" ng-show="latestMatchOn">
+                  <div class="row">
+                    <div class="col-md-4 padding0 col-xs-4">
+                      <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
+                    </div>
+                    <div class="col-md-4 padding0 col-xs-4">
+
+                    </div>
+                    <div class="col-md-4 padding0 col-xs-4">
+                      <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
                 </div>
               </div>
               <!-- <div class="text-center color-white">

@@ -1875,6 +1875,17 @@ img.fancybox-image {
   top: 50%;
   z-index: 0;
   padding: 4px 0;
+  &.homeie {
+    position: static;
+    margin-top: 40px;
+    height: 44px;
+    @include transform(translateY(-50%));
+    .scorer {
+      @include text-stroke(2, #d3f3ff);
+      margin-top: -35px;
+      font-size: 75px;
+    }
+  }
 }
 .high-z {
   z-index: 1;

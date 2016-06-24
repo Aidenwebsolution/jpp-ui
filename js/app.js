@@ -449,11 +449,13 @@ firstapp.filter('spaceToPlus', function() {
 
     };
 });
-firstapp.filter('spaceLessFive', function() {
+firstapp.filter('spaceToDash', function() {
     return function(text) {
-        var str = text.replace('/\s+/g', '').toLowerCase();
-        str = str.slice(0, 5);
+      if(text) {
+        console.log(text);
+        var str = text.replace('/\s+/g', '-').toLowerCase();
         return str;
+      }
     };
 });
 firstapp.filter('hindimonth', function() {
