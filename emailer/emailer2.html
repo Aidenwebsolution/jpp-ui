@@ -59,22 +59,22 @@ font-family: 'Oswald'; font-style: normal; font-weight: 700; src: local('Oswald 
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <img src="http://jaipurpinkpanthers.com/emailers/fancor/s1.jpg">
+                                                        <img src="http://jaipurpinkpanthers.com/emailers/fancor/sh1.jpg">
                                                     </td>
                                                     <td>
-                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/s2.jpg"></a>
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/sh2.jpg"></a>
                                                     </td>
                                                     <td>
-                                                        <a href="https://twitter.com/intent/tweet?url=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=twitter&utm_medium=referral&utm_campaign=tw_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/s3.jpg"></a>
+                                                        <a href="https://twitter.com/intent/tweet?url=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=twitter&utm_medium=referral&utm_campaign=tw_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/sh3.jpg"></a>
                                                     </td>
                                                     <td>
-                                                        <a href="mailto:https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=twitter&utm_medium=referral&utm_campaign=tw_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/s4.jpg"></a>
+                                                        <a href="mailto:https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=twitter&utm_medium=referral&utm_campaign=tw_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/sh4.jpg"></a>
                                                     </td>
                                                     <td>
-                                                        <a href="sms:?&body=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/s5.jpg"></a>
+                                                        <a href="sms:?&body=https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" target="_blank"><img src="http://jaipurpinkpanthers.com/emailers/fancor/sh5.jpg"></a>
                                                     </td>
                                                     <td>
-                                                        <img src="http://jaipurpinkpanthers.com/emailers/fancor/s6.jpg">
+                                                        <img src="http://jaipurpinkpanthers.com/emailers/fancor/sh6.jpg">
                                                     </td>
                                                 </tr>
                                             </tbody>
