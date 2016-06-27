@@ -1087,8 +1087,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       name: "Amit Nagar"
     }, {
-      name: "David Tsai"
-    }, {
       name: "Jasvir Singh"
     },{
       name: "Jawahar"
@@ -1096,9 +1094,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "Lo Chia Wei"
     }, {
       name: "Mahipal Narwal"
-    }, {
-      name: "Masayuki Shimokawa"
-    }, {
+    },{
       name: "Parveen Narwal"
     }, {
       name: "Parvesh Malik"
@@ -1179,17 +1175,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp: "2014-15 Junior National Games, 2015 U-19 School Games, 2016 Junior Asian Championship",
       desp2: "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)"
 
-    }, {
-      image: "img/player/p19.png",
-      name: "David Tsai",
-      desg: "Defender",
-      nationality: "Taiwan",
-      dob: "26",
-      jersyno: "20",
-      desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
-      desp2: "2014 Pro Kabaddi League (Gold)"
-
-    }, {
+    },
+    // {
+    //   image: "img/player/p19.png",
+    //   name: "David Tsai",
+    //   desg: "Defender",
+    //   nationality: "Taiwan",
+    //   dob: "26",
+    //   jersyno: "20",
+    //   desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
+    //   desp2: "2014 Pro Kabaddi League (Gold)"
+    //
+    // }, 
+    {
 
       image: "img/player/p3.png",
       name: "Jasvir Singh",
@@ -1227,17 +1225,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       jersyno: "12",
       desp: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games",
       desp2: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Championship (Silver), 2010 All India University (Gold), 2010 National Games (Gold)."
-
-    }, {
-      image: "img/player/p20.png",
-      name: "Masayuki Shimokawa",
-      desg: "Raider",
-      nationality: "Tokyo",
-      dob: "27",
-      desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
-      desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
-
-    }, {
+},
+    // }, {
+    //   image: "img/player/p20.png",
+    //   name: "Masayuki Shimokawa",
+    //   desg: "Raider",
+    //   nationality: "Tokyo",
+    //   dob: "27",
+    //   desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
+    //   desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
+    //
+    // }, {
+    {
       image: "img/player/p23.png",
       name: "Parveen Narwal",
       desg: "All Rounder",
