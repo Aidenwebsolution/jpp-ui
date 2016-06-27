@@ -1147,7 +1147,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.player = [{
-      image: "img/player/p20.png",
+      image: "img/player/p29.png",
       name: "Ajay Kumar",
       desg: "Raider",
       nationality: "Haryana",
@@ -1186,7 +1186,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
     //   desp2: "2014 Pro Kabaddi League (Gold)"
     //
-    // }, 
+    // },
     {
 
       image: "img/player/p3.png",
@@ -1199,16 +1199,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
 
     },{
-      image: "img/player/p20.png",
+      image: "img/player/p30.png",
       name: "Jawahar",
       desg: "All Rounder",
       nationality: "Haryana",
       dob: "21",
       jersyno: "111",
       desp2: "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015"
-
+      
     }, {
-      image: "img/player/p20.png",
+      image: "img/player/p31.png",
       name: "Lo Chia Wei",
       desg: "Raider",
       nationality: "New Taipei City",
