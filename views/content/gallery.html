@@ -31,22 +31,40 @@
 </section> -->
 <section class="mt70 mb100">
   <div class="container">
+    <div class="gallery-tab text-center custom-list">
+        <ul class="padding0">
+            <li ng-click="changeTabs(4)">
+                <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4 PHOTOS'|translate}}</h3>
+            </li>
+            <li ng-click="changeTabs(3)">
+                <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 PHOTOS'|translate}}</h3>
+            </li>
+        </ul>
+    </div>
     <div class="row">
       <div class="text-center" ng-if="slides.length <=0">
         <h1 class="color-primary">{{msg}}</h1>
       </div>
-      <div class="col-md-6 mb15 col-xs-12" ng-repeat="data in slides" ng-if="slides.length>0" ng-class="{'col-xs-12': data.type=='big'}">
+      <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides" ng-if="slides.length>0 && data.season=='2'" ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==4">
         <a ui-sref="gallery-inner({id:data.id})">
           <div class="gallery-album">
             <div class="album-cover">
               <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
               <div class="album-title text-center">
-                <div ng-if="currentlang=='en'">
-                <h4 class="color-primary f20">{{data.name}}</h4>
+                <h4 class="color-primary f20">{{data.name | translate}}</h4>
               </div>
-                <div ng-if="currentlang=='hi'">
-                <h4 class="color-primary f20">{{data.hindiname}}</h4>
-              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides" ng-if="slides.length>0 && data.season=='1'" ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==3">
+        <a ui-sref="gallery-inner({id:data.id})">
+          <div class="gallery-album">
+            <div class="album-cover">
+              <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
+              <div class="album-title text-center">
+                <h4 class="color-primary f20">{{data.name | translate}}</h4>
               </div>
             </div>
 
@@ -55,5 +73,4 @@
       </div>
     </div>
   </div>
-</section>
-</div>
+</section></div>

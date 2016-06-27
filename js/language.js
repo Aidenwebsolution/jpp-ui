@@ -358,6 +358,8 @@ var LanguageEnglish = {
 
   "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015":"Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015",
 
+  "SEASON 4 PHOTOS":  "SEASON 4 PHOTOS",
+  "SEASON 3 PHOTOS":  "SEASON 3 PHOTOS",
 
 };
 
@@ -384,6 +386,8 @@ var LanguageHindi = {
   "Fixtures & Results": "प्रतियोगिता एवं परिणाम",
   "Fixtures": "प्रतियोगिता",
   "Players": "खिलाड़ी",
+  "SEASON 4 PHOTOS":"सीज़न 4 चित्र",
+  "SEASON 3 PHOTOS":"सीज़न 3 चित्र",
   "Photo Gallery": "चित्र प्रदर्शनी",
   "JPP TV": "जेपीपी टीवी ",
   "Wallpapers": "वॉलपेपर",

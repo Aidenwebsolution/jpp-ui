@@ -714,6 +714,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       console.log($scope.videos);
     });
   };
+
+  $scope.season = 4;
+  $scope.changeTabs = function(data) {
+      $scope.season = data;
+      console.log($scope.season);
+  };
   $scope.changeTab = function(value) {
     if (value === true) {
       $scope.photos = true;
@@ -1206,7 +1212,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       dob: "21",
       jersyno: "111",
       desp2: "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015"
-      
+
     }, {
       image: "img/player/p31.png",
       name: "Lo Chia Wei",
