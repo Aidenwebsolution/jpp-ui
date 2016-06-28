@@ -143,7 +143,52 @@ $screen-lg: 1200px !default;
   }
 }
 @media (max-width: $screen-sm-max) {
-
+  .panthers {
+      h2 {
+          font-size: 46px;
+          &:after {
+              bottom: 7px;
+          }
+      }
+      .smalls {
+          font-size: 16px;
+      }
+      .medium {
+          font-size: 19px;
+      }
+      .large {
+          font-size: 21px;
+      }
+  }
+  .app-store {
+      img {
+          height: 34px;
+      }
+  }
+  .downloadapp{
+        font-size: 21px;
+  }
+  .demo-box {
+      img {
+          height: 225px;
+      }
+  }
+  .pink-splash {
+      background: url("../img/splash.png") no-repeat 0 -15px;
+      background-size: 100% 100%;
+      padding: 5px;
+      height: 200px;
+      h2 {
+          color: white;
+          margin: 20px 0 15px;
+          font-size: 27px;
+      }
+      p {
+          font-size: 16px;
+          margin: 0;
+          color: white;
+      }
+  }
   .merchandise-ticket {
     .fix-logo {
       height: 80px !important;
@@ -840,6 +885,15 @@ $screen-lg: 1200px !default;
   }
   .play-store img {
     margin: 0 auto;
+  }
+  .panthers {
+    margin: 30px 0 30px;
+}
+  .demo-box img{
+    width: auto !important;
+  }
+  .app-store img{
+    width: auto !important;
   }
   .cell-img {
     padding-top: 50px;
