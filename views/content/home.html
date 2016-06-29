@@ -233,17 +233,20 @@
                                         <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
                                     </div>
                                     <div class="col-md-4 padding0 col-xs-4">
-
+                                        <!-- <div class="match-time">
+                                          Fulltime
+                                        </div> -->
                                     </div>
                                     <div class="col-md-4 padding0 col-xs-4">
                                         <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="text-center" ng-show="latestMatchOn">
-                                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
+                            <div class="clearfix"></div>
+                            <div class="text-center">
+                              <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank" ng-show="latestMatchOn">Match Report</a>
                             </div>
+
                         </div>
                         <!-- <div class="text-center color-white">
 
