@@ -501,7 +501,18 @@ nav {
 .font-f {
     font-family: 'hind';
 }
-.social-link {
+.social-space{
+  ul {
+      li {
+          a {
+              i {
+                margin: 0 2px;
+              }
+            }
+          }
+        }
+}
+.social-link{
     ul {
         li {
             a {
