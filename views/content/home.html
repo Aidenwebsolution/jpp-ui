@@ -207,7 +207,7 @@
 
               <div class="head-table text-center">
                 <h1 class="color-white font-tbl" ng-hide="latestMatchOn">{{'NEXT MATCH'|translate}}</h1>
-                <h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'LIVE UPDATE'|translate}}</h1>
+                <h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
               </div>
               <div class="match-schd mt30">
                 <div class="row">
@@ -233,14 +233,16 @@
                       <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
                     </div>
                     <div class="col-md-4 padding0 col-xs-4 fz24">
-                      {{latestmatch.totalmatchtime}}
+                      <div class="match-time">
+                        {{latestmatch.totalmatchtime}}
+                      </div>
                     </div>
                     <div class="col-md-4 padding0 col-xs-4">
                       <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
                     </div>
                   </div>
                 </div>
-
+<div class="clearfix"></div>
                 <div class="text-center" ng-show="latestMatchOn">
                   <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
                 </div>
@@ -249,7 +251,7 @@
 
               </div> -->
               <div class="text-center color-white" ng-hide="latestMatchOn">
-                <div class="biger" ng-show="latestMatchOn">{{latestmatch.totalmatchtime}}</div>
+                <!-- <div class="biger" ng-show="latestMatchOn">{{latestmatch.totalmatchtime}}</div> -->
                 {{latestmatch.starttimedate}}
                 (IST)
                 <br>

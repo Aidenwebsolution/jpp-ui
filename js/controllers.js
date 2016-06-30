@@ -967,7 +967,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.news2 = [];
     NavigationService.getallnews(function(data) {
       $scope.news = data;
-
+      $scope.news = _.chunk($scope.news,2);
       // console.log(data[0].timestamp);
       $scope.getMonthName = function(val) {
           switch (val) {
