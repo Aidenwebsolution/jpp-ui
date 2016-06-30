@@ -914,12 +914,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     } else {
       $scope.openAccordionById($scope.fixtureid);
     }
-    var i=1;
+    i=1;
   _.each($scope.schedules,function (key) {
     if(key.ishome == '1'){
-      key.index = i++;
+      key.index = i;
     }
-  })
+    i++;
+  });
+  console.log("schedules",$scope.schedules);
   });
   $scope.openAccordionById = function(id) {
     console.log(id);
