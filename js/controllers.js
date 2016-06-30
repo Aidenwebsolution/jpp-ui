@@ -714,6 +714,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       console.log($scope.videos);
     });
   };
+
+  $scope.season = 4;
+  $scope.changeTabs = function(data) {
+      $scope.season = data;
+      console.log($scope.season);
+  };
   $scope.changeTab = function(value) {
     if (value === true) {
       $scope.photos = true;
@@ -1089,8 +1095,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
       name: "Amit Nagar"
     }, {
-      name: "David Tsai"
-    }, {
       name: "Jasvir Singh"
     },{
       name: "Jawahar"
@@ -1098,9 +1102,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       name: "Lo Chia Wei"
     }, {
       name: "Mahipal Narwal"
-    }, {
-      name: "Masayuki Shimokawa"
-    }, {
+    },{
       name: "Parveen Narwal"
     }, {
       name: "Parvesh Malik"
@@ -1153,7 +1155,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.player = [{
-      image: "img/player/p20.png",
+      image: "img/player/p29.png",
       name: "Ajay Kumar",
       desg: "Raider",
       nationality: "Haryana",
@@ -1181,17 +1183,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp: "2014-15 Junior National Games, 2015 U-19 School Games, 2016 Junior Asian Championship",
       desp2: "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)"
 
-    }, {
-      image: "img/player/p19.png",
-      name: "David Tsai",
-      desg: "Defender",
-      nationality: "Taiwan",
-      dob: "26",
-      jersyno: "20",
-      desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
-      desp2: "2014 Pro Kabaddi League (Gold)"
-
-    }, {
+    },
+    // {
+    //   image: "img/player/p19.png",
+    //   name: "David Tsai",
+    //   desg: "Defender",
+    //   nationality: "Taiwan",
+    //   dob: "26",
+    //   jersyno: "20",
+    //   desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
+    //   desp2: "2014 Pro Kabaddi League (Gold)"
+    //
+    // },
+    {
 
       image: "img/player/p3.png",
       name: "Jasvir Singh",
@@ -1203,7 +1207,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
 
     },{
-      image: "img/player/p20.png",
+      image: "img/player/p30.png",
       name: "Jawahar",
       desg: "All Rounder",
       nationality: "Haryana",
@@ -1212,7 +1216,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       desp2: "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015"
 
     }, {
-      image: "img/player/p20.png",
+      image: "img/player/p31.png",
       name: "Lo Chia Wei",
       desg: "Raider",
       nationality: "New Taipei City",
@@ -1229,17 +1233,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       jersyno: "12",
       desp: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games",
       desp2: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Championship (Silver), 2010 All India University (Gold), 2010 National Games (Gold)."
-
-    }, {
-      image: "img/player/p20.png",
-      name: "Masayuki Shimokawa",
-      desg: "Raider",
-      nationality: "Tokyo",
-      dob: "27",
-      desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
-      desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
-
-    }, {
+},
+    // }, {
+    //   image: "img/player/p20.png",
+    //   name: "Masayuki Shimokawa",
+    //   desg: "Raider",
+    //   nationality: "Tokyo",
+    //   dob: "27",
+    //   desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
+    //   desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
+    //
+    // }, {
+    {
       image: "img/player/p23.png",
       name: "Parveen Narwal",
       desg: "All Rounder",

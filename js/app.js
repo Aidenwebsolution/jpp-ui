@@ -443,7 +443,7 @@ firstapp.filter('twodigit',function(){
 firstapp.filter('spaceToPlus', function() {
     return function(text) {
         if (text) {
-            var str = text.replace('/\s+/g', '+');
+            var str = text.replace(/\s+/, "-");
             return str;
         }
 
@@ -452,8 +452,7 @@ firstapp.filter('spaceToPlus', function() {
 firstapp.filter('spaceToDash', function() {
     return function(text) {
       if(text) {
-        console.log(text);
-        var str = text.replace('/\s+/g', '-').toLowerCase();
+        var str = text.replace(/\s+/, "-").toLowerCase();
         return str;
       }
     };
