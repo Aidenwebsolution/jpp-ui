@@ -374,6 +374,7 @@ var LanguageEnglish = {
     "For Updates On The Contest Stay Tuned To": "For Updates On The Contest Stay Tuned To",
     "ANDROID APP": "ANDROID APP",
     "IOS APP": "IOS APP",
+    "Powered By":"Powered By",
 
 };
 
@@ -760,4 +761,5 @@ var LanguageHindi = {
     "For Updates On The Contest Stay Tuned To": "अधिक जानकारी प्रतियोगिता पर, बने रहें हमारे साथ",
     "ANDROID APP": "जेपीपी एंड्रॉयड ऐप",
     "IOS APP": "जेपीपी आईओएस ऐपें",
+    "Powered By":"द्वारा संचालित", 
 };
