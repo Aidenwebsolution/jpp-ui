@@ -29,7 +29,7 @@
           </div>
           <div class="player-desc text-justify font-base">
             <p ng-if="!dataitem.desp=='';"><strong>{{'Tournaments Played'|translate}}:</strong> {{dataitem.desp|translate}}</p>
-            <p><strong>{{'Achievements'|translate}}:</strong> {{dataitem.desp2|translate}}</p>
+            <p ng-if="!dataitem.desp2=='';"><strong>{{'Achievements'|translate}}:</strong> {{dataitem.desp2|translate}}</p>
           </div>
         </div>
       </div>
