@@ -91,8 +91,8 @@ $font-family-serif: "Oswald", Georgia, "Times New Roman", Times, serif !default;
 @mixin skew ($x, $y) {
      @include transform(skew(#{$x}deg, #{$y}deg));
 }
-.fz24{
-      font-size: 24px;
+.fz24 {
+    font-size: 24px;
 }
 .row-flex {
     @include display(flex);
@@ -505,18 +505,18 @@ nav {
 .font-f {
     font-family: 'hind';
 }
-.social-space{
-  ul {
-      li {
-          a {
-              i {
-                margin: 0 2px;
-              }
+.social-space {
+    ul {
+        li {
+            a {
+                i {
+                    margin: 0 2px;
+                }
             }
-          }
         }
+    }
 }
-.social-link{
+.social-link {
     ul {
         li {
             a {
@@ -2375,6 +2375,7 @@ a.ilogo {
     color: white;
     margin-top: 1px;
 }
+
 .sm-ht {
     height: 495px;
     overflow: scroll;

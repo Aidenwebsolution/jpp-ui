@@ -886,7 +886,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = currentlang;
         console.log($scope.currentlang);
     }
-
+    $scope.merchants = [{
+        image: "img/merchant/01.png",
+        title: "BAG PACK",
+        price: "892.00",
+        link:"http://www.didasportswear.com/backpack.html"
+    },
+    {
+        image: "img/merchant/02.png",
+        title: "LOUNGING JERSEY",
+        price: "599.00",
+        link:"http://www.didasportswear.com/lounging-jersey.html"
+    },
+    {
+        image: "img/merchant/03.png",
+        title: "TRAINING MICRO TRACKSUIT",
+        price: "1,990.00",
+        link:"http://www.didasportswear.com/training-micro-tracksuit.html"
+    },
+    {
+        image: "img/merchant/04.png",
+        title: "TRAVELLING BAG",
+        price: "1,450.00",
+        link:"http://www.didasportswear.com/travelling-bag.html"
+    },
+    {
+        image: "img/merchant/05.png",
+        title: "TRAINING SPANDEX TRACKSUIT",
+        price: "3,799.00",
+        link:"http://www.didasportswear.com/training-spandex-tracksuit.html"
+    },
+  ]
 
     $scope.fixtureid = $stateParams.id;
     var i = 0;

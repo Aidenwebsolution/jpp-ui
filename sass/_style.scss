@@ -1,219 +1,224 @@
-.jaipur-pink, .jaipur {
-  color: #ee4a9b;
+.jaipur,
+.jaipur-pink {
+    color: #ee4a9b;
 }
-.patna-pirates, .patna {
-  color: #078042;
+.patna,
+.patna-pirates {
+    color: #078042;
 }
-.bengaluru-bulls, .bengaluru {
-  color: #B01D21;
+.bengaluru,
+.bengaluru-bulls {
+    color: #B01D21;
 }
-.bengal-warriors, .bengal {
-  color: #f26724;
+.bengal,
+.bengal-warriors {
+    color: #f26724;
 }
-.dabang-delhi, .delhi {
-  color: #d91f2d;
+.dabang-delhi,
+.delhi {
+    color: #d91f2d;
 }
-.puneri-paltan, .puneri {
-  color: #f58220;
+.puneri,
+.puneri-paltan {
+    color: #f58220;
 }
-.telugu-titans, .telgu {
-  color: #da2131;
+.telgu,
+.telugu-titans {
+    color: #da2131;
 }
-.u-mumba, .mumba {
-  color: #F15922;
+.mumba,
+.u-mumba {
+    color: #F15922;
 }
 .fixture {
-  .fixtures-done {
+    .fixtures-done {
+        .panel {
+            border: 0 solid transparent;
+        }
+        .panel + .panel {
+            margin-top: 0 !important;
+        }
+        .panel-body {
+            padding: 0;
+        }
+        .panel-title {
+            .schedule {
+                font-size: 26px;
+                font-weight: 300;
+                margin-top: 10px;
+                &:focus {
+                    outline: 0;
+                }
+            }
+            &:focus {
+                outline: 0;
+            }
+            h2 {
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+        .panel-heading {
+            color: $base;
+            padding: 15px;
+            border-bottom: 1px solid transparent;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+        .team-head {
+            font-size: 18px;
+            text-transform: uppercase;
+            img {
+                width: 75px;
+            }
+            span {
+                margin-top: 25px;
+            }
+        }
+        .float-left {
+            float: left;
+        }
+        .float-right {
+            float: right;
+        }
+        .fix-logos {
+            text-align: center;
+            &.text-right {
+                text-align: right;
+            }
+            span {
+                font-size: 50px;
+                @include text-stroke(2, #d3f3ff);
+                vertical-align: middle;
+                display: inline-block;
+                font-family: 'Kenyan Coffee';
+                // margin-top: 20px;
+            }
+            img {
+                width: 150px;
+                display: inline-block;
+            }
+        }
+        .score-points {
+            margin-top: 10px;
+            font-size: 45px;
+        }
+        .vs {
+            text-align: center;
+            img {
+                width: 160px;
+                display: inline-block;
+            }
+        }
+        .fixture-match {
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            min-height: 408px;
+        }
+        .match-center {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 300;
+            &.no-mgin {
+                margin-top: 10px !important;
+            }
+            i {
+                margin-left: 15px;
+                font-size: 25px;
+                vertical-align: middle;
+            }
+        }
+        .todo {
+            position: absolute;
+            top: 130px;
+            width: 100%;
+            .row.fixture-cont {
+                padding-top: 20px;
+            }
+        }
+    }
+    .fixture-willbdone {
+        .panel-heading {
+            color: #262626;
+            padding: 15px;
+            border-bottom: 1px solid transparent;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
     .panel {
-      border: 0 solid transparent;
+        border: 0 solid transparent;
     }
     .panel + .panel {
-      margin-top: 0 !important;
+        margin-top: 0 !important;
     }
     .panel-body {
-      padding: 0;
+        padding: 0;
     }
-    .panel-title {
-      .schedule {
+    .panel-title .schedule {
         font-size: 26px;
         font-weight: 300;
         margin-top: 10px;
-        &:focus {
-          outline: 0;
-        }
-      }
-      &:focus {
-        outline: 0;
-      }
-      h2 {
-        &:focus {
-          outline: 0;
-        }
-      }
     }
-    .panel-heading {
-      color: $base;
-      padding: 15px;
-      border-bottom: 1px solid transparent;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
+    .panel-title .schedule:focus {
+        outline: 0;
+    }
+    .panel-title:focus {
+        outline: 0;
+    }
+    .panel-title h2:focus {
+        outline: 0;
     }
     .team-head {
-      font-size: 18px;
-      text-transform: uppercase;
-      img {
-        width: 75px;
-      }
-      span {
-        margin-top: 25px;
-      }
-    }
-    .float-left {
-      float: left;
-    }
-    .float-right {
-      float: right;
-    }
-    .fix-logos {
-      text-align: center;
-      &.text-right {
-        text-align: right;
-      }
-      span {
-        font-size: 50px;
-        @include text-stroke(2, #d3f3ff);
-        vertical-align: middle;
-        display: inline-block;
-            font-family: 'Kenyan Coffee';
-
-        // margin-top: 20px;
-      }
-      img {
-        width: 150px;
-        display: inline-block;
-      }
+        font-size: 18px;
+        text-transform: uppercase;
+        img {
+            width: 75px;
+        }
+        span {
+            margin-top: 25px;
+        }
     }
     .score-points {
-      margin-top: 10px;
-      font-size: 45px;
+        margin-top: 10px;
+        font-size: 45px;
     }
-    .vs {
-      text-align: center;
-      img {
-        width: 160px;
-        display: inline-block;
-      }
+    .float-left {
+        float: left;
     }
-    .fixture-match {
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      min-height: 408px;
+    .float-right {
+        float: right;
     }
     .match-center {
-      margin-top: 30px;
-      font-size: 18px;
-      font-weight: 300;
-      &.no-mgin {
-        margin-top: 10px !important;
-      }
-      i {
-        margin-left: 15px;
-        font-size: 25px;
-        vertical-align: middle;
-      }
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: 300;
+        i {
+            margin-left: 15px;
+            font-size: 25px;
+            vertical-align: middle;
+        }
     }
-    .todo {
-      position: absolute;
-      top: 130px;
-      width: 100%;
-      .row.fixture-cont {
-        padding-top: 20px;
-      }
-    }
-  }
-  .fixture-willbdone {
-    .panel-heading {
-      color: #262626;
-      padding: 15px;
-      border-bottom: 1px solid transparent;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-    }
-  }
-  .panel {
-    border: 0 solid transparent;
-  }
-  .panel + .panel {
-    margin-top: 0 !important;
-  }
-  .panel-body {
-    padding: 0;
-  }
-  .panel-title .schedule {
-    font-size: 26px;
-    font-weight: 300;
-    margin-top: 10px;
-  }
-  .panel-title .schedule:focus {
-    outline: 0;
-  }
-  .panel-title:focus {
-    outline: 0;
-  }
-  .panel-title h2:focus {
-    outline: 0;
-  }
-  .team-head {
-    font-size: 18px;
-    text-transform: uppercase;
-    img {
-      width: 75px;
-    }
-    span {
-      margin-top: 25px;
-    }
-  }
-  .score-points {
-    margin-top: 10px;
-    font-size: 45px;
-  }
-  .float-left {
-    float: left;
-  }
-  .float-right {
-    float: right;
-  }
-  .match-center {
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: 300;
-    i {
-      margin-left: 15px;
-      font-size: 25px;
-      vertical-align: middle;
-    }
-  }
 }
 .mt15 {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-
 // .row.fixture-cont {
 //   padding-top: 28px;
 // }
 .topscore {
-  font-size: 20px;
+    font-size: 20px;
 }
 .bold {
-  font-weight: 600;
-  color: #000;
+    font-weight: 600;
+    color: #000;
 }
 .head-pink {
-  font-size: 20px;
-  color: #af1d6f;
+    font-size: 20px;
+    color: #af1d6f;
 }
-
 // .panel-default > .panel-heading {
 //   background-color: $panel-head-odd;
 //   border-color: $panel-head-odd;
@@ -223,13 +228,43 @@
 //   border-color: $panel-head-even;
 // }
 .fixture .panel:nth-child(odd) .panel-heading {
-  background-color: $panel-head-odd;
-  border-color: $panel-head-odd;
+    background-color: $panel-head-odd;
+    border-color: $panel-head-odd;
 }
 .fixture .panel:nth-child(even) .panel-heading {
-  background-color: $panel-head-even;
-  border-color: $panel-head-even;
+    background-color: $panel-head-even;
+    border-color: $panel-head-even;
 }
 .fix-logo.vs {
-  margin-top: 25px;
+    margin-top: 25px;
+}
+.btn-sucess.btn-mernt-link.focus,
+.btn-sucess.btn-mernt-link:focus,
+.btn-sucess.btn-mernt-link:hover {
+    color: #fff !important;
+}
+.merchant-products{
+  margin-bottom: 20px;
+.img-holder-merchant{
+background: #e5f7fe;
+cursor: pointer;
+@include transition(all ease 300ms);
+border: 1px solid transparent;
+&:hover{
+border-color:$brand-primary;
+}
+  img {
+    max-width: 100%;
+    max-height: 100%;
+}
+}
+.decrp-merchant{
+  h4{
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
 }
