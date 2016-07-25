@@ -12,11 +12,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     globalFunc.changeLang = function() {
         $scope.currentlang = currentlang;
 
-    }
+    };
     NavigationService.getSlider(function(data) {
         $scope.sliderdata = data;
         console.log('$scope.sliderdata', $scope.sliderdata);
-    })
+    });
 
     //Used to name the .html file
     $scope.openers = {};

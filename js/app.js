@@ -248,7 +248,8 @@ firstapp.filter('teamImg', function() {
             case "8":
                 returnImg += "8.png";
                 break;
-
+            default:
+                returnImg += "TBD.png";
         }
         return returnImg;
     };
@@ -358,6 +359,17 @@ firstapp.directive('mycircle', function($compile, $parse) {
 
         }
     };
+});
+firstapp.filter('semiIt',function () {
+  return function (value) {
+    console.log(value);
+    if(value.toUpperCase().indexOf('SEMI') === -1){
+      return value;
+    }else{
+      console.log(value.toUpperCase().split("SEMI"));
+      return "semi "+ value.toUpperCase().split("SEMI")[1];
+    }
+  };
 });
 firstapp.directive('onlyDigits', function() {
     return {
