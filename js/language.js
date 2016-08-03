@@ -378,6 +378,7 @@ var LanguageEnglish = {
     "ANDROID APP": "ANDROID APP",
     "IOS APP": "IOS APP",
     "Powered By":"Powered By",
+    "champion":"champion",
 
 };
 
@@ -768,4 +769,5 @@ var LanguageHindi = {
     "ANDROID APP": "जेपीपी एंड्रॉयड ऐप",
     "IOS APP": "जेपीपी आईओएस ऐपें",
     "Powered By":"द्वारा संचालित",
+    "champion":"champion-h",
 };

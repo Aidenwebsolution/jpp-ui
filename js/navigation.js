@@ -12,7 +12,10 @@ var navigationservice = angular.module('navigationservice', [])
         url: "fixtures({id:1})",
         classis: "active"
     }, {
-        name: "Tickets & Merchandise",
+        name: "Tickets",
+        classis: "active"
+    },{
+        name: "Merchandise",
         url: "ticket-merchandise",
         classis: "active",
         highlighter: "high"

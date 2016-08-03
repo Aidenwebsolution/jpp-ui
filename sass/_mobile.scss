@@ -1027,6 +1027,11 @@ $screen-lg: 1200px !default;
   .block-img {
     height: 60px;
   }
+  .champion{
+    img{
+      height: auto;
+    }
+  }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (-webkit-min-device-pixel-ratio: 2) {
   .modal-dialog {

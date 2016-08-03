@@ -204,8 +204,11 @@
 
           </div>
         </div>
-        <div class="col-md-6 col-sm-6 padding40 m-box-r">
-          <div class="nxt-match white-line-pad">
+        <div class="col-md-6 col-sm-6 m-box-r champ">
+          <div class="champion">
+            <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
+          </div>
+          <!-- <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
               <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.level || 'NEXT MATCH' | semiIt}}</h1>
@@ -249,18 +252,13 @@
                 <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
               </div>
             </div>
-            <!-- <div class="text-center color-white">
-
-              </div> -->
             <div class="text-center color-white" ng-hide="latestMatchOn">
-              <!-- <div class="biger" ng-show="latestMatchOn">{{latestmatch.totalmatchtime}}</div> -->
               {{latestmatch.starttimedate}} (IST)
               <br> {{latestmatch.stadium}}
             </div>
 
             <div class="next-match" ng-hide="latestMatchOn">
               <div class="count-time custom-list text-center">
-                <!-- <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer> -->
                 <ul class="padding0">
                   <li>
                     <div class="time-hrs">
@@ -310,7 +308,7 @@
 
 
 
-          </div>
+          </div> -->
         </div>
       </div>
 
