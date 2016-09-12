@@ -160,11 +160,11 @@ $screen-lg: 1200px !default;
           font-size: 21px;
       }
   }
-  .app-store {
-      img {
-          height: 34px;
-      }
-  }
+  // .app-store {
+  //     img {
+  //         height: 34px;
+  //     }
+  // }
   .downloadapp{
         font-size: 21px;
   }
@@ -872,6 +872,13 @@ $screen-lg: 1200px !default;
   .news-logo {
     zoom: 0.6;
   }
+  // .p-clear{
+  //   padding-top: 20px;
+  // }
+  // .back-img img{
+  //   width: 50%;
+  //   margin: 0 auto;
+  // }
 }
 @media (max-width: 480px) {
   // .news-logo {
@@ -892,14 +899,17 @@ $screen-lg: 1200px !default;
   .demo-box img{
     width: auto !important;
   }
-  .app-store img{
-    width: auto !important;
-  }
+  // .app-store img{
+  //   width: auto !important;
+  // }
   .cell-img {
     padding-top: 50px;
   }
+  // .font-app {
+  //   font-size: 25px;
+  // }
   .font-app {
-    font-size: 25px;
+    font-size: 18px;
   }
   .social-hub {
     h1 {
@@ -1319,8 +1329,8 @@ $screen-lg: 1200px !default;
   .f-span {
     font-size: 10px;
   }
-  .play-store img {
-    margin: 0 auto;
-    width: 50%;
-  }
+  // .play-store img {
+  //   margin: 0 auto;
+  //   width: 50%;
+  // }
 }
