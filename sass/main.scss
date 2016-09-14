@@ -2391,5 +2391,14 @@ a.ilogo {
 .champ{
 padding: 0;
 }
+.english uib-slide.english.noshow  {
+  display: block;
+}
+.hindi uib-slide.hindi.noshow  {
+  display: block;
+}
+.english uib-slide.noshow  {
+  display: none;
+}
 @import "mobile";
 @import "style";

@@ -354,7 +354,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         // });
         if (lang == 'hi') {
             $scope.news = $scope.hindibanner;
-        } else if (lang == 'en') {
+        } else {
             $scope.news = $scope.englishbanner;
         }
         $scope.changeSlide($scope.news[0]);
@@ -1424,9 +1424,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('languageCtrl', function($scope, $state, TemplateService, $translate, $rootScope, $uibModal) {
-    if (!$.jStorage.get('languageSet')) {
-        $.jStorage.set('languageSet', "en");
-    }
     var siteLanguage = $.jStorage.get('languageSet');
     $scope.languageActive = siteLanguage;
 
