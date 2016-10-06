@@ -16,11 +16,17 @@
 <section class="mt70">
     <div class="gallery-tab text-center custom-list">
         <ul class="padding0">
-            <li ng-click="changeTab(4)">
+            <!-- <li ng-click="changeTab(4)">
                 <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4 SCHEDULE'|translate}}</h3>
             </li>
             <li ng-click="changeTab(3)">
                 <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 REVIEW'|translate}}</h3>
+            </li> -->
+            <li ng-click="changeTab(3)">
+                <h3 class="color-primary " ng-class="{'active-li':season==3}">{{'WORLD CUP SCHEDULE'|translate}}</h3>
+            </li>
+            <li ng-click="changeTab(4)">
+                <h3 class="color-primary" ng-class="{'active-li':season==4}">{{'SEASON 4 REVIEW'|translate}}</h3>
             </li>
         </ul>
     </div>
@@ -309,7 +315,7 @@
             <div class="fixture" ng-show="season==3">
                 <uib-accordion close-others="oneAtATime">
 
-                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 1">
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 3">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">

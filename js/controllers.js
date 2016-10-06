@@ -631,7 +631,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         });
     };
-    $scope.season = 4;
+    $scope.season = 3;
     $scope.changeTab = function(data) {
         $scope.season = data;
         console.log($scope.season);
