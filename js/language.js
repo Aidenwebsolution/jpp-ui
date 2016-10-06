@@ -296,9 +296,9 @@ var LanguageEnglish = {
     "Lo Chia Wei": "Lo Chia Wei",
     "Masayuki Shimokawa": "Masayuki Shimokawa",
     "Balwan Singh": "Balwan Singh",
-    "Kazuhiro Takano":"Kazuhiro Takano",
-    "Japan":"Japan",
-    "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)":"2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)",
+    "Kazuhiro Takano": "Kazuhiro Takano",
+    "Japan": "Japan",
+    "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)": "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)",
     "GAME 14: JAIPUR PINK PANTHERS VS U MUMBA": "GAME 14: JAIPUR PINK PANTHERS VS U MUMBA",
     "GAME 13: JAIPUR PINK PANTHERS VS DABANG DELHI": "GAME 13: JAIPUR PINK PANTHERS VS DABANG DELHI",
     "GAME 12: JAIPUR PINK PANTHERS VS PATNA PIRATES": "GAME 12: JAIPUR PINK PANTHERS VS PATNA PIRATES",
@@ -377,9 +377,10 @@ var LanguageEnglish = {
     "For Updates On The Contest Stay Tuned To": "For Updates On The Contest Stay Tuned To",
     "ANDROID APP": "ANDROID APP",
     "IOS APP": "IOS APP",
-    "Powered By":"Powered By",
-    "champion":"champion",
-
+    "Powered By": "Powered By",
+    "champion": "champion",
+    "2016 KABADDI WORLD CUP SCHEDULE": "2016 KABADDI WORLD CUP SCHEDULE",
+    "SEASON 4 REVIEW": "SEASON 4 REVIEW",
 };
 
 var LanguageHindi = {
@@ -753,9 +754,9 @@ var LanguageHindi = {
     "Jawahar": "जवाहर",
 
     "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015": "सिल्वर पदक - 45 th हरयाणा स्टेट स्कूल टूर्नामेंट ब्रोंज़ पदक - हिमाचल प्रदेश मे आयोजित 56 th नेशनल स्कूल गेम्स 2010 - 11 प्रतिभागी 46 th हरयाणा स्टेट स्कूल टूर्नामेंट 2011 - 12 प्रतिभागी दिल्ली स्टेट कबड्डी चैम्पियनशिप 2012 - 13 गोल्ड - हरयाणा स्टेट चैम्पियनशिप 2013 - 14 सिल्वर पदक - 61 st सीनियर नेशनल कबड्डी चैम्पियनशिप 2013 - 14 सिल्वर पदक - 62 nd सीनियर नेशनल कबड्डी चैम्पियनशिप 2014 - 15 सिल्वर पदक - 35 th नेशनल गेम्स केरल 2015 ",
-    "Kazuhiro Takano":"कजुहिरो तकनो",
-    "Japan":"जापान",
-    "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)":"2015 अंतरराष्ट्रीय मैत्री खेल (भागीदारी) 2015 राष्ट्रीय चैम्पियनशिप (गोल्ड) , 2014 पूर्व जापान चैम्पियनशिप (गोल्ड) , सीजन 2, 2007 में जयपुर पिंक पैंथर्स टीम टीम का हिस्सा - विश्व कप (ब्रोंज़ - सबसे मूल्यवान खिलाड़ी) , 2010 - एशियाई खेलों (ब्रोंज़) , 2007 - 2015 ऑल जापान टूर्नामेंट (गोल्ड)",
+    "Kazuhiro Takano": "कजुहिरो तकनो",
+    "Japan": "जापान",
+    "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)": "2015 अंतरराष्ट्रीय मैत्री खेल (भागीदारी) 2015 राष्ट्रीय चैम्पियनशिप (गोल्ड) , 2014 पूर्व जापान चैम्पियनशिप (गोल्ड) , सीजन 2, 2007 में जयपुर पिंक पैंथर्स टीम टीम का हिस्सा - विश्व कप (ब्रोंज़ - सबसे मूल्यवान खिलाड़ी) , 2010 - एशियाई खेलों (ब्रोंज़) , 2007 - 2015 ऑल जापान टूर्नामेंट (गोल्ड)",
     "Panthers": "पैंथर्स",
     "we have exciting contests": "हमारे सामाजिक मीडिया",
     "for all of you on our": "पृष्ठों पर आप सभी के लिए",
@@ -768,6 +769,8 @@ var LanguageHindi = {
     "For Updates On The Contest Stay Tuned To": "अधिक जानकारी प्रतियोगिता पर, बने रहें हमारे साथ",
     "ANDROID APP": "जेपीपी एंड्रॉयड ऐप",
     "IOS APP": "जेपीपी आईओएस ऐपें",
-    "Powered By":"द्वारा संचालित",
-    "champion":"champion-h",
+    "Powered By": "द्वारा संचालित",
+    "champion": "champion-h",
+    "2016 KABADDI WORLD CUP SCHEDULE": "2016 कबड्डी विश्व कप की अनुसूची",
+    "SEASON 4 REVIEW": "सीज़न 4 की समीक्षा",
 };

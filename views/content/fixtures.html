@@ -23,7 +23,7 @@
                 <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 REVIEW'|translate}}</h3>
             </li> -->
             <li ng-click="changeTab(3)">
-                <h3 class="color-primary " ng-class="{'active-li':season==3}">{{'WORLD CUP SCHEDULE'|translate}}</h3>
+                <h3 class="color-primary " ng-class="{'active-li':season==3}">{{'2016 KABADDI WORLD CUP SCHEDULE'|translate}}</h3>
             </li>
             <li ng-click="changeTab(4)">
                 <h3 class="color-primary" ng-class="{'active-li':season==4}">{{'SEASON 4 REVIEW'|translate}}</h3>
@@ -39,10 +39,11 @@
             <div class="fixture" ng-show="season==4">
                 <uib-accordion close-others="oneAtATime" class="with-ribbon">
 
-                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 2">
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen"
+                        ng-if="item.season == 2">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
-                              <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
+                                <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
                                         <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate|translate}}({{'IST'}})</div>
@@ -58,8 +59,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <div class="score-points text-center">
-                                            <span>{{item.score1}}</span>
-                                            -
+                                            <span>{{item.score1}}</span> -
                                             <span>{{item.score2}}</span>
                                             <!-- <span>vs</span> -->
                                         </div>
@@ -107,10 +107,11 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <div class="match-center" ng-class="{'no-mgin':item.ishome=='1'}">
-                                          {{'Match Centre'|translate}}
+                                            {{'Match Centre'|translate}}
                                             <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
                                         </div>
-                                        <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess">
+                                        <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                            ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess">
                                             {{'BOOK TICKETS'|translate}}
                                         </a>
                                     </div>
@@ -146,8 +147,7 @@
                                                     <div class="topscore bold">
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
-                                                        <span>{{item.fixture.team1player1score | translate}}</span>
-                                                        |
+                                                        <span>{{item.fixture.team1player1score | translate}}</span> |
                                                         <span>{{item.fixture.team1player2name | translate}}</span>
                                                         <span>{{item.fixture.team1player2score | translate}}</span>
                                                     </div>
@@ -161,8 +161,7 @@
                                                     <div class="topscore bold">
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team2player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team2player1nameh}}</span>
-                                                        <span>{{item.fixture.team2player1score | translate}}</span>
-                                                        |
+                                                        <span>{{item.fixture.team2player1score | translate}}</span> |
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team2player2name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team2player2nameh}}</span>
                                                         <span>{{item.fixture.team2player2score | translate}}</span>
@@ -194,7 +193,7 @@
                                                 </div>
                                                 <div class="col-xs-4">
                                                     <div class="head-pink bold">
-                                                         {{'Tackle Points' | translate}}
+                                                        {{'Tackle Points' | translate}}
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4">
@@ -276,29 +275,28 @@
                                             <div class="col-xs-12">
                                                 <div class="text-center match-time">
                                                     <h1 class="capital f-23" ng-if="currentlang=='en'">
-                                                      {{item.team1 | spaceToPlus}}<br>
-                                                        {{item.stadium}}
+                                                        {{item.team1 | spaceToPlus}}<br> {{item.stadium}}
                                                     </h1>
                                                     <h1 class="capital f-23" ng-if="currentlang=='hi'">
-                                                      {{item.hinditeam1 | spaceToPlus}} <br>
-                                                        {{item.hindistadium}}
+                                                        {{item.hinditeam1 | spaceToPlus}} <br> {{item.hindistadium}}
                                                     </h1>
                                                     <!-- <h1 class="upper mar-top">
                                                         {{item.starttimedate|translate}}
                                                         ({{'IST'|translate}})
                                                     </h1> -->
                                                     <h1 class="upper mar-top" ng-if="currentlang=='en'">
-                                                        {{item.starttimedate}}
-                                                        ({{'IST'}})
+                                                        {{item.starttimedate}} ({{'IST'}})
                                                     </h1>
                                                     <h1 class="upper mar-top" ng-if="currentlang=='hi'">
                                                         {{item.starttimedate | hindimonth:false}}
 
                                                     </h1>
-                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" ng-if="item.ishome=='1'" target="_blank"  class="btn btn-sucess mt15">
+                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                                        ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
                                                         {{'BOOK TICKETS'|translate}}
                                                     </a>
-                                                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}&dates={{calendarDate[$index].from}}/{{calendarDate[$index].to}}&location={{item.stadium | spaceToPlus}}&details={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}+{{item.starttimedate | spaceToPlus}}+(IST)+{{item.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" target="_blank"  class="btn btn-sucess mt15">
+                                                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}&dates={{calendarDate[$index].from}}/{{calendarDate[$index].to}}&location={{item.stadium | spaceToPlus}}&details={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}+{{item.starttimedate | spaceToPlus}}+(IST)+{{item.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
+                                                        target="_blank" class="btn btn-sucess mt15">
                                                         {{'ADD TO CALENDAR'|translate}}
                                                     </a>
                                                 </div>
@@ -315,7 +313,8 @@
             <div class="fixture" ng-show="season==3">
                 <uib-accordion close-others="oneAtATime">
 
-                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen" ng-if="item.season == 3">
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen"
+                        ng-if="item.season == 3">
                         <div class="fixture-scroll">
                             <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
@@ -334,8 +333,7 @@
                                     </div>
                                     <div class="col-xs-2">
                                         <div class="score-points text-center">
-                                            <span>{{item.score1}}</span>
-                                            -
+                                            <span>{{item.score1}}</span> -
                                             <span>{{item.score2}}</span>
                                             <!-- <span>vs</span> -->
                                         </div>
@@ -419,8 +417,7 @@
                                                     <div class="topscore bold">
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
-                                                        <span>{{item.fixture.team1player1score}}</span>
-                                                        |
+                                                        <span>{{item.fixture.team1player1score}}</span> |
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team1player2name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team1player2nameh}}</span>
                                                         <span>{{item.fixture.team1player2score}}</span>
@@ -435,8 +432,7 @@
                                                     <div class="topscore bold">
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team2player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team2player1nameh}}</span>
-                                                        <span>{{item.fixture.team2player1score}}</span>
-                                                        |
+                                                        <span>{{item.fixture.team2player1score}}</span> |
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team2player2name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team2player2nameh}}</span>
                                                         <span>{{item.fixture.team2player2score}}</span>
@@ -556,13 +552,13 @@
                                                         {{item.hindistadium}}
                                                     </h1>
                                                     <h1 class="upper mar-top" ng-if="currentlang=='en'">
-                                                        {{item.starttimedate}}
-                                                        ({{'IST'}})
+                                                        {{item.starttimedate}} ({{'IST'}})
                                                     </h1>
                                                     <h1 class="upper mar-top" ng-if="currentlang=='hi'">
                                                         {{item.starttimedate | hindimonth:false}}
                                                     </h1>
-                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" ng-if="item.ishome=='1'" target="_blank">
+                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                                        ng-if="item.ishome=='1'" target="_blank">
                                                         <button class="btn btn-sucess mt15">{{'BOOK TICKETS'|translate}}</button>
                                                     </a>
                                                 </div>
