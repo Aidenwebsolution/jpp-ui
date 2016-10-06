@@ -379,6 +379,8 @@ var LanguageEnglish = {
     "IOS APP": "IOS APP",
     "Powered By": "Powered By",
     "champion": "champion",
+    "worldcup":"worldcup",
+    "world cup opener":"world cup opener",
     "2016 KABADDI WORLD CUP SCHEDULE": "2016 KABADDI WORLD CUP SCHEDULE",
     "SEASON 4 REVIEW": "SEASON 4 REVIEW",
 };
@@ -771,6 +773,8 @@ var LanguageHindi = {
     "IOS APP": "जेपीपी आईओएस ऐपें",
     "Powered By": "द्वारा संचालित",
     "champion": "champion-h",
+    "worldcup":"worldcup-h",
+    "world cup opener":"विश्व कप के ओपनर",
     "2016 KABADDI WORLD CUP SCHEDULE": "2016 कबड्डी विश्व कप की अनुसूची",
     "SEASON 4 REVIEW": "सीज़न 4 की समीक्षा",
 };
