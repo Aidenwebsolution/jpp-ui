@@ -15,7 +15,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log($scope.currentlang);
     globalFunc.changeLang = function() {
         $scope.currentlang = currentlang;
-
+        console.log($scope.currentlang);
     };
     NavigationService.getSlider(function(data) {
         $scope.sliderdata = data;
@@ -352,6 +352,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //         return key.type == ((lang == 'hi') ? '2' : '1');
         //     });
         // });
+        $scope.currentlang = lang;
         if (lang == 'hi') {
             $scope.news = $scope.hindibanner;
         } else {

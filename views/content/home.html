@@ -19,13 +19,13 @@
             <div class="col-sm-8 padding0">
                 <div class="image-holder parent-height">
                     <uib-carousel interval="3000">
-                        <uib-slide ng-repeat="new in sliderdata.english track by $index" active="new.active" class="noshow english">
+                        <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
                         </uib-slide>
 
-                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" active="new.active" class="noshow hindi">
+                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>

@@ -9,7 +9,6 @@
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/angular-loading-bar/src/loading-bar.css"; //@import "../css/boutique.css";
 /* Bootstrap Variables Goes Here */
-$brand-primary: #b41e72 !default;
 $brand-success: #4ecaf5 !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
@@ -2385,7 +2384,7 @@ a.ilogo {
   max-height: 100%;
   overflow: hidden;
   img{
-    height: 587px;
+    // height: 587px;
   }
 }
 .champ{

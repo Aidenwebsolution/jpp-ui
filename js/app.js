@@ -248,60 +248,8 @@ firstapp.filter('teamImg', function() {
             case "8":
                 returnImg += "8.png";
                 break;
-
-            case "10":
-                returnImg += "INDIA.png";
-                break;
-
-            case "11":
-                returnImg += "SOUTH-KOREA.png";
-                break;
-
-            case "12":
-                returnImg += "USA.png";
-                break;
-
-            case "13":
-                returnImg += "IRAN.png";
-                break;
-
-            case "14":
-                returnImg += "ENGLAND.png";
-                break;
-
-            case "15":
-                returnImg += "BANGLADESH.png";
-                break;
-
-            case "16":
-                returnImg += "POLAND.png";
-                break;
-
-            case "17":
-                returnImg += "KENYA.png";
-                break;
-
-            case "18":
-                returnImg += "AUSTRALIA.png";
-                break;
-
-            case "19":
-                returnImg += "ARGENTINA.png";
-                break;
-
-            case "20":
-                returnImg += "JAPAN.png";
-                break;
-                
-            case "21":
-                returnImg += "THAILAND.png";
-                break;
-            
             default:
-                returnImg += "Logos.png";
-
-            // default:
-            //     returnImg += "TBD.png";
+                returnImg += "TBD.png";
         }
         return returnImg;
     };
