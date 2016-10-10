@@ -204,17 +204,17 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 m-box-r champ">
+                <div class="col-md-6 col-sm-6 m-box-r pt40 ">
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-                     <div class="champion">
-                       <a ui-sref="fixtures"><img ng-src="img/{{'worldcup'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a> 
-                    </div> 
-          <div class="nxt-match white-line-pad hide">
+                     <!-- <div class="champion">
+                       <a ui-sref="fixtures"><img ng-src="img/{{'worldcup'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    </div>  -->
+          <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
-              <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{'world cup opener' || 'NEXT MATCH' | semiIt}}</h1>
+              <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
               <h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
             </div>
             <div class="match-schd mt30">
@@ -301,11 +301,11 @@
                 </ul>
               </div>
 
-              <div class="text-center" ng-hide="latestMatchOn">
+              <!-- <div class="text-center" ng-hide="latestMatchOn">
                 <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
                 <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
                   class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
-              </div>
+              </div> -->
             </div>
 
 
