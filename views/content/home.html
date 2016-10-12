@@ -179,6 +179,7 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Team</th>
+                                                <th>Group</th>
                                                 <th>P</th>
                                                 <th>W</th>
                                                 <th>L</th>
@@ -190,6 +191,8 @@
                                             <tr class="{{ data.name | limitTo: 3 }}" ng-repeat="data in table" ng-if="table.length>0">
                                                 <td>{{$index +1}}</td>
                                                 <td>{{data.name || 'Loading..' | translate}}</td>
+                                                <td ng-if="data.group==1">A</td>
+                                                <td ng-if="data.group==2">B</td>
                                                 <td>{{data.played}}</td>
                                                 <td>{{data.wins}}</td>
                                                 <td>{{data.lost}}</td>
@@ -252,7 +255,7 @@
               </div>
               <div class="clearfix"></div>
               <div class="text-center" ng-show="latestMatchOn">
-                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
+                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn">Match Report</a>
               </div>
             </div>
             <div class="text-center color-white" ng-hide="latestMatchOn">
