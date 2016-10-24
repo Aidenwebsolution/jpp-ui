@@ -165,8 +165,11 @@
     <div class="point-bkp">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 col-sm-6 padding40 m-box-l">
-                    <div class="white-line-pad">
+                <div class="col-md-6 col-sm-6 pad0 marg2">
+
+                    <a ui-sref="fixtures"><img ng-src="img/{{'ban'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+
+                    <!-- <div class="white-line-pad">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -205,16 +208,16 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-md-6 col-sm-6 m-box-r pt40 ">
+                <div class="col-md-6 col-sm-6 pad0 marg2">
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-                     <!-- <div class="champion">
-                       <a ui-sref="fixtures"><img ng-src="img/{{'worldcup'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
-                    </div>  -->
-          <div class="nxt-match white-line-pad">
+
+                    <a ui-sref="fixtures"><img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+
+                    <!-- <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
               <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
@@ -309,29 +312,25 @@
                 <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
                   class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
               </div> -->
+                    <!-- </div>
             </div>
+        </div>
+    </div> -->
 
-
-
-
-          </div>
+                    <!-- </div> -->
                 </div>
             </div>
-
         </div>
     </div>
-</div>
-</div>
-</div>
 </section>
 
 <div class="mbanner">
-<div class="container">
-<span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
-<div class="pink-splasher">
-<a ui-sref="fan-corner" class="btn btn-sucess big-btn">{{'CLICK HERE'|translate}}</a>
-</div>
-</div>
+    <div class="container">
+        <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
+        <div class="pink-splasher">
+            <a ui-sref="fan-corner" class="btn btn-sucess big-btn">{{'CLICK HERE'|translate}}</a>
+        </div>
+    </div>
 </div>
 
 <!-- <div class="section3 no-mt marg-section">
@@ -347,117 +346,110 @@
 </div> -->
 
 <div class="section4">
-<div class="box-home">
-<div class="row margin0">
-<div class="col-sm-6 padding0">
-    <a ui-sref="fixtures({id:1})">
-        <div class="cont-box mr2 mb2">
-            <div class="img-holder">
-                <img ng-src="img/home/{{'box1'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+    <div class="box-home">
+        <div class="row margin0">
+            <div class="col-sm-6 padding0">
+                <a ui-sref="fixtures({id:1})">
+                    <div class="cont-box mr2 mb2">
+                        <div class="img-holder">
+                            <img ng-src="img/home/{{'box1'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 padding0">
+                <a ui-sref="gallery">
+                    <div class="cont-box ml2 mb2">
+                        <div class="img-holder">
+                            <img ng-src="img/home/{{'box2'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-    </a>
-</div>
-<div class="col-sm-6 padding0">
-    <a ui-sref="gallery">
-        <div class="cont-box ml2 mb2">
-            <div class="img-holder">
-                <img ng-src="img/home/{{'box2'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+        <div class="row margin0">
+            <div class="col-sm-6 padding0">
+                <a ui-sref="news-media">
+                    <div class="cont-box mr2 mt2">
+                        <div class="img-holder">
+                            <img ng-src="img/home/{{'box3'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 padding0">
+                <a ui-sref="wallpaper">
+                    <div class="cont-box ml2 mt2">
+                        <div class="img-holder">
+                            <img ng-src="img/home/{{'box4'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-    </a>
-</div>
-</div>
-<div class="row margin0">
-<div class="col-sm-6 padding0">
-    <a ui-sref="news-media">
-        <div class="cont-box mr2 mt2">
-            <div class="img-holder">
-                <img ng-src="img/home/{{'box3'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
-            </div>
-        </div>
-    </a>
-</div>
-<div class="col-sm-6 padding0">
-    <a ui-sref="wallpaper">
-        <div class="cont-box ml2 mt2">
-            <div class="img-holder">
-                <img ng-src="img/home/{{'box4'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
-            </div>
-        </div>
-    </a>
-</div>
-</div>
-</div>
+    </div>
 </div>
 <section class="marg-section">
-<div class="social-back ">
-<div class="container">
+    <div class="social-back ">
+        <div class="container">
 
-<div class="text-center social-bk">
-    <img src="img/object/back-pink.png" class="img-responsive" alt="Jaipur Pink Panthers">
-    <div class="social-hub">
-        <h1 class="color-white">
+            <div class="text-center social-bk">
+                <img src="img/object/back-pink.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                <div class="social-hub">
+                    <h1 class="color-white">
             {{'SOCIAL HUB'|translate}}</h1>
-    </div>
-</div>
+                </div>
+            </div>
 
-<div class="row">
-    <div class="col-md-4 col-sm-4">
-        <div class="social-logo text-center">
-            <span>
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="social-logo text-center">
+                        <span>
                 <i class="fa fa-facebook"></i>
             </span>
-            <div class="feed-social mt30">
+                        <div class="feed-social mt30">
 
-                <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="https://www.facebook.com/JaipurPinkPanthers/">
-                            <a href="https://www.facebook.com/JaipurPinkPanthers/">Jaipur Pink Panthers</a>
-                        </blockquote>
+                            <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <div class="fb-xfbml-parse-ignore">
+                                    <blockquote cite="https://www.facebook.com/JaipurPinkPanthers/">
+                                        <a href="https://www.facebook.com/JaipurPinkPanthers/">Jaipur Pink Panthers</a>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div id="fb-root"></div>
+
+                        </div>
                     </div>
                 </div>
-
-                <div id="fb-root"></div>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4">
-        <div class="social-logo text-center ">
-            <span>
+                <div class="col-md-4 col-sm-4">
+                    <div class="social-logo text-center ">
+                        <span>
                 <i class="fa fa-twitter"></i>
             </span>
-            <div class="feed-social mt30 sm-ht">
-                <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers">Tweets by JaipurPanthers</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4">
-        <div class="social-logo text-center ">
-            <span>
+                        <div class="feed-social mt30 sm-ht">
+                            <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers">Tweets by JaipurPanthers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="social-logo text-center ">
+                        <span>
                 <i class="fa fa-instagram"></i>
             </span>
-            <div class="feed-social mt30">
-                <!-- LightWidget WIDGET -->
-                <iframe
-                    src="//lightwidget.com/widgets/7b766cab3d1a5097ba679fb551830aa9.html"
-                    id="lightwidget_7b766cab3d"
-                    name="lightwidget_7b766cab3d"
-                    scrolling="no"
-                    allowtransparency="true"
-                    class="lightwidget-widget"
-                    style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                        <div class="feed-social mt30">
+                            <!-- LightWidget WIDGET -->
+                            <iframe src="//lightwidget.com/widgets/7b766cab3d1a5097ba679fb551830aa9.html" id="lightwidget_7b766cab3d" name="lightwidget_7b766cab3d" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
-</div>
-
-</div>
-</div>
 </section>
 <section>
-<!-- <div class="back-img">
+    <!-- <div class="back-img">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4">
@@ -514,50 +506,53 @@
       </div>
     </div>
   </div> -->
-<div class="back-img">
-<div class="container">
-<div class="row">
-    <div class="col-md-4 col-sm-4">
-        <div class="">
-            <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive" alt="Jaipur Pink Panthers">
-        </div>
-        <div class="text-center">
-            <h4 class="line140 font-excl">
+    <div class="back-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="">
+                        <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive" alt="Jaipur Pink Panthers">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="line140 font-excl">
 
                 {{'Get exclusive JPP Wallpapers for your Desktop and Mobile'|translate}}
             </h4>
-        </div>
-        <div class="button text-center">
-            <a ui-sref="wallpaper" class="btn btn-primary">
+                    </div>
+                    <div class="button text-center">
+                        <a ui-sref="wallpaper" class="btn btn-primary">
                 {{'Download Wallpapers'|translate}}
             </a>
-        </div>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-6 col-sm-6">
-        <div class="row">
-            <div class="col-md-6 col-xs-6">
-                <div class="cell-img">
-                    <img src="img/object/phone.png" class="img-responsive" alt="Jaipur Pink Panthers">
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-6">
-                <div class="margin-all p-clear">
-                    <div class="download-link">
-                        <h2 class="font-app">{{'Download the JPP App'|translate}}</h2>
                     </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 col-sm-6">
                     <div class="row">
                         <div class="col-md-6 col-xs-6">
-                            <div class="play-store">
-                                <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
-                                    <img src="img/object/play-store.png" class="img-responsive" alt="Jaipur Pink Panthers">
-                                </a>
+                            <div class="cell-img">
+                                <img src="img/object/phone.png" class="img-responsive" alt="Jaipur Pink Panthers">
                             </div>
                         </div>
                         <div class="col-md-6 col-xs-6">
-                            <div class="app-store play-store">
-                                <a href="https://itunes.apple.com/in/app/id1084678272?mt=8" target="_blank">
-                                    <img src="img/object/app-store.png" class="img-responsive" alt="Jaipur Pink Panthers"></a>
+                            <div class="margin-all p-clear">
+                                <div class="download-link">
+                                    <h2 class="font-app">{{'Download the JPP App'|translate}}</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-6">
+                                        <div class="play-store">
+                                            <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
+                                                <img src="img/object/play-store.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6">
+                                        <div class="app-store play-store">
+                                            <a href="https://itunes.apple.com/in/app/id1084678272?mt=8" target="_blank">
+                                                <img src="img/object/app-store.png" class="img-responsive" alt="Jaipur Pink Panthers"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -565,7 +560,4 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
 </section>
