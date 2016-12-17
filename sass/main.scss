@@ -1242,7 +1242,36 @@ img.fancybox-image {
         }
     }
 }
+.news-below{
+  position: relative;
+  cursor: pointer;
+  &.active,
+  &:hover {
+      background-color: #cb2180;
+      .hover-plams {
 
+          opacity: 1;
+      }
+}
+.hover-plams {
+  position: absolute;
+      left: -15px;
+      top: -37px;
+      left: 20px;
+      opacity: 0;
+      width: 46px;
+}
+
+}
+.new-item-sec{
+  @extend .new-item;
+  h3{
+    color:#fff;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}
 .home-player-slider {
     position: relative;
 
@@ -2870,6 +2899,95 @@ a.ilogo {
     padding: 0 !important;
 
 }
+.banner-link{
+  background-color: #000;
+}
+.new-listing-name{
+  li{
+    padding: 6px 18px;
+    border-right: 1px solid $brand-primary;
 
+    &:last-child{
+      border: none;
+    }
+  }
+}
+.box-black{
+  text-align: center;
+padding: 20px 0px 20px 0px;
+}
+.pl-link{
+  position: absolute;
+bottom: 0;
+text-align: center;
+margin: 0 auto;
+width: 100%;
+background: #b41e72;
+padding: 10px 0px 10px 0px;
+}
+.pl-contest{
+  text-align: center;
+margin: 0 auto;
+}
+.m-l15{
+      margin-left: 14px;
+      ul{
+        li{
+              padding: 0px 3px;
+              a{
+                i{
+                  height: 35px;
+    width: 35px;
+    padding: 8px 9px;
+    font-size: 20px;
+                }
+              }
+        }
+      }
+}
+.pl-contest-rg{
+      margin: 3px 0px 0px 3px;
+}
+.pl-contest-rg ul {
+    display: block;
+    list-style: none;
+}
+.pl-contest-rg ul li {
+    display: inline-block;
+    padding: 0;
+      margin: -3px 0px 0px -3px;
+}
+
+
+.img-list-box.gallery-album {
+    height: 252px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+      width: 333.8px;
+}
+
+.img-list-box.gallery-album img {
+    /* max-width: 100%; */
+    max-height: 100%;
+    width: auto;
+}
+.img-list-box{
+
+}
+.cn-title {
+    position: absolute;
+    bottom: 0;
+    background: #4fcaf4;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        background: #b41e72;
+    }
+}
+.m-min84{
+      margin-left: -84px;
+}
 @import "mobile";
 @import "style";

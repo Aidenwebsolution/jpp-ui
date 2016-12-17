@@ -16,16 +16,16 @@
 <div class="section2 home">
     <div class="custom-slider">
         <div class="row margin0">
-            <div class="col-sm-8 padding0">
+            <div class="col-sm-12 padding0">
                 <div class="image-holder parent-height">
                     <uib-carousel interval="3000">
-                        <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english">
+                        <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
                         </uib-slide>
 
-                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi">
+                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
@@ -33,7 +33,7 @@
                     </uib-carousel>
                 </div>
             </div>
-            <div class="col-sm-4 padding0">
+            <!-- <div class="col-sm-4 padding0">
                 <div class="content-scroll">
 
                     <div class="news-us" ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
@@ -58,9 +58,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+
+    <!-- //NEW UI -->
+<section class="banner-link ">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="co-md-12">
+        <div class="custom-list box-black text-center">
+          <ul class="new-item-sec new-listing-name margin0">
+            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" class="news-below">
+  <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
+            <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+            </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- //END -->
     <!-- <div class="custom-slider">
     <div class="row margin0">
       <div class="col-sm-8 padding0">
@@ -323,7 +344,94 @@
         </div>
     </div>
 </section>
+<section>
+  <div class="pnt-wrd">
+    <div class="container">
+      <div class="row m-min84">
+        <div class="col-md-12">
+          <div class="panther-world">
+            <img src="img/new-banner.png" alt="" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="roar-pnt">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 padding0">
+        <div class="pl-contest gallery-album">
+          <img src="img/new/h1.jpg" alt="" class="img-responsive">
+<div class="pl-link  text-center">
+  <div class="display-inline">
+    <h4 class="uppercase-text color-white">play this contest on </h4>
+  </div>
+  <div class="social-link custom-list display-inline text-center-md m-l15">
+    <ul class="padding0 margin0">
+      <li>
+        <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/JaipurPanthers" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-md-7 padding0">
+        <div class="pl-contest-rg">
+          <ul class="padding0 margin0">
+            <li>
+              <div class="img-list-box gallery-album">
+                <img src="img/new/h2.jpg" alt="">
+                <div class="cn-title">
+                  <h4 class="uppercase-text color-white">games</h4>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="img-list-box gallery-album">
+                <img src="img/new/h3.jpg" alt="">
+                <div class="cn-title">
+                  <h4 class="uppercase-text color-white">JPP TV</h4>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="img-list-box gallery-album">
+                <img src="img/new/h4.jpg" alt="">
+                <div class="cn-title">
+                  <h4 class="uppercase-text color-white">Gallery</h4>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="img-list-box gallery-album">
+                <img src="img/new/h2.jpg" alt="">
+                <div class="cn-title">
+                  <h4 class="uppercase-text color-white">WALLPAPERS</h4>
+                </div>
+              </div>
+            </li>
 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
 <div class="mbanner">
     <div class="container">
         <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
