@@ -18,7 +18,7 @@
         <div class="row margin0">
             <div class="col-sm-12 padding0">
                 <div class="image-holder parent-height">
-                    <uib-carousel interval="3000">
+                    <uib-carousel interval="3000" style="min-height:947px;">
                         <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
@@ -63,24 +63,24 @@
     </div>
 
     <!-- //NEW UI -->
-<section class="banner-link ">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="co-md-12">
-        <div class="custom-list box-black text-center">
-          <ul class="new-item-sec new-listing-name margin0">
-            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" class="news-below">
-  <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
-            <h3 class="margin0 uppercase-text ">
+    <section class="banner-link ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="co-md-12">
+                    <div class="custom-list box-black text-center">
+                        <ul class="new-item-sec new-listing-name margin0">
+                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" class="news-below">
+                                <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
+                                <h3 class="margin0 uppercase-text ">
                   {{new.name}}
             </h3>
-            </li>
-          </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- //END -->
     <!-- <div class="custom-slider">
     <div class="row margin0">
@@ -345,101 +345,141 @@
     </div>
 </section>
 <section>
-  <div class="pnt-wrd">
-    <div class="container">
-      <div class="row m-min84">
-        <div class="col-md-12">
-          <div class="panther-world">
-            <img src="img/new-banner.png" alt="" class="img-responsive">
-          </div>
+    <div class="pnt-wrd">
+        <div class="container">
+            <div class="row m-min84">
+                <div class="col-md-12">
+                    <div class="panther-world">
+                        <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-<div class="roar-pnt">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 padding0">
-        <div class="pl-contest gallery-album">
-          <img src="img/new/h1.jpg" alt="" class="img-responsive">
-<div class="pl-link  text-center">
-  <div class="display-inline">
-    <h4 class="uppercase-text color-white">play this contest on </h4>
-  </div>
-  <div class="social-link custom-list display-inline text-center-md m-l15">
-    <ul class="padding0 margin0">
-      <li>
-        <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
-          <i class="fa fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/JaipurPanthers" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank">
-          <i class="fa fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-        </div>
-      </div>
-      <div class="col-md-7 padding0">
-        <div class="pl-contest-rg">
-          <ul class="padding0 margin0">
-            <li>
-              <div class="img-list-box gallery-album">
-                <img src="img/new/h2.jpg" alt="">
-                <div class="cn-title">
-                  <h4 class="uppercase-text color-white">games</h4>
+    <div class="roar-pnt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 padding0">
+                    <div class="pl-contest gallery-album">
+                        <img src="img/new/h1.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        <div class="pl-link  text-center">
+                            <div class="display-inline">
+                                <h4 class="uppercase-text color-white">play this contest on </h4>
+                            </div>
+                            <div class="social-link custom-list display-inline text-center-md m-l15">
+                                <ul class="padding0 margin0">
+                                    <li>
+                                        <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/JaipurPanthers" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="img-list-box gallery-album">
-                <img src="img/new/h3.jpg" alt="">
-                <div class="cn-title">
-                  <h4 class="uppercase-text color-white">JPP TV</h4>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="img-list-box gallery-album">
-                <img src="img/new/h4.jpg" alt="">
-                <div class="cn-title">
-                  <h4 class="uppercase-text color-white">Gallery</h4>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="img-list-box gallery-album">
-                <img src="img/new/h2.jpg" alt="">
-                <div class="cn-title">
-                  <h4 class="uppercase-text color-white">WALLPAPERS</h4>
-                </div>
-              </div>
-            </li>
+                <div class="col-md-7 padding0">
+                    <div class="pl-contest-rg">
+                        <ul class="padding0 margin0">
+                            <li>
+                                <div class="img-list-box gallery-album">
+                                    <img src="img/new/h2.jpg" alt="Jaipur Pink Panthers">
+                                    <div class="cn-title">
+                                        <h4 class="uppercase-text color-white">games</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-list-box gallery-album">
+                                    <img src="img/new/h3.jpg" alt="Jaipur Pink Panthers">
+                                    <div class="cn-title">
+                                        <h4 class="uppercase-text color-white">JPP TV</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-list-box gallery-album">
+                                    <img src="img/new/h4.jpg" alt="Jaipur Pink Panthers">
+                                    <div class="cn-title">
+                                        <h4 class="uppercase-text color-white">Gallery</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-list-box gallery-album">
+                                    <img src="img/new/h2.jpg" alt="Jaipur Pink Panthers">
+                                    <div class="cn-title">
+                                        <h4 class="uppercase-text color-white">WALLPAPERS</h4>
+                                    </div>
+                                </div>
+                            </li>
 
-          </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
 
 </section>
-<div class="mbanner">
+<section class="mt70s">
+    <div class="container bg-sub">
+        <div class="subcribe bg">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="display-inline">
+                        <div class="mob-icon">
+                            <img src="img/new/h6.png" alt="Jaipur Pink Panthers" class="mt-min-70s">
+                        </div>
+                    </div>
+                    <div class="display-inline text-line pt30s">
+                        <h4 class="uppercase-text color-black font-bold">enter your mobile number </h4>
+                        <h4 class="uppercase-text color-black font-bold">to download jpp app</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sub-form">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <span class="sp-num">+91</span>
+                                <input type="email" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-default go-btn">GO</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="pt40s">
+                        <div class="display-inline social-img">
+                            <img src="img/play.png" alt="Jaipur Pink Panthers">
+                        </div>
+                        <div class="display-inline social-img p1-10">
+                            <img src="img/app.png" alt="Jaipur Pink Panthers">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <div class="mbanner">
     <div class="container">
         <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
         <div class="pink-splasher">
             <a ui-sref="fan-corner" class="btn btn-sucess big-btn">{{'CLICK HERE'|translate}}</a>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- <div class="section3 no-mt marg-section">
 <div class="home-player-slider">
