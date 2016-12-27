@@ -1174,6 +1174,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
 })
+.controller('TicketCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("ticket");
+    $scope.menutitle = NavigationService.makeactive("Ticket");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+})
 
 .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file

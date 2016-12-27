@@ -3065,7 +3065,7 @@ a.ilogo {
         border-color: #b41e72;
         color: #b41e72;
         font-size: 18px;
-
+        background: transparent;
         &:active,
         &:focus {
             outline: 0;
@@ -3123,6 +3123,30 @@ a.ilogo {
 
 .pt30s {
     padding-top: 30px;
+}
+.by-ticket{
+      margin: 0px -30px 0px 0px;
+      img{
+      width: 100%;
+      }
+}
+.by-merchandise{
+    margin: 0px 0px 0px -30px;
+    img{
+    width: 100%;
+    }
+}
+.sign-up {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(to right,transparent 0,#4ecaf5 26%,#4ecaf5 22%,#4ecaf5 73%,transparent 100%);
+    width: 100%;
+    padding: 14px 0px;
+    a{
+      border-bottom: 2px solid #fff;
+    }
 }
 @import "mobile";
 @import "style";
