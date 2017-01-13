@@ -18,7 +18,7 @@
         <div class="row margin0">
             <div class="col-sm-12 padding0">
                 <div class="image-holder parent-height">
-                    <uib-carousel interval="3000" style="min-height:947px;">
+                    <uib-carousel interval="3000" >
                         <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
@@ -76,6 +76,15 @@
             </h3>
                             </li>
                         </ul>
+                        <!-- <flex-slider flex-slide="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide" item-width="200" item-margin="10" animationloop="true" move="2" class="news-below">
+
+                            <li class="text-center">
+                              <h3 class="margin0 uppercase-text ">
+                {{new.name}}
+          </h3>
+                            </li>
+
+                        </flex-slider> -->
                     </div>
                 </div>
             </div>

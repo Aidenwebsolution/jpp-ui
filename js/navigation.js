@@ -1,5 +1,5 @@
 var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
- // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
+// var mainurl = "http://192.168.0.101/jppbackend/index.php/";
 var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
@@ -8,46 +8,73 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
     var navigation = [{
-        name: "Fixtures & Results",
-        url: "fixtures({id:1})",
-        classis: "active"
-    }, {
-        name: "Tickets",
-        classis: "active"
-    },{
-        name: "Merchandise",
-        url: "ticket-merchandise",
-        classis: "active",
-        highlighter: "high"
-    }, {
-        name: "Players",
-        url: "players",
-        classis: "active"
-    }, {
-        name: "Photo Gallery",
-        url: "gallery",
-        classis: "active"
-    }, {
-        name: "JPP TV",
-        url: "jpp-tv",
-        classis: "active"
-    }, {
-        name: "Wallpapers",
-        url: "wallpaper",
-        classis: "active"
-    }, {
-        name: "News",
-        url: "news-media",
-        classis: "active"
-    }, {
-        name: "About",
-        url: "about-us",
-        classis: "active"
-    }, {
-        name: "Fan Corner",
-        url: "fan-corner",
-        classis: "active"
-    }];
+            name: "Fixtures & Results",
+            url: "fixtures({id:1})",
+            classis: "active"
+        }, {
+            name: "Panther World",
+            url: "fixtures({id:1})",
+            classis: "active",
+            subnav: [{
+                name: "Wallpapers",
+                url: "wallpaper",
+                classis: "active"
+            }, {
+                name: "Gallery",
+                url: "gallery",
+                classis: "active"
+            }, {
+                name: "Games",
+                link: "jpp-tv",
+                classis: "active"
+            }, {
+                name: "JPP TV",
+                url: "jpp-tv",
+                classis: "active"
+            }]
+        }, {
+            name: "Tickets",
+            url: "ticket",
+            classis: "active"
+        }, {
+            name: "Merchandise",
+            url: "ticket-merchandise",
+            classis: "active",
+            highlighter: "high"
+        }, {
+            name: "Players",
+            url: "players",
+            classis: "active"
+        },
+        // {
+        //     name: "Photo Gallery",
+        //     url: "gallery",
+        //     classis: "active"
+        // },
+        // {
+        //     name: "JPP TV",
+        //     url: "jpp-tv",
+        //     classis: "active"
+        // },
+        // {
+        //     name: "Wallpapers",
+        //     url: "wallpaper",
+        //     classis: "active"
+        // },
+        {
+            name: "News",
+            url: "news-media",
+            classis: "active"
+        }, {
+            name: "About",
+            url: "about-us",
+            classis: "active"
+        }, {
+            name: "Fan Corner",
+            url: "fan-corner",
+            classis: "active"
+        }
+    ];
 
     return {
         getnav: function() {
