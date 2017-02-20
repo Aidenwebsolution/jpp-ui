@@ -3,10 +3,9 @@ var jsArray = [
   './bower_components/jStorage/jstorage.js',
   './bower_components/fancyBox/source/jquery.fancybox.js',
   './bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.js',
-  './bower_components/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js',
+  './bower_components/fancyBox/lib/jquery.mousewheel.pack.js',
   './bower_components/flexslider/jquery.flexslider-min.js',
   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-
   './bower_components/angular/angular.js',
   './bower_components/angular-animate/angular-animate.js',
   './bower_components/angular-loading-bar/src/loading-bar.js',
@@ -17,6 +16,18 @@ var jsArray = [
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
   './bower_components/lodash/lodash.js',
   './bower_components/moment/moment.js',
+//   './bower_components/ev-emitter/ev-emitter.js',
+//   './bower_components/desandro-matches-selector/matches-selector.js',
+//   './bower_components/fizzy-ui-utils/utils.js',
+//   './bower_components/get-size/get-size.js',
+//   './bower_components/outlayer/item.js',
+//   './bower_components/outlayer/outlayer.js',
+//   './bower_components/masonry/masonry.js',
+//   './bower_components/imagesloaded/imagesloaded.js',
+//   './bower_components/angular-masonry/angular-masonry.js',
+
+
+
   './bower_components/angular-translate/angular-translate.js',
   './bower_components/angulartics/dist/angulartics.min.js',
   './bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',

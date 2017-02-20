@@ -7,7 +7,7 @@ var globalFunc = {};
 var currentlang = '';
 var globalLocale = moment.locale('hi');
 var localLocale = moment();
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate','angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate) {
 
@@ -56,6 +56,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.latestmatch = {};
     $scope.countdown = {};
+    $scope.bricks=[{
+      img:'img/player-slide.png',
+      info:'Raider',
+    },{
+      img:'img/player-slide.png',
+      info:'Mallesh Gangadhari',
+    }];
     $scope.image = [{
         src: 'img/player-slide.png',
         src2: 'img/player/p1.png',
@@ -1429,6 +1436,44 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+
+    $scope.logs = function() {
+      $uibModal.open({
+          animation: true,
+          templateUrl: 'views/modal/logs.html',
+          scope:$scope,
+      });
+  };
+
+    $scope.tab = "design";
+        $scope.classa = 'active-tab';
+        $scope.classb = '';
+
+        $scope.tabchange = function(tab, a) {
+            $scope.tab = tab;
+            if (a == 1) {
+                $scope.classa = 'active-tab';
+                $scope.classb = '';
+               
+
+            }
+            if (a == 2) {
+                $scope.classb = 'active-tab';
+                $scope.classa = '';
+              
+
+            }
+           
+
+        };
+//   $scope.signs=function(){
+//       $uibModal.open({
+//            animation: true,
+//           templateUrl: 'views/modal/signs.html',
+//           scope:$scope,
+//       })
+//   }
+
 
 })
 

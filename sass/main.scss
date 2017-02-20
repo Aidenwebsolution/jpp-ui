@@ -77,6 +77,8 @@ $font-family-serif: "Oswald", Georgia, "Times New Roman", Times, serif !default;
         }
     }
 }
+
+
 @mixin transition($transition...) {
     -moz-transition: $transition;
     -o-transition: $transition;
@@ -893,11 +895,11 @@ hr {
 }
 
 .facbook {
-    background-color: $facebook;
+    background-color: $facebook !important;
 }
 
 .twitter {
-    background-color: $twitter;
+    background-color: $twitter!important;
 }
 
 .google {
@@ -3148,5 +3150,226 @@ a.ilogo {
       border-bottom: 2px solid #fff;
     }
 }
+
+.support-icon {
+    margin: 0 auto;
+    opacity: 0.5;
+    img { width: 100%; }
+}
+
+.view-data.active {
+
+    .support-icon { opacity: 1; }
+}
+
+.makeActive-service {
+    .active {
+        p {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 190px;
+                height: 2px;
+                left: 50%;
+                @include transform(translate(-50%));
+                bottom: -12px;
+                background-color: #4ecaf5;
+            }
+        }
+    }
+    li{ padding: 0 15px; }
+}
+
+.log-sign{
+    li{
+
+        a{
+            color: $white;
+            font-size: 15px;
+        }
+
+    }
+
+}
+
+.mt20{ margin-top: 20px;}
+
+ .line-after{
+      position: relative;
+     &:after{
+            content: "";
+            border: 1px solid #fff;
+            height: 15px;
+            position: absolute;
+            top: 10px;
+            right: -3px;
+        }
+ }
+
+
+ .masonry-width {
+     .masonry-box {
+         width: 280px;
+         position: relative;
+             .get-center {
+               @include position(absolute, 50% null null 50%);
+               @include transform(translate(-50%,-50%));
+               padding: 6px 12px;
+               color: #000;
+               font-size: 18px;
+               width: 35px;
+               height: 35px;
+               background: #fff;
+     }
+     }
+ }
+ .masonry-brick {
+     margin: 5px;
+ }
+
+ .custom-box {
+     .masonry-brick {
+         margin-bottom: 10px;
+         background-color: #000;
+     }
+ }
+
+ .masonry-box a {
+     display: block !important;
+ }
+
+ .masonry-box {
+     width: 280px;
+
+     img {
+         width: 100%;
+     }
+ }
+.hello{
+
+    .whitey{color: #fff;}
+  
+    li{ 
+        width: 30%;
+        padding: 10px 0px;
+        margin-right: -2px;
+        background-color: #fff;    
+        color: #000;
+    }
+     .active-tab{
+        background-color: #4ecaf5;
+        color: #fff;
+    }
+    .carts{
+        background-color:#4ecaf5;
+        padding: 30px;
+        margin-top: -1px;
+    }
+    .form{
+       padding: 20px 50px;
+            .form-group{
+    .form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    box-shadow: none;
+    border-radius: 0;
+    color: #fff;
+    }
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+    }
+
+}
+
+.social-buttons{
+    .twitter,.facbook{ text-transform: none;}
+
+    .fb{
+        padding: 5px 12px !important;
+        background-color: rgba(63, 81, 181, 0.93) !important;
+    }
+
+    .tweet{ background-color: #2196F3 !important; }
+
+    .pinky{ width: 40% !important; }
+
+    .signs {
+    margin-top: 10px;
+    position: relative;
+
+    button{ width: 35%; }
+
+         span{
+    @include position(absolute,0 null null 30%);
+    background-color: $facebook;
+    display: inline-block;
+    padding: 5px 10px;
+        }
+}
+.btn-pink{
+    background-color: $brand-primary;
+    border:none;
+}
+    
+.or {
+    position: relative;
+    display: inline-block;
+    &:before {
+    content: "";
+    border: 1px solid #000;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    width: 50px;
+}
+&:after {
+    content: "";
+    border: 1px solid #000;
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    width: 50px;
+}
+}
+}
+
+.checkbox{
+    input[type="checkbox"]{
+        display: none;
+    }
+     input[type="checkbox"]+label{
+         padding: 0;
+       color:#fff;
+    }
+      input[type="checkbox"]+label span{
+      width: 10px;
+      height: 10px;
+      border: 2px solid #fff;
+      display: inline-block;
+      margin: 5px;
+      vertical-align: middle;
+    }
+       
+            input[type="checkbox"]+label span{
+              background-color: transparent;
+            }
+
+            input[type="checkbox"]:checked+label span{
+              background-color: $brand-primary;
+            }
+
+         input[type="checkbox"]+label span,
+         input[type="checkbox"]:checked+label span{
+              @include transition(background-color 0.4s linear);
+         }
+
+}
+
 @import "mobile";
 @import "style";

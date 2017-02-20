@@ -1,4 +1,4 @@
-<header>
+<header ng-controller="headerctrl">
     <div class="language-holder" ng-controller="languageCtrl">
         <div class="container">
             <span>The Official website of Jaipur Pink Panthers</span>
@@ -25,11 +25,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-10 col-sm-10">
+                <div class="col-md-8 col-sm-8">
                     <div class="collapse navbar-collapse" id="nav-collapse">
                         <div ng-include="template.menu" class="template menu"></div>
                     </div>
                 </div>
+                <div class="col-md-2 col-sm-2">
+ <ul class="list-inline mt20 log-sign">
+    <li class="line-after" ng-click="logs();"><a>Login</a></li>
+    <li ng-click="logs();"><a >Signup</a></li>
+ </ul>
+                </div>
+              </div>
+
             </div>
         </div>
     </nav>

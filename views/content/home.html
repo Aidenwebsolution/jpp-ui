@@ -402,7 +402,7 @@
                         <ul class="padding0 margin0">
                             <li>
                                 <div class="img-list-box gallery-album">
-                                    <img src="img/new/h2.jpg" alt="Jaipur Pink Panthers">
+                                    <img src="img/homes/games.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">games</h4>
                                     </div>
@@ -410,7 +410,7 @@
                             </li>
                             <li>
                                 <div class="img-list-box gallery-album">
-                                    <img src="img/new/h3.jpg" alt="Jaipur Pink Panthers">
+                                    <img src="img/homes/jpp.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">JPP TV</h4>
                                     </div>
@@ -418,7 +418,7 @@
                             </li>
                             <li>
                                 <div class="img-list-box gallery-album">
-                                    <img src="img/new/h4.jpg" alt="Jaipur Pink Panthers">
+                                    <img src="img/homes/gamess.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">Gallery</h4>
                                     </div>
@@ -426,7 +426,7 @@
                             </li>
                             <li>
                                 <div class="img-list-box gallery-album">
-                                    <img src="img/new/h2.jpg" alt="Jaipur Pink Panthers">
+                                    <img src="img/homes/wall.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">WALLPAPERS</h4>
                                     </div>
@@ -552,20 +552,92 @@
   <div class="row margin0">
     <div class="col-md-6 padding0">
       <div class="by-ticket">
-      <a ui-sref="ticket">  <img src="img/new/h7.jpg" alt="" class="img-responsive"></a>
+      <a ui-sref="ticket">  <img src="img/homes/journeys.jpg" alt="" class="img-responsive"></a>
 
       </div>
     </div>
     <div class="col-md-6 padding0">
       <div class="by-merchandise">
-        <a ui-sref="ticket-merchandise"><img src="img/new/merchandise.png" alt="" class="img-responsive"></a>
+        <a ui-sref="ticket-merchandise"><img src="img/homes/homepages.jpg" alt="" class="img-responsive"></a>
 
       </div>
     </div>
   </div>
 </div>
 </section>
-<section class="marg-section">
+<section class="section5 back-img ">
+    <div class="container">
+      <div class="tab makeActive-service" ng-init="viewDetail=1">
+
+                  <ul class="list-inline text-center ">
+                      <li class="package-bg   view-data"  ng-click="viewDetail = 1;" ng-class="{'active': viewDetail==1, '': viewDetail!==1}">
+                         <div class="social-logo support-icon ">
+                        <span>
+               <i class="fa fa-facebook"></i>
+
+            </span>
+            </div>
+                     </li>
+
+                     <li class="package-bg     view-data" ng-click="viewDetail=2;" ng-class="{'active': viewDetail==2, '': viewDetail!==2}">
+                         <div class="social-logo support-icon ">
+                        <span>
+                 <i class="fa fa-twitter"></i>
+            </span>
+            </div>
+                     </li>
+
+                     <li class="package-bg   view-data" ng-click="viewDetail=3;" ng-class="{'active': viewDetail==3, '': viewDetail!==3}">
+                        <div class="social-logo support-icon ">
+                        <span>
+              <i class="fa fa-instagram"></i>
+
+            </span>
+            </div>
+                     </li>
+                  </ul>
+               </div>
+    <div class="design" ng-show="viewDetail == 1">
+               <div class="pack-one text-center">
+                   <h2>hi</h2>
+                   <div class="all-movies masonry-width">
+                                          <div masonry>
+              <div class="masonry-brick" ng-repeat="brick in bricks">
+                     <div class="masonry-box">
+                               <a ng-if="brick.img" href="{{brick.img}}"   class="fancybox-thumb" rel="fancybox-thumb">
+                                 <img ng-src="{{brick.img}}"  alt="A masonry brick">
+                                 </a>
+                                 <div class="info">
+                                   <p>{{brick.info}}</p>
+                                 </div>
+                                                      </div>
+                               </div>
+                             </div>
+                      </div>
+               </div>
+
+               </div>
+                   <div class="design" ng-show="viewDetail == 2">
+               <div class="pack-one text-center">
+                   <h2>hello</h2>
+
+               </div>
+
+               </div>
+                 <div class="design" ng-show="viewDetail == 3">
+               <div class="pack-one text-center">
+                   <h2>hi</h2>
+               </div>
+
+               </div>
+    </div>
+
+
+
+
+</section>
+
+<!-- <section class="marg-section">
     <div class="social-back ">
         <div class="container">
 
@@ -614,7 +686,7 @@
                 <i class="fa fa-instagram"></i>
             </span>
                         <div class="feed-social mt30">
-                            <!-- LightWidget WIDGET -->
+
                             <iframe src="//lightwidget.com/widgets/7b766cab3d1a5097ba679fb551830aa9.html" id="lightwidget_7b766cab3d" name="lightwidget_7b766cab3d" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                         </div>
                     </div>
@@ -623,7 +695,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 <section>
     <!-- <div class="back-img">
     <div class="container">
