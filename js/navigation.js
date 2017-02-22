@@ -81,7 +81,7 @@ var navigationservice = angular.module('navigationservice', [])
             return navigation;
         },
         getAllSliders: function(callback) {
-            $http.get(adminurl + "getAllSliders").success(callback);
+            $http.get(adminurl + "getAllSliders").then(callback);
         },
         contactus: function(register, callback) {
             $http({
@@ -98,40 +98,40 @@ var navigationservice = angular.module('navigationservice', [])
             }).success(callback);
         },
         getallpoint: function(callback) {
-            $http.get(adminurl + "getallpoint").success(callback);
+            $http.get(adminurl + "getallpoint").then(callback);
         },
         getLatestMatch: function(callback) {
-            $http.get(adminurl + "getLatestMatch").success(callback);
+            $http.get(adminurl + "getLatestMatch").then(callback);
         },
         getScheduleSeason4: function(callback) {
-            $http.get(adminurl + "getScheduleSeason4").success(callback);
+            $http.get(adminurl + "getScheduleSeason4").then(callback);
         },
         getHomeGameSeason4: function(callback) {
-            $http.get(adminurl + "getHomeGameSeason4").success(callback);
+            $http.get(adminurl + "getHomeGameSeason4").then(callback);
         },
         getAllGallery: function(callback) {
-            $http.get(adminurl + "getAllGallery").success(callback);
+            $http.get(adminurl + "getAllGallery").then(callback);
         },
         getAllVideoGallery: function(callback) {
-            $http.get(adminurl + "getAllVideoGallery").success(callback);
+            $http.get(adminurl + "getAllVideoGallery").then(callback);
         },
         getallnews: function(callback) {
-            $http.get(adminurl + "getallnews").success(callback);
+            $http.get(adminurl + "getallnews").then(callback);
         },
         getWallpaperCategoryForDesktop: function(callback) {
-            $http.get(adminurl + "getWallpaperCategoryForDesktop").success(callback);
+            $http.get(adminurl + "getWallpaperCategoryForDesktop").then(callback);
         },
         getSchedule: function(callback) {
-            $http.get(adminurl + "getSchedule").success(callback);
+            $http.get(adminurl + "getSchedule").then(callback);
         },
         getGallerySlide: function(request, callback) {
-            $http.get(adminurl + "getGallerySlide?galleryid=" + request).success(callback);
+            $http.get(adminurl + "getGallerySlide?galleryid=" + request).then(callback);
         },
         getallwallpaper: function(request, callback) {
             $http.get(adminurl + "getallwallpaper?wallpapercategory=" + request.wallpaperid + "&pageno=" + request.pageno).success(callback);
         },
         getSlider: function(callback) {
-            $http.get(adminurl + "getAllSliders").success(callback);
+            $http.get(adminurl + "getAllSliders").then(callback);
         },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {

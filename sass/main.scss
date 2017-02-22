@@ -2987,7 +2987,7 @@ a.ilogo {
 .pl-contest-rg ul li {
     display: inline-block;
     padding: 0;
-    margin: -3px 0 0 -3px;
+    margin: -3px 0 0 -4px;
 }
 
 .img-list-box.gallery-album {
@@ -3237,24 +3237,61 @@ a.ilogo {
 
  .masonry-box a {
      display: block !important;
+        //  padding: 20px 0 0;
  }
 
  .masonry-box {
      width: 280px;
+    //  border: 1px solid #000;
+    border-bottom-right-radius: 7px;
+      border-bottom-left-radius : 7px;
 
      img {
          width: 100%;
+         border-bottom-right-radius: 7px;
+           border-bottom-left-radius : 7px;
      }
+ }
+ .infois{
+    width: 60%;
+    border-radius: 0;
+    padding: 10px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    background-color: #fff;
+ }
+
+ .info{
+   background-color: #fff;
+    padding: 10px;
+      border-bottom-right-radius: 7px;
+        border-bottom-left-radius : 7px;
+
+ }
+
+ .inois-info{
+      text-align: left;
+   span{
+   color: $facebook;
+   font-size: 12px;
+   font-weight: 400;
+   text-transform: capitalize;
+   font-family: "Oswald";
+ }
+ span+span{
+   color: #ccc;
+ }
  }
 .hello{
 
     .whitey{color: #fff;}
-  
-    li{ 
+
+    li{
         width: 30%;
         padding: 10px 0px;
         margin-right: -2px;
-        background-color: #fff;    
+        background-color: #fff;
         color: #000;
     }
      .active-tab{
@@ -3287,6 +3324,10 @@ a.ilogo {
 
 }
 
+.roar-pnt{ margin-top: 10px; }
+
+.all-movies{ margin-left: 150px; }
+
 .social-buttons{
     .twitter,.facbook{ text-transform: none;}
 
@@ -3316,7 +3357,7 @@ a.ilogo {
     background-color: $brand-primary;
     border:none;
 }
-    
+
 .or {
     position: relative;
     display: inline-block;
@@ -3348,14 +3389,14 @@ a.ilogo {
        color:#fff;
     }
       input[type="checkbox"]+label span{
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       border: 2px solid #fff;
       display: inline-block;
       margin: 5px;
       vertical-align: middle;
     }
-       
+
             input[type="checkbox"]+label span{
               background-color: transparent;
             }
@@ -3369,7 +3410,30 @@ a.ilogo {
               @include transition(background-color 0.4s linear);
          }
 
+
+
+
 }
+.bg-greys{
+  background-image: url(../img/homes/bg-grey.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  margin-top: -30px;
+}
+.subcribe{ padding-top: 66px; }
+
+.min-logos{
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  img{
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
 
 @import "mobile";
 @import "style";

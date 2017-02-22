@@ -14,23 +14,22 @@ var jsArray = [
   './bower_components/ui-router/release/angular-ui-router.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+   './bower_components/angular-masonry/angular-masonry.js',
   './bower_components/lodash/lodash.js',
   './bower_components/moment/moment.js',
-//   './bower_components/ev-emitter/ev-emitter.js',
-//   './bower_components/desandro-matches-selector/matches-selector.js',
-//   './bower_components/fizzy-ui-utils/utils.js',
-//   './bower_components/get-size/get-size.js',
-//   './bower_components/outlayer/item.js',
-//   './bower_components/outlayer/outlayer.js',
-//   './bower_components/masonry/masonry.js',
-//   './bower_components/imagesloaded/imagesloaded.js',
-//   './bower_components/angular-masonry/angular-masonry.js',
-
-
-
   './bower_components/angular-translate/angular-translate.js',
   './bower_components/angulartics/dist/angulartics.min.js',
   './bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
+  './bower_components/jquery-bridget/jquery-bridget.js',
+  './bower_components/ev-emitter/ev-emitter.js',
+  './bower_components/desandro-matches-selector/matches-selector.js',
+  './bower_components/fizzy-ui-utils/utils.js',
+  './bower_components/get-size/get-size.js',
+  './bower_components/outlayer/item.js',
+  './bower_components/outlayer/outlayer.js',
+  './bower_components/masonry/masonry.js',
+  './bower_components/imagesloaded/imagesloaded.js',
+
 
   './js/app.js',
   './js/language.js',
@@ -45,10 +44,11 @@ var replacehostFrom = "http://localhost/demo/";
 var replacehostTo = "http://wohlig.co.in/demo2/";
 
 
-var ftpString = "U2FsdGVkX19KJ4w0W1pxaUyRsJcjQO5RL98s2rfWnmpoGlaoPfxb8Ibdl0yu5NoHaLfSDmk2WnqRVpQfIAB8wv/Srsy/Y9OUyx5gs3ZutJ2MdGMlS8IaMJmfLSp77xVx1yuRD4aFlRuo0yQ/Ldy2pA==";
+var ftpString = "U2FsdGVkX18mMO3ICRva3ER28IlWE2yOlb/Fz+wBOlVjlpBksTEq0+NxDAbeog8uh7r06NC58U77UEmgqGprCKdfuo0L3BPGK40mhy/6jgpsIdZ9etq/YMtcBlsGaPjTWU6s+70Ax4v3x+gqv+gl7A==";
+
 
 // var ftpString = "U2FsdGVkX1/ytzzmQjz8vb/D0vYksZDN5680DnkiecoGqk50bo0m7nb1yxKVvx7CavLIm4r3m+oA7JphPCy7B4DGlNDMVVh2VTpPgHeuINwIInWDLjw6dH21cHCLHWec";
-var uploadingFolder = "jpp";
+var uploadingFolder = "tingdom/jpp";
 var password = "";
 
 
