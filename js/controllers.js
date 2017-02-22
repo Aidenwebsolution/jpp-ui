@@ -18,7 +18,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log($scope.currentlang);
     };
     NavigationService.getSlider(function(data) {
-        $scope.sliderdata = data;
+        console.log(data);
+        $scope.sliderdata = data.data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
 

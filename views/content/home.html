@@ -69,7 +69,13 @@
                 <div class="co-md-12">
                     <div class="custom-list box-black text-center">
                         <ul class="new-item-sec new-listing-name margin0">
-                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" class="news-below">
+                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide"  animationloop="true" class="news-below">
+                                <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
+                                <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+            </h3>
+                            </li>
+                            <li ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide"  animationloop="true" class="news-below">
                                 <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
                                 <h3 class="margin0 uppercase-text ">
                   {{new.name}}
