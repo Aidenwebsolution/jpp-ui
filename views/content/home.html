@@ -203,7 +203,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 pad0 marg2">
 
-                    <a ui-sref="fixtures"><img ng-src="img/{{'ban'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <a ui-sref="fixtures"><img ng-src="{{journeyData.image | serverimage}}"  class="img-responsive" alt="Champions Patna Pirates"></a>
 
                     <!-- <div class="white-line-pad">
                         <div class="head-table text-center">
@@ -251,7 +251,7 @@
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
 
-                    <a ui-sref="fixtures"><img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <a ui-sref="fixtures"><img ng-src="{{congratulationData.image | serverimage}}"class="img-responsive" alt="Champions Patna Pirates"></a>
 
                     <!-- <div class="nxt-match white-line-pad">
 
@@ -376,7 +376,7 @@
             <div class="row">
                 <div class="col-md-5 padding0">
                     <div class="pl-contest gallery-album">
-                        <img src="img/new/h1.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                        <img ng-src="{{guesswhoData.image | serverimage}}"  alt="Jaipur Pink Panthers" class="img-responsive">
                         <div class="pl-link  text-center">
                             <div class="display-inline">
                                 <h4 class="uppercase-text color-white">play this contest on </h4>

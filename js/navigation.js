@@ -133,6 +133,15 @@ var navigationservice = angular.module('navigationservice', [])
         getSlider: function(callback) {
             $http.get(adminurl + "getAllSliders").then(callback);
         },
+         getjourney: function(callback) {
+            $http.get(adminurl + "getjourney").success(callback);
+        },
+         getguesswho: function(callback) {
+            $http.get(adminurl + "getguesswho").success(callback);
+        },
+         getcongratulation: function(callback) {
+            $http.get(adminurl + "getcongratulation").success(callback);
+        },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {
