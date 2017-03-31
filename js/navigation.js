@@ -142,6 +142,14 @@ var navigationservice = angular.module('navigationservice', [])
          getcongratulation: function(callback) {
             $http.get(adminurl + "getcongratulation").success(callback);
         },
+        submitSignup: function(formData, callback) {
+          $http({
+            url: adminurl + 'signup',
+            method: 'POST',
+            withCredentials: true,
+            data: formData
+          }).success(callback);
+        },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

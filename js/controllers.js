@@ -9,10 +9,74 @@ var globalLocale = moment.locale('hi');
 var localLocale = moment();
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate','wu.masonry','angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate,$uibModal) {
+  $scope.tab2 = 'fb';
+  $scope.classa = 'actives';
+  $scope.classb = '';
+  $scope.classc = '';
+  $scope.tab = "design";
+      $scope.classa = 'active-tab';
+      $scope.classb = '';
 
+      $scope.tabchange = function(tab, a) {
+          $scope.tab = tab;
+          if (a == 1) {
+              $scope.classa = 'active-tab';
+              $scope.classb = '';
+
+
+          }
+          if (a == 2) {
+              $scope.classb = 'active-tab';
+              $scope.classa = '';
+
+
+          }
+
+
+      };
+
+  // $scope.tabchange = function(tab, a) {
+  //     //        console.log(tab);
+  //     $scope.result = [];
+  //     $scope.allresult = [];
+  //     $scope.tab2 = tab;
+  //     if (a == 1) {
+  //         $scope.classa = "actives";
+  //         $scope.classb = '';
+  //         $scope.classc = '';
+  //     } else if (a == 2) {
+  //
+  //         $scope.classb = "actives";
+  //         $scope.classa = '';
+  //         $scope.classc = '';
+  //     } else {
+  //
+  //         $scope.classa = '';
+  //         $scope.classc = "actives";
+  //         $scope.classb = '';
+  //     }
+  // };
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
+  //   $scope.logs = function() {
+  //   $scope.modalLog=  $uibModal.open({
+  //         animation: true,
+  //         templateUrl: 'views/modal/logs.html',
+  //         scope:$scope,
+  //     });
+  // };
+    $scope.enterFun=function(){
+      if (!$.jStorage.get("isLoggedIn") || $.jStorage.get("isLoggedIn") == null) {
+        $scope.modalLog=  $uibModal.open({
+              animation: true,
+              templateUrl: 'views/modal/logs.html',
+              scope:$scope,
+          });
+      }else {
+console.log("im in");
+      }
+    }
     globalFunc.changeLang = function() {
         $scope.currentlang = currentlang;
         console.log($scope.currentlang);
@@ -1469,7 +1533,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal) {
+.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal,NavigationService) {
 
     var languagePicker = {};
     $scope.template = TemplateService;
@@ -1484,6 +1548,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           scope:$scope,
       });
   };
+  $scope.signupdata={};
+  $scope.submitSignup=function(signupdata){
+console.log("signupdata",signupdata);
+$scope.incorrectPass=false;
+$scope.isCheckedmsg=false;
+if (signupdata) {
+  console.log("signupdata",signupdata);
+  if (signupdata.password == signupdata.confirmPass) {
+
+$scope.incorrectPass=false;
+NavigationService.submitSignup(signupdata,function(data){
+  console.log("data",data);
+  if (data.logged_in) {
+    $.jStorage.set("isLoggedIn",data.logged_in)
+  }else {
+
+  }
+})
+}else {
+    $scope.incorrectPass=true;
+  }
+}
+  }
 
     $scope.tab = "design";
         $scope.classa = 'active-tab';

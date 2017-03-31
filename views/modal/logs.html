@@ -3,27 +3,27 @@
                   <ul class="list-inline text-center margin0">
                       <li class="tab-item  relative text-center  text-uppercase {{classa}}" ng-click="tabchange('design',1)">
                         <h3 class="text-uppercase margin0">log in</h3>
-                     </li> 
+                     </li>
                      <li class="tab-item  relative  text-center  text-uppercase {{classb}}" ng-click="tabchange('trim',2)">
 
                         <h3 class="text-uppercase margin0"> signup</h3>
 
                      </li>
-                   
+
                   </ul>
                </div>
 
                     <div class="reward-table carts" ng-show="tab=='design'">
                  <a href="" class="text-uppercase pull-right" ng-click="$dismiss();"><i class="fa fa-times whitey" aria-hidden="true"></i></a>
                     <form action="" class="form">
-                 
+
                    <div class="form-group">
                     <input type="text" class="form-control" placeholder="Email Address">
                   </div>
                     <div class="form-group">
                     <input type="text" class="form-control" placeholder="Password">
                   </div>
-                 
+
                 </form>
                 <p class="text-center">Forgot Password?</p>
      <div class="social-buttons text-center">
@@ -36,65 +36,68 @@
  <button type="button" class="btn btn-pink facbook"> Login with Facebook</button>
                   </div>
                    <div class="signs ">
-                     <span class="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span> 
+                     <span class="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
  <button type="button" class="btn btn-pink twitter"> Login with Twitter</button>
                   </div>
-                    
+
                 </div>
                </div>
                 <div class="reward-table carts" ng-show="tab=='trim'">
                     <a href="" class="text-uppercase pull-right" ng-click="$dismiss();"><i class="fa  fa-times whitey" aria-hidden="true"></i></a>
                   <h4 class="text-center whitey margin0  text-uppercase font-bold">now to get exclusive access <br>to raid the panther's universe!</h4>
-                <form action="" class="form">
+                <form  class="form" ng-submit="submitSignup(signupdata)" name="signup">
                   <div class="row">
                     <div class="col-md-6">
  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Name">
+                    <input type="text" class="form-control" placeholder="Name" ng-model="signupdata.firstname" required>
                   </div>
                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email Address">
+                    <input type="email" class="form-control" placeholder="Email Address" ng-model="signupdata.email" required>
                   </div>
                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="signupdata.password" required>
                   </div>
                     </div>
                     <div class="col-md-6">
  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Surname">
+                    <input type="text" class="form-control" placeholder="Surname"  ng-model="signupdata.lastname" required>
                   </div>
                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Contact Us">
+                    <input type="text" class="form-control" placeholder="Contact Us" ng-model="signupdata.phoneno" required>
                   </div>
                    <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Confirm Password">
+                    <input type="text" class="form-control" placeholder="Confirm Password" ng-model="signupdata.confirmPass" required>
                   </div>
+                  <div ng-if="incorrectPass">Password does not match.</div>
                     </div>
                   </div>
                   <div class="form-group checkbox">
-                    <input type="checkbox" id="agree">
+                    <input type="checkbox" id="agree" ng-model="signupdata.isChecked" required>
                     <label for="agree" class="whitey ">
                       <span></span>I agree with the Terms &amp; conditions and Privacy Policy
                     </label>
                   </div>
-                 
-                </form>
+                  <!-- <div ng-if="isCheckedmsg">please mark check box</div> -->
+
+                <!-- </form> -->
 
                 <div class="social-buttons text-center">
                   <div class="signs">
- <button type="button " class="btn btn-pink pinky">sign up</button>
+ <button type="submit " class="btn btn-pink pinky" ng-disable="signup.$invalid">sign up</button>
                   </div>
+                    </form>
                   <h4 class="or">or</h4>
                    <div class="signs ">
                     <span class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></span>
  <button type="button" class="btn btn-pink facbook"> Sign Up with Facebook</button>
                   </div>
                    <div class="signs ">
-                     <span class="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span> 
+                     <span class="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
  <button type="button" class="btn btn-pink twitter"> Sign Up with Twitter</button>
                   </div>
-                    
+
                 </div>
 
                </div>
-             
+
 </div>
