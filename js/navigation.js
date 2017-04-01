@@ -80,6 +80,7 @@ var navigationservice = angular.module('navigationservice', [])
         getnav: function() {
             return navigation;
         },
+      
         getAllSliders: function(callback) {
             $http.get(adminurl + "getAllSliders").then(callback);
         },
@@ -142,12 +143,26 @@ var navigationservice = angular.module('navigationservice', [])
          getcongratulation: function(callback) {
             $http.get(adminurl + "getcongratulation").success(callback);
         },
+         getAuthenticate: function(callback) {
+            $http.get(adminurl + "authenticate").success(callback);
+        },
+         logoutUser: function(callback) {
+            $http.get(adminurl + "logout").success(callback);
+        },
         submitSignup: function(formData, callback) {
           $http({
             url: adminurl + 'signup',
             method: 'POST',
             withCredentials: true,
             data: formData
+          }).success(callback);
+        },
+        submitLogin: function(loginData, callback) {
+          $http({
+            url: adminurl + 'login',
+            method: 'POST',
+            withCredentials: true,
+            data: loginData
           }).success(callback);
         },
         makeactive: function(menuname) {

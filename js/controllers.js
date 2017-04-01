@@ -7,76 +7,178 @@ var globalFunc = {};
 var currentlang = '';
 var globalLocale = moment.locale('hi');
 var localLocale = moment();
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate','wu.masonry','angular-loading-bar'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'wu.masonry', 'angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate,$uibModal) {
-  $scope.tab2 = 'fb';
-  $scope.classa = 'actives';
-  $scope.classb = '';
-  $scope.classc = '';
-  $scope.tab = "design";
-      $scope.classa = 'active-tab';
-      $scope.classb = '';
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
+    // $scope.tab2 = 'fb';
+    // $scope.classa = 'actives';
+    // $scope.classb = '';
+    // $scope.classc = '';
+    // $scope.tab = "design";
+    // $scope.classa = 'active-tab';
+    // $scope.classb = '';
+    //
+    // $scope.tabchange = function(tab, a) {
+    //     $scope.tab = tab;
+    //     if (a == 1) {
+    //         $scope.classa = 'active-tab';
+    //         $scope.classb = '';
+    //
+    //
+    //     }
+    //     if (a == 2) {
+    //         $scope.classb = 'active-tab';
+    //         $scope.classa = '';
+    //
+    //
+    //     }
+    //
+    //
+    // };
 
-      $scope.tabchange = function(tab, a) {
-          $scope.tab = tab;
-          if (a == 1) {
-              $scope.classa = 'active-tab';
-              $scope.classb = '';
+    var languagePicker = {};
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        $(window).scrollTop(0);
+    });
+
+    // $scope.logs = function() {
+    //     $uibModal.open({
+    //         animation: true,
+    //         templateUrl: 'views/modal/logs.html',
+    //         scope: $scope,
+    //     });
+    // };
+    $scope.signupdata = {};
+    $scope.submitSignup = function(signupdata) {
+        console.log("signupdata", signupdata);
+        $scope.incorrectPass = false;
+        $scope.isCheckedmsg = false;
+        $scope.alreadyExist = false;
+        $scope.succesSignup = false;
+        if (signupdata) {
+            console.log("signupdata", signupdata);
+            if (signupdata.password == signupdata.confirmPass) {
+
+                $scope.incorrectPass = false;
+                NavigationService.submitSignup(signupdata, function(data) {
+                    console.log("data", data);
+                    if (data.logged_in) {
+                        $rootScope.loggedIn = true;
+                        $scope.succesSignup = true;
+                        $scope.alreadyExist = false;
+                        $timeout(function() {
+
+                            $scope.succesSignup = false;
+                            $scope.alreadyExist = false;
+                            $scope.signupdata = {};
+                            $scope.modalLogsInstance.close();
+                        }, 2000);
+
+                    } else {
+                        $scope.succesSignup = false;
+                        $rootScope.loggedIn = false;
+                        console.log("im else");
+                        $scope.alreadyExist = true;
+                    }
+                })
+            } else {
+                $scope.incorrectPass = true;
+            }
+        }
+    };
+    $scope.loginData = {};
+    $scope.incorrectDetails = false;
+    $scope.loginSubmit = function(loginData) {
+        console.log("loginData", loginData);
+        $scope.incorrectDetails = false;
+        if (loginData) {
+
+            NavigationService.submitLogin(loginData, function(data) {
+                console.log("data", data);
+                if (data.logged_in) {
+                    $scope.incorrectDetails = false;
+                    $rootScope.loggedIn = true;
+                    $scope.successlogin = true;
+                    $timeout(function() {
+
+                        $scope.successlogin = false;
+                        $scope.incorrectDetails = false;
+                        $scope.loginData = {};
+                        $scope.modalLogsInstance.close();
+                    }, 2000);
+                    console.log("im in");
+                } else {
+                    $scope.incorrectDetails = true;
+                    $rootScope.loggedIn = false;
+                }
+            })
+        }
+    }
+    $scope.tabs = "design";
+    $scope.classsa = 'active-tab';
+    $scope.classsb = '';
+
+    $scope.tabchanges = function(tab, a) {
+        $scope.tabs = tab;
+        if (a == 1) {
+            $scope.classsa = 'active-tab';
+            $scope.classsb = '';
 
 
-          }
-          if (a == 2) {
-              $scope.classb = 'active-tab';
-              $scope.classa = '';
+        }
+        if (a == 2) {
+            $scope.classsb = 'active-tab';
+            $scope.classsa = '';
 
 
-          }
+        }
 
 
-      };
-
-  // $scope.tabchange = function(tab, a) {
-  //     //        console.log(tab);
-  //     $scope.result = [];
-  //     $scope.allresult = [];
-  //     $scope.tab2 = tab;
-  //     if (a == 1) {
-  //         $scope.classa = "actives";
-  //         $scope.classb = '';
-  //         $scope.classc = '';
-  //     } else if (a == 2) {
-  //
-  //         $scope.classb = "actives";
-  //         $scope.classa = '';
-  //         $scope.classc = '';
-  //     } else {
-  //
-  //         $scope.classa = '';
-  //         $scope.classc = "actives";
-  //         $scope.classb = '';
-  //     }
-  // };
+    };
+    // $scope.tabchange = function(tab, a) {
+    //     //        console.log(tab);
+    //     $scope.result = [];
+    //     $scope.allresult = [];
+    //     $scope.tab2 = tab;
+    //     if (a == 1) {
+    //         $scope.classa = "actives";
+    //         $scope.classb = '';
+    //         $scope.classc = '';
+    //     } else if (a == 2) {
+    //
+    //         $scope.classb = "actives";
+    //         $scope.classa = '';
+    //         $scope.classc = '';
+    //     } else {
+    //
+    //         $scope.classa = '';
+    //         $scope.classc = "actives";
+    //         $scope.classb = '';
+    //     }
+    // };
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
-  //   $scope.logs = function() {
-  //   $scope.modalLog=  $uibModal.open({
-  //         animation: true,
-  //         templateUrl: 'views/modal/logs.html',
-  //         scope:$scope,
-  //     });
-  // };
-    $scope.enterFun=function(){
-      if (!$.jStorage.get("isLoggedIn") || $.jStorage.get("isLoggedIn") == null) {
-        $scope.modalLog=  $uibModal.open({
-              animation: true,
-              templateUrl: 'views/modal/logs.html',
-              scope:$scope,
-          });
-      }else {
-console.log("im in");
-      }
-    }
+
+
+    $scope.isCheckLoggedIn = function() {
+            console.log("im authenticate");
+            NavigationService.getAuthenticate(function(data) {
+                console.log("getAuthenticate", data);
+                if (data.logged_in) {
+                    console.log("im in true");
+                    $rootScope.loggedIn = true;
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+            })
+        }
+
     globalFunc.changeLang = function() {
         $scope.currentlang = currentlang;
         console.log($scope.currentlang);
@@ -86,16 +188,16 @@ console.log("im in");
         $scope.sliderdata = data.data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
-  NavigationService.getjourney(function(data) {
+    NavigationService.getjourney(function(data) {
         $scope.journeyData = data.data;
         console.log('$scope.journeyData', $scope.journeyData);
     });
-     NavigationService.getguesswho(function(data) {
+    NavigationService.getguesswho(function(data) {
         $scope.guesswhoData = data.data;
         console.log('$scope.guesswhoData', $scope.guesswhoData);
     });
 
- NavigationService.getcongratulation(function(data) {
+    NavigationService.getcongratulation(function(data) {
         $scope.congratulationData = data.data;
         console.log('$scope.congratulationData', $scope.congratulationData);
     });
@@ -134,38 +236,34 @@ console.log("im in");
 
     $scope.latestmatch = {};
     $scope.countdown = {};
-    $scope.bricks=[{
-      img:'img/news/n4.jpg',
-      title:'Jaipur Pink Panthers',
-      info:'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
-    },{
-      img:'img/news/n6.jpg',
-        title:'Jaipur Pink Panthers',
-      info:' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }
-    ,{
-      img:'img/news/n3.jpg',
-        title:'Jaipur Pink Panthers',
-      info:'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
-    }
-    ,{
-      img:'img/gallery/g3.jpg',
-        title:'Jaipur Pink Panthers',
-      info:'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }
-    ,{
-      img:'img/gallery/g6.jpg',
-        title:'Jaipur Pink Panthers',
-      info:'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
-    }
-    ,{
-      img:'img/wallpapper/w7.jpg',
-        title:'Jaipur Pink Panthers',
-      info:'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
-    },{
-      img:'img/team.jpg',
-        title:'Jaipur Pink Panthers',
-      info:'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
+    $scope.bricks = [{
+        img: 'img/news/n4.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
+    }, {
+        img: 'img/news/n6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/news/n3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/wallpapper/w7.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/team.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
     }];
     $scope.image = [{
         src: 'img/player-slide.png',
@@ -1278,21 +1376,21 @@ console.log("im in");
     })
 
 .controller('NewsDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("news-detail");
-    $scope.menutitle = NavigationService.makeactive("News");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("news-detail");
+        $scope.menutitle = NavigationService.makeactive("News");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-})
-.controller('TicketCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("ticket");
-    $scope.menutitle = NavigationService.makeactive("Ticket");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    })
+    .controller('TicketCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("ticket");
+        $scope.menutitle = NavigationService.makeactive("Ticket");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-})
+    })
 
 .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
@@ -1533,7 +1631,7 @@ console.log("im in");
 
 })
 
-.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal,NavigationService) {
+.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal, NavigationService, $rootScope, $timeout) {
 
     var languagePicker = {};
     $scope.template = TemplateService;
@@ -1542,64 +1640,123 @@ console.log("im in");
     });
 
     $scope.logs = function() {
-      $uibModal.open({
-          animation: true,
-          templateUrl: 'views/modal/logs.html',
-          scope:$scope,
-      });
-  };
-  $scope.signupdata={};
-  $scope.submitSignup=function(signupdata){
-console.log("signupdata",signupdata);
-$scope.incorrectPass=false;
-$scope.isCheckedmsg=false;
-if (signupdata) {
-  console.log("signupdata",signupdata);
-  if (signupdata.password == signupdata.confirmPass) {
+        $scope.modalLogsInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/logs.html',
+            scope: $scope,
+        });
+    };
+    $scope.logoutUser = function() {
+        $rootScope.loggedIn = false;
+        NavigationService.logoutUser(function(data) {
+            console.log("im in logout", data);
+        })
+    };
+    $scope.authentication=function(){
+      NavigationService.getAuthenticate(function(data) {
+          if (data.logged_in) {
+              $rootScope.loggedIn = true;
+          } else {
+              $rootScope.loggedIn = false;
+          }
+      })
+    }
+$scope.authentication();
+    $scope.signupdata = {};
+    $scope.submitSignup = function(signupdata) {
+        console.log("signupdata", signupdata);
+        $scope.incorrectPass = false;
+        $scope.isCheckedmsg = false;
+        $scope.alreadyExist = false;
+        $scope.succesSignup = false;
+        if (signupdata) {
+            console.log("signupdata", signupdata);
+            if (signupdata.password == signupdata.confirmPass) {
 
-$scope.incorrectPass=false;
-NavigationService.submitSignup(signupdata,function(data){
-  console.log("data",data);
-  if (data.logged_in) {
-    $.jStorage.set("isLoggedIn",data.logged_in)
-  }else {
+                $scope.incorrectPass = false;
+                NavigationService.submitSignup(signupdata, function(data) {
+                    console.log("data", data);
+                    if (data.logged_in) {
+                        $rootScope.loggedIn = true;
+                        $scope.succesSignup = true;
+                        $scope.alreadyExist = false;
+                        $timeout(function() {
 
-  }
-})
-}else {
-    $scope.incorrectPass=true;
-  }
-}
-  }
+                            $scope.succesSignup = false;
+                            $scope.alreadyExist = false;
+                            $scope.signupdata = {};
+                            $scope.modalLogsInstance.close();
+                        }, 2000);
 
-    $scope.tab = "design";
-        $scope.classa = 'active-tab';
-        $scope.classb = '';
-
-        $scope.tabchange = function(tab, a) {
-            $scope.tab = tab;
-            if (a == 1) {
-                $scope.classa = 'active-tab';
-                $scope.classb = '';
-
-
+                    } else {
+                        $scope.succesSignup = false;
+                        $rootScope.loggedIn = false;
+                        console.log("im else");
+                        $scope.alreadyExist = true;
+                    }
+                })
+            } else {
+                $scope.incorrectPass = true;
             }
-            if (a == 2) {
-                $scope.classb = 'active-tab';
-                $scope.classa = '';
+        }
+    };
+    $scope.loginData = {};
+    $scope.incorrectDetails = false;
+    $scope.loginSubmit = function(loginData) {
+        console.log("loginData", loginData);
+        $scope.incorrectDetails = false;
+        if (loginData) {
+
+            NavigationService.submitLogin(loginData, function(data) {
+                console.log("data", data);
+                if (data.logged_in) {
+                    $scope.incorrectDetails = false;
+                    $rootScope.loggedIn = true;
+                    $scope.successlogin = true;
+                    $timeout(function() {
+
+                        $scope.successlogin = false;
+                        $scope.incorrectDetails = false;
+                        $scope.loginData = {};
+                        $scope.modalLogsInstance.close();
+                    }, 2000);
+                    console.log("im in");
+                } else {
+                    $scope.incorrectDetails = true;
+                    $rootScope.loggedIn = false;
+                }
+            })
+        }
+    }
+
+    $scope.tabs = "design";
+    $scope.classsa = 'active-tab';
+    $scope.classsb = '';
+
+    $scope.tabchanges = function(tab, a) {
+        $scope.tabs = tab;
+        if (a == 1) {
+            $scope.classsa = 'active-tab';
+            $scope.classsb = '';
 
 
-            }
+        }
+        if (a == 2) {
+            $scope.classsb = 'active-tab';
+            $scope.classsa = '';
 
 
-        };
-//   $scope.signs=function(){
-//       $uibModal.open({
-//            animation: true,
-//           templateUrl: 'views/modal/signs.html',
-//           scope:$scope,
-//       })
-//   }
+        }
+
+
+    };
+    //   $scope.signs=function(){
+    //       $uibModal.open({
+    //            animation: true,
+    //           templateUrl: 'views/modal/signs.html',
+    //           scope:$scope,
+    //       })
+    //   }
 
 
 })

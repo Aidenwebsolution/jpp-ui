@@ -322,6 +322,32 @@ firstapp.directive('autoHeight', function($compile, $parse) {
         }
     };
 });
+firstapp.directive('aplhaOnly', function() {
+    return {
+        require: 'ngModel',
+        link: function(scope, element, attr, ngModelCtrl) {
+            function fromUser(text) {
+                var transformedInput = text.replace(/[^a-zA-Z]/g, '');
+                if (transformedInput !== text) {
+                    ngModelCtrl.$setViewValue(transformedInput);
+                    ngModelCtrl.$render();
+                }
+                return transformedInput;
+            }
+            ngModelCtrl.$parsers.push(fromUser);
+        }
+    };
+});
+firstapp.directive('noPaste', function($filter) {
+    return {
+        scope: {},
+        link: function(scope, element) {
+            element.on('cut copy paste', function(event) {
+                event.preventDefault();
+            });
+        }
+    };
+});
 
 firstapp.directive('childHeight', function($compile, $parse) {
     return {
