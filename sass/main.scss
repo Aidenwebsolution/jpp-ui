@@ -286,7 +286,7 @@ nav {
 }
 
 .pt530 {
-    padding: 5px 0 30px;
+    padding: 5px 0 0px;
 }
 
 .pt {
@@ -405,8 +405,9 @@ nav {
     display: inline-block;
     text-transform: uppercase;
     position: relative;
-    padding: 17px 70px 16px;
+    padding: 9px 30px;
     z-index: 9;
+    transform: rotate(-10deg);
 
     a {
         color: $pink;
@@ -442,22 +443,40 @@ nav {
         content: "";
         top: 0;
         background-color: $brand-success;
-        -webkit-transform: skew(-20deg);
-        -moz-transform: skew(-20deg);
-        -o-transform: skew(-20deg);
-        -ms-transform: skew(-20deg);
         transform: skew(-20deg);
-        z-index: -1;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
         z-index: 9;
     }
 
     h1 {
-        font-size: 34px;
-        font-family: "Oswald";
+        border-top: 2px solid #ee4a9b;
+        border-bottom: 2px solid #ee4a9b;
+        font: 26px "Oswald";
+        transform: rotate(4deg);
+        padding: 0 25px;
+            &:before {
+                 height: 105%;
+                 width: 22px;
+                 content: "";
+                @include position(absolute, 0 null null -8px);
+                 border-left: 2px solid #ee4a9b;
+                 border-bottom: 2px solid #ee4a9b;
+                 @include transform(skew(-20deg));
+                 @include transition(all 0.5s ease);
+                 z-index: 9;
+    }
+
+    &:after {
+          height: 105%;
+          width: 22px;
+          content: "";
+          @include position(absolute, -2px -8px null null);
+          border-right: 2px solid #ee4a9b;
+          border-top: 2px solid #ee4a9b;
+          @include transform(skew(-20deg));
+          @include transition(all 0.5s ease);
+          z-index: 9;
+    }
     }
 }
 
@@ -480,7 +499,7 @@ nav {
 }
 
 .color-primary {
-    color: $brand-primary;
+    color: $brand-primary !important;
 }
 
 .color-success {
@@ -576,6 +595,10 @@ nav {
 
 .f20 {
     font-size: 20px;
+}
+
+.f16{
+      font-size: 16px;
 }
 // .sponser-logo {
 //   padding: 18px 0;
@@ -739,10 +762,10 @@ nav {
 .btn-pink {
     color: #fff;
     background-color: $pink;
-    border-color: $pink;
+    // border-color: $pink;
     text-transform: uppercase;
     border-radius: 0;
-    padding: 5px 15px;
+    padding: 6px 15px;
 
     &:hover {
         color: $white;
@@ -1880,6 +1903,9 @@ img.fancybox-image {
 .points-table {
     .table {
         margin-bottom: 0;
+        th{
+            font-weight: 500;
+        }
     }
     background: #4ecaf5;
     padding: 10px 5px 5px;
@@ -2089,7 +2115,7 @@ img.fancybox-image {
 .back-img {
     background-image: url("../img/home/app-bk.jpg");
     background-repeat: no-repeat;
-    padding: 45px 0;
+    padding: 30px 0;
     background-size: cover;
 }
 
@@ -2339,32 +2365,7 @@ img.fancybox-image {
     }
 }
 
-.check-lists {
-    margin: 0;
-    padding: 0;
-    @include column-count(3);
 
-    label {
-        font-weight: 300;
-    }
-
-    .checkbox input[type="checkbox"],
-    .checkbox-inline input[type="checkbox"],
-    .radio input[type="radio"],
-    .radio-inline input[type="radio"] {
-        @include appearance(none);
-        @include transition(all 300ms ease);
-        border: 1px solid $brand-success;
-        height: 16px;
-        width: 16px;
-        margin: 2px 0 0 -20px;
-        outline: 0;
-
-        &:checked {
-            background-color: $brand-success;
-        }
-    }
-}
 
 .white-line-pad {
     max-width: 570px;
@@ -2423,6 +2424,15 @@ img.fancybox-image {
     &.box-right {
         right: 0;
         background-image: url("../img/bgbox-right.jpg");
+    }
+    &.table-box{
+       right: 0;
+     
+        background-image: url("../img/homes/homepages.jpg"); 
+    }
+  &.tables-box{
+       left: 0;
+           background-image: url("../img/homes/journeys.jpg");   
     }
 
     &.box-left {
@@ -3253,9 +3263,9 @@ a.ilogo {
      }
  }
  .infois{
-    width: 60%;
+    width: 80%;
     border-radius: 0;
-    padding: 10px 0 0;
+    padding: 5px 0 0;
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -3295,18 +3305,21 @@ a.ilogo {
         color: #000;
     }
      .active-tab{
-        background-color: #4ecaf5;
+        background-color: #362375;
         color: #fff;
     }
     .carts{
-        background-color:#4ecaf5;
-        padding: 30px;
+        background:#322c7b;
+        background: linear-gradient(to bottom left, #322c7b, rgba(10, 57, 85, 0.49));
+        padding: 30px 10px;
         margin-top: -1px;
+        position: relative;
     }
     .form{
        padding: 20px 50px;
             .form-group{
     .form-control{
+        width: 85%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
@@ -3332,49 +3345,47 @@ a.ilogo {
     .twitter,.facbook{ text-transform: none;}
 
     .fb{
-        padding: 5px 12px !important;
         background-color: rgba(63, 81, 181, 0.93) !important;
     }
 
     .tweet{ background-color: #2196F3 !important; }
 
-    .pinky{ width: 40% !important; }
+    .pinky{ padding: 6px 60px !important; }
 
     .signs {
-    margin-top: 10px;
-    position: relative;
-
-    button{ width: 35%; }
-
-         span{
-    @include position(absolute,0 null null 30%);
-    background-color: $facebook;
-    display: inline-block;
-    padding: 5px 10px;
-        }
+   display: inline-block;
+.fa{
+    &:before{
+ color: #fff;
+    }
+   
 }
-.btn-pink{
-    background-color: $brand-primary;
-    border:none;
+         span{
+    background-color: $facebook;
+    padding: 7px 12px;
+    margin-right: -3px;
+    display: inline-block;
+    vertical-align: bottom;
+        }
 }
 
 .or {
     position: relative;
-    display: inline-block;
+    display: block;
     &:before {
     content: "";
-    border: 1px solid #000;
+    border: 1px solid #fff;
     position: absolute;
     top: 12px;
-    right: 30px;
+    right: 130px;
     width: 50px;
 }
 &:after {
     content: "";
-    border: 1px solid #000;
+    border: 1px solid #fff;
     position: absolute;
     top: 12px;
-    left: 30px;
+    left: 130px;
     width: 50px;
 }
 }
@@ -3414,14 +3425,14 @@ a.ilogo {
 
 
 }
-.bg-greys{
-  background-image: url(../img/homes/bg-grey.jpg);
+.subcribe-bg{
+  background-image: url(../img/homes/app.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 200px;
-  margin-top: -30px;
+  margin-top: 30px;
 }
+
 .subcribe{ padding-top: 66px; }
 
 .min-logos{
@@ -3434,6 +3445,171 @@ a.ilogo {
   }
 }
 
+.check-lists {
+    margin: 0;
+    padding: 0;
+    @include column-count(3);
 
+    label {
+        font-weight: 300;
+    }
+    .checkbox{
+            input[type="checkbox"]{
+         display: none;
+     }
+    span{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border:1px solid #4ecaf5 !important;
+        padding: 5px;
+        vertical-align: middle;
+    }
+    label{
+        color:#000 !important;
+    }
+input[type="checkbox"] + span{
+        background-color: transparent;
+     }
+
+   input[type="checkbox"]:checked + span{
+        background-color: #4ecaf5;
+     }
+
+   input[type="checkbox"]+label span,
+     input[type="checkbox"]:checked+label span {
+         @include transition(background-color 0.4s linear);
+     }
+    }
+
+    .radio input[type="radio"],
+    .radio-inline input[type="radio"] {
+        @include appearance(none);
+        @include transition(all 300ms ease);
+        border: 1px solid $brand-success;
+        height: 16px;
+        width: 16px;
+        margin: 2px 0 0 -20px;
+        outline: 0;
+
+        &:checked {
+            background-color: $brand-success;
+        }
+    }
+}
+
+.player-log{
+    h4{
+ margin-left: 50px;
+    letter-spacing: 1px;
+    }
+   
+    .image{
+        position: absolute;
+    right: 25px;
+    top: 30px;
+    height: 200px;
+    width: 200px;
+    img{
+        width: 100%;
+    }
+    }
+}
+
+
+.signing-up{
+    .sign-up{
+    text-align: left;
+    background-image: none;
+    position: absolute;
+    bottom: -25px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 14px 0px;
+    }
+}
+
+
+.city-dropdown{
+    button{
+ position: absolute;
+    top: 45%;
+    right: 0;
+    }
+       
+}
+
+
+.button-set{
+    margin-bottom: 20px;
+    .spacing-lr{
+        margin: 0 5px;
+    }
+}
+
+.next-match{
+    margin: 10px 0 30px;
+}
+
+.social-icons{
+    &:before{
+     content: "";
+     width: 20px;
+     height: 20px;
+     border-bottom: 50px solid pink;
+     border-left: 50px solid transparent;
+     display: block;
+     @include position(absolute,null 0 0 null);
+    }
+}
+
+.social-text{
+     @include position(absolute,null 3% 1% null );
+     @include transform(translate(-3%,-1%));
+     font-size: 22px;
+     color: #fff;
+}
+
+.design{
+    margin-top: 40px;
+}
+
+//points-table
+.point-table{
+    background-color: $white;
+     &:before{
+background-color: $white;
+        }
+        &:after{
+background-color: $white;
+        }
+    h1{
+        &:before{
+background-color: $white;
+        }
+        &:after{
+background-color: $white;
+        }
+    }
+}
+
+
+//points table
+
+//fan-corner
+.dropdown-city{
+    margin-top: -10px;
+    border: 1px solid #4ecaf5;
+    ul{
+        padding: 0 10px;
+    }
+    li{
+        text-transform: uppercase;
+        list-style-type: none;
+        margin: 10px 0;
+    }
+}
+
+//fan-corner
 @import "mobile";
 @import "style";

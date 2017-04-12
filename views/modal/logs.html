@@ -13,8 +13,14 @@
       </ul>
    </div>
 
-   <div class="reward-table carts" ng-show="tabs=='design'">
+   <div class="reward-table carts " ng-show="tabs=='design'">
       <a href="" class="text-uppercase pull-right" ng-click="$dismiss();"><i class="fa fa-times whitey" aria-hidden="true"></i></a>
+        <div class="player-log">
+        <h4 class=" whitey  text-left f16 text-uppercase font-bold">  to get exclusive access to </br>raid the panther's universe!</h4>
+      <div class="image">
+        <img src="img/player.png"  class="img-responsive" alt="player">
+      </div>
+      </div>
       <form name="loginForm" class="form" ng-submit="loginSubmit(loginData);">
 
          <div class="form-group">
@@ -29,12 +35,12 @@
                   </div> -->
          <!-- </form> -->
          <h2 ng-if="successlogin" class="text-center">Thank You.</h2>
-         <p class="text-center">Forgot Password?</p>
+         <h4 class="text-center color-white">Forgot Password?</h4>
          <div class="social-buttons text-center">
             <div class="signs">
                <button type="submit" class="btn btn-pink pinky">Log In</button>
             </div>
-            <h4 class="or">or</h4>
+            <h4 class="or color-white">or</h4>
             <div class="signs">
                <span class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                <button type="button" class="btn btn-pink facbook"> Login with Facebook</button>
@@ -50,7 +56,7 @@
    </div>
    <div class="reward-table carts" ng-show="tabs =='trim'">
       <a href="" class="text-uppercase pull-right" ng-click="$dismiss();"><i class="fa  fa-times whitey" aria-hidden="true"></i></a>
-      <h4 class="text-center whitey margin0  text-uppercase font-bold">now to get exclusive access <br>to raid the panther's universe!</h4>
+     
       <form class="form" ng-submit="submitSignup(signupdata)" name="signUp">
          <div class="row">
             <div class="col-md-6">
@@ -102,14 +108,15 @@
             <div class="signs">
                <button type="submit " class="btn btn-pink pinky" ng-disable="signup.$invalid">sign up</button>
             </div>
-            <h4 class="or">or</h4>
+             <h4 class="text-center whitey  f16 text-uppercase font-bold"> now to get exclusive access to raid the panther's universe!</h4>
+            <h4 class="or color-white">or</h4>
             <div class="signs">
                <span class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-               <button type="button" class="btn btn-pink facbook"> Sign Up with Facebook</button>
+               <button type="button" class="btn btn-pink facbook"> Log In with Facebook</button>
             </div>
             <div class="signs">
                <span class="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-               <button type="button" class="btn btn-pink twitter"> Sign Up with Twitter</button>
+               <button type="button" class="btn btn-pink twitter"> Log In with Twitter</button>
             </div>
           </div>
       </form>

@@ -106,6 +106,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         url: "/about-us",
         templateUrl: "views/template.html",
         controller: 'AboutUsCtrl'
+    })
+    
+    .state('points-table', {
+        url: "/points-table",
+        templateUrl: "views/template.html",
+        controller: 'PointsCtrl'
     });
 
     if (isproduction) {

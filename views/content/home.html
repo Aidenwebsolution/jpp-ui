@@ -203,9 +203,9 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 pad0 marg2">
 
-                    <a ui-sref="fixtures"><img ng-src="{{journeyData.image | serverimage}}"  class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <!--<a ui-sref="fixtures"><img ng-src="{{journeyData.image | serverimage}}"  class="img-responsive" alt="Champions Patna Pirates"></a>-->
 
-                    <!-- <div class="white-line-pad">
+                     <div class="white-line-pad">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -218,15 +218,47 @@
                                             <tr>
                                                 <th>No.</th>
                                                 <th>Team</th>
-                                                <th>Group</th>
                                                 <th>P</th>
                                                 <th>W</th>
                                                 <th>L</th>
                                                 <th>D</th>
+                                                 <th>SD</th>
                                                 <th>PTS</th>
                                             </tr>
                                         </thead>
                                         <tbody class="odd-even">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Telugu Titans</td>
+                                                <td>14</td>
+                                                <td>9</td>
+                                                <td>5</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>47</td>
+                                            </tr>
+                                             <tr>
+                                                <td>1</td>
+                                                <td>Jaipur Pink Panthers</td>
+                                                <td>14</td>
+                                                <td>9</td>
+                                                <td>5</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>47</td>
+                                            </tr>
+<!--<tr ng-repeat="data in tables">
+    <td>{{data.no}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.play}} </td>
+     <td>{{data.win}}</td>
+    <td>{{data.loss}}</td>
+    <td>{{data.draw}}</td>
+     <td>{{data.sd}}</td>
+    <td>{{data.pts}}</td>
+</tr>-->
+                                        </tbody>
+                                        <!--<tbody class="odd-even">
                                             <tr class="{{ data.name | limitTo: 3 }}" ng-repeat="data in table" ng-if="table.length>0">
                                                 <td>{{$index +1}}</td>
                                                 <td>{{data.name || 'Loading..' | translate}}</td>
@@ -238,28 +270,30 @@
                                                 <td>{{data.draw}}</td>
                                                 <td>{{data.point}}</td>
                                             </tr>
-                                        </tbody>
+                                        </tbody>-->
                                     </table>
                                 </div>
                             </div>
                         </div>
 
-                    </div> -->
+                    </div> 
                 </div>
                 <div class="col-md-6 col-sm-6 pad0 marg2">
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
 
-                    <a ui-sref="fixtures"><img ng-src="{{congratulationData.image | serverimage}}"class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <!--<a ui-sref="fixtures"><img ng-src="{{congratulationData.image | serverimage}}"class="img-responsive" alt="Champions Patna Pirates"></a>-->
 
-                    <!-- <div class="nxt-match white-line-pad">
+                     <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
               <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
-              <h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
+              <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
+              -->
+                <h1 class="color-white font-tbl text-uppercase" >season 5 opener</h1>
             </div>
-            <div class="match-schd mt30 pt530">
+            <div class="match-schd  pt530">
               <div class="row">
                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                   <div class="new-logo">
@@ -277,7 +311,7 @@
                   </div>
                 </div>
               </div>
-              <div class="gradient-bar homeie" ng-show="latestMatchOn">
+              <!--<div class="gradient-bar homeie" ng-show="latestMatchOn">
                 <div class="row">
                   <div class="col-md-4 padding0 col-xs-4">
                     <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
@@ -291,18 +325,28 @@
                     <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
                   </div>
                 </div>
-              </div>
-              <div class="clearfix"></div>
+              </div>-->
+              <!--<div class="clearfix"></div>
               <div class="text-center" ng-show="latestMatchOn">
                 <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
-              </div>
+              </div>-->
             </div>
-            <div class="text-center color-white" ng-hide="latestMatchOn">
+            <div class="text-center color-white">
+                <h4 class="text-capitalize  font-bold "> 
+Sawai mansingh stadium,jaipur
+            </h4>
+            <span class="text-uppercase">june 20 2016,</span>
+            <span>20:00 (IST)</span>
+            </div>
+            
+            <!--<div class="text-center color-white" >
+                
               {{latestmatch.starttimedate}} (IST)
               <br> {{latestmatch.stadium}}
-            </div>
-
-            <div class="next-match" ng-hide="latestMatchOn">
+            </div>-->
+<!--ng-hide="latestMatchOn"-->
+            <div class="next-match" >
+                <!--ng-hide="latestMatchOn"-->
               <div class="count-time custom-list text-center">
                 <ul class="padding0">
                   <li>
@@ -342,6 +386,17 @@
                   </li>
                 </ul>
               </div>
+<div class="text-center button-set">
+ <div class="text-center display-inline spacing-lr" >
+                    <!--ng-show="latestMatchOn"-->
+                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">BOOK TICKETS</a>
+              </div>
+                <div class="text-center display-inline spacing-lr" >
+                    <!--ng-show="latestMatchOn"-->
+                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">ADD TO CALENDAR</a>
+              </div>
+</div>
+               
 
               <!-- <div class="text-center" ng-hide="latestMatchOn">
                 <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
@@ -351,7 +406,7 @@
                     <!-- </div>
             </div>
         </div>
-    </div> -->
+    </div> 
 
                     <!-- </div> -->
                 </div>
@@ -447,9 +502,9 @@
     </div>
 
 </section>
-<section class=" bg-greys">
+<section class=" bg-greys subcribe-bg">
     <div class="container ">
-        <div class="subcribe bg">
+        <div class=" bg ">
             <div class="row">
                 <div class="col-md-5">
                     <div class="display-inline">
@@ -573,7 +628,8 @@
 </section>
 <section class="section5 back-img ">
     <div class="container">
-      <div class="tab makeActive-service" ng-init="viewDetail=1">
+        <h1 class=" text-center bold text-uppercase color-primary   ">social hub</h1>
+      <!--<div class="tab makeActive-service" ng-init="viewDetail=1">
 
                   <ul class="list-inline text-center ">
                       <li class="package-bg   view-data"  ng-click="viewDetail = 1;" ng-class="{'active': viewDetail==1, '': viewDetail!==1}">
@@ -603,7 +659,8 @@
                      </li>
                   </ul>
                </div>
-    <div class="design" ng-show="viewDetail == 1">
+               ng-show="viewDetail == 1"-->
+    <div class="design" >
                <div class="pack-one text-center">
                    <!-- <h2>hi</h2> -->
                    <div class="all-movies masonry-width">
@@ -614,11 +671,11 @@
                          <a ng-if="brick.img" href="{{brick.img}}"   class="fancybox-thumb" rel="fancybox-thumb">
                            <img ng-src="{{brick.img}}"  alt="A masonry brick">
                            </a>
-                         <div class="infois">
+                         <div class="infois text-left">
                            <div class="min-logos display-inline">
                                 <img src="img/mini-logo.png" class="img-responsive" alt="logo">
                            </div>
-                          <div class="inois-info display-inline">
+                          <div class="inois-info display-inline ">
                             <p class="margin0">{{brick.title}}</p>
                             <span>like this page</span>
                             <span>5 hrs</span>
@@ -630,6 +687,8 @@
 
                                  <div class="info">
                                    <p class="text-justify">{{brick.info}}</p>
+                                   <span class="social-icons"></span>
+                                   <span class="social-text"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                  </div>
                                                       </div>
                                </div>
@@ -638,7 +697,7 @@
                </div>
 
                </div>
-                   <div class="design" ng-show="viewDetail == 2">
+                   <!--<div class="design" ng-show="viewDetail == 2">
                <div class="pack-one text-center">
                    <h2>hello</h2>
 
@@ -650,7 +709,7 @@
                    <h2>hi</h2>
                </div>
 
-               </div>
+               </div>-->
     </div>
 
 

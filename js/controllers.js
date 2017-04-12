@@ -656,6 +656,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.table = $filter('orderBy')($scope.table, "order");
         console.log($scope.table);
     });
+//     $scope.tables[{
+// no:'3',
+// name:'Telugu Titans',
+// play:'14',
+// win:'9',
+// loss:'5',
+// draw:'1',
+// sd:'0',
+// pts:'47'
+
+//     },{
+// no:'3',
+// name:'Jaipur Pink Panthers',
+// play:'14',
+// win:'9',
+// loss:'5',
+// draw:'1',
+// sd:'0',
+// pts:'47'
+//     }];
     var clickCount = 0;
     $scope.changeSlide = function(data) {
         $scope.currentActive = data;
@@ -1327,6 +1347,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.changeSelected = function() {
             $scope.register.favouriteplayer = _.map(_.filter($scope.players, "status"), "name").toString();
         };
+            $scope.dropdown = function () {
+            $scope.invisible = $scope.invisible ? false : true;
+        };
+        
         $scope.players = [{
             name: "Ajay Kumar"
         }, {
@@ -1631,7 +1655,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('headerctrl', function($scope, TemplateService, $translate, $rootScope, $uibModal, NavigationService, $rootScope, $timeout) {
+.controller('PointsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("points-table");
+    $scope.menutitle = NavigationService.makeactive("Points");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('headerctrl', function($scope, TemplateService, $translate, $uibModal, NavigationService, $rootScope, $timeout) {
 
     var languagePicker = {};
     $scope.template = TemplateService;

@@ -14,7 +14,7 @@
   </div>
 
 </section>
-<section class="mt100">
+<section class="mt100 signing-up">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -74,12 +74,24 @@
       </div>
       <div class="row mt30">
         <div class="col-md-4 col-sm-6">
-          <div class="form-submit">
-            <div class="form-group">
+          <div class="form-submit city-dropdown">
+            <div class="form-group margin0">
               <span>{{'City'|translate}}</span>
+              <button type="button" class="btn btn-pink btn-bussiness btn-main" ng-click="citydrops=!citydrops" data-toggle="dropdown" >
+             <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </button>
+              <!--ng-init="country = 'country'" ng-click="countrydrop=!countrydrop"-->
               <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
+           
             </div>
-            <p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City'|translate}} {{'is required'|translate}}</p>
+             <div class="dropdown-city" ng-show="citydrops">
+              <ul>
+                <li>mumbai</li>
+                <li>hydrebad</li>
+                <li>lucknow</li>
+              </ul>
+            </div>
+            <!--<p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City'|translate}} {{'is required'|translate}}</p>-->
           </div>
         </div>
       </div>
@@ -90,20 +102,41 @@
               <span>{{'Choose Your Favourite Panthers'|translate}}</span>
               <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">{{'Please select your favourite Panther'|translate}}</p>
             </div>
-            <ul class="check-lists">
-              <li class="checkbox" ng-repeat="player in players">
-                <label>
-                  <input type="checkbox" ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}">
-                  {{player.name|translate}}
+            <div class="check-lists">
+              <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="checking" >
+                <label for="checking" class="capitalise">
+                  <span></span>
+                 jagya
                 </label>
-              </li>
-            </ul>
+              </div>
+               <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="cheking" class="capitalise" >
+                <label for="cheking">
+                  <span></span>
+                 jagyas
+                </label>
+              </div>
+               <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="cheking" class="capitalise" >
+                <label for="cheking">
+                  <span></span>
+                 jagyas
+                </label>
+              </div>
+            </div>
 
           </div>
         </div>
       </div>
       <div class="row mt30">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 ">
             <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">{{'SUBMIT'|translate}}</button>
 
         </div>
@@ -123,7 +156,7 @@
       <div class="col-md-12">
 
         <div class="desc-sub mt50 text-center">
-          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win exclusive merchandise'|translate}}!</h3>
+          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win some exclusive merchandise'|translate}}!</h3>
         </div>
         <div class="text-center custom-list pad30 mt30 mb100">
           <ul class="padding0">
