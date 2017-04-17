@@ -2120,7 +2120,7 @@ img.fancybox-image {
 }
 
 .color-white {
-    color: $white;
+    color: $white !important;
 }
 
 .padding40 {
@@ -2428,7 +2428,7 @@ img.fancybox-image {
     &.table-box{
        right: 0;
      
-        background-image: url("../img/homes/homepages.jpg"); 
+        background-image: url("../img/homes/journeys.png"); 
     }
   &.tables-box{
        left: 0;
@@ -3030,7 +3030,7 @@ a.ilogo {
 }
 
 .m-min84 {
-    margin-left: -84px;
+    margin-left: -67px;
 }
 
 .color-black {
@@ -3611,5 +3611,34 @@ background-color: $white;
 }
 
 //fan-corner
+
+.marl-box{
+    margin: 0 0 0 -40px;
+}
+
+//ruchira//
+.activated{
+    background-color: $brand-success;
+    color: $pink;
+}
+
+.view-slider{
+.flex-control-nav{
+    display: none;
+}
+.flexslider{
+    padding: 0 20px;
+    margin: 60px 0 90px 0;
+    .flex-direction-nav .flex-prev{
+        left:-25px;
+    }
+     .flex-direction-nav .flex-next{
+        right:-25px;
+    }
+}
+}
+
+//ruchira
+
 @import "mobile";
 @import "style";

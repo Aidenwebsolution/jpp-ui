@@ -1415,6 +1415,60 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+        .controller('PlayersInsideCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("players-inside");
+        $scope.menutitle = NavigationService.makeactive("Players Inside");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+            $scope.bricks = [{
+        img: 'img/news/n4.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
+    }, {
+        img: 'img/news/n6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/news/n3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/wallpapper/w7.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/team.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
+    }];
+
+    $scope.showcaseSlides=[{
+img:'img/players/slider-player.png',
+  link: '',
+    },{
+img:'img/players/slider-player.png',
+    },{
+img:'img/players/slider-player.png',
+    },{
+img:'img/players/slider-player.png',
+    },{
+img:'img/players/slider-player.png',
+    },{
+img:'img/players/slider-player.png',
+    },{
+img:'img/players/slider-player.png',
+    }];
+
+    })
 
 .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file

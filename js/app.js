@@ -107,6 +107,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         templateUrl: "views/template.html",
         controller: 'AboutUsCtrl'
     })
+
+       .state('players-inside', {
+        url: "/players-inside",
+        templateUrl: "views/template.html",
+        controller: 'PlayersInsideCtrl'
+    })
     
     .state('points-table', {
         url: "/points-table",
