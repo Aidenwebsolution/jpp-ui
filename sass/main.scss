@@ -2427,13 +2427,22 @@ img.fancybox-image {
     }
     &.table-box{
        right: 0;
-     
-        background-image: url("../img/homes/journeys.png"); 
+
+        background-image: url("../img/homes/journeys.png");
     }
-  &.tables-box{
+  &.tables-box2{
        left: 0;
-           background-image: url("../img/homes/journeys.jpg");   
+           background-image: url("../img/players/seab4.png");
     }
+&.tables-box{
+    right: 0;
+    background-image: url("../img/players/sect.png");
+    width: 53%
+}
+    // &.tables-box2{
+    //     right: 0;
+    //        background-image: url("../img/players/seab4.png");
+    // }
 
     &.box-left {
         left: 0;
@@ -3358,7 +3367,7 @@ a.ilogo {
     &:before{
  color: #fff;
     }
-   
+
 }
          span{
     background-color: $facebook;
@@ -3503,7 +3512,7 @@ input[type="checkbox"] + span{
  margin-left: 50px;
     letter-spacing: 1px;
     }
-   
+
     .image{
         position: absolute;
     right: 25px;
@@ -3536,7 +3545,7 @@ input[type="checkbox"] + span{
     top: 45%;
     right: 0;
     }
-       
+
 }
 
 
@@ -3644,7 +3653,7 @@ background-color: $white;
             background-image: url("../img/players/pink-right.png");
             background-repeat: no-repeat;
         }
-       
+
     }
         .flex-direction-nav  .flex-prev{
          height: 70px;
@@ -3658,7 +3667,7 @@ background-color: $white;
             background-image: url("../img/players/pink-left.png");
             background-repeat: no-repeat;
         }
-       
+
     }
 }
 }
@@ -3684,7 +3693,7 @@ background-color: $white;
     font-weight: 600;
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
      p{
     font-size: 40px;
     margin: 0;
@@ -3709,7 +3718,7 @@ background-color: $white;
     z-index: 9;
     &:before{
     content: "";
-    @include size(32px,100%); 
+    @include size(32px,100%);
     @include position(absolute,0 null null -16px);
     background-color: #4ecaf5;
     transform: skew(-20deg);
@@ -3737,9 +3746,9 @@ background-color: $white;
 }
 
 .activated:nth-last-of-type(1){
-    color: $pink  !important; 
-    
-       
+    color: $pink  !important;
+
+
      &:before{
     box-shadow: 6px 0px 9px -1px rgba(0, 0, 0, 0.38);
         }
@@ -3747,17 +3756,17 @@ background-color: $white;
 
 
 .activated:nth-last-of-type(2){
-    color: $pink  !important; 
+    color: $pink  !important;
      &:after{
 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.78);
         }
-      
-   
+
+
 }
 
 .player-backdrop{
     background-color: #0d2948;
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;
     display: inline-block;
     position: relative;
      padding: 40px 90px;
@@ -3768,14 +3777,14 @@ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.78);
     }
     &:before{
     content: "";
-    @include size(72px,100%); 
+    @include size(72px,100%);
     @include position(absolute,0 null null -32px);
     background-color: #0d2948;
     @include transform(skew(-20deg));
     }
       &:after{
     content: "";
-   @include size(72px,100%); 
+   @include size(72px,100%);
     @include position(absolute,0 -32px null null );
     background-color: #0d2948;
     @include transform(skew(-20deg));
@@ -3785,29 +3794,29 @@ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.78);
 
 .player-backdrops{
      background-color: #0d2948;
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;
     display: inline-block;
     position: relative;
-    padding: 9px 90px;
+    padding: 0 15px;
     z-index: 9;
     p{
-        font-size: 22px !important;
+      font-style: normal;
     }
 }
 
 .statistics{
     .activated:nth-last-of-type(2){
-    color: $pink  !important; 
-    
-       
+    color: $pink  !important;
+
+
      &:before{
     box-shadow: 6px 0px 9px -1px rgba(0, 0, 0, 0.38);
         }
 }
     .activated:nth-last-of-type(3){
-    color: $pink  !important; 
-    
-       
+    color: $pink  !important;
+
+
      &:after{
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.78);
         }
@@ -3827,11 +3836,11 @@ display: inline-block;
         display: inline-block;
     vertical-align: top;
     }
-    
+
 }
 .social-iconl{
     padding: 10px;
-    border: 2px solid #fff;  
+    border: 2px solid #fff;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -3858,6 +3867,81 @@ ul{
     &:hover{
           color: $brand-primary;
     }
+}
+
+//ruchira//
+
+.br-statistics{
+  border-right: 2px solid #fff;
+}
+
+.bl-statistics{
+  border-left: 2px solid #fff;
+}
+
+
+.bb-statistics{
+  border-bottom: 2px solid #fff;
+}
+
+@mixin font-size($font){
+  -moz-font-size: $font;
+  -o-font-size: $font;
+  -webkit-font-size: $font;
+  font-size: $font;
+}
+
+.currents-about,.card-type{
+    p{
+     @include font-size (60px);   
+    }
+}
+.currents-about{
+    padding: 28% 0;
+}
+
+.current-about{
+    padding: 9px 0;
+    p{
+     @include font-size (80px);   
+    }
+    span{
+         @include font-size (35px !important);    
+    }
+}
+
+.raid-status{
+        padding: 17px 0;
+        
+    p{  font-size: 40px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    span{
+    font-size: 20px;   
+    display: inline-block; 
+    }
+}
+.raids-status,.card-type{
+    span{
+           font-size: 20px;   
+    display: inline-block; 
+    }
+}
+.raids-status{
+     padding: 12px 0; 
+}
+
+.cards{
+   padding: 5.35% 0;
+}
+
+.bg-blue{
+    height: 60px;
+    background-image: url("../img/players/blue.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 //ruchira
