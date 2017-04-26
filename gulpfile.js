@@ -43,8 +43,8 @@ var jsArray = [
 var replacehostFrom = "http://localhost/demo/";
 var replacehostTo = "http://wohlig.co.in/demo2/";
 
-
-var ftpString = "U2FsdGVkX18mMO3ICRva3ER28IlWE2yOlb/Fz+wBOlVjlpBksTEq0+NxDAbeog8uh7r06NC58U77UEmgqGprCKdfuo0L3BPGK40mhy/6jgpsIdZ9etq/YMtcBlsGaPjTWU6s+70Ax4v3x+gqv+gl7A==";
+var ftpString = "U2FsdGVkX18aCMwda1/CcmWUElO9RhbZYtjQPfvu7tCSdlZet2/X0eTzycdDr5BoKPPYwwiMoNDzCVAlvk80wjO1V4u8TBEsRf956gWkESug7IjdJMinftn2JTchSpqV";
+// var ftpString = "U2FsdGVkX18mMO3ICRva3ER28IlWE2yOlb/Fz+wBOlVjlpBksTEq0+NxDAbeog8uh7r06NC58U77UEmgqGprCKdfuo0L3BPGK40mhy/6jgpsIdZ9etq/YMtcBlsGaPjTWU6s+70Ax4v3x+gqv+gl7A==";
 
 
 // var ftpString = "U2FsdGVkX1/ytzzmQjz8vb/D0vYksZDN5680DnkiecoGqk50bo0m7nb1yxKVvx7CavLIm4r3m+oA7JphPCy7B4DGlNDMVVh2VTpPgHeuINwIInWDLjw6dH21cHCLHWec";
