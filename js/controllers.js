@@ -1350,7 +1350,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.dropdown = function () {
             $scope.invisible = $scope.invisible ? false : true;
         };
-        
+
         $scope.players = [{
             name: "Ajay Kumar"
         }, {
@@ -1415,7 +1415,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-        .controller('PlayersInsideCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        .controller('PlayersInsideCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("players-inside");
         $scope.menutitle = NavigationService.makeactive("Players Inside");
@@ -1468,6 +1468,18 @@ img:'img/players/slider-player.png',
 img:'img/players/slider-player.png',
     }];
 
+
+
+    NavigationService.getsingleplayer($stateParams.id,function(data){
+
+      $scope.playerDetails =data.data.data.player;
+      $scope.achievements = _.chunk(data.data.data.achievmant,6);
+      $scope.tournamentplayed=_.chunk(data.data.data.tournamentplayed,6);
+      console.log("  $scope.achievements ",  $scope.achievements );
+      console.log("$scope.tournamentplayed",$scope.tournamentplayed);
+      console.log("  $scope.playerDetails",  $scope.playerDetails);
+    })
+
     })
 
 .controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
@@ -1481,189 +1493,176 @@ img:'img/players/slider-player.png',
             $scope.slideindex = 0;
         }
 
-        $scope.player = [{
-                image: "img/player/p29.png",
-                name: "Ajay Kumar",
-                desg: "Raider",
-                nationality: "Haryana",
-                dob: "22",
-                jersyno: "33",
-                desp2: "School u19 (Gold) 4-10-2011 to 8-10-2011, Junior National Championship 27-12-2011 to 30-12-2011  (Bronze), Senior National Championship 24-11-2015 to 29-11-2015 (Bronze), Federation cup 1-5-2016 to 5-5-2016 (Gold)"
 
-            }, {
-                image: "img/player/p26.png",
-                name: "Amit Hooda",
-                desg: "Defender",
-                nationality: "Haryana",
-                dob: "20",
-                jersyno: "10",
-                desp: "2015-16 Pro Kabaddi League (Patna Pirates), 2010-16 Senior State Campionship, 2015 Senior Nationals, 2016 Departmental Nationals, 2016 Federation Cup",
-                desp2: "2016 Pro Kabaddi League (Gold), 2015 Senior Nationals (Bronze), 2016 Federation Cup (Silver), 2016 Departmental Nationals (Gold), 2012,14,16 Senior State Championship (Silver), 2013 Senior State Championship (Gold)"
+        // $scope.player = [{
+        //         image: "img/player/p29.png",
+        //         name: "Ajay Kumar",
+        //         desg: "Raider",
+        //         nationality: "Haryana",
+        //         dob: "22",
+        //         jersyno: "33",
+        //         desp2: "School u19 (Gold) 4-10-2011 to 8-10-2011, Junior National Championship 27-12-2011 to 30-12-2011  (Bronze), Senior National Championship 24-11-2015 to 29-11-2015 (Bronze), Federation cup 1-5-2016 to 5-5-2016 (Gold)"
+        //
+        //     }, {
+        //         image: "img/player/p26.png",
+        //         name: "Amit Hooda",
+        //         desg: "Defender",
+        //         nationality: "Haryana",
+        //         dob: "20",
+        //         jersyno: "10",
+        //         desp: "2015-16 Pro Kabaddi League (Patna Pirates), 2010-16 Senior State Campionship, 2015 Senior Nationals, 2016 Departmental Nationals, 2016 Federation Cup",
+        //         desp2: "2016 Pro Kabaddi League (Gold), 2015 Senior Nationals (Bronze), 2016 Federation Cup (Silver), 2016 Departmental Nationals (Gold), 2012,14,16 Senior State Championship (Silver), 2013 Senior State Championship (Gold)"
+        //
+        //     }, {
+        //         image: "img/player/p21.png",
+        //         name: "Amit Nagar",
+        //         desg: "Raider",
+        //         nationality: "New Delhi",
+        //         dob: "18",
+        //         jersyno: "04",
+        //         desp: "2014-15 Junior National Games, 2015 U-19 School Games, 2016 Junior Asian Championship",
+        //         desp2: "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)"
+        //
+        //     },
+        //
+        //     {
+        //
+        //         image: "img/player/p3.png",
+        //         name: "Jasvir Singh",
+        //         desg: "Raider",
+        //         nationality: "Haryana",
+        //         dob: "32",
+        //         jersyno: "02",
+        //         desp: "2004-2016 Senior Nationals, 2007,2009,2013 Indoor Asian Games, 2014 Asian Games, 2009-15 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
+        //         desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
+        //
+        //     }, {
+        //         image: "img/player/p30.png",
+        //         name: "Jawahar",
+        //         desg: "All Rounder",
+        //         nationality: "Haryana",
+        //         dob: "21",
+        //         jersyno: "111",
+        //         desp2: "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015"
+        //
+        //     }, {
+        //         image: "img/player/p32.png",
+        //         name: "Kazuhiro Takano",
+        //         desg: "All Rounder",
+        //         nationality: "Japan",
+        //         dob: "30",
+        //         jersyno: "19",
+        //         desp2: "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)"
+        //     }, {
+        //         image: "img/player/p31.png",
+        //         name: "Lo Chia Wei",
+        //         desg: "Raider",
+        //         nationality: "New Taipei City",
+        //         dob: "26",
+        //         jersyno: "09",
+        //         desp: "2016 Pro Kabaddi League (Dabang Delhi K.C.)"
+        //
+        //     }, {
+        //         image: "img/player/p25.png",
+        //         name: "Mahipal Narwal",
+        //         desg: "Raider",
+        //         nationality: "Haryana",
+        //         dob: "24",
+        //         jersyno: "12",
+        //         desp: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games",
+        //         desp2: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Championship (Silver), 2010 All India University (Gold), 2010 National Games (Gold)."
+        //     },
+        //
+        //     {
+        //         image: "img/player/p23.png",
+        //         name: "Parveen Narwal",
+        //         desg: "All Rounder",
+        //         nationality: "Haryana",
+        //         dob: "20",
+        //         jersyno: "07",
+        //         desp: "2009 Rural State Championship, 2009 U-17 National Games, 2010 U-19 School Games, 2012,2015 Senior State Championship",
+        //         desp2: "2009 Rural State Championship(Gold), 2009 U-17 National Games (Silver), 2010 U-19 School Games(Gold), 2012,2015 Senior State Championship(Gold)"
+        //
+        //     }, {
+        //         image: "img/player/p22.png",
+        //         name: "Parvesh Malik",
+        //         desg: "Defender",
+        //         nationality: "Haryana",
+        //         dob: "19",
+        //         jersyno: "06",
+        //         desp: "2015-16 All India University, 2016 Junior National Games, 2016 Junior Asian Championship",
+        //         desp2: "2015-16 All India Univerisity(gold),2016 Junior Asian Championship(gold), 2015 Junior National Games(Gold)"
+        //
+        //
+        //     }, {
+        //
+        //         image: "img/player/p6.png",
+        //         name: "Rajesh Narwal",
+        //         desg: "All Rounder",
+        //         nationality: "Haryana",
+        //         dob: "25",
+        //         jersyno: "11",
+        //         desp: "2007 Federation Cup, 2007 U-17 School Games, 2004 Junior Rural National Championship, 2006-2015 Senior State Championship, 2008 All India University, 2014 - Beach Asian Games, 2014-16 - Super National Games , 2010-16 - Dept. Nationals Games , 2015 - National Games , 2016 - Federations Cup , 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
+        //         desp2: "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)"
+        //
+        //     }, {
+        //
+        //         image: "img/player/p8.png",
+        //         name: "Ran Singh",
+        //         desg: "All Rounder",
+        //         nationality: "Punjab",
+        //         dob: "29",
+        //         jersyno: "13",
+        //         desp: "2014-2016 Pro Kabaddi League (Jaipur Pink Panthers),2002-08 Senior National Games, 2014 Senior National Games, 2014 Departmental National Games, 2008-2011 All India Police Tournament",
+        //         desp2: "2014 Pro Kabaddi League (Gold), 2007 Senior National Games (Silver), 2006 Senior National Games (Bronze), 2008,2011 All India Police Tournament (Gold), 2009,2010 All India Police Tournament (Bronze), 2014 Departmental National Tournament (Silver)"
+        //
+        //     }, {
+        //         image: "img/player/p10.png",
+        //         name: "Rohit Rana",
+        //         desg: "Defender",
+        //         nationality: "Himachal Pradesh",
+        //         dob: "28",
+        //         jersyno: "05",
+        //         desp: "2006-2010 Senior Nationals, 2010-14 Beach Kabaddi, 2011-16 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers), 2015 National Games.",
+        //         desp2: "2014 Pro Kabaddi League (Gold) , 2015 National Games (Bronze), 2011-2014 Departmental Nationals (Gold)"
+        //
+        //     }, {
+        //         image: "img/player/p24.png",
+        //         name: "Shabeer Bapu Sharfudheen",
+        //         desg: "Raider",
+        //         nationality: "kerela",
+        //         dob: "29",
+        //         jersyno: "03",
+        //         desp: "2004-2006 All India University, 2013-16 Departmental National Games, 2009-16 Senior National Games, 2015 National Games , 2014-16 Pro Kabaddi League",
+        //         desp2: "2016 Pro Kabaddi League (Silver), 2015 Pro Kabaddi League(Gold), 2014 Pro Kabaddi League(Silver),2015 National Games(silver),2014 Departmental National Games (Gold)"
+        //
+        //     }, {
+        //         image: "img/player/p27.png",
+        //         name: "Shrikant Tewthia",
+        //         desg: "All Rounder",
+        //         nationality: "Uttar Pradesh",
+        //         dob: "23",
+        //         jersyno: "08",
+        //         desp: "2007 Junior Nationals, 2009 All India University, 2011 National Championship, 2013 Senior Nationals, 2015 Senior Nationals, 2016 Federations Cup, 2014-15 Pro Kabaddi League (Dabang Delhi), 2016 Pro Kabaddi League (Bengluru Bulls), 2016 Pro Kabaddi League (Jaipur Pink Panthers)",
+        //         desp2: "2009 All India University(Silver),2013 Senior Nationals(Bronze), 2015 Senior Nationals (Gold), 2016 Federations Cup(Bronze)"
+        //
+        //     }, {
+        //         image: "img/player/p28.png",
+        //         name: "Tushar Patil",
+        //         desg: "All Rounder",
+        //         nationality: "Maharashtra",
+        //         dob: "21",
+        //         jersyno: "99",
+        //         desp: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games",
+        //         desp2: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)"
+        //
+        //     }
+        // ];
 
-            }, {
-                image: "img/player/p21.png",
-                name: "Amit Nagar",
-                desg: "Raider",
-                nationality: "New Delhi",
-                dob: "18",
-                jersyno: "04",
-                desp: "2014-15 Junior National Games, 2015 U-19 School Games, 2016 Junior Asian Championship",
-                desp2: "2015 U-19 School Games(Bronze), 2016 Junior Asian Championship (Gold)"
-
-            },
-            // {
-            //   image: "img/player/p19.png",
-            //   name: "David Tsai",
-            //   desg: "Defender",
-            //   nationality: "Taiwan",
-            //   dob: "26",
-            //   jersyno: "20",
-            //   desp: "2014 Pro Kabaddi League , 2015 Pro Kabaddi League",
-            //   desp2: "2014 Pro Kabaddi League (Gold)"
-            //
-            // },
-            {
-
-                image: "img/player/p3.png",
-                name: "Jasvir Singh",
-                desg: "Raider",
-                nationality: "Haryana",
-                dob: "32",
-                jersyno: "02",
-                desp: "2004-2016 Senior Nationals, 2007,2009,2013 Indoor Asian Games, 2014 Asian Games, 2009-15 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
-                desp2: "2014 Pro Kabaddi League (Gold), 2004,2013 Senior National Games (Gold), 2005,2010,2015 Senior Nationals (Silver), 2007 Senior Nationals (Bronze), 2007,2009,2013 Indoor Asian Games (Gold), 2014 Asian Games (Gold), 2013-14 Departmental Nationals (Gold), 2015 Departmental Nationals (Silver)"
-
-            }, {
-                image: "img/player/p30.png",
-                name: "Jawahar",
-                desg: "All Rounder",
-                nationality: "Haryana",
-                dob: "21",
-                jersyno: "111",
-                desp2: "Silver medal in 45th Haryana state school tournament 56 th National School Games 2010 - 11 held at Himachal Pradesh secure bronze medal Participant 46 th Haryana state school tournament 2011 - 12 Participate in Delhi state kabaddi championship 2012 - 13 Secure first position in Haryana state championship 2013 - 14 Silver medal in 61 st senior national kabaddi championship 2013 - 14 Gold medal in 62 nd senior national kabaddi championship 2014 - 15 Bronze medal in 35 th national games Kerala 2015"
-
-            }, {
-                image: "img/player/p32.png",
-                name: "Kazuhiro Takano",
-                desg: "All Rounder",
-                nationality: "Japan",
-                dob: "30",
-                jersyno: "19",
-                desp2: "2015 International Friendly Games (participation), 2015 National Championship (gold), 2014 East Japan Championship (gold),  Part of Jaipur Pink Panthers team squad in Season 2, 2007 - world cup (bronze - Most valuable player), 2010 - asian games (bronze), 2007 - 2015 All japan tournament (gold)"
-            }, {
-                image: "img/player/p31.png",
-                name: "Lo Chia Wei",
-                desg: "Raider",
-                nationality: "New Taipei City",
-                dob: "26",
-                jersyno: "09",
-                desp: "2016 Pro Kabaddi League (Dabang Delhi K.C.)"
-
-            }, {
-                image: "img/player/p25.png",
-                name: "Mahipal Narwal",
-                desg: "Raider",
-                nationality: "Haryana",
-                dob: "24",
-                jersyno: "12",
-                desp: "2011-14 Senior National Championship, 2014-2015 Pro Kabaddi League(Puneri Paltan) , 2016 Pro Kabaddi League(Patna Pirates), 2016 Pro Kabaddi League (Jaipur Pink Panthers), 2010 All India University , 2010 National Games",
-                desp2: "2016 Pro Kabaddi League(Gold), 2013  Senior National Championship(gold), 2011 Senior Nationals Championship (Silver), 2010 All India University (Gold), 2010 National Games (Gold)."
-            },
-            // }, {
-            //   image: "img/player/p20.png",
-            //   name: "Masayuki Shimokawa",
-            //   desg: "Raider",
-            //   nationality: "Tokyo",
-            //   dob: "27",
-            //   desp: "2014-16 Pro Kabaddi League (U Mumba), 2015 Japan National Games",
-            //   desp2: "2016 Star Sports Pro Kabaddi Season 3 runners up (U Mumba), 2015 Star Sports Pro Kabaddi Champions (U Mumba), 2015 Japan National Games(Gold)"
-            //
-            // }, {
-            {
-                image: "img/player/p23.png",
-                name: "Parveen Narwal",
-                desg: "All Rounder",
-                nationality: "Haryana",
-                dob: "20",
-                jersyno: "07",
-                desp: "2009 Rural State Championship, 2009 U-17 National Games, 2010 U-19 School Games, 2012,2015 Senior State Championship",
-                desp2: "2009 Rural State Championship(Gold), 2009 U-17 National Games (Silver), 2010 U-19 School Games(Gold), 2012,2015 Senior State Championship(Gold)"
-
-            }, {
-                image: "img/player/p22.png",
-                name: "Parvesh Malik",
-                desg: "Defender",
-                nationality: "Haryana",
-                dob: "19",
-                jersyno: "06",
-                desp: "2015-16 All India University, 2016 Junior National Games, 2016 Junior Asian Championship",
-                desp2: "2015-16 All India Univerisity(gold),2016 Junior Asian Championship(gold), 2015 Junior National Games(Gold)"
-
-
-            }, {
-
-                image: "img/player/p6.png",
-                name: "Rajesh Narwal",
-                desg: "All Rounder",
-                nationality: "Haryana",
-                dob: "25",
-                jersyno: "11",
-                desp: "2007 Federation Cup, 2007 U-17 School Games, 2004 Junior Rural National Championship, 2006-2015 Senior State Championship, 2008 All India University, 2014 - Beach Asian Games, 2014-16 - Super National Games , 2010-16 - Dept. Nationals Games , 2015 - National Games , 2016 - Federations Cup , 2014-16 Pro Kabaddi League(Jaipur Pink Panthers)",
-                desp2: "2008 All India University (Gold), 2010 National Games(Bronze), 2004 Junior Rural National Championship (Gold), 2007 U-17 School Games(Gold), 2006-2009 Senior State Championship (Gold), 2012-15 Senior State Championship (Gold)2014 - Beach Asian Games(Gold) , 2014-15 Super Nationals Games (Silver) , 2016 Super National Games (Bronze) , 2011-2016 Departmental Nationals Games (Gold), 2015 Nationals Games (Gold) , 2016 Federations Cup (Silver) , 2014 Pro Kabaddi Leaugue (Gold)"
-
-            }, {
-
-                image: "img/player/p8.png",
-                name: "Ran Singh",
-                desg: "All Rounder",
-                nationality: "Punjab",
-                dob: "29",
-                jersyno: "13",
-                desp: "2014-2016 Pro Kabaddi League (Jaipur Pink Panthers),2002-08 Senior National Games, 2014 Senior National Games, 2014 Departmental National Games, 2008-2011 All India Police Tournament",
-                desp2: "2014 Pro Kabaddi League (Gold), 2007 Senior National Games (Silver), 2006 Senior National Games (Bronze), 2008,2011 All India Police Tournament (Gold), 2009,2010 All India Police Tournament (Bronze), 2014 Departmental National Tournament (Silver)"
-
-            }, {
-                image: "img/player/p10.png",
-                name: "Rohit Rana",
-                desg: "Defender",
-                nationality: "Himachal Pradesh",
-                dob: "28",
-                jersyno: "05",
-                desp: "2006-2010 Senior Nationals, 2010-14 Beach Kabaddi, 2011-16 Departmental Nationals, 2014-16 Pro Kabaddi League(Jaipur Pink Panthers), 2015 National Games.",
-                desp2: "2014 Pro Kabaddi League (Gold) , 2015 National Games (Bronze), 2011-2014 Departmental Nationals (Gold)"
-
-            }, {
-                image: "img/player/p24.png",
-                name: "Shabeer Bapu Sharfudheen",
-                desg: "Raider",
-                nationality: "kerela",
-                dob: "29",
-                jersyno: "03",
-                desp: "2004-2006 All India University, 2013-16 Departmental National Games, 2009-16 Senior National Games, 2015 National Games , 2014-16 Pro Kabaddi League",
-                desp2: "2016 Pro Kabaddi League (Silver), 2015 Pro Kabaddi League(Gold), 2014 Pro Kabaddi League(Silver),2015 National Games(silver),2014 Departmental National Games (Gold)"
-
-            }, {
-                image: "img/player/p27.png",
-                name: "Shrikant Tewthia",
-                desg: "All Rounder",
-                nationality: "Uttar Pradesh",
-                dob: "23",
-                jersyno: "08",
-                desp: "2007 Junior Nationals, 2009 All India University, 2011 National Championship, 2013 Senior Nationals, 2015 Senior Nationals, 2016 Federations Cup, 2014-15 Pro Kabaddi League (Dabang Delhi), 2016 Pro Kabaddi League (Bengluru Bulls), 2016 Pro Kabaddi League (Jaipur Pink Panthers)",
-                desp2: "2009 All India University(Silver),2013 Senior Nationals(Bronze), 2015 Senior Nationals (Gold), 2016 Federations Cup(Bronze)"
-
-            }, {
-                image: "img/player/p28.png",
-                name: "Tushar Patil",
-                desg: "All Rounder",
-                nationality: "Maharashtra",
-                dob: "21",
-                jersyno: "99",
-                desp: "2011-12 U-19 School National Games, 2016 Departmental Nationals, 2013 Junior National Championship,2015 University Games",
-                desp2: "2016 Star Sports Pro Kabaddi semi-finalist team (Puneri Paltan), 2011 U-19 School National Games (Gold), 2012 U-19 School National Games (Silver)"
-
-            }
-        ];
+        NavigationService.getallplayers(function(data){
+          $scope.player =data.data.queryresult;
+          console.log("$scope.allPlayers",$scope.player);
+        })
         var i = 0;
         _.each($scope.player, function(key) {
             key.id = i;
@@ -1697,6 +1696,9 @@ img:'img/players/slider-player.png',
         });
 
     };
+
+
+
 })
 
 .controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {

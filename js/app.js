@@ -109,11 +109,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
        .state('players-inside', {
-        url: "/players-inside",
+        url: "/players-inside/:id",
         templateUrl: "views/template.html",
         controller: 'PlayersInsideCtrl'
     })
-    
+
     .state('points-table', {
         url: "/points-table",
         templateUrl: "views/template.html",
@@ -172,6 +172,15 @@ firstapp.filter('serverimage', function() {
     return function(input) {
         if (input) {
             return imgurl + input;
+        } else {
+            return "";
+        }
+    };
+});
+firstapp.filter('serverimage1', function() {
+    return function(input) {
+        if (input) {
+            return tempimgurl + input;
         } else {
             return "";
         }

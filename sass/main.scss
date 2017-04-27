@@ -3733,6 +3733,9 @@ background-color: $white;
     transform: skew(-20deg);
     }
       }
+      .text-uppercase{
+        text-transform: uppercase !important;
+      }
 }
 
 .player-name{
@@ -3899,7 +3902,7 @@ ul{
 
 .currents-about,.card-type{
     p{
-     @include font-size (60px);   
+     @include font-size (60px);
     }
 }
 .currents-about{
@@ -3909,33 +3912,33 @@ ul{
 .current-about{
     padding: 9px 0;
     p{
-     @include font-size (80px);   
+     @include font-size (80px);
     }
     span{
-         @include font-size (35px !important);    
+         @include font-size (35px !important);
     }
 }
 
 .raid-status{
         padding: 17px 0;
-        
+
     p{  font-size: 40px;
         display: inline-block;
         vertical-align: top;
     }
     span{
-    font-size: 20px;   
-    display: inline-block; 
+    font-size: 20px;
+    display: inline-block;
     }
 }
 .raids-status,.card-type{
     span{
-           font-size: 20px;   
-    display: inline-block; 
+           font-size: 20px;
+    display: inline-block;
     }
 }
 .raids-status{
-     padding: 12px 0; 
+     padding: 12px 0;
 }
 
 .cards{
@@ -3944,7 +3947,7 @@ ul{
 
 .bg-blue{
     height: 60px;
-    background-image: url("../img/players/blue.jpg"); 
+    background-image: url("../img/players/blue.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,6 +1,10 @@
 var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
 // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
+//wohlig url for testing
+
 var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
+var tempUrl ="http://wohlig.co.in/jppbackend/index.php/json/";
+var tempimgurl = "http://wohlig.co.in/jppbackend/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
@@ -80,7 +84,7 @@ var navigationservice = angular.module('navigationservice', [])
         getnav: function() {
             return navigation;
         },
-      
+
         getAllSliders: function(callback) {
             $http.get(adminurl + "getAllSliders").then(callback);
         },
@@ -128,6 +132,12 @@ var navigationservice = angular.module('navigationservice', [])
         getGallerySlide: function(request, callback) {
             $http.get(adminurl + "getGallerySlide?galleryid=" + request).then(callback);
         },
+
+        getsingleplayer: function(id, callback) {
+            $http.get(tempUrl + "getsingleplayer?id=" + id).then(callback);
+        },
+
+
         getallwallpaper: function(request, callback) {
             $http.get(adminurl + "getallwallpaper?wallpapercategory=" + request.wallpaperid + "&pageno=" + request.pageno).success(callback);
         },
@@ -164,6 +174,9 @@ var navigationservice = angular.module('navigationservice', [])
             withCredentials: true,
             data: loginData
           }).success(callback);
+        },
+        getallplayers: function(callback) {
+            $http.get(tempUrl + "getallplayers").then(callback);
         },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {

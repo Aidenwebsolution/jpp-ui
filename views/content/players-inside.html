@@ -20,33 +20,42 @@
             </ul>
         </div>
         <div class="player-name player-details">
-            <p class=" text-center bold text-uppercase color-white">02</p>
+            <p class=" text-center bold text-uppercase color-white" >{{playerDetails.jerseyno}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.name}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.type}}</p>
+            <!-- <p class=" text-center bold text-uppercase color-white">02</p>
             <p class=" text-center bold text-uppercase color-white">jasvir singh</p>
-            <p class=" text-center bold text-uppercase color-white">raider</p>
+            <p class=" text-center bold text-uppercase color-white">raider</p> -->
         </div>
         <div class="play-img">
-            <img src="img/players/4.png" alt="">
+            <img ng-src="{{playerDetails.bigimage | serverimage1}}" alt="">
+            <!-- <img src="img/players/4.png" alt=""> -->
         </div>
 <div class="player-details text-center">
     <div class="row-flex">
         <div class="col-flex">
-            <p>INDIAN</p>
+            <p class="text-uppercase">{{playerDetails.hnationality}}</p>
+            <!-- <p>INDIAN</p> -->
             <span></span>
             </div>
         <div class="col-flex">
-            <p>APR 04, 1984</p>
+            <p ng-bind-html="playerDetails.dob"></p>
+            <!-- <p>APR 04, 1984</p> -->
             <span>D.O.B</span>
             </div>
         <div class="col-flex">
-            <p>PANIPAT</p>
+            <p ng-bind-html="playerDetails.nativeplace"></p>
+            <!-- <p>PANIPAT</p> -->
             <span>NATIVE PLACE</span>
             </div>
         <div class="col-flex">
-            <p>80kg</p>
+            <p ng-bind-html="playerDetails.weight"></p>
+            <!-- <p>80kg</p> -->
             <span>WEIGHT</span>
             </div>
              <div class="col-flex">
-            <p>170cm</p>
+            <p >{{playerDetails.height}}</p>
+            <!-- <p>170cm</p> -->
             <span>HEIGHT</span>
             </div>
     </div>
@@ -66,37 +75,45 @@ Achievements
         </li>
     </ul>
 
-    <div class="player-details player-backdrop" ng-show="tornaments == 1" >
-        <div class="row">
+    <div class="player-details player-backdrop" ng-if="tornaments == 1" >
+        <div class="row" ng-repeat="data in tournamentplayed">
             <div class="col-md-5" >
 
-<p>  Pro-Kabaddi (2015-2014)</p>
-<p>indoor asian games(2013)</p>
+<p>{{data[0].name}}({{data[0].year}}) </p>
+<p>{{data[1].name}}({{data[1].year}}) </p>
+<!-- <p>  Pro-Kabaddi (2015-2014)</p>
+<p>indoor asian games(2013)</p> -->
             </div>
             <div class="col-md-4">
-<p>Senior National (2013)</p>
-<p>asian game(2014)</p>
+<p>{{data[2].name}}({{data[2].year}})</p>
+<p>{{data[3].name}}({{data[3].year}})</p>
             </div>
             <div class="col-md-3">
-<p>National Game (2011)</p>
-<p></p>
+<p>{{data[4].name}}({{data[4].year}})</p>
+<p ng-if="data[5].name">{{data[5].name}}({{data[5].year}})</p>
             </div>
         </div>
     </div>
-      <div class="player-details player-backdrop" ng-show="tornaments == 2">
-       <div class="row">
+      <div class="player-details player-backdrop" ng-if="tornaments == 2">
+       <div class="row" ng-repeat="data in achievements">
             <div class="col-md-5" >
 
-<p>  Pro-Kabaddi (2015-2014)</p>
-<p>indoor asian games(2013)</p>
+<p>  {{data[0].name}}({{data[0].year}})</p>
+<p>{{data[1].name}}({{data[1].year}})</p>
+<!-- <p>  Pro-Kabaddi (2015-2014)</p>
+<p>indoor asian games(2013)</p> -->
             </div>
-            <div class="col-md-4">
-<p>Senior National (2013)</p>
-<p>asian game(2014)</p>
+            <div class="col-md-4" ng-if="data[2].name">
+              <p>{{data[2].name}}({{data[2].year}})</p>
+              <p>{{data[3].name}}({{data[3].year}})</p>
+<!-- <p>Senior National (2013)</p>
+<p>asian game(2014)</p> -->
             </div>
-            <div class="col-md-3">
-<p>National Game (2011)</p>
-<p></p>
+            <div class="col-md-3" ng-if="data[4].name">
+              <p>{{data[4].name}}({{data[4].year}})</p>
+              <p>{{data[5].name}}({{data[5].year}})</p>
+<!-- <p>National Game (2011)</p>
+<p></p> -->
             </div>
         </div>
     </div>
@@ -121,7 +138,7 @@ last season
 <div class="row br-statistics">
     <div class="col-md-12 bb-statistics">
       <div class="current-about">
-        <p>46</p>
+        <p>{{playerDetails.career.matchplayed}}</p>
         <span>matches played</span>
       </div>
 
@@ -130,21 +147,21 @@ last season
 <div class="row br-statistics">
     <div class="col-md-4 ">
       <div class="currents-about">
-        <p>300</p>
+        <p>{{playerDetails.career.totalpoints}}</p>
         <span>total points </span>
       </div>
 
     </div>
     <div class="col-md-4 bl-statistics br-statistics">
       <div class="currents-about">
-        <p>277</p>
+        <p>{{playerDetails.career.totalraidpoints}}</p>
         <span>total raid  points</span>
       </div>
 
     </div>
     <div class="col-md-4 ">
       <div class="currents-about">
-        <p>23</p>
+        <p>{{playerDetails.career.totaldefencepoints}}</p>
         <span>total defence  points</span>
       </div>
 
@@ -159,7 +176,7 @@ last season
         <img src="img/players/1.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>410</p>
+        <p>{{playerDetails.career.greencards}}</p>
 <span>green cards</span>
     </div>
 </div>
@@ -173,7 +190,7 @@ last season
           <img src="img/players/2.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>00</p>
+        <p>{{playerDetails.career.redcards}}</p>
 <span>red cards</span>
     </div>
 </div>
@@ -186,7 +203,7 @@ last season
           <img src="img/players/3.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>01</p>
+        <p>{{playerDetails.career.yellowcards}}</p>
 <span>yellow cards</span>
     </div>
 </div>
@@ -199,7 +216,7 @@ last season
                                     <div class="cards">
 
     <div class="current-about card-type">
-        <p>695</p>
+        <p>{{playerDetails.career.raids}}</p>
 <span>raids</span>
     </div>
 </div>
@@ -208,28 +225,28 @@ last season
   <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raid-status">
- <p>261</p>
+ <p>{{playerDetails.career.successfulraids}}</p>
             <span>successful </br> raids</span>
       </div>
           </div>
-         
+
   </div>
    <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raid-status">
-              <p>137</p>
+              <p>{{playerDetails.career.unsuccessfulraids}}</p>
           <span>unsuccessful </br> raids</span>
           </div>
-        
+
       </div>
   </div>
    <div class="row">
       <div class="col-md-12 ">
           <div class="raid-status">
-               <p>342</p>
+               <p>{{playerDetails.career.emptyraids}}</p>
           <span>empty  raids</span>
           </div>
-       
+
       </div>
   </div>
             </div>
@@ -237,7 +254,7 @@ last season
                     <div class="cards ">
 
     <div class="current-about card-type">
-        <p>52</p>
+        <p>{{playerDetails.career.tackles}}</p>
 <span>tackles</span>
     </div>
 </div>
@@ -246,16 +263,16 @@ last season
      <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raids-status">
-   <p>18</p>
+   <p>{{playerDetails.career.successfultackles}}</p>
 <span>successful tackles</span>
           </div>
-     
+
       </div>
   </div>
   <div class="row">
       <div class="col-md-12">
            <div class="raids-status">
-        <p>34</p>
+        <p>{{playerDetails.career.unsuccessfultackles}}</p>
 <span>unsuccessful tackles</span>
 </div>
       </div>
@@ -263,13 +280,13 @@ last season
             </div>
         </div>
     </div>
-      <div class=" player-backdrops player-details" ng-show="career == 2">
+      <div class=" player-backdrops player-details" ng-if="career == 2">
         <div class="row ">
             <div class="col-md-8 bb-statistics ">
 <div class="row br-statistics">
     <div class="col-md-12 bb-statistics">
       <div class="current-about">
-        <p>46</p>
+        <p>{{playerDetails.current.matchplayed}}</p>
         <span>matches played</span>
       </div>
 
@@ -278,21 +295,21 @@ last season
 <div class="row br-statistics">
     <div class="col-md-4 ">
       <div class="currents-about">
-        <p>300</p>
+        <p>{{playerDetails.current.totalpoints}}</p>
         <span>total points </span>
       </div>
 
     </div>
     <div class="col-md-4 bl-statistics br-statistics">
       <div class="currents-about">
-        <p>277</p>
+        <p>{{playerDetails.current.totalraidpoints}}</p>
         <span>total raid  points</span>
       </div>
 
     </div>
     <div class="col-md-4 ">
       <div class="currents-about">
-        <p>23</p>
+        <p>{{playerDetails.current.totaldefencepoints}}</p>
         <span>total defence  points</span>
       </div>
 
@@ -307,7 +324,7 @@ last season
         <img src="img/players/1.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>410</p>
+        <p>{{playerDetails.current.greencards}}</p>
 <span>green cards</span>
     </div>
 </div>
@@ -321,7 +338,7 @@ last season
           <img src="img/players/2.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>00</p>
+        <p>{{playerDetails.current.redcards}}</p>
 <span>red cards</span>
     </div>
 </div>
@@ -334,7 +351,7 @@ last season
           <img src="img/players/3.png" class="img-responsive" alt="">
     </div>
     <div class="card-type">
-        <p>01</p>
+        <p>{{playerDetails.current.yellowcards}}</p>
 <span>yellow cards</span>
     </div>
 </div>
@@ -347,7 +364,7 @@ last season
                                     <div class="cards">
 
     <div class="current-about card-type">
-        <p>695</p>
+        <p>{{playerDetails.current.raids}}</p>
 <span>raids</span>
     </div>
 </div>
@@ -356,28 +373,28 @@ last season
   <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raid-status">
- <p>261</p>
+ <p>{{playerDetails.current.successfulraids}}</p>
             <span>successful </br> raids</span>
       </div>
           </div>
-         
+
   </div>
    <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raid-status">
-              <p>137</p>
+              <p>{{playerDetails.current.unsuccessfulraids}}</p>
           <span>unsuccessful </br> raids</span>
           </div>
-        
+
       </div>
   </div>
    <div class="row">
       <div class="col-md-12 ">
           <div class="raid-status">
-               <p>342</p>
+               <p>{{playerDetails.current.emptyraids}}</p>
           <span>empty  raids</span>
           </div>
-       
+
       </div>
   </div>
             </div>
@@ -385,7 +402,7 @@ last season
                     <div class="cards ">
 
     <div class="current-about card-type">
-        <p>52</p>
+        <p>{{playerDetails.current.tackles}}</p>
 <span>tackles</span>
     </div>
 </div>
@@ -394,16 +411,16 @@ last season
      <div class="row">
       <div class="col-md-12 bb-statistics">
           <div class="raids-status">
-   <p>18</p>
+   <p>{{playerDetails.current.successfultackles}}</p>
 <span>successful tackles</span>
           </div>
-     
+
       </div>
   </div>
   <div class="row">
       <div class="col-md-12">
            <div class="raids-status">
-        <p>34</p>
+        <p>{{playerDetails.current.unsuccessfultackles}}</p>
 <span>unsuccessful tackles</span>
 </div>
       </div>
