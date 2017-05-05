@@ -75,8 +75,8 @@ Achievements
         </li>
     </ul>
 
-    <div class="player-details player-backdrop" ng-if="tornaments == 1" >
-        <div class="row" ng-repeat="data in tournamentplayed">
+    <div class="player-details player-backdrop" >
+        <div class="row" ng-repeat="data in tournamentplayed" ng-if="tornaments == 1">
             <div class="col-md-5" >
 
 <p>{{data[0].name}}({{data[0].year}}) </p>
@@ -94,8 +94,8 @@ Achievements
             </div>
         </div>
     </div>
-      <div class="player-details player-backdrop" ng-if="tornaments == 2">
-       <div class="row" ng-repeat="data in achievements">
+      <div class="player-details player-backdrop" >
+       <div class="row" ng-repeat="data in achievements" ng-if="tornaments == 2">
             <div class="col-md-5" >
 
 <p>  {{data[0].name}}({{data[0].year}})</p>
@@ -175,7 +175,7 @@ last season
     <div class="card-img">
         <img src="img/players/3.png" class="img-responsive" alt="">
     </div>
-    <div class="card-type width-df">
+    <div class="card-type">
         <p>{{playerDetails.career.greencards}}</p>
 <span>green cards</span>
     </div>
@@ -189,7 +189,7 @@ last season
     <div class="card-img">
           <img src="img/players/1.png" class="img-responsive" alt="">
     </div>
-    <div class="card-type width-df">
+    <div class="card-type">
         <p>{{playerDetails.career.redcards}}</p>
 <span>red cards</span>
     </div>
@@ -202,7 +202,7 @@ last season
     <div class="card-img">
           <img src="img/players/2.png" class="img-responsive" alt="">
     </div>
-    <div class="card-type width-df">
+    <div class="card-type">
         <p>{{playerDetails.career.yellowcards}}</p>
 <span>yellow cards</span>
     </div>
@@ -429,7 +429,7 @@ last season
         </div>
     </div>
      <div class=" player-backdrops player-details" ng-show="career == 3">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4" >
 <p>pro kabadi</p>
 
@@ -442,7 +442,156 @@ last season
 <p>pro kabadi</p>
 
             </div>
+        </div> -->
+
+        <!-- Last season  -->
+        <div class="row ">
+            <div class="col-md-8 bb-statistics ">
+<div class="row br-statistics">
+    <div class="col-md-12 bb-statistics">
+      <div class="current-about">
+        <p>{{playerDetails.lastseason.matchplayed}}</p>
+        <span>matches played</span>
+      </div>
+
+    </div>
+</div>
+<div class="row br-statistics">
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totalpoints}}</p>
+        <span>total points </span>
+      </div>
+
+    </div>
+    <div class="col-md-4 bl-statistics br-statistics">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totalraidpoints}}</p>
+        <span>total raid  points</span>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totaldefencepoints}}</p>
+        <span>total defence  points</span>
+      </div>
+
+    </div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+        <img src="img/players/3.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.greencards}}</p>
+<span>green cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/1.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.redcards}}</p>
+<span>red cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/2.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.yellowcards}}</p>
+<span>yellow cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-3">
+                                    <div class="cards">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.lastseason.raids}}</p>
+<span>raids</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-4 bl-statistics br-statistics">
+  <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+ <p>{{playerDetails.lastseason.successfulraids}}</p>
+            <span>successful </br> raids</span>
+      </div>
+          </div>
+
+  </div>
+   <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+              <p>{{playerDetails.lastseason.unsuccessfulraids}}</p>
+          <span>unsuccessful </br> raids</span>
+          </div>
+
+      </div>
+  </div>
+   <div class="row">
+      <div class="col-md-12 ">
+          <div class="raid-status">
+               <p>{{playerDetails.lastseason.emptyraids}}</p>
+          <span>empty  raids</span>
+          </div>
+
+      </div>
+  </div>
+            </div>
+            <div class="col-md-2">
+                    <div class="cards ">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.lastseason.tackles}}</p>
+<span>tackles</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-3 bl-statistics">
+     <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raids-status">
+   <p>{{playerDetails.lastseason.successfultackles}}</p>
+<span>successful tackles</span>
+          </div>
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+           <div class="raids-status">
+        <p>{{playerDetails.lastseason.unsuccessfultackles}}</p>
+<span>unsuccessful tackles</span>
+</div>
+      </div>
+  </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </div>
@@ -489,13 +638,14 @@ last season
                </div>
     </div>
 </section>
-<section class="view-slider socials-hub">
+<section class="view-slider socials-hub" ng-if="showcaseSlides.length>0">
    <div class="container">
+
         <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
            <flex-slider flex-slide="banner in showcaseSlides track by $index" prev-text="" next-text="" class="" item-width="350" item-margin="25"  animation="slide" slideshow="true" slideshowSpeed="500">
-          <li>
+          <li ui-sref="players-inside({id:banner.id})">
 
-             <img ng-src="{{banner.img}}" class="img-responsive">
+             <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
 
           </li>
       </flex-slider>

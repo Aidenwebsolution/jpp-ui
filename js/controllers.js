@@ -1451,25 +1451,42 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
     }];
 
-    $scope.showcaseSlides=[{
-img:'img/players/slider-player.png',
-  link: '',
-    },{
-img:'img/players/slider-player.png',
-    },{
-img:'img/players/slider-player.png',
-    },{
-img:'img/players/slider-player.png',
-    },{
-img:'img/players/slider-player.png',
-    },{
-img:'img/players/slider-player.png',
-    },{
-img:'img/players/slider-player.png',
-    }];
+//     $scope.showcaseSlides=[{
+// img:'img/players/slider-player.png',
+//   link: '',
+//     },{
+// img:'img/players/slider-player.png',
+//     },{
+// img:'img/players/slider-player.png',
+//     },{
+// img:'img/players/slider-player.png',
+//     },{
+// img:'img/players/slider-player.png',
+//     },{
+// img:'img/players/slider-player.png',
+//     },{
+// img:'img/players/slider-player.png',
+//     }];
 
 
+    NavigationService.getallplayers(function(data){
+      $scope.showcaseSlides=[];
+      $scope.showcaseSlides =data.data.queryresult;
+      console.log("$scope.showcaseSlides",$scope.showcaseSlides);
+      var findIndex =_.findIndex($scope.showcaseSlides,function(value){
+        return value.id == $stateParams.id;
+      });
+      console.log("findIndex",findIndex);
+      if (findIndex>=0) {
+        $scope.showcaseSlides.splice(findIndex,1);
+      }else {
+          $scope.showcaseSlides = data.data.queryresult;
+      }
 
+    })
+
+
+    $scope.stateparamsId=$stateParams.id;
     NavigationService.getsingleplayer($stateParams.id,function(data){
 
       $scope.playerDetails =data.data.data.player;
