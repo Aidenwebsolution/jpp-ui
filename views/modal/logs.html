@@ -6,7 +6,7 @@
          </li>
          <li class="tab-item  relative  text-center  text-uppercase {{classsb}}" ng-click="tabchanges('trim',2)">
 
-            <h3 class="text-uppercase margin0"> signup</h3>
+            <h3 class="text-uppercase margin0"> sign up</h3>
 
          </li>
 
@@ -63,8 +63,11 @@
                <div class="form-group">
                   <input type="text" class="form-control" placeholder="Name" ng-model="signupdata.firstname" aplha-Only required>
                </div>
-               <div class="form-group">
+               <!--<div class="form-group">
                   <input type="email" class="form-control" placeholder="Email Address" ng-model="signupdata.email" required>
+               </div>-->
+                 <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Phone No." ng-model="signupdata.phoneno" required minlength="8" maxlength="10" only-Digits>
                </div>
                <div class="form-group">
                   <input type="password" name="password" class="form-control" placeholder="Password" ng-model="signupdata.password" required minlength="8" maxlength="14" no-Paste>
@@ -75,9 +78,12 @@
                <div class="form-group">
                   <input type="text" class="form-control" placeholder="Surname" ng-model="signupdata.lastname" aplha-Only required>
                </div>
-               <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Phone No." ng-model="signupdata.phoneno" required minlength="8" maxlength="10" only-Digits>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email Address" ng-model="signupdata.email" required>
                </div>
+               <!--<div class="form-group">
+                  <input type="text" class="form-control" placeholder="Phone No." ng-model="signupdata.phoneno" required minlength="8" maxlength="10" only-Digits>
+               </div>-->
                <div class="form-group">
                   <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" ng-model="signupdata.confirmPass" no-Paste required>
                   <div class="error-msg" ng-show="signUp.confirmPassword.$error.required && signUp.confirmPassword.$touched">Please Re-Enter Your Password</div>
