@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Hind:400,300,600,700,500);
+// @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -419,80 +420,87 @@ nav {
 }
 
 .title-name {
-    background-color: $brand-success;
-    @include transition(all 0.5s ease);
-    color: $pink;
-    display: inline-block;
-    text-transform: uppercase;
-    position: relative;
-    padding: 9px 30px;
-    z-index: 9;
-    transform: rotate(-10deg);
-    a {
-        color: $pink;
-        &:focus {
-            color: $pink;
-        }
-        &:hover {
-            color: $pink;
-        }
+    h1{
+        display: inline-block;
+    width: 250px;
     }
-    &:before {
-        left: -16px;
-        height: 100%;
-        width: 32px;
-        position: absolute;
-        content: "";
-        top: 0;
-        background-color: $brand-success;
-        @include transform(skew(-20deg));
-        z-index: -1;
-        @include transition(all 0.5s ease);
-        z-index: 9;
-    }
-    &:after {
-        right: -16px;
-        height: 100%;
-        width: 32px;
-        position: absolute;
-        content: "";
-        top: 0;
-        background-color: $brand-success;
-        transform: skew(-20deg);
-        transition: all 0.5s ease;
-        z-index: 9;
-    }
-    h1 {
-        border-top: 2px solid #ee4a9b;
-        border-bottom: 2px solid #ee4a9b;
-        font: 26px "Oswald";
-        transform: rotate(4deg);
-        padding: 0 25px;
-        &:before {
-            height: 105%;
-            width: 22px;
-            content: "";
-            @include position(absolute,
-            0 null null -8px);
-            border-left: 2px solid #ee4a9b;
-            border-bottom: 2px solid #ee4a9b;
-            @include transform(skew(-20deg));
-            @include transition(all 0.5s ease);
-            z-index: 9;
-        }
-        &:after {
-            height: 105%;
-            width: 22px;
-            content: "";
-            @include position(absolute,
-            -2px -8px null null);
-            border-right: 2px solid #ee4a9b;
-            border-top: 2px solid #ee4a9b;
-            @include transform(skew(-20deg));
-            @include transition(all 0.5s ease);
-            z-index: 9;
-        }
-    }
+    // background-image:url("../img/players/titles.png");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-color: $brand-success;
+    // @include transition(all 0.5s ease);
+    // color: $pink;
+    // display: inline-block;
+    // text-transform: uppercase;
+    // position: relative;
+    // padding: 9px 30px;
+    // z-index: 9;
+    // transform: rotate(-10deg);
+    // a {
+    //     color: $pink;
+    //     &:focus {
+    //         color: $pink;
+    //     }
+    //     &:hover {
+    //         color: $pink;
+    //     }
+    // }
+    // &:before {
+    //     left: -16px;
+    //     height: 100%;
+    //     width: 32px;
+    //     position: absolute;
+    //     content: "";
+    //     top: 0;
+    //     background-color: $brand-success;
+    //     @include transform(skew(-20deg));
+    //     z-index: -1;
+    //     @include transition(all 0.5s ease);
+    //     z-index: 9;
+    // }
+    // &:after {
+    //     right: -16px;
+    //     height: 100%;
+    //     width: 32px;
+    //     position: absolute;
+    //     content: "";
+    //     top: 0;
+    //     background-color: $brand-success;
+    //     transform: skew(-20deg);
+    //     transition: all 0.5s ease;
+    //     z-index: 9;
+    // }
+    // h1 {
+    //     border-top: 2px solid #ee4a9b;
+    //     border-bottom: 2px solid #ee4a9b;
+    //     font: 26px "Oswald";
+    //     transform: rotate(4deg);
+    //     padding: 0 25px;
+    //     &:before {
+    //         height: 105%;
+    //         width: 22px;
+    //         content: "";
+    //         @include position(absolute,
+    //         0 null null -8px);
+    //         border-left: 2px solid #ee4a9b;
+    //         border-bottom: 2px solid #ee4a9b;
+    //         @include transform(skew(-20deg));
+    //         @include transition(all 0.5s ease);
+    //         z-index: 9;
+    //     }
+    //     &:after {
+    //         height: 105%;
+    //         width: 22px;
+    //         content: "";
+    //         @include position(absolute,
+    //         -2px -8px null null);
+    //         border-right: 2px solid #ee4a9b;
+    //         border-top: 2px solid #ee4a9b;
+    //         @include transform(skew(-20deg));
+    //         @include transition(all 0.5s ease);
+    //         z-index: 9;
+    //     }
+    // }
 }
 
 .bold {
@@ -535,7 +543,7 @@ nav {
 
 .panther-punch {
     position: relative;
-    margin-bottom: -8px;
+    margin-bottom: -30px;
     z-index: 9;
     img {
         width: 72px;
@@ -611,6 +619,10 @@ nav {
 
 .f16 {
     font-size: 16px;
+}
+
+.f15{
+      font-size: 15px;
 }
 
 // .sponser-logo {
@@ -3165,9 +3177,12 @@ a.ilogo {
         margin-right: -2px;
         background-color: #fff;
         color: #000;
+        h3{
+            font-size: 28px;
+        }
     }
     .active-tab {
-        background-color: #362375;
+        background-color: #24235d;
         color: #fff;
     }
     .carts {
@@ -3176,12 +3191,17 @@ a.ilogo {
         padding: 40px 33px;
         margin-top: -1px;
         position: relative;
+        a{
+    margin-top: -30px;
+    margin-right: 20px;
+        }
+    
     }
     .form {
         padding: 20px 50px;
         .form-group {
             .form-control {
-                width: 74%;
+                // width: 74%;
                 background-color: transparent;
                 border: none;
                 border-bottom: 1px solid #fff;
@@ -3217,10 +3237,12 @@ a.ilogo {
         background-color: #2196F3 !important;
     }
     .pinky {
-        padding: 6px 60px !important;
+        padding: 3px 70px !important;
+        background-color: $brand-primary !important;
     }
     .signs {
         display: inline-block;
+        margin-right: 10px;
         .fa {
             &:before {
                 color: #fff;
@@ -3228,7 +3250,7 @@ a.ilogo {
         }
         span {
             background-color: $facebook;
-            padding: 7px 12px;
+            padding: 6px 12px;
             margin-right: -3px;
             display: inline-block;
             vertical-align: bottom;
@@ -3253,6 +3275,16 @@ a.ilogo {
             left: 130px;
             width: 50px;
         }
+    }
+
+    .btn-pink{
+        padding: 5px 30px;
+    }
+}
+
+.loging-in{
+    .form-group{
+        width: 77%;
     }
 }
 
@@ -3361,7 +3393,7 @@ a.ilogo {
     }
     .image {
         position: absolute;
-        right: 103px;
+        right: 87px;
         top: 20px;
         height: 200px;
         width: 200px;
