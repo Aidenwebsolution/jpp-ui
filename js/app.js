@@ -240,6 +240,7 @@ firstapp.filter('teamColor', function() {
 });
 
 
+
 firstapp.filter('teamImg', function() {
     return function(input) {
 

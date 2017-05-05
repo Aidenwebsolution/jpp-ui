@@ -178,6 +178,9 @@ var navigationservice = angular.module('navigationservice', [])
         getallplayers: function(callback) {
             $http.get(tempUrl + "getallplayers").then(callback);
         },
+        getpantherworldguesswho: function(callback) {
+            $http.get(tempUrl + "getpantherworldguesswho").then(callback);
+        },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

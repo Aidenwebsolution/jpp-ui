@@ -188,6 +188,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.sliderdata = data.data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
+  
     NavigationService.getjourney(function(data) {
         $scope.journeyData = data.data;
         console.log('$scope.journeyData', $scope.journeyData);
