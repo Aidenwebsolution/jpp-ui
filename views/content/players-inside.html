@@ -39,17 +39,17 @@
             <span></span>
             </div>
         <div class="col-flex">
-            <p ng-bind-html="playerDetails.dob | date"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.dob | date"></p>
             <!-- <p>APR 04, 1984</p> -->
             <span>D.O.B</span>
             </div>
         <div class="col-flex">
-            <p ng-bind-html="playerDetails.nativeplace"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.nativeplace"></p>
             <!-- <p>PANIPAT</p> -->
             <span>NATIVE PLACE</span>
             </div>
         <div class="col-flex">
-            <p ng-bind-html="playerDetails.weight"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.weight"></p>
             <!-- <p>80kg</p> -->
             <span>WEIGHT</span>
             </div>
@@ -62,14 +62,14 @@
 </div>
 <div class="player-details text-center" ng-init="tornaments = 1">
     <ul class="list-inline">
-        <li class="text-capitalize" ng-click="tornaments = 1" ng-class="{'activated': tornaments == 1 , '':tornaments !== 1}">
+        <li class="text-capitalize" ng-click="tornaments = 1" ng-class="{'activated': tornaments == 1 , '':tornaments !== 1}" style="text-transform:capitalize">
 tournaments Played
 
         </li>
           <!--<div class="title-name">
           <h1 class="bold-mrgin">{{'Fan Corner'|translate}}</h1>
         </div>-->
-        <li class="text-capitalize" ng-click="tornaments = 2" ng-class="{'activated': tornaments == 2 , '':tornaments !== 2}" >
+        <li class="text-capitalize" ng-click="tornaments = 2" ng-class="{'activated': tornaments == 2 , '':tornaments !== 2}" style="text-transform:capitalize" >
 Achievements
 
         </li>
@@ -122,13 +122,13 @@ Achievements
   <h3 class="text-center bold text-uppercase color-white">statistics</h3>
 <div class="player-details  text-center" ng-init="career = 1">
         <ul class="list-inline">
-        <li ng-click="career = 1" ng-class="{'activated': career == 1 }">
+        <li ng-click="career = 1" ng-class="{'activated': career == 1 }" style="text-transform:capitalize">
 career
         </li>
-        <li ng-click="career = 2" ng-class="{'activated': career == 2 }" >
+        <li ng-click="career = 2" ng-class="{'activated': career == 2 }" style="text-transform:capitalize">
 current
         </li>
-              <li ng-click="career = 3" ng-class="{'activated': career == 3 }" >
+              <li ng-click="career = 3" ng-class="{'activated': career == 3 }" style="text-transform:capitalize">
 last season
         </li>
     </ul>

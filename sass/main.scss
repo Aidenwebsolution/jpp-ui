@@ -545,6 +545,7 @@ nav {
     position: relative;
     margin-bottom: -30px;
     z-index: 9;
+   
     img {
         width: 72px;
     }
@@ -1825,7 +1826,7 @@ img.fancybox-image {
             font-weight: 500;
         }
     }
-    background: #4ecaf5;
+    // background: #4ecaf5;
     padding: 10px 5px 5px;
     color: #000;
     margin: 10px;
@@ -1837,11 +1838,11 @@ img.fancybox-image {
     }
     .table {
         th {
-            border-bottom: 5px solid #4ecaf5;
+            // border-bottom: 5px solid #4ecaf5;
             font-size: 20px;
         }
         td {
-            border-bottom: 2px solid #4ecaf5;
+            // border-bottom: 2px solid #4ecaf5;
             font-weight: 300;
         }
         td,
@@ -3639,34 +3640,41 @@ a.ilogo {
 }
 
 .player-backdrop {
-    background-color: #0d2948;
+    background-color: rgba(13, 41, 72, 0.73);
     transition: all 0.5s ease;
-    display: inline-block;
+    display: block;
     position: relative;
-    padding: 35px 70px;
+    padding: 70px;
     z-index: 9;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
     p {
         font-size: 22px !important;
         padding-bottom: 20px;
     }
     &:before {
-        content: "";
-        @include size(77px,
-        100%);
-        @include position(absolute,
-        0 null null -38px);
-        background-color: #0d2948;
-        @include transform(skew(-20deg));
+     content: "";
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -45px;
+    border-bottom: 242px solid rgba(13, 41, 72, 0.73);
+    border-right: 0px solid transparent;
+    border-left: 25px solid transparent;
+    transform: rotate(-180deg);
     }
     &:after {
-        content: "";
-        @include size(77px,
-        100%);
-        @include position(absolute,
-        0 -38px null null);
-        background-color: #0d2948;
-        @include transform(skew(-20deg));
-        // transform: skew(-20deg);
+     content: "";
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    border-bottom: 243px solid rgba(13, 41, 72, 0.73);
+    border-right: 0px solid transparent;
+    border-left: 25px solid transparent;
     }
 }
 
@@ -3855,8 +3863,39 @@ a.ilogo {
 //navin
 .table>tbody>tr>td {
     padding: 4px;
+     border:none !important;
 }
 
+.table > thead > tr > th{
+    border-bottom: none;
+}
+
+.grad-table{
+    background: #5e6dd3; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg,#5e6dd3, #4ecaf5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* Standard syntax */
+ 
+}
+
+.chng-title{
+    h1{
+    width: 200px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    }
+   
+}
+
+.punch-chng{
+     position: relative;
+    margin-bottom: 35px;
+    z-index: 99;
+}
 //ruchira
 @import "mobile";
 @import "style";
