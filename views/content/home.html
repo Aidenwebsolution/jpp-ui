@@ -203,9 +203,9 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 pad0 marg2">
 
-                    <!-- <a ui-sref="fixtures"><img ng-src="{{journeyData.image | serverimage}}"  class="img-responsive" alt="Champions Patna Pirates"></a> -->
+                    <a ui-sref="fixtures" ng-if="journeyData.status"><img ng-src="{{journeyData.image | serverimage}}"  class="img-responsive" alt="Champions Patna Pirates"></a>
 
-                     <div class="white-line-pad">
+                     <div class="white-line-pad" ng-if="!journeyData.status">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -283,9 +283,9 @@
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
 
-                    <!--<a ui-sref="fixtures"><img ng-src="{{congratulationData.image | serverimage}}"class="img-responsive" alt="Champions Patna Pirates"></a>-->
+                    <a ui-sref="fixtures" ng-if="congratulationData.status"><img ng-src="{{congratulationData.image | serverimage}}"class="img-responsive" alt="Champions Patna Pirates"></a>
 
-                     <div class="nxt-match white-line-pad">
+                     <div class="nxt-match white-line-pad" ng-if="!congratulationData.status">
 
             <div class="head-table text-center">
               <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
@@ -419,7 +419,7 @@ Sawai mansingh stadium,jaipur
     <div class="pnt-wrd">
         <div class="container">
             <div class="panther-world m-min84" >
-                        <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive" ng-click="isCheckLoggedIn()">
+                        <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
                     </div>
             <!--<div class="row m-min84">
                 <div class="col-md-12">
