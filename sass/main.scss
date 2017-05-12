@@ -422,7 +422,7 @@ nav {
 .title-name {
     h1{
         display: inline-block;
-    width: 200px;
+    width: 350px;
     }
     // background-image:url("../img/players/titles.png");
     // background-repeat: no-repeat;
@@ -501,6 +501,12 @@ nav {
     //         z-index: 9;
     //     }
     // }
+}
+
+.fix{
+    h1{
+        width: 200px;
+    }
 }
 
 .bold {
