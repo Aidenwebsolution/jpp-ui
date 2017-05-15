@@ -1,0 +1,156 @@
+<section>
+  <div class="banner-title">
+    <img src="img/banner/news-media.jpg" class="img-responsive" title="NEWS & MEDIA" alt="Jaipur Pink Panthers">
+    <section>
+      <div class="page-title text-center">
+
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+        </div>
+        <div class="title-name">
+          <h1 class="bold-mrgin"><img src="img/english/news-media.png" class="img-responsive" alt="title"></h1>
+            <h1 class="bold-mrgin" ng-if="currentlang=='hi'"><img src="img/hindi/news-media.png" class="img-responsive" alt="title"></h1>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<section class="mt100 mb100">
+  <div class="container">
+
+
+    <!-- New UI  -->
+    <div class="row" ng-repeat="data1 in news ">
+          <div class="col-md-6 col-sm-6" ng-repeat="data in data1 ">
+            <div class="news-det mb100">
+
+              <div class="news-img">
+                <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
+              </div>
+                <div class="new-logo news-med">
+              <div class="news-logo">
+                <img ng-src="{{data.logo | serverimage}}" alt="{{data.logo | serverimage}}">
+              </div>
+              <div class="news-date">
+                <!-- {{data.timestamp|translate}}({{'IST'|translate}}) -->
+                <span ng-if="currentlang=='en'">{{data.timestamp}}</span>
+                <span ng-if="currentlang=='hi'">{{data.timestamp | hindimonth:true}}</span>
+
+<!-- moment("20111031", "YYYYMMDD").fromNow(); -->
+              </div>
+            </div>
+              <div class="news-title">
+                <h4 class="font-16" ng-if="currentlang=='en'">{{data.name}}</h4>
+                <h4 class="font-16" ng-if="currentlang=='hi'">{{data.hname}}</h4>
+              </div>
+              <div class="read-more">
+                <a ng-href="{{data.content}}" target="_blank"><button type="button" class="btn btn-pink"> {{'VIEW STORY'|translate}}</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="news-det mb100">
+
+          <div class="news-img">
+            <img src="img/news/n4.jpg" class="img-responsive">
+          </div>
+          <div class="new-logo news-med">
+            <div class="news-logo">
+              <img src="img/news/rajasthanpatrika.png">
+            </div>
+            <div class="news-date">
+              <span>13<sup>th</span> Jan, 2016
+            </div>
+          </div>
+
+          <div class="news-title">
+            <h4 class="font-16">Students get hands on experience playing Kabbadi with JPP Players, joined by Abhishek Bachchan</h4>
+          </div>
+          <div class="read-more">
+            <a href="http://rajasthanpatrika.patrika.com/story/rajasthan/abhishek-bachchan-arrived-jaipur-with-pink-panther-team-1617563.html" target="_blank">
+              <button type="button" class="btn btn-pink">VIEW STORY</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="news-det mb50">
+
+          <div class="news-img">
+            <img src="img/news/n6.jpg" class="img-responsive">
+          </div>
+          <div class="new-logo news-med">
+            <div class="news-logo ">
+              <img src="img/news/l3.jpg">
+            </div>
+            <div class="news-date">
+              <span>14<sup>th</span> Jan, 2016
+            </div>
+          </div>
+          <div class="news-title">
+            <h4 class="font-16">“Lets take a selfie!”, Junior Bachchan gets candid with fans</h4>
+          </div>
+          <div class="read-more">
+            <a href="http://www.bhaskar.com/news/c-10-2338321-jp0925-abhishek-bacchan-NOR.html?seq=2" target="_blank">
+              <button type="button" class="btn btn-pink">VIEW STORY</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 col-sm-6">
+        <div class="news-det mb50">
+
+          <div class="news-img">
+            <img src="img/news/n5.png" class="img-responsive">
+          </div>
+          <div class="new-logo news-med">
+            <div class="news-logo ">
+              <img src="img/news/l4.jpg">
+            </div>
+            <div class="news-date">
+              <span>22<sup>nd</span> Jan, 2016
+            </div>
+          </div>
+          <div class="news-title">
+            <h4 class="font-16">'Sporty' Abhishek Bachchan aims to start Pro Kabaddi League for women</h4>
+          </div>
+          <div class="read-more">
+            <a href="http://www.newkerala.com/news/2016/fullnews-10312.html" target="_blank">
+              <button type="button" class="btn btn-pink">VIEW STORY</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="news-det mb50">
+
+          <div class="news-img">
+            <img src="img/news/n5.png" class="img-responsive">
+          </div>
+          <div class="new-logo news-med">
+            <div class="news-logo ">
+              <img src="img/news/l5.jpg">
+            </div>
+            <div class="news-date">
+              <span>28<sup>th</span> Jan, 2016
+            </div>
+          </div>
+          <div class="news-title">
+            <h4 class="font-16">Jaipur Pink Panthers looking for change of fortune</h4>
+          </div>
+          <div class="read-more">
+            <a href="http://indianexpress.com/article/blogs/sports-blogs/pro-kabaddi-league-2016-team-preview-jaipur-pink-panthers-looking-for-change-of-fortune/" target="_blank">
+              <button type="button" class="btn btn-pink">VIEW STORY</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</section>

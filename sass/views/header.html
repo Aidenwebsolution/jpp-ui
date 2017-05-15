@@ -1,0 +1,45 @@
+<header ng-controller="headerctrl">
+    <div class="language-holder" ng-controller="languageCtrl">
+        <div class="container">
+            <span>The Official website of Jaipur Pink Panthers</span>
+            <div class="pull-right">
+                <span ng-class="{'selected' : languageActive == 'en'}" ng-click="changeLanguage2('en');">English</span>
+                |
+                <span ng-class="{'selected' : languageActive == 'hi'}" ng-click="changeLanguage2('hi');">Hindi</span>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top head-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 padding0">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" ui-sref="home">
+                            <img src="img/mini-logo.png" alt="logo" title="logo" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="collapse navbar-collapse" id="nav-collapse">
+                        <div ng-include="template.menu" class="template menu"></div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+ <ul class="list-inline mt20 log-sign">
+    <li class="line-after" ng-if="!loggedIn" ng-click="logs();"><a>Login</a></li>
+    <li ng-click="logs();" ng-if="!loggedIn"><a >Signup</a></li>
+    <li ng-if="loggedIn" ng-click="logoutUser();"><a >Logout</a></li>
+ </ul>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </nav>
+</header>

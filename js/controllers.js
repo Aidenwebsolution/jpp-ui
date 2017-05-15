@@ -188,7 +188,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.sliderdata = data.data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
-  
+
     NavigationService.getjourney(function(data) {
         $scope.journeyData = data.data;
         console.log('$scope.journeyData', $scope.journeyData);
@@ -1770,7 +1770,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 $scope.authentication();
     $scope.signupdata = {};
     $scope.submitSignup = function(signupdata) {
-        console.log("signupdata", signupdata);
+        console.log("signupdata", signupdata.isChecked);
         $scope.incorrectPass = false;
         $scope.isCheckedmsg = false;
         $scope.alreadyExist = false;
@@ -1778,6 +1778,11 @@ $scope.authentication();
         if (signupdata) {
             console.log("signupdata", signupdata);
             if (signupdata.password == signupdata.confirmPass) {
+              if (signupdata.isChecked === undefined) {
+                $scope.checkMark='Please tick mark';
+              }else {
+                $scope.checkMark="";
+              }
 
                 $scope.incorrectPass = false;
                 NavigationService.submitSignup(signupdata, function(data) {

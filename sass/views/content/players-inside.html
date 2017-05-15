@@ -1,0 +1,653 @@
+<section class="home bg-players">
+    <div class="container">
+        <div class="social-iconl pull-right">
+            <ul>
+                <li>
+<a href="" target="_blank" class="sicon-left">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+</a>
+                </li>
+                <li>
+<a href="" target="_blank" class="sicon-left">
+   <i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+                </li>
+                <li>
+<a href="" target="_blank" class="sicon-left">
+<i class="fa fa-instagram" aria-hidden="true"></i>
+</a>
+                </li>
+            </ul>
+        </div>
+        <div class="player-name player-details">
+            <p class=" text-center bold text-uppercase color-white" >{{playerDetails.jerseyno}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.name}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.type}}</p>
+            <!-- <p class=" text-center bold text-uppercase color-white">02</p>
+            <p class=" text-center bold text-uppercase color-white">jasvir singh</p>
+            <p class=" text-center bold text-uppercase color-white">raider</p> -->
+        </div>
+        <div class="play-img">
+            <img ng-src="{{playerDetails.bigimage | serverimage1}}" alt="">
+            <!-- <img src="img/players/4.png" alt=""> -->
+        </div>
+<div class="player-details text-center">
+    <div class="row-flex">
+        <div class="col-flex">
+            <p class="text-uppercase">{{playerDetails.hnationality}}</p>
+            <!-- <p>INDIAN</p> -->
+            <span></span>
+            </div>
+        <div class="col-flex">
+            <p class="text-uppercase" ng-bind-html="playerDetails.dob | date"></p>
+            <!-- <p>APR 04, 1984</p> -->
+            <span>D.O.B</span>
+            </div>
+        <div class="col-flex">
+            <p class="text-uppercase" ng-bind-html="playerDetails.nativeplace"></p>
+            <!-- <p>PANIPAT</p> -->
+            <span>NATIVE PLACE</span>
+            </div>
+        <div class="col-flex">
+            <p class="text-uppercase" ng-bind-html="playerDetails.weight"></p>
+            <!-- <p>80kg</p> -->
+            <span>WEIGHT</span>
+            </div>
+             <div class="col-flex">
+            <p >{{playerDetails.height}}</p>
+            <!-- <p>170cm</p> -->
+            <span>HEIGHT</span>
+            </div>
+    </div>
+</div>
+<div class="player-details text-center" ng-init="tornaments = 1">
+    <ul class="list-inline">
+        <li class="text-capitalize" ng-click="tornaments = 1" ng-class="{'activated': tornaments == 1 , '':tornaments !== 1}" style="text-transform:capitalize">
+tournaments Played
+
+        </li>
+          <!--<div class="title-name">
+          <h1 class="bold-mrgin">{{'Fan Corner'|translate}}</h1>
+        </div>-->
+        <li class="text-capitalize" ng-click="tornaments = 2" ng-class="{'activated': tornaments == 2 , '':tornaments !== 2}" style="text-transform:capitalize" >
+Achievements
+
+        </li>
+    </ul>
+
+    <div class="player-details player-backdrop" >
+        <div class="row" ng-repeat="data in tournamentplayed" ng-if="tornaments == 1">
+            <div class="col-md-5" >
+
+<p>{{data[0].name}}({{data[0].year}}) </p>
+<p>{{data[1].name}}({{data[1].year}}) </p>
+<!-- <p>  Pro-Kabaddi (2015-2014)</p>
+<p>indoor asian games(2013)</p> -->
+            </div>
+            <div class="col-md-4">
+<p>{{data[2].name}}({{data[2].year}})</p>
+<p>{{data[3].name}}({{data[3].year}})</p>
+            </div>
+            <div class="col-md-3">
+<p>{{data[4].name}}({{data[4].year}})</p>
+<p ng-if="data[5].name">{{data[5].name}}({{data[5].year}})</p>
+            </div>
+        </div>
+    </div>
+      <div class="player-details player-backdrop" >
+       <div class="row" ng-repeat="data in achievements" ng-if="tornaments == 2">
+            <div class="col-md-5" >
+
+<p>  {{data[0].name}}({{data[0].year}})</p>
+<p>{{data[1].name}}({{data[1].year}})</p>
+<!-- <p>  Pro-Kabaddi (2015-2014)</p>
+<p>indoor asian games(2013)</p> -->
+            </div>
+            <div class="col-md-4" ng-if="data[2].name">
+              <p>{{data[2].name}}({{data[2].year}})</p>
+              <p>{{data[3].name}}({{data[3].year}})</p>
+<!-- <p>Senior National (2013)</p>
+<p>asian game(2014)</p> -->
+            </div>
+            <div class="col-md-3" ng-if="data[4].name">
+              <p>{{data[4].name}}({{data[4].year}})</p>
+              <p>{{data[5].name}}({{data[5].year}})</p>
+<!-- <p>National Game (2011)</p>
+<p></p> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="statistics">
+  <h3 class="text-center bold text-uppercase color-white">statistics</h3>
+<div class="player-details  text-center" ng-init="career = 1">
+        <ul class="list-inline">
+        <li ng-click="career = 1" ng-class="{'activated': career == 1 }" style="text-transform:capitalize">
+career
+        </li>
+        <li ng-click="career = 2" ng-class="{'activated': career == 2 }" style="text-transform:capitalize">
+current
+        </li>
+              <li ng-click="career = 3" ng-class="{'activated': career == 3 }" style="text-transform:capitalize">
+last season
+        </li>
+    </ul>
+     <div class=" player-backdrops player-details" ng-show="career == 1">
+        <div class="row ">
+            <div class="col-md-8 bb-statistics ">
+<div class="row br-statistics">
+    <div class="col-md-12 bb-statistics">
+      <div class="current-about">
+        <p>{{playerDetails.career.matchplayed}}</p>
+        <span>matches played</span>
+      </div>
+
+    </div>
+</div>
+<div class="row br-statistics">
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.career.totalpoints}}</p>
+        <span>total points </span>
+      </div>
+
+    </div>
+    <div class="col-md-4 bl-statistics br-statistics">
+      <div class="currents-about">
+        <p>{{playerDetails.career.totalraidpoints}}</p>
+        <span>total raid  points</span>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.career.totaldefencepoints}}</p>
+        <span>total defence  points</span>
+      </div>
+
+    </div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+        <img src="img/players/3.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.career.greencards}}</p>
+<span>green cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/1.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.career.redcards}}</p>
+<span>red cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/2.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.career.yellowcards}}</p>
+<span>yellow cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                                    <div class="cards">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.career.raids}}</p>
+<span>raids</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-4 bl-statistics br-statistics">
+  <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+ <p>{{playerDetails.career.successfulraids}}</p>
+            <span>successful </br> raids</span>
+      </div>
+          </div>
+
+  </div>
+   <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+              <p>{{playerDetails.career.unsuccessfulraids}}</p>
+          <span>unsuccessful </br> raids</span>
+          </div>
+
+      </div>
+  </div>
+   <div class="row">
+      <div class="col-md-12 ">
+          <div class="raid-status">
+               <p>{{playerDetails.career.emptyraids}}</p>
+          <span>empty  raids</span>
+          </div>
+
+      </div>
+  </div>
+            </div>
+            <div class="col-md-2">
+                    <div class="cards ">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.career.tackles}}</p>
+<span>tackles</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-3 bl-statistics">
+     <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raids-status">
+   <p>{{playerDetails.career.successfultackles}}</p>
+<span>successful tackles</span>
+          </div>
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+           <div class="raids-status">
+        <p>{{playerDetails.career.unsuccessfultackles}}</p>
+<span>unsuccessful tackles</span>
+</div>
+      </div>
+  </div>
+            </div>
+        </div>
+    </div>
+      <div class=" player-backdrops player-details" ng-if="career == 2">
+        <div class="row ">
+            <div class="col-md-8 bb-statistics ">
+<div class="row br-statistics">
+    <div class="col-md-12 bb-statistics">
+      <div class="current-about">
+        <p>{{playerDetails.current.matchplayed}}</p>
+        <span>matches played</span>
+      </div>
+
+    </div>
+</div>
+<div class="row br-statistics">
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.current.totalpoints}}</p>
+        <span>total points </span>
+      </div>
+
+    </div>
+    <div class="col-md-4 bl-statistics br-statistics">
+      <div class="currents-about">
+        <p>{{playerDetails.current.totalraidpoints}}</p>
+        <span>total raid  points</span>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.current.totaldefencepoints}}</p>
+        <span>total defence  points</span>
+      </div>
+
+    </div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+        <img src="img/players/1.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.current.greencards}}</p>
+<span>green cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/2.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.current.redcards}}</p>
+<span>red cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/3.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.current.yellowcards}}</p>
+<span>yellow cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                                    <div class="cards">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.current.raids}}</p>
+<span>raids</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-4 bl-statistics br-statistics">
+  <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+ <p>{{playerDetails.current.successfulraids}}</p>
+            <span>successful </br> raids</span>
+      </div>
+          </div>
+
+  </div>
+   <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+              <p>{{playerDetails.current.unsuccessfulraids}}</p>
+          <span>unsuccessful </br> raids</span>
+          </div>
+
+      </div>
+  </div>
+   <div class="row">
+      <div class="col-md-12 ">
+          <div class="raid-status">
+               <p>{{playerDetails.current.emptyraids}}</p>
+          <span>empty  raids</span>
+          </div>
+
+      </div>
+  </div>
+            </div>
+            <div class="col-md-2">
+                    <div class="cards ">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.current.tackles}}</p>
+<span>tackles</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-3 bl-statistics">
+     <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raids-status">
+   <p>{{playerDetails.current.successfultackles}}</p>
+<span>successful tackles</span>
+          </div>
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+           <div class="raids-status">
+        <p>{{playerDetails.current.unsuccessfultackles}}</p>
+<span>unsuccessful tackles</span>
+</div>
+      </div>
+  </div>
+            </div>
+        </div>
+    </div>
+     <div class=" player-backdrops player-details" ng-show="career == 3">
+        <!-- <div class="row">
+            <div class="col-md-4" >
+<p>pro kabadi</p>
+
+            </div>
+            <div class="col-md-4">
+<p>pro kabadi</p>
+
+            </div>
+            <div class="col-md-4">
+<p>pro kabadi</p>
+
+            </div>
+        </div> -->
+
+        <!-- Last season  -->
+        <div class="row ">
+            <div class="col-md-8 bb-statistics ">
+<div class="row br-statistics">
+    <div class="col-md-12 bb-statistics">
+      <div class="current-about">
+        <p>{{playerDetails.lastseason.matchplayed}}</p>
+        <span>matches played</span>
+      </div>
+
+    </div>
+</div>
+<div class="row br-statistics">
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totalpoints}}</p>
+        <span>total points </span>
+      </div>
+
+    </div>
+    <div class="col-md-4 bl-statistics br-statistics">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totalraidpoints}}</p>
+        <span>total raid  points</span>
+      </div>
+
+    </div>
+    <div class="col-md-4 ">
+      <div class="currents-about">
+        <p>{{playerDetails.lastseason.totaldefencepoints}}</p>
+        <span>total defence  points</span>
+      </div>
+
+    </div>
+</div>
+            </div>
+            <div class="col-md-4">
+                <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+        <img src="img/players/3.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.greencards}}</p>
+<span>green cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/1.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.redcards}}</p>
+<span>red cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+     <div class="row bb-statistics">
+                    <div class="col-md-12">
+                        <div class="cards">
+    <div class="card-img">
+          <img src="img/players/2.png" class="img-responsive" alt="">
+    </div>
+    <div class="card-type">
+        <p>{{playerDetails.lastseason.yellowcards}}</p>
+<span>yellow cards</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                                    <div class="cards">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.lastseason.raids}}</p>
+<span>raids</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-4 bl-statistics br-statistics">
+  <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+ <p>{{playerDetails.lastseason.successfulraids}}</p>
+            <span>successful </br> raids</span>
+      </div>
+          </div>
+
+  </div>
+   <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raid-status">
+              <p>{{playerDetails.lastseason.unsuccessfulraids}}</p>
+          <span>unsuccessful </br> raids</span>
+          </div>
+
+      </div>
+  </div>
+   <div class="row">
+      <div class="col-md-12 ">
+          <div class="raid-status">
+               <p>{{playerDetails.lastseason.emptyraids}}</p>
+          <span>empty  raids</span>
+          </div>
+
+      </div>
+  </div>
+            </div>
+            <div class="col-md-2">
+                    <div class="cards ">
+
+    <div class="current-about card-type">
+        <p>{{playerDetails.lastseason.tackles}}</p>
+<span>tackles</span>
+    </div>
+</div>
+            </div>
+            <div class="col-md-3 bl-statistics">
+     <div class="row">
+      <div class="col-md-12 bb-statistics">
+          <div class="raids-status">
+   <p>{{playerDetails.lastseason.successfultackles}}</p>
+<span>successful tackles</span>
+          </div>
+
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+           <div class="raids-status">
+        <p>{{playerDetails.lastseason.unsuccessfultackles}}</p>
+<span>unsuccessful tackles</span>
+</div>
+      </div>
+  </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+    </div>
+
+</section>
+<section class="section5 back-img socials-hub">
+    <div class="container">
+        <h1 class=" text-center bold text-uppercase color-primary ">social hub</h1>
+
+    <div class="design" >
+               <div class="pack-one text-center">
+
+                   <div class="all-movies masonry-width">
+                                          <div masonry>
+              <div class="masonry-brick" ng-repeat="brick in bricks">
+                     <div class="masonry-box">
+                       <div class="img-mason relative">
+                         <a ng-if="brick.img" href="{{brick.img}}"   class="fancybox-thumb" rel="fancybox-thumb">
+                           <img ng-src="{{brick.img}}"  alt="A masonry brick">
+                           </a>
+                         <div class="infois text-left">
+                           <div class="min-logos display-inline">
+                                <img src="img/mini-logo.png" class="img-responsive" alt="logo">
+                           </div>
+                          <div class="inois-info display-inline ">
+                            <p class="margin0">{{brick.title}}</p>
+                            <span>like this page</span>
+                            <span>5 hrs</span>
+                          </div>
+                         </div>
+                       </div>
+                                 <div class="info">
+                                   <p class="text-justify">{{brick.info}}</p>
+                                   <span class="social-icons"></span>
+                                   <span class="social-text"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                 </div>
+                                                      </div>
+                               </div>
+                             </div>
+                      </div>
+               </div>
+               </div>
+    </div>
+</section>
+<section class="view-slider socials-hub" ng-if="showcaseSlides.length>0">
+   <div class="container">
+
+        <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
+           <flex-slider flex-slide="banner in showcaseSlides track by $index" prev-text="" next-text="" class="" item-width="350" item-margin="25"  animation="slide" slideshow="true" slideshowSpeed="500">
+          <li ui-sref="players-inside({id:banner.id})">
+
+             <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
+
+          </li>
+      </flex-slider>
+        </div>
+</section>

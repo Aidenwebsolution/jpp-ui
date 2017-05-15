@@ -1,0 +1,578 @@
+<div class="banner-title">
+    <img src="img/banner/fixtures.jpg" class="img-responsive" title="fixtures" alt="Jaipur Pink Panthers">
+    <section>
+        <div class="page-title text-center">
+            <div class="border-blue"></div>
+            <div class="panther-punch">
+                <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+            </div>
+            <div class="title-name fix">
+                <h1 class="bold-mrgin"> <img src="img/english/fixtures.png" class="img-responsive" alt="title"></h1>
+                <h1 class="bold-mrgin" ng-if="currentlang=='hi'"> <img src="img/hindi/fixtures.png" class="img-responsive" alt="title"></h1>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="mt70">
+    <div class="gallery-tab text-center custom-list">
+        <ul class="padding0">
+            <!-- <li ng-click="changeTab(4)">
+                <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4 SCHEDULE'|translate}}</h3>
+            </li>
+            <li ng-click="changeTab(3)">
+                <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 REVIEW'|translate}}</h3>
+            </li> -->
+            <li ng-click="changeTab(3)">
+                <h3 class="color-primary " ng-class="{'active-li':season==3}">{{'2016 KABADDI WORLD CUP JOURNEY'|translate}}</h3>
+            </li>
+            <li ng-click="changeTab(4)">
+                <h3 class="color-primary" ng-class="{'active-li':season==4}">{{'SEASON 4 REVIEW'|translate}}</h3>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<div class="min-w">
+    <div class="over-fl">
+        <section class="mb100 mt50 container contain-fixtures">
+
+            <div class="fixture" ng-show="season==4">
+                <uib-accordion close-others="oneAtATime" class="with-ribbon">
+
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen"
+                        ng-if="item.season == 2">
+                        <div class="fixture-scroll">
+                            <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
+                                <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
+                                <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
+                                    <div class="col-xs-2">
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate|translate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate| hindimonth:false}}</div>
+                                        <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <img ng-src="{{item.team1id|teamImg}}" class="float-left" alt="{{item.team1id|teamImg}}">
+                                            <span class="float-right" ng-if="currentlang=='en'">{{item.team1}}</span>
+                                            <span class="float-right" ng-if="currentlang=='hi'">{{item.hinditeam1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="score-points text-center">
+                                            <span>{{item.score1}}</span> -
+                                            <span>{{item.score2}}</span>
+                                            <!-- <span>vs</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <span class="float-left" ng-if="currentlang=='en'">{{item.team2}}</span>
+                                            <span class="float-left" ng-if="currentlang=='hi'">{{item.hinditeam2}}</span>
+                                            <img ng-src="{{item.team2id|teamImg}}" class="float-right" alt="{{item.team2id|teamImg}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="match-center">{{'Match Centre'|translate}}
+                                            <i class="fa fa-caret-down" ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
+                                            <!-- <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+                                    <div class="col-xs-2">
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate| hindimonth:false}}</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <img ng-src="{{item.team1id|teamImg}}" class="float-left" alt="{{item.team1id|teamImg}}">
+                                            <span class="float-right" ng-if="currentlang=='en'">{{item.team1}}</span>
+                                            <span class="float-right" ng-if="currentlang=='hi'">{{item.hinditeam1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="score-points text-center">
+                                            <!-- <span>35</span> -
+                  <span>34</span> -->
+                                            <span>vs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <span class="float-left" ng-if="currentlang=='en'">{{item.team2}}</span>
+                                            <span class="float-left" ng-if="currentlang=='hi'">{{item.hinditeam2}}</span>
+                                            <img ng-src="{{item.team2id|teamImg}}" class="float-right" alt="{{item.team2id|teamImg}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="match-center" ng-class="{'no-mgin':item.ishome=='1'}">
+                                            {{'Match Centre'|translate}}
+                                            <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
+                                        </div>
+                                        <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                            ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess">
+                                            {{'BOOK TICKETS'|translate}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </uib-accordion-heading>
+
+                            <div class="fixture-data" ng-if="item.fixture.id != null || item.fixture.id != undefined">
+                                <div class="fix-banner">
+                                    <img src="img/fixture/banners.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+                                    <div class="fixture-match text-center">
+                                        <div class="row">
+                                            <div class="col-xs-3 col-xs-offset-1">
+                                                <div class="fix-logos">
+                                                    <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                                                    <span class="{{item.team1id|teamColor}}">{{item.score1|translate}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="fix-logos text-right">
+                                                    <span class="{{item.team2id|teamColor}}">{{item.score2|translate}}</span>
+                                                    <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="todo">
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
+                                                        <span>{{item.fixture.team1player1score | translate}}</span> |
+                                                        <span>{{item.fixture.team1player2name | translate}}</span>
+                                                        <span>{{item.fixture.team1player2score | translate}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Top point-scorers' | translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team2player1name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team2player1nameh}}</span>
+                                                        <span>{{item.fixture.team2player1score | translate}}</span> |
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team2player2name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team2player2nameh}}</span>
+                                                        <span>{{item.fixture.team2player2score | translate}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.raidpointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Raid Points' | translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.raidpointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.tacklepointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Tackle Points' | translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.tacklepointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.alloutpointteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'All Out Points' | translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.alloutpointteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.extrapointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Extra Points' | translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.extrapointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row">
+              <div class="col-xs-12">
+                <div class="text-center match-time">
+                  <h1 class="capital f-23">
+                    {{item.stadium}}
+                  </h1>
+                  <h1 class="upper mar-top">{{item.starttimedate}}</h1>
+                </div>
+              </div>
+            </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fixture-data" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+                                <div class="fix-banner">
+                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+                                    <div class="fixture-match text-center ">
+                                        <div class="row">
+                                            <div class="col-xs-5">
+                                                <div class="fix-logo pull-right">
+                                                    <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="fix-logo vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <div class="fix-logo pull-left">
+                                                    <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="text-center match-time">
+                                                    <h1 class="capital f-23" ng-if="currentlang=='en'">
+                                                        {{item.team1 | spaceToPlus}}<br> {{item.stadium}}
+                                                    </h1>
+                                                    <h1 class="capital f-23" ng-if="currentlang=='hi'">
+                                                        {{item.hinditeam1 | spaceToPlus}} <br> {{item.hindistadium}}
+                                                    </h1>
+                                                    <!-- <h1 class="upper mar-top">
+                                                        {{item.starttimedate|translate}}
+                                                        ({{'IST'|translate}})
+                                                    </h1> -->
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='en'">
+                                                        {{item.starttimedate}} ({{'IST'}})
+                                                    </h1>
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                                                        {{item.starttimedate | hindimonth:false}}
+
+                                                    </h1>
+                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                                        ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
+                                                        {{'BOOK TICKETS'|translate}}
+                                                    </a>
+                                                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}&dates={{calendarDate[$index].from}}/{{calendarDate[$index].to}}&location={{item.stadium | spaceToPlus}}&details={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}+{{item.starttimedate | spaceToPlus}}+(IST)+{{item.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
+                                                        target="_blank" class="btn btn-sucess mt15">
+                                                        {{'ADD TO CALENDAR'|translate}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-accordion-group>
+                </uib-accordion>
+            </div>
+
+            <div class="fixture" ng-show="season==3">
+                <uib-accordion close-others="oneAtATime">
+
+                    <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen"
+                        ng-if="item.season == 3">
+                        <div class="fixture-scroll">
+                            <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
+                                <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
+                                    <div class="col-xs-2">
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate | hindimonth:false}}</div>
+                                        <!-- <div class="schedule">Fri 05 Feb 2016, 21:00(IST)</div> -->
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <img ng-src="{{item.team1id|teamImg}}" class="float-left" alt="{{item.team1id|teamImg}}">
+                                            <span class="float-right" ng-if="currentlang=='en'">{{item.team1}}</span>
+                                            <span class="float-right" ng-if="currentlang=='hi'">{{item.hinditeam1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="score-points text-center">
+                                            <span>{{item.score1}}</span> -
+                                            <span>{{item.score2}}</span>
+                                            <!-- <span>vs</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <span class="float-left" ng-if="currentlang=='en'">{{item.team2}}</span>
+                                            <span class="float-left" ng-if="currentlang=='hi'">{{item.hinditeam2}}</span>
+                                            <img ng-src="{{item.team2id|teamImg}}" class="float-right" alt="{{item.team2id|teamImg}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="match-center">{{'Match Centre'|translate}}
+                                            <i class="fa fa-caret-down" ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
+                                            <!-- <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+                                    <div class="col-xs-2">
+                                        <!-- <div class="schedule">{{item.starttimedate|translate}}({{'IST'|translate}})</div> -->
+                                        <div class="schedule" ng-if="currentlang=='en'">{{item.starttimedate}}({{'IST'}})</div>
+                                        <div class="schedule" ng-if="currentlang=='hi'">{{item.starttimedate | hindimonth:false}}</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <img ng-src="{{item.team1id|teamImg}}" class="float-left" alt="{{item.team1id|teamImg}}">
+                                            <span class="float-right" ng-if="currentlang=='en'">{{item.team1}}</span>
+                                            <span class="float-right" ng-if="currentlang=='hi'">{{item.hinditeam1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="score-points text-center">
+                                            <!-- <span>35</span> -
+                  <span>34</span> -->
+                                            <span>vs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="team-head">
+                                            <span class="float-left" ng-if="currentlang=='en'">{{item.team2}}</span>
+                                            <span class="float-left" ng-if="currentlang=='hi'">{{item.hinditeam2}}</span>
+                                            <img ng-src="{{item.team2id|teamImg}}" class="float-right" alt="{{item.team2id|teamImg}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="match-center">{{'Match Centre'|translate}}
+                                            <!-- <i class="fa fa-play"></i> -->
+                                            <i class="fa " ng-class="{'fa-caret-down': item.isOpen, 'fa-caret-right': !item.isOpen}"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-accordion-heading>
+
+                            <div class="fixture-data" ng-if="item.fixture.id != null || item.fixture.id != undefined">
+                                <div class="fix-banner">
+                                    <img src="img/fixture/banners.jpg" class="img-responsive mobile" alt="banner">
+                                    <div class="fixture-match text-center">
+                                        <div class="row">
+                                            <div class="col-xs-3 col-xs-offset-1">
+                                                <div class="fix-logos">
+                                                    <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                                                    <span class="{{item.team1id|teamColor}}">{{item.score1}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <div class="fix-logos text-right">
+                                                    <span class="{{item.team2id|teamColor}}">{{item.score2}}</span>
+                                                    <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="todo">
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
+                                                        <span>{{item.fixture.team1player1score}}</span> |
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team1player2name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team1player2nameh}}</span>
+                                                        <span>{{item.fixture.team1player2score}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Top point-scorers'|translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team2player1name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team2player1nameh}}</span>
+                                                        <span>{{item.fixture.team2player1score}}</span> |
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team2player2name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team2player2nameh}}</span>
+                                                        <span>{{item.fixture.team2player2score}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.raidpointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Raid Points'|translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.raidpointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.tacklepointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Tackle Points'|translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.tacklepointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.alloutpointteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'All Out Points'|translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.alloutpointteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row fixture-cont">
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.extrapointsteam1}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="head-pink bold">
+                                                        {{'Extra Points'|translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <div class="topscore bold">
+                                                        <span>{{item.fixture.extrapointsteam2}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row">
+              <div class="col-xs-12">
+                <div class="text-center match-time">
+                  <h1 class="capital f-23">
+                    {{item.stadium}}
+                  </h1>
+                  <h1 class="upper mar-top">{{item.starttimedate}}</h1>
+                </div>
+              </div>
+            </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fixture-data" ng-if="item.fixture.id == null || item.fixture.id == undefined">
+                                <div class="fix-banner">
+                                    <img src="img/fixture/banner1.jpg" class="img-responsive mobile" alt="Jaipur Pink Panthers">
+                                    <div class="fixture-match text-center ">
+                                        <div class="row">
+                                            <div class="col-xs-5">
+                                                <div class="fix-logo pull-right">
+                                                    <img ng-src="{{item.team1id|teamImg}}" class="img-responsive" alt="{{item.team1id|teamImg}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="fix-logo vs">
+                                                    <img src="img/object/vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <div class="fix-logo pull-left">
+                                                    <img ng-src="{{item.team2id|teamImg}}" class="img-responsive" alt="{{item.team2id|teamImg}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="text-center match-time">
+                                                    <h1 class="capital f-23" ng-if="currentlang=='en'">
+                                                        {{item.stadium}}
+                                                    </h1>
+                                                    <h1 class="capital f-23" ng-if="currentlang=='hi'">
+                                                        {{item.hindistadium}}
+                                                    </h1>
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='en'">
+                                                        {{item.starttimedate}} ({{'IST'}})
+                                                    </h1>
+                                                    <h1 class="upper mar-top" ng-if="currentlang=='hi'">
+                                                        {{item.starttimedate | hindimonth:false}}
+                                                    </h1>
+                                                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D"
+                                                        ng-if="item.ishome=='1'" target="_blank">
+                                                        <button class="btn btn-sucess mt15">{{'BOOK TICKETS'|translate}}</button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-accordion-group>
+                </uib-accordion>
+            </div>
+
+        </section>
+    </div>
+</div>

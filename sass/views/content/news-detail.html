@@ -1,0 +1,106 @@
+<section>
+  <div class="banner-title">
+    <img src="img/banner/news-media.jpg" class="img-responsive" title="NEWS & MEDIA" alt="Jaipur Pink Panthers">
+    <section>
+      <div class="page-title text-center">
+
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+        </div>
+        <div class="title-name">
+          <h1 class="bold-mrgin"> {{'NEWS & MEDIA'|translate}}</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>
+<section class="mt100">
+  <div class="container">
+      <div class="mb50">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+
+        <div class="new-images">
+          <img ng-src="{{newsMedia.image}}" class="img-responsive">
+        </div>
+        <div class="news-title">
+          <h4 class="display-inline color-primary f15 w70 title-margin0">{{newsMedia.title}}</h4>
+          <span class="display-inline pull-right color-grey pt5 f12 date-float">{{newsMedia.date}}</span>
+        </div>
+        <div class="news-short-desc line140 font-base desc-padtop mb-footer" ng-bind-html="newsMedia.desc"></div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="archives">
+          <div class="archive-title">
+            <h4 class="color-primary f20 m15">ARCHIVES</h4>
+          </div>
+          <div class="pro-cat">
+            <form action="demo_form.asp" method="get">
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>AUGUST 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-2" class="checkbox-custom dis-none" name="checkbox-2" type="checkbox">
+              <label for="checkbox-2" class="checkbox-custom-label checkbox-custom">
+                <span>SEPTEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-3" class="checkbox-custom dis-none" name="checkbox-3" type="checkbox">
+              <label for="checkbox-3" class="checkbox-custom-label checkbox-custom">
+                <span>OCTOBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>NOVEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>DECEMBER 2015</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>JANUARY 2016</span>
+              </label>
+              <br>
+              <input id="checkbox-1" class="checkbox-custom dis-none" name="checkbox-1" type="checkbox">
+              <label for="checkbox-1" class="checkbox-custom-label checkbox-custom">
+                <span>FEBRUARY 2016</span>
+              </label>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      </div>
+      <hr>
+      <div class="mb50">
+    <div class="row">
+      <div class="also-view">
+        <h3 class="color-pink pad-view title-margin0 title-font">ALSO VIEW</h3>
+      </div>
+      <div class="col-md-4 col-sm-4 mb-footer" ng-repeat="data in news track by $index">
+        <div class="new-images">
+          <img ng-src="{{data.image}}" class="img-responsive">
+        </div>
+        <div class="news-title">
+          <h4 class="display-inline color-primary f15 w70 title-margin0">{{data.title}}</h4>
+          <span class="display-inline pull-right color-grey pt5 f12 date-float">{{data.date}}</span>
+        </div>
+        <div class="news-short-desc desc-padtop">
+          <p class="line140">{{data.desc}}</p>
+        </div>
+        <div class="read-more">
+          <button type="button" class="btn btn-pink">Read More</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

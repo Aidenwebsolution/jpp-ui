@@ -1,0 +1,197 @@
+<section>
+  <div class="banner-title">
+    <img src="img/banner/fancorner.jpg" class="img-responsive" title="Fan-Corner" alt="Jaipur Pink Panthers">
+    <section>
+      <div class="page-title text-center">
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+        </div>
+        <div class="title-name fix">
+          <h1 class="bold-mrgin" ><img src="img/players/fan.png" class="img-responsive" alt="title"></h1>
+            <!--ng-if="currentlang=='en'"-->
+            <h1 class="bold-mrgin" ng-if="currentlang=='hi'"><img src="img/hindi/fan-corner.png" class="img-responsive" alt="title"></h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>
+<section class="mt100 signing-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sign-up text-left">
+          <h2 class="color-primary font-mob">{{'SIGN UP'|translate}}</h2>
+          <h4 class="line140 font-new">
+            {{'Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.'|translate}}
+          </h4>
+        </div>
+      </div>
+    </div>
+    <form name="myForm" ng-hide="showmsg">
+      <div class="row mt30">
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>{{'First Name'|translate}}</span>
+              <input type="text" name="firstname" class="form-control" ng-model="register.firstname" id="" required>
+            </div>
+
+            <p class="colpad" ng-show="myForm.firstname.$error.required && myForm.firstname.$dirty">{{'First Name is required'|translate}}</p>
+
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>{{'Last Name'|translate}}</span>
+              <input type="text" name="lastname" class="form-control" ng-model="register.lastname" id="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>{{'Mobile Number'|translate}}</span>
+              <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" id="" required only-digits>
+            </div>
+            <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">{{'Mobile Number'|translate}} {{'is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">{{'Mobile Number'|translate}} {{'Invalid'|translate}}</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>{{'Email Address'|translate}}</span>
+              <input type="email" name="email" class="form-control" ng-model="register.email" id="" required>
+
+            </div>
+            <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">{{'Email Address'|translate}} {{'is required'|translate}}</p>
+            <p class="colpad" ng-show="myForm.email.$invalid && !myForm.email.$pristine">{{'Invalid'|translate}} {{'Email Address'|translate}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-4 col-sm-6">
+          <div class="form-submit city-dropdown">
+            <div class="form-group margin0">
+              <span>{{'City'|translate}}</span>
+              <button type="button" class="btn btn-pink btn-bussiness btn-main" ng-click="citydrops=!citydrops" data-toggle="dropdown" >
+             <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </button>
+              <!--ng-init="country = 'country'" ng-click="countrydrop=!countrydrop"-->
+              <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
+           
+            </div>
+             <div class="dropdown-city" ng-show="citydrops">
+              <ul>
+                <li>mumbai</li>
+                <li>hydrebad</li>
+                <li>lucknow</li>
+              </ul>
+            </div>
+            <!--<p class="colpad" ng-show="myForm.city.$error.required && myForm.city.$dirty">{{'City'|translate}} {{'is required'|translate}}</p>-->
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-10 col-sm-12">
+          <div class="form-submit">
+            <div class="form-group">
+              <span>{{'Choose Your Favourite Panthers'|translate}}</span>
+              <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">{{'Please select your favourite Panther'|translate}}</p>
+            </div>
+            <div class="check-lists">
+              <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="checking" >
+                <label for="checking" class="capitalise">
+                  <span></span>
+                 jagya
+                </label>
+              </div>
+               <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="cheking" class="capitalise" >
+                <label for="cheking">
+                  <span></span>
+                 jagyas
+                </label>
+              </div>
+               <div class="checkbox" >
+                <!--ng-repeat="player in players"
+                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+                 <input type="checkbox" id="cheking" class="capitalise" >
+                <label for="cheking">
+                  <span></span>
+                 jagyas
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row mt30">
+        <div class="col-md-12 ">
+            <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">{{'SUBMIT'|translate}}</button>
+
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="succes-msg text-center mt30" ng-show="showmsg" style="min-height:200px;">
+          <div class="img-reg">
+            <img src="img/logo.png" alt="Jaipur Pink Panthers">
+          </div>
+          <h1 class="color-primary">{{'Registration Successfull '|translate}} !!</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row mt30">
+      <div class="col-md-12">
+
+        <div class="desc-sub mt50 text-center">
+          <h3 class="color-primary font-stay">{{'Stay tuned to our weekly contests on social media and stand a chance to win some exclusive merchandise'|translate}}!</h3>
+        </div>
+        <div class="text-center custom-list pad30 mt30 mb100">
+          <ul class="padding0">
+            <li>
+              <div class="social-logo">
+                <span>
+                  <a href="https://www.facebook.com/JaipurPinkPanthers/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="social-logo">
+                <span>
+                  <a href="https://twitter.com/JaipurPanthers" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="social-logo">
+                <span>
+                  <a href="https://www.instagram.com/jaipur_pinkpanthers/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

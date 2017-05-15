@@ -1,0 +1,486 @@
+<!-- <div class="section1" auto-height>
+  <div class="center-position">
+    <div class="logo text-center">
+      <img src="img/logo-gif.gif" alt="Jaipur Pink Panthers" class="img-responsive"/>
+    </div>
+
+    <div class="scroll text-center color-primary upper">
+      {{'Scroll'|translate}}
+      <img src="img/mouse.png" alt="Jaipur Pink Panthers"/>
+      {{'down'|translate}}
+    </div>
+  </div>
+</div> -->
+
+<!-- <div ng-include="template.header" class="template header header-home sticky-bottom" scroll></div> -->
+<div class="section2 home">
+  <div class="custom-slider">
+    <div class="row margin0">
+      <div class="col-sm-8 padding0">
+        <div class="image-holder parent-height">
+          <uib-carousel interval="3000">
+            <uib-slide ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
+              </a>
+            </uib-slide>
+
+            <uib-slide ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
+              </a>
+            </uib-slide>
+          </uib-carousel>
+        </div>
+      </div>
+      <div class="col-sm-4 padding0">
+        <div class="content-scroll">
+
+          <div class="news-us" ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-us" ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="custom-slider">
+    <div class="row margin0">
+      <div class="col-sm-8 padding0">
+        <div class="image-holder parent-height">
+          <uib-carousel interval="3000">
+            <uib-slide ng-repeat="new in news track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image}}" class="gallery-image" alt="Jaipur Pink Panthers">
+              </a>
+            </uib-slide>
+          </uib-carousel>
+        </div>
+      </div>
+      <div class="col-sm-4 padding0">
+        <div class="content-scroll">
+          <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0 uppercase-text ">
+                  {{new.name|translate}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="new-runner marquee" style="width:100%;overflow:hidden;">
+    <ul class="list-inline lined" mycircle style="width:18000px;">
+      <li>
+        <span class="color-pink bold">Top Fan Tweets:
+        </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do anything if we believe truly ourselves
+        <span>by @renceabishek</span>
+      </li>
+      <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack them..come on..#LePanga
+        <span>by ‏@sivakumar1252</span>
+      </li>
+      <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har ke Bad Hi Jeet Hai.#RoarForPanthers
+        <span>by ‏‏@janidipak40</span>
+      </li>
+      <li>@SrBachchan one loss for @JaipurPanthers but 2014 Champ come back with louder #Roar #Roaringforvictory #RoarLionRoar
+        <span>by ‏‏@‏KushDaunawat14</span>
+      </li>
+      <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the #SMILING_KILLER COme on @JaipurPanthers
+        <span>by ‏‏@bmraj100</span>
+      </li>
+      <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther @JaipurPanthers @juniorbachchan #LePanga
+        <span>
+          by ‏‏@nayangotecha</span>
+      </li>
+      <li>@JaipurPanthers #LePanga go for it boyss you can n have done this! All the best n #RoarForPanthers @juniorbachchan
+        <span>by ‏‏@Ruth4ashab</span>
+      </li>
+      <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga #Panthers #LePanga @JaipurPanthers
+        <span>by ‏‏@Dhillon_WWE</span>
+      </li>
+      <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master #RoarForPanthers #LePanga @ProKabaddi
+        <span>by ‏‏@arnavini</span>
+      </li>
+      <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start @JaipurPanthers at home @ProKabaddi! #LePanga
+        <span>by ‏‏@suhailchandhok</span>
+      </li>
+      <li>#Jasvir from @JaipurPanthers plays #Kabaddi similarly to how @virendersehwag plays #Cricket @ProKabaddi #LePanga
+        <span>by ‏‏@jay_jumbo</span>
+      </li>
+      <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder we #roarforPanthers @JaipurPanthers
+        <span>by ‏‏@ArvindSivdas</span>
+      </li>
+      <li>The Champions roared and how! Yayyy congratulations @JaipurPanthers @juniorbachchan.. Woo-hoo!! 😍💜😘
+        <span>by ‏‏@filmykiida</span>
+      </li>
+      <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink Panthers se #LePanga
+        <span>by ‏‏@tanujasamar1994</span>
+      </li>
+      <li>So... They can stop us? No no no! @juniorbachchan #RoarForPanthers #ProKabaddi @JaipurPanthers
+        <span>by ‏‏@iMichelle89</span>
+      </li>
+      <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai hum TAIYAAR Beware from our PRAHAAR..
+        <span>by ‏‏@TweetstarSanjay</span>
+      </li>
+      <li>@JaipurPanthers Now it's time to roar and tell others why r we season 1 winner.. #GoPanther #LePanga
+        <span>by ‏‏@shahi07</span>
+      </li>
+      <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our #HARDWORK. COME ON @JaipurPanthers
+        <span>by ‏‏@bmraj100</span>
+      </li>
+      <li>brain &amp; brawn will lead @JaipurPanthers @PuneriPaltan #LePanga #KhelBadlega #roarforpanthers @juniorbachchan
+        <span>by ‏‏@Khel_Gyani</span>
+      </li>
+      <li>@JaipurPanthers Play Safe, Play Well. Jasvir is in the house. #RoarForPanthers @juniorbachchan @bunty_walia
+        <span>by ‏‏@NiTiSHmurthy</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<section class="marg-section no-mb relative">
+  <div class="whiteline hidden-xs"></div>
+  <div class="box-right boxer hidden-xs"></div>
+  <div class="box-left boxer hidden-xs"></div>
+  <div class="point-bkp">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 padding40 m-box-l">
+        <div class="white-line-pad">
+            <div class="head-table text-center">
+            <h1 class="color-white font-tbl">{{'SEASON 4 OPENER'|translate}}</h1>
+          </div>
+
+          <div class="nxt-match">
+            <!-- <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
+
+              <li> -->
+                <div class="match-schd mt30">
+                  <div class="row">
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{openers.team1id  | teamImg}}" class="img-responsive" alt="{{openers.team1id  | teamImg}}">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="mt30">
+                        <img src="img/object/back-vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{openers.team2id  | teamImg}}" class="img-responsive" alt="{{openers.team2id  | teamImg}}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center color-white font-big mt15">
+                  {{openers.stadium|translate}}
+                </div>
+                <div class="next-match">
+                  <div class="count-time custom-list text-center">
+                    <ul class="padding0">
+                      <li>
+                        <div class="time-hrs">
+                          <h1 class="color-white font-tbl">
+                            <span>{{countdown.months}}</span>
+                            <b>:</b>
+                          </h1>
+                          <span class="color-white pr20">{{'MONTHS'|translate}}</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="time-hrs">
+                          <h1 class="color-white font-tbl">
+                            <span>{{countdown.days}}</span>
+                            <b>:</b>
+                          </h1>
+                          <span class="color-white pr20">{{'DAYS'|translate}}</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="time-hrs">
+                          <h1 class="color-white font-tbl">
+                            <span>{{countdown.hours}}</span>
+                            <b>:</b>
+                          </h1>
+                          <span class="color-white pr20">{{'HOURS'|translate}}</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="time-hrs">
+                          <h1 class="color-white font-tbl">
+                            <span>{{countdown.minutes}}</span>
+                          </h1>
+                          <span class="color-white">{{'MINS'|translate}}</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="text-center">
+                    <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" class="btn btn-sucess big-btn mt15" target="_blank" ng-if="latestmatch.ishome == '1'">{{'BOOK TICKETS'|translate}}</a>
+                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{openers.stadium | spaceToPlus}}&details={{openers.team1 | spaceToPlus}}+vs+{{openers.team2 | spaceToPlus}}+{{openers.starttimedate | spaceToPlus}}+(IST)+{{openers.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">{{'ADD TO CALENDAR'|translate}}</a>
+                  </div>
+                </div>
+              <!-- </li>
+
+            </flex-slider> -->
+          </div>
+
+        </div>
+        </div>
+        <div class="col-md-6 col-sm-6 padding40 m-box-r">
+          <div class="nxt-match white-line-pad">
+            <div class="head-table text-center">
+              <h1 class="color-white font-tbl">{{'SEASON 4 HOME GAMES'|translate}}</h1>
+            </div>
+
+            <flex-slider flex-slide="game in homegame track by $index" slideshow="false" prev-text=" " next-text=" ">
+
+              <li>
+                <div class="match-schd mt30">
+                  <div class="row">
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{game.team1id | teamImg}}" class="img-responsive" alt="{{game.team1id | teamImg}}">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="mt30">
+                        <img src="img/object/back-vs.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{game.team2id | teamImg}}" class="img-responsive" alt="{{game.team2id | teamImg}}">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="text-center color-white font-big marginal">
+                  {{game.stadium|translate}} <br>
+                  {{game.starttimedate|translate}}({{'IST'|translate}})
+                </div>
+                <div class="text-center">
+                  <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Book Tickets</a> -->
+                  <!-- <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">Add to Calendar</a> -->
+                  <a ng-href="https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D" class="btn btn-sucess big-btn mt15" target="_blank">{{'BOOK TICKETS'|translate}}</a>
+                  <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}&dates={{calendarDatehome[$index].from}}/{{calendarDatehome[$index].to}}&location={{game.stadium | spaceToPlus}}&details={{game.team1 | spaceToPlus}}+vs+{{game.team2 | spaceToPlus}}+{{game.starttimedate | spaceToPlus}}+(IST)+{{game.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn big-btn btn-sucess mt15" target="_blank">{{'ADD TO CALENDAR'|translate}}</a>
+
+                </div>
+              </li>
+
+            </flex-slider>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="mbanner">
+  <div class="container">
+    <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
+    <div class="pink-splasher">
+      <a ui-sref="fan-corner" class="btn btn-sucess big-btn">{{'CLICK HERE'|translate}}</a>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="section3 no-mt marg-section">
+<div class="home-player-slider">
+<div class="slider-social">
+<a ui-sref="players">
+  <div class="banner-home">
+    <img src="img/home/Players-Banner.jpg" alt="" class="img-responsive">
+  </div>
+</a>
+</div>
+</div>
+</div> -->
+
+<div class="section4">
+<div class="box-home">
+<div class="row margin0">
+<div class="col-sm-6 padding0">
+  <a ui-sref="fixtures({id:1})">
+    <div class="cont-box mr2 mb2">
+      <div class="img-holder">
+        <img ng-src="img/home/{{'box1'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 padding0">
+  <a ui-sref="gallery">
+    <div class="cont-box ml2 mb2">
+      <div class="img-holder">
+        <img ng-src="img/home/{{'box2'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+<div class="row margin0">
+<div class="col-sm-6 padding0">
+  <a ui-sref="news-media">
+    <div class="cont-box mr2 mt2">
+      <div class="img-holder">
+        <img ng-src="img/home/{{'box3'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 padding0">
+  <a ui-sref="wallpaper">
+    <div class="cont-box ml2 mt2">
+      <div class="img-holder">
+        <img ng-src="img/home/{{'box4'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+</div>
+</div>
+<section class="marg-section">
+<div class="social-back ">
+<div class="container">
+
+<div class="text-center social-bk">
+  <img src="img/object/back-pink.png" class="img-responsive" alt="Jaipur Pink Panthers">
+  <div class="social-hub">
+    <h1 class="color-white"> {{'SOCIAL HUB'|translate}}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center">
+      <span>
+        <i class="fa fa-facebook"></i>
+      </span>
+      <div class="feed-social mt30">
+
+        <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/JaipurPinkPanthers/">
+              <a href="https://www.facebook.com/JaipurPinkPanthers/">Jaipur Pink Panthers</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div id="fb-root"></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center ">
+      <span>
+        <i class="fa fa-twitter"></i>
+      </span>
+      <div class="feed-social mt30">
+        <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers" data-widget-id="692273446991073280">Tweets by @JaipurPanthers</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center ">
+      <span>
+        <i class="fa fa-instagram"></i>
+      </span>
+      <div class="feed-social mt30">
+        <!-- LightWidget WIDGET -->
+        <iframe src="//lightwidget.com/widgets/25c2b3d12d7f5595a8c24cc8bf356111.html" id="lightwidget_25c2b3d12d" name="lightwidget_25c2b3d12d"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+<section>
+<div class="back-img">
+<div class="container">
+<div class="row">
+  <div class="col-md-4 col-sm-4">
+    <div class="">
+      <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive" alt="Jaipur Pink Panthers">
+    </div>
+    <div class="text-center">
+      <h4 class="line140 font-excl">
+
+        {{'Get exclusive JPP Wallpapers for your Desktop and Mobile'|translate}}
+      </h4>
+    </div>
+    <div class="button text-center">
+      <a ui-sref="wallpaper" class="btn btn-primary">
+        {{'Download Wallpapers'|translate}}
+      </a>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-6 col-sm-6">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="cell-img">
+          <img src="img/object/phone.png" class="img-responsive" alt="Jaipur Pink Panthers">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="margin-all">
+          <div class="download-link">
+            <h2 class="font-app">{{'Download the JPP App'|translate}}</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="play-store">
+                <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
+                  <img src="img/object/play-store.png" class="img-responsive" alt="Jaipur Pink Panthers">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="app-store play-store">
+                <a href="https://itunes.apple.com/in/app/id1084678272?mt=8" target="_blank">
+                  <img src="img/object/app-store.png" class="img-responsive" alt="Jaipur Pink Panthers"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>

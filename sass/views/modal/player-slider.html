@@ -1,0 +1,38 @@
+<div class="player-slider sliders carousel-fade mobslider" ng-controller="PlayersCtrl">
+  <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+    <uib-slide ng-repeat="dataitem in players2 track by $index">
+
+      <div class="player-det">
+        <div class="play-img">
+          <img ng-src="{{dataitem.image}}" class="img-responsive" alt="{{dataitem.image}}">
+        </div>
+        <hr class="border-players">
+        <div class="inner-data">
+          <div class="close-btn" ng-click="$dismiss()">
+            <img src="img/close.png" alt="close">
+          </div>
+          <div class="player-name text-center">
+            <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{dataitem.name|translate}}</h1>
+          </div>
+          <div class="player-desg text-center">
+            <h6 class="voyeg-font f25 margin0 color-success">{{dataitem.desg|translate}}</h6>
+          </div>
+          <div class="player-data custom-list">
+            <ul class="ul-border">
+              <li class="li-info">
+                <span class="label label-nation">{{'State'|translate}}:</span> {{dataitem.nationality|translate}}</li>
+              <li class="li-info">
+                <span class="label label-nation">{{'Age'|translate}}:</span>{{dataitem.dob|translate}}</li>
+              <li class="li-info">
+                <span class="label label-nation">{{'Jersery number'|translate}}:</span> {{dataitem.jersyno|translate}}</li>
+            </ul>
+          </div>
+          <div class="player-desc text-justify font-base">
+            <p ng-if="!dataitem.desp=='';"><strong>{{'Tournaments Played'|translate}}:</strong> {{dataitem.desp|translate}}</p>
+            <p ng-if="!dataitem.desp2=='';"><strong>{{'Achievements'|translate}}:</strong> {{dataitem.desp2|translate}}</p>
+          </div>
+        </div>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>

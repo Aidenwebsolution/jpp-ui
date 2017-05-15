@@ -1,0 +1,68 @@
+<div ng-right-click oncontextmenu="return false;" class="disableSave">
+<section>
+  <div class="banner-title">
+    <img src="img/banner/gallery.jpg" class="img-responsive" title="gallery" alt="Jaipur Pink Panthers">
+    <section>
+      <div class="page-title text-center">
+        <div class="border-blue"></div>
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+        </div>
+        <div class="title-name">
+          <a ui-sref="gallery" class="color-primary"><h1  class="bold-mrgin">{{'Photo Gallery'|translate}}</h1></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>
+
+<!-- <section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="ticket-merchandize-data about-content font-base">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="mt70">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+          <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='en'">{{gallerycategory}}</h1>
+          <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='hi'">{{hindigallerycategory}}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb200 mt50">
+  <div class="container">
+    <div class="gallery-slider">
+
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+          <div class="slider">
+
+
+                  <div class="row" >
+                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="slide in slides track by $index">
+                      <div class="slider-imgholder">
+                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{slide.image | serverimage}}" title="{{gallery.alternate}}">
+                        <img ng-src="{{slide.image | serverimage}}" alt="{{gallery.alternate}}" class="img-responsive" alt="Jaipur Pink Panthers">
+                      </a>
+                      </div>
+                    </div>
+                  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

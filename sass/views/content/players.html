@@ -1,0 +1,58 @@
+<section>
+  <div class="banner-title">
+    <img src="img/banner/players.jpg" class="img-responsive" title="Players" alt="Jaipur Pink Panthers">
+    <section>
+      <div class="page-title text-center">
+        <div class="panther-punch">
+          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+        </div>
+        <div class="title-name">
+          <h1 class="bold-mrgin"><img src="img/english/know-panthers.png" class="img-responsive" alt="title"></h1>
+           <h1 class="bold-mrgin" ng-if="currentlang=='hi'"><img src="img/hindi/our-panthers.png" class="img-responsive" alt="title"></h1>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<section class="mt100 pro-pad mb50">
+  <div class="container">
+    <a ng-click="">
+      <div class="row">
+        <div class="col-md-4 pad5 col-sm-4" ng-repeat="data in player track by $index">
+
+          <a ui-sref="players-inside({id:data.id})">
+            <div class="player-box text-center mb10">
+              <div class="player-image">
+                <img ng-src="{{data.smallimage | serverimage1}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
+              </div>
+              <hr class="border-player">
+              <div class="player-name">
+                <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{data.name|translate}}</h1>
+              </div>
+              <div class="player-desg">
+                <h6 class="voyeg-font f25 margin0 color-success">{{data.type|translate}}</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="col-md-4 pad5 col-sm-4" ng-repeat="data in player track by $index">
+
+          <a href="" ng-click="openPlayers(data,$index);">
+            <div class="player-box text-center mb10">
+              <div class="player-image">
+                <img ng-src="{{data.image}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
+              </div>
+              <hr class="border-player">
+              <div class="player-name">
+                <h1 class="bold-mrgin color-primary voyeg-font f30 margin0">{{data.name|translate}}</h1>
+              </div>
+              <div class="player-desg">
+                <h6 class="voyeg-font f25 margin0 color-success">{{data.desg|translate}}</h6>
+              </div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </a>
+  </div>
+</section>

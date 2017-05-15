@@ -1,0 +1,382 @@
+<div class="section1" auto-height>
+  <div class="center-position">
+    <div class="logo text-center">
+      <img src="img/logo-gif.gif" alt="logo" class="img-responsive"/>
+    </div>
+
+    <div class="scroll text-center color-primary upper">
+      Scroll
+      <img src="img/mouse.png" alt="Scroll Down"/>
+      down
+    </div>
+  </div>
+</div>
+
+<div ng-include="template.header" class="template header header-home sticky-bottom" scroll></div>
+<div class="section2 home">
+  <div class="custom-slider">
+    <div class="row margin0">
+      <div class="col-sm-8 padding0">
+        <div class="image-holder parent-height">
+          <uib-carousel interval="3000">
+            <uib-slide ng-repeat="new in news track by $index" active="new.active">
+              <a href="{{new.link}}">
+                <img ng-src="{{new.image | serverimage}}" class="gallery-image">
+              </a>
+            </uib-slide>
+          </uib-carousel>
+        </div>
+      </div>
+      <div class="col-sm-4 padding0">
+        <div class="content-scroll">
+          <div class="news-us" ng-repeat="new in news track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+            <img src="img/home/panther-right.png" alt="" class="hover-plam">
+            <div class="news-list">
+              <div class="new-item padding20">
+                <h3 class="margin0">
+                  {{new.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="new-runner marquee" style="width:100%;overflow:hidden;">
+    <ul class="list-inline lined" mycircle style="width:18000px;">
+      <li>
+        <span class="color-pink bold">Top Fan Tweets:
+        </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do anything if we believe truly ourselves
+        <span>by @renceabishek</span>
+      </li>
+      <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack them..come on..#LePanga
+        <span>by ‏@sivakumar1252</span>
+      </li>
+      <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har ke Bad Hi Jeet Hai.#RoarForPanthers
+        <span>by ‏‏@janidipak40</span>
+      </li>
+      <li>@SrBachchan one loss for @JaipurPanthers but 2014 Champ come back with louder #Roar #Roaringforvictory #RoarLionRoar
+        <span>by ‏‏@‏KushDaunawat14</span>
+      </li>
+      <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the #SMILING_KILLER COme on @JaipurPanthers
+        <span>by ‏‏@bmraj100</span>
+      </li>
+      <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther @JaipurPanthers @juniorbachchan #LePanga
+        <span>
+          by ‏‏@nayangotecha</span>
+      </li>
+      <li>@JaipurPanthers #LePanga go for it boyss you can n have done this! All the best n #RoarForPanthers @juniorbachchan
+        <span>by ‏‏@Ruth4ashab</span>
+      </li>
+      <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga #Panthers #LePanga @JaipurPanthers
+        <span>by ‏‏@Dhillon_WWE</span>
+      </li>
+      <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master #RoarForPanthers #LePanga @ProKabaddi
+        <span>by ‏‏@arnavini</span>
+      </li>
+      <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start @JaipurPanthers at home @ProKabaddi! #LePanga
+        <span>by ‏‏@suhailchandhok</span>
+      </li>
+      <li>#Jasvir from @JaipurPanthers plays #Kabaddi similarly to how @virendersehwag plays #Cricket @ProKabaddi #LePanga
+        <span>by ‏‏@jay_jumbo</span>
+      </li>
+      <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder we #roarforPanthers @JaipurPanthers
+        <span>by ‏‏@ArvindSivdas</span>
+      </li>
+      <li>The Champions roared and how! Yayyy congratulations @JaipurPanthers @juniorbachchan.. Woo-hoo!! 😍💜😘
+        <span>by ‏‏@filmykiida</span>
+      </li>
+      <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink Panthers se #LePanga
+        <span>by ‏‏@tanujasamar1994</span>
+      </li>
+      <li>So... They can stop us? No no no! @juniorbachchan #RoarForPanthers #ProKabaddi @JaipurPanthers
+        <span>by ‏‏@iMichelle89</span>
+      </li>
+      <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai hum TAIYAAR Beware from our PRAHAAR..
+        <span>by ‏‏@TweetstarSanjay</span>
+      </li>
+      <li>@JaipurPanthers Now it's time to roar and tell others why r we season 1 winner.. #GoPanther #LePanga
+        <span>by ‏‏@shahi07</span>
+      </li>
+      <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our #HARDWORK. COME ON @JaipurPanthers
+        <span>by ‏‏@bmraj100</span>
+      </li>
+      <li>brain &amp; brawn will lead @JaipurPanthers @PuneriPaltan #LePanga #KhelBadlega #roarforpanthers @juniorbachchan
+        <span>by ‏‏@Khel_Gyani</span>
+      </li>
+      <li>@JaipurPanthers Play Safe, Play Well. Jasvir is in the house. #RoarForPanthers @juniorbachchan @bunty_walia
+        <span>by ‏‏@NiTiSHmurthy</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<section class="marg-section relative">
+  <div class="whiteline hidden-xs"></div>
+  <div class="box-right boxer hidden-xs"></div>
+  <div class="box-left boxer hidden-xs"></div>
+  <div class="point-bkp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 padding40 m-box-l">
+        <div class="white-line-pad">
+            <div class="head-table text-center">
+            <h1 class="color-white font-tbl">POINTS TABLE</h1>
+          </div>
+          <div class="point-tbl mt30">
+            <div class="points-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>PTS</th>
+                  </tr>
+                </thead>
+                <tbody class="odd-even">
+                  <tr class="{{ data.name | limitTo: 3 }}" ng-repeat="data in table" ng-if="table.length>0">
+                    <td>{{$index +1}}</td>
+                    <td>{{data.name || 'Loading..'}}</td>
+                    <td>{{data.played}}</td>
+                    <td>{{data.wins}}</td>
+                    <td>{{data.lost}}</td>
+                    <td>{{data.point}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6 col-sm-6 padding40 m-box-r">
+          <div class="nxt-match white-line-pad">
+            <div class="head-table text-center">
+              <h1 class="color-white font-tbl">SEASON 3 REVIEW</h1>
+            </div>
+
+            <flex-slider flex-slide="s in matchData track by $index" slideshow="false" prev-text=" " next-text=" ">
+
+              <li>
+                <div class="match-schd mt30">
+                  <div class="row">
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{s.team1img}}" class="img-responsive">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="mt30">
+                        <img src="img/object/back-vs.png" class="img-responsive">
+                      </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                      <div class="new-logo">
+                        <img ng-src="{{s.team2img}}" class="img-responsive">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="home-score relative">
+                    <div class="row high-z relative">
+                      <div class="col-xs-4">
+                        <div class="scorer text-center {{s.team1class}} stroke">{{s.team1score}}</div>
+                      </div>
+                      <div class="col-xs-4 col-xs-offset-4">
+                        <div class="scorer text-center {{s.team2class}} stroke">{{s.team2score}}</div>
+                      </div>
+                    </div>
+                    <div class="gradient-bar">
+                      Fulltime
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center color-white font-big mt15">
+                  {{s.stadium}}
+                </div>
+                <div class="text-center">
+                  <a ui-sref="gallery-inner({id:s.galleryid})" class="btn btn-sucess big-btn mt15" target="_blank">View Gallery</a>
+                </div>
+              </li>
+
+            </flex-slider>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<div class="section3 marg-section">
+<div class="home-player-slider">
+<div class="slider-social">
+<a ui-sref="players">
+  <div class="banner-home">
+    <img src="img/home/Players-Banner.jpg" alt="" class="img-responsive">
+  </div>
+</a>
+</div>
+</div>
+</div>
+<div class="section4">
+<div class="box-home">
+<div class="row margin0">
+<div class="col-sm-6 padding0">
+  <a ui-sref="fixtures({id:1})">
+    <div class="cont-box mr2 mb2">
+      <div class="img-holder">
+        <img src="img/home/box1.jpg" alt="home-box" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 padding0">
+  <a ui-sref="gallery">
+    <div class="cont-box ml2 mb2">
+      <div class="img-holder">
+        <img src="img/home/box2.jpg" alt="home-box" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+<div class="row margin0">
+<div class="col-sm-6 padding0">
+  <a ui-sref="news-media">
+    <div class="cont-box mr2 mt2">
+      <div class="img-holder">
+        <img src="img/home/box3.jpg" alt="home-box" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+<div class="col-sm-6 padding0">
+  <a ui-sref="wallpaper">
+    <div class="cont-box ml2 mt2">
+      <div class="img-holder">
+        <img src="img/home/box4.jpg" alt="home-box" class="img-responsive">
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+</div>
+</div>
+<section class="marg-section">
+<div class="social-back ">
+<div class="container">
+
+<div class="text-center social-bk">
+  <img src="img/object/back-pink.png" class="img-responsive">
+  <div class="social-hub">
+    <h1 class="color-white">SOCIAL HUB</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center">
+      <span>
+        <i class="fa fa-facebook"></i>
+      </span>
+      <div class="feed-social mt30">
+
+        <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/JaipurPinkPanthers/">
+              <a href="https://www.facebook.com/JaipurPinkPanthers/">Jaipur Pink Panthers</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div id="fb-root"></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center ">
+      <span>
+        <i class="fa fa-twitter"></i>
+      </span>
+      <div class="feed-social mt30">
+        <a class="twitter-timeline" href="https://twitter.com/JaipurPanthers" data-widget-id="692273446991073280">Tweets by @JaipurPanthers</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <div class="social-logo text-center ">
+      <span>
+        <i class="fa fa-instagram"></i>
+      </span>
+      <div class="feed-social mt30">
+        <!-- INSTANSIVE WIDGET -->
+        <iframe src="//instansive.com/widgets/1fef57318c685c5b9410a3b8e18b5ad5.html" id="instansive_1fef57318c" name="instansive_1fef57318c" scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+<section>
+<div class="back-img">
+<div class="container">
+<div class="row">
+  <div class="col-md-4 col-sm-4">
+    <div class="">
+      <img src="img/wallpapper.png" alt="Desktop and Mobile" class="img-responsive">
+    </div>
+    <div class="text-center">
+      <h4 class="line140 font-excl">
+        Get exclusive JPP Wallpapers for your Desktop and Mobile.
+      </h4>
+    </div>
+    <div class="button text-center">
+      <a ui-sref="wallpaper" class="btn btn-primary">
+        Download Wallpapers
+      </a>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-6 col-sm-6">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="cell-img">
+          <img src="img/object/phone.png" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="margin-all">
+          <div class="download-link">
+            <h2 class="font-app">Download the JPP App</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="play-store">
+                <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
+                  <img src="img/object/play-store.png" class="img-responsive">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="app-store play-store">
+                <img src="img/object/app-store.png" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
