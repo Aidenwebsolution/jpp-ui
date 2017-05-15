@@ -144,15 +144,11 @@ var navigationservice = angular.module('navigationservice', [])
         getSlider: function(callback) {
             $http.get(adminurl + "getAllSliders").then(callback);
         },
-         getjourney: function(callback) {
-            $http.get(adminurl + "getjourney").success(callback);
-        },
+
          getguesswho: function(callback) {
             $http.get(adminurl + "getguesswho").success(callback);
         },
-         getcongratulation: function(callback) {
-            $http.get(adminurl + "getcongratulation").success(callback);
-        },
+
          getAuthenticate: function(callback) {
             $http.get(adminurl + "authenticate").success(callback);
         },
@@ -178,7 +174,17 @@ var navigationservice = angular.module('navigationservice', [])
         getallplayers: function(callback) {
             $http.get(tempUrl + "getallplayers").then(callback);
         },
-      
+
+       getcongratulation: function(callback) {
+          $http.get(tempUrl + "getcongratulation").success(callback);
+      },
+      getjourney: function(callback) {
+         $http.get(tempUrl + "getjourney").success(callback);
+     },
+       //  getjourney: function(callback) {
+       //     $http.get(adminurl + "getjourney").success(callback);
+       // },
+
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {
