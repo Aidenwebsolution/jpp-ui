@@ -75,8 +75,8 @@ Achievements
         </li>
     </ul>
 
-    <div class="player-details player-backdrop" >
-        <div class="row" ng-repeat="data in tournamentplayed" ng-if="tornaments == 1">
+    <div class="player-details player-backdrop" ng-if="tornaments == 1">
+        <div class="row" ng-repeat="data in tournamentplayed" >
             <div class="col-md-5" >
 
 <p>{{data[0].name}}({{data[0].year}}) </p>
@@ -94,9 +94,9 @@ Achievements
             </div>
         </div>
     </div>
-      <div class="player-details player-backdrop" >
-       <div class="row" ng-repeat="data in achievements" ng-if="tornaments == 2">
-            <div class="col-md-5" >
+      <div class="player-details player-backdrop" ng-if="tornaments == 2" >
+       <div class="row" ng-repeat="data in achievements" >
+            <div class="col-md-5">
 
 <p>  {{data[0].name}}({{data[0].year}})</p>
 <p>{{data[1].name}}({{data[1].year}})</p>
