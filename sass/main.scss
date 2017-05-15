@@ -551,7 +551,7 @@ nav {
     position: relative;
     margin-bottom: -30px;
     z-index: 9;
-   
+
     img {
         width: 72px;
     }
@@ -3205,7 +3205,7 @@ a.ilogo {
     margin-top: -30px;
     margin-right: 20px;
         }
-    
+
     }
     .form {
         padding: 20px 50px;
@@ -3730,7 +3730,7 @@ a.ilogo {
         }
     }
     .card-type {
-       
+
         display: inline-block;
         vertical-align: top;
     }
@@ -3885,7 +3885,7 @@ a.ilogo {
   background: -o-linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-90deg, #5e6dd3, #4ecaf5); /* Standard syntax */
- 
+
 }
 
 .chng-title{
@@ -3897,7 +3897,10 @@ a.ilogo {
     transform: translate(-50%, -50%);
     z-index: 9;
     }
-   
+
+}
+.error{
+  color: red;
 }
 
 .punch-chng{

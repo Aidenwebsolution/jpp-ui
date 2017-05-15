@@ -71,7 +71,7 @@
                </div>
                <div class="form-group">
                   <input type="password" name="password" class="form-control" placeholder="Password" ng-model="signupdata.password" required minlength="8" maxlength="14" no-Paste>
-                  <p class="error whitey" ng-show="signUp.password.$invalid  && (signUp.password.$dirty || signUp.password.$touched)">Please enter Minimum 8 Characters & Maximum 14 Characters.</p>
+                  <p class="error" ng-show="signUp.password.$invalid  && (signUp.password.$dirty || signUp.password.$touched)">Please enter Minimum 8 Characters & Maximum 14 Characters.</p>
                </div>
             </div>
             <div class="col-md-6">
@@ -86,19 +86,19 @@
                </div>-->
                <div class="form-group">
                   <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" ng-model="signupdata.confirmPass" no-Paste required>
-                  <div class="error-msg" ng-show="signUp.confirmPassword.$error.required && signUp.confirmPassword.$touched">Please Re-Enter Your Password</div>
+                  <div class="error" ng-show="signUp.confirmPassword.$error.required && signUp.confirmPassword.$touched">Please Re-Enter Your Password</div>
                </div>
-               <div ng-if="incorrectPass" class="whitey">Password does not match.</div>
+               <div ng-if="incorrectPass" class="error">Password does not match.</div>
             </div>
          </div>
          <div class="form-group checkbox">
             <input type="checkbox" id="agree" ng-model="signupdata.isChecked">
-            <label for="agree" class="whitey ">
+            <label for="agree" class="whitey">
                <span></span>I agree with the Terms &amp; conditions and Privacy Policy
             </label>
-            <small class="whitey">{{checkMark}}</small>
+            <small class="error">{{checkMark}}</small>
          </div>
-         <div ng-if="alreadyExist" class="text-center whitey">User Already Exist.</div>
+         <div ng-if="alreadyExist" class="text-center error">User Already Exist.</div>
          <h2 ng-if="succesSignup" class="text-center whitey"> Thank You..</h2>
          <!-- <div ng-if="isCheckedmsg">please mark check box</div> -->
 

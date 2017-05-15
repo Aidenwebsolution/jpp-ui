@@ -1778,13 +1778,13 @@ $scope.authentication();
         if (signupdata) {
             console.log("signupdata", signupdata);
             if (signupdata.password == signupdata.confirmPass) {
+                $scope.incorrectPass = false;
               if (signupdata.isChecked === undefined) {
                 $scope.checkMark='Please tick mark';
+
+
               }else {
                 $scope.checkMark="";
-              }
-
-                $scope.incorrectPass = false;
                 NavigationService.submitSignup(signupdata, function(data) {
                     console.log("data", data);
                     if (data.logged_in) {
@@ -1806,6 +1806,10 @@ $scope.authentication();
                         $scope.alreadyExist = true;
                     }
                 })
+              }
+
+
+
             } else {
                 $scope.incorrectPass = true;
             }
