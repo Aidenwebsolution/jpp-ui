@@ -59,29 +59,34 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         if (signupdata) {
             console.log("signupdata", signupdata);
             if (signupdata.password == signupdata.confirmPass) {
+              $scope.incorrectPass = false;
+                if (signupdata.isChecked === undefined) {
+                  $scope.checkMark='Please tick mark';
+                }else {
+                  $scope.checkMark="";
+                  NavigationService.submitSignup(signupdata, function(data) {
+                      console.log("data", data);
+                      if (data.logged_in) {
+                          $rootScope.loggedIn = true;
+                          $scope.succesSignup = true;
+                          $scope.alreadyExist = false;
+                          $timeout(function() {
 
-                $scope.incorrectPass = false;
-                NavigationService.submitSignup(signupdata, function(data) {
-                    console.log("data", data);
-                    if (data.logged_in) {
-                        $rootScope.loggedIn = true;
-                        $scope.succesSignup = true;
-                        $scope.alreadyExist = false;
-                        $timeout(function() {
+                              $scope.succesSignup = false;
+                              $scope.alreadyExist = false;
+                              $scope.signupdata = {};
+                              $scope.modalLogsInstance.close();
+                          }, 2000);
 
-                            $scope.succesSignup = false;
-                            $scope.alreadyExist = false;
-                            $scope.signupdata = {};
-                            $scope.modalLogsInstance.close();
-                        }, 2000);
+                      } else {
+                          $scope.succesSignup = false;
+                          $rootScope.loggedIn = false;
+                          console.log("im else");
+                          $scope.alreadyExist = true;
+                        }
+                  })
+                }
 
-                    } else {
-                        $scope.succesSignup = false;
-                        $rootScope.loggedIn = false;
-                        console.log("im else");
-                        $scope.alreadyExist = true;
-                    }
-                })
             } else {
                 $scope.incorrectPass = true;
             }

@@ -3899,15 +3899,17 @@ a.ilogo {
     }
 
 }
-.error{
-  color: red;
-}
 
 .punch-chng{
      position: relative;
     margin-bottom: 35px;
     z-index: 99;
 }
+
+.msg-err{
+  color: red ;
+}
+
 //ruchira
 @import "mobile";
 @import "style";
