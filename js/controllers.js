@@ -1344,6 +1344,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Fan Corner");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+           $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
         $scope.news = [];
         NavigationService.getallnews(function(data) {
             $scope.news = data;
@@ -1511,6 +1517,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Players");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+      $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
     $scope.getPlayers = function() {
         if ($scope.slideindex === undefined) {
             $scope.slideindex = 0;
@@ -1730,6 +1742,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("About");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+     $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
 
 
 })

@@ -20,9 +20,9 @@
             </ul>
         </div>
         <div class="player-name player-details">
-            <p class=" text-center bold text-uppercase color-white" >{{playerDetails.jerseyno}}</p>
-            <p class=" text-center bold text-uppercase color-white">{{playerDetails.name}}</p>
-            <p class=" text-center bold text-uppercase color-white">{{playerDetails.type}}</p>
+            <p class=" text-center bold text-uppercase color-white" >{{playerDetails.jerseyno|translate}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.name|translate}}</p>
+            <p class=" text-center bold text-uppercase color-white">{{playerDetails.type|translate}}</p>
             <!-- <p class=" text-center bold text-uppercase color-white">02</p>
             <p class=" text-center bold text-uppercase color-white">jasvir singh</p>
             <p class=" text-center bold text-uppercase color-white">raider</p> -->
@@ -34,43 +34,44 @@
 <div class="player-details text-center">
     <div class="row-flex">
         <div class="col-flex">
-            <p class="text-uppercase">{{playerDetails.hnationality}}</p>
+            <p class="text-uppercase">{{playerDetails.nationality | translate}}</p>
             <!-- <p>INDIAN</p> -->
             <span></span>
             </div>
+           
         <div class="col-flex">
-            <p class="text-uppercase" ng-bind-html="playerDetails.dob | date"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.dob | date |translate"></p>
             <!-- <p>APR 04, 1984</p> -->
-            <span>D.O.B</span>
+            <span>{{'D.O.B' | translate}}</span>
             </div>
         <div class="col-flex">
-            <p class="text-uppercase" ng-bind-html="playerDetails.nativeplace"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.nativeplace | translate"></p>
             <!-- <p>PANIPAT</p> -->
-            <span>NATIVE PLACE</span>
+            <span>{{'Native Place' | translate}}</span>
             </div>
         <div class="col-flex">
-            <p class="text-uppercase" ng-bind-html="playerDetails.weight"></p>
+            <p class="text-uppercase" ng-bind-html="playerDetails.weight | translate"></p>
             <!-- <p>80kg</p> -->
-            <span>WEIGHT</span>
+            <span>{{'weight'|translate}}</span>
             </div>
              <div class="col-flex">
             <p >{{playerDetails.height}}</p>
             <!-- <p>170cm</p> -->
-            <span>HEIGHT</span>
+            <span>{{'HEIGHT'|translate}}</span>
             </div>
     </div>
 </div>
 <div class="player-details text-center" ng-init="tornaments = 1">
     <ul class="list-inline">
         <li class="text-capitalize" ng-click="tornaments = 1" ng-class="{'activated': tornaments == 1 , '':tornaments !== 1}" style="text-transform:capitalize">
-tournaments Played
+{{'Tournaments Played'|translate}}
 
         </li>
           <!--<div class="title-name">
           <h1 class="bold-mrgin">{{'Fan Corner'|translate}}</h1>
         </div>-->
         <li class="text-capitalize" ng-click="tornaments = 2" ng-class="{'activated': tornaments == 2 , '':tornaments !== 2}" style="text-transform:capitalize" >
-Achievements
+{{'Achievements'|translate}}
 
         </li>
     </ul>
@@ -79,18 +80,18 @@ Achievements
         <div class="row" ng-repeat="data in tournamentplayed" >
             <div class="col-md-5" >
 
-<p>{{data[0].name}}({{data[0].year}}) </p>
-<p>{{data[1].name}}({{data[1].year}}) </p>
+<p>{{data[0].name |translate}}({{data[0].year}}) </p>
+<p>{{data[1].name |translate}}({{data[1].year}}) </p>
 <!-- <p>  Pro-Kabaddi (2015-2014)</p>
 <p>indoor asian games(2013)</p> -->
             </div>
             <div class="col-md-4">
-<p>{{data[2].name}}({{data[2].year}})</p>
-<p>{{data[3].name}}({{data[3].year}})</p>
+<p>{{data[2].name | translate}}({{data[2].year}})</p>
+<p>{{data[3].name | translate}}({{data[3].year}})</p>
             </div>
             <div class="col-md-3">
-<p>{{data[4].name}}({{data[4].year}})</p>
-<p ng-if="data[5].name">{{data[5].name}}({{data[5].year}})</p>
+<p>{{data[4].name | translate}}({{data[4].year}})</p>
+<p ng-if="data[5].name">{{data[5].name | translate}}({{data[5].year}})</p>
             </div>
         </div>
     </div>
@@ -98,20 +99,20 @@ Achievements
        <div class="row" ng-repeat="data in achievements" >
             <div class="col-md-5">
 
-<p>  {{data[0].name}}({{data[0].year}})</p>
-<p>{{data[1].name}}({{data[1].year}})</p>
+<p>  {{data[0].name | translate}}({{data[0].year}})</p>
+<p>{{data[1].name | translate}}({{data[1].year}})</p>
 <!-- <p>  Pro-Kabaddi (2015-2014)</p>
 <p>indoor asian games(2013)</p> -->
             </div>
             <div class="col-md-4" ng-if="data[2].name">
-              <p>{{data[2].name}}({{data[2].year}})</p>
-              <p>{{data[3].name}}({{data[3].year}})</p>
+              <p>{{data[2].name | translate}}({{data[2].year}})</p>
+              <p>{{data[3].name | translate}}({{data[3].year}})</p>
 <!-- <p>Senior National (2013)</p>
 <p>asian game(2014)</p> -->
             </div>
             <div class="col-md-3" ng-if="data[4].name">
-              <p>{{data[4].name}}({{data[4].year}})</p>
-              <p>{{data[5].name}}({{data[5].year}})</p>
+              <p>{{data[4].name | translate}}({{data[4].year}})</p>
+              <p>{{data[5].name | translate}}({{data[5].year}})</p>
 <!-- <p>National Game (2011)</p>
 <p></p> -->
             </div>
