@@ -4,11 +4,9 @@ var LanguageEnglish = {
     "Pro Kabaddi":"Pro Kabaddi",
     "Gallery":"Gallery",
     "play this contest on":"play this contest on",
-
     "enter your mobile number":"enter your mobile number",
     "to download jpp app":"to download jpp app",
-
-     "POINTS TABLE": "POINTS TABLE",
+    "POINTS TABLE": "POINTS TABLE",
     "D.O.B":"D.O.B",
     "Indian":"Indian",
     "weight":"weight",
