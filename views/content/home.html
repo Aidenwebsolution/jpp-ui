@@ -422,9 +422,9 @@ Sawai mansingh stadium,jaipur
         <div class="container">
             <div class="panther-world m-min84" >
                         <img ng-if="currentlang=='en'" src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
-                         
+
                         <img  ng-if="currentlang=='hi'" src="img/new-hindi.png"  alt="Jaipur Pink Panthers" class="img-responsive">
-                        
+
                     </div>
         </div>
     </div>
@@ -436,8 +436,8 @@ Sawai mansingh stadium,jaipur
                         <img ng-src="{{guesswhoData.image | serverimage}}"  alt="Jaipur Pink Panthers" class="img-responsive">
                         <div class="pl-link  text-center">
                             <div class="display-inline">
-                                <h4 class="uppercase-text color-white">play this contest on </h4>
-                                
+                                <h4 class="uppercase-text color-white">{{'play this contest on'|translate}} </h4>
+
                             </div>
                             <div class="social-link custom-list display-inline text-center-md m-l15">
                                 <ul class="padding0 margin0">
@@ -516,8 +516,8 @@ Sawai mansingh stadium,jaipur
                         </div>
                     </div>
                     <div class="display-inline text-line pt30s">
-                        <h4 class="uppercase-text color-black font-bold">enter your mobile number </h4>
-                        <h4 class="uppercase-text color-black font-bold">to download jpp app</h4>
+                        <h4 class="uppercase-text color-black font-bold">{{'enter your mobile number' | translate}} </h4>
+                        <h4 class="uppercase-text color-black font-bold">{{'to download jpp app'|translate}}</h4>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -616,16 +616,16 @@ Sawai mansingh stadium,jaipur
   <div class="row margin0">
     <div class="col-md-6 padding0">
       <div class="by-ticket">
-      <a ui-sref="ticket">  <img src="img/homes/journeys.jpg" alt="" class="img-responsive"></a>
-<!--<a ui-sref="ticket">
+      <a ui-sref="ticket" ng-if="currentlang=='en'">  <img src="img/homes/journeys.jpg" alt="" class="img-responsive"></a>
+<a ui-sref="ticket" ng-if="currentlang=='hi'">
     <img src="img/homes/journeys-hindi.jpg" alt=""  class="img-responsive">
-</a>-->
+</a>
       </div>
     </div>
     <div class="col-md-6 padding0">
       <div class="by-merchandise">
-        <a ui-sref="ticket-merchandise"><img src="img/homes/journeys.png" alt="" class="img-responsive"></a>
- <!--<a ui-sref="ticket-merchandise"><img src="img/homes/journeys-hindi.png" alt="" class="img-responsive"></a>-->
+        <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'"><img src="img/homes/journeys.png" alt="" class="img-responsive"></a>
+ <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'"><img src="img/homes/journeys-hindi.png" alt="" class="img-responsive"></a>
       </div>
     </div>
   </div>
@@ -633,7 +633,7 @@ Sawai mansingh stadium,jaipur
 </section>
 <section class="section5 back-img ">
     <div class="container">
-        <h1 class=" text-center bold text-uppercase color-primary   ">social hub</h1>
+        <h1 class=" text-center bold text-uppercase color-primary">{{'Social Hub' | translate}}</h1>
       <!--<div class="tab makeActive-service" ng-init="viewDetail=1">
 
                   <ul class="list-inline text-center ">

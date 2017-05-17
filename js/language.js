@@ -5,6 +5,9 @@ var LanguageEnglish = {
     "Gallery":"Gallery",
     "play this contest on":"play this contest on",
 
+    "enter your mobile number":"enter your mobile number",
+    "to download jpp app":"to download jpp app",
+
      "POINTS TABLE": "POINTS TABLE",
     "D.O.B":"D.O.B",
     "Indian":"Indian",
@@ -412,7 +415,7 @@ var LanguageHindi = {
     "Title Sponsor": "शीर्षक प्रायोजक",
     "Associate Sponsor": "एसोसिएट प्रायोजक",
     "SPONSORS": "प्रायोजक",
-  
+"play this contest on":"इस काॅन्टेस्ट को यहाँ खेले",
     "CONTACT US": "हमसे संपर्क करें",
     "TUNE INTO JPP TV": "जेपीपी टीवी से जुड़ें",
     "LATEST NEWS OF JPP": "जेपीपी की ताजा खबर",
@@ -452,6 +455,11 @@ var LanguageHindi = {
     "NEWS & MEDIA": "ख़बर एवं मीडिया ",
     "VIEW STORY": "और अधिक जानें ",
     "SOCIAL HUB": "सामाजिक केंद्र",
+    "Social Hub":"सोशल हब",
+  // "ENTER YOUR MOBILE NUMBER TO DOWNLOAD JPP APP": "जेपीपी अँप डॉनलोड करने के लिये अपना मोबाईल नंबर एंटर करे",
+  "enter your mobile number":"जेपीपी अँप डॉनलोड करने के लिये",
+  "to download jpp app":"अपना मोबाईल नंबर एंटर करे",
+
     "Get exclusive JPP Wallpapers for your Desktop and Mobile": "अपने डेस्कटॉप /कम्प्यूटर और मोबाइल के लिए विशेष JPP वॉलपेपर पाएँ",
     "Download Wallpapers": "वॉलपेपर डाउनलोड करें",
     "Download the JPP App": "JPP ऐप डाउनलोड करें",

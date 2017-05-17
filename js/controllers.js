@@ -10,6 +10,12 @@ var localLocale = moment();
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'wu.masonry', 'angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
+  $scope.currentlang = $.jStorage.get("languageSet");
+  console.log($scope.currentlang);
+  // globalFunc.changeLang = function() {
+  //     $scope.currentlang = currentlang;
+  //
+  // }
     // $scope.tab2 = 'fb';
     // $scope.classa = 'actives';
     // $scope.classb = '';
@@ -1759,6 +1765,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Points");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
 })
 
 .controller('headerctrl', function($scope, TemplateService, $translate, $uibModal, NavigationService, $rootScope, $timeout) {
