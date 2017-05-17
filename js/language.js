@@ -455,7 +455,7 @@ var LanguageHindi = {
     "SOCIAL HUB": "सामाजिक केंद्र",
     "Social Hub":"सोशल हब",
   // "ENTER YOUR MOBILE NUMBER TO DOWNLOAD JPP APP": "जेपीपी अँप डॉनलोड करने के लिये अपना मोबाईल नंबर एंटर करे",
-  "enter your mobile number":"जेपीपी अँप डॉनलोड करने के लिये",
+  "enter your mobile number":"जेपीपी अँप डाउनलोड करने के लिये",
   "to download jpp app":"अपना मोबाईल नंबर एंटर करे",
 
     "Get exclusive JPP Wallpapers for your Desktop and Mobile": "अपने डेस्कटॉप /कम्प्यूटर और मोबाइल के लिए विशेष JPP वॉलपेपर पाएँ",
