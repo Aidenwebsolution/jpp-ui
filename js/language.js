@@ -406,6 +406,10 @@ var LanguageEnglish = {
     "world cup opener":"world cup opener",
     "2016 KABADDI WORLD CUP SCHEDULE": "2016 KABADDI WORLD CUP SCHEDULE",
     "SEASON 4 REVIEW": "SEASON 4 REVIEW",
+    "Matches Played":"Matches Played",
+    "Total Points":"Total Points",
+    "Total Raid Points":"Total Raid Points",
+    "Total Defence Points":"Total Defence Points"
 };
 
 
@@ -416,6 +420,10 @@ var LanguageHindi = {
     "raiduniverse":"के लिए इक्स्क्लूसिव अवसर पाओ",
     "log in":"लॉग इन",
    "Logout": "लॉग आउट",
+   "Matches Played":"खेले गए मैच",
+   "Total Points":"टोटल पॉइन्ट",
+   "Total Raid Points":"टोटल रेड पॉइन्ट",
+   "Total Defence Points":"टोटल  डिफेन्स पॉइन्ट",
     "sign up":"साइन अप",
     "weight":"वजन",
     "JPP IOS APP": "जेपीपी आईओएस ऐप",
