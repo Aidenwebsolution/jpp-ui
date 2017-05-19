@@ -21,6 +21,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.sliderdata = data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
+       NavigationService.getjourney(function(data) {
+        $scope.journeyData = data.data;
+        console.log('$scope.sliderdata', $scope.journeyData);
+    });
+
 
     //Used to name the .html file
     $scope.openers = {};

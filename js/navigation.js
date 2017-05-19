@@ -3,6 +3,8 @@ var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
 var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
+var tempUrl ="http://wohlig.co.in/jppbackend/index.php/json/";
+var tempimgurl = "http://wohlig.co.in/jppbackend/uploads/";
 var adminurl = mainurl + "json/";
 var navigationservice = angular.module('navigationservice', [])
 
@@ -106,6 +108,9 @@ var navigationservice = angular.module('navigationservice', [])
         getSlider: function(callback) {
             $http.get(adminurl + "getAllSliders").success(callback);
         },
+          getjourney: function(callback) {
+         $http.get(tempUrl + "getjourney").success(callback);
+     },
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

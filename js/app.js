@@ -158,6 +158,15 @@ firstapp.filter('serverimage', function() {
         }
     };
 });
+firstapp.filter('serverimage1', function() {
+    return function(input) {
+        if (input) {
+            return tempimgurl + input;
+        } else {
+            return "";
+        }
+    };
+});
 firstapp.filter('thumbimage', function() {
     return function(input) {
         if (input) {
