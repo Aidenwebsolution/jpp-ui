@@ -65,6 +65,14 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'FixturesCtrl'
     })
 
+   .state('comingsoon', {
+        url: "/coming-soon",
+        templateUrl: "views/template.html",
+        controller: 'ComingsoonCtrl'
+    })
+
+    
+
     .state('news-media', {
         url: "/news-media",
         templateUrl: "views/template.html",

@@ -2871,5 +2871,15 @@ a.ilogo {
 
 }
 
+//coming-soon//
+.coming-soon{
+    height: 100vh;
+    margin-top: 100px;
+    background-image: url("../img/cs.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @import "mobile";
 @import "style";

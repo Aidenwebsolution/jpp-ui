@@ -742,6 +742,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+//coming-soon//
+.controller('ComingsoonCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("comingsoon");
+    $scope.menutitle = NavigationService.makeactive("Coming Soon");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+
 .controller('JPPTVCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("jpp-tv");
