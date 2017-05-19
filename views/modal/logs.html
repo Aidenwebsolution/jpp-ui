@@ -2,11 +2,11 @@
    <div class="tab">
       <ul class="list-inline text-center margin0">
          <li class="tab-item  relative text-center  text-uppercase {{classsa}}" ng-click="tabchanges('design',1)">
-            <h3 class="text-uppercase margin0">log in</h3>
+            <h3 class="text-uppercase margin0">{{'log in'|translate}}</h3>
          </li>
          <li class="tab-item  relative  text-center  text-uppercase {{classsb}}" ng-click="tabchanges('trim',2)">
 
-            <h3 class="text-uppercase margin0"> sign up</h3>
+            <h3 class="text-uppercase margin0">{{'sign up'|translate}}</h3>
 
          </li>
 
@@ -16,7 +16,8 @@
    <div class="reward-table carts " ng-show="tabs=='design'">
       <a href="" class="text-uppercase pull-right" ng-click="$dismiss();"><i class="fa fa-times whitey" aria-hidden="true"></i></a>
         <div class="player-log">
-        <h4 class=" whitey  text-left f20 text-uppercase ">  to get exclusive access to </br>raid the panther's universe!</h4>
+        <h4 class=" whitey  text-left f20 text-uppercase " ng-if="currentlang=='en'">to get exclusive access to </br>raid the panther's universe!</h4>
+          <h4 class=" whitey  text-left f20 text-uppercase " ng-if="currentlang=='hi'">{{'exclusive'|translate}} </br>{{'raiduniverse' |translate}}</h4>
       <div class="image">
         <img src="img/player.png"  class="img-responsive" alt="player">
       </div>
