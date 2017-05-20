@@ -52,6 +52,11 @@ var navigationservice = angular.module('navigationservice', [])
         name: "About",
         url: "about-us",
         classis: "active"
+    }, {
+        name: "PKL Auction",
+        urllink: "http://auction.jaipurpinkpanthers.com",
+        classis: "active",
+        target:"_blank"
     }
     // , {
     //     name: "Fan Corner",

@@ -11,7 +11,6 @@
     </div>
   </div>
 </div> -->
-
 <!-- <div ng-include="template.header" class="template header header-home sticky-bottom" scroll></div> -->
 <div class="section2 home">
     <div class="custom-slider">
@@ -24,7 +23,6 @@
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
                         </uib-slide>
-
                         <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
@@ -35,8 +33,8 @@
             </div>
             <div class="col-sm-4 padding0">
                 <div class="content-scroll">
-
-                    <div class="news-us" ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+                    <div class="news-us" ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);"
+                        ng-class="{'active': new.active == true}">
                         <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
                         <div class="news-list">
                             <div class="new-item padding20">
@@ -46,8 +44,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="news-us" ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}">
+                    <div class="news-us" ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);"
+                        ng-class="{'active': new.active == true}">
                         <img src="img/home/panther-right.png" alt="Jaipur Pink Panthers" class="hover-plam">
                         <div class="news-list">
                             <div class="new-item padding20">
@@ -92,7 +90,34 @@
   </div> -->
     <div class="new-runner marquee" style="width:100%;overflow:hidden;">
         <ul class="list-inline lined" mycircle style="width:18000px;">
-            <li>
+            <li>The fifth season of #ProKabaddi is here and I just can't wait to watch my favourite @JaipurPanthers
+                <span>by ‏@bhogleharsha</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers Best wishes to the team. First Trophy is so so lonely on the cup board :) Best wishes for injury free and losses free 5th Season ;)
+                <span>by ‏@Abj007</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers @ProKabaddi of course it will be winning season.. we all your fans will pray for you because you're best. 
+                <span>by @ainarasada</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers Love to u sir. High five for #VivoProKabaddi All the best @JaipurPanthers
+                <span>by ‏@ruchi_ABEF</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers @ProKabaddi All the very best for this year! May God & luck be by your team's side.
+                <span>by @IshitaRay11</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers Ready to ROAR.
+                <span>by @BachchanHolics</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers We are Ready to Roarrr   #VivoProKabaddi
+                <span>by ‏@Gopinathck</span>
+            </li>
+            <li>@juniorbachchan @JaipurPanthers Yayyy!! Cannot wait to cheer for Panthers!  Sunil Kumar‏
+                <span>by ‏@filmykiida</span>
+            </li>
+            <li>@JaipurPanthers @jasvir02 Waiting for the Upcoming season Khel kabbadi win and repeat #RoarForPanthers #JaiHanuman
+                <span>by ‏@Sunil_Rocks_</span>
+            </li>
+            <!--<li>
                 <span class="color-pink bold">Top Fan Tweets:
                 </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do anything if we believe truly ourselves
                 <span>by @renceabishek</span>
@@ -154,7 +179,7 @@
             </li>
             <li>@JaipurPanthers Play Safe, Play Well. Jasvir is in the house. #RoarForPanthers @juniorbachchan @bunty_walia
                 <span>by ‏‏@NiTiSHmurthy</span>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>
@@ -166,10 +191,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-sm-6 pad0 marg2">
-
                     <!--<a ui-sref="fixtures"><img ng-src="img/{{'ban'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>-->
-                     <a ui-sref="fixtures" ng-if="journeyData.status == '1'"><img ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
-
+                    <!--<a ui-sref="fixtures" ng-if="journeyData.status == '1'">-->
+                    <a href="http://auction.jaipurpinkpanthers.com/" target="_blank">
+                        <img ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates">
+                    </a>
                     <!-- <div class="white-line-pad">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
@@ -215,9 +241,9 @@
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-
-                    <a ui-sref="fixtures"><img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
-
+                    <!--<a ui-sref="fixtures">-->
+                         <a href="https://twitter.com/JaipurPanthers" target="_blank">
+                        <img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
                     <!-- <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
@@ -317,14 +343,12 @@
             </div>
         </div>
     </div> -->
-
                     <!-- </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <div class="mbanner">
     <div class="container">
         <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>
@@ -333,7 +357,6 @@
         </div>
     </div>
 </div>
-
 <!-- <div class="section3 no-mt marg-section">
 <div class="home-player-slider">
 <div class="slider-social">
@@ -345,12 +368,12 @@
 </div>
 </div>
 </div> -->
-
 <div class="section4">
     <div class="box-home">
         <div class="row margin0">
             <div class="col-sm-6 padding0">
-                <a ui-sref="fixtures({id:1})">
+                <!--<a ui-sref="fixtures({id:1})">-->
+                    <a ui-sref="comingsoon">
                     <div class="cont-box mr2 mb2">
                         <div class="img-holder">
                             <img ng-src="img/home/{{'box1'|translate}}.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
@@ -393,15 +416,13 @@
 <section class="marg-section">
     <div class="social-back ">
         <div class="container">
-
             <div class="text-center social-bk">
                 <img src="img/object/back-pink.png" class="img-responsive" alt="Jaipur Pink Panthers">
                 <div class="social-hub">
                     <h1 class="color-white">
-            {{'SOCIAL HUB'|translate}}</h1>
+                        {{'SOCIAL HUB'|translate}}</h1>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="social-logo text-center">
@@ -409,17 +430,15 @@
                 <i class="fa fa-facebook"></i>
             </span>
                         <div class="feed-social mt30">
-
-                            <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <div class="fb-page" data-href="https://www.facebook.com/JaipurPinkPanthers/" data-tabs="timeline" data-width="360" data-height="485"
+                                data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                                 <div class="fb-xfbml-parse-ignore">
                                     <blockquote cite="https://www.facebook.com/JaipurPinkPanthers/">
                                         <a href="https://www.facebook.com/JaipurPinkPanthers/">Jaipur Pink Panthers</a>
                                     </blockquote>
                                 </div>
                             </div>
-
                             <div id="fb-root"></div>
-
                         </div>
                     </div>
                 </div>
@@ -440,12 +459,12 @@
             </span>
                         <div class="feed-social mt30">
                             <!-- LightWidget WIDGET -->
-                            <iframe src="//lightwidget.com/widgets/7b766cab3d1a5097ba679fb551830aa9.html" id="lightwidget_7b766cab3d" name="lightwidget_7b766cab3d" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                            <iframe src="//lightwidget.com/widgets/7b766cab3d1a5097ba679fb551830aa9.html" id="lightwidget_7b766cab3d" name="lightwidget_7b766cab3d"
+                                scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -516,9 +535,8 @@
                     </div>
                     <div class="text-center">
                         <h4 class="line140 font-excl">
-
-                {{'Get exclusive JPP Wallpapers for your Desktop and Mobile'|translate}}
-            </h4>
+                            {{'Get exclusive JPP Wallpapers for your Desktop and Mobile'|translate}}
+                        </h4>
                     </div>
                     <div class="button text-center">
                         <a ui-sref="wallpaper" class="btn btn-primary">
