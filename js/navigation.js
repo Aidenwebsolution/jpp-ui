@@ -52,11 +52,14 @@ var navigationservice = angular.module('navigationservice', [])
         name: "About",
         url: "about-us",
         classis: "active"
-    }, {
-        name: "Fan Corner",
-        url: "fan-corner",
-        classis: "active"
-    }];
+    }
+    // , {
+    //     name: "Fan Corner",
+    //     url: "fan-corner",
+    //     classis: "active"
+    // }
+    
+    ];
 
     return {
         getnav: function() {
