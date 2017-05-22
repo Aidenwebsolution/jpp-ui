@@ -11,20 +11,18 @@
     </div>
   </div>
 </div> -->
-
 <!-- <div ng-include="template.header" class="template header header-home sticky-bottom" scroll></div> -->
 <div class="section2 home">
     <div class="custom-slider">
         <div class="row margin0">
             <div class="col-sm-12 padding0">
                 <div class="image-holder parent-height">
-                    <uib-carousel interval="3000" >
+                    <uib-carousel interval="3000">
                         <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
                         </uib-slide>
-
                         <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
@@ -61,7 +59,6 @@
             </div> -->
         </div>
     </div>
-
     <!-- //NEW UI -->
     <section class="banner-link ">
         <div class="container-fluid">
@@ -69,17 +66,19 @@
                 <div class="co-md-12">
                     <div class="custom-list box-black text-center">
                         <ul class="new-item-sec new-listing-name margin0">
-                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide"  animationloop="true" class="news-below">
+                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}"
+                                animation="slide" animationloop="true" class="news-below">
                                 <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
                                 <h3 class="margin0 uppercase-text ">
-                  {{new.name}}
-            </h3>
+                                    {{new.name}}
+                                </h3>
                             </li>
-                            <li ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide"  animationloop="true" class="news-below">
+                            <li ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}"
+                                animation="slide" animationloop="true" class="news-below">
                                 <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
                                 <h3 class="margin0 uppercase-text ">
-                  {{new.name}}
-            </h3>
+                                    {{new.name}}
+                                </h3>
                             </li>
                         </ul>
                         <!-- <flex-slider flex-slide="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide" item-width="200" item-margin="10" animationloop="true" move="2" class="news-below">
@@ -130,59 +129,71 @@
         <ul class="list-inline lined" mycircle style="width:18000px;">
             <li>
                 <span class="color-pink bold">Top Fan Tweets:
-                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do anything if we believe truly ourselves
+                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the
+                loss.. We can do anything if we believe truly ourselves
                 <span>by @renceabishek</span>
             </li>
-            <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack them..come on..#LePanga
+            <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack
+                them..come on..#LePanga
                 <span>by ‏@sivakumar1252</span>
             </li>
-            <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har ke Bad Hi Jeet Hai.#RoarForPanthers
+            <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har ke Bad
+                Hi Jeet Hai.#RoarForPanthers
                 <span>by ‏‏@janidipak40</span>
             </li>
             <li>@SrBachchan one loss for @JaipurPanthers but 2014 Champ come back with louder #Roar #Roaringforvictory #RoarLionRoar
                 <span>by ‏‏@‏KushDaunawat14</span>
             </li>
-            <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the #SMILING_KILLER COme on @JaipurPanthers
+            <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the #SMILING_KILLER
+                COme on @JaipurPanthers
                 <span>by ‏‏@bmraj100</span>
             </li>
-            <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther @JaipurPanthers @juniorbachchan #LePanga
+            <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther @JaipurPanthers
+                @juniorbachchan #LePanga
                 <span>
                     by ‏‏@nayangotecha</span>
             </li>
             <li>@JaipurPanthers #LePanga go for it boyss you can n have done this! All the best n #RoarForPanthers @juniorbachchan
                 <span>by ‏‏@Ruth4ashab</span>
             </li>
-            <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga #Panthers #LePanga @JaipurPanthers
+            <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga #Panthers
+                #LePanga @JaipurPanthers
                 <span>by ‏‏@Dhillon_WWE</span>
             </li>
-            <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master #RoarForPanthers #LePanga @ProKabaddi
+            <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master #RoarForPanthers #LePanga
+                @ProKabaddi
                 <span>by ‏‏@arnavini</span>
             </li>
-            <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start @JaipurPanthers at home @ProKabaddi! #LePanga
+            <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start @JaipurPanthers
+                at home @ProKabaddi! #LePanga
                 <span>by ‏‏@suhailchandhok</span>
             </li>
             <li>#Jasvir from @JaipurPanthers plays #Kabaddi similarly to how @virendersehwag plays #Cricket @ProKabaddi #LePanga
                 <span>by ‏‏@jay_jumbo</span>
             </li>
-            <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder we #roarforPanthers @JaipurPanthers
+            <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder we #roarforPanthers
+                @JaipurPanthers
                 <span>by ‏‏@ArvindSivdas</span>
             </li>
             <li>The Champions roared and how! Yayyy congratulations @JaipurPanthers @juniorbachchan.. Woo-hoo!! 😍💜😘
                 <span>by ‏‏@filmykiida</span>
             </li>
-            <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink Panthers se #LePanga
+            <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink Panthers se
+                #LePanga
                 <span>by ‏‏@tanujasamar1994</span>
             </li>
             <li>So... They can stop us? No no no! @juniorbachchan #RoarForPanthers #ProKabaddi @JaipurPanthers
                 <span>by ‏‏@iMichelle89</span>
             </li>
-            <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai hum TAIYAAR Beware from our PRAHAAR..
+            <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai hum TAIYAAR
+                Beware from our PRAHAAR..
                 <span>by ‏‏@TweetstarSanjay</span>
             </li>
             <li>@JaipurPanthers Now it's time to roar and tell others why r we season 1 winner.. #GoPanther #LePanga
                 <span>by ‏‏@shahi07</span>
             </li>
-            <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our #HARDWORK. COME ON @JaipurPanthers
+            <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our #HARDWORK. COME
+                ON @JaipurPanthers
                 <span>by ‏‏@bmraj100</span>
             </li>
             <li>brain &amp; brawn will lead @JaipurPanthers @PuneriPaltan #LePanga #KhelBadlega #roarforpanthers @juniorbachchan
@@ -202,16 +213,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-sm-6 pad0 marg2">
-
-
-
-                    <a ui-sref="fixtures" ng-if="journeyData.status === '1'"><img ng-src="{{journeyData.image | serverimage1}}"  class="img-responsive" alt="Champions Patna Pirates"></a>
-
-                     <div class="white-line-pad" ng-if="journeyData ==='No data found' || journeyData.status != '1'">
+                    <a ui-sref="fixtures" ng-if="journeyData.status === '1'"><img ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <div class="white-line-pad" ng-if="journeyData ==='No data found' || journeyData.status != '1'">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
-
                         <div class="nxt-match">
                             <div class="point-tbl mt30">
                                 <div class="points-table">
@@ -224,7 +230,7 @@
                                                 <th>W</th>
                                                 <th>L</th>
                                                 <th>D</th>
-                                                 <th>SD</th>
+                                                <th>SD</th>
                                                 <th>PTS</th>
                                             </tr>
                                         </thead>
@@ -239,7 +245,7 @@
                                                 <td>0</td>
                                                 <td>47</td>
                                             </tr>
-                                             <tr>
+                                            <tr>
                                                 <td>1</td>
                                                 <td>Jaipur Pink Panthers</td>
                                                 <td>14</td>
@@ -249,7 +255,7 @@
                                                 <td>0</td>
                                                 <td>47</td>
                                             </tr>
-<!--<tr ng-repeat="data in tables">
+                                            <!--<tr ng-repeat="data in tables">
     <td>{{data.no}}</td>
     <td>{{data.name}}</td>
     <td>{{data.play}} </td>
@@ -277,44 +283,39 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 pad0 marg2">
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-
                     <a ui-sref="fixtures" ng-if="congratulationData.status === '1'"><img ng-src="{{congratulationData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
-
-                     <div class="nxt-match white-line-pad" ng-if="congratulationData ==='No data found' || congratulationData.status !='1' ">
-
-            <div class="head-table text-center">
-              <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
-              <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
+                    <div class="nxt-match white-line-pad" ng-if="congratulationData ==='No data found' || congratulationData.status !='1' ">
+                        <div class="head-table text-center">
+                            <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
+                            <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
               -->
-                <h1 class="color-white font-tbl text-uppercase" >{{'SEASON 5 OPENER' | translate}}</h1>
-            </div>
-            <div class="match-schd  pt530">
-              <div class="row">
-                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                  <div class="new-logo">
-                    <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
-                  </div>
-                </div>
-                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                  <div class="mt30">
-                    <img src="img/object/back-vs.png" class="img-responsive">
-                  </div>
-                </div>
-
-                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                  <div class="new-logo">
-                    <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
-                  </div>
-                </div>
-              </div>
-              <!--<div class="gradient-bar homeie" ng-show="latestMatchOn">
+                            <h1 class="color-white font-tbl text-uppercase">{{'SEASON 5 OPENER' | translate}}</h1>
+                        </div>
+                        <div class="match-schd  pt530">
+                            <div class="row">
+                                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                    <div class="new-logo">
+                                        <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                    <div class="mt30">
+                                        <img src="img/object/back-vs.png" class="img-responsive">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                    <div class="new-logo">
+                                        <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="gradient-bar homeie" ng-show="latestMatchOn">
                 <div class="row">
                   <div class="col-md-4 padding0 col-xs-4">
                     <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
@@ -329,103 +330,98 @@
                   </div>
                 </div>
               </div>-->
-              <!--<div class="clearfix"></div>
+                            <!--<div class="clearfix"></div>
               <div class="text-center" ng-show="latestMatchOn">
                 <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
               </div>-->
-            </div>
-            <div class="text-center color-white">
-                <h4 class="text-capitalize  font-bold ">
-Sawai mansingh stadium,jaipur
-            </h4>
-            <span class="text-uppercase">june 20 2016,</span>
-            <span>20:00 (IST)</span>
-            </div>
-
-            <!--<div class="text-center color-white" >
+                        </div>
+                        <div class="text-center color-white">
+                            <h4 class="text-capitalize  font-bold ">
+                                Sawai mansingh stadium,jaipur
+                            </h4>
+                            <span class="text-uppercase">june 20 2016,</span>
+                            <span>20:00 (IST)</span>
+                        </div>
+                        <!--<div class="text-center color-white" >
 
               {{latestmatch.starttimedate}} (IST)
               <br> {{latestmatch.stadium}}
             </div>-->
-<!--ng-hide="latestMatchOn"-->
-            <div class="next-match" >
-                <!--ng-hide="latestMatchOn"-->
-              <div class="count-time custom-list text-center">
-                <ul class="padding0">
-                  <li>
-                    <div class="time-hrs">
-                      <h1 class="color-white font-tbl">
-                          <span>{{countdown.days | twodigit}}</span>
-                          <b>:</b>
-                        </h1>
-                      <span class="color-white pr20">DAYS</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="time-hrs">
-                      <h1 class="color-white font-tbl">
-                          <span>{{countdown.hours | twodigit}}</span>
-                          <b>:</b>
-                        </h1>
-                      <span class="color-white pr20">HOURS</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="time-hrs">
-                      <h1 class="color-white font-tbl">
-                          <span>{{countdown.minutes | twodigit}}</span>
-                          <b>:</b>
-                        </h1>
-                      <span class="color-white pr20">MINUTES</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="time-hrs">
-                      <h1 class="color-white font-tbl">
-                          <span>{{countdown.seconds | twodigit}}</span>
-                        </h1>
-                      <span class="color-white">SECONDS{{starttimedate | date}}</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-<div class="text-center button-set">
- <div class="text-center display-inline spacing-lr" >
-                    <!--ng-show="latestMatchOn"-->
-                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">BOOK TICKETS</a>
-              </div>
-                <div class="text-center display-inline spacing-lr" >
-                    <!--ng-show="latestMatchOn"-->
-                <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">ADD TO CALENDAR</a>
-              </div>
-</div>
-
-
-              <!-- <div class="text-center" ng-hide="latestMatchOn">
+                        <!--ng-hide="latestMatchOn"-->
+                        <div class="next-match">
+                            <!--ng-hide="latestMatchOn"-->
+                            <div class="count-time custom-list text-center">
+                                <ul class="padding0">
+                                    <li>
+                                        <div class="time-hrs">
+                                            <h1 class="color-white font-tbl">
+                                                <span>{{countdown.days | twodigit}}</span>
+                                                <b>:</b>
+                                            </h1>
+                                            <span class="color-white pr20">DAYS</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="time-hrs">
+                                            <h1 class="color-white font-tbl">
+                                                <span>{{countdown.hours | twodigit}}</span>
+                                                <b>:</b>
+                                            </h1>
+                                            <span class="color-white pr20">HOURS</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="time-hrs">
+                                            <h1 class="color-white font-tbl">
+                                                <span>{{countdown.minutes | twodigit}}</span>
+                                                <b>:</b>
+                                            </h1>
+                                            <span class="color-white pr20">MINUTES</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="time-hrs">
+                                            <h1 class="color-white font-tbl">
+                                                <span>{{countdown.seconds | twodigit}}</span>
+                                            </h1>
+                                            <span class="color-white">SECONDS{{starttimedate | date}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-center button-set">
+                                <div class="text-center display-inline spacing-lr">
+                                    <!--ng-show="latestMatchOn"-->
+                                    <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">BOOK TICKETS</a>
+                                </div>
+                                <div class="text-center display-inline spacing-lr">
+                                    <!--ng-show="latestMatchOn"-->
+                                    <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">ADD TO CALENDAR</a>
+                                </div>
+                            </div>
+                            <!-- <div class="text-center" ng-hide="latestMatchOn">
                 <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
                 <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
                   class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>
               </div> -->
-                    <!-- </div>
+                            <!-- </div>
             </div>
         </div>
     </div>
 
                     <!-- </div> -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </section>
 <section>
     <div class="pnt-wrd">
         <div class="container">
-            <div class="panther-world m-min84" >
-                        <img ng-if="currentlang=='en'" src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
-
-                        <img  ng-if="currentlang=='hi'" src="img/new-hindi.png"  alt="Jaipur Pink Panthers" class="img-responsive">
-
-                    </div>
+            <div class="panther-world m-min84">
+                <img ng-if="currentlang=='en'" src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
+                <img ng-if="currentlang=='hi'" src="img/new-hindi.png" alt="Jaipur Pink Panthers" class="img-responsive">
+            </div>
         </div>
     </div>
     <div class="roar-pnt">
@@ -433,11 +429,10 @@ Sawai mansingh stadium,jaipur
             <div class="row">
                 <div class="col-md-5 padding0">
                     <div class="pl-contest gallery-album">
-                        <img ng-src="{{guesswhoData.image | serverimage}}"  alt="Jaipur Pink Panthers" class="img-responsive">
+                        <img ng-src="{{guesswhoData.image | serverimage}}" alt="Jaipur Pink Panthers" class="img-responsive">
                         <div class="pl-link  text-center">
                             <div class="display-inline">
                                 <h4 class="uppercase-text color-white">{{'play this contest on'|translate}} </h4>
-
                             </div>
                             <div class="social-link custom-list display-inline text-center-md m-l15">
                                 <ul class="padding0 margin0">
@@ -465,7 +460,7 @@ Sawai mansingh stadium,jaipur
                     <div class="pl-contest-rg">
                         <ul class="padding0 margin0">
                             <li class="nomarg">
-                                <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn()" >
+                                <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn()">
                                     <img src="img/homes/games.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">{{'Game' |translate}}</h4>
@@ -496,14 +491,12 @@ Sawai mansingh stadium,jaipur
                                     </div>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 <section class=" bg-greys subcribe-bg">
     <div class="container ">
@@ -553,7 +546,6 @@ Sawai mansingh stadium,jaipur
         </div>
     </div>
 </div> -->
-
 <!-- <div class="section3 no-mt marg-section">
 <div class="home-player-slider">
 <div class="slider-social">
@@ -565,7 +557,6 @@ Sawai mansingh stadium,jaipur
 </div>
 </div>
 </div> -->
-
 <!-- <div class="section4">
     <div class="box-home">
         <div class="row margin0">
@@ -610,31 +601,30 @@ Sawai mansingh stadium,jaipur
         </div>
     </div>
 </div> -->
-
 <section>
-<div class="container-fluid padding0">
-  <div class="row margin0">
-    <div class="col-md-6 padding0">
-      <div class="by-ticket">
-      <a ui-sref="ticket" ng-if="currentlang=='en'">  <img src="img/homes/journeys.jpg" alt="" class="img-responsive"></a>
-<a ui-sref="ticket" ng-if="currentlang=='hi'">
-    <img src="img/homes/journeys-hindi.jpg" alt=""  class="img-responsive">
-</a>
-      </div>
+    <div class="container-fluid padding0">
+        <div class="row margin0">
+            <div class="col-md-6 padding0">
+                <div class="by-ticket">
+                    <a ui-sref="ticket" ng-if="currentlang=='en'"> <img src="img/homes/journeys.jpg" alt="" class="img-responsive"></a>
+                    <a ui-sref="ticket" ng-if="currentlang=='hi'">
+                        <img src="img/homes/journeys-hindi.jpg" alt="" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 padding0">
+                <div class="by-merchandise">
+                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'"><img src="img/homes/journeys.png" alt="" class="img-responsive"></a>
+                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'"><img src="img/homes/journeys-hindi.png" alt="" class="img-responsive"></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6 padding0">
-      <div class="by-merchandise">
-        <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'"><img src="img/homes/journeys.png" alt="" class="img-responsive"></a>
- <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'"><img src="img/homes/journeys-hindi.png" alt="" class="img-responsive"></a>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 <section class="section5 back-img ">
     <div class="container">
         <h1 class=" text-center bold text-uppercase color-primary">{{'Social Hub' | translate}}</h1>
-      <!--<div class="tab makeActive-service" ng-init="viewDetail=1">
+        <!--<div class="tab makeActive-service" ng-init="viewDetail=1">
 
                   <ul class="list-inline text-center ">
                       <li class="package-bg   view-data"  ng-click="viewDetail = 1;" ng-class="{'active': viewDetail==1, '': viewDetail!==1}">
@@ -665,44 +655,40 @@ Sawai mansingh stadium,jaipur
                   </ul>
                </div>
                ng-show="viewDetail == 1"-->
-    <div class="design" >
-               <div class="pack-one text-center">
-                   <!-- <h2>hi</h2> -->
-                   <div class="all-movies masonry-width">
-                                          <div masonry>
-              <div class="masonry-brick" ng-repeat="brick in bricks">
-                     <div class="masonry-box">
-                       <div class="img-mason relative">
-                         <a ng-if="brick.img" href="{{brick.img}}"   class="fancybox-thumb" rel="fancybox-thumb">
-                           <img ng-src="{{brick.img}}"  alt="A masonry brick">
-                           </a>
-                         <div class="infois text-left">
-                           <div class="min-logos display-inline">
-                                <img src="img/mini-logo.png" class="img-responsive" alt="logo">
-                           </div>
-                          <div class="inois-info display-inline ">
-                            <p class="margin0">{{brick.title}}</p>
-                            <span>like this page</span>
-                            <span>5 hrs</span>
-                          </div>
-
-                         </div>
-                       </div>
-
-
-                                 <div class="info">
-                                   <p class="text-justify">{{brick.info}}</p>
-                                   <span class="social-icons"></span>
-                                   <span class="social-text"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-                                 </div>
-                                                      </div>
-                               </div>
-                             </div>
-                      </div>
-               </div>
-
-               </div>
-                   <!--<div class="design" ng-show="viewDetail == 2">
+        <div class="design">
+            <div class="pack-one text-center">
+                <div class="all-movies masonry-width">
+                    <div masonry>
+                        <div class="masonry-brick" ng-repeat="brick in bricks">
+                            <div class="masonry-box">
+                                <div class="img-mason relative">
+                                    <a ng-if="brick.img" href="{{brick.img}}" class="fancybox-thumb" rel="fancybox-thumb">
+                                        <img ng-src="{{brick.img}}" alt="A masonry brick">
+                                    </a>
+                                    <div class="infois text-left">
+                                        <div class="min-logos display-inline">
+                                            <img src="img/mini-logo.png" class="img-responsive" alt="logo">
+                                        </div>
+                                        <div class="inois-info display-inline ">
+                                            <p class="margin0">{{brick.title}}</p>
+                                            <span>like this page</span>
+                                            <span>5 hrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p class="text-justify">{{brick.info}}</p>
+                                    <span class="social-icons"></span>
+                                    <span class="social-text"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers/iframe' frameborder='0' width='1000' height='1000' style='display:block;margin:0 auto;'></iframe>
+        <!--<div class="design" ng-show="viewDetail == 2">
                <div class="pack-one text-center">
                    <h2>hello</h2>
 
@@ -716,12 +702,7 @@ Sawai mansingh stadium,jaipur
 
                </div>-->
     </div>
-
-
-
-
 </section>
-
 <!-- <section class="marg-section">
     <div class="social-back ">
         <div class="container">
