@@ -126,6 +126,10 @@ var navigationservice = angular.module('navigationservice', [])
           getjourney: function(callback) {
          $http.get(tempUrl + "getjourney").success(callback);
      },
+       getcongratulation: function(callback) {
+          $http.get(tempUrl + "getcongratulation").success(callback);
+      },
+
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {

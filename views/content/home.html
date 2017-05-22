@@ -193,7 +193,7 @@
                 <div class="col-md-6 col-sm-6 pad0 marg2">
                     <!--<a ui-sref="fixtures"><img ng-src="img/{{'ban'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>-->
                     <!--<a ui-sref="fixtures" ng-if="journeyData.status == '1'">-->
-                    <a href="http://auction.jaipurpinkpanthers.com/" target="_blank">
+                    <a href="{{journeyData.link}}" target="_blank" ng-if="journeyData.status == '1'">
                         <img ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates">
                     </a>
                     <!-- <div class="white-line-pad">
@@ -242,8 +242,10 @@
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
                     <!--<a ui-sref="fixtures">-->
-                         <a href="https://twitter.com/JaipurPanthers" target="_blank">
-                        <img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>
+                          <a href="{{congratulationData.link}}" target="_blank">
+                         <!--<a href="https://twitter.com/JaipurPanthers" target="_blank">
+                        <img ng-src="img/{{'team'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates"></a>-->
+                          <img ng-src="{{congratulationData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
                     <!-- <div class="nxt-match white-line-pad">
 
             <div class="head-table text-center">
