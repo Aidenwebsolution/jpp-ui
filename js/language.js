@@ -19,6 +19,7 @@ var LanguageEnglish = {
     "weight":"weight",
     "tackles":"tackles",
     "Game":"Game",
+    "successful tackles":"successful tackles",
     "empty  raids":"empty  raids",
     "log in":"log in",
     "sign up":"sign up",
@@ -424,6 +425,8 @@ var LanguageEnglish = {
 var LanguageHindi = {
     "green cards":"हरा कार्ड",
     "red cards":"लाल कार्ड",
+    "successful tackles":"सफल टैकल",
+    "unsuccessful tackles":"असफल टैकल",
     "yellow cards":"पीला कार्ड",
     "empty  raids":"खाली रेड",
     "successful":"सफल",
