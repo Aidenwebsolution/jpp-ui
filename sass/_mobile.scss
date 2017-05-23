@@ -489,9 +489,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         margin-bottom: 50px;
     }
 
-    .mt100 {
-        margin-top: 50px;
-    }
+    // .mt100 {
+    //     margin-top: 50px;
+    // }
 
     .f16 {
         font-size: 16px;
@@ -719,6 +719,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .navbar-fixed-bottom .navbar-collapse,
     .navbar-fixed-top .navbar-collapse {
         max-height: 400px;
+        margin-top: 20px;
     }
 
     nav li.high:before {
@@ -1121,6 +1122,68 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 .design{
     .all-movies {
     margin-left: 10%;
+}
+}
+
+.hello {
+    li h3{
+    font-size: 16px;
+}
+.form{
+    padding: 0;
+}
+ .carts{
+     padding: 40px 20px;
+     a{
+         margin-right: 0;
+     }
+ }
+}
+
+.social-buttons .signs{
+    margin-bottom: 15px;
+}
+
+.player-log {
+    h4{
+    margin-left: 0;
+}
+    .image {
+        @include position(absolute,100px 0 null null); 
+        @include size(100px,100px);
+}
+}
+
+.navbar-fixed-top{
+    .mt20{
+        margin-top: 0;
+    }
+    .log-sign{
+        float: right;
+    }
+}
+.navbar-default .navbar-nav > .active > a{
+    background-color: transparent;
+}
+
+.navbar-brand {
+    img {
+    width: 100px;
+}
+}
+
+.banner-title {
+    margin-top: 151px;
+}
+
+.fix {
+    h1 {
+    width: 100px;
+}
+}
+.fixings{
+        h1 {
+    width: 180px;
 }
 }
 
