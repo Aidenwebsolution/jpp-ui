@@ -205,7 +205,7 @@ nav {
         &.high {
             &:before {
                 content: "";
-                background-image: url("../img/buy-now.png");
+                // background-image: url("../img/buy-now.png");
                 height: 30px;
                 background-size: contain;
                 position: absolute;
@@ -3002,7 +3002,11 @@ a.ilogo {
 }
 
 .pt40s {
-    padding-top: 47px;
+    padding-top: 30px;
+}
+.float-right{
+    float: right;
+
 }
 
 .pt30s {

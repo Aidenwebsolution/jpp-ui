@@ -9,13 +9,13 @@ var globalLocale = moment.locale('hi');
 var localLocale = moment();
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'wu.masonry', 'angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
-  $scope.currentlang = $.jStorage.get("languageSet");
-  console.log($scope.currentlang);
-  // globalFunc.changeLang = function() {
-  //     $scope.currentlang = currentlang;
-  //
-  // }
+.controller('HomeCtrl', function ($scope, TemplateService, $state, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
+    $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    // globalFunc.changeLang = function() {
+    //     $scope.currentlang = currentlang;
+    //
+    // }
     // $scope.tab2 = 'fb';
     // $scope.classa = 'actives';
     // $scope.classb = '';
@@ -44,7 +44,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     var languagePicker = {};
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
 
@@ -56,7 +56,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //     });
     // };
     $scope.signupdata = {};
-    $scope.submitSignup = function(signupdata) {
+    $scope.submitSignup = function (signupdata) {
         console.log("signupdata", signupdata);
         $scope.incorrectPass = false;
         $scope.isCheckedmsg = false;
@@ -65,32 +65,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         if (signupdata) {
             console.log("signupdata", signupdata);
             if (signupdata.password == signupdata.confirmPass) {
-              $scope.incorrectPass = false;
+                $scope.incorrectPass = false;
                 if (signupdata.isChecked === undefined) {
-                  $scope.checkMark='Please tick mark';
-                }else {
-                  $scope.checkMark="";
-                  NavigationService.submitSignup(signupdata, function(data) {
-                      console.log("data", data);
-                      if (data.logged_in) {
-                          $rootScope.loggedIn = true;
-                          $scope.succesSignup = true;
-                          $scope.alreadyExist = false;
-                          $timeout(function() {
+                    $scope.checkMark = 'Please tick mark';
+                } else {
+                    $scope.checkMark = "";
+                    NavigationService.submitSignup(signupdata, function (data) {
+                        console.log("data", data);
+                        if (data.logged_in) {
+                            $rootScope.loggedIn = true;
+                            $scope.succesSignup = true;
+                            $scope.alreadyExist = false;
+                            $timeout(function () {
 
-                              $scope.succesSignup = false;
-                              $scope.alreadyExist = false;
-                              $scope.signupdata = {};
-                              $scope.modalLogsInstance.close();
-                          }, 2000);
+                                $scope.succesSignup = false;
+                                $scope.alreadyExist = false;
+                                $scope.signupdata = {};
+                                $scope.modalLogsInstance.close();
+                            }, 2000);
 
-                      } else {
-                          $scope.succesSignup = false;
-                          $rootScope.loggedIn = false;
-                          console.log("im else");
-                          $scope.alreadyExist = true;
+                        } else {
+                            $scope.succesSignup = false;
+                            $rootScope.loggedIn = false;
+                            console.log("im else");
+                            $scope.alreadyExist = true;
                         }
-                  })
+                    })
                 }
 
             } else {
@@ -100,18 +100,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
     $scope.loginData = {};
     $scope.incorrectDetails = false;
-    $scope.loginSubmit = function(loginData) {
+    $scope.loginSubmit = function (loginData) {
         console.log("loginData", loginData);
         $scope.incorrectDetails = false;
         if (loginData) {
 
-            NavigationService.submitLogin(loginData, function(data) {
+            NavigationService.submitLogin(loginData, function (data) {
                 console.log("data", data);
                 if (data.logged_in) {
+                     $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
                     $scope.incorrectDetails = false;
                     $rootScope.loggedIn = true;
                     $scope.successlogin = true;
-                    $timeout(function() {
+                    $timeout(function () {
 
                         $scope.successlogin = false;
                         $scope.incorrectDetails = false;
@@ -130,7 +132,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.classsa = 'active-tab';
     $scope.classsb = '';
 
-    $scope.tabchanges = function(tab, a) {
+    $scope.tabchanges = function (tab, a) {
         $scope.tabs = tab;
         if (a == 1) {
             $scope.classsa = 'active-tab';
@@ -172,15 +174,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log($scope.currentlang);
 
 
-    $scope.isCheckLoggedIn = function() {
-            console.log("im authenticate");
-            NavigationService.getAuthenticate(function(data) {
-                console.log("getAuthenticate", data);
+    $scope.isCheckLoggedIn = function (value) {
+        console.log("im authenticate");
+        NavigationService.getAuthenticate(function (data) {
+            console.log("getAuthenticate", data);
+           
                 if (data.logged_in) {
                     console.log("im in true");
-                     $rootScope.userFirstName = data.firstname;
-                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
+                     if (value == 'Game') {
+                console.log("im in game");
+                $state.go('Comingsoon');
+            } 
+
+                    if (value == 'JPP') {
+                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
+                    }
+                    if (value == 'Gallery') {
+                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
+                    }
+                    if (value == 'WALLPAPERS') {
+                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
+                    }
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -189,29 +206,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         scope: $scope,
                     });
                 }
-            })
-        }
 
-    globalFunc.changeLang = function() {
+          
+
+        })
+    }
+
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
         console.log($scope.currentlang);
     };
-    NavigationService.getSlider(function(data) {
+    NavigationService.getSlider(function (data) {
         console.log(data);
         $scope.sliderdata = data.data;
         console.log('$scope.sliderdata', $scope.sliderdata);
     });
 
-    NavigationService.getjourney(function(data) {
+    NavigationService.getjourney(function (data) {
         $scope.journeyData = data.data;
         console.log('$scope.journeyData', $scope.journeyData);
     });
-    NavigationService.getguesswho(function(data) {
+    NavigationService.getguesswho(function (data) {
         $scope.guesswhoData = data.data;
         console.log('$scope.guesswhoData', $scope.guesswhoData);
     });
 
-    NavigationService.getcongratulation(function(data) {
+    NavigationService.getcongratulation(function (data) {
         $scope.congratulationData = data.data;
         console.log('$scope.congratulationData', $scope.congratulationData);
     });
@@ -219,9 +239,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //Used to name the .html file
     $scope.openers = {};
     $scope.homegame = {};
-    $scope.$on('$viewContentLoaded', function(event) {
-        $timeout(function() {
-            (function(d, s, id) {
+    $scope.$on('$viewContentLoaded', function (event) {
+        $timeout(function () {
+            (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
                 js = d.createElement(s);
@@ -230,7 +250,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
-            ! function(d, s, id) {
+            ! function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0],
                     p = /^http:/.test(d.location) ? 'http' : 'https';
                 if (!d.getElementById(id)) {
@@ -567,7 +587,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     // $.jStorage.set("languageSet", 'en');
     // $scope.news = $scope.englishbanner;
 
-    globalFunc.changeSlides = function(lang) {
+    globalFunc.changeSlides = function (lang) {
         // console.log(lang);
         // NavigationService.getAllSliders(function(data) {
         //     $scope.news = [];
@@ -585,7 +605,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     };
 
-    NavigationService.getLatestMatch(function(data) {
+    NavigationService.getLatestMatch(function (data) {
         console.log(data);
         $scope.latestmatch = data;
         $scope.schedule = $filter('orderBy')($scope.schedule, "order");
@@ -605,14 +625,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log($scope.calendarDate);
         $scope.latestMatchOn = false;
     });
-    $scope.refreshTimer = function(eventTime) {
+    $scope.refreshTimer = function (eventTime) {
         eventTime = new Date(eventTime);
         console.log(eventTime);
         $scope.rightNow = new Date();
         $scope.diffTime = eventTime - $scope.rightNow;
         var duration = moment.duration($scope.diffTime, 'milliseconds');
 
-        $interval(function() {
+        $interval(function () {
 
             duration = moment.duration(duration - 1000, 'milliseconds');
             if (duration._milliseconds > 0) {
@@ -665,33 +685,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   console.log("calendar dates");
     //   console.log($scope.calendarDatehome);
     // });
-    NavigationService.getallpoint(function(data) {
+    NavigationService.getallpoint(function (data) {
         $scope.table = data;
         $scope.table = $filter('orderBy')($scope.table, "order");
         console.log($scope.table);
     });
-//     $scope.tables[{
-// no:'3',
-// name:'Telugu Titans',
-// play:'14',
-// win:'9',
-// loss:'5',
-// draw:'1',
-// sd:'0',
-// pts:'47'
+    //     $scope.tables[{
+    // no:'3',
+    // name:'Telugu Titans',
+    // play:'14',
+    // win:'9',
+    // loss:'5',
+    // draw:'1',
+    // sd:'0',
+    // pts:'47'
 
-//     },{
-// no:'3',
-// name:'Jaipur Pink Panthers',
-// play:'14',
-// win:'9',
-// loss:'5',
-// draw:'1',
-// sd:'0',
-// pts:'47'
-//     }];
+    //     },{
+    // no:'3',
+    // name:'Jaipur Pink Panthers',
+    // play:'14',
+    // win:'9',
+    // loss:'5',
+    // draw:'1',
+    // sd:'0',
+    // pts:'47'
+    //     }];
     var clickCount = 0;
-    $scope.changeSlide = function(data) {
+    $scope.changeSlide = function (data) {
         $scope.currentActive = data;
         if (clickCount === 0) {
 
@@ -704,7 +724,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.classb = '';
     $scope.classc = '';
 
-    $scope.tabchange = function(tab, a) {
+    $scope.tabchange = function (tab, a) {
         //        console.log(tab);
         $scope.result = [];
         $scope.allresult = [];
@@ -805,7 +825,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         name: "JASVIR SINGH",
         desg: "Raider",
     }];
-    $scope.scrollTo = function(image, ind) {
+    $scope.scrollTo = function (image, ind) {
         $scope.listposition = {
             left: (IMAGE_WIDTH * ind * -1) + "px"
         };
@@ -814,7 +834,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('FixturesCtrl', function($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
+.controller('FixturesCtrl', function ($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
     //Used to name the .html file
     $scope.oneAtATime = true;
     $scope.template = TemplateService.changecontent("fixtures");
@@ -826,7 +846,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
@@ -834,17 +854,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.fixtureid = $stateParams.id;
     var i = 0;
-    $scope.openAccordion = function(item) {
+    $scope.openAccordion = function (item) {
         item.isOpen = false;
         // item.classes = "panel-open";
     };
-    NavigationService.getSchedule(function(data) {
+    NavigationService.getSchedule(function (data) {
         $scope.schedules = data;
         console.log(data);
         $scope.schedules[0].isOpen = false;
         var i = 0;
         $scope.calendarDate = [];
-        _.each($scope.schedules, function(key) {
+        _.each($scope.schedules, function (key) {
             var oldDateObj1 = new Date(key.starttimedate);
             var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
             var oldDateObj2 = new Date(key.starttimedate);
@@ -865,9 +885,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.openAccordionById($scope.fixtureid);
         }
     });
-    $scope.openAccordionById = function(id) {
+    $scope.openAccordionById = function (id) {
         console.log(id);
-        _.each($scope.schedules, function(key) {
+        _.each($scope.schedules, function (key) {
             if (key.id == $scope.fixtureid) {
                 key.isOpen = true;
                 key.classes = "panel-open";
@@ -876,14 +896,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
     $scope.season = 3;
-    $scope.changeTab = function(data) {
+    $scope.changeTab = function (data) {
         $scope.season = data;
         console.log($scope.season);
     };
 
 })
 
-.controller('GalleryInnerCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('GalleryInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("gallery-inner");
     $scope.menutitle = NavigationService.makeactive("Gallery");
@@ -896,13 +916,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.currentlang = $.jStorage.get("languageSet");
 
     console.log(currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
 
     console.log($scope.galleryid);
-    NavigationService.getAllGallery(function(data) {
+    NavigationService.getAllGallery(function (data) {
         $scope.galleryArr = data;
         $scope.gallerycategory = _.find($scope.galleryArr, {
             "id": $scope.galleryid
@@ -911,7 +931,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "id": $scope.galleryid
         }).hindiname;
     });
-    NavigationService.getGallerySlide($scope.galleryid, function(data) {
+    NavigationService.getGallerySlide($scope.galleryid, function (data) {
         console.log(data);
         $scope.slides = data;
     });
@@ -921,7 +941,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 
-.controller('GalleryCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+.controller('GalleryCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("gallery");
     $scope.menutitle = NavigationService.makeactive("Photo Gallery");
@@ -935,12 +955,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.currentlang = $.jStorage.get("languageSet");
 
     console.log(currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
-    $scope.getPhotos = function() {
-        NavigationService.getAllGallery(function(data) {
+    $scope.getPhotos = function () {
+        NavigationService.getAllGallery(function (data) {
             $scope.slides = data;
             if (data.length === 0) {
                 $scope.msg = "No Data Found";
@@ -953,8 +973,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.videos = [];
     var currIndex = 0;
 
-    $scope.getVideos = function() {
-        NavigationService.getAllVideoGallery(function(data) {
+    $scope.getVideos = function () {
+        NavigationService.getAllVideoGallery(function (data) {
             $scope.videos = data;
             if (data.length === 0) {
                 $scope.msg2 = "No Data Found.";
@@ -964,11 +984,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.season = 4;
-    $scope.changeTabs = function(data) {
+    $scope.changeTabs = function (data) {
         $scope.season = data;
         console.log($scope.season);
     };
-    $scope.changeTab = function(value) {
+    $scope.changeTab = function (value) {
         if (value === true) {
             $scope.photos = true;
             $scope.getPhotos();
@@ -980,7 +1000,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('JPPTVCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('JPPTVCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("jpp-tv");
     $scope.menutitle = NavigationService.makeactive("JPP TV");
@@ -992,13 +1012,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.currentlang = $.jStorage.get("languageSet");
 
     console.log(currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
 
-    $scope.getVideos = function() {
-        NavigationService.getAllVideoGallery(function(data) {
+    $scope.getVideos = function () {
+        NavigationService.getAllVideoGallery(function (data) {
             $scope.videos = data;
             if (data.length === 0) {
                 $scope.msg = "Sorry, nothing to show here!";
@@ -1010,7 +1030,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('WallpapperCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('WallpapperCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper");
     $scope.menutitle = NavigationService.makeactive("Wallpapers");
@@ -1020,13 +1040,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.currentlang = $.jStorage.get("languageSet");
 
     console.log(currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
 
 
-    NavigationService.getWallpaperCategoryForDesktop(function(data) {
+    NavigationService.getWallpaperCategoryForDesktop(function (data) {
         $scope.wallpapper = data;
     });
 
@@ -1048,7 +1068,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 })
 
-.controller('WallpapperInnerCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('WallpapperInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper-inner");
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
@@ -1065,14 +1085,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.currentlang = $.jStorage.get("languageSet");
 
     console.log(currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
 
 
 
-    NavigationService.getWallpaperCategoryForDesktop(function(data) {
+    NavigationService.getWallpaperCategoryForDesktop(function (data) {
         $scope.wallpaperArr = data;
         $scope.wallpapercategory = _.find($scope.wallpaperArr, {
             "id": $scope.wallpaperid
@@ -1082,13 +1102,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }).hname;
     });
 
-    $scope.getWallpapers = function(page) {
+    $scope.getWallpapers = function (page) {
         $scope.lastpage = false;
         $scope.request = {
             pageno: page,
             wallpaperid: $scope.wallpaperid
         };
-        NavigationService.getallwallpaper($scope.request, function(data) {
+        NavigationService.getallwallpaper($scope.request, function (data) {
             var temp = data.queryresult;
             if ($scope.wallpapper.length === 0) {
                 $scope.msg = "No wallpapers found.";
@@ -1098,21 +1118,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             if (temp.length === 0) {
                 $scope.lastpage = true;
             } else {
-                _.each(temp, function(key) {
+                _.each(temp, function (key) {
                     $scope.wallpapper.push(key);
                 });
             }
         });
     };
     $scope.getWallpapers(pageNo);
-    $scope.viewMore = function() {
+    $scope.viewMore = function () {
         pageNo++;
         $scope.getWallpapers(pageNo);
     };
 
 })
 
-.controller('TicketMerchandizeCtrl', function($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
+.controller('TicketMerchandizeCtrl', function ($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("ticket-merchandize");
     $scope.menutitle = NavigationService.makeactive("Tickets & Merchandise");
@@ -1130,7 +1150,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
         console.log($scope.currentlang);
     }
@@ -1163,17 +1183,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.fixtureid = $stateParams.id;
     var i = 0;
-    $scope.openAccordion = function(item) {
+    $scope.openAccordion = function (item) {
         item.isOpen = false;
         // item.classes = "panel-open";
     };
-    NavigationService.getScheduleSeason4(function(data) {
+    NavigationService.getScheduleSeason4(function (data) {
         $scope.schedules = data;
         console.log(data);
         $scope.schedules[0].isOpen = false;
         var i = 0;
         $scope.calendarDate = [];
-        _.each($scope.schedules, function(key) {
+        _.each($scope.schedules, function (key) {
             var oldDateObj1 = new Date(key.starttimedate);
             var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
             var oldDateObj2 = new Date(key.starttimedate);
@@ -1194,7 +1214,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.openAccordionById($scope.fixtureid);
         }
         i = 1;
-        _.each($scope.schedules, function(key) {
+        _.each($scope.schedules, function (key) {
             if (key.ishome == '1') {
                 key.index = i;
             }
@@ -1202,9 +1222,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
         console.log("schedules", $scope.schedules);
     });
-    $scope.openAccordionById = function(id) {
+    $scope.openAccordionById = function (id) {
         console.log(id);
-        _.each($scope.schedules, function(key) {
+        _.each($scope.schedules, function (key) {
             if (key.id == $scope.fixtureid) {
                 key.isOpen = true;
                 key.classes = "panel-open";
@@ -1213,13 +1233,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
     $scope.season = 4;
-    $scope.changeTab = function(data) {
+    $scope.changeTab = function (data) {
         $scope.season = data;
         console.log($scope.season);
     };
 })
 
-.controller('NewsMediaCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+.controller('NewsMediaCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("news-media");
         $scope.menutitle = NavigationService.makeactive("News");
@@ -1233,16 +1253,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = $.jStorage.get("languageSet");
 
         console.log(currentlang);
-        globalFunc.changeLang = function() {
+        globalFunc.changeLang = function () {
             $scope.currentlang = currentlang;
 
         }
         $scope.news2 = [];
-        NavigationService.getallnews(function(data) {
+        NavigationService.getallnews(function (data) {
             $scope.news = data;
             $scope.news = _.chunk($scope.news, 2);
             // console.log(data[0].timestamp);
-            $scope.getMonthName = function(val) {
+            $scope.getMonthName = function (val) {
                     switch (val) {
                         case 0:
                             day = "जनवरी";
@@ -1346,28 +1366,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
 
     })
-    .controller('FanCornerCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
+    .controller('FanCornerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("fan-corner");
         $scope.menutitle = NavigationService.makeactive("Fan Corner");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-           $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
-        $scope.currentlang = currentlang;
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
+        globalFunc.changeLang = function () {
+            $scope.currentlang = currentlang;
 
-    }
+        }
         $scope.news = [];
-        NavigationService.getallnews(function(data) {
+        NavigationService.getallnews(function (data) {
             $scope.news = data;
         });
         $scope.register = "";
         $scope.register.favouriteplayer = "";
-        $scope.changeSelected = function() {
+        $scope.changeSelected = function () {
             $scope.register.favouriteplayer = _.map(_.filter($scope.players, "status"), "name").toString();
         };
-            $scope.dropdown = function () {
+        $scope.dropdown = function () {
             $scope.invisible = $scope.invisible ? false : true;
         };
 
@@ -1408,8 +1428,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.register = {};
         $scope.showmsg = false;
 
-        $scope.doRegister = function() {
-            NavigationService.contactus($scope.register, function(data) {
+        $scope.doRegister = function () {
+            NavigationService.contactus($scope.register, function (data) {
                 console.log(data);
                 if (data.value === true) {
                     $scope.showmsg = true;
@@ -1419,7 +1439,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('NewsDetailCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('NewsDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("news-detail");
         $scope.menutitle = NavigationService.makeactive("News");
@@ -1427,7 +1447,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('TicketCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('TicketCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("ticket");
         $scope.menutitle = NavigationService.makeactive("Ticket");
@@ -1435,103 +1455,103 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-        .controller('PlayersInsideCtrl', function($scope, TemplateService, NavigationService, $timeout,$stateParams) {
+    .controller('PlayersInsideCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("players-inside");
         $scope.menutitle = NavigationService.makeactive("Players Inside");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-            $scope.bricks = [{
-        img: 'img/news/n4.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
-    }, {
-        img: 'img/news/n6.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/news/n3.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
-    }, {
-        img: 'img/gallery/g3.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/gallery/g6.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/wallpapper/w7.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/team.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
-    }];
+        $scope.bricks = [{
+            img: 'img/news/n4.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
+        }, {
+            img: 'img/news/n6.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/news/n3.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
+        }, {
+            img: 'img/gallery/g3.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/gallery/g6.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/wallpapper/w7.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/team.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
+        }];
 
-//     $scope.showcaseSlides=[{
-// img:'img/players/slider-player.png',
-//   link: '',
-//     },{
-// img:'img/players/slider-player.png',
-//     },{
-// img:'img/players/slider-player.png',
-//     },{
-// img:'img/players/slider-player.png',
-//     },{
-// img:'img/players/slider-player.png',
-//     },{
-// img:'img/players/slider-player.png',
-//     },{
-// img:'img/players/slider-player.png',
-//     }];
+        //     $scope.showcaseSlides=[{
+        // img:'img/players/slider-player.png',
+        //   link: '',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     },{
+        // img:'img/players/slider-player.png',
+        //     }];
 
 
-    NavigationService.getallplayers(function(data){
-      $scope.showcaseSlides=[];
-      $scope.showcaseSlides =data.data.queryresult;
-      console.log("$scope.showcaseSlides",$scope.showcaseSlides);
-      var findIndex =_.findIndex($scope.showcaseSlides,function(value){
-        return value.id == $stateParams.id;
-      });
-      console.log("findIndex",findIndex);
-      if (findIndex>=0) {
-        $scope.showcaseSlides.splice(findIndex,1);
-      }else {
-          $scope.showcaseSlides = data.data.queryresult;
-      }
+        NavigationService.getallplayers(function (data) {
+            $scope.showcaseSlides = [];
+            $scope.showcaseSlides = data.data.queryresult;
+            console.log("$scope.showcaseSlides", $scope.showcaseSlides);
+            var findIndex = _.findIndex($scope.showcaseSlides, function (value) {
+                return value.id == $stateParams.id;
+            });
+            console.log("findIndex", findIndex);
+            if (findIndex >= 0) {
+                $scope.showcaseSlides.splice(findIndex, 1);
+            } else {
+                $scope.showcaseSlides = data.data.queryresult;
+            }
+
+        })
+
+
+        $scope.stateparamsId = $stateParams.id;
+        NavigationService.getsingleplayer($stateParams.id, function (data) {
+
+            $scope.playerDetails = data.data.data.player;
+            $scope.achievements = _.chunk(data.data.data.achievmant, 6);
+            $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
+            console.log("  $scope.achievements ", $scope.achievements);
+            console.log("$scope.tournamentplayed", $scope.tournamentplayed);
+            console.log("  $scope.playerDetails", $scope.playerDetails);
+        })
 
     })
 
-
-    $scope.stateparamsId=$stateParams.id;
-    NavigationService.getsingleplayer($stateParams.id,function(data){
-
-      $scope.playerDetails =data.data.data.player;
-      $scope.achievements = _.chunk(data.data.data.achievmant,6);
-      $scope.tournamentplayed=_.chunk(data.data.data.tournamentplayed,6);
-      console.log("  $scope.achievements ",  $scope.achievements );
-      console.log("$scope.tournamentplayed",$scope.tournamentplayed);
-      console.log("  $scope.playerDetails",  $scope.playerDetails);
-    })
-
-    })
-
-.controller('PlayersCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('PlayersCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("players");
     $scope.menutitle = NavigationService.makeactive("Players");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-      $scope.currentlang = $.jStorage.get("languageSet");
+    $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
-    $scope.getPlayers = function() {
+    $scope.getPlayers = function () {
         if ($scope.slideindex === undefined) {
             $scope.slideindex = 0;
         }
@@ -1702,12 +1722,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //     }
         // ];
 
-        NavigationService.getallplayers(function(data){
-          $scope.player =data.data.queryresult;
-          console.log("$scope.allPlayers",$scope.player);
+        NavigationService.getallplayers(function (data) {
+            $scope.player = data.data.queryresult;
+            console.log("$scope.allPlayers", $scope.player);
         })
         var i = 0;
-        _.each($scope.player, function(key) {
+        _.each($scope.player, function (key) {
             key.id = i;
             i++;
         });
@@ -1716,7 +1736,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
     $scope.getPlayers();
 
-    $scope.openPlayers = function(data, index) {
+    $scope.openPlayers = function (data, index) {
         // $scope.slideindex = index;
         data.active = true;
         $scope.players = $scope.player;
@@ -1732,7 +1752,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             controller: 'PlayersCtrl',
             scope: $scope,
             resolve: {
-                slideindex: function() {
+                slideindex: function () {
                     return $scope.players;
                 }
             }
@@ -1744,40 +1764,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('AboutUsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("about-us");
-    $scope.menutitle = NavigationService.makeactive("About");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-     $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
-        $scope.currentlang = currentlang;
+.controller('AboutUsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("about-us");
+        $scope.menutitle = NavigationService.makeactive("About");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
+        globalFunc.changeLang = function () {
+            $scope.currentlang = currentlang;
 
-    }
-
-
-
-})
-.controller('ComingsoonCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("comingsoon");
-    $scope.menutitle = NavigationService.makeactive("Comingsoon");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-     $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
-        $scope.currentlang = currentlang;
-
-    }
+        }
 
 
 
-})
+    })
+    .controller('ComingsoonCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("comingsoon");
+        $scope.menutitle = NavigationService.makeactive("Comingsoon");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
+        globalFunc.changeLang = function () {
+            $scope.currentlang = currentlang;
 
-.controller('PointsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        }
+
+
+
+    })
+
+.controller('PointsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("points-table");
     $scope.menutitle = NavigationService.makeactive("Points");
@@ -1785,21 +1805,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.currentlang = $.jStorage.get("languageSet");
     console.log($scope.currentlang);
-    globalFunc.changeLang = function() {
+    globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
 })
 
-.controller('headerctrl', function($scope, TemplateService, $translate, $uibModal,$state, NavigationService, $rootScope, $timeout) {
+.controller('headerctrl', function ($scope, TemplateService, $translate, $uibModal, $state, NavigationService, $rootScope, $timeout) {
 
     var languagePicker = {};
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
 
-    $scope.logs = function() {
+    $scope.logs = function () {
         $scope.modalLogsInstance = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/logs.html',
@@ -1826,22 +1846,41 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //         })
     //     }
 
-    $scope.gotoFun=function(submenu){
-        console.log("im in",submenu);
-        if(submenu == 'Games'){
-            $state.go('Comingsoon');
-        }
-        if(submenu == 'Gallery'){
-             NavigationService.getAuthenticate(function(data) {
+    $scope.gotoFun = function (submenu) {
+        console.log("im in", submenu);
+        if (submenu == 'Games') {
+              NavigationService.getAuthenticate(function (data) {
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
                     console.log("im in true");
-                     $rootScope.userFirstName = data.firstname;
-                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
                     // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
-                     window.location="http://jaipurpinkpanthers.com/#/gallery";
+                    $state.go('Comingsoon');
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+            })
+          
+        }
+        if (submenu == 'Gallery') {
+            NavigationService.getAuthenticate(function (data) {
+                console.log("getAuthenticate", data);
+                if (data.logged_in) {
+                    console.log("im in true");
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                    //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
+                    window.location = "http://jaipurpinkpanthers.com/#/gallery";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -1853,17 +1892,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             })
 
         }
-        if(submenu == 'Wallpapers'){
-              NavigationService.getAuthenticate(function(data) {
+        if (submenu == 'Wallpapers') {
+            NavigationService.getAuthenticate(function (data) {
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
                     console.log("im in true");
-                     $rootScope.userFirstName = data.firstname;
-                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
                     // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
-                     window.location="http://jaipurpinkpanthers.com/#/wallpaper";
+                    window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -1874,17 +1913,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 }
             })
         }
-        if(submenu == 'JPP TV'){
- NavigationService.getAuthenticate(function(data) {
+        if (submenu == 'JPP TV') {
+            NavigationService.getAuthenticate(function (data) {
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
                     console.log("im in true");
-                     $rootScope.userFirstName = data.firstname;
-                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
                     // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
-                     window.location="http://jaipurpinkpanthers.com/#/jpp-tv";
+                    window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -1896,27 +1935,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             })
         }
     }
-    $scope.logoutUser = function() {
+    $scope.logoutUser = function () {
         $rootScope.loggedIn = false;
-        NavigationService.logoutUser(function(data) {
+        NavigationService.logoutUser(function (data) {
             console.log("im in logout", data);
         })
     };
-    $scope.authentication=function(){
-      NavigationService.getAuthenticate(function(data) {
-          if (data.logged_in) {
-              console.log(data,"data");
-               $rootScope.userFirstName = data.firstname;
-            console.log("$rootScope.userFirstName0",$rootScope.userFirstName)
-              $rootScope.loggedIn = true;
-          } else {
-              $rootScope.loggedIn = false;
-          }
-      })
+    $scope.authentication = function () {
+        NavigationService.getAuthenticate(function (data) {
+            if (data.logged_in) {
+                console.log(data, "data");
+                $rootScope.userFirstName = data.firstname;
+                console.log("$rootScope.userFirstName0", $rootScope.userFirstName)
+                $rootScope.loggedIn = true;
+            } else {
+                $rootScope.loggedIn = false;
+            }
+        })
     }
-$scope.authentication();
+    $scope.authentication();
     $scope.signupdata = {};
-    $scope.submitSignup = function(signupdata) {
+    $scope.submitSignup = function (signupdata) {
         console.log("signupdata", signupdata.isChecked);
         $scope.incorrectPass = false;
         $scope.isCheckedmsg = false;
@@ -1926,34 +1965,34 @@ $scope.authentication();
             console.log("signupdata", signupdata);
             if (signupdata.password == signupdata.confirmPass) {
                 $scope.incorrectPass = false;
-              if (signupdata.isChecked === undefined) {
-                $scope.checkMark='Please tick mark';
+                if (signupdata.isChecked === undefined) {
+                    $scope.checkMark = 'Please tick mark';
 
 
-              }else {
-                $scope.checkMark="";
-                NavigationService.submitSignup(signupdata, function(data) {
-                    console.log("data", data);
-                    if (data.logged_in) {
-                        $rootScope.loggedIn = true;
-                        $scope.succesSignup = true;
-                        $scope.alreadyExist = false;
-                        $timeout(function() {
-
-                            $scope.succesSignup = false;
+                } else {
+                    $scope.checkMark = "";
+                    NavigationService.submitSignup(signupdata, function (data) {
+                        console.log("data", data);
+                        if (data.logged_in) {
+                            $rootScope.loggedIn = true;
+                            $scope.succesSignup = true;
                             $scope.alreadyExist = false;
-                            $scope.signupdata = {};
-                            $scope.modalLogsInstance.close();
-                        }, 2000);
+                            $timeout(function () {
 
-                    } else {
-                        $scope.succesSignup = false;
-                        $rootScope.loggedIn = false;
-                        console.log("im else");
-                        $scope.alreadyExist = true;
-                    }
-                })
-              }
+                                $scope.succesSignup = false;
+                                $scope.alreadyExist = false;
+                                $scope.signupdata = {};
+                                $scope.modalLogsInstance.close();
+                            }, 2000);
+
+                        } else {
+                            $scope.succesSignup = false;
+                            $rootScope.loggedIn = false;
+                            console.log("im else");
+                            $scope.alreadyExist = true;
+                        }
+                    })
+                }
 
 
 
@@ -1964,18 +2003,18 @@ $scope.authentication();
     };
     $scope.loginData = {};
     $scope.incorrectDetails = false;
-    $scope.loginSubmit = function(loginData) {
+    $scope.loginSubmit = function (loginData) {
         console.log("loginData", loginData);
         $scope.incorrectDetails = false;
         if (loginData) {
 
-            NavigationService.submitLogin(loginData, function(data) {
+            NavigationService.submitLogin(loginData, function (data) {
                 console.log("data", data);
                 if (data.logged_in) {
                     $scope.incorrectDetails = false;
                     $rootScope.loggedIn = true;
                     $scope.successlogin = true;
-                    $timeout(function() {
+                    $timeout(function () {
 
                         $scope.successlogin = false;
                         $scope.incorrectDetails = false;
@@ -1995,7 +2034,7 @@ $scope.authentication();
     $scope.classsa = 'active-tab';
     $scope.classsb = '';
 
-    $scope.tabchanges = function(tab, a) {
+    $scope.tabchanges = function (tab, a) {
         $scope.tabs = tab;
         if (a == 1) {
             $scope.classsa = 'active-tab';
@@ -2023,7 +2062,7 @@ $scope.authentication();
 
 })
 
-.controller('languageCtrl', function($scope, $state, TemplateService, $translate, $rootScope, $uibModal) {
+.controller('languageCtrl', function ($scope, $state, TemplateService, $translate, $rootScope, $uibModal) {
     var siteLanguage = $.jStorage.get('languageSet');
     $scope.languageActive = siteLanguage;
 
@@ -2039,7 +2078,7 @@ $scope.authentication();
     }
 
     var languagePicker = {};
-    $scope.changeLanguage = function(val) {
+    $scope.changeLanguage = function (val) {
         $translate.use(val);
         if ($state.current.name == 'home') {
             globalFunc.changeSlides(val);
@@ -2049,7 +2088,7 @@ $scope.authentication();
         languagePicker.close();
         $scope.languageActive = val;
     };
-    $scope.changeLanguage2 = function(val) {
+    $scope.changeLanguage2 = function (val) {
         currentlang = val;
         console.log('currentlang', currentlang);
         $translate.use(val);
@@ -2061,7 +2100,7 @@ $scope.authentication();
         globalFunc.changeLang();
     };
 
-    $scope.languagePicker = function() {
+    $scope.languagePicker = function () {
         languagePicker = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/language-picker.html',
@@ -2078,7 +2117,7 @@ $scope.authentication();
 
 })
 
-.controller('InviteFriendsCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter, $uibModal) {
+.controller('InviteFriendsCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("invite-friends");
     $scope.menutitle = NavigationService.makeactive("Invite Friends");
@@ -2096,7 +2135,7 @@ $scope.authentication();
     $scope.friends.json = [];
     $scope.friends.json.push(friendsjson);
 
-    $scope.addFriend = function() {
+    $scope.addFriend = function () {
         console.log(friendsjson);
         friendsjson = {
             "name": "",
@@ -2104,7 +2143,7 @@ $scope.authentication();
         };
         $scope.friends.json.push(friendsjson);
     };
-    $scope.success = function() {
+    $scope.success = function () {
         languagePicker = $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/success.html',
@@ -2112,12 +2151,12 @@ $scope.authentication();
             scope: $scope
         });
     };
-    $scope.submitFriends = function() {
+    $scope.submitFriends = function () {
 
-        NavigationService.submitFriends($scope.friends, function(data) {
+        NavigationService.submitFriends($scope.friends, function (data) {
             if (data.value) {
                 $scope.successmsg = "Thank you for inviting your friend";
-                $('#invite').each(function() {
+                $('#invite').each(function () {
                     this.reset();
                 });
                 // $scope.friends.email = "";
@@ -2135,7 +2174,7 @@ $scope.authentication();
             }
         });
     };
-    $scope.cancelFrnd = function(index) {
+    $scope.cancelFrnd = function (index) {
         if ($scope.friends.json.length == 1) {
             $scope.friends.json = [];
             $scope.friends.json.push({
@@ -2151,9 +2190,9 @@ $scope.authentication();
 
 })
 
-.controller('footerctrl', function($scope, TemplateService) {
+.controller('footerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
 
@@ -2210,9 +2249,9 @@ $scope.authentication();
     }];
 })
 
-.controller('Menuctrl', function($scope, TemplateService) {
+.controller('Menuctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
 });

@@ -4,6 +4,7 @@ var LanguageEnglish = {
     "yellow cards":"yellow cards",
     "raids":"raids",
         "Gallery":"Gallery",
+        "Download the JPP App":"Download the JPP App",
     "Panther World":"Panther World",
     "unsuccessful":"unsuccessful",
     "successful":"successful",
@@ -426,6 +427,7 @@ var LanguageEnglish = {
 
 var LanguageHindi = {
     "green cards":"हरा कार्ड",
+    "Download the JPP App":"JPP ऐप डाउनलोड करें",
     "red cards":"लाल कार्ड",
     "Panther World":"पैंथर वर्ल्ड",
     "successful tackles":"सफल टैकल",
