@@ -3909,7 +3909,33 @@ a.ilogo {
 .msg-err{
   color: red ;
 }
+.reg {
+    .dropdown-menu > li > a {
+        @include transition(all ease 300ms);
+        padding: 5px 20px;
+    }
 
+    .dropdown-menu > li > a:focus,
+    .dropdown-menu > li > a:hover {
+        background: $brand-primary!important;
+        color: #fff!important;
+    }
+}
+.photo {
+   height: 40px;
+   width: 40px;
+   margin: 0 5px 0 15px;
+   border-radius: 50%;
+}
+//coming-soon//
+.coming-soon{
+    height: 100vh;
+    margin-top: 100px;
+    background-image: url("../img/cs.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 //ruchira
 @import "mobile";
 @import "style";

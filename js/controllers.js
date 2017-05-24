@@ -178,6 +178,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
                     console.log("im in true");
+                     $rootScope.userFirstName = data.firstname;
+                     console.log("userFirstName",$rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                 } else {
                     $rootScope.loggedIn = false;
@@ -1797,6 +1799,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.authentication=function(){
       NavigationService.getAuthenticate(function(data) {
           if (data.logged_in) {
+              console.log(data,"data");
+               $rootScope.userFirstName = data.firstname;
+            console.log("$rootScope.userFirstName0",$rootScope.userFirstName)
               $rootScope.loggedIn = true;
           } else {
               $rootScope.loggedIn = false;
