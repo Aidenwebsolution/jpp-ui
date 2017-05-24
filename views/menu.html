@@ -1,11 +1,16 @@
 <ul class="nav navbar-nav head-menu">
     <li ng-repeat="menu in navigation" class="{{menu.classis}} {{menu.highlighter}} menu-custom-li">
-        <a ui-sref="{{menu.url}}" class="menu-custom">
+        <a ui-sref="{{menu.url}}" class="menu-custom" ng-if="menu.url" >
+        {{menu.name|translate}}
+      </a>
+        <a href="http://wohlig.co.in/pantherworld/#/" target="_blank" class="menu-custom" ng-if="menu.id == 'panther'" >
         {{menu.name|translate}}
       </a>
          <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
-            <li ng-repeat="submenu in menu.subnav">
-                <a href="{{submenu.link}}">{{submenu.name}}</a>
+
+            <li class="pointer" ng-repeat="submenu in menu.subnav" ng-click="gotoFun(submenu.name)" >
+                <!--<a href="{{submenu.link}}">{{submenu.name}}</a>-->
+                 {{submenu.name |translate}}
             </li>
         </ul>
     </li>

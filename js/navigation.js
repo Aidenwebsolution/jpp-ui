@@ -13,11 +13,13 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function($http) {
     var navigation = [{
             name: "Fixtures & Results",
-            url: "fixtures({id:1})",
+            // url: "fixtures({id:1})",
+               url: "Comingsoon",
             classis: "active"
         }, {
             name: "Panther World",
-            url: "fixtures({id:1})",
+            // url: "fixtures({id:1})",
+            id:"panther",
             classis: "active",
             subnav: [{
                 name: "Wallpapers",
@@ -38,16 +40,19 @@ var navigationservice = angular.module('navigationservice', [])
             }]
         }, {
             name: "Tickets",
-            url: "ticket",
+            // url: "ticket",
+                url: "Comingsoon",
             classis: "active"
         }, {
             name: "Merchandise",
-            url: "ticket-merchandise",
+            // url: "ticket-merchandise",
+                url: "Comingsoon",
             classis: "active",
             highlighter: "high"
         }, {
             name: "Players",
-            url: "players",
+            // url: "players",
+                url: "Comingsoon",
             classis: "active"
         },
         // {

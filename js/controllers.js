@@ -1760,6 +1760,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 })
+.controller('ComingsoonCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("comingsoon");
+    $scope.menutitle = NavigationService.makeactive("Comingsoon");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+     $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
+
+    }
+
+
+
+})
 
 .controller('PointsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
@@ -1775,7 +1791,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 })
 
-.controller('headerctrl', function($scope, TemplateService, $translate, $uibModal, NavigationService, $rootScope, $timeout) {
+.controller('headerctrl', function($scope, TemplateService, $translate, $uibModal,$state, NavigationService, $rootScope, $timeout) {
 
     var languagePicker = {};
     $scope.template = TemplateService;
@@ -1790,6 +1806,96 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             scope: $scope,
         });
     };
+    //   $scope.isCheckLoggedIn = function() {
+    //         console.log("im authenticate");
+    //         NavigationService.getAuthenticate(function(data) {
+    //             console.log("getAuthenticate", data);
+    //             if (data.logged_in) {
+    //                 console.log("im in true");
+    //                  $rootScope.userFirstName = data.firstname;
+    //                  console.log("userFirstName",$rootScope.userFirstName)
+    //                 $rootScope.loggedIn = true;
+    //             } else {
+    //                 $rootScope.loggedIn = false;
+    //                 $scope.modalLogsInstance = $uibModal.open({
+    //                     animation: true,
+    //                     templateUrl: 'views/modal/logs.html',
+    //                     scope: $scope,
+    //                 });
+    //             }
+    //         })
+    //     }
+
+    $scope.gotoFun=function(submenu){
+        console.log("im in",submenu);
+        if(submenu == 'Games'){
+            $state.go('Comingsoon');
+        }
+        if(submenu == 'Gallery'){
+             NavigationService.getAuthenticate(function(data) {
+                console.log("getAuthenticate", data);
+                if (data.logged_in) {
+                    console.log("im in true");
+                     $rootScope.userFirstName = data.firstname;
+                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
+                     window.location="http://jaipurpinkpanthers.com/#/gallery";
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+            })
+
+        }
+        if(submenu == 'Wallpapers'){
+              NavigationService.getAuthenticate(function(data) {
+                console.log("getAuthenticate", data);
+                if (data.logged_in) {
+                    console.log("im in true");
+                     $rootScope.userFirstName = data.firstname;
+                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
+                     window.location="http://jaipurpinkpanthers.com/#/wallpaper";
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+            })
+        }
+        if(submenu == 'JPP TV'){
+ NavigationService.getAuthenticate(function(data) {
+                console.log("getAuthenticate", data);
+                if (data.logged_in) {
+                    console.log("im in true");
+                     $rootScope.userFirstName = data.firstname;
+                     console.log("userFirstName",$rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                //    window.open("http://jaipurpinkpanthers.com/#/gallery", "_blank");
+                    // window.location('http://jaipurpinkpanthers.com/#/gallery','_blank');
+                     window.location="http://jaipurpinkpanthers.com/#/jpp-tv";
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+            })
+        }
+    }
     $scope.logoutUser = function() {
         $rootScope.loggedIn = false;
         NavigationService.logoutUser(function(data) {

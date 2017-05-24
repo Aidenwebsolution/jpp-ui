@@ -3909,18 +3909,35 @@ a.ilogo {
 .msg-err{
   color: red ;
 }
-.reg {
-    .dropdown-menu > li > a {
-        @include transition(all ease 300ms);
-        padding: 5px 20px;
-    }
-
-    .dropdown-menu > li > a:focus,
-    .dropdown-menu > li > a:hover {
-        background: $brand-primary!important;
-        color: #fff!important;
+.reg .dropdown-menu li:nth-child(even), .reg .dropdown-menu li:nth-child(odd) {
+background: #4ecaf5 !important;
+margin: 0;
+padding: 0;
+}
+.reg .dropdown-menu li:nth-child(even) a, .reg .dropdown-menu li:nth-child(odd) a {
+background: transparent !important;
+font-size: 14px;
+}
+.reg{
+    .dropdown-menu{
+        width:145px;
+        text-align: center;
+        padding: 0;
     }
 }
+
+// .reg {
+//     .dropdown-menu > li > a {
+//         @include transition(all ease 300ms);
+//         padding: 5px 20px;
+//     }
+
+//     .dropdown-menu > li > a:focus,
+//     .dropdown-menu > li > a:hover {
+//         background: $brand-primary!important;
+//         color: #fff!important;
+//     }
+// }
 .photo {
    height: 40px;
    width: 40px;
@@ -3935,6 +3952,9 @@ a.ilogo {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.pointer{
+    cursor:pointer;
 }
 //ruchira
 @import "mobile";
