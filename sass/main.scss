@@ -401,7 +401,7 @@ nav {
 }
 
 .home {
-    padding-top: 109px;
+    padding-top: 108px;
 }
 
 .banner-title {
@@ -716,6 +716,12 @@ nav {
     padding: 15px 0 12px;
 }
 
+.mobile-footer{
+  .pall35 {
+    padding: 0 0 10px 0;
+}  
+}
+
 .mb10 {
     margin-bottom: 10px;
 }
@@ -868,6 +874,18 @@ hr {
     @extend .btn-pink;
     background-color: $brand-primary;
     border: 1px solid $brand-primary;
+    // &:hover{
+    //      background-color: transparent;
+    // border: transparent;
+    // }
+    // &:active{
+    //     background-color: transparent;
+    // border: transparent;
+    // }
+    // &:focus{
+    //      background-color: transparent;
+    // border: transparent;
+    // }
 }
 
 .btn-sucess {
@@ -2496,7 +2514,7 @@ a {
 }
 
 .navbar-fixed-top {
-    top: 39px;
+    top: 38px;
 }
 
 .hover-select {
@@ -3085,7 +3103,7 @@ a.ilogo {
 }
 
 .mt20 {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .line-after {
@@ -3930,18 +3948,6 @@ font-size: 14px;
     }
 }
 
-// .reg {
-//     .dropdown-menu > li > a {
-//         @include transition(all ease 300ms);
-//         padding: 5px 20px;
-//     }
-
-//     .dropdown-menu > li > a:focus,
-//     .dropdown-menu > li > a:hover {
-//         background: $brand-primary!important;
-//         color: #fff!important;
-//     }
-// }
 .photo {
    height: 40px;
    width: 40px;
@@ -3957,9 +3963,22 @@ font-size: 14px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.pointer{
-    cursor:pointer;
+.comings-soon{
+    background-image: url("../img/new/cs.jpg");
 }
+
+.apps{
+    font-size: 24px;
+    line-height: 76%;
+    padding-left: 20%;
+}
+.follow{
+    span{
+        font-weight: 700;
+    }
+}
+
+
 //ruchira
 @import "mobile";
 @import "style";

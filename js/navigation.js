@@ -21,23 +21,24 @@ var navigationservice = angular.module('navigationservice', [])
             // url: "fixtures({id:1})",
             id:"panther",
             classis: "active",
-            subnav: [{
-                name: "Wallpapers",
-                url: "wallpaper",
-                classis: "active"
-            }, {
-                name: "Gallery",
-                url: "gallery",
-                classis: "active"
-            }, {
-                name: "Games",
-                link: "jpp-tv",
-                classis: "active"
-            }, {
-                name: "JPP TV",
-                url: "jpp-tv",
-                classis: "active"
-            }]
+            subnav: []
+            // {
+            //     name: "Wallpapers",
+            //     url: "wallpaper",
+            //     classis: "active"
+            // }, {
+            //     name: "Gallery",
+            //     url: "gallery",
+            //     classis: "active"
+            // }, {
+            //     name: "Games",
+            //     link: "jpp-tv",
+            //     classis: "active"
+            // }, {
+            //     name: "JPP TV",
+            //     url: "jpp-tv",
+            //     classis: "active"
+            // }
         }, {
             name: "Tickets",
             // url: "ticket",
@@ -51,8 +52,8 @@ var navigationservice = angular.module('navigationservice', [])
             highlighter: "high"
         }, {
             name: "Players",
-            // url: "players",
-                url: "Comingsoon",
+            url: "players",
+                // url: "Comingsoon",
             classis: "active"
         },
         // {

@@ -63,7 +63,7 @@
     <section class="banner-link ">
         <div class="container-fluid">
             <div class="row">
-                <div class="co-md-12">
+                <div class="col-md-12 hidden-xs">
                     <div class="custom-list box-black text-center">
                         <ul class="new-item-sec new-listing-name margin0">
                             <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}"
@@ -465,7 +465,7 @@
                                 <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn('Game')">
                                     <img src="img/home/Templatesgame.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
-                                        <h4 class="uppercase-text color-white">{{'Game' |translate}}</h4>
+                                        <h4 class="uppercase-text color-white">{{'Games' |translate}}</h4>
                                     </div>
                                 </div>
                             </li>
@@ -500,20 +500,21 @@
         </div>
     </div>
 </section>
-<section class=" bg-greys subcribe-bg">
+<!--//desktop//-->
+<section class=" bg-greys subcribe-bg hidden-xs">
     <div class="container ">
         <div class=" bg mobile-css">
             <div class="row">
-                <div class="col-md-5 col-xs-5">
+                <div class="col-md-8 col-sm-7 col-xs-8">
                     <div class="display-inline">
                         <div class="mob-icon">
                             <img src="img/new/h6.png" alt="Jaipur Pink Panthers" class="mt-min-70s">
                         </div>
                     </div>
-                    <div class="display-inline text-line pt30s">
+                    <div class="display-inline text-line pt30s apps">
                         <!--<h4 class="uppercase-text color-black font-bold">{{'enter your mobile number' | translate}} </h4>
                         <h4 class="uppercase-text color-black font-bold">{{'to download jpp app'|translate}}</h4>-->
-                          <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App'|translate}}</h4>
+                          <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and android'|translate}}</h4>
                     </div>
                 </div>
                 <!--<div class="col-md-4 col-xs-7">
@@ -527,7 +528,7 @@
                         </form>
                     </div>
                 </div>-->
-                <div class="col-md-3 hidden-xs float-right">
+                <div class="col-md-3 col-sm-5 hidden-xs float-right">
                     <div class="pt40s">
                         <div class="display-inline social-img">
                             <img src="img/play.png" alt="Jaipur Pink Panthers">
@@ -541,6 +542,55 @@
         </div>
     </div>
 </section>
+<!--//desktop//-->
+
+<!--//phone//-->
+<section class=" bg-greys subcribe-bg mob-subscribe-bg visible-xs hidden-sm hidden-md">
+    <div class="container ">
+        <div class=" bg mobile-css">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <div class="display-inline">
+                        <div class="mob-icon pull-left">
+                            <img src="img/home/mb1.png" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="display-inline text-line pt30s apps">
+                        <!--<h4 class="uppercase-text color-black font-bold">{{'enter your mobile number' | translate}} </h4>
+                        <h4 class="uppercase-text color-black font-bold">{{'to download jpp app'|translate}}</h4>-->
+                          <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and android'|translate}}</h4>
+                    </div>
+                    <div class="mob-icon pull-right">
+                            <img src="img/home/mb2.png" alt="Jaipur Pink Panthers" class="img-responsive">
+                        </div>
+                </div>
+                <!--<div class="col-md-4 col-xs-7">
+                    <div class="sub-form">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <span class="sp-num">+91</span>
+                                <input type="email" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-default go-btn">GO</button>
+                        </form>
+                    </div>
+                </div>-->
+                <div class="col-md-3 col-sm-5 hidden-xs float-right">
+                    <div class="pt40s">
+                        <div class="display-inline social-img">
+                            <img src="img/play.png" alt="Jaipur Pink Panthers">
+                        </div>
+                        <div class="display-inline social-img p1-10">
+                            <img src="img/app.png" alt="Jaipur Pink Panthers">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--//phone//-->
 <!-- <div class="mbanner">
     <div class="container">
         <span>{{'Sign up and become part of the Panther Family. Exclusive offers and lots more'|translate}}!</span>

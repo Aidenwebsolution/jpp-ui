@@ -31,7 +31,7 @@
             <img ng-src="{{playerDetails.bigimage | serverimage1}}" alt="">
             <!-- <img src="img/players/4.png" alt=""> -->
         </div>
-<div class="player-details text-center">
+<div class="player-details player-inform text-center">
     <div class="row-flex">
         <div class="col-flex">
             <p class="text-uppercase">{{playerDetails.nationality | translate}}</p>
@@ -129,9 +129,9 @@ career
         <li ng-click="career = 2" ng-class="{'activated': career == 2 }" style="text-transform:capitalize">
 current
         </li>
-              <li ng-click="career = 3" ng-class="{'activated': career == 3 }" style="text-transform:capitalize">
+              <!--<li ng-click="career = 3" ng-class="{'activated': career == 3 }" style="text-transform:capitalize">
 last season
-        </li>
+        </li>-->
     </ul>
      <div class=" player-backdrops player-details" ng-show="career == 1">
         <div class="row ">
