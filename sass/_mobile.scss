@@ -559,10 +559,11 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
     .nav {
         li {
-            padding-right: 13px;
+            padding-right: 14px;
 
             a {
-                padding: 16px 4px !important;
+                padding: 16px 1px !important;
+                font-size: 12px;
             }
 
             &.active,
@@ -657,6 +658,33 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             zoom: 0.6;
         }
     }
+
+    .by-ticket,.by-merchandise{
+    margin: 0;
+}
+
+.pl-contest{
+    img{
+        margin: 0 auto;
+    }
+}
+
+.panther-punch { 
+margin-bottom: -40px;
+}
+
+// .panthers-punch{
+//     margin-bottom: -30px;
+// }
+
+.title-name {
+    padding: 15px 0 0;
+}
+
+.mm50{
+    margin-top: 50px !important;
+}
+
 }
 @media (max-width: $screen-lg) {
     .fixture {
@@ -768,9 +796,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         margin: 5px 0 0;
     }
 
-    .navbar-fixed-top {
-        top: 63px;
-    }
+    // .navbar-fixed-top {
+    //     top: 63px;
+    // }
 
     .home {
         padding-top: 114px;
@@ -1173,7 +1201,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 .banner-title {
-    margin-top: 151px;
+    margin-top: 125px;
 }
 
 .fix {
@@ -1185,6 +1213,19 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         h1 {
     width: 180px;
 }
+}
+
+.line-after{
+    &:after{
+        right:-5px;
+    }
+}
+.panther-punch { 
+margin-bottom: -30px;
+}
+
+.panthers-punch{
+    margin-bottom: -30px;
 }
 
 //ruchi//

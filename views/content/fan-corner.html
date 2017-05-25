@@ -104,19 +104,18 @@
               <span>{{'Choose Your Favourite Panthers'|translate}}</span>
               <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">{{'Please select your favourite Panther'|translate}}</p>
             </div>
-            <div class="check-lists">
-              <div class="checkbox" >
+            <div class="check-lists" >
+              <div class="checkbox" ng-repeat="player in players track by $index">
                 <!--ng-repeat="player in players"
                 ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
-                 <input type="checkbox" id="checking" >
-                <label for="checking" class="capitalise">
+                 <input type="checkbox" id="{{player.id}}" >
+                <label for="{{player.id}}" class="capitalise">
                   <span></span>
-                 jagya
+                  {{player.name}}
+                 <!--jagya-->
                 </label>
               </div>
-               <div class="checkbox" >
-                <!--ng-repeat="player in players"
-                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
+               <!--<div class="checkbox" >
                  <input type="checkbox" id="cheking" class="capitalise" >
                 <label for="cheking">
                   <span></span>
@@ -124,14 +123,12 @@
                 </label>
               </div>
                <div class="checkbox" >
-                <!--ng-repeat="player in players"
-                ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
                  <input type="checkbox" id="chekings" class="capitalise" >
                 <label for="chekings">
                   <span></span>
                  jagyas
                 </label>
-              </div>
+              </div>-->
             </div>
 
           </div>
