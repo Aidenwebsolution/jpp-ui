@@ -2206,7 +2206,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('footerctrl', function ($scope, TemplateService) {
+.controller('footerctrl', function ($scope, TemplateService,$uibModal) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
@@ -2263,6 +2263,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         url: "img/logo/l5.png"
 
     }];
+
+    $scope.otps=function(){
+    $uibModal.open({
+        animation:true,
+        templateUrl:"views/modal/otps.html",
+        scope:$scope,
+        windowClass:'bg-white'
+    })
+}
+    
+$scope.otp=function(){
+    $uibModal.open({
+        animation:true,
+        templateUrl:"views/modal/otp.html",
+        scope:$scope,
+        windowClass:'bg-white'
+    })
+}
+
 })
 
 .controller('Menuctrl', function ($scope, TemplateService) {
