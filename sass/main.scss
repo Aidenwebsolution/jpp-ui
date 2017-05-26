@@ -3577,12 +3577,12 @@ a.ilogo {
     background-repeat: no-repeat;
     background-size: cover;
     .play-img {
-        width: 400px;
-        height: 400px;
-        margin: 30px auto 0;
+        @include size(400px,550px);
+    margin: -50px auto 100px;
+
         img {
             width: 100%;
-            margin: 0 0 0 110px;
+            margin: 0 0 0 90px;
         }
     }
 }
@@ -3644,12 +3644,13 @@ a.ilogo {
 .player-name {
     transform: rotate(-10deg);
     position: absolute;
-    top: 140px;
+    top: 170px;
     left: 200px;
     font-family: "Dreamwalker";
     p {
         font-size: 60px;
         margin: 0;
+        line-height: 70px;
     }
 }
 
@@ -3727,9 +3728,9 @@ a.ilogo {
     }
     .activated:nth-last-of-type(2) {
         color: $pink !important;
-        &:before {
-            box-shadow: 6px 0px 9px -1px rgba(0, 0, 0, 0.38);
-        }
+        // &:before {
+        //     box-shadow: 6px 0px 9px -1px rgba(0, 0, 0, 0.38);
+        // }
     }
     .activated:nth-last-of-type(3) {
         color: $pink !important;
