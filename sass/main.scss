@@ -3988,7 +3988,7 @@ a.ilogo {
 .bg-white {
     .modal-content {
         border: 3px solid #fff;
-    background-color: #1450a1;
+        background: linear-gradient(-90deg, #343fa9, #1450a1);
     color: #fff;
     border-radius: 10px;
     }
@@ -4056,12 +4056,32 @@ a.ilogo {
     }
 
     .btn-go{
-    @include size(80%,auto);
+    @include size(65%,auto);
     padding: 5px 0;
     border-radius: 0;
+    border-color: #fff;
     margin: 30px 0 0;
     color: #1450a1;
+    &:focus{
+        outline: 0;
     }
+    }
+
+    .otp-success{
+        .btn-go{
+             @include size(40%,auto);
+        }
+    }
+
+    .password{
+        .form-groups{
+            padding: 20px 0;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ font-size: 18px;
+}
 }
 
 //modals otp,password

@@ -2269,6 +2269,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         animation:true,
         templateUrl:"views/modal/otps.html",
         scope:$scope,
+        // size:'lg',
         windowClass:'bg-white'
     })
 }
@@ -2281,6 +2282,35 @@ $scope.otp=function(){
         windowClass:'bg-white'
     })
 }
+
+$scope.otpsucess=function(){
+    $uibModal.open({
+        animation:true,
+        templateUrl:"views/modal/otp-success.html",
+        scope:$scope,
+        windowClass:'bg-white'
+    })
+}
+
+$scope.password=function(){
+    $uibModal.open({
+        animation:true,
+        templateUrl:"views/modal/password.html",
+        scope:$scope,
+        windowClass:'bg-white'
+    })
+}
+
+$scope.passconfirm=function(){
+    $uibModal.open({
+        animation:true,
+        templateUrl:"views/modal/passconfirm.html",
+        scope:$scope,
+        windowClass:'bg-white'
+    })
+}
+
+
 
 })
 
