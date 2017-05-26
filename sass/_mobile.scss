@@ -1053,12 +1053,16 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
-    .pl-link {
-        width: 93%;
-    }
-    .pl-contest {
-        padding: 0 13px;
-    }
+
+    .img-list-box.gallery-album {
+    width: auto;
+}
+    // .pl-link {
+    //     width: 93%;
+    // }
+    // .pl-contest {
+    //     padding: 0 13px;
+    // }
     .menu-changed .line-after:after {
         height: 22px;
     }
