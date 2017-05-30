@@ -1555,7 +1555,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('PlayersCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('PlayersCtrl', function ($scope,$state, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("players");
     $scope.menutitle = NavigationService.makeactive("Players");
@@ -1566,6 +1566,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
+    }
+    $scope.gotoPlayers=function(data){
+        if(data){
+console.log("data",data);
+if(data.status == '1'){
+    $state.go('players-inside', {
+                
+                id: data.id
+            });
+}
+        }
     }
     $scope.getPlayers = function () {
         if ($scope.slideindex === undefined) {
