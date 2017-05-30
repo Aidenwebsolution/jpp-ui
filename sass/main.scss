@@ -3586,6 +3586,13 @@ a.ilogo {
         }
     }
 }
+.plays-names{
+     transform: rotate(-10deg);
+    position: absolute;
+    top: 170px;
+    left: 200px;
+    font-family: "Dreamwalker";
+}
 
 .player-details {
     color: $white;
@@ -3593,6 +3600,7 @@ a.ilogo {
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
     margin-bottom: 40px;
+    
     p {
         font-size: 40px;
         margin: 0;
