@@ -1555,7 +1555,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('PlayersCtrl', function ($scope,$state, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('PlayersCtrl', function ($scope,$state, TemplateService, NavigationService, $timeout, $uibModal,$stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("players");
     $scope.menutitle = NavigationService.makeactive("Players");
@@ -1787,7 +1787,33 @@ if(data.status == '1'){
 
     };
 
+ NavigationService.getallplayers(function (data) {
+            $scope.showcaseSlides = [];
+            $scope.showcaseSlides = data.data.queryresult;
+            console.log("$scope.showcaseSlides", $scope.showcaseSlides);
+            var findIndex = _.findIndex($scope.showcaseSlides, function (value) {
+                return value.id == $stateParams.id;
+            });
+            console.log("findIndex", findIndex);
+            if (findIndex >= 0) {
+                $scope.showcaseSlides.splice(findIndex, 1);
+            } else {
+                $scope.showcaseSlides = data.data.queryresult;
+            }
 
+        })
+
+
+        $scope.stateparamsId = $stateParams.id;
+        NavigationService.getsingleplayer($stateParams.id, function (data) {
+
+            $scope.playerDetails = data.data.data.player;
+            $scope.achievements = _.chunk(data.data.data.achievmant, 6);
+            $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
+            console.log("  $scope.achievements ", $scope.achievements);
+            console.log("$scope.tournamentplayed", $scope.tournamentplayed);
+            console.log("  $scope.playerDetails", $scope.playerDetails);
+        })
 
 })
 

@@ -4095,6 +4095,15 @@ a.ilogo {
 }
 }
 
+.player-view{
+    .flex-prev, .flex-next{
+        opacity: 1;
+    }
+    .text-size{
+        font-size: 28px !important;
+    }
+}
+
 //modals otp,password
 //ruchira
 @import "mobile";
