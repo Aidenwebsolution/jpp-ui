@@ -1392,53 +1392,62 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
         $scope.players = [{
-            name: "Ajay Kumar",
+            name: "Jasvir Singh",
             id:1
         }, {
-            name: "Amit Hooda",
+            name: "Manjeet Chhillar",
             id:2
         }, {
-            name: "Amit Nagar",
+            name: "Navneet Gautam",
             id:3
         }, {
-            name: "Jasvir Singh",
+            name: "Tushar Patil",
             id:4
         }, {
-            name: "Jawahar",
+            name: "Manoj Dhull",
              id:5
         }, {
-            name: "Kazuhiro Takano",
+            name: "Selvamani K",
              id:6
         }, {
-            name: "Lo Chia Wei",
+            name: "Somvir Shekhar",
             id:7
         }, {
-            name: "Mahipal Narwal",
+            name: "Ajit Singh",
             id:8
         }, {
-            name: "Parveen Narwal",
+            name: "Santhapanaselvam",
             id:9
         }, {
-            name: "Parvesh Malik",
+            name: "Pawan Kumar",
             id:10
         }, {
-            name: "Rajesh Narwal",
+            name: "Vignesh B",
             id:11
         }, {
-            name: "Ran Singh",
+            name: "Kamal Kishor",
             id:12
         }, {
-            name: "Rohit Rana",
+            name: "Sidharth Dahiya",
             id:13
         }, {
-            name: "Shabeer Bapu Sharfudheen",
+            name: "Sunil Siddhgavali",
             id:14
         }, {
-            name: "Shrikant Tewthia",
+            name: "Abhishek N",
             id:15
         }, {
-            name: "Tushar Patil",
+            name: "Ravinder Kumar",
             id:16
+        }, {
+            name: "Rahul Choudhary",
+            id:17
+        }, {
+            name: "Dong Gyu Kim",
+            id:18
+        }, {
+            name: "Jae Min Lee",
+            id:19
         }];
 
         $scope.register = {};
