@@ -1515,26 +1515,69 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             title: 'Jaipur Pink Panthers',
             info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
         }];
+//players copy paste
 
-        //     $scope.showcaseSlides=[{
-        // img:'img/players/slider-player.png',
-        //   link: '',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     },{
-        // img:'img/players/slider-player.png',
-        //     }];
+ $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function () {
+        $scope.currentlang = currentlang;
 
+    }
+    $scope.gotoPlayers=function(data){
+        if(data){
+console.log("data",data);
+if(data.status == '1'){
+    $state.go('players-inside', {
+                
+                id: data.id
+            });
+}
+        }
+    }
+    $scope.getPlayers = function () {
+        if ($scope.slideindex === undefined) {
+            $scope.slideindex = 0;
+        }
 
         NavigationService.getallplayers(function (data) {
+            $scope.player = data.data.queryresult;
+            console.log("$scope.allPlayers", $scope.player);
+        })
+        var i = 0;
+        _.each($scope.player, function (key) {
+            key.id = i;
+            i++;
+        });
+
+        //write code to reindex player by slideindex
+    };
+    $scope.getPlayers();
+
+    $scope.openPlayers = function (data, index) {
+   
+        data.active = true;
+        $scope.players = $scope.player;
+        var startArr = _.slice($scope.players, 0, index);
+        var endArr = _.slice($scope.players, index);
+
+
+        $scope.players2 = _.union(endArr, startArr);
+
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/player-slider.html',
+            controller: 'PlayersCtrl',
+            scope: $scope,
+            resolve: {
+                slideindex: function () {
+                    return $scope.players;
+                }
+            }
+        });
+
+    };
+
+ NavigationService.getallplayers(function (data) {
             $scope.showcaseSlides = [];
             $scope.showcaseSlides = data.data.queryresult;
             console.log("$scope.showcaseSlides", $scope.showcaseSlides);
@@ -1561,7 +1604,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             console.log("$scope.tournamentplayed", $scope.tournamentplayed);
             console.log("  $scope.playerDetails", $scope.playerDetails);
         })
+      
 
+
+       
     })
 
 .controller('PlayersCtrl', function ($scope,$state, TemplateService, NavigationService, $timeout, $uibModal,$stateParams) {

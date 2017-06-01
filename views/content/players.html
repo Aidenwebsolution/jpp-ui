@@ -57,30 +57,4 @@
     </a>
   </div>
 </section>
-<section class="view-slider socials-hub player-view" ng-if="showcaseSlides.length>0">
-   <div class="container">
 
-        <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
-           <flex-slider flex-slide="data in player track by $index" prev-text="" next-text="" class="" item-width="350" item-margin="25"  animation="slide" slideshow="true" slideshowSpeed="500">
-          <!--<li ui-sref="players-inside({id:banner.id})">
-
-             <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
-
-          </li>-->
-          <li ui-sref="players-inside({id:banner.id})">
-               <div class="player-box text-center mb10" ng-click="gotoPlayers(data)">
-              <div class="player-image">
-                <img ng-src="{{data.smallimage | serverimage1}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
-              </div>
-              <hr class="border-player">
-              <div class="player-name">
-                <h1 class="bold-mrgin color-primary voyeg-font f30 margin0 text-size ">{{data.name|translate}}</h1>
-              </div>
-              <div class="player-desg">
-                <h6 class="voyeg-font f25 margin0 color-success">{{data.type|translate}}</h6>
-              </div>
-            </div>
-          </li>
-      </flex-slider>
-        </div>
-</section>

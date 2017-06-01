@@ -146,21 +146,21 @@ last season
     </div>
 </div>
 <div class="row br-statistics">
-    <div class="col-md-4 ">
+    <div class="col-md-4 bbm">
       <div class="currents-about">
         <p>{{playerDetails.career.totalpoints}}</p>
         <span>{{'Total Points'|translate}} </span>
       </div>
 
     </div>
-    <div class="col-md-4 bl-statistics br-statistics">
+    <div class="col-md-4 bbm bl-statistics br-statistics">
       <div class="currents-about">
         <p>{{playerDetails.career.totalraidpoints}}</p>
         <span>{{'Total Raid Points'|translate}}</span>
       </div>
 
     </div>
-    <div class="col-md-4 ">
+    <div class="col-md-4 bbm">
       <div class="currents-about">
         <p>{{playerDetails.career.totaldefencepoints}}</p>
         <span>{{'Total Defence Points'|translate}}</span>
@@ -361,7 +361,7 @@ last season
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 bbm">
                                     <div class="cards">
 
     <div class="current-about card-type">
@@ -390,7 +390,7 @@ last season
       </div>
   </div>
    <div class="row">
-      <div class="col-md-12 ">
+      <div class="col-md-12 bbm">
           <div class="raid-status">
                <p>{{playerDetails.current.emptyraids}}</p>
           <span>{{'empty  raids'|translate}}</span>
@@ -399,7 +399,7 @@ last season
       </div>
   </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 bbm">
                     <div class="cards ">
 
     <div class="current-about card-type">
@@ -458,21 +458,21 @@ last season
     </div>
 </div>
 <div class="row br-statistics">
-    <div class="col-md-4 ">
+    <div class="col-md-4 bbm">
       <div class="currents-about">
         <p>{{playerDetails.lastseason.totalpoints}}</p>
         <span>{{'Total Points'|translate}}</span>
       </div>
 
     </div>
-    <div class="col-md-4 bl-statistics br-statistics">
+    <div class="col-md-4 bbm bl-statistics br-statistics">
       <div class="currents-about">
         <p>{{playerDetails.lastseason.totalraidpoints}}</p>
         <span>{{'Total Raid Points'|translate}}</span>
       </div>
 
     </div>
-    <div class="col-md-4 ">
+    <div class="col-md-4 bbm">
       <div class="currents-about">
         <p>{{playerDetails.lastseason.totaldefencepoints}}</p>
         <span>{{'Total Defence Points'|translate}}</span>
@@ -697,7 +697,7 @@ last season
 </section>
 
 <!--//social same again-->
-<section class="view-slider socials-hub" ng-if="showcaseSlides.length>0">
+<!--<section class="view-slider socials-hub" ng-if="showcaseSlides.length>0">
    <div class="container">
 
         <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
@@ -706,6 +706,34 @@ last season
 
              <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
 
+          </li>
+      </flex-slider>
+        </div>
+</section>-->
+
+<section class="view-slider socials-hub player-view players-slider" ng-if="showcaseSlides.length>0">
+   <div class="container">
+
+        <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
+           <flex-slider flex-slide="data in player track by $index" prev-text="" next-text="" class="" item-width="350" item-margin="25"  animation="slide" slideshow="true" slideshowSpeed="500">
+          <!--<li ui-sref="players-inside({id:banner.id})">
+
+             <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
+
+          </li>-->
+          <li ui-sref="players-inside({id:banner.id})">
+               <div class="player-box text-center mb10" ng-click="gotoPlayers(data)">
+              <div class="player-image">
+                <img ng-src="{{data.smallimage | serverimage1}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
+              </div>
+              <hr class="border-player">
+              <div class="player-name">
+                <h1 class="bold-mrgin color-primary voyeg-font f30 margin0 text-size ">{{data.name|translate}}</h1>
+              </div>
+              <div class="player-desg">
+                <h6 class="voyeg-font f25 margin0 color-success">{{data.type|translate}}</h6>
+              </div>
+            </div>
           </li>
       </flex-slider>
         </div>
