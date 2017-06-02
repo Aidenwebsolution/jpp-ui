@@ -1,0 +1,62 @@
+<div class="rapid">
+    <div class="bgclas rapids guess">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="img/pantherworld/guess/gueswho.png" class="pull-right" height="200px" width="300px">
+                </div>
+                <div class="col-md-7 crosswordsec ">
+                    <div class="sections1" ng-show="sect1">
+                        <h1 class="modal-h1 text-uppercase">GAME 3:<br/> Guess the Panthers? </h1>
+                        <input type="image" ng-click="go();" class="playbutton" src="img/pantherworld/rapid/rapid-fire.png" alt="Submit" width="50px"
+                            height="50px">
+                    </div>
+                    <div class="sections2" ng-hide="quiz">
+                        <h1 class="modal-h1 text-uppercase">GAME 3:<br/> Guess the Panthers? </h1>
+                        <div class="guess-image">
+                            <img src="img/pantherworld/guess/players.png" class="img-responsive" alt="players" height="200px" width="300px">
+                        </div>
+                        <div class="Modal-box">
+                            <form action="" class="radio radio-quiz">
+                                <div class="form-group">
+                                    <input type="radio" id="radio1" name="radio" value="Scorpian" />
+                                    <label for="radio1">
+                      <span></span>  Jasvir | Ajay
+					  </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" id="radio2" name="radio" value="Kaali" />
+                                    <label for="radio2">
+                      <span></span> Mahipal | Ran
+					  </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" id="radio3" name="radio" value="Kick" />
+                                    <label for="radio3">
+                      <span></span> Rohit | Tushar
+					  </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" id="radio4" name="radio" value="Aankh" />
+                                    <label for="radio4">
+                      <span></span>Amit | Jasvir
+					  </label>
+                                </div>
+                            </form>
+                            <div class="quizbutton btn " ng-click="next();">Next</div>
+                            <div class="quizbutton btn ">Skip</div>
+                        </div>
+                    </div>
+                    <div class="sections3" ng-hide="score">
+                        <h1 class="modal-h1 text-uppercase">GAME 3:<br/> Guess the Panthers? </h1>
+                        <div class="Modal-box">
+                            <p class="f40">Your Score: 7/10</p>
+                            <h3>Your Panther Raid Meter is 70%</h3>
+                            <button class="btn btn-lg quizbutton" ng-click="share();">SHARE WITH THE WORLD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

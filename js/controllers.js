@@ -7,187 +7,187 @@ var globalFunc = {};
 var currentlang = '';
 var globalLocale = moment.locale('hi');
 var localLocale = moment();
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'wu.masonry', 'angular-loading-bar'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'ngAnimate', 'angular-loading-bar'])
+    // , 'wu.masonry'/
+    .controller('HomeCtrl', function ($scope, TemplateService, $state, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
+        // globalFunc.changeLang = function() {
+        //     $scope.currentlang = currentlang;
+        //
+        // }
+        // $scope.tab2 = 'fb';
+        // $scope.classa = 'actives';
+        // $scope.classb = '';
+        // $scope.classc = '';
+        // $scope.tab = "design";
+        // $scope.classa = 'active-tab';
+        // $scope.classb = '';
+        //
+        // $scope.tabchange = function(tab, a) {
+        //     $scope.tab = tab;
+        //     if (a == 1) {
+        //         $scope.classa = 'active-tab';
+        //         $scope.classb = '';
+        //
+        //
+        //     }
+        //     if (a == 2) {
+        //         $scope.classb = 'active-tab';
+        //         $scope.classa = '';
+        //
+        //
+        //     }
+        //
+        //
+        // };
 
-.controller('HomeCtrl', function ($scope, TemplateService, $state, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
-    $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
-    // globalFunc.changeLang = function() {
-    //     $scope.currentlang = currentlang;
-    //
-    // }
-    // $scope.tab2 = 'fb';
-    // $scope.classa = 'actives';
-    // $scope.classb = '';
-    // $scope.classc = '';
-    // $scope.tab = "design";
-    // $scope.classa = 'active-tab';
-    // $scope.classb = '';
-    //
-    // $scope.tabchange = function(tab, a) {
-    //     $scope.tab = tab;
-    //     if (a == 1) {
-    //         $scope.classa = 'active-tab';
-    //         $scope.classb = '';
-    //
-    //
-    //     }
-    //     if (a == 2) {
-    //         $scope.classb = 'active-tab';
-    //         $scope.classa = '';
-    //
-    //
-    //     }
-    //
-    //
-    // };
+        var languagePicker = {};
+        $scope.template = TemplateService;
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            $(window).scrollTop(0);
+        });
 
-    var languagePicker = {};
-    $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-        $(window).scrollTop(0);
-    });
-
-    // $scope.logs = function() {
-    //     $uibModal.open({
-    //         animation: true,
-    //         templateUrl: 'views/modal/logs.html',
-    //         scope: $scope,
-    //     });
-    // };
-    $scope.signupdata = {};
-    $scope.submitSignup = function (signupdata) {
-        console.log("signupdata", signupdata);
-        $scope.incorrectPass = false;
-        $scope.isCheckedmsg = false;
-        $scope.alreadyExist = false;
-        $scope.succesSignup = false;
-        if (signupdata) {
+        // $scope.logs = function() {
+        //     $uibModal.open({
+        //         animation: true,
+        //         templateUrl: 'views/modal/logs.html',
+        //         scope: $scope,
+        //     });
+        // };
+        $scope.signupdata = {};
+        $scope.submitSignup = function (signupdata) {
             console.log("signupdata", signupdata);
-            if (signupdata.password == signupdata.confirmPass) {
-                $scope.incorrectPass = false;
-                if (signupdata.isChecked === undefined) {
-                    $scope.checkMark = 'Please tick mark';
-                } else {
-                    $scope.checkMark = "";
-                    NavigationService.submitSignup(signupdata, function (data) {
-                        console.log("data", data);
-                        if (data.logged_in) {
-                            $rootScope.loggedIn = true;
-                            $scope.succesSignup = true;
-                            $scope.alreadyExist = false;
-                            $timeout(function () {
-
-                                $scope.succesSignup = false;
+            $scope.incorrectPass = false;
+            $scope.isCheckedmsg = false;
+            $scope.alreadyExist = false;
+            $scope.succesSignup = false;
+            if (signupdata) {
+                console.log("signupdata", signupdata);
+                if (signupdata.password == signupdata.confirmPass) {
+                    $scope.incorrectPass = false;
+                    if (signupdata.isChecked === undefined) {
+                        $scope.checkMark = 'Please tick mark';
+                    } else {
+                        $scope.checkMark = "";
+                        NavigationService.submitSignup(signupdata, function (data) {
+                            console.log("data", data);
+                            if (data.logged_in) {
+                                $rootScope.loggedIn = true;
+                                $scope.succesSignup = true;
                                 $scope.alreadyExist = false;
-                                $scope.signupdata = {};
-                                $scope.modalLogsInstance.close();
-                            }, 2000);
+                                $timeout(function () {
 
-                        } else {
-                            $scope.succesSignup = false;
-                            $rootScope.loggedIn = false;
-                            console.log("im else");
-                            $scope.alreadyExist = true;
-                        }
-                    })
+                                    $scope.succesSignup = false;
+                                    $scope.alreadyExist = false;
+                                    $scope.signupdata = {};
+                                    $scope.modalLogsInstance.close();
+                                }, 2000);
+
+                            } else {
+                                $scope.succesSignup = false;
+                                $rootScope.loggedIn = false;
+                                console.log("im else");
+                                $scope.alreadyExist = true;
+                            }
+                        })
+                    }
+
+                } else {
+                    $scope.incorrectPass = true;
                 }
+            }
+        };
+        $scope.loginData = {};
+        $scope.incorrectDetails = false;
+        $scope.loginSubmit = function (loginData) {
+            console.log("loginData", loginData);
+            $scope.incorrectDetails = false;
+            if (loginData) {
 
-            } else {
-                $scope.incorrectPass = true;
+                NavigationService.submitLogin(loginData, function (data) {
+                    console.log("data", data);
+                    if (data.logged_in) {
+                        $rootScope.userFirstName = data.firstname;
+                        console.log("userFirstName", $rootScope.userFirstName)
+                        $scope.incorrectDetails = false;
+                        $rootScope.loggedIn = true;
+                        $scope.successlogin = true;
+                        $timeout(function () {
+
+                            $scope.successlogin = false;
+                            $scope.incorrectDetails = false;
+                            $scope.loginData = {};
+                            $scope.modalLogsInstance.close();
+                        }, 2000);
+                        console.log("im in");
+                    } else {
+                        $scope.incorrectDetails = true;
+                        $rootScope.loggedIn = false;
+                    }
+                })
             }
         }
-    };
-    $scope.loginData = {};
-    $scope.incorrectDetails = false;
-    $scope.loginSubmit = function (loginData) {
-        console.log("loginData", loginData);
-        $scope.incorrectDetails = false;
-        if (loginData) {
+        $scope.tabs = "design";
+        $scope.classsa = 'active-tab';
+        $scope.classsb = '';
 
-            NavigationService.submitLogin(loginData, function (data) {
-                console.log("data", data);
-                if (data.logged_in) {
-                     $rootScope.userFirstName = data.firstname;
-                    console.log("userFirstName", $rootScope.userFirstName)
-                    $scope.incorrectDetails = false;
-                    $rootScope.loggedIn = true;
-                    $scope.successlogin = true;
-                    $timeout(function () {
-
-                        $scope.successlogin = false;
-                        $scope.incorrectDetails = false;
-                        $scope.loginData = {};
-                        $scope.modalLogsInstance.close();
-                    }, 2000);
-                    console.log("im in");
-                } else {
-                    $scope.incorrectDetails = true;
-                    $rootScope.loggedIn = false;
-                }
-            })
-        }
-    }
-    $scope.tabs = "design";
-    $scope.classsa = 'active-tab';
-    $scope.classsb = '';
-
-    $scope.tabchanges = function (tab, a) {
-        $scope.tabs = tab;
-        if (a == 1) {
-            $scope.classsa = 'active-tab';
-            $scope.classsb = '';
+        $scope.tabchanges = function (tab, a) {
+            $scope.tabs = tab;
+            if (a == 1) {
+                $scope.classsa = 'active-tab';
+                $scope.classsb = '';
 
 
-        }
-        if (a == 2) {
-            $scope.classsb = 'active-tab';
-            $scope.classsa = '';
+            }
+            if (a == 2) {
+                $scope.classsb = 'active-tab';
+                $scope.classsa = '';
 
 
-        }
+            }
 
 
-    };
-    // $scope.tabchange = function(tab, a) {
-    //     //        console.log(tab);
-    //     $scope.result = [];
-    //     $scope.allresult = [];
-    //     $scope.tab2 = tab;
-    //     if (a == 1) {
-    //         $scope.classa = "actives";
-    //         $scope.classb = '';
-    //         $scope.classc = '';
-    //     } else if (a == 2) {
-    //
-    //         $scope.classb = "actives";
-    //         $scope.classa = '';
-    //         $scope.classc = '';
-    //     } else {
-    //
-    //         $scope.classa = '';
-    //         $scope.classc = "actives";
-    //         $scope.classb = '';
-    //     }
-    // };
-    $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
+        };
+        // $scope.tabchange = function(tab, a) {
+        //     //        console.log(tab);
+        //     $scope.result = [];
+        //     $scope.allresult = [];
+        //     $scope.tab2 = tab;
+        //     if (a == 1) {
+        //         $scope.classa = "actives";
+        //         $scope.classb = '';
+        //         $scope.classc = '';
+        //     } else if (a == 2) {
+        //
+        //         $scope.classb = "actives";
+        //         $scope.classa = '';
+        //         $scope.classc = '';
+        //     } else {
+        //
+        //         $scope.classa = '';
+        //         $scope.classc = "actives";
+        //         $scope.classb = '';
+        //     }
+        // };
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
 
 
-    $scope.isCheckLoggedIn = function (value) {
-        console.log("im authenticate");
-        NavigationService.getAuthenticate(function (data) {
-            console.log("getAuthenticate", data);
-           
+        $scope.isCheckLoggedIn = function (value) {
+            console.log("im authenticate");
+            NavigationService.getAuthenticate(function (data) {
+                console.log("getAuthenticate", data);
+
                 if (data.logged_in) {
                     console.log("im in true");
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                     if (value == 'Game') {
-                console.log("im in game");
-                $state.go('Comingsoon');
-            } 
+                    if (value == 'Game') {
+                        console.log("im in game");
+                        $state.go('Comingsoon');
+                    }
 
                     if (value == 'JPP') {
                         window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
@@ -207,632 +207,632 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     });
                 }
 
-          
 
-        })
-    }
 
-    globalFunc.changeLang = function () {
-        $scope.currentlang = currentlang;
-        console.log($scope.currentlang);
-    };
-    NavigationService.getSlider(function (data) {
-        console.log(data);
-        $scope.sliderdata = data.data;
-        console.log('$scope.sliderdata', $scope.sliderdata);
-    });
+            })
+        }
 
-    NavigationService.getjourney(function (data) {
-        $scope.journeyData = data.data;
-        console.log('$scope.journeyData', $scope.journeyData);
-    });
-    NavigationService.getguesswho(function (data) {
-        $scope.guesswhoData = data.data;
-        console.log('$scope.guesswhoData', $scope.guesswhoData);
-    });
+        globalFunc.changeLang = function () {
+            $scope.currentlang = currentlang;
+            console.log($scope.currentlang);
+        };
+        NavigationService.getSlider(function (data) {
+            console.log(data);
+            $scope.sliderdata = data.data;
+            console.log('$scope.sliderdata', $scope.sliderdata);
+        });
 
-    NavigationService.getcongratulation(function (data) {
-        $scope.congratulationData = data.data;
-        console.log('$scope.congratulationData', $scope.congratulationData);
-    });
+        NavigationService.getjourney(function (data) {
+            $scope.journeyData = data.data;
+            console.log('$scope.journeyData', $scope.journeyData);
+        });
+        NavigationService.getguesswho(function (data) {
+            $scope.guesswhoData = data.data;
+            console.log('$scope.guesswhoData', $scope.guesswhoData);
+        });
 
-    //Used to name the .html file
-    $scope.openers = {};
-    $scope.homegame = {};
-    $scope.$on('$viewContentLoaded', function (event) {
-        $timeout(function () {
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=329228207248886";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+        NavigationService.getcongratulation(function (data) {
+            $scope.congratulationData = data.data;
+            console.log('$scope.congratulationData', $scope.congratulationData);
+        });
 
-            ! function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
+        //Used to name the .html file
+        $scope.openers = {};
+        $scope.homegame = {};
+        $scope.$on('$viewContentLoaded', function (event) {
+            $timeout(function () {
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
                     js = d.createElement(s);
                     js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
+                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=329228207248886";
                     fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+                ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            }, 100);
+        });
+
+        $scope.template = TemplateService.changecontent("home");
+        $scope.menutitle = NavigationService.makeactive("Home");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.latestmatch = {};
+        $scope.countdown = {};
+        $scope.bricks = [{
+            img: 'img/news/n4.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
+        }, {
+            img: 'img/news/n6.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/news/n3.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
+        }, {
+            img: 'img/gallery/g3.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/gallery/g6.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/wallpapper/w7.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
+        }, {
+            img: 'img/team.jpg',
+            title: 'Jaipur Pink Panthers',
+            info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
+        }];
+        $scope.image = [{
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Gangadhari Mallesh',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p2.png',
+            name: 'Mallesh Gangadhari ',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p3.png',
+            name: 'Gangadhari',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Gangadhari Mallesh',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Gangadhari Mallesh',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Gangadhari Mallesh',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Mallesh Gangadhari Mallesh',
+            desg: 'Raider'
+        }, {
+            src: 'img/player-slide.png',
+            src2: 'img/player/p1.png',
+            name: 'Gangadhari Mallesh',
+            desg: 'Raider'
+        }];
+
+        $scope.matchData = [{
+            team1score: '27',
+            team2score: '18',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/8.png',
+            team1class: "jaipur",
+            team2class: "mumba",
+            stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
+            galleryid: 5
+        }, {
+            team1score: '29',
+            team2score: '28',
+            team1img: 'img/team/5.png',
+            team2img: 'img/team/4.png',
+            team1class: "patna",
+            team2class: "jaipur",
+            stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
+            galleryid: 7
+        }, {
+            team1score: '36',
+            team2score: '26',
+            team1img: 'img/team/1.png',
+            team2img: 'img/team/4.png',
+            team1class: "bengaluru",
+            team2class: "jaipur",
+            stadium: 'Sree Kanteerava Stadium, Jaipur',
+            galleryid: 6
+        }, {
+            team1score: '39',
+            team2score: '34',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/3.png',
+            team1class: "jaipur",
+            team2class: "delhi",
+            stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
+            galleryid: 4
+        }, {
+            team1score: '34',
+            team2score: '20',
+            team1img: 'img/team/2.png',
+            team2img: 'img/team/4.png',
+            team1class: "bengal",
+            team2class: "jaipur",
+            stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
+            galleryid: 8
+        }, {
+            team1score: '32',
+            team2score: '32',
+            team1img: 'img/team/6.png',
+            team2img: 'img/team/4.png',
+            team1class: "puneri",
+            team2class: "jaipur",
+            stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
+            galleryid: 9
+        }, {
+            team1score: '25',
+            team2score: '27',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/7.png',
+            team1class: "jaipur",
+            team2class: "telgu",
+            stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
+            galleryid: 10
+        }, {
+            team1score: '26',
+            team2score: '35',
+            team1img: 'img/team/7.png',
+            team2img: 'img/team/4.png',
+            team1class: "telgu",
+            team2class: "jaipur",
+            stadium: 'Patilputra Sports Complex, Patna',
+            galleryid: 11
+        }, {
+            team1score: '30',
+            team2score: '21',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/1.png',
+            team1class: "jaipur",
+            team2class: "bengaluru",
+            stadium: 'Sawai Mansingh Stadium, Jaipur',
+            galleryid: 12
+        }, {
+            team1score: '18',
+            team2score: '33',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/6.png',
+            team1class: "jaipur",
+            team2class: "puneri",
+            stadium: 'Sawai Mansingh Stadium, Jaipur',
+            galleryid: 13
+        }, {
+            team1score: '18',
+            team2score: '34',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/2.png',
+            team1class: "jaipur",
+            team2class: "bengal",
+            stadium: 'Sawai Mansingh Stadium, Jaipur',
+            galleryid: 14
+        }, {
+            team1score: '24',
+            team2score: '47',
+            team1img: 'img/team/4.png',
+            team2img: 'img/team/5.png',
+            team1class: "jaipur",
+            team2class: "patna",
+            stadium: 'Sawai Mansingh Stadium, Jaipur',
+            galleryid: 15
+        }, {
+            team1score: '21',
+            team2score: '21',
+            team1img: 'img/team/3.png',
+            team2img: 'img/team/4.png',
+            team1class: "delhi",
+            team2class: "jaipur",
+            stadium: 'Thyagaraj Sports Complex, Delhi',
+            galleryid: 16
+        }, {
+            team1score: '35',
+            team2score: '21',
+            team1img: 'img/team/8.png',
+            team2img: 'img/team/4.png',
+            team1class: "mumba",
+            team2class: "jaipur",
+            stadium: 'DOME@NSCI SVP Stadium, Mumbai',
+            galleryid: 17
+        }];
+        $scope.englishbanner = [{
+            "id": "9",
+            "name": "Season 4 Schedule",
+            "image": "img/homebanner/Season_4_Schedule.jpg",
+            "order": "1",
+            "status": "1",
+            "link": "\/fixtures\/1",
+            "type": "0"
+        }, {
+            "id": "7",
+            "name": "JPP IOS APP",
+            "image": "img/homebanner/Banner_English.jpg",
+            "order": "2",
+            "status": "1",
+            "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
+            "type": "0"
+        }, {
+            "id": "2",
+            "name": "JPP Gallery",
+            "image": "img/homebanner/Action_Season_3.jpg",
+            "order": "3",
+            "status": "1",
+            "link": "\/gallery",
+            "type": "1"
+        }, {
+            "id": "3",
+            "name": "Know your panthers",
+            "image": "img/homebanner/03_banner.jpg",
+            "order": "4",
+            "status": "1",
+            "link": "\/players",
+            "type": "2"
+        }, {
+            "id": "10",
+            "name": "Tune into JPP TV",
+            "image": "img/homebanner/Tune_in_to_jpp_TV.jpg",
+            "order": "5",
+            "status": "1",
+            "link": "\/jpp-tv",
+            "type": "0"
+        }, {
+            "id": "5",
+            "name": "Wallpapers for Desktop & Mobile",
+            "image": "img/homebanner/02_banner1.jpg",
+            "order": "7",
+            "status": "1",
+            "link": "\/wallpaper",
+            "type": "0"
+        }, {
+            "id": "8",
+            "name": "LATEST NEWS OF JPP",
+            "image": "img/homebanner/Banners_news.jpg",
+            "order": "8",
+            "status": "1",
+            "link": "\/news-media",
+            "type": "0"
+        }];
+        $scope.hindibanner = [{
+            "id": "9",
+            "name": "SEASON 4 SCHEDULE",
+            "image": "img/homebanner/season_hindi.jpg",
+            "order": "1",
+            "status": "1",
+            "link": "\/fixtures\/1",
+            "type": "0"
+        }, {
+            "id": "7",
+            "name": "JPP IOS APP",
+            "image": "img/homebanner/Hindi.jpg",
+            "order": "2",
+            "status": "1",
+            "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
+            "type": "0"
+        }, {
+            "id": "2",
+            "name": "JPP GALLERY",
+            "image": "img/homebanner/season_hindi.jpg",
+            "order": "3",
+            "status": "1",
+            "link": "\/gallery",
+            "type": "1"
+        }, {
+            "id": "3",
+            "name": "KNOW YOUR PANTHERS",
+            "image": "img/homebanner/know_hindi.jpg",
+            "order": "4",
+            "status": "1",
+            "link": "\/players",
+            "type": "2"
+        }, {
+            "id": "10",
+            "name": "TUNE INTO JPP TV",
+            "image": "img/homebanner/tv_hindi.jpg",
+            "order": "5",
+            "status": "1",
+            "link": "\/jpp-tv",
+            "type": "0"
+        }, {
+            "id": "5",
+            "name": "WALLPAPERS FOR DESKTOP & MOBILE",
+            "image": "img/homebanner/banner2_hindi.jpg",
+            "order": "7",
+            "status": "1",
+            "link": "\/wallpaper",
+            "type": "0"
+        }, {
+            "id": "8",
+            "name": "LATEST NEWS OF JPP",
+            "image": "img/homebanner/news_hindi.jpg",
+            "order": "8",
+            "status": "1",
+            "link": "\/news-media",
+            "type": "0"
+        }];
+
+        // $translate.use('en');
+        // $.jStorage.set("languageSet", 'en');
+        // $scope.news = $scope.englishbanner;
+
+        globalFunc.changeSlides = function (lang) {
+            // console.log(lang);
+            // NavigationService.getAllSliders(function(data) {
+            //     $scope.news = [];
+            //     $scope.news = _.filter(data, function(key) {
+            //         return key.type == ((lang == 'hi') ? '2' : '1');
+            //     });
+            // });
+            $scope.currentlang = lang;
+            if (lang == 'hi') {
+                $scope.news = $scope.hindibanner;
+            } else {
+                $scope.news = $scope.englishbanner;
+            }
+            $scope.changeSlide($scope.news[0]);
+
+        };
+
+        NavigationService.getLatestMatch(function (data) {
+            console.log(data);
+            $scope.latestmatch = data;
+            $scope.schedule = $filter('orderBy')($scope.schedule, "order");
+
+            $scope.refreshTimer($scope.latestmatch.starttimedate);
+            console.log($scope.latestmatch);
+
+            $scope.calendarDate = {};
+            var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
+            var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+            var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
+            var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+            console.log(date1);
+            console.log(date2);
+            $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+            $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+            console.log($scope.calendarDate);
+            $scope.latestMatchOn = false;
+        });
+        $scope.refreshTimer = function (eventTime) {
+            eventTime = new Date(eventTime);
+            console.log(eventTime);
+            $scope.rightNow = new Date();
+            $scope.diffTime = eventTime - $scope.rightNow;
+            var duration = moment.duration($scope.diffTime, 'milliseconds');
+
+            $interval(function () {
+
+                duration = moment.duration(duration - 1000, 'milliseconds');
+                if (duration._milliseconds > 0) {
+
+                    $scope.latestMatchOn = false;
+                } else {
+
+                    $scope.latestMatchOn = true;
                 }
-            }(document, "script", "twitter-wjs");
-        }, 100);
-    });
+                $scope.countdown.months = duration.months();
+                $scope.countdown.days = duration.days();
+                $scope.countdown.hours = duration.hours();
+                $scope.countdown.minutes = duration.minutes();
+                $scope.countdown.seconds = duration.seconds();
 
-    $scope.template = TemplateService.changecontent("home");
-    $scope.menutitle = NavigationService.makeactive("Home");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-
-    $scope.latestmatch = {};
-    $scope.countdown = {};
-    $scope.bricks = [{
-        img: 'img/news/n4.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
-    }, {
-        img: 'img/news/n6.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/news/n3.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
-    }, {
-        img: 'img/gallery/g3.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/gallery/g6.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/wallpapper/w7.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
-    }, {
-        img: 'img/team.jpg',
-        title: 'Jaipur Pink Panthers',
-        info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
-    }];
-    $scope.image = [{
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Gangadhari Mallesh',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p2.png',
-        name: 'Mallesh Gangadhari ',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p3.png',
-        name: 'Gangadhari',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Gangadhari Mallesh',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Gangadhari Mallesh',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Gangadhari Mallesh',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Mallesh Gangadhari Mallesh',
-        desg: 'Raider'
-    }, {
-        src: 'img/player-slide.png',
-        src2: 'img/player/p1.png',
-        name: 'Gangadhari Mallesh',
-        desg: 'Raider'
-    }];
-
-    $scope.matchData = [{
-        team1score: '27',
-        team2score: '18',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/8.png',
-        team1class: "jaipur",
-        team2class: "mumba",
-        stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
-        galleryid: 5
-    }, {
-        team1score: '29',
-        team2score: '28',
-        team1img: 'img/team/5.png',
-        team2img: 'img/team/4.png',
-        team1class: "patna",
-        team2class: "jaipur",
-        stadium: 'Rajiv Gandhi Indoor Stadium, Vishakapatnam',
-        galleryid: 7
-    }, {
-        team1score: '36',
-        team2score: '26',
-        team1img: 'img/team/1.png',
-        team2img: 'img/team/4.png',
-        team1class: "bengaluru",
-        team2class: "jaipur",
-        stadium: 'Sree Kanteerava Stadium, Jaipur',
-        galleryid: 6
-    }, {
-        team1score: '39',
-        team2score: '34',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/3.png',
-        team1class: "jaipur",
-        team2class: "delhi",
-        stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
-        galleryid: 4
-    }, {
-        team1score: '34',
-        team2score: '20',
-        team1img: 'img/team/2.png',
-        team2img: 'img/team/4.png',
-        team1class: "bengal",
-        team2class: "jaipur",
-        stadium: 'Netaji Subhash Chandra Bose Indoor Stadium, Kolkata',
-        galleryid: 8
-    }, {
-        team1score: '32',
-        team2score: '32',
-        team1img: 'img/team/6.png',
-        team2img: 'img/team/4.png',
-        team1class: "puneri",
-        team2class: "jaipur",
-        stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
-        galleryid: 9
-    }, {
-        team1score: '25',
-        team2score: '27',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/7.png',
-        team1class: "jaipur",
-        team2class: "telgu",
-        stadium: 'Shree Shiv Chhatrapati Sports Complex, Pune',
-        galleryid: 10
-    }, {
-        team1score: '26',
-        team2score: '35',
-        team1img: 'img/team/7.png',
-        team2img: 'img/team/4.png',
-        team1class: "telgu",
-        team2class: "jaipur",
-        stadium: 'Patilputra Sports Complex, Patna',
-        galleryid: 11
-    }, {
-        team1score: '30',
-        team2score: '21',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/1.png',
-        team1class: "jaipur",
-        team2class: "bengaluru",
-        stadium: 'Sawai Mansingh Stadium, Jaipur',
-        galleryid: 12
-    }, {
-        team1score: '18',
-        team2score: '33',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/6.png',
-        team1class: "jaipur",
-        team2class: "puneri",
-        stadium: 'Sawai Mansingh Stadium, Jaipur',
-        galleryid: 13
-    }, {
-        team1score: '18',
-        team2score: '34',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/2.png',
-        team1class: "jaipur",
-        team2class: "bengal",
-        stadium: 'Sawai Mansingh Stadium, Jaipur',
-        galleryid: 14
-    }, {
-        team1score: '24',
-        team2score: '47',
-        team1img: 'img/team/4.png',
-        team2img: 'img/team/5.png',
-        team1class: "jaipur",
-        team2class: "patna",
-        stadium: 'Sawai Mansingh Stadium, Jaipur',
-        galleryid: 15
-    }, {
-        team1score: '21',
-        team2score: '21',
-        team1img: 'img/team/3.png',
-        team2img: 'img/team/4.png',
-        team1class: "delhi",
-        team2class: "jaipur",
-        stadium: 'Thyagaraj Sports Complex, Delhi',
-        galleryid: 16
-    }, {
-        team1score: '35',
-        team2score: '21',
-        team1img: 'img/team/8.png',
-        team2img: 'img/team/4.png',
-        team1class: "mumba",
-        team2class: "jaipur",
-        stadium: 'DOME@NSCI SVP Stadium, Mumbai',
-        galleryid: 17
-    }];
-    $scope.englishbanner = [{
-        "id": "9",
-        "name": "Season 4 Schedule",
-        "image": "img/homebanner/Season_4_Schedule.jpg",
-        "order": "1",
-        "status": "1",
-        "link": "\/fixtures\/1",
-        "type": "0"
-    }, {
-        "id": "7",
-        "name": "JPP IOS APP",
-        "image": "img/homebanner/Banner_English.jpg",
-        "order": "2",
-        "status": "1",
-        "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
-        "type": "0"
-    }, {
-        "id": "2",
-        "name": "JPP Gallery",
-        "image": "img/homebanner/Action_Season_3.jpg",
-        "order": "3",
-        "status": "1",
-        "link": "\/gallery",
-        "type": "1"
-    }, {
-        "id": "3",
-        "name": "Know your panthers",
-        "image": "img/homebanner/03_banner.jpg",
-        "order": "4",
-        "status": "1",
-        "link": "\/players",
-        "type": "2"
-    }, {
-        "id": "10",
-        "name": "Tune into JPP TV",
-        "image": "img/homebanner/Tune_in_to_jpp_TV.jpg",
-        "order": "5",
-        "status": "1",
-        "link": "\/jpp-tv",
-        "type": "0"
-    }, {
-        "id": "5",
-        "name": "Wallpapers for Desktop & Mobile",
-        "image": "img/homebanner/02_banner1.jpg",
-        "order": "7",
-        "status": "1",
-        "link": "\/wallpaper",
-        "type": "0"
-    }, {
-        "id": "8",
-        "name": "LATEST NEWS OF JPP",
-        "image": "img/homebanner/Banners_news.jpg",
-        "order": "8",
-        "status": "1",
-        "link": "\/news-media",
-        "type": "0"
-    }];
-    $scope.hindibanner = [{
-        "id": "9",
-        "name": "SEASON 4 SCHEDULE",
-        "image": "img/homebanner/season_hindi.jpg",
-        "order": "1",
-        "status": "1",
-        "link": "\/fixtures\/1",
-        "type": "0"
-    }, {
-        "id": "7",
-        "name": "JPP IOS APP",
-        "image": "img/homebanner/Hindi.jpg",
-        "order": "2",
-        "status": "1",
-        "link": "https://itunes.apple.com/in/app/id1084678272?mt=8",
-        "type": "0"
-    }, {
-        "id": "2",
-        "name": "JPP GALLERY",
-        "image": "img/homebanner/season_hindi.jpg",
-        "order": "3",
-        "status": "1",
-        "link": "\/gallery",
-        "type": "1"
-    }, {
-        "id": "3",
-        "name": "KNOW YOUR PANTHERS",
-        "image": "img/homebanner/know_hindi.jpg",
-        "order": "4",
-        "status": "1",
-        "link": "\/players",
-        "type": "2"
-    }, {
-        "id": "10",
-        "name": "TUNE INTO JPP TV",
-        "image": "img/homebanner/tv_hindi.jpg",
-        "order": "5",
-        "status": "1",
-        "link": "\/jpp-tv",
-        "type": "0"
-    }, {
-        "id": "5",
-        "name": "WALLPAPERS FOR DESKTOP & MOBILE",
-        "image": "img/homebanner/banner2_hindi.jpg",
-        "order": "7",
-        "status": "1",
-        "link": "\/wallpaper",
-        "type": "0"
-    }, {
-        "id": "8",
-        "name": "LATEST NEWS OF JPP",
-        "image": "img/homebanner/news_hindi.jpg",
-        "order": "8",
-        "status": "1",
-        "link": "\/news-media",
-        "type": "0"
-    }];
-
-    // $translate.use('en');
-    // $.jStorage.set("languageSet", 'en');
-    // $scope.news = $scope.englishbanner;
-
-    globalFunc.changeSlides = function (lang) {
-        // console.log(lang);
-        // NavigationService.getAllSliders(function(data) {
-        //     $scope.news = [];
-        //     $scope.news = _.filter(data, function(key) {
-        //         return key.type == ((lang == 'hi') ? '2' : '1');
-        //     });
+            }, 1000);
+        };
+        // NavigationService.getScheduleSeason4(function(data) {
+        //   console.log("getScheduleSeason4");
+        //   $scope.openers = data[0];
+        //   console.log($scope.openers);
+        //   $scope.refreshTimer($scope.openers.starttimedate);
+        //   $scope.calendarDate = {};
+        //   var oldDateObj1 = new Date($scope.openers.starttimedate);
+        //   var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+        //   var oldDateObj2 = new Date($scope.openers.starttimedate);
+        //   var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+        //   console.log(date1);
+        //   console.log(date2);
+        //   $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
+        //   $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
+        //   console.log($scope.calendarDate);
         // });
-        $scope.currentlang = lang;
-        if (lang == 'hi') {
-            $scope.news = $scope.hindibanner;
-        } else {
-            $scope.news = $scope.englishbanner;
-        }
-        $scope.changeSlide($scope.news[0]);
+        // NavigationService.getHomeGameSeason4(function(data) {
+        //   $scope.homegame = data;
+        //   $scope.calendarDatehome = [];
+        //   var i = 0;
+        //   _.each($scope.homegame, function(key) {
+        //     var oldDateObj1 = new Date(key.starttimedate);
+        //     var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
+        //     var oldDateObj2 = new Date(key.starttimedate);
+        //     var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
+        //     $scope.calendarDatehome.push({
+        //       from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
+        //       to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
+        //     });
+        //
+        //     i++;
+        //   });
+        //   console.log("calendar dates");
+        //   console.log($scope.calendarDatehome);
+        // });
+        NavigationService.getallpoint(function (data) {
+            $scope.table = data;
+            $scope.table = $filter('orderBy')($scope.table, "order");
+            console.log($scope.table);
+        });
+        //     $scope.tables[{
+        // no:'3',
+        // name:'Telugu Titans',
+        // play:'14',
+        // win:'9',
+        // loss:'5',
+        // draw:'1',
+        // sd:'0',
+        // pts:'47'
 
-    };
+        //     },{
+        // no:'3',
+        // name:'Jaipur Pink Panthers',
+        // play:'14',
+        // win:'9',
+        // loss:'5',
+        // draw:'1',
+        // sd:'0',
+        // pts:'47'
+        //     }];
+        var clickCount = 0;
+        $scope.changeSlide = function (data) {
+            $scope.currentActive = data;
+            if (clickCount === 0) {
 
-    NavigationService.getLatestMatch(function (data) {
-        console.log(data);
-        $scope.latestmatch = data;
-        $scope.schedule = $filter('orderBy')($scope.schedule, "order");
+            }
+            $scope.currentActive.active = true;
+        };
 
-        $scope.refreshTimer($scope.latestmatch.starttimedate);
-        console.log($scope.latestmatch);
+        $scope.tab2 = 'fb';
+        $scope.classa = 'actives';
+        $scope.classb = '';
+        $scope.classc = '';
 
-        $scope.calendarDate = {};
-        var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
-        var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-        var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
-        var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-        console.log(date1);
-        console.log(date2);
-        $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-        $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-        console.log($scope.calendarDate);
-        $scope.latestMatchOn = false;
-    });
-    $scope.refreshTimer = function (eventTime) {
-        eventTime = new Date(eventTime);
-        console.log(eventTime);
-        $scope.rightNow = new Date();
-        $scope.diffTime = eventTime - $scope.rightNow;
-        var duration = moment.duration($scope.diffTime, 'milliseconds');
+        $scope.tabchange = function (tab, a) {
+            //        console.log(tab);
+            $scope.result = [];
+            $scope.allresult = [];
+            $scope.tab2 = tab;
+            if (a == 1) {
+                $scope.classa = "actives";
+                $scope.classb = '';
+                $scope.classc = '';
+            } else if (a == 2) {
 
-        $interval(function () {
-
-            duration = moment.duration(duration - 1000, 'milliseconds');
-            if (duration._milliseconds > 0) {
-
-                $scope.latestMatchOn = false;
+                $scope.classb = "actives";
+                $scope.classa = '';
+                $scope.classc = '';
             } else {
 
-                $scope.latestMatchOn = true;
+                $scope.classa = '';
+                $scope.classc = "actives";
+                $scope.classb = '';
             }
-            $scope.countdown.months = duration.months();
-            $scope.countdown.days = duration.days();
-            $scope.countdown.hours = duration.hours();
-            $scope.countdown.minutes = duration.minutes();
-            $scope.countdown.seconds = duration.seconds();
-
-        }, 1000);
-    };
-    // NavigationService.getScheduleSeason4(function(data) {
-    //   console.log("getScheduleSeason4");
-    //   $scope.openers = data[0];
-    //   console.log($scope.openers);
-    //   $scope.refreshTimer($scope.openers.starttimedate);
-    //   $scope.calendarDate = {};
-    //   var oldDateObj1 = new Date($scope.openers.starttimedate);
-    //   var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-    //   var oldDateObj2 = new Date($scope.openers.starttimedate);
-    //   var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-    //   console.log(date1);
-    //   console.log(date2);
-    //   $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
-    //   $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-    //   console.log($scope.calendarDate);
-    // });
-    // NavigationService.getHomeGameSeason4(function(data) {
-    //   $scope.homegame = data;
-    //   $scope.calendarDatehome = [];
-    //   var i = 0;
-    //   _.each($scope.homegame, function(key) {
-    //     var oldDateObj1 = new Date(key.starttimedate);
-    //     var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
-    //     var oldDateObj2 = new Date(key.starttimedate);
-    //     var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-    //     $scope.calendarDatehome.push({
-    //       from: $filter('date')(date1, "yyyyMMddTHHmmss") + "Z",
-    //       to: $filter('date')(date2, "yyyyMMddTHHmmss") + "Z"
-    //     });
-    //
-    //     i++;
-    //   });
-    //   console.log("calendar dates");
-    //   console.log($scope.calendarDatehome);
-    // });
-    NavigationService.getallpoint(function (data) {
-        $scope.table = data;
-        $scope.table = $filter('orderBy')($scope.table, "order");
-        console.log($scope.table);
-    });
-    //     $scope.tables[{
-    // no:'3',
-    // name:'Telugu Titans',
-    // play:'14',
-    // win:'9',
-    // loss:'5',
-    // draw:'1',
-    // sd:'0',
-    // pts:'47'
-
-    //     },{
-    // no:'3',
-    // name:'Jaipur Pink Panthers',
-    // play:'14',
-    // win:'9',
-    // loss:'5',
-    // draw:'1',
-    // sd:'0',
-    // pts:'47'
-    //     }];
-    var clickCount = 0;
-    $scope.changeSlide = function (data) {
-        $scope.currentActive = data;
-        if (clickCount === 0) {
-
-        }
-        $scope.currentActive.active = true;
-    };
-
-    $scope.tab2 = 'fb';
-    $scope.classa = 'actives';
-    $scope.classb = '';
-    $scope.classc = '';
-
-    $scope.tabchange = function (tab, a) {
-        //        console.log(tab);
-        $scope.result = [];
-        $scope.allresult = [];
-        $scope.tab2 = tab;
-        if (a == 1) {
-            $scope.classa = "actives";
-            $scope.classb = '';
-            $scope.classc = '';
-        } else if (a == 2) {
-
-            $scope.classb = "actives";
-            $scope.classa = '';
-            $scope.classc = '';
-        } else {
-
-            $scope.classa = '';
-            $scope.classc = "actives";
-            $scope.classb = '';
-        }
-    };
-
-    $scope.wallpapper = [{
-        img: "img/wallpapper/w5.jpg"
-    }, {
-        img: "img/wallpapper/w5.jpg"
-    }, {
-        img: "img/wallpapper/w6.jpg"
-    }, {
-        img: "img/wallpapper/w7.jpg"
-    }, {
-        img: "img/wallpapper/w4.jpg"
-    }, {
-        img: "img/wallpapper/w5.jpg"
-    }, {
-        img: "img/wallpapper/w6.jpg"
-    }, {
-        img: "img/wallpapper/w7.jpg"
-    }];
-
-
-    $scope.player = [{
-        image: "img/player/p1.png",
-        name: "Gangadhari Mallesh",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p2.png",
-        name: "RAJESH NARWAL",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p3.png",
-        name: "ROHIT RANA",
-        desg: "DEFENDER",
-    }, {
-
-        image: "img/player/p4.png",
-        name: "RAN SINGH",
-        desg: "DEFENDER",
-    }, {
-
-        image: "img/player/p5.png",
-        name: "BALBIR SINGH",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p6.png",
-        name: "JASVIR SINGH",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p1.png",
-        name: "Gangadhari Mallesh",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p2.png",
-        name: "RAJESH NARWAL",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p3.png",
-        name: "ROHIT RANA",
-        desg: "DEFENDER",
-    }, {
-
-        image: "img/player/p4.png",
-        name: "RAN SINGH",
-        desg: "DEFENDER",
-    }, {
-
-        image: "img/player/p5.png",
-        name: "BALBIR SINGH",
-        desg: "Raider",
-    }, {
-
-        image: "img/player/p6.png",
-        name: "JASVIR SINGH",
-        desg: "Raider",
-    }];
-    $scope.scrollTo = function (image, ind) {
-        $scope.listposition = {
-            left: (IMAGE_WIDTH * ind * -1) + "px"
         };
-        $scope.selected = image;
-    };
 
-})
+        $scope.wallpapper = [{
+            img: "img/wallpapper/w5.jpg"
+        }, {
+            img: "img/wallpapper/w5.jpg"
+        }, {
+            img: "img/wallpapper/w6.jpg"
+        }, {
+            img: "img/wallpapper/w7.jpg"
+        }, {
+            img: "img/wallpapper/w4.jpg"
+        }, {
+            img: "img/wallpapper/w5.jpg"
+        }, {
+            img: "img/wallpapper/w6.jpg"
+        }, {
+            img: "img/wallpapper/w7.jpg"
+        }];
+
+
+        $scope.player = [{
+            image: "img/player/p1.png",
+            name: "Gangadhari Mallesh",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p2.png",
+            name: "RAJESH NARWAL",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p3.png",
+            name: "ROHIT RANA",
+            desg: "DEFENDER",
+        }, {
+
+            image: "img/player/p4.png",
+            name: "RAN SINGH",
+            desg: "DEFENDER",
+        }, {
+
+            image: "img/player/p5.png",
+            name: "BALBIR SINGH",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p6.png",
+            name: "JASVIR SINGH",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p1.png",
+            name: "Gangadhari Mallesh",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p2.png",
+            name: "RAJESH NARWAL",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p3.png",
+            name: "ROHIT RANA",
+            desg: "DEFENDER",
+        }, {
+
+            image: "img/player/p4.png",
+            name: "RAN SINGH",
+            desg: "DEFENDER",
+        }, {
+
+            image: "img/player/p5.png",
+            name: "BALBIR SINGH",
+            desg: "Raider",
+        }, {
+
+            image: "img/player/p6.png",
+            name: "JASVIR SINGH",
+            desg: "Raider",
+        }];
+        $scope.scrollTo = function (image, ind) {
+            $scope.listposition = {
+                left: (IMAGE_WIDTH * ind * -1) + "px"
+            };
+            $scope.selected = image;
+        };
+
+    })
 
 .controller('FixturesCtrl', function ($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
     //Used to name the .html file
@@ -1393,61 +1393,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.players = [{
             name: "Jasvir Singh",
-            id:1
+            id: 1
         }, {
             name: "Manjeet Chhillar",
-            id:2
+            id: 2
         }, {
             name: "Navneet Gautam",
-            id:3
+            id: 3
         }, {
             name: "Tushar Patil",
-            id:4
+            id: 4
         }, {
             name: "Manoj Dhull",
-             id:5
+            id: 5
         }, {
             name: "Selvamani K",
-             id:6
+            id: 6
         }, {
             name: "Somvir Shekhar",
-            id:7
+            id: 7
         }, {
             name: "Ajit Singh",
-            id:8
+            id: 8
         }, {
             name: "Santhapanaselvam",
-            id:9
+            id: 9
         }, {
             name: "Pawan Kumar",
-            id:10
+            id: 10
         }, {
             name: "Vignesh B",
-            id:11
+            id: 11
         }, {
             name: "Kamal Kishor",
-            id:12
+            id: 12
         }, {
             name: "Sidharth Dahiya",
-            id:13
+            id: 13
         }, {
             name: "Sunil Siddhgavali",
-            id:14
+            id: 14
         }, {
             name: "Abhishek N",
-            id:15
+            id: 15
         }, {
             name: "Ravinder Kumar",
-            id:16
+            id: 16
         }, {
             name: "Rahul Choudhary",
-            id:17
+            id: 17
         }, {
             name: "Dong Gyu Kim",
-            id:18
+            id: 18
         }, {
             name: "Jae Min Lee",
-            id:19
+            id: 19
         }];
 
         $scope.register = {};
@@ -1515,69 +1515,69 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             title: 'Jaipur Pink Panthers',
             info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
         }];
-//players copy paste
+        //players copy paste
 
- $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
-    globalFunc.changeLang = function () {
-        $scope.currentlang = currentlang;
+        $scope.currentlang = $.jStorage.get("languageSet");
+        console.log($scope.currentlang);
+        globalFunc.changeLang = function () {
+            $scope.currentlang = currentlang;
 
-    }
-    $scope.gotoPlayers=function(data){
-        if(data){
-console.log("data",data);
-if(data.status == '1'){
-    $state.go('players-inside', {
-                
-                id: data.id
-            });
-}
         }
-    }
-    $scope.getPlayers = function () {
-        if ($scope.slideindex === undefined) {
-            $scope.slideindex = 0;
-        }
+        $scope.gotoPlayers = function (data) {
+            if (data) {
+                console.log("data", data);
+                if (data.status == '1') {
+                    $state.go('players-inside', {
 
-        NavigationService.getallplayers(function (data) {
-            $scope.player = data.data.queryresult;
-            console.log("$scope.allPlayers", $scope.player);
-        })
-        var i = 0;
-        _.each($scope.player, function (key) {
-            key.id = i;
-            i++;
-        });
-
-        //write code to reindex player by slideindex
-    };
-    $scope.getPlayers();
-
-    $scope.openPlayers = function (data, index) {
-   
-        data.active = true;
-        $scope.players = $scope.player;
-        var startArr = _.slice($scope.players, 0, index);
-        var endArr = _.slice($scope.players, index);
-
-
-        $scope.players2 = _.union(endArr, startArr);
-
-        var modalInstance = $uibModal.open({
-            animation: true,
-            templateUrl: 'views/modal/player-slider.html',
-            controller: 'PlayersCtrl',
-            scope: $scope,
-            resolve: {
-                slideindex: function () {
-                    return $scope.players;
+                        id: data.id
+                    });
                 }
             }
-        });
+        }
+        $scope.getPlayers = function () {
+            if ($scope.slideindex === undefined) {
+                $scope.slideindex = 0;
+            }
 
-    };
+            NavigationService.getallplayers(function (data) {
+                $scope.player = data.data.queryresult;
+                console.log("$scope.allPlayers", $scope.player);
+            })
+            var i = 0;
+            _.each($scope.player, function (key) {
+                key.id = i;
+                i++;
+            });
 
- NavigationService.getallplayers(function (data) {
+            //write code to reindex player by slideindex
+        };
+        $scope.getPlayers();
+
+        $scope.openPlayers = function (data, index) {
+
+            data.active = true;
+            $scope.players = $scope.player;
+            var startArr = _.slice($scope.players, 0, index);
+            var endArr = _.slice($scope.players, index);
+
+
+            $scope.players2 = _.union(endArr, startArr);
+
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/player-slider.html',
+                controller: 'PlayersCtrl',
+                scope: $scope,
+                resolve: {
+                    slideindex: function () {
+                        return $scope.players;
+                    }
+                }
+            });
+
+        };
+
+        NavigationService.getallplayers(function (data) {
             $scope.showcaseSlides = [];
             $scope.showcaseSlides = data.data.queryresult;
             console.log("$scope.showcaseSlides", $scope.showcaseSlides);
@@ -1604,13 +1604,13 @@ if(data.status == '1'){
             console.log("$scope.tournamentplayed", $scope.tournamentplayed);
             console.log("  $scope.playerDetails", $scope.playerDetails);
         })
-      
 
 
-       
+
+
     })
 
-.controller('PlayersCtrl', function ($scope,$state, TemplateService, NavigationService, $timeout, $uibModal,$stateParams) {
+.controller('PlayersCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $uibModal, $stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("players");
     $scope.menutitle = NavigationService.makeactive("Players");
@@ -1622,15 +1622,15 @@ if(data.status == '1'){
         $scope.currentlang = currentlang;
 
     }
-    $scope.gotoPlayers=function(data){
-        if(data){
-console.log("data",data);
-if(data.status == '1'){
-    $state.go('players-inside', {
-                
-                id: data.id
-            });
-}
+    $scope.gotoPlayers = function (data) {
+        if (data) {
+            console.log("data", data);
+            if (data.status == '1') {
+                $state.go('players-inside', {
+
+                    id: data.id
+                });
+            }
         }
     }
     $scope.getPlayers = function () {
@@ -1842,33 +1842,33 @@ if(data.status == '1'){
 
     };
 
- NavigationService.getallplayers(function (data) {
-            $scope.showcaseSlides = [];
+    NavigationService.getallplayers(function (data) {
+        $scope.showcaseSlides = [];
+        $scope.showcaseSlides = data.data.queryresult;
+        console.log("$scope.showcaseSlides", $scope.showcaseSlides);
+        var findIndex = _.findIndex($scope.showcaseSlides, function (value) {
+            return value.id == $stateParams.id;
+        });
+        console.log("findIndex", findIndex);
+        if (findIndex >= 0) {
+            $scope.showcaseSlides.splice(findIndex, 1);
+        } else {
             $scope.showcaseSlides = data.data.queryresult;
-            console.log("$scope.showcaseSlides", $scope.showcaseSlides);
-            var findIndex = _.findIndex($scope.showcaseSlides, function (value) {
-                return value.id == $stateParams.id;
-            });
-            console.log("findIndex", findIndex);
-            if (findIndex >= 0) {
-                $scope.showcaseSlides.splice(findIndex, 1);
-            } else {
-                $scope.showcaseSlides = data.data.queryresult;
-            }
+        }
 
-        })
+    })
 
 
-        $scope.stateparamsId = $stateParams.id;
-        NavigationService.getsingleplayer($stateParams.id, function (data) {
+    $scope.stateparamsId = $stateParams.id;
+    NavigationService.getsingleplayer($stateParams.id, function (data) {
 
-            $scope.playerDetails = data.data.data.player;
-            $scope.achievements = _.chunk(data.data.data.achievmant, 6);
-            $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
-            console.log("  $scope.achievements ", $scope.achievements);
-            console.log("$scope.tournamentplayed", $scope.tournamentplayed);
-            console.log("  $scope.playerDetails", $scope.playerDetails);
-        })
+        $scope.playerDetails = data.data.data.player;
+        $scope.achievements = _.chunk(data.data.data.achievmant, 6);
+        $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
+        console.log("  $scope.achievements ", $scope.achievements);
+        console.log("$scope.tournamentplayed", $scope.tournamentplayed);
+        console.log("  $scope.playerDetails", $scope.playerDetails);
+    })
 
 })
 
@@ -1957,7 +1957,7 @@ if(data.status == '1'){
     $scope.gotoFun = function (submenu) {
         console.log("im in", submenu);
         if (submenu == 'Games') {
-              NavigationService.getAuthenticate(function (data) {
+            NavigationService.getAuthenticate(function (data) {
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
                     console.log("im in true");
@@ -1976,7 +1976,7 @@ if(data.status == '1'){
                     });
                 }
             })
-          
+
         }
         if (submenu == 'Gallery') {
             NavigationService.getAuthenticate(function (data) {
@@ -2298,7 +2298,7 @@ if(data.status == '1'){
 
 })
 
-.controller('footerctrl', function ($scope, TemplateService,$uibModal) {
+.controller('footerctrl', function ($scope, TemplateService, $uibModal) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
@@ -2356,51 +2356,51 @@ if(data.status == '1'){
 
     }];
 
-    $scope.otps=function(){
-    $uibModal.open({
-        animation:true,
-        templateUrl:"views/modal/otps.html",
-        scope:$scope,
-        // size:'lg',
-        windowClass:'bg-white'
-    })
-}
-    
-$scope.otp=function(){
-    $uibModal.open({
-        animation:true,
-        templateUrl:"views/modal/otp.html",
-        scope:$scope,
-        windowClass:'bg-white'
-    })
-}
+    $scope.otps = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/otps.html",
+            scope: $scope,
+            // size:'lg',
+            windowClass: 'bg-white'
+        })
+    }
 
-$scope.otpsucess=function(){
-    $uibModal.open({
-        animation:true,
-        templateUrl:"views/modal/otp-success.html",
-        scope:$scope,
-        windowClass:'bg-white'
-    })
-}
+    $scope.otp = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/otp.html",
+            scope: $scope,
+            windowClass: 'bg-white'
+        })
+    }
 
-$scope.password=function(){
-    $uibModal.open({
-        animation:true,
-        templateUrl:"views/modal/password.html",
-        scope:$scope,
-        windowClass:'bg-white'
-    })
-}
+    $scope.otpsucess = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/otp-success.html",
+            scope: $scope,
+            windowClass: 'bg-white'
+        })
+    }
 
-$scope.passconfirm=function(){
-    $uibModal.open({
-        animation:true,
-        templateUrl:"views/modal/passconfirm.html",
-        scope:$scope,
-        windowClass:'bg-white'
-    })
-}
+    $scope.password = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/password.html",
+            scope: $scope,
+            windowClass: 'bg-white'
+        })
+    }
+
+    $scope.passconfirm = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/passconfirm.html",
+            scope: $scope,
+            windowClass: 'bg-white'
+        })
+    }
 
 
 
