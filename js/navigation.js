@@ -154,6 +154,9 @@ var navigationservice = angular.module('navigationservice', [])
          getguesswho: function(callback) {
             $http.get(adminurl + "getguesswho").success(callback);
         },
+        getpantherworldguesswho: function(callback) {
+            $http.get(tempUrl + "getpantherworldguesswho").then(callback);
+        },
 
          getAuthenticate: function(callback) {
             $http.get(adminurl + "authenticate").success(callback);
@@ -184,12 +187,29 @@ var navigationservice = angular.module('navigationservice', [])
        getcongratulation: function(callback) {
           $http.get(tempUrl + "getcongratulation").success(callback);
       },
+
       getjourney: function(callback) {
          $http.get(tempUrl + "getjourney").success(callback);
      },
        //  getjourney: function(callback) {
        //     $http.get(adminurl + "getjourney").success(callback);
        // },
+       changeTimerRapid: function() {
+         var rapidTimer = $.jStorage.get("rapidTimer");
+         var returnVal;
+         if(rapidTimer && rapidTimer != 1) {
+           returnVal  = rapidTimer - 1;
+           $.jStorage.set("rapidTimer",returnVal);
+         }
+         else if( rapidTimer != 1) {
+           $.jStorage.set("rapidTimer",90);
+           returnVal = 90;
+         } else {
+           $.jStorage.set("rapidTimer",null);
+           returnVal = 0;
+         }
+         return returnVal;
+       },
 
         makeactive: function(menuname) {
             for (var i = 0; i < navigation.length; i++) {
@@ -200,7 +220,8 @@ var navigationservice = angular.module('navigationservice', [])
                 }
             }
             return menuname;
-        }
+        },
+
 
     };
 });
