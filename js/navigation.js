@@ -160,8 +160,21 @@ var navigationservice = angular.module('navigationservice', [])
         },
 
         getAuthenticate: function (callback) {
-            $http.get(adminurl + "authenticate").success(callback);
-        },
+                $http.get(adminurl + "authenticate").success(callback);
+            }
+            // callProfile: function (callback) {
+            //     //console.log('Navigation form data: ', formData);
+            //     $http({
+            //         url: adminurl + 'user/profile',
+            //         method: 'POST',
+            //         withCredentials: true
+
+        //     }).then(function (data) {
+        //         data = data.data;
+        //         callback(data);
+        //     });
+        // }
+        ,
         logoutUser: function (callback) {
             $http.get(adminurl + "logout").success(callback);
         },
