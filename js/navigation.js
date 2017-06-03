@@ -3,9 +3,9 @@ var mainurl = "http://wohlig.co.in/pinkpanther/jppbackend/index.php/"
     // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
     //wohlig url for testing
 
-var imgurl = "http://wohlig.co.in/pinkpanther/jppbackend/index.php/uploads/";
+var imgurl = "http://wohlig.co.in/pinkpanther/jppbackend/uploads/";
 var tempUrl = "http://wohlig.co.in/pinkpanther/jppbackend/index.php/json/";
-var tempimgurl = "http://wohlig.co.in/pinkpanther/jppbackend/index.php/uploads/";
+var tempimgurl = "http://wohlig.co.in/pinkpanther/jppbackend/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
