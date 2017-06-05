@@ -3,7 +3,7 @@ var rapidAnswer = angular.module('rapidAnswer', [])
 .factory('RapidAnswer', function ($http) {
 
 
-    var countTimer = 90;
+    var countTimer = 190;
     var questions = [{
         id: 1,
         quesNo: "Q1",
