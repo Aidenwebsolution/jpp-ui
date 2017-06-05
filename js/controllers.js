@@ -239,7 +239,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                             $scope.incorrectDetails = false;
                             $scope.loginData = {};
                             $scope.modalLogsInstance.close();
-                            
+
                         }, 2000);
                         console.log("im in");
                     } else {
@@ -1601,7 +1601,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('PlayersInsideCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+
+    .controller('PlayersInsideCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams) {
+
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("players-inside");
         $scope.menutitle = NavigationService.makeactive("Players Inside");

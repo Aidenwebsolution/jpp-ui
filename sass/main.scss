@@ -3537,10 +3537,10 @@ a.ilogo {
         padding: 0 20px;
         margin: 60px 0 90px 0;
         .flex-direction-nav .flex-prev {
-            left: -25px;
+            left: -45px;
         }
         .flex-direction-nav .flex-next {
-            right: -56px;
+            right: -70px;
         }
         .flex-direction-nav .flex-next {
             height: 70px;
@@ -3577,17 +3577,18 @@ a.ilogo {
     background-repeat: no-repeat;
     background-size: cover;
     .play-img {
-        @include size(400px,550px);
-    margin: -50px auto 100px;
-
+        @include size(400px,
+        550px);
+        margin: -50px auto 100px;
         img {
             width: 100%;
             margin: 0 0 0 90px;
         }
     }
 }
-.plays-names{
-     transform: rotate(-10deg);
+
+.plays-names {
+    transform: rotate(-10deg);
     position: absolute;
     top: 170px;
     left: 200px;
@@ -3600,7 +3601,6 @@ a.ilogo {
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
     margin-bottom: 40px;
-    
     p {
         font-size: 40px;
         margin: 0;
@@ -3999,8 +3999,8 @@ a.ilogo {
     .modal-content {
         border: 3px solid #fff;
         background: linear-gradient(-90deg, #343fa9, #1450a1);
-    color: #fff;
-    border-radius: 10px;
+        color: #fff;
+        border-radius: 10px;
     }
 }
 
@@ -4044,63 +4044,68 @@ a.ilogo {
             margin: 0 5px;
             display: inline-block;
             background-color: transparent;
-            &:focus{
+            &:focus {
                 outline: 0;
                 border: none;
-                 border-bottom: 2px solid #fff;
+                border-bottom: 2px solid #fff;
             }
-            &:active{
-&:focus{
-                outline: 0;
-                border: none;
-                 border-bottom: 2px solid #fff;
+            &:active {
+                &:focus {
+                    outline: 0;
+                    border: none;
+                    border-bottom: 2px solid #fff;
+                }
             }
-            }
-
         }
     }
-    .otps{
+    .otps {
         input {
             width: 100%;
-    }
-    }
-
-    .btn-go{
-    @include size(65%,auto);
-    padding: 5px 0;
-    border-radius: 0;
-    border-color: #fff;
-    margin: 30px 0 0;
-    color: #1450a1;
-    &:focus{
-        outline: 0;
-    }
-    }
-
-    .otp-success{
-        .btn-go{
-             @include size(40%,auto);
         }
     }
-
-    .password{
-        .form-groups{
+    .btn-go {
+        @include size(65%,
+        auto);
+        padding: 5px 0;
+        border-radius: 0;
+        border-color: #fff;
+        margin: 30px 0 0;
+        color: #1450a1;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .otp-success {
+        .btn-go {
+            @include size(40%,
+            auto);
+        }
+    }
+    .password {
+        .form-groups {
             padding: 20px 0;
         }
     }
-
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
- font-size: 18px;
- color: #fff;
+     ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 18px;
+        color: #fff;
+    }
 }
-}
 
-.player-view{
-    .flex-prev, .flex-next{
+.player-view {
+    .flex-prev,
+    .flex-next {
         opacity: 1;
     }
-    .text-size{
+    .text-size {
         font-size: 28px !important;
+    }
+}
+
+.socials-hub {
+    .player-image {
+        height: auto;
     }
 }
 
