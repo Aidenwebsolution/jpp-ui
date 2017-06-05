@@ -194,6 +194,14 @@ var navigationservice = angular.module('navigationservice', [])
                 data: formData
             }).success(callback);
         },
+        forgotPassword: function (formData, callback) {
+            $http({
+                url: adminurl + 'forgotpassword',
+                method: 'POST',
+                withCredentials: true,
+                data: formData
+            }).success(callback);
+        },
         submitLogin: function (loginData, callback) {
             $http({
                 url: adminurl + 'login',
