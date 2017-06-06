@@ -107,6 +107,44 @@ $scope.passconfirm = function() {
         windowClass: 'bg-white'
     })
 }
+
+$scope.isCheckLoggedIn = function(value) {
+    console.log("im authenticate");
+    NavigationService.getAuthenticate(function(data) {
+        console.log("getAuthenticate", data);
+
+        if (data.logged_in) {
+            console.log("im in true");
+            $rootScope.userFirstName = data.firstname;
+            console.log("userFirstName", $rootScope.userFirstName)
+            $rootScope.loggedIn = true;
+            if (value == 'Game') {
+                console.log("im in game");
+                $state.go('Comingsoon');
+            }
+
+            if (value == 'JPP') {
+                window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
+            }
+            if (value == 'Gallery') {
+                window.location = "http://jaipurpinkpanthers.com/#/gallery";
+            }
+            if (value == 'WALLPAPERS') {
+                window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
+            }
+        } else {
+            $rootScope.loggedIn = false;
+            $scope.modalLogsInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/logs.html',
+                scope: $scope,
+            });
+        }
+
+
+
+    })
+}
         var languagePicker = {};
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
@@ -380,11 +418,11 @@ $scope.passconfirm = function() {
                         $rootScope.loggedIn = true;
                         $scope.successlogin = true;
                         $timeout(function() {
-
+                              $scope.modalLogsInstance.close();
                             $scope.successlogin = false;
                             $scope.incorrectDetails = false;
                             $scope.loginData = {};
-                            $scope.modalLogsInstance.close();
+
 
                         }, 2000);
                         console.log("im in");
@@ -441,43 +479,7 @@ $scope.passconfirm = function() {
         console.log($scope.currentlang);
 
 
-        $scope.isCheckLoggedIn = function(value) {
-            console.log("im authenticate");
-            NavigationService.getAuthenticate(function(data) {
-                console.log("getAuthenticate", data);
 
-                if (data.logged_in) {
-                    console.log("im in true");
-                    $rootScope.userFirstName = data.firstname;
-                    console.log("userFirstName", $rootScope.userFirstName)
-                    $rootScope.loggedIn = true;
-                    if (value == 'Game') {
-                        console.log("im in game");
-                        $state.go('Comingsoon');
-                    }
-
-                    if (value == 'JPP') {
-                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
-                    }
-                    if (value == 'Gallery') {
-                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
-                    }
-                    if (value == 'WALLPAPERS') {
-                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
-                    }
-                } else {
-                    $rootScope.loggedIn = false;
-                    $scope.modalLogsInstance = $uibModal.open({
-                        animation: true,
-                        templateUrl: 'views/modal/logs.html',
-                        scope: $scope,
-                    });
-                }
-
-
-
-            })
-        }
 
         globalFunc.changeLang = function() {
             $scope.currentlang = currentlang;
@@ -2217,6 +2219,7 @@ $scope.passconfirm = function() {
         })
     }
 
+
     $scope.forgotPasswordotp = function() {
         $scope.modalLogsInstance.close();
         $scope.modalInstanceForgotPasswordotp = $uibModal.open({
@@ -2453,6 +2456,7 @@ $scope.passconfirm = function() {
         }
     };
 
+
     $scope.submitEmailId = function(forgotPassData) {
         $scope.invalidEmail = false;
         if (forgotPassData) {
@@ -2475,6 +2479,7 @@ $scope.passconfirm = function() {
         }
     }
     $scope.forgotOtpSubmitFun = function(forgotPassData) {
+        $scope.wrongOTP=false;
         console.log("forgotPassData", forgotPassData);
         if (forgotPassData) {
             $scope.forgotPassData.otp = forgotPassData.otp;
@@ -2488,11 +2493,13 @@ $scope.passconfirm = function() {
 
                       NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
                         console.log("data",data);
-                        if (data) {
+                        if (data.id) {
                           $scope.modalInstancePassword.close();
                           $scope.modalInstanceForgotPasswordotp.close();
                           $scope.passconfirm();
 
+                        }else {
+                          $scope.wrongOTP=true;
                         }
                       })
                     }else {
