@@ -155,6 +155,7 @@ $scope.isCheckLoggedIn = function(value) {
         $scope.signupOtpInfo = {};
         $scope.signupOtpInfo.userid = ''
         $scope.goSubmitOtp = function(otp) {
+          $scope.errorOTP=false;
             console.log("length", otp);
             if (otp) {
                 $scope.signupOtpInfo.otp = otp;
@@ -168,7 +169,7 @@ $scope.isCheckLoggedIn = function(value) {
 
                     } else {
                         console.log("im else");
-                        $scope.errorOTP = "Please enter valid OTP";
+                        $scope.errorOTP = true;
                         $rootScope.loggedIn = false;
                         // $scope.alreadyExist = true;
                     }
@@ -2390,6 +2391,7 @@ $scope.isCheckLoggedIn = function(value) {
     $scope.signupOtpInfo = {};
     $scope.signupOtpInfo.userid = ''
     $scope.goSubmitOtp = function(otp) {
+        $scope.errorOTP = false;
         console.log("length", otp);
         if (otp) {
             $scope.signupOtpInfo.otp = otp;
@@ -2403,7 +2405,7 @@ $scope.isCheckLoggedIn = function(value) {
 
                 } else {
                     console.log("im else");
-                    $scope.errorOTP = "Please enter valid OTP";
+                    $scope.errorOTP = true;
                     $rootScope.loggedIn = false;
                     // $scope.alreadyExist = true;
                 }
