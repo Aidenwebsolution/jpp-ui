@@ -432,6 +432,7 @@ $scope.authentication = function() {
                         console.log("userFirstName", $rootScope.userFirstName)
                         $scope.incorrectDetails = false;
                         $rootScope.loggedIn = true;
+                        $scope.authentication();
                         $scope.successlogin = true;
                         $timeout(function() {
                               $scope.modalLogsInstance.close();
