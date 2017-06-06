@@ -276,6 +276,7 @@ $scope.authentication = function() {
                               $scope.modalInstancePassword.close();
                               $scope.modalInstanceForgotPasswordotp.close();
                               $scope.passconfirm();
+                              $scope.forgotPassData={};
 
                             }else {
                               $scope.wrongOTP=true;
