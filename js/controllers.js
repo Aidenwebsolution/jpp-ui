@@ -145,6 +145,19 @@ $scope.isCheckLoggedIn = function(value) {
 
     })
 }
+$scope.authentication = function() {
+    NavigationService.getAuthenticate(function(data) {
+        if (data.logged_in) {
+            console.log(data, "data");
+            $rootScope.userFirstName = data.firstname;
+            console.log("$rootScope.userFirstName0", $rootScope.userFirstName)
+            $rootScope.loggedIn = true;
+        } else {
+            $rootScope.loggedIn = false;
+        }
+    })
+}
+
         var languagePicker = {};
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
@@ -258,7 +271,8 @@ $scope.isCheckLoggedIn = function(value) {
 
                           NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
                             console.log("data",data);
-                            if (data.id) {
+                            if (data == "true") {
+                              $scope.modalLogsInstance.close();
                               $scope.modalInstancePassword.close();
                               $scope.modalInstanceForgotPasswordotp.close();
                               $scope.passconfirm();
@@ -2495,7 +2509,7 @@ $scope.isCheckLoggedIn = function(value) {
 
                       NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
                         console.log("data",data);
-                        if (data.id) {
+                        if (data == "true") {
                           $scope.modalInstancePassword.close();
                           $scope.modalInstanceForgotPasswordotp.close();
                           $scope.passconfirm();
