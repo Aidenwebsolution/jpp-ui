@@ -41,66 +41,78 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //
         //
         // };
+// ====================modals====================
+$scope.forgotPassData={};
+$scope.logs = function() {
+    $scope.modalLogsInstance = $uibModal.open({
+        animation: true,
+        templateUrl: 'views/modal/logs.html',
+        scope: $scope,
+    });
+};
 
-        $scope.otps = function() {
-            $scope.modalInstanceOtps = $uibModal.open({
-                animation: true,
-                templateUrl: "views/modal/otps.html",
-                scope: $scope,
-                windowClass: 'bg-white'
-            })
-        }
 
-        $scope.otp = function() {
-            $scope.modalInstanceOtpSuccess.close();
-            $scope.modalInstanceOtp = $uibModal.open({
-                animation: true,
-                templateUrl: "views/modal/otp.html",
-                scope: $scope,
-                windowClass: 'bg-white'
-            })
-        }
+$scope.otps = function() {
+    $scope.modalLogsInstance.close();
+    $scope.modalInstanceOtps = $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/otps.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
 
-        $scope.otpsucess = function() {
-            $scope.modalInstanceOtpSuccess = $uibModal.open({
-                animation: true,
-                templateUrl: "views/modal/otp-success.html",
-                scope: $scope,
-                windowClass: 'bg-white'
-            })
-        }
+$scope.forgotPasswordotp = function() {
+    $scope.modalLogsInstance.close();
+    $scope.modalInstanceForgotPasswordotp = $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/forgototp.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
 
-        $scope.password = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: "views/modal/password.html",
-                scope: $scope,
-                windowClass: 'bg-white'
-            })
-        }
+$scope.otp = function() {
+  $scope.modalInstanceOtp = $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/otp.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
 
-        $scope.passconfirm = function() {
-            $uibModal.open({
-                animation: true,
-                templateUrl: "views/modal/passconfirm.html",
-                scope: $scope,
-                windowClass: 'bg-white'
-            })
-        }
+$scope.otpsucess = function() {
+    $scope.modalInstanceOtpSuccess = $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/otp-success.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
 
+$scope.password = function() {
+    $scope.modalInstancePassword = $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/password.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
+
+$scope.passconfirm = function() {
+    $uibModal.open({
+        animation: true,
+        templateUrl: "views/modal/passconfirm.html",
+        scope: $scope,
+        windowClass: 'bg-white'
+    })
+}
         var languagePicker = {};
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
 
-        // $scope.logs = function() {
-        //     $uibModal.open({
-        //         animation: true,
-        //         templateUrl: 'views/modal/logs.html',
-        //         scope: $scope,
-        //     });
-        // };
         $scope.signupdata = {};
         $scope.signupOtpInfo = {};
         $scope.signupOtpInfo.userid = ''
@@ -149,7 +161,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                             console.log("after signup********", data);
                             if (data.id) {
                                 console.log("im");
-                                $scope.otps();
+                                $scope.otp();
+                                // $scope.otpsucess();
                                 $scope.modalLogsInstance.close();
                                 $scope.signupdata = {};
                                 $scope.signupOtpInfo.userid = data.id;
@@ -170,20 +183,107 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
         };
 
-        $scope.submitEmailId = function(emailId) {
-            if (emailId) {
-                $scope.otpsucess();
-                $scope.modalInstanceOtps.close();
+        $scope.submitEmailId = function(forgotPassData) {
+            $scope.invalidEmail = false;
+            if (forgotPassData) {
+                NavigationService.forgotPassword(forgotPassData, function(data) {
+                    console.log("data", data);
+                    if (data.id) {
+                        $scope.forgotPassData.userid = data.id;
+                        $scope.modalInstanceOtps.close();
+                        $scope.otpsucess();
+                        $timeout(function() {
+                            $scope.modalInstanceOtpSuccess.close();
+                            $scope.forgotPasswordotp();
+                        }, 2000);
+
+                    } else {
+                        console.log("Not A Valid Email");
+                        $scope.invalidEmail = true;
+                    }
+                })
             }
         }
+        $scope.forgotOtpSubmitFun = function(forgotPassData) {
+            $scope.wrongOTP=false;
+            console.log("forgotPassData", forgotPassData);
+            if (forgotPassData) {
+                $scope.forgotPassData.otp = forgotPassData.otp;
+                $scope.password();
+                $scope.submitChangepassword = function(forgotPassData) {
+                    $scope.inavlidPass = false;
+                    if (forgotPassData.newPassword && forgotPassData.confirmPassword) {
+                        if (forgotPassData.newPassword == forgotPassData.confirmPassword) {
+                          $scope.forgotPassData.password =forgotPassData.confirmPassword;
+                          console.log("$scope.forgotPassData",$scope.forgotPassData);
+
+                          NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
+                            console.log("data",data);
+                            if (data.id) {
+                              $scope.modalInstancePassword.close();
+                              $scope.modalInstanceForgotPasswordotp.close();
+                              $scope.passconfirm();
+
+                            }else {
+                              $scope.wrongOTP=true;
+                            }
+                          })
+                        }else {
+                            $scope.inavlidPass = true;
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        // $scope.logs = function() {
+        //     $uibModal.open({
+        //         animation: true,
+        //         templateUrl: 'views/modal/logs.html',
+        //         scope: $scope,
+        //     });
+        // };
+        // $scope.signupdata = {};
+        // $scope.signupOtpInfo = {};
+        // $scope.signupOtpInfo.userid = ''
+        // $scope.goSubmitOtp = function(otp) {
+        //     console.log("length", otp);
+        //     if (otp) {
+        //         $scope.signupOtpInfo.otp = otp;
+        //         console.log("$scope.signupOtpInfo", $scope.signupOtpInfo);
+        //         NavigationService.signupOtpSubmit($scope.signupOtpInfo, function(data) {
+        //             console.log("data", data);
+        //             if (data.logged_in) {
+        //                 $rootScope.loggedIn = true;
+        //                 $scope.authentication();
+        //                 $scope.modalInstanceOtp.close();
+        //
+        //             } else {
+        //                 console.log("im else");
+        //                 $scope.errorOTP = "Please enter valid OTP";
+        //                 $rootScope.loggedIn = false;
+        //                 // $scope.alreadyExist = true;
+        //             }
+        //
+        //         })
+        //     }
+        //
+        // }
+        //
+        //
+        //
         // $scope.submitSignup = function(signupdata) {
-        //     console.log("signupdata", signupdata);
+        //     console.log("signupdata", signupdata.isChecked);
         //     $scope.incorrectPass = false;
         //     $scope.isCheckedmsg = false;
         //     $scope.alreadyExist = false;
         //     $scope.succesSignup = false;
         //     if (signupdata) {
         //         console.log("signupdata", signupdata);
+        //
         //         if (signupdata.password == signupdata.confirmPass) {
         //             $scope.incorrectPass = false;
         //             if (signupdata.isChecked === undefined) {
@@ -191,33 +291,79 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //             } else {
         //                 $scope.checkMark = "";
         //                 NavigationService.submitSignup(signupdata, function(data) {
-        //                     console.log("data", data);
-        //                     if (data.logged_in) {
-        //                         $rootScope.loggedIn = true;
-        //                         $scope.succesSignup = true;
-        //                         $scope.alreadyExist = false;
-        //                         $timeout(function() {
-        //
-        //                             $scope.succesSignup = false;
-        //                             $scope.alreadyExist = false;
-        //                             $scope.signupdata = {};
-        //                             $scope.modalLogsInstance.close();
-        //                         }, 2000);
-        //
+        //                     console.log("after signup********", data);
+        //                     if (data.id) {
+        //                         console.log("im");
+        //                         $scope.otps();
+        //                         $scope.modalLogsInstance.close();
+        //                         $scope.signupdata = {};
+        //                         $scope.signupOtpInfo.userid = data.id;
+        //                         77;
         //                     } else {
-        //                         $scope.succesSignup = false;
         //                         $rootScope.loggedIn = false;
-        //                         console.log("im else");
         //                         $scope.alreadyExist = true;
         //                     }
+        //
         //                 })
         //             }
+        //
+        //
         //
         //         } else {
         //             $scope.incorrectPass = true;
         //         }
         //     }
         // };
+        //
+        // $scope.submitEmailId = function(emailId) {
+        //         if (emailId) {
+        //             $scope.otpsucess();
+        //             $scope.modalInstanceOtps.close();
+        //         }
+        //     }
+            // $scope.submitSignup = function(signupdata) {
+            //     console.log("signupdata", signupdata);
+            //     $scope.incorrectPass = false;
+            //     $scope.isCheckedmsg = false;
+            //     $scope.alreadyExist = false;
+            //     $scope.succesSignup = false;
+            //     if (signupdata) {
+            //         console.log("signupdata", signupdata);
+            //         if (signupdata.password == signupdata.confirmPass) {
+            //             $scope.incorrectPass = false;
+            //             if (signupdata.isChecked === undefined) {
+            //                 $scope.checkMark = 'Please tick mark';
+            //             } else {
+            //                 $scope.checkMark = "";
+            //                 NavigationService.submitSignup(signupdata, function(data) {
+            //                     console.log("data", data);
+            //                     if (data.logged_in) {
+            //                         $rootScope.loggedIn = true;
+            //                         $scope.succesSignup = true;
+            //                         $scope.alreadyExist = false;
+            //                         $timeout(function() {
+            //
+            //                             $scope.succesSignup = false;
+            //                             $scope.alreadyExist = false;
+            //                             $scope.signupdata = {};
+            //                             $scope.modalLogsInstance.close();
+            //                         }, 2000);
+            //
+            //                     } else {
+            //                         $scope.succesSignup = false;
+            //                         $rootScope.loggedIn = false;
+            //                         console.log("im else");
+            //                         $scope.alreadyExist = true;
+            //                     }
+            //                 })
+            //             }
+            //
+            //         } else {
+            //             $scope.incorrectPass = true;
+            //         }
+            //     }
+            // };
+            // ===================================Login=======================
         $scope.loginData = {};
         $scope.incorrectDetails = false;
         $scope.loginSubmit = function(loginData) {
@@ -1602,136 +1748,136 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-    .controller('PlayersInsideCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('PlayersInsideCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams) {
 
-        //Used to name the .html file
-        $scope.template = TemplateService.changecontent("players-inside");
-        $scope.menutitle = NavigationService.makeactive("Players Inside");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        $scope.bricks = [{
-            img: 'img/news/n4.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
-        }, {
-            img: 'img/news/n6.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-        }, {
-            img: 'img/news/n3.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
-        }, {
-            img: 'img/gallery/g3.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
-        }, {
-            img: 'img/gallery/g6.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
-        }, {
-            img: 'img/wallpapper/w7.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
-        }, {
-            img: 'img/team.jpg',
-            title: 'Jaipur Pink Panthers',
-            info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
-        }];
-        //players copy paste
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("players-inside");
+    $scope.menutitle = NavigationService.makeactive("Players Inside");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.bricks = [{
+        img: 'img/news/n4.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'The unparalleled experience of Shabeer Bapu Sharfudheen has helped us improve our game on the mat to another level.',
+    }, {
+        img: 'img/news/n6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: ' A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/news/n3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'Tie your shoe laces, get ready and get going! Kick start your holiday with a heart pumping workout to pump up for the week ahead! #RoarforPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g3.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A candid moment when the #Panther boss, Abhishek Bachchan decided to join the us at the lunch table, inspiring us like always. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/gallery/g6.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'That grip which has no escape!.Ran Singh Raniya uses all his strength to take the Dabang down with all his might. A perfect frame where you can witness strength with technique. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/wallpapper/w7.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A swim session after a tiring practice on the mat made our day perfect and relaxing. #RoarForPanthers #JaiHanuman',
+    }, {
+        img: 'img/team.jpg',
+        title: 'Jaipur Pink Panthers',
+        info: 'A star moment when the #Panthers were joined by the legend, Daggubati Venkatesh after an epic victory in the Semi-Finals! #RoarForPanthers #JaiHanuman',
+    }];
+    //players copy paste
 
-        $scope.currentlang = $.jStorage.get("languageSet");
-        console.log($scope.currentlang);
-        globalFunc.changeLang = function() {
-            $scope.currentlang = currentlang;
+    $scope.currentlang = $.jStorage.get("languageSet");
+    console.log($scope.currentlang);
+    globalFunc.changeLang = function() {
+        $scope.currentlang = currentlang;
 
-        }
-        $scope.gotoPlayers = function(data) {
-            if (data) {
-                console.log("data", data);
-                if (data.status == '1') {
-                    $state.go('players-inside', {
+    }
+    $scope.gotoPlayers = function(data) {
+        if (data) {
+            console.log("data", data);
+            if (data.status == '1') {
+                $state.go('players-inside', {
 
-                        id: data.id
-                    });
-                }
+                    id: data.id
+                });
             }
         }
-        $scope.getPlayers = function() {
-            if ($scope.slideindex === undefined) {
-                $scope.slideindex = 0;
-            }
-
-            NavigationService.getallplayers(function(data) {
-                $scope.player = data.data.queryresult;
-                console.log("$scope.allPlayers", $scope.player);
-            })
-            var i = 0;
-            _.each($scope.player, function(key) {
-                key.id = i;
-                i++;
-            });
-
-            //write code to reindex player by slideindex
-        };
-        $scope.getPlayers();
-
-        $scope.openPlayers = function(data, index) {
-
-            data.active = true;
-            $scope.players = $scope.player;
-            var startArr = _.slice($scope.players, 0, index);
-            var endArr = _.slice($scope.players, index);
-
-
-            $scope.players2 = _.union(endArr, startArr);
-
-            var modalInstance = $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/player-slider.html',
-                controller: 'PlayersCtrl',
-                scope: $scope,
-                resolve: {
-                    slideindex: function() {
-                        return $scope.players;
-                    }
-                }
-            });
-
-        };
+    }
+    $scope.getPlayers = function() {
+        if ($scope.slideindex === undefined) {
+            $scope.slideindex = 0;
+        }
 
         NavigationService.getallplayers(function(data) {
-            $scope.showcaseSlides = [];
-            $scope.showcaseSlides = data.data.queryresult;
-            console.log("$scope.showcaseSlides", $scope.showcaseSlides);
-            var findIndex = _.findIndex($scope.showcaseSlides, function(value) {
-                return value.id == $stateParams.id;
-            });
-            console.log("findIndex", findIndex);
-            if (findIndex >= 0) {
-                $scope.showcaseSlides.splice(findIndex, 1);
-            } else {
-                $scope.showcaseSlides = data.data.queryresult;
+            $scope.player = data.data.queryresult;
+            console.log("$scope.allPlayers", $scope.player);
+        })
+        var i = 0;
+        _.each($scope.player, function(key) {
+            key.id = i;
+            i++;
+        });
+
+        //write code to reindex player by slideindex
+    };
+    $scope.getPlayers();
+
+    $scope.openPlayers = function(data, index) {
+
+        data.active = true;
+        $scope.players = $scope.player;
+        var startArr = _.slice($scope.players, 0, index);
+        var endArr = _.slice($scope.players, index);
+
+
+        $scope.players2 = _.union(endArr, startArr);
+
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/player-slider.html',
+            controller: 'PlayersCtrl',
+            scope: $scope,
+            resolve: {
+                slideindex: function() {
+                    return $scope.players;
+                }
             }
+        });
 
-        })
+    };
 
-
-        $scope.stateparamsId = $stateParams.id;
-        NavigationService.getsingleplayer($stateParams.id, function(data) {
-
-            $scope.playerDetails = data.data.data.player;
-            $scope.achievements = _.chunk(data.data.data.achievmant, 6);
-            $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
-            console.log("  $scope.achievements ", $scope.achievements);
-            console.log("$scope.tournamentplayed", $scope.tournamentplayed);
-            console.log("  $scope.playerDetails", $scope.playerDetails);
-        })
-
-
-
+    NavigationService.getallplayers(function(data) {
+        $scope.showcaseSlides = [];
+        $scope.showcaseSlides = data.data.queryresult;
+        console.log("$scope.showcaseSlides", $scope.showcaseSlides);
+        var findIndex = _.findIndex($scope.showcaseSlides, function(value) {
+            return value.id == $stateParams.id;
+        });
+        console.log("findIndex", findIndex);
+        if (findIndex >= 0) {
+            $scope.showcaseSlides.splice(findIndex, 1);
+        } else {
+            $scope.showcaseSlides = data.data.queryresult;
+        }
 
     })
+
+
+    $scope.stateparamsId = $stateParams.id;
+    NavigationService.getsingleplayer($stateParams.id, function(data) {
+
+        $scope.playerDetails = data.data.data.player;
+        $scope.achievements = _.chunk(data.data.data.achievmant, 6);
+        $scope.tournamentplayed = _.chunk(data.data.data.tournamentplayed, 6);
+        console.log("  $scope.achievements ", $scope.achievements);
+        console.log("$scope.tournamentplayed", $scope.tournamentplayed);
+        console.log("  $scope.playerDetails", $scope.playerDetails);
+    })
+
+
+
+
+})
 
 .controller('PlayersCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $uibModal, $stateParams) {
     //Used to name the .html file
@@ -2049,7 +2195,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
-    $scope.emailForOtp = '';
+    $scope.forgotPassData = {};
+
 
     $scope.logs = function() {
         $scope.modalLogsInstance = $uibModal.open({
@@ -2058,7 +2205,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             scope: $scope,
         });
     };
+
+
     $scope.otps = function() {
+        $scope.modalLogsInstance.close();
         $scope.modalInstanceOtps = $uibModal.open({
             animation: true,
             templateUrl: "views/modal/otps.html",
@@ -2067,9 +2217,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         })
     }
 
+    $scope.forgotPasswordotp = function() {
+        $scope.modalLogsInstance.close();
+        $scope.modalInstanceForgotPasswordotp = $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/forgototp.html",
+            scope: $scope,
+            windowClass: 'bg-white'
+        })
+    }
+
     $scope.otp = function() {
-        $scope.modalInstanceOtpSuccess.close();
-        $scope.modalInstanceOtp = $uibModal.open({
+      $scope.modalInstanceOtp = $uibModal.open({
             animation: true,
             templateUrl: "views/modal/otp.html",
             scope: $scope,
@@ -2087,7 +2246,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.password = function() {
-        $uibModal.open({
+        $scope.modalInstancePassword = $uibModal.open({
             animation: true,
             templateUrl: "views/modal/password.html",
             scope: $scope,
@@ -2272,7 +2431,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log("after signup********", data);
                         if (data.id) {
                             console.log("im");
-                            $scope.otps();
+                            $scope.otp();
+                            // $scope.otpsucess();
                             $scope.modalLogsInstance.close();
                             $scope.signupdata = {};
                             $scope.signupOtpInfo.userid = data.id;
@@ -2293,11 +2453,57 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     };
 
-    $scope.submitEmailId = function(emailId) {
-        if (emailId) {
-            $scope.otpsucess();
-            $scope.modalInstanceOtps.close();
+    $scope.submitEmailId = function(forgotPassData) {
+        $scope.invalidEmail = false;
+        if (forgotPassData) {
+            NavigationService.forgotPassword(forgotPassData, function(data) {
+                console.log("data", data);
+                if (data.id) {
+                    $scope.forgotPassData.userid = data.id;
+                    $scope.modalInstanceOtps.close();
+                    $scope.otpsucess();
+                    $timeout(function() {
+                        $scope.modalInstanceOtpSuccess.close();
+                        $scope.forgotPasswordotp();
+                    }, 2000);
+
+                } else {
+                    console.log("Not A Valid Email");
+                    $scope.invalidEmail = true;
+                }
+            })
         }
+    }
+    $scope.forgotOtpSubmitFun = function(forgotPassData) {
+        console.log("forgotPassData", forgotPassData);
+        if (forgotPassData) {
+            $scope.forgotPassData.otp = forgotPassData.otp;
+            $scope.password();
+            $scope.submitChangepassword = function(forgotPassData) {
+                $scope.inavlidPass = false;
+                if (forgotPassData.newPassword && forgotPassData.confirmPassword) {
+                    if (forgotPassData.newPassword == forgotPassData.confirmPassword) {
+                      $scope.forgotPassData.password =forgotPassData.confirmPassword;
+                      console.log("$scope.forgotPassData",$scope.forgotPassData);
+
+                      NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
+                        console.log("data",data);
+                        if (data) {
+                          $scope.modalInstancePassword.close();
+                          $scope.modalInstanceForgotPasswordotp.close();
+                          $scope.passconfirm();
+
+                        }
+                      })
+                    }else {
+                        $scope.inavlidPass = true;
+                    }
+
+                }
+
+            }
+        }
+
     }
     $scope.loginData = {};
     $scope.incorrectDetails = false;

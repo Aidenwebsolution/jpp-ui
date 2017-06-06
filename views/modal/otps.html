@@ -6,12 +6,13 @@
     </a>
     <h1 class="text-uppercase">otp</h1>
     <p>Enter your email id. below and </br> you’ll receive a 4 Digit Verification Code.</p>
-    <form  name="forms-otp1" class="form-otp" ng-submit="submitEmailId(emailForOtp)">
+    <form  name="forms-otp1" class="form-otp" ng-submit="submitEmailId(forgotPassData)">
 <div class="form-groups">
-    <input type="text" placeholder="Enter your email id." ng-model="emailForOtp">
+    <input type="text" placeholder="Enter your email id." ng-model="forgotPassData.email">
 </div>
 <button class="btn btn-default btn-go text-uppercase" type="submit">go</button>
 <!-- <button class="btn btn-default btn-go text-uppercase" ng-click="otpsucess();" type="submit">go</button> -->
+<div ng-if="invalidEmail">Please ente valid EmailId</div>
     </form>
 </div>
 </div>
