@@ -12,35 +12,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     .controller('HomeCtrl', function($scope, TemplateService, $state, NavigationService, $interval, $filter, $timeout, $translate, $uibModal, $rootScope) {
         $scope.currentlang = $.jStorage.get("languageSet");
         console.log($scope.currentlang);
-        // globalFunc.changeLang = function() {
-        //     $scope.currentlang = currentlang;
-        //
-        // }
-        // $scope.tab2 = 'fb';
-        // $scope.classa = 'actives';
-        // $scope.classb = '';
-        // $scope.classc = '';
-        // $scope.tab = "design";
-        // $scope.classa = 'active-tab';
-        // $scope.classb = '';
-        //
-        // $scope.tabchange = function(tab, a) {
-        //     $scope.tab = tab;
-        //     if (a == 1) {
-        //         $scope.classa = 'active-tab';
-        //         $scope.classb = '';
-        //
-        //
-        //     }
-        //     if (a == 2) {
-        //         $scope.classb = 'active-tab';
-        //         $scope.classa = '';
-        //
-        //
-        //     }
-        //
-        //
-        // };
+        var languagePicker = {};
+        $scope.template = TemplateService;
+        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+            $(window).scrollTop(0);
+        });
+
+
 // ====================modals====================
 $scope.forgotPassData={};
 $scope.logs = function() {
@@ -158,42 +136,10 @@ $scope.authentication = function() {
     })
 }
 
-        var languagePicker = {};
-        $scope.template = TemplateService;
-        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-            $(window).scrollTop(0);
-        });
 
         $scope.signupdata = {};
         $scope.signupOtpInfo = {};
         $scope.signupOtpInfo.userid = ''
-        $scope.goSubmitOtp = function(otp) {
-          $scope.errorOTP=false;
-            console.log("length", otp);
-            if (otp) {
-                $scope.signupOtpInfo.otp = otp;
-                console.log("$scope.signupOtpInfo", $scope.signupOtpInfo);
-                NavigationService.signupOtpSubmit($scope.signupOtpInfo, function(data) {
-                    console.log("data", data);
-                    if (data.logged_in) {
-                        $rootScope.loggedIn = true;
-                        $scope.authentication();
-                        $scope.modalInstanceOtp.close();
-
-                    } else {
-                        console.log("im else");
-                        $scope.errorOTP = true;
-                        $rootScope.loggedIn = false;
-                        // $scope.alreadyExist = true;
-                    }
-
-                })
-            }
-
-        }
-
-
-
         $scope.submitSignup = function(signupdata) {
             console.log("signupdata", signupdata.isChecked);
             $scope.incorrectPass = false;
@@ -234,8 +180,31 @@ $scope.authentication = function() {
                 }
             }
         };
+        $scope.goSubmitOtp = function(otp) {
+          $scope.errorOTP=false;
+            console.log("length", otp);
+            if (otp) {
+                $scope.signupOtpInfo.otp = otp;
+                console.log("$scope.signupOtpInfo", $scope.signupOtpInfo);
+                NavigationService.signupOtpSubmit($scope.signupOtpInfo, function(data) {
+                    console.log("data", data);
+                    if (data.logged_in) {
+                        $rootScope.loggedIn = true;
+                        $scope.authentication();
+                        $scope.modalInstanceOtp.close();
 
-        $scope.submitEmailId = function(forgotPassData) {
+                    } else {
+                        console.log("im else");
+                        $scope.errorOTP = true;
+                        $rootScope.loggedIn = false;
+                        // $scope.alreadyExist = true;
+                    }
+
+                })
+            }
+
+        };
+$scope.submitEmailId = function(forgotPassData) {
             $scope.invalidEmail = false;
             if (forgotPassData) {
                 NavigationService.forgotPassword(forgotPassData, function(data) {
@@ -293,130 +262,6 @@ $scope.authentication = function() {
 
         }
 
-        // $scope.logs = function() {
-        //     $uibModal.open({
-        //         animation: true,
-        //         templateUrl: 'views/modal/logs.html',
-        //         scope: $scope,
-        //     });
-        // };
-        // $scope.signupdata = {};
-        // $scope.signupOtpInfo = {};
-        // $scope.signupOtpInfo.userid = ''
-        // $scope.goSubmitOtp = function(otp) {
-        //     console.log("length", otp);
-        //     if (otp) {
-        //         $scope.signupOtpInfo.otp = otp;
-        //         console.log("$scope.signupOtpInfo", $scope.signupOtpInfo);
-        //         NavigationService.signupOtpSubmit($scope.signupOtpInfo, function(data) {
-        //             console.log("data", data);
-        //             if (data.logged_in) {
-        //                 $rootScope.loggedIn = true;
-        //                 $scope.authentication();
-        //                 $scope.modalInstanceOtp.close();
-        //
-        //             } else {
-        //                 console.log("im else");
-        //                 $scope.errorOTP = "Please enter valid OTP";
-        //                 $rootScope.loggedIn = false;
-        //                 // $scope.alreadyExist = true;
-        //             }
-        //
-        //         })
-        //     }
-        //
-        // }
-        //
-        //
-        //
-        // $scope.submitSignup = function(signupdata) {
-        //     console.log("signupdata", signupdata.isChecked);
-        //     $scope.incorrectPass = false;
-        //     $scope.isCheckedmsg = false;
-        //     $scope.alreadyExist = false;
-        //     $scope.succesSignup = false;
-        //     if (signupdata) {
-        //         console.log("signupdata", signupdata);
-        //
-        //         if (signupdata.password == signupdata.confirmPass) {
-        //             $scope.incorrectPass = false;
-        //             if (signupdata.isChecked === undefined) {
-        //                 $scope.checkMark = 'Please tick mark';
-        //             } else {
-        //                 $scope.checkMark = "";
-        //                 NavigationService.submitSignup(signupdata, function(data) {
-        //                     console.log("after signup********", data);
-        //                     if (data.id) {
-        //                         console.log("im");
-        //                         $scope.otps();
-        //                         $scope.modalLogsInstance.close();
-        //                         $scope.signupdata = {};
-        //                         $scope.signupOtpInfo.userid = data.id;
-        //                         77;
-        //                     } else {
-        //                         $rootScope.loggedIn = false;
-        //                         $scope.alreadyExist = true;
-        //                     }
-        //
-        //                 })
-        //             }
-        //
-        //
-        //
-        //         } else {
-        //             $scope.incorrectPass = true;
-        //         }
-        //     }
-        // };
-        //
-        // $scope.submitEmailId = function(emailId) {
-        //         if (emailId) {
-        //             $scope.otpsucess();
-        //             $scope.modalInstanceOtps.close();
-        //         }
-        //     }
-            // $scope.submitSignup = function(signupdata) {
-            //     console.log("signupdata", signupdata);
-            //     $scope.incorrectPass = false;
-            //     $scope.isCheckedmsg = false;
-            //     $scope.alreadyExist = false;
-            //     $scope.succesSignup = false;
-            //     if (signupdata) {
-            //         console.log("signupdata", signupdata);
-            //         if (signupdata.password == signupdata.confirmPass) {
-            //             $scope.incorrectPass = false;
-            //             if (signupdata.isChecked === undefined) {
-            //                 $scope.checkMark = 'Please tick mark';
-            //             } else {
-            //                 $scope.checkMark = "";
-            //                 NavigationService.submitSignup(signupdata, function(data) {
-            //                     console.log("data", data);
-            //                     if (data.logged_in) {
-            //                         $rootScope.loggedIn = true;
-            //                         $scope.succesSignup = true;
-            //                         $scope.alreadyExist = false;
-            //                         $timeout(function() {
-            //
-            //                             $scope.succesSignup = false;
-            //                             $scope.alreadyExist = false;
-            //                             $scope.signupdata = {};
-            //                             $scope.modalLogsInstance.close();
-            //                         }, 2000);
-            //
-            //                     } else {
-            //                         $scope.succesSignup = false;
-            //                         $rootScope.loggedIn = false;
-            //                         console.log("im else");
-            //                         $scope.alreadyExist = true;
-            //                     }
-            //                 })
-            //             }
-            //
-            //         } else {
-            //             $scope.incorrectPass = true;
-            //         }
-            //     }
-            // };
             // ===================================Login=======================
         $scope.loginData = {};
         $scope.incorrectDetails = false;
@@ -471,34 +316,10 @@ $scope.authentication = function() {
 
 
         };
-        // $scope.tabchange = function(tab, a) {
-        //     //        console.log(tab);
-        //     $scope.result = [];
-        //     $scope.allresult = [];
-        //     $scope.tab2 = tab;
-        //     if (a == 1) {
-        //         $scope.classa = "actives";
-        //         $scope.classb = '';
-        //         $scope.classc = '';
-        //     } else if (a == 2) {
-        //
-        //         $scope.classb = "actives";
-        //         $scope.classa = '';
-        //         $scope.classc = '';
-        //     } else {
-        //
-        //         $scope.classa = '';
-        //         $scope.classc = "actives";
-        //         $scope.classb = '';
-        //     }
-        // };
+
         $scope.currentlang = $.jStorage.get("languageSet");
         console.log($scope.currentlang);
-
-
-
-
-        globalFunc.changeLang = function() {
+          globalFunc.changeLang = function() {
             $scope.currentlang = currentlang;
             console.log($scope.currentlang);
         };
