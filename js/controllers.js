@@ -20,7 +20,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 // ====================modals====================
-$scope.forgotPassData={};
+
 $scope.logs = function() {
     $scope.modalLogsInstance = $uibModal.open({
         animation: true,
@@ -138,6 +138,7 @@ $scope.authentication = function() {
 
 
         $scope.signupdata = {};
+        $scope.forgotPassData={};
         $scope.signupOtpInfo = {};
         $scope.signupOtpInfo.userid = ''
         $scope.submitSignup = function(signupdata) {
@@ -2035,7 +2036,7 @@ $scope.submitEmailId = function(forgotPassData) {
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
-    $scope.forgotPassData = {};
+
 
 
     $scope.logs = function() {
@@ -2225,6 +2226,7 @@ $scope.submitEmailId = function(forgotPassData) {
     }
     $scope.authentication();
     $scope.signupdata = {};
+      $scope.forgotPassData = {};
     $scope.signupOtpInfo = {};
     $scope.signupOtpInfo.userid = ''
     $scope.goSubmitOtp = function(otp) {
@@ -2351,6 +2353,7 @@ $scope.submitEmailId = function(forgotPassData) {
         }
 
     }
+    =======================login============================
     $scope.loginData = {};
     $scope.incorrectDetails = false;
     $scope.loginSubmit = function(loginData) {
