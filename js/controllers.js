@@ -19,126 +19,128 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
 
 
-// ====================modals====================
+        // ====================modals====================
 
-$scope.logs = function() {
-    $scope.modalLogsInstance = $uibModal.open({
-        animation: true,
-        templateUrl: 'views/modal/logs.html',
-        scope: $scope,
-    });
-};
-
-
-$scope.otps = function() {
-    $scope.modalLogsInstance.close();
-    $scope.modalInstanceOtps = $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/otps.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.forgotPasswordotp = function() {
-    $scope.modalLogsInstance.close();
-    $scope.modalInstanceForgotPasswordotp = $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/forgototp.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.otp = function() {
-  $scope.modalInstanceOtp = $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/otp.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.otpsucess = function() {
-    $scope.modalInstanceOtpSuccess = $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/otp-success.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.password = function() {
-    $scope.modalInstancePassword = $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/password.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.passconfirm = function() {
-    $uibModal.open({
-        animation: true,
-        templateUrl: "views/modal/passconfirm.html",
-        scope: $scope,
-        windowClass: 'bg-white'
-    })
-}
-
-$scope.isCheckLoggedIn = function(value) {
-    console.log("im authenticate");
-    NavigationService.getAuthenticate(function(data) {
-        console.log("getAuthenticate", data);
-
-        if (data.logged_in) {
-            console.log("im in true");
-            $rootScope.userFirstName = data.firstname;
-            console.log("userFirstName", $rootScope.userFirstName)
-            $rootScope.loggedIn = true;
-            if (value == 'Game') {
-                console.log("im in game");
-                $state.go('Comingsoon');
-            }
-
-            if (value == 'JPP') {
-                window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
-            }
-            if (value == 'Gallery') {
-                window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
-            }
-            if (value == 'WALLPAPERS') {
-                window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
-            }
-        } else {
-            $rootScope.loggedIn = false;
+        $scope.logs = function() {
             $scope.modalLogsInstance = $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modal/logs.html',
                 scope: $scope,
             });
+        };
+
+
+        $scope.otps = function() {
+            $scope.modalLogsInstance.close();
+            $scope.modalInstanceOtps = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/otps.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
         }
 
-
-
-    })
-}
-$scope.authentication = function() {
-    NavigationService.getAuthenticate(function(data) {
-        if (data.logged_in) {
-            console.log(data, "data");
-            $rootScope.userFirstName = data.firstname;
-            console.log("$rootScope.userFirstName0", $rootScope.userFirstName)
-            $rootScope.loggedIn = true;
-        } else {
-            $rootScope.loggedIn = false;
+        $scope.forgotPasswordotp = function() {
+            $scope.modalLogsInstance.close();
+            $scope.modalInstanceForgotPasswordotp = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/forgototp.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
         }
-    })
-}
+
+        $scope.otp = function() {
+            $scope.modalInstanceOtp = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/otp.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
+        };
+
+
+
+        $scope.otpsucess = function() {
+            $scope.modalInstanceOtpSuccess = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/otp-success.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
+        }
+
+        $scope.password = function() {
+            $scope.modalInstancePassword = $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/password.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
+        }
+
+        $scope.passconfirm = function() {
+            $uibModal.open({
+                animation: true,
+                templateUrl: "views/modal/passconfirm.html",
+                scope: $scope,
+                windowClass: 'bg-white'
+            })
+        }
+
+        $scope.isCheckLoggedIn = function(value) {
+            console.log("im authenticate");
+            NavigationService.getAuthenticate(function(data) {
+                console.log("getAuthenticate", data);
+
+                if (data.logged_in) {
+                    console.log("im in true");
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("userFirstName", $rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                    if (value == 'Game') {
+                        console.log("im in game");
+                        $state.go('Comingsoon');
+                    }
+
+                    if (value == 'JPP') {
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
+                    }
+                    if (value == 'Gallery') {
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
+                    }
+                    if (value == 'WALLPAPERS') {
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
+                    }
+                } else {
+                    $rootScope.loggedIn = false;
+                    $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }
+
+
+
+            })
+        }
+        $scope.authentication = function() {
+            NavigationService.getAuthenticate(function(data) {
+                if (data.logged_in) {
+                    console.log(data, "data");
+                    $rootScope.userFirstName = data.firstname;
+                    console.log("$rootScope.userFirstName0", $rootScope.userFirstName)
+                    $rootScope.loggedIn = true;
+                } else {
+                    $rootScope.loggedIn = false;
+                }
+            })
+        }
 
 
         $scope.signupdata = {};
-        $scope.forgotPassData={};
+        $scope.forgotPassData = {};
         $scope.signupOtpInfo = {};
         $scope.signupOtpInfo.userid = ''
         $scope.submitSignup = function(signupdata) {
@@ -181,8 +183,10 @@ $scope.authentication = function() {
                 }
             }
         };
+
+
         $scope.goSubmitOtp = function(otp) {
-          $scope.errorOTP=false;
+            $scope.errorOTP = false;
             console.log("length", otp);
             if (otp) {
                 $scope.signupOtpInfo.otp = otp;
@@ -205,7 +209,19 @@ $scope.authentication = function() {
             }
 
         };
-$scope.submitEmailId = function(forgotPassData) {
+        $scope.myarrOfOtp = [];
+        $scope.specialFunction = function(data) {
+            $scope.myarrOfOtp.push(data);
+            $scope.myarrOfOtp1 = $scope.myarrOfOtp.join();
+            $scope.myarrOfOtp1 = $scope.myarrOfOtp1.split(',').join('');
+
+            console.log("$scope.myarrOfOtp1", $scope.myarrOfOtp1.length);
+            if ($scope.myarrOfOtp1.length == 4) {
+                $scope.goSubmitOtp($scope.myarrOfOtp1);
+                  console.log("$scope.myarrOfOtp", $scope.myarrOfOtp1);
+            }
+        }
+        $scope.submitEmailId = function(forgotPassData) {
             $scope.invalidEmail = false;
             if (forgotPassData) {
                 NavigationService.forgotPassword(forgotPassData, function(data) {
@@ -227,32 +243,33 @@ $scope.submitEmailId = function(forgotPassData) {
             }
         }
         $scope.forgotOtpSubmitFun = function(forgotPassData) {
-            $scope.wrongOTP=false;
+            $scope.wrongOTP = false;
             console.log("forgotPassData", forgotPassData);
             if (forgotPassData) {
-                $scope.forgotPassData.otp = forgotPassData.otp;
+                $scope.forgotPassData.otp = forgotPassData;
+                // $scope.forgotPassData.otp = forgotPassData.otp;
                 $scope.password();
                 $scope.submitChangepassword = function(forgotPassData) {
                     $scope.inavlidPass = false;
                     if (forgotPassData.newPassword && forgotPassData.confirmPassword) {
                         if (forgotPassData.newPassword == forgotPassData.confirmPassword) {
-                          $scope.forgotPassData.password =forgotPassData.confirmPassword;
-                          console.log("$scope.forgotPassData",$scope.forgotPassData);
+                            $scope.forgotPassData.password = forgotPassData.confirmPassword;
+                            console.log("$scope.forgotPassData", $scope.forgotPassData);
 
-                          NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
-                            console.log("data",data);
-                            if (data == "true") {
-                              $scope.modalLogsInstance.close();
-                              $scope.modalInstancePassword.close();
-                              $scope.modalInstanceForgotPasswordotp.close();
-                              $scope.passconfirm();
-                              $scope.forgotPassData={};
+                            NavigationService.forgotPasswordSubmit($scope.forgotPassData, function(data) {
+                                console.log("data", data);
+                                if (data == "true") {
+                                    $scope.modalLogsInstance.close();
+                                    $scope.modalInstancePassword.close();
+                                    $scope.modalInstanceForgotPasswordotp.close();
+                                    $scope.passconfirm();
+                                    $scope.forgotPassData = {};
 
-                            }else {
-                              $scope.wrongOTP=true;
-                            }
-                          })
-                        }else {
+                                } else {
+                                    $scope.wrongOTP = true;
+                                }
+                            })
+                        } else {
                             $scope.inavlidPass = true;
                         }
 
@@ -262,8 +279,22 @@ $scope.submitEmailId = function(forgotPassData) {
             }
 
         }
+        ///
+        $scope.myarrOfOtpForForgotPwd = [];
+        $scope.forgotPassDataFunction = function(data) {
+            $scope.myarrOfOtpForForgotPwd.push(data);
+            $scope.myarrOfOtpForForgotPwd1 = $scope.myarrOfOtpForForgotPwd.join();
+            $scope.myarrOfOtpForForgotPwd1 = $scope.myarrOfOtpForForgotPwd1.split(',').join('');
 
-            // ===================================Login=======================
+
+            if ($scope.myarrOfOtpForForgotPwd1.length == 4) {
+                          console.log("$scope.myarrOfOtp1", $scope.myarrOfOtpForForgotPwd1.length);
+                $scope.forgotOtpSubmitFun($scope.myarrOfOtpForForgotPwd1);
+                  console.log("$scope.myarrOfOtpForForgotPwd1", $scope.myarrOfOtpForForgotPwd1);
+            }
+        }
+
+        // ===================================Login=======================
         $scope.loginData = {};
         $scope.incorrectDetails = false;
         $scope.loginSubmit = function(loginData) {
@@ -281,7 +312,7 @@ $scope.submitEmailId = function(forgotPassData) {
                         $scope.authentication();
                         $scope.successlogin = true;
                         $timeout(function() {
-                              $scope.modalLogsInstance.close();
+                            $scope.modalLogsInstance.close();
                             $scope.successlogin = false;
                             $scope.incorrectDetails = false;
                             $scope.loginData = {};
@@ -320,7 +351,7 @@ $scope.submitEmailId = function(forgotPassData) {
 
         $scope.currentlang = $.jStorage.get("languageSet");
         console.log($scope.currentlang);
-          globalFunc.changeLang = function() {
+        globalFunc.changeLang = function() {
             $scope.currentlang = currentlang;
             console.log($scope.currentlang);
         };
@@ -2070,7 +2101,7 @@ $scope.submitEmailId = function(forgotPassData) {
     }
 
     $scope.otp = function() {
-      $scope.modalInstanceOtp = $uibModal.open({
+        $scope.modalInstanceOtp = $uibModal.open({
             animation: true,
             templateUrl: "views/modal/otp.html",
             scope: $scope,
@@ -2226,7 +2257,7 @@ $scope.submitEmailId = function(forgotPassData) {
     }
     $scope.authentication();
     $scope.signupdata = {};
-      $scope.forgotPassData = {};
+    $scope.forgotPassData = {};
     $scope.signupOtpInfo = {};
     $scope.signupOtpInfo.userid = ''
     $scope.goSubmitOtp = function(otp) {
@@ -2252,6 +2283,18 @@ $scope.submitEmailId = function(forgotPassData) {
             })
         }
 
+    };
+    $scope.myarrOfOtp = [];
+    $scope.specialFunction = function(data) {
+        $scope.myarrOfOtp.push(data);
+        $scope.myarrOfOtp1 = $scope.myarrOfOtp.join();
+        $scope.myarrOfOtp1 = $scope.myarrOfOtp1.split(',').join('');
+
+        console.log("$scope.myarrOfOtp1", $scope.myarrOfOtp1.length);
+        if ($scope.myarrOfOtp1.length == 4) {
+            $scope.goSubmitOtp($scope.myarrOfOtp1);
+              console.log("$scope.myarrOfOtp", $scope.myarrOfOtp1);
+        }
     }
 
 
@@ -2320,40 +2363,57 @@ $scope.submitEmailId = function(forgotPassData) {
         }
     }
     $scope.forgotOtpSubmitFun = function(forgotPassData) {
-        $scope.wrongOTP=false;
-        console.log("forgotPassData", forgotPassData);
-        if (forgotPassData) {
-            $scope.forgotPassData.otp = forgotPassData.otp;
-            $scope.password();
-            $scope.submitChangepassword = function(forgotPassData) {
-                $scope.inavlidPass = false;
-                if (forgotPassData.newPassword && forgotPassData.confirmPassword) {
-                    if (forgotPassData.newPassword == forgotPassData.confirmPassword) {
-                      $scope.forgotPassData.password =forgotPassData.confirmPassword;
-                      console.log("$scope.forgotPassData",$scope.forgotPassData);
+            $scope.wrongOTP = false;
+            console.log("forgotPassData", forgotPassData);
+            if (forgotPassData) {
+                $scope.forgotPassData.otp = forgotPassData;
+                // $scope.forgotPassData.otp = forgotPassData.otp;
+                $scope.password();
+                $scope.submitChangepassword = function(forgotPassData) {
+                    $scope.inavlidPass = false;
+                    if (forgotPassData.newPassword && forgotPassData.confirmPassword) {
+                        if (forgotPassData.newPassword == forgotPassData.confirmPassword) {
+                            $scope.forgotPassData.password = forgotPassData.confirmPassword;
+                            console.log("$scope.forgotPassData", $scope.forgotPassData);
 
-                      NavigationService.forgotPasswordSubmit($scope.forgotPassData,function (data) {
-                        console.log("data",data);
-                        if (data == "true") {
-                          $scope.modalInstancePassword.close();
-                          $scope.modalInstanceForgotPasswordotp.close();
-                          $scope.passconfirm();
+                            NavigationService.forgotPasswordSubmit($scope.forgotPassData, function(data) {
+                                console.log("data", data);
+                                if (data == "true") {
+                                    $scope.modalInstancePassword.close();
+                                    $scope.modalInstanceForgotPasswordotp.close();
+                                    $scope.passconfirm();
 
-                        }else {
-                          $scope.wrongOTP=true;
+                                } else {
+                                    $scope.wrongOTP = true;
+                                }
+                            })
+                        } else {
+                            $scope.inavlidPass = true;
                         }
-                      })
-                    }else {
-                        $scope.inavlidPass = true;
+
                     }
 
                 }
+            }
 
+        }
+
+        ///////////
+        $scope.myarrOfOtpForForgotPwd = [];
+        $scope.forgotPassDataFunction = function(data) {
+            $scope.myarrOfOtpForForgotPwd.push(data);
+            $scope.myarrOfOtpForForgotPwd1 = $scope.myarrOfOtpForForgotPwd.join();
+            $scope.myarrOfOtpForForgotPwd1 = $scope.myarrOfOtpForForgotPwd1.split(',').join('');
+
+
+            if ($scope.myarrOfOtpForForgotPwd1.length == 4) {
+                          console.log("$scope.myarrOfOtp1", $scope.myarrOfOtpForForgotPwd1.length);
+                $scope.forgotOtpSubmitFun($scope.myarrOfOtpForForgotPwd1);
+                  console.log("$scope.myarrOfOtpForForgotPwd1", $scope.myarrOfOtpForForgotPwd1);
             }
         }
 
-    }
-    // =======================login============================
+        // =======================login============================
     $scope.loginData = {};
     $scope.incorrectDetails = false;
     $scope.loginSubmit = function(loginData) {

@@ -103,17 +103,17 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('about-us', {
-        url: "/about-us",
-        templateUrl: "views/template.html",
-        controller: 'AboutUsCtrl'
-    })
-     .state('Comingsoon', {
-        url: "/Comingsoon",
-        templateUrl: "views/template.html",
-        controller: 'ComingsoonCtrl'
-    })
+            url: "/about-us",
+            templateUrl: "views/template.html",
+            controller: 'AboutUsCtrl'
+        })
+        .state('Comingsoon', {
+            url: "/Comingsoon",
+            templateUrl: "views/template.html",
+            controller: 'ComingsoonCtrl'
+        })
 
-       .state('players-inside', {
+    .state('players-inside', {
         url: "/players-inside/:id",
         templateUrl: "views/template.html",
         controller: 'PlayersInsideCtrl'
@@ -172,6 +172,35 @@ firstapp.directive('img', function($compile, $parse) {
             }
         }
     };
+});
+// firstapp.directive('focus', function() {
+//     return {
+//         restrict: 'A',
+//         link: function($scope, elem, attrs) {
+//             elem.bind('keydown', function(e) {
+//                 var code = e.keyCode || e.which;
+//                 if (code === 13) {
+//                     e.preventDefault();
+//                     elem.next().focus();
+//                 }
+//             });
+//         }
+//     }
+// });
+firstapp.directive("focus", function() {
+    return {
+        restrict: "A",
+        link: function($scope, element) {
+            element.on("input", function(e) {
+                if(element.val().length == element.attr("maxlength")) {
+                    var $nextElement = element.next();
+                    if($nextElement.length) {
+                        $nextElement[0].focus();
+                    }
+                }
+            });
+        }
+    }
 });
 firstapp.filter('serverimage', function() {
     return function(input) {
@@ -286,47 +315,47 @@ firstapp.filter('teamImg', function() {
                 returnImg += "8.png";
                 break;
             case "10":
-            returnImg += "India.png";
-            break;
+                returnImg += "India.png";
+                break;
             case "11":
-            returnImg += "SouthKorea.png";
-            break;
+                returnImg += "SouthKorea.png";
+                break;
             case "12":
-            returnImg += "USA.png";
-            break;
+                returnImg += "USA.png";
+                break;
             case "13":
-            returnImg += "Iran.png";
-            break;
+                returnImg += "Iran.png";
+                break;
             case "14":
-            returnImg += "England.png";
-            break;
+                returnImg += "England.png";
+                break;
             case "15":
-            returnImg += "Bangladesh.png";
-            break;
+                returnImg += "Bangladesh.png";
+                break;
             case "16":
-            returnImg += "Poland.png";
-            break;
+                returnImg += "Poland.png";
+                break;
             case "16":
-            returnImg += "Poland.png";
-            break;
+                returnImg += "Poland.png";
+                break;
             case "16":
-            returnImg += "Poland.png";
-            break;
+                returnImg += "Poland.png";
+                break;
             case "17":
-            returnImg += "Kenya.png";
-            break;
+                returnImg += "Kenya.png";
+                break;
             case "18":
-            returnImg += "Australia.png";
-            break;
+                returnImg += "Australia.png";
+                break;
             case "19":
-            returnImg += "Argentina.png";
-            break;
+                returnImg += "Argentina.png";
+                break;
             case "20":
-            returnImg += "Japan.png";
-            break;
+                returnImg += "Japan.png";
+                break;
             case "21":
-            returnImg += "Thailand.png";
-            break;
+                returnImg += "Thailand.png";
+                break;
             default:
                 returnImg += "TBD.png";
         }
@@ -465,16 +494,16 @@ firstapp.directive('mycircle', function($compile, $parse) {
         }
     };
 });
-firstapp.filter('semiIt',function () {
-  return function (value) {
-    console.log(value);
-    if(value.toUpperCase().indexOf('SEMI') === -1){
-      return value;
-    }else{
-      console.log(value.toUpperCase().split("SEMI"));
-      return "semi "+ value.toUpperCase().split("SEMI")[1];
-    }
-  };
+firstapp.filter('semiIt', function() {
+    return function(value) {
+        console.log(value);
+        if (value.toUpperCase().indexOf('SEMI') === -1) {
+            return value;
+        } else {
+            console.log(value.toUpperCase().split("SEMI"));
+            return "semi " + value.toUpperCase().split("SEMI")[1];
+        }
+    };
 });
 firstapp.directive('onlyDigits', function() {
     return {
@@ -548,14 +577,14 @@ firstapp.directive("scroll", function($window) {
         });
     };
 });
-firstapp.filter('twodigit',function(){
-  return function(value) {
-      if(value < 10){
-        return '0'+value;
-      }else{
-        return value;
-      }
-  };
+firstapp.filter('twodigit', function() {
+    return function(value) {
+        if (value < 10) {
+            return '0' + value;
+        } else {
+            return value;
+        }
+    };
 });
 firstapp.filter('spaceToPlus', function() {
     return function(text) {
@@ -568,10 +597,10 @@ firstapp.filter('spaceToPlus', function() {
 });
 firstapp.filter('spaceToDash', function() {
     return function(text) {
-      if(text) {
-        var str = text.replace(/\s+/, "-").toLowerCase();
-        return str;
-      }
+        if (text) {
+            var str = text.replace(/\s+/, "-").toLowerCase();
+            return str;
+        }
     };
 });
 firstapp.filter('hindimonth', function() {
