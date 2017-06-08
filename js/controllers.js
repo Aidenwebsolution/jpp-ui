@@ -102,13 +102,13 @@ $scope.isCheckLoggedIn = function(value) {
             }
 
             if (value == 'JPP') {
-                window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
+                window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
             }
             if (value == 'Gallery') {
-                window.location = "http://jaipurpinkpanthers.com/#/gallery";
+                window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
             }
             if (value == 'WALLPAPERS') {
-                window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
+                window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
             }
         } else {
             $rootScope.loggedIn = false;
@@ -2155,7 +2155,7 @@ $scope.submitEmailId = function(forgotPassData) {
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/#/gallery";
+                    window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2175,7 +2175,7 @@ $scope.submitEmailId = function(forgotPassData) {
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
+                    window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2194,7 +2194,7 @@ $scope.submitEmailId = function(forgotPassData) {
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
+                    window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2353,7 +2353,7 @@ $scope.submitEmailId = function(forgotPassData) {
         }
 
     }
-    =======================login============================
+    // =======================login============================
     $scope.loginData = {};
     $scope.incorrectDetails = false;
     $scope.loginSubmit = function(loginData) {
