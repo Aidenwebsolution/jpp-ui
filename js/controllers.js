@@ -99,8 +99,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        console.log("im in game");
-                        $state.go('Comingsoon');
+                        window.location = "http://jaipurpinkpanthers.com/pantherworld/beta/#/games";
+                        // console.log("im in game");
+                        // $state.go('Comingsoon');
                     }
 
                     if (value == 'JPP') {
