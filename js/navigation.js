@@ -1,5 +1,5 @@
 var mainurl = "http://wohlig.co.in/pinkpanther/jppbackend/index.php/"
-    // var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/";
+    // var mainurl1 = "http://admin.jaipurpinkpanthers.com/index.php/";
     // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
     //wohlig url for testing
 
@@ -9,6 +9,7 @@ var tempimgurl = "http://wohlig.co.in/pinkpanther/jppbackend/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
+
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function ($http) {

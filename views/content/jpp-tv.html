@@ -7,7 +7,7 @@
         <div class="panther-punch">
           <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
         </div>
-       <div class="title-name fix">
+        <div class="title-name fix">
           <h1 class="bold-mrgin"><img src="img/english/jpp-tv.png" class="img-responsive" alt="title"></h1>
         </div>
       </div>
@@ -21,13 +21,13 @@
     </div>
     <div class="row">
       <div class="text-center" ng-if="videos == []">
-        <h1 class="color-primary">{{msg | translate}}</h1>
+        <h1 class="color-primary">{{'msg' | translate}}</h1>
       </div>
       <div class="col-md-6 mb15 col-sm-6" ng-repeat="data in videos track by $index" ng-if="videos.length>0">
         <a href="https://www.youtube.com/watch?v={{data.url}}" target="_blank">
           <div class="gallery-album">
             <div class="album-cover">
-              <a class="various fancybox.iframe block-rel" fancybox ng-href="http://www.youtube.com/embed/{{data.url}}?autoplay=1" >
+              <a class="various fancybox.iframe block-rel" fancybox ng-href="http://www.youtube.com/embed/{{data.url}}?autoplay=1">
                 <img ng-src="http://img.youtube.com/vi/{{data.url}}/0.jpg " class="img-responsive" alt="youtube">
                 <div class="play-btn"></div>
               </a>
