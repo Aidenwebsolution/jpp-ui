@@ -3998,7 +3998,8 @@ a.ilogo {
 .bg-white {
     .modal-content {
         border: 3px solid #fff;
-        background: linear-gradient(-90deg, #343fa9, #1450a1);
+        // background: linear-gradient(-90deg, #322470, #1f3b75, #0c3856, #084967);
+        background: linear-gradient(to bottom left, #322470, #262966, #0c3856, #084967);
         color: #fff;
         border-radius: 10px;
     }
@@ -4109,11 +4110,6 @@ a.ilogo {
     }
 }
 
-.length-fix {
-input {
-width: 70px !important;
-}
-}
 //modals otp,password
 //ruchira
 @import "mobile";
