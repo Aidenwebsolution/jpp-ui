@@ -212,9 +212,11 @@
     <div class="point-bkp">
         <div class="container-fluid">
             <div class="row">
+
                 <div class="col-md-6 col-sm-6 pad0 marg2">
-                    <a ui-sref="fixtures" ng-if="journeyData.status === '1'"><img ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
-                    <div class="white-line-pad" ng-if="journeyData ==='No data found' || journeyData.status != '1'">
+                
+                    <a href="{{journeyData.link}}" target="_blank"><img  ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <div class="white-line-pad" ng-if="journeyData =='No data found' || journeyData.status != '1'">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -289,8 +291,9 @@
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-                    <a ui-sref="fixtures" ng-if="congratulationData.status === '1'"><img ng-src="{{congratulationData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
-                    <div class="nxt-match white-line-pad" ng-if="congratulationData ==='No data found' || congratulationData.status !='1' ">
+
+                    <a href="{{congratulationData.link}}" target="_blank" ><img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}" class="img-responsive" alt="Champions Patna Pirates"></a>
+                    <div class="nxt-match white-line-pad" ng-if="congratulationData =='No data found' || congratulationData.status !='1' ">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
                             <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
