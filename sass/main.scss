@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Hind:400,300,600,700,500);
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
 // @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -197,6 +197,9 @@ nav {
         font-size: 20px;
         font-weight: $font-light;
         padding-right: 18px;
+        a{
+            font-family: 'Oswald', sans-serif;
+        }
         &:hover {
             .dropdown-menu {
                 display: block;
@@ -249,7 +252,7 @@ nav {
                 }
             }
         }
-        &.active,
+    
         &:hover {
             a.menu-custom {
                 @include background-image (linear-gradient(#ee4a9b,
@@ -284,6 +287,12 @@ nav {
                     @include transition( all 0.5s ease);
                 }
             }
+        }
+        &.active{
+             a.menu-custom {
+                 background-color: transparent !important;
+             }
+
         }
     }
     a.menu-custom {
