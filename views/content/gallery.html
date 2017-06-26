@@ -33,6 +33,9 @@
     <div class="container">
       <div class="gallery-tab text-center custom-list">
         <ul class="padding0">
+          <li ng-click="changeTabs(5)">
+            <h3 class="color-primary " ng-class="{'active-li':season==5}">{{'SEASON 5'|translate}}</h3>
+          </li>
           <li ng-click="changeTabs(4)">
             <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4'|translate}}</h3>
           </li>
@@ -44,6 +47,20 @@
       <div class="row">
         <div class="text-center" ng-if="slides.length <=0">
           <h1 class="color-primary">{{msg}}</h1>
+        </div>
+        <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season=='4'"
+          ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==5">
+          <a ui-sref="gallery-inner({id:data.id})">
+            <div class="gallery-album">
+              <div class="album-cover">
+                <img ng-src="{{data.image | serverimage}}" class="img-responsive" alt="{{data.image | serverimage}}">
+                <div class="album-title text-center">
+                  <h4 class="color-primary f20" ng-if="currentlang=='en'">{{data.name }}</h4>
+                  <h4 class="color-primary f20" ng-if="currentlang=='hi'">{{data.hname }}</h4>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season=='2'"
           ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==4">

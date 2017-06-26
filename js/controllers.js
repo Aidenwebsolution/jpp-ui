@@ -407,7 +407,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-
+        $scope.pointtable=[];
         $scope.latestmatch = {};
         $scope.countdown = {};
         $scope.bricks = [{
@@ -790,6 +790,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             }, 1000);
         };
+         NavigationService.getallpoint(function (data) {
+            $scope.pointtable = data.data;
+            //$scope.pointtable = $filter('orderBy')($scope.pointtable, "order");
+            console.log($scope.pointtable);
+        });
         // NavigationService.getScheduleSeason4(function(data) {
         //   console.log("getScheduleSeason4");
         //   $scope.openers = data[0];
@@ -825,11 +830,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //   console.log("calendar dates");
         //   console.log($scope.calendarDatehome);
         // });
-        NavigationService.getallpoint(function (data) {
-            $scope.table = data;
-            $scope.table = $filter('orderBy')($scope.table, "order");
-            console.log($scope.table);
-        });
+        
+       
         //     $scope.tables[{
         // no:'3',
         // name:'Telugu Titans',
@@ -1063,7 +1065,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     console.log($scope.galleryid);
     NavigationService.getAllGallery(function (data) {
-        $scope.galleryArr = data;
+        $scope.galleryArr = data.data;
+        // console.log(data);
         $scope.gallerycategory = _.find($scope.galleryArr, {
             "id": $scope.galleryid
         }).name;
@@ -1073,7 +1076,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
     NavigationService.getGallerySlide($scope.galleryid, function (data) {
         console.log(data);
-        $scope.slides = data;
+        $scope.slides = data.data;
     });
 
 
@@ -1123,7 +1126,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
-    $scope.season = 4;
+    $scope.season = 5;
     $scope.changeTabs = function (data) {
         $scope.season = data;
         console.log($scope.season);

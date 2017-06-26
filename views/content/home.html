@@ -237,7 +237,7 @@
                                             </tr>
                                         </thead>
                                         <tbody class="odd-even">
-                                            <tr>
+                                            <!--<tr>
                                                 <td>1</td>
                                                 <td>Telugu Titans</td>
                                                 <td>14</td>
@@ -256,17 +256,17 @@
                                                 <td>1</td>
                                                 <td>0</td>
                                                 <td>47</td>
-                                            </tr>
-                                            <!--<tr ng-repeat="data in tables">
-    <td>{{data.no}}</td>
+                                            </tr>-->
+                                            <tr ng-repeat="data in pointtable">
+    <td>{{$index+1}}</td>
     <td>{{data.name}}</td>
-    <td>{{data.play}} </td>
-     <td>{{data.win}}</td>
-    <td>{{data.loss}}</td>
+    <td>{{data.played}} </td>
+     <td>{{data.wins}}</td>
+    <td>{{data.lost}}</td>
     <td>{{data.draw}}</td>
      <td>{{data.sd}}</td>
-    <td>{{data.pts}}</td>
-</tr>-->
+    <td>{{data.point}}</td>
+</tr>
                                         </tbody>
                                         <!--<tbody class="odd-even">
                                             <tr class="{{ data.name | limitTo: 3 }}" ng-repeat="data in table" ng-if="table.length>0">
