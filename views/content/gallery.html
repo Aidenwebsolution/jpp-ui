@@ -33,14 +33,8 @@
     <div class="container">
       <div class="gallery-tab text-center custom-list">
         <ul class="padding0">
-          <li ng-click="changeTabs(5)">
-            <h3 class="color-primary " ng-class="{'active-li':season==5}">{{'SEASON 5'|translate}}</h3>
-          </li>
-          <li ng-click="changeTabs(4)">
-            <h3 class="color-primary " ng-class="{'active-li':season==4}">{{'SEASON 4'|translate}}</h3>
-          </li>
-          <li ng-click="changeTabs(3)">
-            <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3'|translate}}</h3>
+          <li ng-click="changeTabs(seasonData.id,$index)" ng-repeat="seasonData in seasons">
+            <h3 class="color-primary " ng-class="{'active-li':$index==selected}">{{seasonData.name|translate}}</h3>
           </li>
         </ul>
       </div>
@@ -48,8 +42,8 @@
         <div class="text-center" ng-if="slides.length <=0">
           <h1 class="color-primary">{{msg}}</h1>
         </div>
-        <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season=='3'"
-          ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==5">
+        <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season==season "
+          ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==data.season">
           <a ui-sref="gallery-inner({id:data.id})">
             <div class="gallery-album">
               <div class="album-cover">
@@ -62,7 +56,7 @@
             </div>
           </a>
         </div>
-        <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season=='2'"
+       <!-- <div class="col-md-6 mb15 mt50 col-xs-12" ng-repeat="data in slides track by $index" ng-if="slides.length>0 && data.season=='2'"
           ng-class="{'col-xs-12': data.type=='big'}" ng-show="season==4">
           <a ui-sref="gallery-inner({id:data.id})">
             <div class="gallery-album">
@@ -90,7 +84,7 @@
             </div>
           </a>
         </div>
-      </div>
+      </div>-->
     </div>
   </section>
 </div>
