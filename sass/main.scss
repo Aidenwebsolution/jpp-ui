@@ -3919,14 +3919,25 @@ a.ilogo {
 .grad-table {
     background: #5e6dd3;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(-90deg, #5e6dd3, #4ecaf5);
+    background: -webkit-linear-gradient(-90deg, rgba(94, 109, 211, 0.57), #5e6dd3, #4ecaf5);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(-90deg, #5e6dd3, #4ecaf5);
+    background: -o-linear-gradient(-90deg, rgba(94, 109, 211, 0.57), #5e6dd3, #4ecaf5);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(-90deg, #5e6dd3, #4ecaf5);
+    background: -moz-linear-gradient(-90deg, rgba(94, 109, 211, 0.57), #5e6dd3, #4ecaf5);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(-90deg, #5e6dd3, #4ecaf5);
+    background: linear-gradient(-90deg, rgba(94, 109, 211, 0.57), #5e6dd3, #4ecaf5);
     /* Standard syntax */
+}
+
+.pinky-text{
+    color:$pink;
+   
+ font-weight: 500 !important;
+   
+}
+
+.table>thead>tr>th,.table>tbody>tr>td{
+    text-align: center;
 }
 
 .chng-title {

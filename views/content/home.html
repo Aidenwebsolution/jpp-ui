@@ -257,15 +257,15 @@
                                                 <td>0</td>
                                                 <td>47</td>
                                             </tr>-->
-                                            <tr ng-repeat="data in pointtable">
-    <td>{{$index+1}}</td>
-    <td>{{data.name}}</td>
-    <td>{{data.played}} </td>
-     <td>{{data.wins}}</td>
-    <td>{{data.lost}}</td>
-    <td>{{data.draw}}</td>
-     <td>{{data.sd}}</td>
-    <td>{{data.point}}</td>
+                                            <tr ng-repeat="data in pointtable" >
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{$index+1}}</td>
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.name}}</td>
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.played}} </td>
+     <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.wins}}</td>
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.lost}}</td>
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.draw}}</td>
+     <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.sd}}</td>
+    <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.point}}</td>
 </tr>
                                         </tbody>
                                         <!--<tbody class="odd-even">
