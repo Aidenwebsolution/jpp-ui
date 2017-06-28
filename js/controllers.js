@@ -99,19 +99,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/pantherworld/#/games";
+                        window.location = "http://jaipurpinkpanthers.com/beta/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
 
                     if (value == 'JPP') {
-                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
                     }
                     if (value == 'Gallery') {
-                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
                     }
                     if (value == 'WALLPAPERS') {
-                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
+                        window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
                     }
                 } else {
                     $rootScope.loggedIn = false;
@@ -744,10 +744,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.changeSlide($scope.news[0]);
 
         };
-
+        $scope.matchlevel="";
         NavigationService.getLatestMatch(function (data) {
-            console.log(data);
-            $scope.latestmatch = data;
+            
+            $scope.latestmatch = data.data;
+            $scope.matchlevel=data.data.level;
             $scope.schedule = $filter('orderBy')($scope.schedule, "order");
 
             $scope.refreshTimer($scope.latestmatch.starttimedate);
@@ -766,9 +767,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.latestMatchOn = false;
         });
         $scope.refreshTimer = function (eventTime) {
+            console.log(eventTime+"et");
             eventTime = new Date(eventTime);
-            console.log(eventTime);
+            console.log("eventtime"+eventTime);
             $scope.rightNow = new Date();
+            console.log("RightNow:"+$scope.rightNow);
             $scope.diffTime = eventTime - $scope.rightNow;
             var duration = moment.duration($scope.diffTime, 'milliseconds');
 
@@ -1096,12 +1099,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.noWrapSlides = false;
     $scope.photos = true;
     $scope.currentlang = $.jStorage.get("languageSet");
-
+    $scope.seasons=[]
     console.log(currentlang);
     globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
     }
+    NavigationService.getAllSeason(function (data) {
+        $scope.seasons = data.data;
+        var firstEle=_.head(data.data);
+        $scope.season = firstEle.id;
+        //var firstseason=data.data[0];
+        //console.log(firstseason.id);
+        
+        //console.log($scope.seasons);
+        
+        //console.log(firstEle.id);
+    });
     $scope.getPhotos = function () {
         NavigationService.getAllGallery(function (data) {
             $scope.slides = data.data;
@@ -1115,7 +1129,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     var slides = $scope.slides = [];
     $scope.videos = [];
     var currIndex = 0;
-
+    $scope.currIndex = 0;
     $scope.getVideos = function () {
         NavigationService.getAllVideoGallery(function (data) {
             $scope.videos = data.data;
@@ -1125,11 +1139,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             console.log($scope.videos);
         });
     };
-
-    $scope.season = 5;
-    $scope.changeTabs = function (data) {
+     $scope.selected = 0;
+    //$scope.season = $scope.seasons[0].season;
+   // console.log($scope.seasons+"first");
+    $scope.changeTabs = function (data,index) {
         $scope.season = data;
-        console.log($scope.season);
+        $scope.selected = index;
+        $scope.currIndex =index; 
+        console.log($scope.season+"season");
     };
     $scope.changeTab = function (value) {
         if (value === true) {
@@ -1741,6 +1758,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     $scope.stateparamsId = $stateParams.id;
+    //console.log($stateParams.id+"playerid");
     NavigationService.getsingleplayer($stateParams.id, function (data) {
 
         $scope.playerDetails = data.data.data.player;
@@ -1763,7 +1781,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.currentlang = $.jStorage.get("languageSet");
-    console.log($scope.currentlang);
+    //console.log($scope.currentlang);
     globalFunc.changeLang = function () {
         $scope.currentlang = currentlang;
 
