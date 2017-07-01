@@ -298,13 +298,13 @@
                             <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
                             <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
               -->
-                            <h1 class="color-white font-tbl text-uppercase">{{'matchlevel' | translate}}</h1>
+                            <h1 class="color-white font-tbl text-uppercase">{{latestmatch.level | translate}}</h1>
                         </div>
                         <div class="match-schd  pt530">
                             <div class="row">
                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                                     <div class="new-logo">
-                                        <img ng-src="{{latestmatch.team1id|teamImg}}" class="img-responsive">
+                                        <img ng-src="{{latestmatch.teamimage1|serverimage}}" class="img-responsive">
                                     </div>
                                 </div>
                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
@@ -314,36 +314,36 @@
                                 </div>
                                 <div class="col-md-4 padding0 col-sm-4 col-xs-4">
                                     <div class="new-logo">
-                                        <img ng-src="{{latestmatch.team2id|teamImg}}" class="img-responsive">
+                                        <img ng-src="{{latestmatch.teamimage2|serverimage}}" class="img-responsive">
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="gradient-bar homeie" ng-show="latestMatchOn">
-                <div class="row">
-                  <div class="col-md-4 padding0 col-xs-4">
-                    <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
-                  </div>
-                  <div class="col-md-4 padding0 col-xs-4 fz24">
-                    <div class="match-time">
-                      {{latestmatch.totalmatchtime}}
+                            <div class="gradient-bar homeie" ng-show="latestMatchOn">
+                    <div class="row" >
+                    <div class="col-md-4 padding0 col-xs-4">
+                        <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
                     </div>
-                  </div>
-                  <div class="col-md-4 padding0 col-xs-4">
-                    <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
-                  </div>
-                </div>
-              </div>-->
+                    <div class="col-md-4 padding0 col-xs-4 fz24">
+                        <div class="match-time">
+                        {{latestmatch.totalmatchtime}}
+                        </div>
+                    </div>
+                    <div class="col-md-4 padding0 col-xs-4">
+                        <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
+                    </div>
+                    </div>
+              </div>
                             <!--<div class="clearfix"></div>
               <div class="text-center" ng-show="latestMatchOn">
                 <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
               </div>-->
                         </div>
-                        <div class="text-center color-white">
+                        <div class="text-center color-white stadiumdetail">
                             <h4 class="text-capitalize  font-bold ">
-                                Sawai mansingh stadium,jaipur
+                                {{latestmatch.stadium}}
                             </h4>
-                            <span class="text-uppercase">june 20 2016,</span>
-                            <span>20:00 (IST)</span>
+                            <span class="text-uppercase">{{latestmatch.matchdate}},</span>
+                            <span>{{latestmatch.matchtime}} (IST)</span>
                         </div>
                         <!--<div class="text-center color-white" >
 
@@ -351,10 +351,19 @@
               <br> {{latestmatch.stadium}}
             </div>-->
                         <!--ng-hide="latestMatchOn"-->
-                        <div class="next-match">
+                        <div class="next-match" ng-hide="latestMatchOn">
                             <!--ng-hide="latestMatchOn"-->
                             <div class="count-time custom-list text-center">
                                 <ul class="padding0">
+                                    <li class="hidden">
+                                        <div class="time-hrs">
+                                            <h1 class="color-white font-tbl">
+                                                <span>{{countdown.months | twodigit}}</span>
+                                                <b>:</b>
+                                            </h1>
+                                            <span class="color-white pr20">MONTHS</span>
+                                        </div>
+                                    </li>
                                     <li>
                                         <div class="time-hrs">
                                             <h1 class="color-white font-tbl">
@@ -382,7 +391,7 @@
                                             <span class="color-white pr20">MINUTES</span>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="">
                                         <div class="time-hrs">
                                             <h1 class="color-white font-tbl">
                                                 <span>{{countdown.seconds | twodigit}}</span>
@@ -395,14 +404,14 @@
                             <div class="text-center button-set">
                                 <div class="text-center display-inline spacing-lr">
                                     <!--ng-show="latestMatchOn"-->
-                                    <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">BOOK TICKETS</a>
+                                    <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn" ng-if="latestmatch.ishome==1" target="_blank">BOOK TICKETS</a>
                                 </div>
                                 <div class="text-center display-inline spacing-lr">
                                     <!--ng-show="latestMatchOn"-->
-                                    <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">ADD TO CALENDAR</a>
+                                    <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6" class="btn btn-sucess big-btn" target="_blank">ADD TO CALENDAR</a>
                                 </div>
                             </div>
-                            <!-- <div class="text-center" ng-hide="latestMatchOn">
+                            <!--<div class="text-center" ng-hide="latestMatchOn">
                 <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess mt15" target="_blank" ng-if="latestmatch.ishome == '1'">BOOK TICKETS</a>
                 <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
                   class="btn btn-sucess mt15" target="_blank">ADD TO CALENDAR</a>

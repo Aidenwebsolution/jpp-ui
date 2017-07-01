@@ -1417,7 +1417,17 @@ span {
         margin-left: -30px;
     }
 }
-
+@media (max-width: 1200px) {
+    .fixture .fixtures-done .team-head span {
+        font-size:13px !important;
+    }
+    .fixture .fixtures-done .team-head {
+        padding-top:10px !important;
+    }
+    .fixture .fixtures-done .match-center {
+        margin-top:30px !important;
+    }
+}
 @media (max-width: 992px) {
     .gallery-tab ul li h1,
     .mobile-font-h1 {
@@ -1427,7 +1437,11 @@ span {
         font-size: 18px!important;
     }
     .fixture .team-head img {
-        width: 55px!important;
+        /*width: 55px!important;*/
+        width: 47px!important;
+    }
+    .fixture .fixtures-done .team-head span {
+        margin-top:20px !important;
     }
     .fixture .team-head {
         font-size: 10px !important;
@@ -1541,6 +1555,15 @@ span {
     }
     .email-foot {
         text-align: center;
+    }
+    .fixture .fixtures-done .team-head span {
+        font-size:13px !important;
+    }
+    .fixture .fixtures-done .team-head {
+        padding-top:0px !important;
+    }
+    .fixture .fixtures-done .match-center {
+        margin-top:10px !important;
     }
 }
 

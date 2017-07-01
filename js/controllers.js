@@ -99,19 +99,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/pantherworld/#/games";
+                        window.location = "http://jaipurpinkpanthers.com/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
 
                     if (value == 'JPP') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
+                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
                     }
                     if (value == 'Gallery') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
+                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
                     }
                     if (value == 'WALLPAPERS') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
+                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
                     }
                 } else {
                     $rootScope.loggedIn = false;
@@ -773,8 +773,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.rightNow = new Date();
             console.log("RightNow:"+$scope.rightNow);
             $scope.diffTime = eventTime - $scope.rightNow;
+            console.log("difftime",$scope.diffTime);
             var duration = moment.duration($scope.diffTime, 'milliseconds');
-
+            
             $interval(function () {
 
                 duration = moment.duration(duration - 1000, 'milliseconds');
@@ -786,11 +787,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $scope.latestMatchOn = true;
                 }
                 $scope.countdown.months = duration.months();
-                $scope.countdown.days = duration.days();
+                $scope.countdown.days = parseInt(duration.asDays());
                 $scope.countdown.hours = duration.hours();
                 $scope.countdown.minutes = duration.minutes();
                 $scope.countdown.seconds = duration.seconds();
-
+                
+                if( $scope.countdown.months < 0)
+                     $scope.countdown.months=0;
+                if( $scope.countdown.days < 0)
+                     $scope.countdown.days=0;
+                if( $scope.countdown.hours < 0)
+                     $scope.countdown.hours=0;
+                if( $scope.countdown.minutes < 0)
+                     $scope.countdown.minutes=0;
+                if( $scope.countdown.seconds < 0)
+                     $scope.countdown.seconds=0;
+                //console.log($scope.countdown,"countdown");
             }, 1000);
         };
          NavigationService.getallpoint(function (data) {
@@ -987,6 +999,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.schedules = [];
+    $scope.seasons=[];
     $scope.loaded = false;
     console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
@@ -995,7 +1008,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = currentlang;
 
     }
-
+    $scope.selected = 0;
 
     $scope.fixtureid = $stateParams.id;
     var i = 0;
@@ -1003,8 +1016,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         item.isOpen = false;
         // item.classes = "panel-open";
     };
+    
+     NavigationService.getAllSeason(function (data) {
+        $scope.seasons = data.data;
+        var firstEle=_.head(data.data);
+        $scope.season = firstEle.id;
+        //var firstseason=data.data[0];
+        //console.log(firstseason.id);
+        
+        //console.log($scope.seasons);
+        
+        //console.log(firstEle.id);
+    });
     NavigationService.getSchedule(function (data) {
-        $scope.schedules = data;
+        $scope.schedules = data.data;
         console.log(data);
         $scope.schedules[0].isOpen = false;
         var i = 0;
@@ -1040,9 +1065,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         });
     };
-    $scope.season = 3;
-    $scope.changeTab = function (data) {
+    //$scope.season = 3;
+    $scope.changeTab = function (data,index) {
         $scope.season = data;
+        $scope.selected = index;
+        $scope.currIndex =index;
         console.log($scope.season);
     };
 
