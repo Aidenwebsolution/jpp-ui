@@ -1,11 +1,11 @@
-var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/"
-    // var mainurl1 = "http://admin.jaipurpinkpanthers.com/index.php/";
+var mainurl = "http://admin.jaipurpinkpanthers.com/beta/index.php/"
+    // var mainurl1 = "http://admin.jaipurpinkpanthers.com/beta/index.php/";
     // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
     //wohlig url for testing
 
-var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
-var tempUrl = "http://admin.jaipurpinkpanthers.com/index.php/json/";
-var tempimgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
+var imgurl = "http://admin.jaipurpinkpanthers.com/beta/uploads/";
+var tempUrl = "http://admin.jaipurpinkpanthers.com/beta/index.php/json/";
+var tempimgurl = "http://admin.jaipurpinkpanthers.com/beta/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
@@ -21,7 +21,7 @@ var navigationservice = angular.module('navigationservice', [])
             classis: "active"
         }, {
             name: "Panther World",
-            link: "http://jaipurpinkpanthers.com/pantherworld/",
+            link: "http://jaipurpinkpanthers.com/beta/pantherworld/",
             id: "panther",
             classis: "active",
             subnav: []
