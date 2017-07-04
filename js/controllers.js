@@ -752,19 +752,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.schedule = $filter('orderBy')($scope.schedule, "order");
 
             $scope.refreshTimer($scope.latestmatch.starttimedate);
-            console.log($scope.latestmatch);
+            //console.log($scope.latestmatch);
 
             $scope.calendarDate = {};
             var oldDateObj1 = new Date($scope.latestmatch.starttimedate);
             var date1 = new Date(oldDateObj1.getTime() - 330 * 60000);
             var oldDateObj2 = new Date($scope.latestmatch.starttimedate);
             var date2 = new Date(oldDateObj2.getTime() - 280 * 60000);
-            console.log(date1);
-            console.log(date2);
+            //console.log(date1);
+            //console.log(date2);
             $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
             $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
-            console.log($scope.calendarDate);
-            $scope.latestMatchOn = false;
+            //console.log($scope.calendarDate);
+            console.log($scope.latestmatch.score1,"score1");
+            if(($scope.latestmatch.score1 >= 0 && $scope.latestmatch.score2 >= 0) && ($scope.latestmatch.score1 != "" && $scope.latestmatch.score2 != ""))
+                $scope.latestMatchOn = true;
+            else
+                 $scope.latestMatchOn = false;
         });
         $scope.refreshTimer = function (eventTime) {
             console.log(eventTime+"et");
@@ -781,7 +785,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 duration = moment.duration(duration - 1000, 'milliseconds');
                 if (duration._milliseconds > 0) {
 
-                    $scope.latestMatchOn = false;
+                    //$scope.latestMatchOn = false; //removed-- check score condition
                 } else {
 
                     $scope.latestMatchOn = true;
