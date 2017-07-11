@@ -937,6 +937,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             font-size: 11px;
             line-height: inherit;
             padding: 0;
+            /*margin-top: -35px;*/
         }
         .sub-form {
             text-align: center;
@@ -1197,11 +1198,44 @@ span {
 //player-inside//
     //ruchi//
 }
-
+@media (max-width:767px){
+    .appimageblock {
+        /*margin-left: 75px;*/
+        position: absolute;
+        left: 35%;
+        padding-left:0px !important;
+        margin-top:0px !important;
+    }
+    .appiconimage {
+        margin-left: 15px;
+    }
+    img.mobileappimage {
+        width: 80px;
+    }
+    .mobile-css .text-line h4 {
+           /* margin-left: 60px;*/
+    }
+}
 @media (max-width: 480px) {
     // .news-logo {
     // zoom:0.5;
     // }
+     .mobile-css .text-line h4 {
+            margin-left: 0px;
+    }
+    .appimageblock {
+        /*margin-left: 75px;*/
+        position: absolute;
+        left: 29%;
+        padding-left:0px !important;
+        margin-top:0px !important;
+    }
+    .appiconimage {
+        margin-left: 15px;
+    }
+    img.mobileappimage {
+        width: 80px;
+    }
     .pad30 ul li {
         padding: 0 12px;
     }

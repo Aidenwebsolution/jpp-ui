@@ -1,11 +1,11 @@
-var mainurl = "http://admin.jaipurpinkpanthers.com/beta/index.php/"
-    // var mainurl1 = "http://admin.jaipurpinkpanthers.com/beta/index.php/";
+var mainurl = "http://admin.jaipurpinkpanthers.com/index.php/"
+    // var mainurl1 = "http://admin.jaipurpinkpanthers.com/index.php/";
     // var mainurl = "http://192.168.0.101/jppbackend/index.php/";
     //wohlig url for testing
 
-var imgurl = "http://admin.jaipurpinkpanthers.com/beta/uploads/";
-var tempUrl = "http://admin.jaipurpinkpanthers.com/beta/index.php/json/";
-var tempimgurl = "http://admin.jaipurpinkpanthers.com/beta/uploads/";
+var imgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
+var tempUrl = "http://admin.jaipurpinkpanthers.com/index.php/json/";
+var tempimgurl = "http://admin.jaipurpinkpanthers.com/uploads/";
 // var imgurl = "http://192.168.1.107/jppbackend/uploads/";
 // var imgurl="";
 var adminurl = mainurl + "json/";
@@ -16,12 +16,12 @@ var navigationservice = angular.module('navigationservice', [])
     var navigation = [{
             name: "Fixtures & Results",
             // url: "fixtures({id:1})",
-            url: "fixtures",
-            //url:"Comingsoon",
+            //url: "fixtures",
+            url:"Comingsoon",
             classis: "active"
         }, {
             name: "Panther World",
-            link: "http://jaipurpinkpanthers.com/beta/pantherworld/",
+            link: "http://jaipurpinkpanthers.com/pantherworld/",
             id: "panther",
             classis: "active",
             subnav: []

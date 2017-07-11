@@ -36,7 +36,7 @@ var jsArray = [
   './js/controllers.js',
   './js/navigation.js',
   './js/templateservice.js',
-
+  './js/isloginservice.js',
   //please do not change it
   './w/js/templates.js',
 ];

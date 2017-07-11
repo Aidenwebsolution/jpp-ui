@@ -17,7 +17,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
-
+         //$.jStorage.set("showloginmodal","0");
+        
 
         // ====================modals====================
 
@@ -88,6 +89,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             })
         }
 
+        $scope.modalLogsInstance = {};
+
+        $scope.closeAllModal = function () {
+            $scope.modalLogsInstance.close();
+        };
+       /*
+        if (performance.navigation.type == 1) {
+            $.jStorage.set("showloginmodal","0");
+        }
+       $rootScope.$on("isloggedin", function(event, args){
+            console.log("set");
+            if(event=="Gallery" || event == "Wallpaper"  )
+                $.jStorage.set("showloginmodal","1");
+            else    
+                $.jStorage.set("showloginmodal","0");
+        });*/
+        //console.log($.jStorage.get("showloginmodal"),"storage");
+        if($.jStorage.get("showloginmodal")=="1")
+        {
+            console.log("showmodal");
+            $scope.modalLogsInstance = $uibModal.open({
+                animation: true,
+                backdrop: true,
+                templateUrl: 'views/modal/logs.html',
+                scope: $scope
+            });
+        }
         $scope.isCheckLoggedIn = function (value) {
             console.log("im authenticate");
             NavigationService.getAuthenticate(function (data) {
@@ -99,19 +127,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/pantherworld/#/games";
+                        window.location = "http://jaipurpinkpanthers.com/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
 
                     if (value == 'JPP') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
+                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
                     }
                     if (value == 'Gallery') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
+                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
                     }
                     if (value == 'WALLPAPERS') {
-                        window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
+                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
                     }
                 } else {
                     $rootScope.loggedIn = false;
@@ -407,7 +435,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Home");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        $scope.pointtable=[];
+        $scope.pointtable = [];
         $scope.latestmatch = {};
         $scope.countdown = {};
         $scope.bricks = [{
@@ -744,11 +772,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.changeSlide($scope.news[0]);
 
         };
-        $scope.matchlevel="";
+        $scope.matchlevel = "";
         NavigationService.getLatestMatch(function (data) {
-            
+
             $scope.latestmatch = data.data;
-            $scope.matchlevel=data.data.level;
+            $scope.matchlevel = data.data.level;
             $scope.schedule = $filter('orderBy')($scope.schedule, "order");
 
             $scope.refreshTimer($scope.latestmatch.starttimedate);
@@ -764,22 +792,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.calendarDate.from = $filter('date')(date1, "yyyyMMddTHHmmss") + "Z";
             $scope.calendarDate.to = $filter('date')(date2, "yyyyMMddTHHmmss") + "Z";
             //console.log($scope.calendarDate);
-            console.log($scope.latestmatch.score1,"score1");
-            if(($scope.latestmatch.score1 >= 0 && $scope.latestmatch.score2 >= 0) && ($scope.latestmatch.score1 != "" && $scope.latestmatch.score2 != ""))
+            console.log($scope.latestmatch.score1, "score1");
+            if (($scope.latestmatch.score1 >= 0 && $scope.latestmatch.score2 >= 0) && ($scope.latestmatch.score1 != "" && $scope.latestmatch.score2 != ""))
                 $scope.latestMatchOn = true;
             else
-                 $scope.latestMatchOn = false;
+                $scope.latestMatchOn = false;
         });
         $scope.refreshTimer = function (eventTime) {
-            console.log(eventTime+"et");
+            console.log(eventTime + "et");
             eventTime = new Date(eventTime);
-            console.log("eventtime"+eventTime);
+            console.log("eventtime" + eventTime);
             $scope.rightNow = new Date();
-            console.log("RightNow:"+$scope.rightNow);
+            console.log("RightNow:" + $scope.rightNow);
             $scope.diffTime = eventTime - $scope.rightNow;
-            console.log("difftime",$scope.diffTime);
+            console.log("difftime", $scope.diffTime);
             var duration = moment.duration($scope.diffTime, 'milliseconds');
-            
+
             $interval(function () {
 
                 duration = moment.duration(duration - 1000, 'milliseconds');
@@ -795,21 +823,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.countdown.hours = duration.hours();
                 $scope.countdown.minutes = duration.minutes();
                 $scope.countdown.seconds = duration.seconds();
-                
-                if( $scope.countdown.months < 0)
-                     $scope.countdown.months=0;
-                if( $scope.countdown.days < 0)
-                     $scope.countdown.days=0;
-                if( $scope.countdown.hours < 0)
-                     $scope.countdown.hours=0;
-                if( $scope.countdown.minutes < 0)
-                     $scope.countdown.minutes=0;
-                if( $scope.countdown.seconds < 0)
-                     $scope.countdown.seconds=0;
+
+                if ($scope.countdown.months < 0)
+                    $scope.countdown.months = 0;
+                if ($scope.countdown.days < 0)
+                    $scope.countdown.days = 0;
+                if ($scope.countdown.hours < 0)
+                    $scope.countdown.hours = 0;
+                if ($scope.countdown.minutes < 0)
+                    $scope.countdown.minutes = 0;
+                if ($scope.countdown.seconds < 0)
+                    $scope.countdown.seconds = 0;
                 //console.log($scope.countdown,"countdown");
             }, 1000);
         };
-         NavigationService.getallpoint(function (data) {
+        NavigationService.getallpoint(function (data) {
             $scope.pointtable = data.data;
             //$scope.pointtable = $filter('orderBy')($scope.pointtable, "order");
             console.log($scope.pointtable);
@@ -849,8 +877,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //   console.log("calendar dates");
         //   console.log($scope.calendarDatehome);
         // });
-        
-       
+
+
         //     $scope.tables[{
         // no:'3',
         // name:'Telugu Titans',
@@ -1003,7 +1031,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.schedules = [];
-    $scope.seasons=[];
+    $scope.seasons = [];
     $scope.loaded = false;
     console.log(currentlang);
     $scope.currentlang = $.jStorage.get("languageSet");
@@ -1020,16 +1048,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         item.isOpen = false;
         // item.classes = "panel-open";
     };
-    
-     NavigationService.getAllSeason(function (data) {
+
+    NavigationService.getAllSeason(function (data) {
         $scope.seasons = data.data;
-        var firstEle=_.head(data.data);
+        var firstEle = _.head(data.data);
         $scope.season = firstEle.id;
         //var firstseason=data.data[0];
         //console.log(firstseason.id);
-        
+
         //console.log($scope.seasons);
-        
+
         //console.log(firstEle.id);
     });
     NavigationService.getSchedule(function (data) {
@@ -1070,16 +1098,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
     //$scope.season = 3;
-    $scope.changeTab = function (data,index) {
+    $scope.changeTab = function (data, index) {
         $scope.season = data;
         $scope.selected = index;
-        $scope.currIndex =index;
+        $scope.currIndex = index;
         console.log($scope.season);
     };
 
 })
 
-.controller('GalleryInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('GalleryInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $rootScope) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("gallery-inner");
     $scope.menutitle = NavigationService.makeactive("Gallery");
@@ -1096,102 +1124,153 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = currentlang;
 
     }
+    NavigationService.getAuthenticate(function (data) {
+        if (data.logged_in) {
+            $.jStorage.set("showloginmodal", '0');
+            console.log($scope.galleryid);
+            NavigationService.getAllGallery(function (data) {
+                $scope.galleryArr = data.data;
+                // console.log(data);
+                $scope.gallerycategory = _.find($scope.galleryArr, {
+                    "id": $scope.galleryid
+                }).name;
+                $scope.hindigallerycategory = _.find($scope.galleryArr, {
+                    "id": $scope.galleryid
+                }).hindiname;
+            });
+            NavigationService.getGallerySlide($scope.galleryid, function (data) {
+                console.log(data);
+                $scope.slides = data.data;
+            });
+        } else {
+            $state.go('home', {
+                null: null
+            }).then(function (d) {
+                // add functionality
 
-    console.log($scope.galleryid);
-    NavigationService.getAllGallery(function (data) {
-        $scope.galleryArr = data.data;
-        // console.log(data);
-        $scope.gallerycategory = _.find($scope.galleryArr, {
-            "id": $scope.galleryid
-        }).name;
-        $scope.hindigallerycategory = _.find($scope.galleryArr, {
-            "id": $scope.galleryid
-        }).hindiname;
-    });
-    NavigationService.getGallerySlide($scope.galleryid, function (data) {
-        console.log(data);
-        $scope.slides = data.data;
-    });
+                $rootScope.loggedin = false;
+                //this.isCheckLoggedIn('Gallery');
+                //alert("Please Login to continue");  
+                $.jStorage.set("showloginmodal", '1'); 
+                $rootScope.$emit("isloggedin", 'Gallery');
+                /*
+                $timeout(function () {
+                 $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }, 5000);*/
 
+            });
+        }
+    });
 
 
 })
 
 
-.controller('GalleryCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
+.controller('GalleryCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $filter, $uibModal, $rootScope) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("gallery");
     $scope.menutitle = NavigationService.makeactive("Photo Gallery");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.msg = "";
-    $scope.msg2 = "";
-    $scope.myInterval = 5000;
-    $scope.noWrapSlides = false;
-    $scope.photos = true;
-    $scope.currentlang = $.jStorage.get("languageSet");
-    $scope.seasons=[]
-    console.log(currentlang);
-    globalFunc.changeLang = function () {
-        $scope.currentlang = currentlang;
 
-    }
-    NavigationService.getAllSeason(function (data) {
-        $scope.seasons = data.data;
-        var firstEle=_.head(data.data);
-        $scope.season = firstEle.id;
-        //var firstseason=data.data[0];
-        //console.log(firstseason.id);
-        
-        //console.log($scope.seasons);
-        
-        //console.log(firstEle.id);
-    });
-    $scope.getPhotos = function () {
-        NavigationService.getAllGallery(function (data) {
-            $scope.slides = data.data;
-            if (data.length === 0) {
-                $scope.msg = "No Data Found";
-            }
-            console.log($scope.slides);
-        });
-    };
-    $scope.getPhotos();
-    var slides = $scope.slides = [];
-    $scope.videos = [];
-    var currIndex = 0;
-    $scope.currIndex = 0;
-    $scope.getVideos = function () {
-        NavigationService.getAllVideoGallery(function (data) {
-            $scope.videos = data.data;
-            if (data.length === 0) {
-                $scope.msg2 = "No Data Found.";
-            }
-            console.log($scope.videos);
-        });
-    };
-     $scope.selected = 0;
-    //$scope.season = $scope.seasons[0].season;
-   // console.log($scope.seasons+"first");
-    $scope.changeTabs = function (data,index) {
-        $scope.season = data;
-        $scope.selected = index;
-        $scope.currIndex =index; 
-        console.log($scope.season+"season");
-    };
-    $scope.changeTab = function (value) {
-        if (value === true) {
+    NavigationService.getAuthenticate(function (data) {
+        if (data.logged_in) {
+            $.jStorage.set("showloginmodal", '0');
+            $scope.msg = "";
+            $scope.msg2 = "";
+            $scope.myInterval = 5000;
+            $scope.noWrapSlides = false;
             $scope.photos = true;
-            $scope.getPhotos();
-        } else {
-            $scope.photos = false;
-            $scope.getVideos();
-        }
-    };
+            $scope.currentlang = $.jStorage.get("languageSet");
+            $scope.seasons = []
+            console.log(currentlang);
+            globalFunc.changeLang = function () {
+                $scope.currentlang = currentlang;
 
+            }
+            NavigationService.getAllSeason(function (data) {
+                $scope.seasons = data.data;
+                var firstEle = _.head(data.data);
+                $scope.season = firstEle.id;
+                //var firstseason=data.data[0];
+                //console.log(firstseason.id);
+
+                //console.log($scope.seasons);
+
+                //console.log(firstEle.id);
+            });
+            $scope.getPhotos = function () {
+                NavigationService.getAllGallery(function (data) {
+                    $scope.slides = data.data;
+                    if (data.length === 0) {
+                        $scope.msg = "No Data Found";
+                    }
+                    console.log($scope.slides);
+                });
+            };
+            $scope.getPhotos();
+            var slides = $scope.slides = [];
+            $scope.videos = [];
+            var currIndex = 0;
+            $scope.currIndex = 0;
+            $scope.getVideos = function () {
+                NavigationService.getAllVideoGallery(function (data) {
+                    $scope.videos = data.data;
+                    if (data.length === 0) {
+                        $scope.msg2 = "No Data Found.";
+                    }
+                    console.log($scope.videos);
+                });
+            };
+            $scope.selected = 0;
+            //$scope.season = $scope.seasons[0].season;
+            // console.log($scope.seasons+"first");
+            $scope.changeTabs = function (data, index) {
+                $scope.season = data;
+                $scope.selected = index;
+                $scope.currIndex = index;
+                console.log($scope.season + "season");
+            };
+            $scope.changeTab = function (value) {
+                if (value === true) {
+                    $scope.photos = true;
+                    $scope.getPhotos();
+                } else {
+                    $scope.photos = false;
+                    $scope.getVideos();
+                }
+
+            };
+        } else {
+            $state.go('home', {
+                null: null
+            }).then(function (d) {
+                // add functionality
+
+                $rootScope.loggedin = false;
+                //this.isCheckLoggedIn('Gallery');
+                //alert("Please Login to continue");   
+                $rootScope.$emit("isloggedin", 'Gallery');
+                $.jStorage.set("showloginmodal", '1');
+                /*
+                $timeout(function () {
+                 $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }, 5000);*/
+
+            });
+        }
+    });
 })
 
-.controller('JPPTVCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('JPPTVCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $rootScope) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("jpp-tv");
     $scope.menutitle = NavigationService.makeactive("JPP TV");
@@ -1207,22 +1286,46 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = currentlang;
 
     }
+    NavigationService.getAuthenticate(function (data) {
+        if (data.logged_in) {
+            $.jStorage.set("showloginmodal", '0');
+            $scope.getVideos = function () {
+                NavigationService.getAllVideoGallery(function (data) {
+                    console.log("data", data);
+                    $scope.videos = data.data;
+                    if (data.length === 0) {
+                        $scope.msg = "Sorry, nothing to show here!";
+                    }
+                });
+            };
 
-    $scope.getVideos = function () {
-        NavigationService.getAllVideoGallery(function (data) {
-            console.log("data", data);
-            $scope.videos = data.data;
-            if (data.length === 0) {
-                $scope.msg = "Sorry, nothing to show here!";
-            }
-        });
-    };
+            $scope.getVideos();
+        } else {
+            $state.go('home', {
+                null: null
+            }).then(function (d) {
+                // add functionality
 
-    $scope.getVideos();
+                $rootScope.loggedin = false;
+                //this.isCheckLoggedIn('Gallery');
+                //alert("Please Login to continue");   
+                $rootScope.$emit("isloggedin", 'JPPTV');
+                $.jStorage.set("showloginmodal", '1');
+                /*
+                $timeout(function () {
+                 $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }, 5000);*/
 
+            });
+        }
+    });
 })
 
-.controller('WallpapperCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('WallpapperCtrl', function ($scope, TemplateService, NavigationService, $timeout, $state, $rootScope) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper");
     $scope.menutitle = NavigationService.makeactive("Wallpapers");
@@ -1236,12 +1339,35 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.currentlang = currentlang;
 
     }
+    NavigationService.getAuthenticate(function (data) {
+        if (data.logged_in) {
+            $.jStorage.set("showloginmodal", '0');
+            NavigationService.getWallpaperCategoryForDesktop(function (data) {
+                $scope.wallpapper = data.data;
+            });
+        } else {
+            $state.go('home', {
+                null: null
+            }).then(function (d) {
+                // add functionality
 
+                $rootScope.loggedin = false;
+                //this.isCheckLoggedIn('Gallery');
+                //alert("Please Login to continue");   
+                $rootScope.$emit("isloggedin", 'Wallpaper');
+                $.jStorage.set("showloginmodal", '1');
+                /*
+                $timeout(function () {
+                 $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }, 5000);*/
 
-    NavigationService.getWallpaperCategoryForDesktop(function (data) {
-        $scope.wallpapper = data.data;
+            });
+        }
     });
-
     // $scope.wallpapper = [{
     //     image: "img/wallpapper/w1.jpg",
     //     name: "Desktop",
@@ -1260,7 +1386,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     // }];
 })
 
-.controller('WallpapperInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+.controller('WallpapperInnerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams, $state, $rootScope) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("wallpapper-inner");
     $scope.menutitle = NavigationService.makeactive("Wallpappers");
@@ -1273,55 +1399,79 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.lastpage = false;
     $scope.wallpaperid = $stateParams.id;
 
+    NavigationService.getAuthenticate(function (data) {
+        if (data.logged_in) {
+            $.jStorage.set("showloginmodal", '0');
+            $scope.currentlang = $.jStorage.get("languageSet");
 
-    $scope.currentlang = $.jStorage.get("languageSet");
+            console.log(currentlang);
+            globalFunc.changeLang = function () {
+                $scope.currentlang = currentlang;
 
-    console.log(currentlang);
-    globalFunc.changeLang = function () {
-        $scope.currentlang = currentlang;
-
-    }
-
-
-
-    NavigationService.getWallpaperCategoryForDesktop(function (data) {
-        $scope.wallpaperArr = data;
-        $scope.wallpapercategory = _.find($scope.wallpaperArr, {
-            "id": $scope.wallpaperid
-        }).name;
-        $scope.hindiwallpapercategory = _.find($scope.wallpaperArr, {
-            "id": $scope.wallpaperid
-        }).hname;
-    });
-
-    $scope.getWallpapers = function (page) {
-        $scope.lastpage = false;
-        $scope.request = {
-            pageno: page,
-            wallpaperid: $scope.wallpaperid
-        };
-        NavigationService.getallwallpaper($scope.request, function (data) {
-            var temp = data.queryresult;
-            if ($scope.wallpapper.length === 0) {
-                $scope.msg = "No wallpapers found.";
             }
-            console.log(page);
-            console.log(temp);
-            if (temp.length === 0) {
-                $scope.lastpage = true;
-            } else {
-                _.each(temp, function (key) {
-                    $scope.wallpapper.push(key);
+
+
+
+            NavigationService.getWallpaperCategoryForDesktop(function (data) {
+                $scope.wallpaperArr = data;
+                $scope.wallpapercategory = _.find($scope.wallpaperArr, {
+                    "id": $scope.wallpaperid
+                }).name;
+                $scope.hindiwallpapercategory = _.find($scope.wallpaperArr, {
+                    "id": $scope.wallpaperid
+                }).hname;
+            });
+
+            $scope.getWallpapers = function (page) {
+                $scope.lastpage = false;
+                $scope.request = {
+                    pageno: page,
+                    wallpaperid: $scope.wallpaperid
+                };
+                NavigationService.getallwallpaper($scope.request, function (data) {
+                    var temp = data.queryresult;
+                    if ($scope.wallpapper.length === 0) {
+                        $scope.msg = "No wallpapers found.";
+                    }
+                    console.log(page);
+                    console.log(temp);
+                    if (temp.length === 0) {
+                        $scope.lastpage = true;
+                    } else {
+                        _.each(temp, function (key) {
+                            $scope.wallpapper.push(key);
+                        });
+                    }
                 });
-            }
-        });
-    };
-    $scope.getWallpapers(pageNo);
-    $scope.viewMore = function () {
-        pageNo++;
-        $scope.getWallpapers(pageNo);
-    };
+            };
+            $scope.getWallpapers(pageNo);
+            $scope.viewMore = function () {
+                pageNo++;
+                $scope.getWallpapers(pageNo);
+            };
+        } else {
+            $state.go('home', {
+                null: null
+            }).then(function (d) {
+                // add functionality
 
+                $rootScope.loggedin = false;
+                //this.isCheckLoggedIn('Gallery');
+                //alert("Please Login to continue");   
+                $rootScope.$emit("isloggedin", 'Wallpaper');
+                $.jStorage.set("showloginmodal", '1');
+                /*
+                $timeout(function () {
+                 $scope.modalLogsInstance = $uibModal.open({
+                        animation: true,
+                        templateUrl: 'views/modal/logs.html',
+                        scope: $scope,
+                    });
+                }, 5000);*/
+
+            });
+        }
+    });
 })
 
 .controller('TicketMerchandizeCtrl', function ($scope, TemplateService, NavigationService, $stateParams, $timeout, $filter) {
@@ -2216,6 +2366,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             NavigationService.getAuthenticate(function (data) {
                 console.log("getAuthenticate", data);
                 if (data.logged_in) {
+                    //$.jStorage.set("userloggedin", '1');
                     console.log("im in true");
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
@@ -2223,6 +2374,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $state.go('Comingsoon');
                 } else {
                     $rootScope.loggedIn = false;
+                    
                     $scope.modalLogsInstance = $uibModal.open({
                         animation: true,
                         templateUrl: 'views/modal/logs.html',
@@ -2240,7 +2392,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/beta/#/gallery";
+                    window.location = "http://jaipurpinkpanthers.com/#/gallery";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2260,7 +2412,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/beta/#/wallpaper";
+                    window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2279,7 +2431,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $rootScope.userFirstName = data.firstname;
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
-                    window.location = "http://jaipurpinkpanthers.com/beta/#/jpp-tv";
+                    window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
                 } else {
                     $rootScope.loggedIn = false;
                     $scope.modalLogsInstance = $uibModal.open({
@@ -2294,7 +2446,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.logoutUser = function () {
         $rootScope.loggedIn = false;
         NavigationService.logoutUser(function (data) {
+            $state.go("home");
             console.log("im in logout", data);
+            //$.jStorage.set("userloggedin", '0');
         })
     };
     $scope.authentication = function () {
