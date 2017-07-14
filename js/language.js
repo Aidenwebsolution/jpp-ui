@@ -22,6 +22,7 @@ var LanguageEnglish = {
     "weight":"weight",
     "tackles":"tackles",
     "Game":"Game",
+    "Manjeet Chhillar":"Manjeet Chhillar",
     "successful tackles":"successful tackles",
     "empty  raids":"empty  raids",
     "log in":"log in",
@@ -421,11 +422,14 @@ var LanguageEnglish = {
     "Matches Played":"Matches Played",
     "Total Points":"Total Points",
     "Total Raid Points":"Total Raid Points",
-    "Total Defence Points":"Total Defence Points"
+    "Total Defence Points":"Total Defence Points",
+    "Captain":"Captain"
 };
 
 
 var LanguageHindi = {
+    "Captain":"कप्तान",
+    "Manjeet Chhillar":"मनजीत चिल्लर",
     "green cards":"हरा कार्ड",
     "Download the JPP App":"JPP ऐप डाउनलोड करें",
     "red cards":"लाल कार्ड",
