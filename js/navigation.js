@@ -16,8 +16,8 @@ var navigationservice = angular.module('navigationservice', [])
     var navigation = [{
             name: "Fixtures & Results",
             // url: "fixtures({id:1})",
-            //url: "fixtures",
-            url:"Comingsoon",
+            url: "fixtures",
+            // url:"Comingsoon",
             classis: "active"
         }, {
             name: "Panther World",
