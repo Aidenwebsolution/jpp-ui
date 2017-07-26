@@ -127,19 +127,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/pantherworld/games";
+                        window.location = "http://jaipurpinkpanthers.com/#/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
 
                     if (value == 'JPP') {
-                        window.location = "http://jaipurpinkpanthers.com/jpp-tv";
+                        window.location = "http://jaipurpinkpanthers.com/#/jpp-tv";
                     }
                     if (value == 'Gallery') {
-                        window.location = "http://jaipurpinkpanthers.com/gallery";
+                        window.location = "http://jaipurpinkpanthers.com/#/gallery";
                     }
                     if (value == 'WALLPAPERS') {
-                        window.location = "http://jaipurpinkpanthers.com/wallpaper";
+                        window.location = "http://jaipurpinkpanthers.com/#/wallpaper";
                     }
                 } else {
                     $rootScope.loggedIn = false;
