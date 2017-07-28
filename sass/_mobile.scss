@@ -132,7 +132,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         font-size: 14px;
     }
     .li-footer {
-        margin: 0 10px 4px 0;
+        margin: 0 30px 4px 0;
     }
     //page
     .title-name {
@@ -146,6 +146,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 @media (max-width: $screen-sm-max) {
     .log-sign {
         margin-bottom: 0;
+    }
+    .li-footer {
+        margin: 0 10px 4px 0;
     }
     .panthers {
         h2 {
@@ -1057,6 +1060,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
     .img-list-box.gallery-album {
     width: auto;
+    height: auto;
 }
     // .pl-link {
     //     width: 93%;
