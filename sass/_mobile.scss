@@ -145,6 +145,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-sm-max) {
+    .point-bkp {
+        background-image: url('../img/players/point-bg.png')
+    }
     .log-sign {
         margin-bottom: 0;
     }
@@ -1077,8 +1080,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .banner-title {
         margin-top: 99px;
-    }
-    //player-inside//
+    } //player-inside//
     .player-name {
         top: 140px;
         left: 0px;
@@ -1169,8 +1171,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .bbm {
         border-bottom: 1px solid #3b44a1;
-    }
-    // .btm{
+    } // .btm{
     //       border-top: 1px solid #3b44a1;
     // }
     //player-inside//
@@ -1279,7 +1280,8 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .modal-dialog {
         width: 75%;
         top: 0;
-        @include transform(translate(-50%, -0%)!important);
+        @include transform(translate(-50%,
+        -0%)!important);
     }
     .flex-next {
         &:before {

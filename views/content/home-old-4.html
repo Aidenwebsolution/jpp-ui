@@ -205,28 +205,17 @@
         </ul>
     </div>
 </div>
-<section class="marg-section no-mb relative ">
-
+<section class="marg-section no-mb relative">
     <div class="whiteline hidden-xs"></div>
     <div class="box-right boxer hidden-xs"></div>
     <div class="box-left boxer hidden-xs"></div>
     <div class="point-bkp">
         <div class="container-fluid">
             <div class="row">
-
-                <!--@@@@@@@@-->
                 <div class="col-md-6 col-sm-6 pad0 marg2">
-                    <!--<a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
+                    <a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
                             alt="Champions Patna Pirates"></a>
                     <div class="white-line-pad" ng-if="journeyData =='No data found' || journeyData.status != '1'">
-                        -->
-
-
-                    <!--<a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
-                            alt="Champions Patna Pirates"></a>-->
-                    <div class="white-line-pad">
-
-
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -246,13 +235,8 @@
                                                 <th>PTS</th>
                                             </tr>
                                         </thead>
-                                    </table>
-                                    <div class="head-table ">
-                                        <h3 class="color-white font-tbl" style="    margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone A</h3>
-                                    </div>
-                                    <table class="table grad-table">
                                         <tbody class="odd-even">
-                                            <tr>
+                                            <!--<tr>
                                                 <td>1</td>
                                                 <td>Telugu Titans</td>
                                                 <td>14</td>
@@ -271,25 +255,7 @@
                                                 <td>1</td>
                                                 <td>0</td>
                                                 <td>47</td>
-                                            </tr>
-                                            <!--<tr ng-repeat="data in pointtable">
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{$index+1}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.name}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.played}} </td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.wins}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.lost}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.draw}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.sd}}</td>
-                                                <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.point}}</td>
                                             </tr>-->
-
-                                        </tbody>
-                                    </table>
-                                    <div class="head-table ">
-                                        <h3 class="color-white font-tbl" style="margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone B</h3>
-                                    </div>
-                                    <table class="table grad-table">
-                                        <tbody class="odd-even">
                                             <tr ng-repeat="data in pointtable">
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{$index+1}}</td>
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.name}}</td>
@@ -320,9 +286,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!--@@@@@@@@-->
                 <div class="col-md-6 col-sm-6 pad0 marg2">
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
