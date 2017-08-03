@@ -10,7 +10,7 @@ var firstapp = angular.module('firstapp', [
     'angulartics.google.analytics'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider, $locationProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider, $locationProvider) {
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
     cfpLoadingBarProvider.includeBar = true;
@@ -23,86 +23,91 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
             controller: 'HomeCtrl'
         })
 
-    .state('players', {
-        url: "/players",
-        templateUrl: "views/template.html",
-        controller: 'PlayersCtrl'
-    })
+        .state('players', {
+            url: "/players",
+            templateUrl: "views/template.html",
+            controller: 'PlayersCtrl'
+        })
+        .state('sponsors', {
+            url: "/sponsors",
+            templateUrl: "views/template.html",
+            controller: 'SponsorCtrl'
+        })
 
-    .state('wallpaper', {
-        url: "/wallpaper",
-        templateUrl: "views/template.html",
-        controller: 'WallpapperCtrl'
-    })
+        .state('wallpaper', {
+            url: "/wallpaper",
+            templateUrl: "views/template.html",
+            controller: 'WallpapperCtrl'
+        })
 
-    .state('gallery-inner', {
-        url: "/gallery-inner/:id",
-        templateUrl: "views/template.html",
-        controller: 'GalleryInnerCtrl'
-    })
+        .state('gallery-inner', {
+            url: "/gallery-inner/:id",
+            templateUrl: "views/template.html",
+            controller: 'GalleryInnerCtrl'
+        })
 
-    .state('wallpapper-inner', {
-        url: "/wallpaper-inner/:id",
-        templateUrl: "views/template.html",
-        controller: 'WallpapperInnerCtrl'
-    })
+        .state('wallpapper-inner', {
+            url: "/wallpaper-inner/:id",
+            templateUrl: "views/template.html",
+            controller: 'WallpapperInnerCtrl'
+        })
 
-    .state('fan-corner', {
-        url: "/fan-corner",
-        templateUrl: "views/template.html",
-        controller: 'FanCornerCtrl'
-    })
+        .state('fan-corner', {
+            url: "/fan-corner",
+            templateUrl: "views/template.html",
+            controller: 'FanCornerCtrl'
+        })
 
-    .state('gallery', {
-        url: "/gallery",
-        templateUrl: "views/template.html",
-        controller: 'GalleryCtrl'
-    })
+        .state('gallery', {
+            url: "/gallery",
+            templateUrl: "views/template.html",
+            controller: 'GalleryCtrl'
+        })
 
-    .state('fixtures', {
-        url: "/fixtures/:id",
-        templateUrl: "views/template.html",
-        controller: 'FixturesCtrl'
-    })
+        .state('fixtures', {
+            url: "/fixtures/:id",
+            templateUrl: "views/template.html",
+            controller: 'FixturesCtrl'
+        })
 
-    .state('news-media', {
-        url: "/news-media",
-        templateUrl: "views/template.html",
-        controller: 'NewsMediaCtrl'
-    })
+        .state('news-media', {
+            url: "/news-media",
+            templateUrl: "views/template.html",
+            controller: 'NewsMediaCtrl'
+        })
 
-    .state('invite-friends', {
-        url: "/invite-friends",
-        templateUrl: "views/template.html",
-        controller: 'InviteFriendsCtrl'
-    })
+        .state('invite-friends', {
+            url: "/invite-friends",
+            templateUrl: "views/template.html",
+            controller: 'InviteFriendsCtrl'
+        })
 
-    .state('news-detail', {
-        url: "/news-detail",
-        templateUrl: "views/template.html",
-        controller: 'NewsDetailCtrl'
-    })
+        .state('news-detail', {
+            url: "/news-detail",
+            templateUrl: "views/template.html",
+            controller: 'NewsDetailCtrl'
+        })
 
-    .state('ticket-merchandise', {
-        url: "/ticket-merchandise",
-        templateUrl: "views/template.html",
-        controller: 'TicketMerchandizeCtrl'
-    })
+        .state('ticket-merchandise', {
+            url: "/ticket-merchandise",
+            templateUrl: "views/template.html",
+            controller: 'TicketMerchandizeCtrl'
+        })
 
 
-    .state('ticket', {
-        url: "/ticket",
-        templateUrl: "views/template.html",
-        controller: 'TicketCtrl'
-    })
+        .state('ticket', {
+            url: "/ticket",
+            templateUrl: "views/template.html",
+            controller: 'TicketCtrl'
+        })
 
-    .state('jpp-tv', {
-        url: "/jpp-tv",
-        templateUrl: "views/template.html",
-        controller: 'JPPTVCtrl'
-    })
+        .state('jpp-tv', {
+            url: "/jpp-tv",
+            templateUrl: "views/template.html",
+            controller: 'JPPTVCtrl'
+        })
 
-    .state('about-us', {
+        .state('about-us', {
             url: "/about-us",
             templateUrl: "views/template.html",
             controller: 'AboutUsCtrl'
@@ -113,17 +118,17 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
             controller: 'ComingsoonCtrl'
         })
 
-    .state('players-inside', {
-        url: "/players-inside/:id",
-        templateUrl: "views/template.html",
-        controller: 'PlayersInsideCtrl'
-    })
+        .state('players-inside', {
+            url: "/players-inside/:id",
+            templateUrl: "views/template.html",
+            controller: 'PlayersInsideCtrl'
+        })
 
-    .state('points-table', {
-        url: "/points-table",
-        templateUrl: "views/template.html",
-        controller: 'PointsCtrl'
-    });
+        .state('points-table', {
+            url: "/points-table",
+            templateUrl: "views/template.html",
+            controller: 'PointsCtrl'
+        });
 
     if (isproduction) {
         $locationProvider.html5Mode(true);
@@ -132,11 +137,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     $urlRouterProvider.otherwise("/");
 
 });
-firstapp.directive('fancyboxThumb', function() {
+firstapp.directive('fancyboxThumb', function () {
     return {
         restrict: 'C',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             $('.fancybox-thumb').fancybox({
                 prevEffect: 'none',
                 nextEffect: 'none',
@@ -154,16 +159,16 @@ firstapp.directive('fancyboxThumb', function() {
         }
     };
 });
-firstapp.directive('img', function($compile, $parse) {
+firstapp.directive('img', function ($compile, $parse) {
     return {
         restrict: 'E',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             if (!attrs.noloading) {
                 $element.after("<img src='img/loading.gif' class='loading' />");
                 var $loading = $element.next(".loading");
-                $element.load(function() {
+                $element.load(function () {
                     $loading.remove();
                     $(this).addClass("doneLoading");
                 });
@@ -187,14 +192,14 @@ firstapp.directive('img', function($compile, $parse) {
 //         }
 //     }
 // });
-firstapp.directive("focus", function() {
+firstapp.directive("focus", function () {
     return {
         restrict: "A",
-        link: function($scope, element) {
-            element.on("input", function(e) {
-                if(element.val().length == element.attr("maxlength")) {
+        link: function ($scope, element) {
+            element.on("input", function (e) {
+                if (element.val().length == element.attr("maxlength")) {
                     var $nextElement = element.next();
-                    if($nextElement.length) {
+                    if ($nextElement.length) {
                         $nextElement[0].focus();
                     }
                 }
@@ -202,8 +207,8 @@ firstapp.directive("focus", function() {
         }
     }
 });
-firstapp.filter('serverimage', function() {
-    return function(input) {
+firstapp.filter('serverimage', function () {
+    return function (input) {
         if (input) {
             return imgurl + input;
         } else {
@@ -211,8 +216,8 @@ firstapp.filter('serverimage', function() {
         }
     };
 });
-firstapp.filter('serverimage1', function() {
-    return function(input) {
+firstapp.filter('serverimage1', function () {
+    return function (input) {
         if (input) {
             return tempimgurl + input;
         } else {
@@ -220,8 +225,8 @@ firstapp.filter('serverimage1', function() {
         }
     };
 });
-firstapp.filter('thumbimage', function() {
-    return function(input) {
+firstapp.filter('thumbimage', function () {
+    return function (input) {
         if (input) {
             return mainurl + 'image/index?name=' + input + '&width=400';
         } else {
@@ -231,8 +236,8 @@ firstapp.filter('thumbimage', function() {
 });
 
 
-firstapp.filter('teamColor', function() {
-    return function(input) {
+firstapp.filter('teamColor', function () {
+    return function (input) {
 
         var returnImg = "";
         switch (input) {
@@ -275,8 +280,8 @@ firstapp.filter('teamColor', function() {
 
 
 
-firstapp.filter('teamImg', function() {
-    return function(input) {
+firstapp.filter('teamImg', function () {
+    return function (input) {
 
         var returnImg = "img/team/";
         switch (input) {
@@ -363,14 +368,14 @@ firstapp.filter('teamImg', function() {
     };
 });
 
-firstapp.directive('autoHeight', function($compile, $parse) {
+firstapp.directive('autoHeight', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             var windowHeight = $(window).height();
-            var addHeight = function() {
+            var addHeight = function () {
                 $element.css("min-height", windowHeight);
                 console.log("Aiyyo!");
             };
@@ -378,10 +383,10 @@ firstapp.directive('autoHeight', function($compile, $parse) {
         }
     };
 });
-firstapp.directive('aplhaOnly', function() {
+firstapp.directive('aplhaOnly', function () {
     return {
         require: 'ngModel',
-        link: function(scope, element, attr, ngModelCtrl) {
+        link: function (scope, element, attr, ngModelCtrl) {
             function fromUser(text) {
                 var transformedInput = text.replace(/[^a-zA-Z]/g, '');
                 if (transformedInput !== text) {
@@ -394,33 +399,33 @@ firstapp.directive('aplhaOnly', function() {
         }
     };
 });
-firstapp.directive('noPaste', function($filter) {
+firstapp.directive('noPaste', function ($filter) {
     return {
         scope: {},
-        link: function(scope, element) {
-            element.on('cut copy paste', function(event) {
+        link: function (scope, element) {
+            element.on('cut copy paste', function (event) {
                 event.preventDefault();
             });
         }
     };
 });
 
-firstapp.directive('childHeight', function($compile, $parse) {
+firstapp.directive('childHeight', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             var parentHeight = $('.parent-height').height();
-            var addHeight = function() {
+            var addHeight = function () {
                 $element.css("height", parentHeight);
             };
             addHeight();
         }
     };
 });
-firstapp.filter('cut', function() {
-    return function(value, wordwise, max, tail) {
+firstapp.filter('cut', function () {
+    return function (value, wordwise, max, tail) {
         if (!value) return '';
 
         max = parseInt(max, 10);
@@ -437,23 +442,23 @@ firstapp.filter('cut', function() {
         return value + (tail || ' …');
     };
 });
-firstapp.directive('mycircle', function($compile, $parse) {
+firstapp.directive('mycircle', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
             var amount = 1;
             var myinterval = {};
-            $element.ready(function() {
+            $element.ready(function () {
                 console.log("DEMO");
 
-                $element.hover(function() {
+                $element.hover(function () {
                     clearInterval(myinterval);
-                }, function() {
+                }, function () {
 
 
-                    myinterval = setInterval(function() {
+                    myinterval = setInterval(function () {
                         var $element = $(element);
                         var $elementli = $element.children("li");
                         $abc = $elementli;
@@ -494,8 +499,8 @@ firstapp.directive('mycircle', function($compile, $parse) {
         }
     };
 });
-firstapp.filter('semiIt', function() {
-    return function(value) {
+firstapp.filter('semiIt', function () {
+    return function (value) {
         console.log(value);
         if (value.toUpperCase().indexOf('SEMI') === -1) {
             return value;
@@ -505,10 +510,10 @@ firstapp.filter('semiIt', function() {
         }
     };
 });
-firstapp.directive('onlyDigits', function() {
+firstapp.directive('onlyDigits', function () {
     return {
         require: 'ngModel',
-        link: function(scope, element, attr, ngModelCtrl) {
+        link: function (scope, element, attr, ngModelCtrl) {
             function fromUser(text) {
                 if (text) {
                     var transformedInput = text.replace(/[^0-9]/g, '');
@@ -525,14 +530,14 @@ firstapp.directive('onlyDigits', function() {
         }
     };
 });
-firstapp.directive('fancybox', function($compile, $parse) {
+firstapp.directive('fancybox', function ($compile, $parse) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             $element = $(element);
             console.log("Checking Fancybox");
-            setTimeout(function() {
+            setTimeout(function () {
                 $(".various").fancybox({
                     maxWidth: 800,
                     maxHeight: 600,
@@ -548,11 +553,11 @@ firstapp.directive('fancybox', function($compile, $parse) {
         }
     };
 });
-firstapp.directive('ngRightClick', function($parse) {
-    return function(scope, element, attrs) {
+firstapp.directive('ngRightClick', function ($parse) {
+    return function (scope, element, attrs) {
         var fn = $parse(attrs.ngRightClick);
-        element.bind('contextmenu', function(event) {
-            scope.$apply(function() {
+        element.bind('contextmenu', function (event) {
+            scope.$apply(function () {
                 event.preventDefault();
                 fn(scope, {
                     $event: event
@@ -561,9 +566,9 @@ firstapp.directive('ngRightClick', function($parse) {
         });
     };
 });
-firstapp.directive("scroll", function($window) {
-    return function(scope, element, attrs) {
-        angular.element($window).bind("scroll", function() {
+firstapp.directive("scroll", function ($window) {
+    return function (scope, element, attrs) {
+        angular.element($window).bind("scroll", function () {
             var windowHeight = $(window).height();
             if (windowHeight > 600) {
                 //$('#boutique').boutique();
@@ -577,8 +582,8 @@ firstapp.directive("scroll", function($window) {
         });
     };
 });
-firstapp.filter('twodigit', function() {
-    return function(value) {
+firstapp.filter('twodigit', function () {
+    return function (value) {
         if (value < 10) {
             return '0' + value;
         } else {
@@ -586,8 +591,8 @@ firstapp.filter('twodigit', function() {
         }
     };
 });
-firstapp.filter('spaceToPlus', function() {
-    return function(text) {
+firstapp.filter('spaceToPlus', function () {
+    return function (text) {
         if (text) {
             var str = text.replace(/\s+/, "-");
             return str;
@@ -595,16 +600,16 @@ firstapp.filter('spaceToPlus', function() {
 
     };
 });
-firstapp.filter('spaceToDash', function() {
-    return function(text) {
+firstapp.filter('spaceToDash', function () {
+    return function (text) {
         if (text) {
             var str = text.replace(/\s+/, "-").toLowerCase();
             return str;
         }
     };
 });
-firstapp.filter('hindimonth', function() {
-    return function(date, onlymonth) {
+firstapp.filter('hindimonth', function () {
+    return function (date, onlymonth) {
         date = new Date(date);
         var onlyday = date.getDate();
         var onlyyear = date.getFullYear();
@@ -722,7 +727,7 @@ firstapp.filter('hindimonth', function() {
     };
 });
 
-firstapp.config(function($translateProvider) {
+firstapp.config(function ($translateProvider) {
     $translateProvider.translations('en', LanguageEnglish);
     $translateProvider.translations('hi', LanguageHindi);
     $translateProvider.preferredLanguage('en');

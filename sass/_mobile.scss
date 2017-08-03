@@ -145,6 +145,62 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-sm-max) {
+    .kittingPartner, //sponsors scss
+    .fmPartner,
+    .multiplexPartner,
+    .ticketingPartner {
+        padding: 10px;
+        img {
+            padding: 5px;
+            width: auto;
+            height: auto;
+            max-width: 198px;
+            max-height: 80px;
+        }
+    }
+    .titleSponsor,
+    .poweredBy,
+    .prayerPartner,
+    .associateSponsor {
+        padding: 20px;
+        div {
+            margin: 5px;
+        }
+    }
+    .prayerPartner {
+        padding-top: 0px;
+    }
+    .spo_img {
+        width: 40%;
+    } //end of sponsor
+    //footer sponsor starts here
+    .foo_sponsor {
+        color: #b41e72;
+        padding: 0px;
+        padding-top: 50px;
+    } //footer sponsor ends here
+    .foo_s_row {
+        padding: 50px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+    .foo_icon {
+        width: 250px;
+    }
+    .foo_first_icon {
+        width: 150px;
+    }
+    .pix_10 {
+        padding: 10px;
+    }
+    .foo_icon2 {
+        padding: 5px;
+        width: auto;
+        height: auto;
+        max-width: 198px;
+        max-height: 80px;
+        margin: 10px;
+    } // footer sponsor ends here
     .point-bkp {
         background-image: url('../img/players/point-bg.png')
     }
@@ -1583,6 +1639,39 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: 580px) {
+    .kittingPartner, //sponsors scss
+    .fmPartner,
+    .multiplexPartner,
+    .ticketingPartner {
+        padding: 10px;
+        img {
+            padding: 5px;
+            width: auto;
+            height: auto;
+            max-width: 50%;
+            max-height: 60px;
+        }
+    }
+    .ticketingPartner {
+        margin-top: -10px;
+    } //end of sponsors
+    //footer sponsor starts here
+    .foo_icon {
+        width: 60%;
+    }
+    .foo_icon_first {
+        width: 50%;
+    }
+    .foo_icon2 {
+        padding: 5px;
+        width: auto;
+        height: auto;
+        max-width: 50%;
+        max-height: 60px;
+    }
+    .n_pix_10 {
+        margin-top: -10px;
+    } //footer sponsor ends here
     .fixtures-make.pb {
         padding-top: 20px;
     }

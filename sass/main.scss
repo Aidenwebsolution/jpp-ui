@@ -197,7 +197,7 @@ nav {
         font-size: 20px;
         font-weight: $font-light;
         padding-right: 18px;
-        a{
+        a {
             font-family: 'Oswald', sans-serif;
         }
         &:hover {
@@ -207,8 +207,7 @@ nav {
         }
         &.high {
             &:before {
-                content: "";
-                // background-image: url("../img/buy-now.png");
+                content: ""; // background-image: url("../img/buy-now.png");
                 height: 30px;
                 background-size: contain;
                 position: absolute;
@@ -252,7 +251,6 @@ nav {
                 }
             }
         }
-    
         &:hover {
             a.menu-custom {
                 @include background-image (linear-gradient(#ee4a9b,
@@ -288,11 +286,10 @@ nav {
                 }
             }
         }
-        &.active{
-             a.menu-custom {
-                 background-color: transparent !important;
-             }
-
+        &.active {
+            a.menu-custom {
+                background-color: transparent !important;
+            }
         }
     }
     a.menu-custom {
@@ -432,8 +429,7 @@ nav {
     h1 {
         display: inline-block;
         width: 350px;
-    }
-    // background-image:url("../img/players/titles.png");
+    } // background-image:url("../img/players/titles.png");
     // background-repeat: no-repeat;
     // background-size: cover;
     // background-color: $brand-success;
@@ -801,8 +797,7 @@ nav {
 
 .btn-pink {
     color: #fff;
-    background-color: $pink;
-    // border-color: $pink;
+    background-color: $pink; // border-color: $pink;
     text-transform: uppercase;
     border-radius: 0;
     padding: 6px 15px;
@@ -881,8 +876,7 @@ hr {
 .btn-primary {
     @extend .btn-pink;
     background-color: $brand-primary;
-    border: 1px solid $brand-primary;
-    // &:hover{
+    border: 1px solid $brand-primary; // &:hover{
     //      background-color: transparent;
     // border: transparent;
     // }
@@ -1857,8 +1851,7 @@ img.fancybox-image {
         th {
             font-weight: 500;
         }
-    }
-    // background: #4ecaf5;
+    } // background: #4ecaf5;
     padding: 10px 5px 5px;
     color: #000;
     margin: 10px;
@@ -2176,8 +2169,7 @@ img.fancybox-image {
 .news-logo {
     display: inline-block;
     position: absolute;
-    top: 50%;
-    // transform: translateY(-50%);
+    top: 50%; // transform: translateY(-50%);
     @include transform(translatey(-50%));
 }
 
@@ -2364,8 +2356,7 @@ img.fancybox-image {
         right: 0;
         background-image: url("../img/players/sect.png");
         width: 53%
-    }
-    // &.tables-box2{
+    } // &.tables-box2{
     //     right: 0;
     //        background-image: url("../img/players/seab4.png");
     // }
@@ -3157,13 +3148,11 @@ a.ilogo {
 }
 
 .masonry-box a {
-    display: block !important;
-    //  padding: 20px 0 0;
+    display: block !important; //  padding: 20px 0 0;
 }
 
 .masonry-box {
-    width: 280px;
-    //  border: 1px solid #000;
+    width: 280px; //  border: 1px solid #000;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
     img {
@@ -3226,8 +3215,7 @@ a.ilogo {
         // background: #322c7b;
         background-image: url("../img/bg.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        // background: linear-gradient(to bottom left, #322c7b, rgba(10, 57, 85, 0.49));
+        background-size: cover; // background: linear-gradient(to bottom left, #322c7b, rgba(10, 57, 85, 0.49));
         padding: 40px 33px;
         margin-top: -1px;
         position: relative;
@@ -3325,7 +3313,6 @@ a.ilogo {
 //         width: 77%;
 //     }
 // }
-
 .checkbox {
     input[type="checkbox"] {
         display: none;
@@ -3745,8 +3732,7 @@ a.ilogo {
         font-size: 50px;
     }
     .activated:nth-last-of-type(2) {
-        color: $pink !important;
-        // &:before {
+        color: $pink !important; // &:before {
         //     box-shadow: 6px 0px 9px -1px rgba(0, 0, 0, 0.38);
         // }
     }
@@ -3929,14 +3915,13 @@ a.ilogo {
     /* Standard syntax */
 }
 
-.pinky-text{
-    color:$pink;
-   
- font-weight: 500 !important;
-   
+.pinky-text {
+    color: $pink;
+    font-weight: 500 !important;
 }
 
-.table>thead>tr>th,.table>tbody>tr>td{
+.table>thead>tr>th,
+.table>tbody>tr>td {
     text-align: center;
 }
 
@@ -4017,8 +4002,7 @@ a.ilogo {
 
 .bg-white {
     .modal-content {
-        border: 3px solid #fff;
-        // background: linear-gradient(-90deg, #322470, #1f3b75, #0c3856, #084967);
+        border: 3px solid #fff; // background: linear-gradient(-90deg, #322470, #1f3b75, #0c3856, #084967);
         background: linear-gradient(to bottom left, #322470, #262966, #0c3856, #084967);
         color: #fff;
         border-radius: 10px;
@@ -4130,11 +4114,93 @@ a.ilogo {
     }
 }
 
-.mt6{
+.mt6 {
     margin-top: 6px;
 }
 
+//for sponsors page
+.sponsor_container {
+    background-color: #e3e3e3;
+    color: #6d6868;
+    .h1 {
+        color: #b41e72;
+        margin-bottom: 5px;
+    }
+    .titleSponsor {
+        padding: 15px;
+        img {
+            width: 150px;
+        }
+    }
+    .poweredBy {
+        img {
+            padding: 10px;
+            width: 250px;
+        }
+    }
+    .spo_second_col {
+        padding: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .spo_third_col {
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
 
+.spo_img {
+    padding: 10px;
+}
+
+.spo_img_1 {
+    width: 250px;
+    padding-top: 10px;
+}
+
+.spo_img_2 {
+    margin: 10px;
+    width: 100px;
+}
+
+// end of sponspor page
+// footer sponspor starts here
+.foo_sponsor {
+    color: #b41e72;
+    padding: 50px;
+    padding-right: 30px;
+}
+
+.foo_s_row {
+    padding: 50px;
+    padding-right: 80px;
+    padding-top: 20px;
+}
+
+.foo_icon {
+    width: 100%;
+    padding: 20px;
+}
+
+.foo_first_icon {
+    width: 90%;
+}
+
+.foo_icon2 {
+    width: 100%;
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.Sponsor {
+    .first-footer {
+        display: none;
+    }
+}
+
+.mutho_kalyan_icon {
+    padding: 5px;
+} //footer sponser ends here
 //modals otp,password
 //ruchira
 @import "mobile";
