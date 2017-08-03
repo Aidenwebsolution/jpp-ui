@@ -8,8 +8,7 @@
       </a>
         <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
             <li class="pointer" ng-repeat="submenu in menu.subnav">
-                <a ui-sref="{{submenu.url}}" ">{{submenu.name |translate}}</a>
-
+                <a ui-sref="{{submenu.url}}">{{submenu.name |translate}}</a>
             </li>
         </ul>
     </li>
@@ -22,10 +21,10 @@
         <a href="http://jaipurpinkpanthers.com/#/pantherworld/ " target="_self " class="menu-custom " ng-if="menu.id=='panther' ">
         {{menu.name|translate}}
       </a>
-        <ul class="dropdown-menu my-li " ng-if="menu.subnav!='' ; ">
-            <li class="pointer " ng-repeat="submenu in menu.subnav " ng-click="gotoFun(submenu.name) ">
-                <!--<a href="{{submenu.link}} ">{{submenu.name}}</a>-->
-                {{submenu.name |translate}}
+        <ul class="nav navbar-nav head-menu" ng-if="menu.subnav!='' ; ">
+            <li class="pointer " ng-repeat="submenu in menu.subnav ">
+                <a ui-sref="{{submenu.url}} ">{{submenu.name}}</a>
+                <!-- {{submenu.name |translate}} -->
             </li>
         </ul>
     </li>

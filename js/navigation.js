@@ -83,7 +83,7 @@ var navigationservice = angular.module('navigationservice', [])
                 url: "about-us",
                 classis: "active",
                 subnav: [{
-                    name: "Sponors",
+                    name: "Sponsors",
                     url: "sponsors",
                     classis: "active"
                 }]
