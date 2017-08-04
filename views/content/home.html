@@ -226,7 +226,7 @@
                             alt="Champions Patna Pirates"></a>-->
                     <div class="white-line-pad">
 
-<!--{{pointtable[0].pointsTableA|json}}-->
+                        <!--{{pointtable[0].pointsTableA|json}}-->
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl">{{'POINTS TABLE'|translate}}</h1>
                         </div>
@@ -252,7 +252,7 @@
                                         </thead>
                                         <tbody class="odd-even">
                                             <!--{{$scope.pointtable}}-->
-                                            <tr  ng-repeat="data in pointtable[0].pointsTableA">
+                                            <tr ng-repeat="data in pointtable[0].pointsTableA">
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{$index+1}}</td>
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.name|translate}}</td>
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.played}}</td>
@@ -262,7 +262,7 @@
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.sd}}</td>
                                                 <td ng-class="{'pinky-text':data.name==='Jaipur Pink Panthers', '':data.name!=='Jaipur Pink Panthers'}">{{data.point}}</td>
                                             </tr>
-                                            
+
 
                                         </tbody>
                                     </table>
@@ -284,7 +284,7 @@
                                         </thead>
                                         <tbody class="odd-even">
                                             <!--{{$scope.pointtable}}-->
-                                            <tr  ng-repeat="data in pointtable[1].pointsTableB">
+                                            <tr ng-repeat="data in pointtable[1].pointsTableB">
                                                 <td>{{$index+1}}</td>
                                                 <td>{{data.name|translate}}</td>
                                                 <td>{{data.played}}</td>
@@ -294,10 +294,10 @@
                                                 <td>{{data.sd}}</td>
                                                 <td>{{data.point}}</td>
                                             </tr>
-                                           
+
                                         </tbody>
                                     </table>
-                                   
+
                                     </table>
                                 </div>
                             </div>
@@ -453,7 +453,7 @@
         <div class="container">
             <div class="panther-world">
                 <a href="http://jaipurpinkpanthers.com/pantherworld/" target="_blank">
-                    <img src="img/new-banner.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                    <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
                     <!-- <img ng-if="currentlang=='en'" src="img/new-banner.jpg" alt="Jaipur Pink Panthers" class="img-responsive"> -->
                     <!-- <img ng-if="currentlang=='hi'" src="img/new-hindi.png" alt="Jaipur Pink Panthers" class="img-responsive"> -->
                 </a>
