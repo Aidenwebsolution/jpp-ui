@@ -30,6 +30,38 @@
 .u-mumba {
     color: #F15922;
 }
+.count-time.custom-list, .stadiumdetail, .next-match {
+    width: 100%;
+    float: left;
+}
+.isttime,.match-time h1.capital {
+    font-weight:700;
+}
+.latestmatchtime {
+    color:#ee4a9b;
+}
+.loggedinbtn:hover ,.loggedinbtn:active:hover, .loggedinbtn:active:focus, .loggedinbtn:active.focus, .loggedinbtn.active:hover, .loggedinbtn.active:focus, .loggedinbtn.active.focus, .open > .loggedinbtn.dropdown-toggle:hover, .open > .loggedinbtn.dropdown-toggle:focus, .open > .loggedinbtn.dropdown-toggle.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    background-color:transparent !important;
+    border-color:transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+     
+}
+.reg {
+margin-top: 13px;
+}
+.loggedinbtn {
+    padding-right:0px;
+}
+span.tgc {
+    display: inline-block;
+    img {
+        height:10px;
+        margin-top:5px;
+    }
+}
+
+.scorer.panthers { margin-bottom:0px !important; }
 .fixture {
     .fixtures-done {
         .panel {
@@ -67,13 +99,16 @@
             border-top-left-radius: 0;
         }
         .team-head {
-            font-size: 18px;
+            /*font-size: 18px;*/
+            font-siz:17px;
             text-transform: uppercase;
             img {
-                width: 75px;
+                /*width: 75px;*/
+                width: 70px;
             }
             span {
                 margin-top: 25px;
+                font-size: 15px;
             }
         }
         .float-left {
@@ -118,7 +153,7 @@
             min-height: 408px;
         }
         .match-center {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 18px;
             font-weight: 300;
             &.no-mgin {
@@ -175,7 +210,8 @@
         font-size: 18px;
         text-transform: uppercase;
         img {
-            width: 75px;
+            /*width: 75px;*/
+            width: 70px;
         }
         span {
             margin-top: 25px;

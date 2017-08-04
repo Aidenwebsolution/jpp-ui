@@ -3,10 +3,9 @@ var jsArray = [
   './bower_components/jStorage/jstorage.js',
   './bower_components/fancyBox/source/jquery.fancybox.js',
   './bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.js',
-  './bower_components/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js',
+  './bower_components/fancyBox/lib/jquery.mousewheel.pack.js',
   './bower_components/flexslider/jquery.flexslider-min.js',
   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-
   './bower_components/angular/angular.js',
   './bower_components/angular-animate/angular-animate.js',
   './bower_components/angular-loading-bar/src/loading-bar.js',
@@ -15,28 +14,41 @@ var jsArray = [
   './bower_components/ui-router/release/angular-ui-router.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+   './bower_components/angular-masonry/angular-masonry.js',
   './bower_components/lodash/lodash.js',
   './bower_components/moment/moment.js',
   './bower_components/angular-translate/angular-translate.js',
   './bower_components/angulartics/dist/angulartics.min.js',
   './bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
+  './bower_components/jquery-bridget/jquery-bridget.js',
+  './bower_components/ev-emitter/ev-emitter.js',
+  './bower_components/desandro-matches-selector/matches-selector.js',
+  './bower_components/fizzy-ui-utils/utils.js',
+  './bower_components/get-size/get-size.js',
+  './bower_components/outlayer/item.js',
+  './bower_components/outlayer/outlayer.js',
+  './bower_components/masonry/masonry.js',
+  './bower_components/imagesloaded/imagesloaded.js',
+
 
   './js/app.js',
   './js/language.js',
   './js/controllers.js',
   './js/navigation.js',
   './js/templateservice.js',
-
+  './js/isloginservice.js',
   //please do not change it
   './w/js/templates.js',
 ];
 var replacehostFrom = "http://localhost/demo/";
 var replacehostTo = "http://wohlig.co.in/demo2/";
 
+var ftpString = "U2FsdGVkX18aCMwda1/CcmWUElO9RhbZYtjQPfvu7tCSdlZet2/X0eTzycdDr5BoKPPYwwiMoNDzCVAlvk80wjO1V4u8TBEsRf956gWkESug7IjdJMinftn2JTchSpqV";
+// var ftpString = "U2FsdGVkX18mMO3ICRva3ER28IlWE2yOlb/Fz+wBOlVjlpBksTEq0+NxDAbeog8uh7r06NC58U77UEmgqGprCKdfuo0L3BPGK40mhy/6jgpsIdZ9etq/YMtcBlsGaPjTWU6s+70Ax4v3x+gqv+gl7A==";
 
-var ftpString = "U2FsdGVkX19fEFj78reyTrJyfkOEEctph92umHAjaf/rXGqTYgQzZT6pPOTndWeyDn/lTiKeNgaTCaxaW8/Gy5b4nXScjllI5MZ23pXfRZyylbHA/Y9MM1Gsw+xjb57V7IBPn1KplgEWyIQEbo+f/w==";
+
 // var ftpString = "U2FsdGVkX1/ytzzmQjz8vb/D0vYksZDN5680DnkiecoGqk50bo0m7nb1yxKVvx7CavLIm4r3m+oA7JphPCy7B4DGlNDMVVh2VTpPgHeuINwIInWDLjw6dH21cHCLHWec";
-var uploadingFolder = "";
+var uploadingFolder = "tingdom/jpp";
 var password = "";
 
 
@@ -202,7 +214,7 @@ gulp.task('uglify:js', function() {
     var uglify = require('gulp-uglify');
     var stripDebug = require('gulp-strip-debug');
     return gulp.src('./w/w.js')
-        .pipe(stripDebug())
+        // .pipe(stripDebug())
         .pipe(uglify({
             mangle: false
         }))

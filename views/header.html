@@ -1,10 +1,9 @@
-<header>
+<header ng-controller="headerctrl">
     <div class="language-holder" ng-controller="languageCtrl">
         <div class="container">
             <span>The Official website of Jaipur Pink Panthers</span>
             <div class="pull-right">
-                <span ng-class="{'selected' : languageActive == 'en'}" ng-click="changeLanguage2('en');">English</span>
-                |
+                <span ng-class="{'selected' : languageActive == 'en'}" ng-click="changeLanguage2('en');">English</span> |
                 <span ng-class="{'selected' : languageActive == 'hi'}" ng-click="changeLanguage2('hi');">Hindi</span>
             </div>
         </div>
@@ -12,7 +11,7 @@
     <nav class="navbar navbar-default navbar-fixed-top head-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-2 padding0">
+                <div class="col-md-2 col-sm-2  padding0">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -21,16 +20,38 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" ui-sref="home">
-                            <img src="img/mini-logo.png" alt="logo" title="logo" class="img-responsive">
+                            <img src="img/mini-logo.png" alt="logbetao" title="Jpp" class="img-responsive">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-10 col-sm-10">
+                <div class="col-md-8 col-sm-8 ">
                     <div class="collapse navbar-collapse" id="nav-collapse">
                         <div ng-include="template.menu" class="template menu"></div>
                     </div>
                 </div>
+
+                <div class="col-md-2 col-sm-2 hidden-xs">
+                    <ul class="list-inline mt20 log-sign text-right" ng-show="loggedIn==false">
+                        <li class="line-after" ng-if="!loggedIn" ng-click="logs();"><a>{{'Login' |translate}}</a></li>
+                        <li ng-click="logs();" ng-if="!loggedIn"><a>&nbsp;{{'Sign Up'|translate}}</a></li>
+                        <!--<li ng-if="loggedIn" ng-click="logoutUser();"><a >{{'Logout'|translate}}</a></li>-->
+                    </ul>
+                    <div class="dropdown reg pull-right" ng-if="loggedIn">
+
+                        <button class="btn btn-primary dropdown-toggle loggedinbtn" type="button" data-toggle="dropdown"> Hi {{userFirstName}}<img src="img/Abhi.png" class="img-responsive display-inline photo" alt="">
+                <span class="arrow-down"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
+                        <ul class="drops dropdown-menu">
+                            <!-- <li><a href="#">Details</a></li> -->
+                            <!-- <li><a ng-click="logout()">Log Out</a></li> -->
+                            <li><a ng-click="logoutUser()" ng-if="loggedIn">{{'Logout'|translate}}</a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+        </div>
         </div>
     </nav>
 </header>

@@ -1,16 +1,38 @@
-<ul class="nav navbar-nav head-menu">
+<ul class="nav navbar-nav head-menu hidden-xs">
     <li ng-repeat="menu in navigation" class="{{menu.classis}} {{menu.highlighter}} menu-custom-li">
         <a ui-sref="{{menu.url}}" class="menu-custom" ng-if="menu.url">
         {{menu.name|translate}}
       </a>
-          <a href="{{menu.urllink}}" class="menu-custom" ng-if="menu.urllink" target="{{menu.target}}">
+        <a href="http://jaipurpinkpanthers.com/pantherworld/" target="_self" class="menu-custom" ng-if="menu.id == 'panther'">
         {{menu.name|translate}}
       </a>
-         <!-- <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
-            <li ng-repeat="submenu in menu.subnav">
-                <a href="{{submenu.link}}">{{submenu.name}}</a>
-            </li>
-        </ul> -->
-    </li>
+        <ul class="dropdown-menu my-li" ng-if="menu.subnav!='';">
+            <li class="pointer" ng-repeat="submenu in menu.subnav">
+                <a ui-sref="{{submenu.url}}" ">{{submenu.name |translate}}</a>
 
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="nav navbar-nav head-menu visible-xs hidden-sm hidden-md ">
+    <li ng-repeat="menu in navigation " class="{{menu.classis}} {{menu.highlighter}} menu-custom-li ">
+        <a ui-sref="{{menu.url}} " class="menu-custom " ng-if="menu.url ">
+        {{menu.name|translate}}
+      </a>
+        <a href="http://jaipurpinkpanthers.com/#/pantherworld/ " target="_self " class="menu-custom " ng-if="menu.id=='panther' ">
+        {{menu.name|translate}}
+      </a>
+        <ul class="dropdown-menu my-li " ng-if="menu.subnav!='' ; ">
+            <li class="pointer " ng-repeat="submenu in menu.subnav " ng-click="gotoFun(submenu.name) ">
+                <!--<a href="{{submenu.link}} ">{{submenu.name}}</a>-->
+                {{submenu.name |translate}}
+            </li>
+        </ul>
+    </li>
+    <li class="menu-changed ">
+        <ul class="list-inline mt20 log-sign text-center ">
+            <li class="line-after " ng-if="!loggedIn " ng-click="logs(); "><a>{{'Login' |translate}}</a></li>
+            <li ng-click="logs(); " ng-if="!loggedIn "><a>{{'Signup'|translate}}</a></li>
+        </ul>
+    </li>
 </ul>
