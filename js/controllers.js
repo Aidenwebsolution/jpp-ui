@@ -126,7 +126,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/#/pantherworld/#/games";
+                        window.location = "http://jaipurpinkpanthers.com/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
