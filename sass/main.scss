@@ -422,13 +422,14 @@ nav {
 .page-title {
     position: absolute;
     width: 100%;
-    bottom: -40px;
+    bottom: -50px;
 }
 
 .title-name {
     h1 {
         display: inline-block;
         width: 350px;
+        padding-top: 25px;
     } // background-image:url("../img/players/titles.png");
     // background-repeat: no-repeat;
     // background-size: cover;
@@ -4167,14 +4168,11 @@ a.ilogo {
 // footer sponspor starts here
 .foo_sponsor {
     color: #b41e72;
-    padding: 50px;
-    padding-right: 30px;
+    padding: 50px 0 50px 20px;
 }
 
 .foo_s_row {
-    padding: 50px;
-    padding-right: 80px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 .foo_icon {

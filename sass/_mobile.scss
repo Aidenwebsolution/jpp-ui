@@ -1644,6 +1644,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .multiplexPartner,
     .ticketingPartner {
         padding: 10px;
+        min-height: 120px;
         img {
             padding: 5px;
             width: auto;
@@ -1654,6 +1655,11 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .ticketingPartner {
         margin-top: -10px;
+    }
+    .associateSponsor {
+        .spo_img_1 {
+            width: 250px;
+        }
     } //end of sponsors
     //footer sponsor starts here
     .foo_icon {
