@@ -4189,6 +4189,15 @@ a.ilogo {
     }
 }
 
+.spon_small {
+    .arran {
+        img {
+            max-height: 80px;
+            max-width: 80%;
+        }
+    }
+}
+
 .foo_sponsor {
     color: #b41e72;
     padding: 50px 0 50px 20px;
@@ -4217,7 +4226,9 @@ a.ilogo {
     .first-footer {
         display: none;
     }
-} //footer sponser ends here
+}
+
+//footer sponser ends here
 //modals otp,password
 //ruchira
 @import "mobile";
