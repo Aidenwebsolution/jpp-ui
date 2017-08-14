@@ -36,9 +36,8 @@
                             <div class="fixture-match text-center fixture-match1">
                                 <div class="matchnumber">
                                     <div class="matcn-number-box"></div>
-                                    <p>{{'Match'|translate}}
-                                        -
-                                        {{item.showNumber}}</p>
+                                    <p>{{'Match'|translate}} - {{item.showNumber}}
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-5">
@@ -61,21 +60,18 @@
                                     <div class="col-xs-12">
                                         <div class="text-center match-time">
                                             <h1 class="capital f-23" ng-if="currentlang=='en'">
-                                                {{item.team1 | spaceToPlus}}<br>
-                                                {{item.stadium}}
+                                                {{item.team1 | spaceToPlus}}<br> {{item.stadium}}
                                             </h1>
                                             <h1 class="capital f-23" ng-if="currentlang=='hi'">
                                                 {{item.hinditeam1 | spaceToPlus}}
-                                                <br>
-                                                {{item.hindistadium}}
+                                                <br> {{item.hindistadium}}
                                             </h1>
                                             <!-- <h1 class="upper mar-top">
                               {{item.starttimedate|translate}}
                               ({{'IST'|translate}})
                           </h1> -->
                                             <h1 class="upper mar-top" ng-if="currentlang=='en'">
-                                                {{item.starttimedate}}
-                                                ({{'IST'}})
+                                                {{item.starttimedate}} ({{'IST'}})
                                             </h1>
                                             <h1 class="upper mar-top" ng-if="currentlang=='hi'">
                                                 {{item.starttimedate | hindimonth:false}}
@@ -98,17 +94,17 @@
                 <div class="col-md-4 col-sm-6" ng-repeat="merchant in merchants">
                     <div class="merchant-products">
                         <a href="{{merchant.link}}" class="btn btn-sucess btn-mernt-link color-white" target="_blank">
-                        <div class="img-holder-merchant">
-                            <img ng-src="{{merchant.image}}" alt="">
-                        </div>
-                      </a>
+                            <div class="img-holder-merchant">
+                                <img ng-src="{{merchant.image}}" alt="">
+                            </div>
+                        </a>
                         <div class="decrp-merchant text-center">
                             <h4 class="bold-mrgin color-primary voyeg-font f30 margin0 ">{{merchant.title}}</h4>
                             <p class="price">
-                                <i class="fa fa-inr" aria-hidden="true"></i>
-                                {{merchant.price}}</p>
+                                <i class="fa fa-inr" aria-hidden="true"></i> {{merchant.price}}
+                            </p>
                             <a href="{{merchant.link}}" class="btn btn-sucess btn-mernt-link color-white" target="_blank">
-                                Book Now</a>
+                                Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -172,4 +168,3 @@
     </div>
   </div>
 </section> -->
-
