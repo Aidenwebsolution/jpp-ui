@@ -1652,13 +1652,23 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             max-width: 50%;
             max-height: 60px;
         }
-    }
-    .ticketingPartner {
-        margin-top: -10px;
-    }
+    } // .ticketingPartner {
+    //     margin-top: -10px;
+    // }
     .associateSponsor {
         .spo_img_1 {
-            width: 250px;
+            width: 300px;
+            max-width: 100%;
+        }
+    }
+    .sponsor_container {
+        .spo_second_col {
+            /* padding: 20px; */
+            /* width: 90%; */
+            /* margin: 0 auto; */
+            padding: 0px;
+            width: auto;
+            margin: auto;
         }
     } //end of sponsors
     //footer sponsor starts here
