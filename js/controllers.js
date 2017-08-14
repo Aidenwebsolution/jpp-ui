@@ -1495,32 +1495,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.currentlang = currentlang;
             console.log($scope.currentlang);
         }
-        $scope.merchants = [{
-            image: "img/merchant/01.jpg",
-            title: "Bag PacK",
-            price: "892.00",
-            link: "https://didasportswear.com/jaipur-pink-panthers/bag-pack-838.html"
-        }, {
-            image: "img/merchant/02.jpg",
-            title: "Home Jersey",
-            price: "991.00",
-            link: "https://didasportswear.com/jaipur-pink-panthers/home-jersey.html"
-        }, {
-            image: "img/merchant/03.jpg",
-            title: "Navy Polo",
-            price: "991.00",
-            link: "https://didasportswear.com/jaipur-pink-panthers/navy-polo-833.html"
-        }, {
-            image: "img/merchant/04.jpg",
-            title: "Pink Polo",
-            price: "991.00",
-            link: "https://didasportswear.com/jaipur-pink-panthers/pink-polo-828.html"
-        }, {
-            image: "img/merchant/05.jpg",
-            title: "Travelling Bag",
-            price: "1,450.00",
-            link: "https://didasportswear.com/jaipur-pink-panthers/travelling-bag-840.html"
-        }, ]
+
+            NavigationService.getallmerchandize(function (data) {
+                // console.log(data.data);
+                // $scope.merchandize = data.data.queryresult;
+                $scope.merchants=data.data.queryresult;
+                // console.log("$scope.allMerchandize", $scope.merchandize);
+            })
+            
+        // $scope.merchants = [{
+        //     image: "img/merchant/01.jpg",
+        //     title: "Bag PacK",
+        //     price: "892.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/bag-pack-838.html"
+        // }, {
+        //     image: "img/merchant/02.jpg",
+        //     title: "Home Jersey",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/home-jersey.html"
+        // }, {
+        //     image: "img/merchant/03.jpg",
+        //     title: "Navy Polo",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/navy-polo-833.html"
+        // }, {
+        //     image: "img/merchant/04.jpg",
+        //     title: "Pink Polo",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/pink-polo-828.html"
+        // }, {
+        //     image: "img/merchant/05.jpg",
+        //     title: "Travelling Bag",
+        //     price: "1,450.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/travelling-bag-840.html"
+        // }, ]
 
         $scope.fixtureid = $stateParams.id;
         var i = 0;

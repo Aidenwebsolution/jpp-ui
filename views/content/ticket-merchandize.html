@@ -95,11 +95,12 @@
                     <div class="merchant-products">
                         <a href="{{merchant.link}}" class="btn btn-sucess btn-mernt-link color-white" target="_blank">
                             <div class="img-holder-merchant">
-                                <img ng-src="{{merchant.image}}" alt="">
+                                <img ng-src="{{merchant.image | serverimage}}" alt="{{merchant.image | serverimage}}">
+                                <!--<img ng-src="{{merchant.image}}" alt="">-->
                             </div>
                         </a>
                         <div class="decrp-merchant text-center">
-                            <h4 class="bold-mrgin color-primary voyeg-font f30 margin0 ">{{merchant.title}}</h4>
+                            <h4 class="bold-mrgin color-primary voyeg-font f30 margin0 ">{{merchant.name}}</h4>
                             <p class="price">
                                 <i class="fa fa-inr" aria-hidden="true"></i> {{merchant.price}}
                             </p>
