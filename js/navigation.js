@@ -231,6 +231,9 @@ var navigationservice = angular.module('navigationservice', [])
             getallplayers: function (callback) {
                 $http.get(tempUrl + "getallplayers").then(callback);
             },
+            getallmerchandize: function (callback) {
+                $http.get(tempUrl + "getallmerchandize").then(callback);
+            },
 
             getcongratulation: function (callback) {
                 $http.get(tempUrl + "getcongratulation").success(callback);
