@@ -172,6 +172,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .spo_img {
         width: 40%;
+    }
+    .secondbloc {
+        padding-top: 30px;
     } //end of sponsor
     //footer sponsor starts here
     .foo_sponsor {
@@ -1572,6 +1575,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: 767px) {
+    .spon {
+        .arran {
+            .mutho_kalyan_icon {
+                object-fit: cover;
+            }
+        }
+    }
     .marg2 {
         margin-bottom: 2px !important;
     }

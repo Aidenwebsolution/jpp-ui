@@ -4141,8 +4141,19 @@ a.ilogo {
     }
     .spo_second_col {
         padding: 20px;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
+        .secondbloc {
+            .ass_spon {
+                padding-top: 10px;
+                a {
+                    img {
+                        max-height: 80px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
     }
     .spo_third_col {
         padding: 20px;
@@ -4164,10 +4175,6 @@ a.ilogo {
     width: 100px;
 }
 
-.arrange_three_image {
-    width: 350px;
-}
-
 // end of sponspor page
 // footer sponspor starts here
 .spon {
@@ -4185,6 +4192,9 @@ a.ilogo {
         .mutho_kalyan_icon {
             padding: 2px;
             padding-top: 10px;
+            height: 100%;
+            width: 100%;
+            object-fit: none;
         }
     }
 }
@@ -4192,8 +4202,8 @@ a.ilogo {
 .spon_small {
     .arran {
         img {
-            max-height: 80px;
-            max-width: 80%;
+            max-height: 70px;
+            max-width: 70%;
         }
     }
 }
