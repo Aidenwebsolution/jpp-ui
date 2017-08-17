@@ -1496,13 +1496,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             console.log($scope.currentlang);
         }
 
-            NavigationService.getallmerchandize(function (data) {
-                // console.log(data.data);
-                // $scope.merchandize = data.data.queryresult;
-                $scope.merchants=data.data.queryresult;
-                // console.log("$scope.allMerchandize", $scope.merchandize);
-            })
-            
+        NavigationService.getallmerchandize(function (data) {
+            // console.log(data.data);
+            // $scope.merchandize = data.data.queryresult;
+            $scope.merchants = data.data.queryresult;
+            // console.log("$scope.allMerchandize", $scope.merchandize);
+        })
+
         // $scope.merchants = [{
         //     image: "img/merchant/01.jpg",
         //     title: "Bag PacK",
@@ -1827,6 +1827,48 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Ticket");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        $scope.season = [{
+                "img": "img/seasonfive/1.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-wild-card-match-oct6-2017/event"
+            },
+            {
+                "img": "img/seasonfive/2.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event"
+            },
+            {
+                "img": "img/seasonfive/3.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event"
+            },
+            {
+                "img": "img/seasonfive/4.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event"
+            },
+            {
+                "img": "img/seasonfive/5.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event"
+            },
+            {
+                "img": "img/seasonfive/6.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017/event"
+            }
+        ];
+        $scope.openiframe = function (x) {
+            $(".popupframe").css("display", "block");
+            $(".ticket-block").css("display", "none");
+            $("iframe").attr("src", x.url);
+            var scroll = $(".popupframe").offset();
+            scroll = scroll.top - 200;
+            $("html, body").scrollTop(scroll);
+            // $(window).scrollTop($("#ticket-block").offset().top);
+
+
+        }
+        $scope.closeiframe = function () {
+            $(".popupframe").css("display", "none");
+            $(".ticket-block").css("display", "block");
+            //$("iframe").attr("src", x.url);
+            $("body").scrollTop(0);
+        }
 
     })
 

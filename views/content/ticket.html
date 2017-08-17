@@ -1,8 +1,38 @@
-<section>
+<!-- <section>
   <div class="banner-title">
     <a href=""> <img src="img/new/h9.jpg" title="{{'Merchandise'|translate}}" alt="Jaipur Pink Panthers"></a>
     <div class="sign-up text-center">
       <h3 class="uppercase-text margin0 color-white"><a href="" class="color-pink">sign up</a> with PantherWorld and get exclusive discounts on JPP tickets</h3>
     </div>
   </div>
+</section> -->
+
+<section>
+
+  <div class="ticket_container container_fluid text-center ">
+    <img src="/img/seasonfive/banner.png" class="img-responsive" style="margin-top:70px;">
+    <div style="margin-top:20px;"> Powered By
+      <span><a href="https://paytm.com/" target="_blank">
+                <img  class="ticket-powered-img" src="/img/seasonfive/paytm.png"></a> | 
+                <a href="https://insider.in" target="_blank"><img  class="ticket-powered-img" src="/img/seasonfive/insider.png"></a></span>
+    </div>
+    <div class="popupframe">
+      <div class="closebutton"> <img src="img/close.png" ng-click="closeiframe()"></div>
+      <iframe src="" class="frame" width="90%" height="90%"></iframe>
+    </div>
+    <div id="ticket-block" class="ticket-block" ng-repeat="x in season">
+
+      <!-- <a href="{{x.url}}">  -->
+      <img class="pointer ticket-bookticket" src="{{x.img}}" ng-click="openiframe(x)">
+      <!-- </a> -->
+    </div>
+
+
+    <a ui-sref="ticket-merchandise"><img src="/img/seasonfive/merchandise.png" class="img-responsive" style="margin-top:50px;"></a>
+
+  </div>
+
+  </div>
+  </div>
+
 </section>

@@ -4245,6 +4245,54 @@ a.ilogo {
 }
 
 //footer sponser ends here
+//Tickets starts here
+.popupframe {
+    display: none;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 800px;
+    text-align: center;
+}
+
+.ticket_container {
+    display: block;
+}
+
+.closebutton {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    z-index: 2; // background: rgba(180, 30, 114, 0.41);
+    // border-radius: 20px;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.ticket-powered-img {
+    padding: 10px;
+    object-fit: contain;
+    height: 35px;
+    width: 80px;
+}
+
+.ticket-block {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ticket-bookticket {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+// tickets ends here
 //modals otp,password
 //ruchira
 @import "mobile";
