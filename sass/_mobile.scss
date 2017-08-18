@@ -1573,13 +1573,20 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: 767px) {
+    //footer
     .spon {
         .arran {
             .mutho_kalyan_icon {
                 object-fit: cover;
             }
         }
-    }
+    } // end footer
+    // ticket 
+    .ticket-block {
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+    } //ticket
     .marg2 {
         margin-bottom: 2px !important;
     }
@@ -1807,6 +1814,15 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: 420px) {
+    //footer
+    .spon_small {
+        .arran {
+            img {
+                max-height: 40px;
+                max-width: 70%;
+            }
+        }
+    } //footer end
     .f-span {
         font-size: 10px;
     } // .play-store img {
