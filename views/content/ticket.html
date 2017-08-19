@@ -19,15 +19,18 @@
     </div>
     <div class="popupframe">
       <div class="closebutton"> <img src="img/close.png" ng-click="closeiframe()"></div>
-      <iframe src="" class="frame" width="90%" height="90%"></iframe>
+      <div id="insider-embed">
+        <!-- <iframe src="" class="frame" width="90%" height="90%"></iframe> -->
+      </div>
+
+
     </div>
     <div id="ticket-block" class="ticket-block" ng-repeat="x in season">
 
       <!-- <a href="{{x.url}}">  -->
-      <img class="pointer ticket-bookticket" src="{{x.img}}" ng-click="openiframe(x)">
+      <img class="pointer ticket-bookticket" ng-src="{{x.img}}" ng-click="openiframe(x)">
       <!-- </a> -->
     </div>
-
 
     <a ui-sref="ticket-merchandise"><img src="img/seasonfive/merchandise.jpg" class="img-responsive" style="margin-top:50px;"></a>
 
