@@ -1710,6 +1710,7 @@
         padding: 0;
         border-color: transparent;
         box-shadow: none;
+        -webkit-box-shadow: none;
         a {
             &:focus,
             &:hover {
@@ -4107,12 +4108,6 @@
             .secondbloc {
                 .ass_spon {
                     padding-top: 10px;
-                    a {
-                        img {
-                            max-height: 80px;
-                            padding: 5px;
-                        }
-                    }
                 }
             }
         }
@@ -4122,13 +4117,24 @@
         }
     }
 
+    .sponsor_ass_img {
+        max-width: 100%;
+        margin: 0 auto;
+        max-height: 100px;
+        padding: 2px;
+        padding-top: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
     .spo_img {
         padding: 10px;
     }
 
     .spo_img_1 {
         width: 250px;
-        padding-top: 10px;
+        padding-top: 30px;
     }
 
     .spo_img_2 {
@@ -4136,10 +4142,6 @@
         width: 100px;
         height: 50px;
         object-fit: contain;
-    }
-
-    .foot_img {
-        height: 80px;
     } // end of sponspor page
     // footer sponspor starts here
     .spon {
