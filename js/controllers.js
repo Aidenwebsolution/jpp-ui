@@ -1829,28 +1829,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
         $scope.season = [{
                 "img": "img/seasonfive/1.png",
-                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-wild-card-match-oct6-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-wild-card-match-oct6-2017"
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
+                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017"
             },
             {
                 "img": "img/seasonfive/2.png",
-                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-u-mumba-oct7-2017"
+                "url": "https://insider.in/pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
+                "slug": "pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017"
             },
             {
                 "img": "img/seasonfive/3.png",
-                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
+                "url": "https://insider.in/pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
+                "slug": "pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
             },
             {
                 "img": "img/seasonfive/4.png",
-                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017"
+                "url": "https://insider.in/pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
+                "slug": "pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017"
             },
             {
                 "img": "img/seasonfive/5.png",
-                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017"
+                "url": "https://insider.in/pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
+                "slug": "pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017"
             },
             {
                 "img": "img/seasonfive/6.png",
