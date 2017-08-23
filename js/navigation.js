@@ -44,8 +44,8 @@ var navigationservice = angular.module('navigationservice', [])
                 // }
             }, {
                 name: "Tickets",
-                // url: "ticket",
-                url: "Comingsoon",
+                url: "ticket",
+                // url: "Comingsoon",
                 classis: "active"
             }, {
                 name: "Merchandise",
