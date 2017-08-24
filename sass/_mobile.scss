@@ -60,8 +60,8 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .li-footer {
         margin: 0 10px;
     }
-    .panther-punch {
-        margin-bottom: -40px;
+    .mer-pan {
+        margin-bottom: -35px;
     }
 }
 
@@ -508,7 +508,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         margin: 60px 0 65px;
     }
     .page-title {
-        bottom: -25px;
+        // bottom: -25px;
     }
     .panther-punch {
         img {
@@ -637,10 +637,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         }
     }
     .panther-punch {
-        margin-bottom: -40px;
+        margin-bottom: -60px;
     } // .panthers-punch{
     //     margin-bottom: -30px;
     // }
+    .mer-pan {
+        margin-bottom: -15px;
+    }
     .title-name {
         padding: 15px 0 0;
     }
@@ -974,10 +977,10 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         }
     }
     .page-title {
-        bottom: -21px;
+        // bottom: -21px;
     }
     .title-name {
-        // padding: 9px 18px 7px;
+        padding: 9px 18px 7px;
         h1 {
             font-size: 12px;
         }
@@ -1096,7 +1099,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         }
     }
     .panther-punch {
-        // margin-bottom: -37px;
+        margin-bottom: -50px;
+    }
+    .mer-pan {
+        margin-bottom: -30px;
+    }
+    .page-title {
+        bottom: -50px;
     }
     .panthers-punch {
         margin-bottom: -30px;
@@ -1279,6 +1288,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .mobile-css .text-line h4 {
         /* margin-left: 60px;*/
+    }
+    .page-title {
+        bottom: -30px;
     }
 }
 

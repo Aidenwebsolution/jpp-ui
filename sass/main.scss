@@ -200,7 +200,7 @@
             }
             &.high {
                 &:before {
-                    content: ""; 
+                    content: "";
                     background-image: url("../img/buy-now.png");
                     height: 30px;
                     background-size: contain;
@@ -547,7 +547,7 @@
 
     .panther-punch {
         position: relative;
-        margin-bottom: -30px;
+        margin-bottom: -65px;
         z-index: 9;
         img {
             width: 72px;
@@ -4262,5 +4262,9 @@
     } // tickets ends here
     //modals otp,password
     //ruchira
+    .mer-pan {
+        margin-bottom: -10px;
+    }
+
     @import "mobile";
     @import "style";
