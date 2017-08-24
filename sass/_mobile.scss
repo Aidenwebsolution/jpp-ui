@@ -60,6 +60,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .li-footer {
         margin: 0 10px;
     }
+    .panther-punch {
+        margin-bottom: -40px;
+    }
 }
 
 @media (max-width: $screen-md-max) {
@@ -974,7 +977,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         bottom: -21px;
     }
     .title-name {
-        padding: 9px 18px 7px;
+        // padding: 9px 18px 7px;
         h1 {
             font-size: 12px;
         }
@@ -1093,7 +1096,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         }
     }
     .panther-punch {
-        margin-bottom: -30px;
+        // margin-bottom: -37px;
     }
     .panthers-punch {
         margin-bottom: -30px;
