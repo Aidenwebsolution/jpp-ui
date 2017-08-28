@@ -8,8 +8,8 @@
         </div>
         <div class="title-name fix">
           <h1 class="bold-mrgin" ng-if="currentlang=='en'"><img src="img/players/fan.png" class="img-responsive" alt="title"></h1>
-            <!--ng-if="currentlang=='en'"-->
-            <h1 class="bold-mrgin" ng-if="currentlang=='hi'"><img src="img/hindi/fan-corner.png" class="img-responsive" alt="title"></h1>
+          <!--ng-if="currentlang=='en'"-->
+          <h1 class="bold-mrgin" ng-if="currentlang=='hi'"><img src="img/hindi/fan-corner.png" class="img-responsive" alt="title"></h1>
         </div>
       </div>
     </section>
@@ -23,7 +23,8 @@
         <div class="sign-up text-left">
           <h2 class="color-primary font-mob">{{'SIGN UP'|translate}}</h2>
           <h4 class="line140 font-new">
-            {{'Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home match tickets.'|translate}}
+            {{'Register and get a chance to win exclusive Jaipur Pink Panther merchandise, meet and greet with the players and win home
+            match tickets.'|translate}}
           </h4>
         </div>
       </div>
@@ -56,7 +57,8 @@
           <div class="form-submit">
             <div class="form-group">
               <span>{{'Mobile Number'|translate}}</span>
-              <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10" id="" required only-digits>
+              <input type="text" name="mobile" class="form-control" ng-model="register.mobile" ng-minlength="10" ng-maxlength="10" maxlength="10"
+                id="" required only-digits>
             </div>
             <p class="colpad" ng-show="myForm.mobile.$error.required && myForm.mobile.$dirty">{{'Mobile Number'|translate}} {{'is required'|translate}}</p>
             <p class="colpad" ng-show="myForm.mobile.$error.minlength || myForm.mobile.$error.maxlength">{{'Mobile Number'|translate}} {{'Invalid'|translate}}</p>
@@ -79,14 +81,14 @@
           <div class="form-submit city-dropdown">
             <div class="form-group margin0">
               <span>{{'City'|translate}}</span>
-              <button type="button" class="btn btn-pink btn-bussiness btn-main" ng-click="citydrops=!citydrops" data-toggle="dropdown" >
+              <button type="button" class="btn btn-pink btn-bussiness btn-main" ng-click="citydrops=!citydrops" data-toggle="dropdown">
              <i class="fa fa-caret-down" aria-hidden="true"></i>
               </button>
               <!--ng-init="country = 'country'" ng-click="countrydrop=!countrydrop"-->
               <input type="text" name="city" class="form-control" ng-model="register.city" id="" required>
-           
+
             </div>
-             <div class="dropdown-city" ng-show="citydrops">
+            <div class="dropdown-city" ng-show="citydrops">
               <ul>
                 <li>mumbai</li>
                 <li>hydrebad</li>
@@ -104,18 +106,18 @@
               <span>{{'Choose Your Favourite Panthers'|translate}}</span>
               <p class="colpad" ng-show="myForm.favouriteplayer.$error.required && myForm.favouriteplayer.$dirty">{{'Please select your favourite Panther'|translate}}</p>
             </div>
-            <div class="check-lists" >
-              <div class="checkbox" ng-repeat="player in players track by $index">
+            <div class="check-lists">
+              <div class="checkbox neg-5marg" ng-repeat="player in players track by $index">
                 <!--ng-repeat="player in players"
                 ng-model="player.status" ng-change="changeSelected(players)" value="{{player.name}}"-->
-                 <input type="checkbox" id="{{player.id}}" >
+                <input type="checkbox" id="{{player.id}}">
                 <label for="{{player.id}}" class="capitalise">
                   <span></span>
                   {{player.name}}
                  <!--jagya-->
                 </label>
               </div>
-               <!--<div class="checkbox" >
+              <!--<div class="checkbox" >
                  <input type="checkbox" id="cheking" class="capitalise" >
                 <label for="cheking">
                   <span></span>
@@ -136,7 +138,7 @@
       </div>
       <div class="row mt30">
         <div class="col-md-12 ">
-            <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">{{'SUBMIT'|translate}}</button>
+          <button class="btn btn-primary btn-by" ng-click="doRegister()" ng-disabled="myForm.$invalid">{{'SUBMIT'|translate}}</button>
 
         </div>
       </div>

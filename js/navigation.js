@@ -46,13 +46,14 @@ var navigationservice = angular.module('navigationservice', [])
                 name: "Tickets",
                 url: "ticket",
                 // url: "Comingsoon",
-                classis: "active"
+                classis: "active",
+                highlighter: "high"
             }, {
                 name: "Merchandise",
                 url: "ticket-merchandise",
                 // url: "Comingsoon",
                 classis: "active",
-                highlighter: "high"
+                // highlighter: "high"
             }, {
                 name: "Players",
                 url: "players",
