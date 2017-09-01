@@ -150,7 +150,9 @@
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
                                                         <span>{{item.fixture.team1player1score | translate}}</span> |
-                                                        <span>{{item.fixture.team1player2name | translate}}</span>
+                                                        <!-- <span>{{item.fixture.team1player2name | translate}}</span> -->
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team1player2name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team1player2nameh}}</span>
                                                         <span>{{item.fixture.team1player2score | translate}}</span>
                                                     </div>
                                                 </div>
