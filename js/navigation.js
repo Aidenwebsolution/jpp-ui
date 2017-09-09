@@ -21,7 +21,7 @@ var navigationservice = angular.module('navigationservice', [])
                 classis: "active"
             }, {
                 name: "Panther World",
-                link: "http://jaipurpinkpanthers.com/#/pantherworld/",
+                link: "http://jaipurpinkpanthers.com/pantherworld/",
                 id: "panther",
                 classis: "active",
                 subnav: []
@@ -44,13 +44,14 @@ var navigationservice = angular.module('navigationservice', [])
                 // }
             }, {
                 name: "Tickets",
-                // url: "ticket",
-                url: "Comingsoon",
-                classis: "active"
+                url: "ticket",
+                // url: "Comingsoon",
+                classis: "active",
+                highlighter: "high"
             }, {
                 name: "Merchandise",
-                // url: "ticket-merchandise",
-                url: "Comingsoon",
+                url: "ticket-merchandise",
+                // url: "Comingsoon",
                 classis: "active",
                 // highlighter: "high"
             }, {
@@ -230,6 +231,9 @@ var navigationservice = angular.module('navigationservice', [])
             },
             getallplayers: function (callback) {
                 $http.get(tempUrl + "getallplayers").then(callback);
+            },
+            getallmerchandize: function (callback) {
+                $http.get(tempUrl + "getallmerchandize").then(callback);
             },
 
             getcongratulation: function (callback) {

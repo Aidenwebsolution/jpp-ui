@@ -1,8 +1,42 @@
-<section>
-    <div class="banner-title">
-      <a href=""> <img src="img/new/h9.jpg" title="{{'Merchandise'|translate}}" alt="Jaipur Pink Panthers"></a>
-<div class="sign-up text-center">
-  <h3 class="uppercase-text margin0 color-white"><a href="" class="color-pink">sign up</a> with PantherWorld  and  get exclusive discounts on JPP tickets</h3>
-</div>
+<!-- <section>
+  <div class="banner-title">
+    <a href=""> <img src="img/new/h9.jpg" title="{{'Merchandise'|translate}}" alt="Jaipur Pink Panthers"></a>
+    <div class="sign-up text-center">
+      <h3 class="uppercase-text margin0 color-white"><a href="" class="color-pink">sign up</a> with PantherWorld and get exclusive discounts on JPP tickets</h3>
     </div>
+  </div>
+</section> -->
+
+<section>
+
+  <div class="ticket_container container_fluid text-center ">
+    <img src="img/seasonfive/banner.png" class="img-responsive" style="margin-top:90px; border-bottom: 4px solid #4ecaf5;">
+    <img src="img/seasonfive/title.png" class="img-responsive" style="margin: 0 auto; display:inline-block; transform: translate(0,-50%); width: 30%;">
+    <div style="margin-top:-30px;"> Powered By
+      <span><a href="https://paytm.com/" target="_blank">
+                <img  class="ticket-powered-img" src="img/seasonfive/paytm.png"></a> | 
+                <a href="https://insider.in" target="_blank"><img  class="ticket-powered-img" src="img/seasonfive/insider.png"></a></span>
+    </div>
+    <div class="popupframe">
+      <div class="closebutton"> <img src="img/close.png" ng-click="closeiframe()"></div>
+      <div id="insider-embed">
+
+      </div>
+
+
+    </div>
+    <div id="ticket-block" class="ticket-block" ng-repeat="x in season">
+
+      <!-- <a href="{{x.url}}">  -->
+      <img class="pointer ticket-bookticket" ng-src="{{x.img}}" ng-click="openiframe(x)">
+      <!-- </a> -->
+    </div>
+
+    <a ui-sref="ticket-merchandise"><img src="img/seasonfive/merchandise.png" class="img-responsive" style="margin-top:50px;"></a>
+
+  </div>
+
+  </div>
+  </div>
+
 </section>

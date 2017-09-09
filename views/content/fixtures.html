@@ -44,7 +44,7 @@
                     <uib-accordion-group class="text-center fixtures-done {{item.classes}}" ng-repeat="item in schedules track by $index" is-open="item.isOpen"
                         ng-if="item.season == 3">
                         <div class="fixture-scroll">
-                            <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible" >{{item.visible}}
+                            <uib-accordion-heading ng-click="openAccordion(item)" ng-show="item.visible">{{item.visible}}
                                 <div class="home-ribbon" ng-if="item.ishome=='1'">HOME</div>
                                 <div class="row" ng-if="item.fixture.id != null || item.fixture.id != undefined">
                                     <div class="col-xs-2">
@@ -150,7 +150,9 @@
                                                         <span ng-if="currentlang=='en'">{{item.fixture.team1player1name}}</span>
                                                         <span ng-if="currentlang=='hi'">{{item.fixture.team1player1nameh}}</span>
                                                         <span>{{item.fixture.team1player1score | translate}}</span> |
-                                                        <span>{{item.fixture.team1player2name | translate}}</span>
+                                                        <!-- <span>{{item.fixture.team1player2name | translate}}</span> -->
+                                                        <span ng-if="currentlang=='en'">{{item.fixture.team1player2name}}</span>
+                                                        <span ng-if="currentlang=='hi'">{{item.fixture.team1player2nameh}}</span>
                                                         <span>{{item.fixture.team1player2score | translate}}</span>
                                                     </div>
                                                 </div>
@@ -294,8 +296,7 @@
 
                                                     </h1>
                                                     <!--https://in.bookmyshow.com/sports/pro-kabaddi/jaipur-pink-panthers/?utm_source=facebook&utm_medium=referral&utm_campaign=fb_pro-kabaddi_jaipur_pinkpanther_290116&rel=T2ZmZXJSZWRpcmVjdA%3D%3D -->
-                                                    <a ng-href="#"
-                                                        ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
+                                                    <a ng-href="{{item.link}}" ng-if="item.ishome=='1'" target="_blank" class="btn btn-sucess mt15">
                                                         {{'BOOK TICKETS'|translate}}
                                                     </a>
                                                     <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}&dates={{calendarDate[$index].from}}/{{calendarDate[$index].to}}&location={{item.stadium | spaceToPlus}}&details={{item.team1 | spaceToPlus}}+vs+{{item.team2 | spaceToPlus}}+{{item.starttimedate | spaceToPlus}}+(IST)+{{item.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
@@ -560,8 +561,7 @@
                                                     <h1 class="upper mar-top" ng-if="currentlang=='hi'">
                                                         {{item.starttimedate | hindimonth:false}}
                                                     </h1>
-                                                    <a ng-href="#"
-                                                        ng-if="item.ishome=='1'" target="_blank">
+                                                    <a ng-href="#" ng-if="item.ishome=='1'" target="_blank">
                                                         <button class="btn btn-sucess mt15">{{'BOOK TICKETS'|translate}}</button>
                                                     </a>
                                                 </div>

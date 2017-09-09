@@ -126,7 +126,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     console.log("userFirstName", $rootScope.userFirstName)
                     $rootScope.loggedIn = true;
                     if (value == 'Game') {
-                        window.location = "http://jaipurpinkpanthers.com/#/pantherworld/#/games";
+                        window.location = "http://jaipurpinkpanthers.com/pantherworld/#/games";
                         // console.log("im in game");
                         // $state.go('Comingsoon');
                     }
@@ -1495,32 +1495,40 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.currentlang = currentlang;
             console.log($scope.currentlang);
         }
-        $scope.merchants = [{
-            image: "img/merchant/01.png",
-            title: "BAG PACK",
-            price: "892.00",
-            link: "http://www.didasportswear.com/backpack.html"
-        }, {
-            image: "img/merchant/02.png",
-            title: "LOUNGING JERSEY",
-            price: "599.00",
-            link: "http://www.didasportswear.com/lounging-jersey.html"
-        }, {
-            image: "img/merchant/03.png",
-            title: "TRAINING MICRO TRACKSUIT",
-            price: "1,990.00",
-            link: "http://www.didasportswear.com/training-micro-tracksuit.html"
-        }, {
-            image: "img/merchant/04.png",
-            title: "TRAVELLING BAG",
-            price: "1,450.00",
-            link: "http://www.didasportswear.com/travelling-bag.html"
-        }, {
-            image: "img/merchant/05.png",
-            title: "TRAINING SPANDEX TRACKSUIT",
-            price: "3,799.00",
-            link: "http://www.didasportswear.com/training-spandex-tracksuit.html"
-        }, ]
+
+        NavigationService.getallmerchandize(function (data) {
+            // console.log(data.data);
+            // $scope.merchandize = data.data.queryresult;
+            $scope.merchants = data.data.queryresult;
+            // console.log("$scope.allMerchandize", $scope.merchandize);
+        })
+
+        // $scope.merchants = [{
+        //     image: "img/merchant/01.jpg",
+        //     title: "Bag PacK",
+        //     price: "892.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/bag-pack-838.html"
+        // }, {
+        //     image: "img/merchant/02.jpg",
+        //     title: "Home Jersey",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/home-jersey.html"
+        // }, {
+        //     image: "img/merchant/03.jpg",
+        //     title: "Navy Polo",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/navy-polo-833.html"
+        // }, {
+        //     image: "img/merchant/04.jpg",
+        //     title: "Pink Polo",
+        //     price: "991.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/pink-polo-828.html"
+        // }, {
+        //     image: "img/merchant/05.jpg",
+        //     title: "Travelling Bag",
+        //     price: "1,450.00",
+        //     link: "https://didasportswear.com/jaipur-pink-panthers/travelling-bag-840.html"
+        // }, ]
 
         $scope.fixtureid = $stateParams.id;
         var i = 0;
@@ -1781,7 +1789,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Ravinder Kumar",
             id: 16
         }, {
-            name: "Rahul Choudhary",
+            name: "Nitin Rawal",
             id: 17
         }, {
             name: "Dong Gyu Kim",
@@ -1819,6 +1827,63 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Ticket");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        $scope.season = [{
+                "img": "img/seasonfive/1.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
+                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017"
+            },
+            {
+                "img": "img/seasonfive/2.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
+                "slug": "pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017"
+            },
+            {
+                "img": "img/seasonfive/3.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
+                "slug": "pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
+            },
+            {
+                "img": "img/seasonfive/4.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
+                "slug": "pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017"
+            },
+            {
+                "img": "img/seasonfive/5.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
+                "slug": "pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017"
+            },
+            {
+                "img": "img/seasonfive/6.png",
+                "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017/event",
+                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017"
+            }
+        ];
+        $scope.openiframe = function (x) {
+            $(".popupframe").css("display", "block");
+            $(".ticket-block").css("display", "none");
+            // $("iframe").attr("src", x.url);
+            var scroll = $(".popupframe").offset();
+            scroll = scroll.top - 200;
+            $("html, body").scrollTop(scroll);
+            // $(window).scrollTop($("#ticket-block").offset().top);
+
+                
+            insiderEmbed.init({      
+                mountId         : 'insider-embed',
+                      eventSlug        : x.slug,
+                      frameHeight       : 650,
+                      merchantId       : "5981711f07502f3d7b989f2e",
+                    
+            }); 
+
+
+        }
+        $scope.closeiframe = function () {
+            $(".popupframe").css("display", "none");
+            $(".ticket-block").css("display", "block");
+            //$("iframe").attr("src", x.url);
+            $("body").scrollTop(0);
+        }
 
     })
 

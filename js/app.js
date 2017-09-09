@@ -89,7 +89,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, cfp
         })
 
         .state('ticket-merchandise', {
-            url: "/ticket-merchandise",
+            url: "/merchandise",
             templateUrl: "views/template.html",
             controller: 'TicketMerchandizeCtrl'
         })
