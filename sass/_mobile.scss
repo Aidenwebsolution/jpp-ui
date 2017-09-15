@@ -61,7 +61,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         margin: 0 10px;
     }
     .mer-pan {
-        margin-bottom: -35px;
+        margin-bottom: -40px;
     }
 }
 
@@ -1276,6 +1276,12 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width:767px) {
+    .onmob {
+        display: block;
+    }
+    .ondesktop {
+        display: none;
+    }
     .appimageblock {
         /*margin-left: 75px;*/
         position: absolute;

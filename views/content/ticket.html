@@ -25,6 +25,14 @@
 
 
     </div>
+
+    <div id="ticket-block" class="ticket-block" ng-repeat="x in season1">
+
+      <!-- <a href="{{x.url}}">  -->
+      <img class="pointer ticket-bookticket ondesktop" ng-src="{{x.img}}" ng-click="openiframe(x)">
+      <img class="pointer ticket-bookticket onmob" ng-src="{{x.img1}}" ng-click="openiframe(x)">
+      <!-- </a> -->
+    </div>
     <div id="ticket-block" class="ticket-block" ng-repeat="x in season">
 
       <!-- <a href="{{x.url}}">  -->

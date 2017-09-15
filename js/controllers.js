@@ -1827,6 +1827,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Ticket");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        $scope.season1 = [{
+                "img": "img/seasonfive/weekend.png",
+                "img1": "img/seasonfive/weekendm.png",
+                "url": " https://insider.in/event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23d14471f310206b81dab/Tickets",
+                "embed": "event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23d14471f310206b81dab/Tickets"
+            },
+            {
+                "img": "img/seasonfive/weekday.png",
+                "img1": "img/seasonfive/weekdaym.png",
+                "url": " https://insider.in/event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23ce7471f310206b81d93/Tickets",
+                "embed": "event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23ce7471f310206b81d93/Tickets"
+            }
+
+        ]
         $scope.season = [{
                 "img": "img/seasonfive/1.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
@@ -1858,6 +1872,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017"
             }
         ];
+
         $scope.openiframe = function (x) {
             $(".popupframe").css("display", "block");
             $(".ticket-block").css("display", "none");
@@ -1867,17 +1882,54 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $("html, body").scrollTop(scroll);
             // $(window).scrollTop($("#ticket-block").offset().top);
 
-                
-            insiderEmbed.init({      
-                mountId         : 'insider-embed',
-                      eventSlug        : x.slug,
-                      frameHeight       : 650,
-                      merchantId       : "5981711f07502f3d7b989f2e",
-                    
-            }); 
+            if (x.slug) {
+                console.log("slug");
+                insiderEmbed.init({      
+                    mountId  : 'insider-embed',
+                          eventSlug        : x.slug,
+                          frameHeight       : 650,
+                          merchantId       : "5981711f07502f3d7b989f2e"    
+                }); 
+
+            } else {
+                console.log("embed");
+                insiderEmbed.init({      
+                    mountId  : 'insider-embed',
+                        embedPath: x.embed,
+                          frameHeight       : 650,
+                          merchantId       : "5981711f07502f3d7b989f2e"    
+                }); 
+            }    
+            // insiderEmbed.init({      
+            //     mountId  : 'insider-embed',
+            //           eventSlug        : x.slug,
+            //           frameHeight       : 650,
+            //           merchantId       : "5981711f07502f3d7b989f2e",
+            //         
+            // }); 
 
 
         }
+
+        // $scope.openiframes = function (x) {
+        //     $(".popupframe").css("display", "block");
+        //     $(".ticket-block").css("display", "none");
+        //     // $("iframe").attr("src", x.url);
+        //     var scroll = $(".popupframe").offset();
+        //     scroll = scroll.top - 200;
+        //     $("html, body").scrollTop(scroll);
+        //     // $(window).scrollTop($("#ticket-block").offset().top);
+
+        //     insiderEmbed.init({      
+        //         mountId  : 'insider-embed',
+        //             embedPath: x.embed,
+        //               frameHeight       : 650,
+        //               merchantId       : "5981711f07502f3d7b989f2e",
+        //             
+        //     }); 
+
+
+        // }
         $scope.closeiframe = function () {
             $(".popupframe").css("display", "none");
             $(".ticket-block").css("display", "block");

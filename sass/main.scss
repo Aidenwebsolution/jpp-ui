@@ -4267,11 +4267,19 @@
     //modals otp,password
     //ruchira
     .mer-pan {
-        margin-bottom: -10px;
+        margin-bottom: -25px;
     }
 
     .neg-5marg {
         margin-top: -5px;
+    }
+
+    .onmob {
+        display: none;
+    }
+
+    .ondesktop {
+        display: block;
     }
 
     @import "mobile";
