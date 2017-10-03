@@ -4282,5 +4282,9 @@
         display: block;
     }
 
+    .visible-xxs {
+        display: none;
+    }
+
     @import "mobile";
     @import "style";

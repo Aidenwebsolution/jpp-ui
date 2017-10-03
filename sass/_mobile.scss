@@ -1307,6 +1307,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     // .news-logo {
     // zoom:0.5;
     // }
+    .visible-xxs {
+        display: block;
+    }
     .mobile-css .text-line h4 {
         margin-left: 0px;
     }
