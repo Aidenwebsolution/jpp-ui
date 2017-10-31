@@ -221,10 +221,10 @@
                     <div class="white-line-pad" ng-if="journeyData =='No data found' || journeyData.status != '1'">
                         -->
 
-
-                    <!--<a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
-                            alt="Champions Patna Pirates"></a>-->
-                    <div class="white-line-pad">
+                    <a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
+                            alt="Champions Patna Pirates"></a>
+                    <!-- ng-if="journeyData.status == '2'" condition> -->
+                    <div class="white-line-pad" ng-if="journeyData.status == '2'">
 
                         <!--{{pointtable[0].pointsTableA|json}}-->
                         <div class="head-table text-center">
