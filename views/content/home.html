@@ -129,8 +129,8 @@
         <ul class="list-inline lined" mycircle style="width:18000px;">
             <li>
                 <span class="color-pink bold">Top Fan Tweets:
-                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the
-                loss.. We can do anything if we believe truly ourselves
+                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do
+                anything if we believe truly ourselves
                 <span>by @renceabishek</span>
             </li>
             <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack
@@ -221,8 +221,9 @@
                     <div class="white-line-pad" ng-if="journeyData =='No data found' || journeyData.status != '1'">
                         -->
 
-                    <a href="{{journeyData.link}}" target="_blank"><img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="img-responsive"
-                            alt="Champions Patna Pirates"></a>
+                    <a href="{{journeyData.link}}" target="_blank">
+                        <img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="full-image" alt="Champions Patna Pirates">
+                    </a>
                     <!-- ng-if="journeyData.status == '2'" condition> -->
                     <div class="white-line-pad" ng-if="journeyData.status == '2'">
 
@@ -311,8 +312,9 @@
                     <!-- <div class="champion">
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
-                    <a href="{{congratulationData.link}}" target="_blank"><img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}" class="img-responsive"
-                            alt="Champions Patna Pirates"></a>
+                    <a href="{{congratulationData.link}}" target="_blank">
+                        <img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}" class="full-image" alt="Champions Patna Pirates">
+                    </a>
                     <div class="nxt-match white-line-pad" ng-if="congratulationData =='No data found' || congratulationData.status !='1' ">
                         <div class="head-table text-center">
                             <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
@@ -451,12 +453,16 @@
 <section>
     <div class="pnt-wrd">
         <div class="container">
-            <div class="panther-world">
-                <a href="http://jaipurpinkpanthers.com/pantherworld/" target="_blank">
-                    <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive">
-                    <!-- <img ng-if="currentlang=='en'" src="img/new-banner.jpg" alt="Jaipur Pink Panthers" class="img-responsive"> -->
-                    <!-- <img ng-if="currentlang=='hi'" src="img/new-hindi.png" alt="Jaipur Pink Panthers" class="img-responsive"> -->
-                </a>
+            <div class="panther-world pt10">
+                <div class="row">
+                    <div class="col-md-12 pr8">
+                        <a href="http://jaipurpinkpanthers.com/pantherworld/" target="_blank">
+                            <!-- <img src="img/new-banner.png" alt="Jaipur Pink Panthers" class="img-responsive"> -->
+                            <img ng-if="currentlang=='en'" src="img/new-banner.jpg" alt="Jaipur Pink Panthers" class="img-responsive">
+                            <!-- <img ng-if="currentlang=='hi'" src="img/new-hindi.png" alt="Jaipur Pink Panthers" class="img-responsive"> -->
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -699,16 +705,22 @@
         <div class="row margin0">
             <div class="col-md-6 padding0">
                 <div class="by-ticket">
-                    <a ui-sref="Comingsoon" ng-if="currentlang=='en'"> <img src="img/homes/buyticktes.jpg" alt="" class="img-responsive"></a>
+                    <a ui-sref="Comingsoon" ng-if="currentlang=='en'">
+                        <img src="img/homes/buyticktes.jpg" alt="" class="full-image">
+                    </a>
                     <a ui-sref="Comingsoon" ng-if="currentlang=='hi'">
-                        <img src="img/homes/buyticktes.jpg" alt="" class="img-responsive">
+                        <img src="img/homes/buyticktes.jpg" alt="" class="full-image">
                     </a>
                 </div>
             </div>
             <div class="col-md-6 padding0">
                 <div class="by-merchandise">
-                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'"><img src="img/homes/merchandise.jpg" alt="" class="img-responsive"></a>
-                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'"><img src="img/homes/merchandise.jpg" alt="" class="img-responsive"></a>
+                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'">
+                        <img src="img/homes/merchandise.jpg" alt="" class="img-responsive">
+                    </a>
+                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'">
+                        <img src="img/homes/merchandise.jpg" alt="" class="img-responsive">
+                    </a>
                 </div>
             </div>
         </div>
@@ -720,7 +732,9 @@
         <div class="row margin0">
             <div class="col-md-6 padding0">
                 <div class="by-ticket">
-                    <a ui-sref="Comingsoon" ng-if="currentlang=='en'"> <img src="img/homes/buyticktes.jpg" alt="" class="img-responsive"></a>
+                    <a ui-sref="Comingsoon" ng-if="currentlang=='en'">
+                        <img src="img/homes/buyticktes.jpg" alt="" class="img-responsive">
+                    </a>
                     <a ui-sref="Comingsoon" ng-if="currentlang=='hi'">
                         <img src="img/homes/journeys-hindi.jpg" alt="" class="img-responsive">
                     </a>
@@ -728,7 +742,9 @@
             </div>
             <div class="col-md-6 padding0">
                 <div class="by-merchandise">
-                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'"> <img src="img/homes/merchandise.jpg" alt="" class="img-responsive"></a>
+                    <a ui-sref="ticket-merchandise" ng-if="currentlang=='en'">
+                        <img src="img/homes/merchandise.jpg" alt="" class="img-responsive">
+                    </a>
                     <a ui-sref="ticket-merchandise" ng-if="currentlang=='hi'">
                         <img src="img/homes/journeys-hindi.png" alt="" class="img-responsive">
                     </a>

@@ -81,6 +81,7 @@
     .flaticon-tshirt18:before {
         content: "\e001";
     }
+
     /* mixing*/
 
     @mixin placeholder {
@@ -178,11 +179,19 @@
 
     .dropdown-menu>li>a:focus,
     .dropdown-menu>li>a:hover {
-        background-color: transparent!important;
+        background-color: transparent !important;
     }
 
     .navbar {
         margin: 0;
+    }
+
+    .pt10 {
+        padding-top: 10px;
+    }
+
+    .pr8 {
+        padding: 0 8px 0 0;
     }
 
     nav {
@@ -291,6 +300,7 @@
             font-size: 15px;
         }
     }
+
     /* Start writing sass here */
 
     .padding0 {
@@ -405,7 +415,7 @@
     .banner-title {
         border-bottom: 4px solid $brand-success;
         position: relative;
-        margin-top: 70px;
+        margin-top: 100px;
         img {
             width: 100%;
         }
@@ -892,7 +902,7 @@
         &:hover {
             background-color: darken($brand-success, 20%);
             border-color: darken($brand-success, 20%);
-            color: darken($brand-primary, 10%)!important;
+            color: darken($brand-primary, 10%) !important;
         }
     }
 
@@ -949,7 +959,7 @@
     }
 
     .twitter {
-        background-color: $twitter!important;
+        background-color: $twitter !important;
     }
 
     .google {
@@ -1191,6 +1201,10 @@
 
     .w70 {
         width: 70%;
+    }
+
+    .full-image {
+        width: 100%;
     }
 
     .home {
@@ -1575,7 +1589,7 @@
         top: 50%;
         left: 50%;
         @include transform(translate(-50%,
-        -50%)!important);
+        -50%) !important);
     }
 
     .modal-content {
@@ -1696,6 +1710,7 @@
     .marquee {
         height: 60px;
     }
+
     /* Move it (define the animation) */
 
     // @include keyframes (scroll-left) {
@@ -1715,7 +1730,7 @@
         a {
             &:focus,
             &:hover {
-                background-color: transparent!important;
+                background-color: transparent !important;
             }
         }
         li {
@@ -1749,18 +1764,18 @@
     .carousel-fade {
         .carousel-inner {
             .item {
-                transition-property: opacity!important;
+                transition-property: opacity !important;
             }
             .active.left,
             .active.right,
             .item {
-                transition-property: opacity!important;
-                opacity: 0!important;
+                transition-property: opacity !important;
+                opacity: 0 !important;
             }
             .active,
             .next.left,
             .prev.right {
-                opacity: 1!important;
+                opacity: 1 !important;
             }
         }
         .carousel-control {
@@ -3221,7 +3236,7 @@
                     color: #fff;
                 }
             }
-             ::-webkit-input-placeholder {
+            ::-webkit-input-placeholder {
                 color: #fff;
                 font-size: 16px;
             }
@@ -4057,7 +4072,7 @@
                 padding: 20px 0;
             }
         }
-         ::-webkit-input-placeholder {
+        ::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
             font-size: 18px;
             color: #fff;
