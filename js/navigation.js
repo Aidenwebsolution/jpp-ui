@@ -45,13 +45,13 @@ var navigationservice = angular.module('navigationservice', [])
             }, {
                 name: "Tickets",
                 // url: "ticket",
-                url: "Comingsoon",
+                url: "come",
                 classis: "active",
                 //highlighter: "high"
             }, {
                 name: "Merchandise",
                 // url: "ticket-merchandise",
-                url: "Comingsoon",
+                url: "come",
                 classis: "active",
                 // highlighter: "high"
             }, {
