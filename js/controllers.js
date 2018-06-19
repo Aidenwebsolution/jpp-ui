@@ -1741,62 +1741,56 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
         $scope.players = [{
-            name: "Jasvir Singh",
+            name: "Anup Kumar",
             id: 1
         }, {
-            name: "Manjeet Chhillar",
+            name: "Deepak Niwas Hoodar",
             id: 2
         }, {
-            name: "Navneet Gautam",
+            name: "Selvamani",
             id: 3
         }, {
-            name: "Tushar Patil",
+            name: "Sandeep Dhull",
             id: 4
         }, {
-            name: "Manoj Dhull",
+            name: "Mohit Chhillar",
             id: 5
         }, {
-            name: "Selvamani K",
+            name: "Nitin Rawal",
             id: 6
         }, {
-            name: "Somvir Shekhar",
+            name: "Bajirao Hodge",
             id: 7
         }, {
-            name: "Ajit Singh",
+            name: "Santhapanaselvam",
             id: 8
         }, {
-            name: "Santhapanaselvam",
+            name: "Anand Patil",
             id: 9
         }, {
-            name: "Pawan Kumar",
+            name: "Ajit Singh",
             id: 10
         }, {
-            name: "Vignesh B",
+            name: "David Mosambayi",
             id: 11
         }, {
-            name: "Kamal Kishor",
+            name: "Gangadhari Mallesh",
             id: 12
         }, {
-            name: "Sidharth Dahiya",
+            name: "Lokesh Kaushik",
             id: 13
         }, {
             name: "Sunil Siddhgavali",
             id: 14
         }, {
-            name: "Abhishek N",
+            name: "Young Chang Ko",
             id: 15
         }, {
-            name: "Ravinder Kumar",
+            name: "Brijendra Chaudhary",
             id: 16
         }, {
-            name: "Nitin Rawal",
+            name: "N. Shiva Ramakrishna",
             id: 17
-        }, {
-            name: "Dong Gyu Kim",
-            id: 18
-        }, {
-            name: "Jae Min Lee",
-            id: 19
         }];
 
         $scope.register = {};
