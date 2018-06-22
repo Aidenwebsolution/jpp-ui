@@ -1791,6 +1791,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
             name: "N. Shiva Ramakrishna",
             id: 17
+        }, {
+            name: "Amit Kumar",
+            id: 18
+        }, {
+            name: "Ajinkya Pawar",
+            id: 19
         }];
 
         $scope.register = {};
