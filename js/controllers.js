@@ -1747,7 +1747,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             name: "Deepak Niwas Hooda",
             id: 2
         }, {
-            name: "Selvamani Kannan",
+            name: "Selvamani K",
             id: 3
         }, {
             name: "Sandeep Dhull",
