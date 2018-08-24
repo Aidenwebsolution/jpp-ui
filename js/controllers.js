@@ -1050,14 +1050,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         NavigationService.getAllSeason(function (data) {
             $scope.seasons = data.data;
-            var firstEle = _.head(data.data);
-            $scope.season = firstEle.id;
-            //var firstseason=data.data[0];
-            //console.log(firstseason.id);
-
-            //console.log($scope.seasons);
-
-            //console.log(firstEle.id);
+            var firstEle = _.sortBy(data.data, function (n) {
+                return -1 * n;
+            });
+            $scope.season = firstEle[0].id;
+            console.log("MAx", firstEle);
         });
         NavigationService.getSchedule(function (data) {
             $scope.schedules = data.data;
