@@ -27,7 +27,7 @@
             <li ng-click="changeTab(3)">
                 <h3 class="color-primary" ng-class="{'active-li':season==3}">{{'SEASON 3 REVIEW'|translate}}</h3>
             </li> -->
-            <li ng-click="changeTab(season.id,$index)" ng-if="season.id != 1" ng-repeat="season in seasons|orderBy:'order':'desc'">
+            <li ng-click="changeTab(season.id,$index)" ng-if="season.id != 1" ng-repeat="season in seasons">
 
                 <h3 class="color-primary " ng-class="{'active-li':$index==selected}">{{season.name|translate}}</h3>
             </li>
