@@ -1087,7 +1087,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
         });
         $scope.openAccordionById = function (id) {
-            console.log(id);
             _.each($scope.schedules, function (key) {
                 if (key.id == $scope.fixtureid) {
                     key.isOpen = true;

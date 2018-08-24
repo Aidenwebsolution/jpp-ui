@@ -38,6 +38,6 @@
     "angular-masonry": "^0.16.0"
   },
   "resolutions": {
-    "angular": "~1.4.3"
+    "angular": "1.5.11"
   }
 }
