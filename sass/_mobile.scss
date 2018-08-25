@@ -668,16 +668,16 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .fixture {
         .fixtures-done {
             .fixture-match {
-                top: 62%!important;
+                top: 62% !important;
             }
             .fix-logos img {
                 width: 110px !important;
             }
             .vs img {
-                width: 120px!important;
+                width: 120px !important;
             }
             .todo {
-                top: 105px!important;
+                top: 105px !important;
                 .row.fixture-cont {
                     padding-top: 12px !important;
                 }
@@ -687,20 +687,20 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .fixture {
         .score-points {
             margin-top: 10px !important;
-            font-size: 32px!important;
+            font-size: 32px !important;
         }
         .team-head {
-            font-size: 14px!important;
+            font-size: 14px !important;
         }
     }
     .fix-logo {
-        width: 100px!important;
-        height: 100px!important;
+        width: 100px !important;
+        height: 100px !important;
     }
     .match-time h1 {
-        font-size: 24px!important;
+        font-size: 24px !important;
         .capital {
-            font-size: 20px!important;
+            font-size: 20px !important;
         }
     }
 }
@@ -838,8 +838,8 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
                 border: 0;
                 position: relative;
                 li {
-                    background: -webkit-linear-gradient(#4ac3ed, #217d9e)!important;
-                    background: linear-gradient(#4ac3ed, #217d9e)!important;
+                    background: -webkit-linear-gradient(#4ac3ed, #217d9e) !important;
+                    background: linear-gradient(#4ac3ed, #217d9e) !important;
                     a {}
                 }
             }
@@ -1131,7 +1131,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .menu-changed {
         .log-sign {
-            float: none!important;
+            float: none !important;
             text-align: center;
         }
         .line-after {
@@ -1276,6 +1276,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width:767px) {
+    .dm-block {
+        display: block;
+    }
+    .post-center {
+        position: static;
+        @include transform(translate(0%, 0%));
+    }
     .onmob {
         display: block;
     }
@@ -1390,7 +1397,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         width: 75%;
         top: 0;
         @include transform(translate(-50%,
-        -0%)!important);
+        -0%) !important);
     }
     .flex-next {
         &:before {
@@ -1558,11 +1565,11 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         font-size: 24px;
     }
     .fixture .panel-title .schedule {
-        font-size: 18px!important;
+        font-size: 18px !important;
     }
     .fixture .team-head img {
         /*width: 55px!important;*/
-        width: 47px!important;
+        width: 47px !important;
     }
     .fixture .fixtures-done .team-head span {
         margin-top: 20px !important;
@@ -1576,10 +1583,10 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .fixture .match-center {
         margin-top: 18px !important;
-        font-size: 15px!important;
+        font-size: 15px !important;
         i {
             margin-left: 5px !important;
-            font-size: 25px!important;
+            font-size: 25px !important;
         }
     }
     .fixture .team-head {
@@ -1602,13 +1609,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         top: 80px !important;
     }
     .topscore {
-        font-size: 14px!important;
+        font-size: 14px !important;
     }
     .head-pink {
-        font-size: 14px!important;
+        font-size: 14px !important;
     }
     .fixture .fixtures-done .fix-logos span {
-        font-size: 30px!important;
+        font-size: 30px !important;
     }
     .fixture .fixtures-done .fixture-match {
         top: 84% !important;
@@ -1670,7 +1677,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         font-size: 12px !important;
     }
     .fixture .fixtures-done .fixture-match {
-        min-height: 250px!important;
+        min-height: 250px !important;
     }
     .fixture .fixtures-done .todo {
         top: 65px !important;
@@ -1767,7 +1774,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         }
         .vs {
             img {
-                width: 300px!important;
+                width: 300px !important;
             }
         }
     }

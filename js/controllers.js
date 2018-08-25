@@ -1052,6 +1052,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.seasons = _.sortBy(data.data, function (n) {
                 return -1 * n;
             });
+            // $scope.seasons = data.data;
             $scope.season = $scope.seasons[0].id;
         });
         NavigationService.getSchedule(function (data) {
