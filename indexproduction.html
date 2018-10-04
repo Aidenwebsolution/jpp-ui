@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="firstapp">
 
-  <head ng-controller="headerctrl">
-    <!-- <base href="http://jaipurpinkpanthers.com/beta/"> -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-itunes-app" content="app-id=1084678272">
-    <title ng-bind="'Jaipur Pink Panthers | '+template.title">Jaipur Pink Panthers</title>
+<head ng-controller="headerctrl">
+  <base href="beta">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=1084678272">
+  <title ng-bind="'Jaipur Pink Panthers | '+template.title">Jaipur Pink Panthers</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014">
-    <meta name="keywords" content="Jaipur Pink Panthers, pro kabaddi league, jaipur pink panthers website, jaipur pink panthers official site, pink panthers website">
-    <meta name="author" content="">
+  <!-- SEO -->
+  <meta name="description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014">
+  <meta name="keywords" content="Jaipur Pink Panthers, pro kabaddi league, jaipur pink panthers website, jaipur pink panthers official site, pink panthers website">
+  <meta name="author" content="">
 
-    <!-- Facebook -->
-    <meta property="og:site_name" content="Jaipur Pink Panthers">
-    <meta property="og:title" content="Jaipur Pink Panthers" />
-    <meta property="og:description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://jaipurpinkpanthers.com/beta/img/fb/mini-logo.jpg">
+  <!-- Facebook -->
+  <meta property="og:site_name" content="Jaipur Pink Panthers">
+  <meta property="og:title" content="Jaipur Pink Panthers" />
+  <meta property="og:description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://jaipurpinkpanthers.com/beta/img/fb/mini-logo.jpg">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://jaipurpinkpanthers.com/beta/img/mini-logo.png">
-    <meta name="twitter:title" content="Jaipur Pink Panthers">
-    <meta name="twitter:description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.">
-    <meta name="twitter:image" content="img/fb/mini-logo.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://jaipurpinkpanthers.com/beta/img/mini-logo.png">
+  <meta name="twitter:title" content="Jaipur Pink Panthers">
+  <meta name="twitter:description" content="Jaipur Pink Panthers is a professional kabaddi team based in Jaipur, Rajasthan that competes in the Pro Kabaddi League. Jaipur Pink Panthers are the champions of the first season of the Pro Kabaddi League in 2014.">
+  <meta name="twitter:image" content="img/fb/mini-logo.jpg">
 
-    <link rel="shortcut icon" href="img/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="w.css"/>
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="w.css" />
 
-    <!-- <link rel="canonical" href="http://jaipurpinkpanthers.com/beta/"> -->
+  <!-- <link rel="canonical" href="http://jaipurpinkpanthers.com/beta/"> -->
 
-    <script src="w.js"></script>
+  <script src="w.js"></script>
 
-    <!-- <script>
+  <!-- <script>
     if(window.location.host == "www.jaipurpinkpanthers.com")
     {
       window.location.href="http://jaipurpinkpanthers.com/beta/";
     }
     </script> -->
 
-    <script>
-      var isproduction = false;
-    </script>
+  <script>
+    var isproduction = false;
+  </script>
 
-    <div id="fb-root"></div>
+  <div id="fb-root"></div>
 
-    <script>
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=329228207248886";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-    <!--[if IE]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=329228207248886";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  <!--[if IE]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet'>
-  </head>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet'>
+</head>
 
-  <body  oncontextmenu="return false">
-    <div class="repeated-item" ui-view></div>
-    <script>
-  	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    	ga('create', 'UA-73079187-1', { 'cookieDomain': 'none' });
-	  </script>
-  </body>
+<body oncontextmenu="return false">
+  <div class="repeated-item" ui-view></div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-73079187-1', { 'cookieDomain': 'none' });
+  </script>
+</body>
 
 </html>
