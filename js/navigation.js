@@ -3,8 +3,7 @@ var mainurl = actualUrl + "index.php/";
 var imgurl = actualUrl + "uploads/";
 var tempUrl = actualUrl + "json/";
 var tempimgurl = imgurl;
-// var imgurl = "http://192.168.1.107/jppbackend/uploads/";
-// var imgurl="";
+
 var adminurl = mainurl + "json/";
 
 var navigationservice = angular
