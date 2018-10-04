@@ -19,7 +19,7 @@ var navigationservice = angular
       },
       {
         name: "Panther World",
-        link: "http://jaipurpinkpanthers.com/#/pantherworld/",
+        link: "http://jaipurpinkpanthers.com/beta/#/pantherworld/",
         id: "panther",
         classis: "active",
         subnav: []
