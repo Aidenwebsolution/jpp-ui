@@ -1013,6 +1013,8 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         width: 350px;
         img {
             width: 100%;
+            position: static;
+            transform: translateX(0);
         }
     }
     .pl-contest-rg {
