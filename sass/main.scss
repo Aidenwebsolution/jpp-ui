@@ -3565,19 +3565,20 @@
         .play-img {
             @include size(400px,
             550px);
-            margin: -50px auto 100px;
+            // margin: -50px auto 100px;
+            margin-left: 200px;
             img {
                 width: 100%;
-                margin: 0 0 0 90px;
+                // margin: 0 0 0 90px;
             }
         }
     }
 
     .plays-names {
-        transform: rotate(-10deg);
+        // transform: rotate(-10deg);
         position: absolute;
-        top: 170px;
-        left: 200px;
+        top: 310px;
+        right: 500px;
         font-family: "Dreamwalker";
     }
 
