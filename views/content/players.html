@@ -25,8 +25,9 @@
       <div class="col-md-4 pad5 col-sm-4" ng-repeat="data in player track by $index">
 
         <!-- <a> -->
-        <a ui-sref="players-inside({id:data.id})">
-        <div class="player-box text-center mb10" ng-click="gotoPlayers(data)">
+        <!-- <a ui-sref="players-inside({id:data.id})"> -->
+        <!-- <div class="player-box text-center mb10" ng-click="gotoPlayers(data)"> -->
+        <div class="player-box text-center mb10">
           <div class="player-image">
             <img ng-src="{{data.smallimage | serverimage1}}" alt={{data.name}} title="{{data.name}}" class="img-responsive">
           </div>
@@ -43,7 +44,7 @@
             <h6 class="voyeg-font f25 margin0 color-success">{{data.type|translate}}</h6>
           </div>
         </div>
-        </a>
+        <!-- </a> -->
       </div>
       <!-- <div class="col-md-4 pad5 col-sm-4" ng-repeat="data in player track by $index">
 

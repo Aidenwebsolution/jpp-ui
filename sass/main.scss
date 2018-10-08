@@ -2040,6 +2040,7 @@
         background-repeat: no-repeat;
         padding: 50px 0 100px;
         background-size: cover;
+        background-position: center center;
     }
 
     .back-img {
@@ -3563,13 +3564,12 @@
         background-repeat: no-repeat;
         background-size: cover;
         .play-img {
+            position: relative;
             @include size(400px,
-            550px);
-            // margin: -50px auto 100px;
-            margin-left: 200px;
+            550px); // margin: -50px auto 100px;
+            margin-left: 50px;
             img {
-                width: 100%;
-                // margin: 0 0 0 90px;
+                width: 100%; // margin: 0 0 0 90px;
             }
         }
     }
@@ -3577,21 +3577,20 @@
     .plays-names {
         // transform: rotate(-10deg);
         position: absolute;
-        top: 310px;
+        top: 245px;
         right: 500px;
+        width: 30%;
         font-family: "Dreamwalker";
     }
 
     .player-details {
-        color: $white;
-        font-weight: 600;
+        color: $white; // font-weight: 600;
         font-family: $font-family-sans-serif;
         text-transform: uppercase;
         margin-bottom: 40px;
         p {
             font-size: 36px;
-            margin: 0;
-            font-style: italic;
+            margin: 0; // font-style: italic;
             text-transform: capitalize;
         }
         span {
@@ -3643,9 +3642,27 @@
         // left: 200px;
         font-family: "Dreamwalker";
         p {
-            font-size: 60px;
+            font-size: 130px;
             margin: 0;
-            line-height: 60px;
+            line-height: 130px;
+        }
+    }
+
+    .plays-jerseyno-type {
+        position: absolute;
+        top: 330px;
+        right: 210px;
+        width: 24%;
+        p {
+            font-family: "Dreamwalker";
+            margin: 0;
+        }
+        .no-font {
+            font-size: 100px;
+        }
+        .type-font {
+            font-size: 50px;
+            line-height: 5px !important;
         }
     }
 
