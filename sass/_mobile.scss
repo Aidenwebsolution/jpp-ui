@@ -2,38 +2,73 @@ $screen-xs: 480px !default;
 $screen-sm: 768px !default;
 $screen-md: 992px !default;
 $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px) and (max-device-width: 1500px){
+
 // .fixture-match{
 //   zoom:0.7;
 // }
 // }
 @media (max-width: $screen-lg) {
+
+    .plays-jerseyno-type .no-font {
+        font-size: 50px;
+    }
+
+    .view-slider .flexslider .flex-direction-nav .flex-next {
+        right: -40px;
+    }
+
+    .plays-jerseyno-type .type-font {
+        font-size: 30px;
+        line-height: 20px !important;
+    }
+
+    .player-name p {
+        font-size: 75px;
+        margin: 0;
+        line-height: 75px;
+    }
+
+    .plays-names {
+        position: absolute;
+        top: 280px;
+        right: 385px;
+    }
+
     nav li {
         padding-right: 16px;
     }
+
     .flex-prev {
         &:before {
             background: url(/img/play-left.png)no-repeat;
             zoom: 0.7;
         }
     }
+
     .flex-next {
         &:before {
             background: url(/img/play-right.png)no-repeat;
             zoom: 0.7;
         }
     }
+
     .img-list-box.gallery-album {
         width: 282.8px;
     }
+
     .apps {
         padding-left: 0;
     }
+
     .navbar-nav {
         float: none;
     }
+
     nav a.menu-custom {
         padding: 25px 3px !important;
-    } // .fixture-match {
+    }
+
+    // .fixture-match {
     //   zoom: 0.7;
     // }
     .slider {
@@ -41,25 +76,33 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             right: -70px;
         }
     }
+
     .slider {
         .carousel-control.left {
             left: -70px;
         }
-    } // Header
+    }
+
+    // Header
     .navbar-brand {
         padding: 8px 0;
-    } //page
+    }
+
+    //page
     .title-name {
         h1 {
             font-size: 28px;
         }
     }
+
     .pl25 {
         padding-left: 25px;
     }
+
     .li-footer {
         margin: 0 10px;
     }
+
     .mer-pan {
         margin-bottom: -40px;
     }
@@ -69,78 +112,100 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .font-app {
         font-size: 24px;
     }
+
     .close-btn {
         position: absolute;
         right: 2px;
         top: 100px;
     }
+
     .new-images {
         height: 270px;
     }
+
     .flex-prev {
         &:before {
             background: url(/img/play-left.png)no-repeat;
             zoom: 0.6;
         }
     }
+
     .flex-next {
         &:before {
             background: url(/img/play-right.png)no-repeat;
             zoom: 0.6;
         }
     }
+
     .slider {
         .carousel-control {
             width: 11% !important;
         }
     }
+
     .slider {
         .carousel-control.left {
             left: -55px;
         }
+
         .carousel-control.right {
             right: -55px;
         }
     }
+
     .carousel-control .glyphicon-chevron-left,
     .carousel-control .icon-prev {
         margin-left: -40px;
     }
+
     .carousel-control .glyphicon-chevron-right,
     .carousel-control .icon-next {
         margin-right: -40px;
     }
+
     .f30 {
         font-size: 16px;
     }
+
     .f25 {
         font-size: 17px;
-    } // .fixture-match{
+    }
+
+    // .fixture-match{
     //   zoom:0.6;
     // }
     .pnl-title {
         font-size: 25px;
     }
+
     .mb200 {
         margin-bottom: 100px;
     }
+
     .font-20 {
         font-size: 20px;
     }
+
     .w70 {
         width: 60%;
     }
+
     .navbar-brand {
         padding: 3px 0 !important;
     }
+
     .f20 {
         font-size: 14px;
     }
+
     .li-footer {
         margin: 0 30px 4px 0;
-    } //page
+    }
+
+    //page
     .title-name {
         padding: 17px 50px 16px;
+
         h1 {
             font-size: 22px;
         }
@@ -148,35 +213,83 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-sm-max) {
-    .kittingPartner, //sponsors scss
+    .view-slider .flexslider .flex-direction-nav .flex-next {
+        right: -22px;
+    }
+
+    .bg-players .play-img {
+        position: relative;
+        width: 330px;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+
+    .player-name {
+        p {
+            font-size: 70px;
+            margin: 0;
+            line-height: 70px;
+        }
+
+    }
+
+    .plays-names {
+        right: 300px;
+    }
+
+    .plays-jerseyno-type {
+        top: 325px;
+        right: 120px;
+
+        .no-font {
+            font-size: 45px;
+        }
+
+        .type-font {
+            font-size: 30px;
+            line-height: 40px !important;
+        }
+    }
+
+    .kittingPartner,
+    //sponsors scss
     .fmPartner,
     .multiplexPartner,
     .ticketingPartner {
         padding: 10px;
+
         img {
             padding: 5px;
             max-width: 198px;
             max-height: 80px;
         }
     }
+
     .titleSponsor,
     .poweredBy,
     .prayerPartner,
     .associateSponsor {
         padding: 20px;
+
         div {
             margin: 5px;
         }
     }
+
     .prayerPartner {
         padding-top: 0px;
     }
+
     .spo_img {
         width: 40%;
     }
+
     .secondbloc {
         padding-top: 30px;
     }
+
     .sponsor_container {
         .spo_second_col {
             .secondbloc {
@@ -186,35 +299,45 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .sponsor_ass_img {
         object-fit: none;
     }
+
     .spo_img_1 {
         padding-top: 10px;
     }
+
     .nara {
         padding: 10px !important;
-    } //end of sponsor
+    }
+
+    //end of sponsor
     //footer sponsor starts here
     .foo_sponsor {
         color: #b41e72;
         padding: 0px;
         padding-top: 50px;
     }
+
     .foo_s_row {
         padding: 50px;
         padding-top: 20px;
         padding-bottom: 0px;
     }
+
     .foo_icon {
         width: 250px;
     }
+
     .foo_first_icon {
         width: 150px;
     }
+
     .pix_10 {
         padding: 10px;
     }
+
     .foo_icon2 {
         padding: 5px;
         width: auto;
@@ -223,6 +346,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         max-height: 80px;
         margin: 10px;
     }
+
     .spon {
         .arran {
             .mutho_kalyan_icon {
@@ -230,35 +354,47 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .arran>div {
         padding-bottom: 5px;
-    } // footer sponsor ends here
+    }
+
+    // footer sponsor ends here
     .point-bkp {
         background-image: url('../img/players/point-bg.png')
     }
+
     .log-sign {
         margin-bottom: 0;
     }
+
     .li-footer {
         margin: 0 10px 4px 0;
     }
+
     .panthers {
         h2 {
             font-size: 46px;
+
             &:after {
                 bottom: 7px;
             }
         }
+
         .smalls {
             font-size: 16px;
         }
+
         .medium {
             font-size: 19px;
         }
+
         .large {
             font-size: 21px;
         }
-    } // .app-store {
+    }
+
+    // .app-store {
     //     img {
     //         height: 34px;
     //     }
@@ -266,199 +402,254 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .downloadapp {
         font-size: 21px;
     }
+
     .demo-box {
         img {
             height: 225px;
         }
     }
+
     .pink-splash {
         background: url("../img/splash.png") no-repeat 0 -15px;
         background-size: 100% 100%;
         padding: 5px;
         height: 200px;
+
         h2 {
             color: white;
             margin: 20px 0 15px;
             font-size: 27px;
         }
+
         p {
             font-size: 16px;
             margin: 0;
             color: white;
         }
     }
+
     .merchandise-ticket {
         .fix-logo {
             height: 80px !important;
         }
+
         .fix-logo {
             width: 100px !important;
             height: 80px !important;
         }
+
         .match-time h1 {
             font-size: 15px !important;
         }
+
         .mt15 {
             margin-top: 8px;
         }
     }
+
     .news-logo {
         zoom: 0.8;
     }
+
     .font-excl {
         font-size: 15px;
     }
+
     .font-app {
         font-size: 18px;
     }
+
     .margin-all {
         padding-top: 50px;
     }
+
     .points-table .table th {
         font-size: 16px;
     }
+
     .odd-even tr {
         font-size: 16px;
     }
+
     .font-tbl {
         font-size: 30px;
     }
+
     .new-images {
         height: 204px;
     }
+
     .slider .carousel-control {
         height: 90%;
     }
+
     .slider .glyphicon-chevron-right {
         width: 62px;
     }
+
     .slider .glyphicon-chevron-left {
         width: 62px;
     }
+
     .sliders .li-info {
         font-size: 15px;
     }
+
     .sliders .ul-border li {
         border-right: 0 solid #b41e72;
     }
+
     .sliders .label-nation {
         font-size: 14px;
     }
+
     .sliders .inner-data {
         padding: 115px 10px 15px;
     }
+
     .sliders .play-img {
         height: 200px;
         top: -90px;
     }
+
     .cont-box {
         .date {
             font-size: 16px;
         }
+
         .venu {
             font-size: 14px;
             margin-top: 2px;
         }
+
         .match {
             .fixture1 {
                 width: 20%;
             }
         }
+
         .badge-class {
             padding: 6px 10px;
+
             &:after {
                 width: 15px;
                 right: -8px;
             }
         }
+
         .list-item {
             width: 95%;
             margin-top: 64px;
             min-height: auto;
+
             .img-holder-left {
                 width: 50px;
                 height: 50px;
             }
+
             .cont-img {
                 padding-left: 60px;
                 min-height: 100px;
             }
+
             .desc {
                 padding-top: 2px;
+
                 p {
                     font-size: 10px;
                 }
             }
+
             .head-fixture {
                 padding-bottom: 2px;
             }
+
             .city {
                 font-size: 14px;
             }
         }
+
         h3.midd {
             font-size: 16px;
         }
     }
+
     .border-player {
         display: none;
     }
+
     .sliders .carousel-control {
         width: 20%;
     }
+
     .carousel-control .glyphicon-chevron-left,
     .carousel-control .icon-prev {
         margin-left: -19px;
     }
+
     .carousel-control .glyphicon-chevron-right,
     .carousel-control .icon-next {
         margin-right: -19px;
     }
+
     .mar-top {
         margin-top: 10px;
     }
+
     .f-23 {
         font-size: 25px;
         margin: 8px 0 0;
-    } // .fixture-match {
+    }
+
+    // .fixture-match {
     //   zoom: 0.5;
     // }
     .mb200 {
         margin-bottom: 50px;
     }
+
     .img-slide-padding {
         padding: 0 3px 3px;
     }
+
     .slider {
         .carousel-control.right {
             right: -30px;
         }
+
         .carousel-control.left {
             left: -30px;
         }
     }
+
     .mb36 {
         margin-bottom: 30px;
     }
+
     .mb100 {
         margin-bottom: 50px;
     }
+
     .wallpapper-select {
         .form-control {
             height: 38px;
         }
+
         select {
             font-size: 17px;
         }
+
         &:after {
             top: 45%;
         }
     }
+
     .wallpapper-count {
         span {
             font-size: 20px;
         }
     }
+
     .social-icon {
         ul {
             li {
@@ -472,89 +663,116 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .mt-l100 {
         margin: 60px 0 10px;
     }
+
     .font-28 {
         font-size: 28px;
     }
+
     .font-20 {
         font-size: 16px;
     }
+
     .font-14 {
         font-size: 14px;
     }
+
     .pro-cat label span {
         font-size: 14px;
     }
+
     .f12 {
         font-size: 12px;
     }
+
     .f15 {
         font-size: 15px;
     }
+
     .mb-footer {
         margin-bottom: 50px;
-    } // .mt100 {
+    }
+
+    // .mt100 {
     //     margin-top: 50px;
     // }
     .f16 {
         font-size: 16px;
     }
+
     .f24 {
         font-size: 24px;
     }
+
     .mb50 {
         margin-bottom: 40px;
     }
+
     .about-content {
         margin: 60px 0 65px;
     }
+
     .page-title {
         // bottom: -25px;
     }
+
     .panther-punch {
         img {
             width: 55px;
         }
     }
+
     .title-name {
         padding: 15px 40px 14px;
     }
+
     .title-name {
         h1 {
             font-size: 18px;
         }
-    } // Header
+    }
+
+    // Header
     .navbar-toggle {
         border-color: #4ECAF5 !important;
         transition: all 0.3s ease;
+
         .icon-bar {
             background-color: #4ECAF5 !important;
         }
+
         &:focus {
             background-color: #B41E72 !important;
         }
+
         &:hover {
             background-color: #83305F !important;
         }
     }
+
     .head-menu {
         li {
             font-size: 14px;
             text-align: center;
         }
     }
+
     .home {
         padding-top: 50px;
     }
+
     .nav {
         li {
             padding-right: 14px;
+
             a {
                 padding: 16px 1px !important;
                 font-size: 12px;
             }
+
             &.active,
             &:hover {
                 a {
@@ -563,6 +781,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
                             left: -9px;
                             width: 25px;
                         }
+
                         &:after {
                             right: -9px;
                             width: 25px;
@@ -572,92 +791,119 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .home {
         padding-top: 50px;
     }
+
     .banner-title {
         margin-top: 51px;
     }
+
     .navbar-brand {
         padding: 10px 0;
+
         img {
             width: 115px;
         }
     }
+
     .my-li li:nth-child(odd) {
         padding: 0;
     }
+
     .my-li li:nth-child(even) {
         padding: 0;
     }
+
     .navbar-collapse {
         border-top: 0 solid transparent;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
     }
+
     .mr70 {
         margin-right: 0;
-    } // /footer
+    }
+
+    // /footer
     .name-sponser {
         text-align: center;
         display: block;
     }
+
     .text-center-md {
         text-align: center;
     }
+
     .float-none-md {
         float: none !important;
     }
+
     .padd-footer {
         padding: 10px 0;
     }
+
     .pall35 {
         padding: 20px 0;
     }
+
     .block-img {
         height: 50px;
     }
+
     .flex-prev {
         left: 10px !important;
+
         &:before {
             background: url(/img/play-left.png)no-repeat;
             zoom: 0.6;
         }
     }
+
     .flex-next {
         &:before {
             background: url(/img/play-right.png)no-repeat;
             zoom: 0.6;
         }
     }
+
     .by-ticket,
     .by-merchandise {
         margin: 0;
         margin-top: 5px;
     }
+
     .pl-contest {
         img {
             margin: 0 auto;
         }
     }
+
     .panther-punch {
         margin-bottom: -60px;
-    } // .panthers-punch{
+    }
+
+    // .panthers-punch{
     //     margin-bottom: -30px;
     // }
     .mer-pan {
         margin-bottom: -15px;
     }
+
     .title-name {
         padding: 15px 0 0;
     }
+
     .mm50 {
         margin-top: 50px !important;
     }
+
     .text-line {
         h4 {
             line-height: 25px;
         }
     }
+
     .apps {
         padding-top: 0;
         padding-left: 30%;
@@ -670,35 +916,44 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             .fixture-match {
                 top: 62% !important;
             }
+
             .fix-logos img {
                 width: 110px !important;
             }
+
             .vs img {
                 width: 120px !important;
             }
+
             .todo {
                 top: 105px !important;
+
                 .row.fixture-cont {
                     padding-top: 12px !important;
                 }
             }
         }
     }
+
     .fixture {
         .score-points {
             margin-top: 10px !important;
             font-size: 32px !important;
         }
+
         .team-head {
             font-size: 14px !important;
         }
     }
+
     .fix-logo {
         width: 100px !important;
         height: 100px !important;
     }
+
     .match-time h1 {
         font-size: 24px !important;
+
         .capital {
             font-size: 20px !important;
         }
@@ -706,126 +961,163 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-xs-max) {
+
+
     .opi {
         display: none;
     }
+
     .iheader h1.pink-smoke:before {
         display: none;
     }
+
     .navbar-fixed-bottom .navbar-collapse,
     .navbar-fixed-top .navbar-collapse {
         max-height: 400px;
         margin-top: 20px;
     }
+
     nav li.high:before {
         height: 22px;
         top: -4px;
         left: 0;
     }
+
     .merchandise-ticket {
         .matchnumber {
             .matcn-number-box {
                 border-bottom: 25px solid #ee4a9b;
                 width: 100px;
             }
+
             p {
                 font-size: 12px;
                 top: 4px;
             }
         }
+
         .fix-logo {
             height: 45px !important;
         }
+
         .match-time h1 {
             font-size: 11px !important;
             margin-bottom: 0;
         }
+
         .fix-logo.fix-logo-change img {
             width: 50%;
         }
+
         .fix-logo.fix-logo-change.vs img {
             margin-top: 10px;
         }
     }
+
     .language-holder {
         height: auto;
     }
+
     .language-holder .pull-right {
         float: none !important;
         margin: 5px 0 0;
-    } // .navbar-fixed-top {
+    }
+
+    // .navbar-fixed-top {
     //     top: 63px;
     // }
     .home {
         padding-top: 114px;
     }
+
     .gallery-tab ul li {
         border-right: 0;
     }
+
     .match-center+.btn-sucess {
         display: block;
         font-size: 7px;
         padding: 1px 2px;
     }
+
     .home-ribbon {
         font-size: 9px;
     }
+
     .pink-splasher {
         max-width: 170px;
         display: block;
         margin: 0 auto;
     }
+
     .mbanner {
         padding: 5px 0 0;
         font-size: 24px;
     }
+
     .pad30 ul li {
         padding: 0 12px;
     }
+
     .download-link {
         text-align: center;
     }
+
     .play-store img {
         margin: 0 auto;
     }
+
     .cell-img {
         padding-top: 50px;
     }
+
     .font-app {
         font-size: 25px;
     }
+
     .social-hub {
         h1 {
             font-size: 24px;
         }
     }
+
     .feed-social {
         background: transparent;
         padding: 5px 0;
     }
+
     .social-logo {
         padding-top: 20px;
     }
+
     .font-tbl {
         font-size: 26px;
     }
+
     .font-mob {
         font-size: 22px;
     }
+
     .font-new {
         font-size: 16px;
     }
+
     .font-stay {
         font-size: 18px;
     }
+
     .font-16 {
         font-size: 16px;
-    } //menu
+    }
+
+    //menu
     nav {
         li {
             padding-right: 0 !important;
             margin: 0 !important;
+
             a.menu-custom {
+
                 &.active,
                 &:after,
                 &:before {
@@ -833,195 +1125,250 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
                     display: none;
                 }
             }
+
             .dropdown-menu {
                 width: 100%;
                 border: 0;
                 position: relative;
+
                 li {
                     background: -webkit-linear-gradient(#4ac3ed, #217d9e) !important;
                     background: linear-gradient(#4ac3ed, #217d9e) !important;
+
                     a {}
                 }
             }
         }
     }
+
     .navbar-default .navbar-toggle {
         border: 0;
     }
+
     .navbar-nav {
         margin: 7.5px 0;
     }
+
     .navbar .col-md-10,
     .navbar-collapse {
         padding: 0;
-    } //end menu
+    }
+
+    //end menu
     .sliders .play-img {
         height: 50px;
         height: 200px;
         top: 0;
     }
+
     .sliders .carousel-control.left {
         background: none;
         filter: none;
         left: -47px;
         overflow: hidden;
     }
+
     .sliders .carousel-control.right {
         background: none;
         filter: none;
         right: -47px;
         overflow: hidden;
     }
+
     .pnl-title {
         font-size: 14px;
     }
+
     .fixture .panel-title .schedule {
         font-size: 20px;
     }
+
     .f-23 {
         font-size: 14px;
     }
+
     .mar-top {
         font-size: 14px;
     }
+
     .fancybox-nav {
         width: 18%;
     }
+
     .fancybox-next {
         right: -10px;
     }
+
     .fancybox-prev {
         left: -10px;
     }
+
     .marginzero {
         margin: 0;
     }
+
     .martop {
         margin: 15px 0 10px;
     }
+
     .mt-10 {
         margin-top: 10px;
     }
+
     .fl-left {
         float: left !important;
         margin-top: 16px;
     }
+
     .padzero {
         padding: 0;
     }
+
     .mb36 {
         margin-bottom: 15px;
     }
+
     .social-icon ul li a i {
         font-size: 15px;
         height: 28px;
         width: 29px;
     }
+
     .wallpapper-count {
         span {
             font-size: 15px;
         }
     }
+
     .font-28 {
         font-size: 20px;
     }
+
     .mt-l100 {
         margin: 50px 0 0;
     }
+
     .wallpapper-select {
         select {
             font-size: 14px;
         }
     }
+
     .wallpapper-download {
         img {
             height: 25px;
         }
     }
+
     .wall-title {
         padding: 0 0 30px;
     }
+
     .font-20 {
         font-size: 13px;
     }
+
     .font-14 {
         font-size: 12px;
     }
+
     .title-font {
         font-size: 20px;
     }
+
     .title-margin0 {
         margin: 5px 0 0;
     }
+
     .desc-padtop {
         padding-top: 22px;
     }
+
     .date-float {
         float: left !important;
         padding: 0;
     }
+
     .w70 {
         width: 100%;
     }
+
     .btn {
         font-size: 14px;
     }
+
     .font-base {
         p {
             font-size: 14px;
         }
     }
+
     .about-content {
         margin: 30px 0;
     }
+
     .panther-punch {
         img {
             width: 38px;
         }
     }
+
     .page-title {
         // bottom: -21px;
     }
+
     .title-name {
         padding: 9px 18px 7px;
+
         h1 {
             font-size: 12px;
         }
     }
+
     .cont-box {
         margin: 0 0 2px;
     }
+
     .block-img {
         height: 75px;
     }
+
     .mini-text {
         text-align: center;
         margin-top: 10px;
     }
+
     .news-logo {
         zoom: 0.6;
-    } //ruchi//
+    }
+
+    //ruchi//
     .m-min84 {
         margin-left: -17px;
     }
+
     .by-ticket,
     .by-merchandise {
         margin: 0;
         margin-top: 5px;
     }
+
     .img-list-box.gallery-album {
         width: 350px;
+
         img {
             width: 100%;
             position: static;
             transform: translateX(0);
         }
     }
+
     .pl-contest-rg {
         .padding0 {
             padding: 0 15px;
         }
     }
+
     .mobile-css {
         .text-line h4 {
             font-size: 11px;
@@ -1029,39 +1376,49 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             padding: 0;
             /*margin-top: -35px;*/
         }
+
         .sub-form {
             text-align: center;
+
             input {
                 width: 90% !important
             }
         }
     }
+
     .design {
         .all-movies {
             margin-left: 10%;
         }
     }
+
     .hello {
         li h3 {
             font-size: 16px;
         }
+
         .form {
             padding: 0;
         }
+
         .carts {
             padding: 40px 20px;
+
             a {
                 margin-right: 0;
             }
         }
     }
+
     .social-buttons .signs {
         margin-bottom: 15px;
     }
+
     .player-log {
         h4 {
             margin-left: 0;
         }
+
         .image {
             @include position(absolute,
             100px 0 null null);
@@ -1069,73 +1426,91 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             100px);
         }
     }
+
     .navbar-fixed-top {
         .mt20 {
             margin-top: 0;
         }
+
         .log-sign {
             float: right;
         }
     }
+
     .navbar-default .navbar-nav>.active>a {
         background-color: transparent;
     }
+
     .navbar-brand {
         img {
             width: 100px;
         }
     }
+
     .banner-title {
         margin-top: 125px;
     }
+
     .fix {
         h1 {
             width: 100px;
         }
     }
+
     .fixings {
         h1 {
             width: 180px;
         }
     }
+
     .line-after {
         &:after {
             right: -5px;
         }
     }
+
     .panther-punch {
         margin-bottom: -50px;
     }
+
     .mer-pan {
         margin-bottom: -30px;
     }
+
     .page-title {
         bottom: -50px;
     }
+
     .panthers-punch {
         margin-bottom: -30px;
     }
+
     .pl-contest-rg .padding0 {
         padding: 0;
     }
+
     .mob-icon {
         img {
             width: 106px;
         }
     }
+
     .navbar-brand {
         margin-left: 37%;
         margin-top: 5px;
         margin-bottom: 5px;
     }
+
     .home {
         padding-top: 102px;
     }
+
     .menu-changed {
         .log-sign {
             float: none !important;
             text-align: center;
         }
+
         .line-after {
             &:after {
                 height: 14px;
@@ -1143,6 +1518,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .nav {
         li {
             a {
@@ -1150,10 +1526,13 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             }
         }
     }
+
     .img-list-box.gallery-album {
         width: auto;
         height: auto;
-    } // .pl-link {
+    }
+
+    // .pl-link {
     //     width: 93%;
     // }
     // .pl-contest {
@@ -1162,115 +1541,163 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .menu-changed .line-after:after {
         height: 22px;
     }
+
     .mob-subscribe-bg {
         height: 70px;
         margin-top: 0;
     }
+
     .mob-icon {
         margin-top: -8px;
+
         img {
             width: 30px;
         }
     }
+
     .apps {
         padding-left: 34px;
         margin-top: -20px;
         vertical-align: middle;
     }
+
     .banner-title {
         margin-top: 99px;
-    } //player-inside//
+    }
+
+    //player-inside//
     .player-name {
-        top: 140px;
-        left: 0px;
+        top: 370px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         p {
             font-size: 23px;
+            line-height: 23px;
+            margin: 0;
         }
     }
+
+    .plays-jerseyno-type {
+        top: 420px;
+        right: 27%;
+        transform: translate(-50%, -50%);
+
+        .type-font {
+            font-size: 20px;
+            line-height: 40px !important;
+        }
+
+        .no-font {
+            font-size: 25px;
+        }
+    }
+
     .bg-players {
         .play-img {
-            @include size(200px,
-            280px);
+            @include size(170px,
+            370px);
             margin: 0 auto;
+
             img {
                 margin: 0 auto;
             }
         }
     }
+
     .player-inform {
         p {
             font-size: 13px;
         }
+
         span {
             font-size: 12px;
         }
     }
+
     .statistics h3,
     .statistics h1,
     .socials-hub h3,
     .socials-hub h1 {
         font-size: 25px;
     }
+
     .player-details li {
         font-size: 16px;
         width: 150px;
+
         &:before {
             content: initial;
         }
+
         &:after {
             content: initial;
         }
     }
+
     .player-backdrop:before,
     .player-backdrop:after {
         content: initial;
     }
+
     .current-about {
         p {
             font-size: 40px;
         }
+
         span {
             font-size: 17px !important;
         }
     }
+
     .currents-about p,
     .card-type p {
         font-size: 30px;
     }
+
     .player-details span {
         font-size: 16px;
         color: #4ecaf5;
     }
+
     .raid-status {
         p {
             display: inline-block;
             vertical-align: top;
             font-size: 26px;
         }
+
         span {
             display: inline-block;
             font-size: 16px;
         }
     }
+
     .currents-about {
         padding: 10% 0;
     }
+
     .player-details li {
         font-size: 16px;
         width: 160px;
         margin-left: -3px;
     }
+
     .player-backdrop {
         height: 350px;
     }
+
     .players-slider {
         .flex-direction-nav {
             display: none;
         }
     }
+
     .bbm {
         border-bottom: 1px solid #3b44a1;
-    } // .btm{
+    }
+
+    // .btm{
     //       border-top: 1px solid #3b44a1;
     // }
     //player-inside//
@@ -1278,19 +1705,25 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width:767px) {
+
+
     .dm-block {
         display: block;
     }
+
     .post-center {
         position: static;
         @include transform(translate(0%, 0%));
     }
+
     .onmob {
         display: block;
     }
+
     .ondesktop {
         display: none;
     }
+
     .appimageblock {
         /*margin-left: 75px;*/
         position: absolute;
@@ -1298,30 +1731,37 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         padding-left: 0px !important;
         margin-top: 0px !important;
     }
+
     .appiconimage {
         margin-left: 15px;
     }
+
     img.mobileappimage {
         width: 80px;
     }
+
     .mobile-css .text-line h4 {
         /* margin-left: 60px;*/
     }
+
     .page-title {
         bottom: -30px;
     }
 }
 
 @media (max-width: 480px) {
+
     // .news-logo {
     // zoom:0.5;
     // }
     .visible-xxs {
         display: block;
     }
+
     .mobile-css .text-line h4 {
         margin-left: 0px;
     }
+
     .appimageblock {
         /*margin-left: 75px;*/
         position: absolute;
@@ -1329,164 +1769,211 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         padding-left: 0px !important;
         margin-top: 0px !important;
     }
+
     .appiconimage {
         margin-left: 15px;
     }
+
     img.mobileappimage {
         width: 80px;
     }
+
     .pad30 ul li {
         padding: 0 12px;
     }
+
     .download-link {
         text-align: center;
     }
+
     .play-store img {
         margin: 0 auto;
     }
+
     .panthers {
         margin: 30px 0;
     }
+
     .demo-box img {
         width: auto !important;
-    } // .app-store img{
+    }
+
+    // .app-store img{
     //   width: auto !important;
     // }
     .cell-img {
         padding-top: 50px;
-    } // .font-app {
+    }
+
+    // .font-app {
     //   font-size: 25px;
     // }
     .font-app {
         font-size: 18px;
     }
+
     .social-hub {
         h1 {
             font-size: 24px;
         }
     }
+
     .odd-even tr {
         font-size: 13px;
     }
+
     .font-tbl {
         font-size: 20px;
     }
+
     .fix-logo {
         height: 120px;
     }
+
     .close-btn {
         position: absolute;
         right: 2px;
         top: 152px;
     }
+
     .news-logo.text-center {
         zoom: 0.6;
     }
+
     .new-images {
         height: 115px;
     }
+
     .flex-prev {
         left: 30px !important;
+
         &:before {
             background: url(/img/play-left.png)no-repeat;
             zoom: 0.5;
         }
     }
+
     .sliders .play-img {
         margin-bottom: -50px;
     }
+
     .modal-dialog {
         width: 75%;
         top: 0;
         @include transform(translate(-50%,
         -0%) !important);
     }
+
     .flex-next {
         &:before {
             background: url(/img/play-right.png)no-repeat;
             zoom: 0.5;
         }
     }
+
     .sliders .glyphicon-chevron-right:before {
         zoom: 0.5;
     }
+
     .sliders .glyphicon-chevron-left:before {
         zoom: 0.5;
     }
+
     .sliders .inner-data {
         padding: 50px 10px 15px;
     }
+
     .f30 {
         font-size: 14px;
     }
+
     .f25 {
         font-size: 13px;
     }
+
     .sliders .li-info {
         font-size: 13px;
     }
+
     .sliders .label-nation {
         font-size: 12px;
     }
+
     .slider .carousel-control {
         height: 40%;
     }
+
     .f-23,
     .mar-top {
         font-size: 12px;
     }
+
     .cont-box {
         .date {
             font-size: 16px;
         }
+
         .venu {
             font-size: 14px;
             margin-top: 2px;
         }
+
         .match {
             .fixture1 {
                 width: 20%;
             }
         }
+
         .badge-class {
             padding: 6px 10px;
+
             &:after {
                 width: 15px;
                 right: -8px;
             }
         }
+
         .list-item {
             width: 95%;
             margin-top: 64px;
             min-height: auto;
+
             .img-holder-left {
                 width: 50px;
                 height: 50px;
             }
+
             .cont-img {
                 padding-left: 60px;
                 min-height: 100px;
             }
+
             .desc {
                 padding-top: 2px;
+
                 p {
                     font-size: 10px;
                 }
             }
+
             .head-fixture {
                 padding-bottom: 2px;
             }
+
             .city {
                 font-size: 14px;
             }
         }
+
         h3.midd {
             font-size: 16px;
         }
     }
+
     .block-img {
         height: 60px;
     }
+
     .champion {
         img {
             height: auto;
@@ -1497,7 +1984,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 @media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (-webkit-min-device-pixel-ratio: 2) {
     .modal-dialog {
         width: 70%;
-    } //     .slider .carousel-control.right {
+    }
+
+    //     .slider .carousel-control.right {
     //     right: -48px;
     // }
     // .slider .carousel-control.left {
@@ -1509,6 +1998,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .slider .carousel-control.right {
         right: -35px;
     }
+
     .slider .carousel-control.left {
         left: -35px;
     }
@@ -1518,6 +2008,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .slider .carousel-control.right {
         right: -48px;
     }
+
     .slider .carousel-control.left {
         left: -48px;
     }
@@ -1527,6 +2018,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .sliders .carousel-control.right {
         right: -60px;
     }
+
     .sliders .carousel-control.left {
         left: -60px;
     }
@@ -1536,13 +2028,16 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .slider .carousel-control.right {
         right: -60px;
     }
+
     .slider .carousel-control.left {
         left: -60px;
     }
+
     .carousel-control .glyphicon-chevron-right,
     .carousel-control .icon-next {
         margin-right: -30px;
     }
+
     .carousel-control .glyphicon-chevron-left,
     .carousel-control .icon-next {
         margin-left: -30px;
@@ -1553,87 +2048,111 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .fixture .fixtures-done .team-head span {
         font-size: 13px !important;
     }
+
     .fixture .fixtures-done .team-head {
         padding-top: 10px !important;
     }
+
     .fixture .fixtures-done .match-center {
         margin-top: 30px !important;
     }
 }
 
 @media (max-width: 992px) {
+
     .gallery-tab ul li h1,
     .mobile-font-h1 {
         font-size: 24px;
     }
+
     .fixture .panel-title .schedule {
         font-size: 18px !important;
     }
+
     .fixture .team-head img {
         /*width: 55px!important;*/
         width: 47px !important;
     }
+
     .fixture .fixtures-done .team-head span {
         margin-top: 20px !important;
     }
+
     .fixture .team-head {
         font-size: 10px !important;
     }
+
     .fixture .score-points {
         margin-top: 15px !important;
         font-size: 26px !important;
     }
+
     .fixture .match-center {
         margin-top: 18px !important;
         font-size: 15px !important;
+
         i {
             margin-left: 5px !important;
             font-size: 25px !important;
         }
     }
+
     .fixture .team-head {
         font-size: 10px !important;
     }
+
     .fixture .score-points {
         margin-top: 20px !important;
         font-size: 20px !important;
     }
+
     .fixture .fixtures-done .fix-logos img {
         width: 70px !important;
     }
+
     .fixture .fixtures-done .vs img {
         width: 80px !important;
     }
+
     .fixture .fixtures-done .fix-logos span {
         font-size: 30px;
     }
+
     .fixture .fixtures-done .todo {
         top: 80px !important;
     }
+
     .topscore {
         font-size: 14px !important;
     }
+
     .head-pink {
         font-size: 14px !important;
     }
+
     .fixture .fixtures-done .fix-logos span {
         font-size: 30px !important;
     }
+
     .fixture .fixtures-done .fixture-match {
         top: 84% !important;
     }
+
     .fixture .fixtures-done .todo {
         top: 75px !important;
     }
+
     .fixture .fixtures-done .todo .row.fixture-cont {
         padding-top: 10px !important;
     }
+
     .fix-logo.vs {
         margin-top: 0 !important;
     }
 }
 
 @media (max-width: 767px) {
+
     //footer
     .spon {
         .arran {
@@ -1641,86 +2160,112 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
                 object-fit: none;
             }
         }
-    } // end footer
+    }
+
+    // end footer
     // ticket 
     .ticket-block {
         width: 80%;
         margin: 0 auto;
         padding: 10px;
-    } //ticket
+    }
+
+    //ticket
     .marg2 {
         margin-bottom: 2px !important;
     }
+
     a.navbar-brand {
         position: relative;
         z-index: 1;
     }
+
     .fixture .panel-title .schedule {
         font-size: 12px !important;
     }
+
     .fixture .team-head img {
         width: 45px !important;
     }
+
     .fixture .team-head {
         font-size: 10px !important;
     }
+
     .fixture .team-head img {
         width: 35px !important;
     }
+
     .fixture .fixtures-done .team-head span {
         margin-top: 15px !important;
     }
+
     .fixture .score-points {
         margin-top: 12px !important;
         font-size: 16px !important;
     }
+
     .fixture .match-center {
         margin-top: 12px !important;
         font-size: 12px !important;
     }
+
     .fixture .fixtures-done .fixture-match {
         min-height: 250px !important;
     }
+
     .fixture .fixtures-done .todo {
         top: 65px !important;
     }
+
     .fixture .fixtures-done .todo .row.fixture-cont {
         padding-top: 4px !important;
     }
+
     .contain-fixtures {
         width: 580px;
     }
+
     .fixture .fixtures-done .fixture-match {
         top: 64% !important;
     }
+
     .match-time h1 {
         font-size: 15px !important;
     }
+
     .fix-logo {
         width: 50px !important;
         height: 50px !important;
     }
+
     .email-foot {
         text-align: center;
     }
+
     .fixture .fixtures-done .team-head span {
         font-size: 13px !important;
     }
+
     .fixture .fixtures-done .team-head {
         padding-top: 0px !important;
     }
+
     .fixture .fixtures-done .match-center {
         margin-top: 10px !important;
     }
 }
 
 @media (max-width: 580px) {
-    .kittingPartner, //sponsors scss
+
+    .kittingPartner,
+    //sponsors scss
     .fmPartner,
     .multiplexPartner,
     .ticketingPartner {
         padding: 10px;
         min-height: 120px;
+
         img {
             padding: 5px;
             width: auto;
@@ -1728,7 +2273,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             max-width: 50%;
             max-height: 60px;
         }
-    } // .ticketingPartner {
+    }
+
+    // .ticketingPartner {
     //     margin-top: -10px;
     // }
     .associateSponsor {
@@ -1737,6 +2284,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             max-width: 100%;
         }
     }
+
     .sponsor_container {
         .spo_second_col {
             /* padding: 20px; */
@@ -1746,14 +2294,18 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
             width: auto;
             margin: auto;
         }
-    } //end of sponsors
+    }
+
+    //end of sponsors
     //footer sponsor starts here
     .foo_icon {
         width: 60%;
     }
+
     .foo_icon_first {
         width: 50%;
     }
+
     .foo_icon2 {
         padding: 5px;
         width: auto;
@@ -1761,120 +2313,155 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         max-width: 50%;
         max-height: 60px;
     }
+
     .n_pix_10 {
         margin-top: -10px;
-    } //footer sponsor ends here
+    }
+
+    //footer sponsor ends here
     .fixtures-make.pb {
         padding-top: 20px;
     }
+
     .merchandise-ticket {
         .fix-banner {
             width: 290px;
         }
+
         .mobile-img {
             height: 170px;
         }
+
         .vs {
             img {
                 width: 300px !important;
             }
         }
     }
+
     .mobile-hide {
         display: none;
     }
+
     .desktop-hide {
         display: block;
         text-align: center;
+
         .height-made {
             width: 290px;
             height: 170px;
         }
     }
+
     .contain-fixtures {
         width: auto;
     }
+
     .min-w {
         overflow: auto;
     }
+
     .over-fl {
         min-width: 320px;
         max-width: 480px;
     }
+
     .fixture .panel {
         width: 480px;
     }
+
     .fixture {
+
         // width: 320px;
         // overflow: hidden;
         .fixtures-done .todo {
             top: 55px !important;
         }
     }
+
     .fixture .fixtures-done .fixture-match {
         top: 56% !important;
     }
+
     .fixture .fixtures-done .todo .row.fixture-cont {
         padding-top: 3px !important;
     }
+
     .head-pink {
         font-size: 12px !important;
     }
+
     .fixture .fixtures-done .vs img {
         width: 60px !important;
     }
+
     .fixture .fixtures-done .fix-logos img {
         width: 50px !important;
     }
+
     .fixture .fixtures-done .todo {
         top: 52px !important;
     }
+
     .fixture .fixtures-done .vs {
         text-align: center;
         margin-top: -3px;
     }
+
     .fixture .score-points {
         font-size: 12px !important;
     }
+
     .fixture .panel-title .schedule {
         font-size: 10px !important;
     }
+
     .fixture .team-head img {
         display: none;
     }
+
     .fixture .match-center i {
         margin-left: 2px !important;
         font-size: 20px !important;
     }
+
     .fixture .fixtures-done .fix-logos span {
         font-size: 20px !important;
     }
+
     .fixture .fixtures-done .fixture-match {
         min-height: 180px !important;
     }
+
     .topscore {
         font-size: 12px !important;
     }
+
     .fixture .match-center {
         font-size: 8px !important;
     }
+
     .match-time h1 {
         font-size: 15px !important;
     }
+
     .fix-logo {
         width: 50px !important;
         height: 50px !important;
     }
+
     .li-footer {
         margin: 0 10px 10px 0;
         width: 25%;
     }
+
     .custom-list ul {
         padding: 0;
     }
 }
 
 @media (max-width: 420px) {
+
     //footer
     .spon_small {
         .arran {
@@ -1883,10 +2470,14 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
                 max-width: 70%;
             }
         }
-    } //footer end
+    }
+
+    //footer end
     .f-span {
         font-size: 10px;
-    } // .play-store img {
+    }
+
+    // .play-store img {
     //   margin: 0 auto;
     //   width: 50%;
     // }

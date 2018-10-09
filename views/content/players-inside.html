@@ -130,13 +130,16 @@
             <h3 class="text-center bold text-uppercase color-white">statistics</h3>
             <div class="player-details  text-center" ng-init="career = 1">
                 <ul class="list-inline">
-                    <li ng-click="career = 1" ng-class="{'activated': career == 1 }" ng-show="playerDetails.career.status == 1" style="text-transform:capitalize;cursor:pointer">
+                    <li ng-click="career = 1" ng-class="{'activated': career == 1 }" ng-show="playerDetails.career.status == 1"
+                        style="text-transform:capitalize;cursor:pointer">
                         career
                     </li>
-                    <li ng-click="career = 2" ng-class="{'activated': career == 2 }" ng-show="playerDetails.current.status == 1" style="text-transform:capitalize;cursor:pointer">
+                    <li ng-click="career = 2" ng-class="{'activated': career == 2 }" ng-show="playerDetails.current.status == 1"
+                        style="text-transform:capitalize;cursor:pointer">
                         current
                     </li>
-                    <li ng-click="career = 3" ng-class="{'activated': career == 3 }" ng-show=" playerDetails.lastseason.status == 1" style="text-transform:capitalize ;cursor:pointer">
+                    <li ng-click="career = 3" ng-class="{'activated': career == 3 }" ng-show=" playerDetails.lastseason.status == 1"
+                        style="text-transform:capitalize ;cursor:pointer">
                         last season
                     </li>
                 </ul>
@@ -660,18 +663,18 @@
 
             <!--//desktop-->
             <div class="juicer  hidden-sm hidden-xs">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='900' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='900' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
             <!--//ipad-->
             <div class="juicer visible-sm hidden-md hidden-xs">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='700' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='700' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
             <!--iphone-->
             <div class="juicer visible-xs hidden-md hidden-sm">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='300' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='300' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
 
 
@@ -740,8 +743,8 @@
     <div class="container">
 
         <h1 class=" text-center bold text-uppercase color-primary">also view :</h1>
-        <flex-slider flex-slide="data in player track by $index" prev-text="" next-text="" class="" item-width="350" item-margin="25"
-            animation="slide" slideshow="true" slideshowSpeed="500">
+        <flex-slider flex-slide="data in player track by $index" prev-text="" next-text="" class="" item-width="350"
+            item-margin="25" animation="slide" slideshow="true" slideshowSpeed="500">
             <!--<li ui-sref="players-inside({id:banner.id})">
 
              <img ng-src="{{banner.smallimage | serverimage1}}" class="img-responsive">
