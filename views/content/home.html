@@ -368,21 +368,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gradient-bar homeie" ng-show="latestMatchOn">
-                                        <div class="row">
-                                            <div class="col-md-4 padding0 col-xs-4">
-                                                <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1
-                                                    || '0'}}</div>
+                                </div>
+                                <div class="gradient-bar homeie" ng-show="latestMatchOn">
+                                    <div class="row">
+                                        <div class="col-md-4 padding0 col-xs-4">
+                                            <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1
+                                                || '0'}}</div>
+                                        </div>
+                                        <div class="col-md-4 padding0 col-xs-4 fz24">
+                                            <div class="match-time latestmatchtime">
+                                                {{latestmatch.totalmatchtime}}
                                             </div>
-                                            <div class="col-md-4 padding0 col-xs-4 fz24">
-                                                <div class="match-time latestmatchtime">
-                                                    {{latestmatch.totalmatchtime}}
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 padding0 col-xs-4">
-                                                <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2
-                                                    || '0'}}</div>
-                                            </div>
+                                        </div>
+                                        <div class="col-md-4 padding0 col-xs-4">
+                                            <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2
+                                                || '0'}}</div>
                                         </div>
                                     </div>
                                     <!--<div class="clearfix"></div>
@@ -535,7 +535,8 @@
                     <div class="pl-contest-rg text-center">
                         <ul class="padding0 margin0">
                             <li class="nomarg">
-                                <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn('Game')">
+                                <!-- <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn('Game')"> -->
+                                <div class="img-list-box gallery-album">
                                     <img src="img/home/Templatesgame.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">{{'Games' |translate}}</h4>

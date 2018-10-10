@@ -1190,6 +1190,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     $scope.seasons = data.data;
                     var firstEle = _.head(data.data);
                     $scope.season = firstEle.id;
+                    $scope.seasons = _.sortBy(data.data, function (n) {
+                        return -1 * n;
+                    });
+                    // $scope.seasons = data.data;
+                    $scope.season = $scope.seasons[0].id;
                     //var firstseason=data.data[0];
                     //console.log(firstseason.id);
 
@@ -1879,22 +1884,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
             if (x.slug) {
                 console.log("slug");
-                insiderEmbed.init({      
-                    mountId  : 'insider-embed',
-                          eventSlug        : x.slug,
-                          frameHeight       : 650,
-                          merchantId       : "5981711f07502f3d7b989f2e"    
-                }); 
+                insiderEmbed.init({
+                    mountId: 'insider-embed',
+                    eventSlug: x.slug,
+                    frameHeight: 650,
+                    merchantId: "5981711f07502f3d7b989f2e"
+                });
 
             } else {
                 console.log("embed");
-                insiderEmbed.init({      
-                    mountId  : 'insider-embed',
-                        embedPath: x.embed,
-                          frameHeight       : 650,
-                          merchantId       : "5981711f07502f3d7b989f2e"    
-                }); 
-            }    
+                insiderEmbed.init({
+                    mountId: 'insider-embed',
+                    embedPath: x.embed,
+                    frameHeight: 650,
+                    merchantId: "5981711f07502f3d7b989f2e"
+                });
+            }
             // insiderEmbed.init({      
             //     mountId  : 'insider-embed',
             //           eventSlug        : x.slug,

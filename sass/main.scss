@@ -674,17 +674,44 @@
     }
 
     .li-footer {
-        height: 60px;
-        overflow: hidden;
-        margin: 7px 20px 5px;
-        vertical-align: sub;
+        height: 95px;
+        margin: 5px 18px 0px;
+        vertical-align: middle;
+
+        position: relative;
+
+        &:after {
+            content: "";
+            border-right: 1px solid #928787;
+            position: absolute;
+            right: -22px;
+            height: 70px;
+            top: 20px;
+
+        }
 
         img {
             max-width: 100%;
             max-height: 34px;
             vertical-align: middle;
         }
+
+        .p20 {
+            padding-top: 15px;
+            display: block;
+        }
+
+        .h60 {
+            max-height: 60px !important;
+        }
     }
+
+    .li-footer:last-child:after {
+        content: "";
+        border-right: 1px solid transparent !important;
+    }
+
+
 
     .f-span {
         display: block;
@@ -1245,7 +1272,7 @@
     }
 
     .name-sponser {
-        padding-top: 23px;
+        padding-top: 40px;
     }
 
     .new-images {
@@ -3868,7 +3895,7 @@
         .play-img {
             position: relative;
             @include size(400px,
-            550px); // margin: -50px auto 100px;
+            510px); // margin: -50px auto 100px;
             margin-left: 50px;
 
             img {
@@ -3880,8 +3907,8 @@
     .plays-names {
         // transform: rotate(-10deg);
         position: absolute;
-        top: 245px;
-        right: 500px;
+        top: 285px;
+        right: 450px;
         width: 30%;
         font-family: "Dreamwalker";
     }
@@ -3961,8 +3988,8 @@
 
     .plays-jerseyno-type {
         position: absolute;
-        top: 330px;
-        right: 210px;
+        top: 400px;
+        right: 170px;
         width: 24%;
 
         p {
@@ -3971,11 +3998,11 @@
         }
 
         .no-font {
-            font-size: 100px;
+            font-size: 80px;
         }
 
         .type-font {
-            font-size: 50px;
+            font-size: 40px;
             line-height: 5px !important;
         }
     }
