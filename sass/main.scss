@@ -3141,7 +3141,7 @@
         background: #4fcaf4;
         width: 100%;
         text-align: center;
-        cursor: pointer;
+        // cursor: pointer;
 
         &:hover {
             background: #b41e72;
@@ -4696,6 +4696,12 @@
 
     .visible-xxs {
         display: none;
+    }
+
+    .head-table.head-position {
+        position: absolute;
+        top: 0px;
+        width: 100%;
     }
 
     @import "style";
