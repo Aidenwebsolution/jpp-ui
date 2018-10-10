@@ -967,6 +967,11 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
 @media (max-width: $screen-xs-max) {
 
+    .cycle-mobile {
+        display: block !important;
+        width: 55% !important;
+        margin: 0 auto !important;
+    }
 
     .opi {
         display: none;
