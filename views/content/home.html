@@ -18,12 +18,14 @@
             <div class="col-sm-12 padding0">
                 <div class="image-holder parent-height">
                     <uib-carousel interval="3000">
-                        <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'" active="new.active" class="noshow english wallpapper-img">
+                        <uib-slide ng-repeat="new in sliderdata.english track by $index" ng-if="currentlang == 'en'"
+                            active="new.active" class="noshow english wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
                         </uib-slide>
-                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'" active="new.active" class="noshow hindi wallpapper-img">
+                        <uib-slide ng-repeat="new in sliderdata.hindi track by $index" ng-if="currentlang == 'hi'"
+                            active="new.active" class="noshow hindi wallpapper-img">
                             <a href="{{new.link}}">
                                 <img ng-src="{{new.image | serverimage}}" class="gallery-image" alt="Jaipur Pink Panthers">
                             </a>
@@ -66,15 +68,16 @@
                 <div class="col-md-12 hidden-xs">
                     <div class="custom-list box-black text-center">
                         <ul class="new-item-sec new-listing-name margin0">
-                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}"
-                                animation="slide" animationloop="true" class="news-below">
+                            <li ng-if="currentlang=='en'" ng-repeat="new in sliderdata.english track by $index"
+                                ng-click="changeSlide(new);" ng-class="{'active': new.active == true}" animation="slide"
+                                animationloop="true" class="news-below">
                                 <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
                                 <h3 class="margin0 uppercase-text ">
                                     {{new.name}}
                                 </h3>
                             </li>
-                            <li ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);" ng-class="{'active': new.active == true}"
-                                animation="slide" animationloop="true" class="news-below">
+                            <li ng-if="currentlang=='hi'" ng-repeat="new in sliderdata.hindi track by $index" ng-click="changeSlide(new);"
+                                ng-class="{'active': new.active == true}" animation="slide" animationloop="true" class="news-below">
                                 <img src="img/home/panther-top.png" alt="Jaipur Pink Panthers" class="hover-plams">
                                 <h3 class="margin0 uppercase-text ">
                                     {{new.name}}
@@ -129,77 +132,94 @@
         <ul class="list-inline lined" mycircle style="width:18000px;">
             <li>
                 <span class="color-pink bold">Top Fan Tweets:
-                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do
+                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can
+                do
                 anything if we believe truly ourselves
                 <span>by @renceabishek</span>
             </li>
-            <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack
+            <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther
+                n attack
                 them..come on..#LePanga
                 <span>by ‏@sivakumar1252</span>
             </li>
-            <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har ke Bad
+            <li>@JaipurPanthers Ye Ek Khel Hai Har/Jeet to Chalti raheti Hai.be positive. New day new game.#LePanga Har
+                ke Bad
                 Hi Jeet Hai.#RoarForPanthers
                 <span>by ‏‏@janidipak40</span>
             </li>
-            <li>@SrBachchan one loss for @JaipurPanthers but 2014 Champ come back with louder #Roar #Roaringforvictory #RoarLionRoar
+            <li>@SrBachchan one loss for @JaipurPanthers but 2014 Champ come back with louder #Roar #Roaringforvictory
+                #RoarLionRoar
                 <span>by ‏‏@‏KushDaunawat14</span>
             </li>
-            <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the #SMILING_KILLER
+            <li>I believe on @JaipurPanthers They will not let us down. Yesssss we will do it. My fav. #jasvir the
+                #SMILING_KILLER
                 COme on @JaipurPanthers
                 <span>by ‏‏@bmraj100</span>
             </li>
-            <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther @JaipurPanthers
+            <li>@BachchanJrFC Saamne Wale Ko Dikha Do Kya Hota Hai Fear, Bhaari Padega Uspe Aaj Har Ek Panther
+                @JaipurPanthers
                 @juniorbachchan #LePanga
                 <span>
                     by ‏‏@nayangotecha</span>
             </li>
-            <li>@JaipurPanthers #LePanga go for it boyss you can n have done this! All the best n #RoarForPanthers @juniorbachchan
+            <li>@JaipurPanthers #LePanga go for it boyss you can n have done this! All the best n #RoarForPanthers
+                @juniorbachchan
                 <span>by ‏‏@Ruth4ashab</span>
             </li>
-            <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga #Panthers
+            <li>#RoarForPanthers --We will Drip Last blood Of Our #PinkBlood But will Never Give Up #Matchday Panga
+                #Panthers
                 #LePanga @JaipurPanthers
                 <span>by ‏‏@Dhillon_WWE</span>
             </li>
-            <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master #RoarForPanthers #LePanga
+            <li>@JaipurPanthers #LePanga #JasvirSingh's presence makes a difference. The #EmptyRaid master
+                #RoarForPanthers #LePanga
                 @ProKabaddi
                 <span>by ‏‏@arnavini</span>
             </li>
-            <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start @JaipurPanthers
+            <li>The smile arrived late but good to see it stay there till the end @juniorbachchan! Solid start
+                @JaipurPanthers
                 at home @ProKabaddi! #LePanga
                 <span>by ‏‏@suhailchandhok</span>
             </li>
-            <li>#Jasvir from @JaipurPanthers plays #Kabaddi similarly to how @virendersehwag plays #Cricket @ProKabaddi #LePanga
+            <li>#Jasvir from @JaipurPanthers plays #Kabaddi similarly to how @virendersehwag plays #Cricket @ProKabaddi
+                #LePanga
                 <span>by ‏‏@jay_jumbo</span>
             </li>
-            <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder we #roarforPanthers
+            <li>are you kidding me #SmilingAssasin #jasvirSingh, 0 points for lon and 5 points in one raid. No wonder
+                we #roarforPanthers
                 @JaipurPanthers
                 <span>by ‏‏@ArvindSivdas</span>
             </li>
             <li>The Champions roared and how! Yayyy congratulations @JaipurPanthers @juniorbachchan.. Woo-hoo!! 😍💜😘
                 <span>by ‏‏@filmykiida</span>
             </li>
-            <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink Panthers se
+            <li>@JaipurPanthers @juniorbachchan superb amazing ab se bas jeetna jeetna only jeetna. Ab Jaipur pink
+                Panthers se
                 #LePanga
                 <span>by ‏‏@tanujasamar1994</span>
             </li>
             <li>So... They can stop us? No no no! @juniorbachchan #RoarForPanthers #ProKabaddi @JaipurPanthers
                 <span>by ‏‏@iMichelle89</span>
             </li>
-            <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai hum TAIYAAR
+            <li>@ProKabaddi #LePanga Kar diya hai Humne JEET ka agaaz ab @JaipurPanthers ka hoga waar Jeet ne liye hai
+                hum TAIYAAR
                 Beware from our PRAHAAR..
                 <span>by ‏‏@TweetstarSanjay</span>
             </li>
             <li>@JaipurPanthers Now it's time to roar and tell others why r we season 1 winner.. #GoPanther #LePanga
                 <span>by ‏‏@shahi07</span>
             </li>
-            <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our #HARDWORK. COME
+            <li>I will not say BEST OF LUCK rather I would like to say ALL THE BEST bcoz we make our LUCK by our
+                #HARDWORK. COME
                 ON @JaipurPanthers
                 <span>by ‏‏@bmraj100</span>
             </li>
-            <li>brain &amp; brawn will lead @JaipurPanthers @PuneriPaltan #LePanga #KhelBadlega #roarforpanthers @juniorbachchan
+            <li>brain &amp; brawn will lead @JaipurPanthers @PuneriPaltan #LePanga #KhelBadlega #roarforpanthers
+                @juniorbachchan
                 <span>by ‏‏@Khel_Gyani</span>
             </li>
-            <li>@JaipurPanthers Play Safe, Play Well. Jasvir is in the house. #RoarForPanthers @juniorbachchan @bunty_walia
+            <li>@JaipurPanthers Play Safe, Play Well. Jasvir is in the house. #RoarForPanthers @juniorbachchan
+                @bunty_walia
                 <span>by ‏‏@NiTiSHmurthy</span>
             </li>
         </ul>
@@ -222,7 +242,8 @@
                         -->
 
                     <a href="{{journeyData.link}}" target="_blank">
-                        <img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="full-image" alt="Champions Patna Pirates">
+                        <img ng-if="journeyData.status == '1'" ng-src="{{journeyData.image | serverimage1}}" class="full-image"
+                            alt="Champions Patna Pirates">
                     </a>
                     <!-- ng-if="journeyData.status == '2'" condition> -->
                     <div class="white-line-pad" ng-if="journeyData.status == '2'">
@@ -236,7 +257,8 @@
                                 <div class="points-table">
 
                                     <div class="head-table ">
-                                        <h3 class="color-white font-tbl" style="    margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone A</h3>
+                                        <h3 class="color-white font-tbl" style="    margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone
+                                            A</h3>
                                     </div>
                                     <table class="table grad-table">
                                         <thead>
@@ -268,7 +290,8 @@
                                         </tbody>
                                     </table>
                                     <div class="head-table ">
-                                        <h3 class="color-white font-tbl" style="margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone B</h3>
+                                        <h3 class="color-white font-tbl" style="margin-left: 20px; margin-top: 8px; margin-bottom: 0px;">Zone
+                                            B</h3>
                                     </div>
                                     <table class="table grad-table">
                                         <thead>
@@ -313,7 +336,8 @@
                         <img ng-src="img/{{'champion'|translate}}.jpg" class="img-responsive" alt="Champions Patna Pirates">
                     </div> -->
                     <a href="{{congratulationData.link}}" target="_blank">
-                        <img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}" class="full-image" alt="Champions Patna Pirates">
+                        <img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}"
+                            class="full-image" alt="Champions Patna Pirates">
                     </a>
                     <div class="position-center">
                         <div class="nxt-match post-center white-line-pad" ng-if="congratulationData =='No data found' || congratulationData.status !='1' ">
@@ -346,7 +370,8 @@
                                 <div class="gradient-bar homeie" ng-show="latestMatchOn">
                                     <div class="row">
                                         <div class="col-md-4 padding0 col-xs-4">
-                                            <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1 || '0'}}</div>
+                                            <div class="scorer text-center {{latestmatch.team1|spaceToDash}}">{{latestmatch.score1
+                                                || '0'}}</div>
                                         </div>
                                         <div class="col-md-4 padding0 col-xs-4 fz24">
                                             <div class="match-time latestmatchtime">
@@ -354,7 +379,8 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 padding0 col-xs-4">
-                                            <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2 || '0'}}</div>
+                                            <div class="scorer text-center {{latestmatch.team2|spaceToDash}}">{{latestmatch.score2
+                                                || '0'}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -429,7 +455,8 @@
                                 <div class="text-center button-set">
                                     <div class="text-center display-inline spacing-lr">
                                         <!--ng-show="latestMatchOn"-->
-                                        <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn" ng-if="latestmatch.ishome==1" target="_blank">BOOK TICKETS</a>
+                                        <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn" ng-if="latestmatch.ishome==1"
+                                            target="_blank">BOOK TICKETS</a>
                                     </div>
                                     <div class="text-center display-inline spacing-lr">
                                         <!--ng-show="latestMatchOn"-->
@@ -506,7 +533,8 @@
                     <div class="pl-contest-rg text-center">
                         <ul class="padding0 margin0">
                             <li class="nomarg">
-                                <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn('Game')">
+                                <!-- <div class="img-list-box gallery-album" ng-click="isCheckLoggedIn('Game')"> -->
+                                <div class="img-list-box gallery-album">
                                     <img src="img/home/Templatesgame.jpg" alt="Jaipur Pink Panthers">
                                     <div class="cn-title">
                                         <h4 class="uppercase-text color-white">{{'Games' |translate}}</h4>
@@ -558,7 +586,8 @@
                     <div class="display-inline text-line pt30s apps">
                         <!--<h4 class="uppercase-text color-black font-bold">{{'enter your mobile number' | translate}} </h4>
                         <h4 class="uppercase-text color-black font-bold">{{'to download jpp app'|translate}}</h4>-->
-                        <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and android'|translate}}</h4>
+                        <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and
+                            android'|translate}}</h4>
                     </div>
                 </div>
                 <!--<div class="col-md-4 col-xs-7">
@@ -575,7 +604,8 @@
                 <div class="col-md-4 col-sm-5 hidden-xs float-right">
                     <div class="pt40s">
                         <div class="display-inline social-img">
-                            <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android"
+                                target="_blank">
                                 <img src="img/play.png" alt="Jaipur Pink Panthers" class="">
                             </a>
                         </div>
@@ -605,10 +635,12 @@
                     <div class="display-inline text-line pt30s apps appimageblock">
                         <!--<h4 class="uppercase-text color-black font-bold">{{'enter your mobile number' | translate}} </h4>
                         <h4 class="uppercase-text color-black font-bold">{{'to download jpp app'|translate}}</h4>-->
-                        <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and android'|translate}}</h4>
+                        <h4 class="uppercase-text color-black font-bold">{{'Download the JPP App on ios and
+                            android'|translate}}</h4>
                         <div class="appiconimage">
                             <div class="display-inline social-img">
-                                <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android" target="_blank">
+                                <a href="https://play.google.com/store/apps/details?id=com.jaipurpinkpanthers.android"
+                                    target="_blank">
                                     <img src="img/play.png" alt="Jaipur Pink Panthers" class="mobileappimage">
                                 </a>
                             </div>
@@ -774,18 +806,18 @@
             </div>
             <!--//desktop-->
             <div class="juicer  hidden-sm hidden-xs">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='900' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='900' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
             <!--//ipad-->
             <div class="juicer visible-sm hidden-md hidden-xs">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='700' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='700' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
             <!--iphone-->
             <div class="juicer visible-xs hidden-md hidden-sm">
-                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe' frameborder='0'
-                    width='300' height='1000' style='display:block;margin:0 auto;'></iframe>
+                <iframe src='https://www.juicer.io/api/feeds/jaipurpinkpanthers-66a7872d-12a0-44db-a8aa-daca0f6938a1/iframe'
+                    frameborder='0' width='300' height='1000' style='display:block;margin:0 auto;'></iframe>
             </div>
             <!-- juicer code for social hub -->
             <!-- juicer code for social hub -->

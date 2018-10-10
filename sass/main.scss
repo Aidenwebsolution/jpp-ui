@@ -674,10 +674,10 @@
     }
 
     .li-footer {
-        height: 60px;
-        // overflow: hidden;
-        margin: 7px 20px 5px;
-        vertical-align: sub;
+        height: 95px;
+        margin: 5px 18px 0px;
+        vertical-align: middle;
+
         position: relative;
 
         &:after {
@@ -685,7 +685,7 @@
             border-right: 1px solid #928787;
             position: absolute;
             right: -22px;
-            height: 40px;
+            height: 70px;
             top: 20px;
 
         }
@@ -694,6 +694,15 @@
             max-width: 100%;
             max-height: 34px;
             vertical-align: middle;
+        }
+
+        .p20 {
+            padding-top: 15px;
+            display: block;
+        }
+
+        .h60 {
+            max-height: 60px !important;
         }
     }
 
@@ -1263,7 +1272,7 @@
     }
 
     .name-sponser {
-        padding-top: 23px;
+        padding-top: 40px;
     }
 
     .new-images {
