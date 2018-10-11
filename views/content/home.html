@@ -339,30 +339,32 @@
                         <img ng-if="congratulationData.status == '1'" ng-src="{{congratulationData.image | serverimage1}}"
                             class="full-image" alt="Champions Patna Pirates">
                     </a>
+                    <div class="head-table head-position text-center">
+                        <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
+                        <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
+          -->
+                        <h1 class="color-white font-tbl text-uppercase">{{latestmatch.level | translate}}</h1>
+                    </div>
                     <div class="position-center">
                         <div class="nxt-match post-center white-line-pad" ng-if="congratulationData =='No data found' || congratulationData.status !='1' ">
-                            <div class="head-table text-center">
-                                <h1 class="color-white font-tbl text-uppercase" ng-hide="latestMatchOn">{{latestmatch.matchtitle}}</h1>
-                                <!--<h1 class="color-white font-tbl" ng-show="latestMatchOn">{{'MATCH UPDATE'|translate}}</h1>
-                  -->
-                                <h1 class="color-white font-tbl text-uppercase">{{latestmatch.level | translate}}</h1>
-                            </div>
-                            <div class="match-schd  pt530">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                                            <div class="new-logo">
-                                                <img ng-src="{{latestmatch.teamimage1|serverimage}}" class="img-responsive">
+                            <div class="match-update">
+                                <div class="match-schd  pt530">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                                <div class="new-logo">
+                                                    <img ng-src="{{latestmatch.teamimage1|serverimage}}" class="img-responsive">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                                            <div class="mt30">
-                                                <img src="img/object/back-vs.png" class="img-responsive">
+                                            <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                                <div class="mt30">
+                                                    <img src="img/object/back-vs.png" class="img-responsive">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 padding0 col-sm-4 col-xs-4">
-                                            <div class="new-logo">
-                                                <img ng-src="{{latestmatch.teamimage2|serverimage}}" class="img-responsive">
+                                            <div class="col-md-4 padding0 col-sm-4 col-xs-4">
+                                                <div class="new-logo">
+                                                    <img ng-src="{{latestmatch.teamimage2|serverimage}}" class="img-responsive">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -383,18 +385,18 @@
                                                 || '0'}}</div>
                                         </div>
                                     </div>
+                                    <!--<div class="clearfix"></div>
+                      <div class="text-center" ng-show="latestMatchOn">
+                        <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
+                      </div>-->
                                 </div>
-                                <!--<div class="clearfix"></div>
-                  <div class="text-center" ng-show="latestMatchOn">
-                    <a ui-sref="fixtures({id:1})" class="btn btn-sucess big-btn" target="_blank">Match Report</a>
-                  </div>-->
-                            </div>
-                            <div class="text-center color-white stadiumdetail">
-                                <h4 class="text-capitalize  font-bold ">
-                                    {{latestmatch.stadium}}
-                                </h4>
-                                <span class="text-uppercase">{{latestmatch.matchdate}},</span>
-                                <span>{{latestmatch.matchtime}} (IST)</span>
+                                <div class="text-center color-white stadiumdetail">
+                                    <h4 class="text-capitalize  font-bold ">
+                                        {{latestmatch.stadium}}
+                                    </h4>
+                                    <span class="text-uppercase">{{latestmatch.matchdate}},</span>
+                                    <span>{{latestmatch.matchtime}} (IST)</span>
+                                </div>
                             </div>
                             <!--<div class="text-center color-white" >
     
