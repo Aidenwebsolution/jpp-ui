@@ -3895,8 +3895,9 @@
         .play-img {
             position: relative;
             @include size(400px,
-            510px); // margin: -50px auto 100px;
+            600px); // margin: -50px auto 100px;
             margin-left: 50px;
+            z-index: 9;
 
             img {
                 width: 100%; // margin: 0 0 0 90px;
@@ -3906,18 +3907,27 @@
 
     .plays-names {
         // transform: rotate(-10deg);
-        position: absolute;
-        top: 285px;
-        right: 450px;
-        width: 30%;
+        // position: absolute;
+        // top: 285px;
+        // right: 450px;
+        // width: 30%;
         font-family: "Dreamwalker";
+    }
+
+    .d-flex {
+        display: flex;
+
+    }
+
+    .align-items-center {
+        align-items: center;
     }
 
     .player-details {
         color: $white; // font-weight: 600;
         font-family: $font-family-sans-serif;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
 
         p {
             font-size: 36px;
@@ -3977,7 +3987,9 @@
         // position: absolute;
         // top: 170px;
         // left: 200px;
+        margin-left: -30px;
         font-family: "Dreamwalker";
+        margin-top: 50px;
 
         p {
             font-size: 130px;
@@ -3987,10 +3999,12 @@
     }
 
     .plays-jerseyno-type {
-        position: absolute;
-        top: 400px;
-        right: 170px;
-        width: 24%;
+        // position: absolute;
+        // top: 400px;
+        // right: 170px;
+        // width: 24%;
+        margin-top: 140px;
+        margin-left: 20px;
 
         p {
             font-family: "Dreamwalker";

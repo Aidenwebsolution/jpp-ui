@@ -8,6 +8,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 // }
 // }
 @media (max-width: $screen-lg) {
+    .plays-jerseyno-type {
+        margin-top: 85px;
+    }
 
     .plays-jerseyno-type .no-font {
         font-size: 50px;
@@ -29,9 +32,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
 
     .plays-names {
-        position: absolute;
-        top: 280px;
-        right: 385px;
+        // position: absolute;
+        // top: 280px;
+        // right: 385px;
     }
 
     nav li {
@@ -109,6 +112,8 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-md-max) {
+
+
     .font-app {
         font-size: 24px;
     }
@@ -240,13 +245,21 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
     }
 
-    .plays-names {
-        right: 300px;
-    }
+    // .plays-names {
+    //     right: 300px;
+    // }
 
     .plays-jerseyno-type {
-        top: 325px;
-        right: 120px;
+
+        margin-top: 85px;
+        margin-left: 0;
+
+        /* text-align: center; */
+        width: 100%;
+
+        .text-right {
+            text-align: center !important;
+        }
 
         .no-font {
             font-size: 45px;
@@ -966,6 +979,14 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 }
 
 @media (max-width: $screen-xs-max) {
+    .row-flex {
+        display: block;
+    }
+
+    .player-name {
+        margin-left: 0;
+        width: 100%;
+    }
 
     .cycle-mobile {
         display: block !important;
@@ -1582,10 +1603,6 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
     //player-inside//
     .player-name {
-        top: 370px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
         p {
             font-size: 23px;
             line-height: 23px;
@@ -1594,9 +1611,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
 
     .plays-jerseyno-type {
-        top: 420px;
-        right: 27%;
-        transform: translate(-50%, -50%);
+
 
         .type-font {
             font-size: 20px;
@@ -1611,7 +1626,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .bg-players {
         .play-img {
             @include size(170px,
-            370px);
+            240px);
             margin: 0 auto;
 
             img {

@@ -19,23 +19,31 @@
                 </li>
             </ul>
         </div>
-        <div class="player-name plays-names player-details">
+        <div class="row-flex">
+            <div class="col-flex">
+                <div class="play-img">
+                    <img ng-src="{{playerDetails.bigimage | serverimage1}}" alt="">
 
-            <p class=" text-center  text-uppercase color-white">{{playerDetails.name|translate}}</p>
+                </div>
+            </div>
+            <div class="col-flex d-flex align-items-center">
+                <div class="player-name plays-names player-details">
 
-            <!-- <p class=" text-center bold text-uppercase color-white">02</p>
-            <p class=" text-center bold text-uppercase color-white">jasvir singh</p>
-            <p class=" text-center bold text-uppercase color-white">raider</p> -->
-        </div>
-        <div class=" plays-jerseyno-type ">
-            <p class=" text-center  text-uppercase color-white no-font">{{playerDetails.jerseyno|translate}}</p>
-            <p class=" text-center  text-uppercase color-white type-font">{{playerDetails.type|translate}}</p>
+                    <p class=" text-center  text-uppercase color-white">{{playerDetails.name|translate}}</p>
+
+                    <!-- <p class=" text-center bold text-uppercase color-white">02</p>
+                            <p class=" text-center bold text-uppercase color-white">jasvir singh</p>
+                            <p class=" text-center bold text-uppercase color-white">raider</p> -->
+                </div>
+            </div>
+            <div class="col-flex d-flex align-items-center">
+                <div class=" plays-jerseyno-type ">
+                    <p class=" text-right  text-uppercase color-white no-font">{{playerDetails.jerseyno|translate}}</p>
+                    <p class=" text-right  text-uppercase color-white type-font">{{playerDetails.type|translate}}</p>
+                </div>
+            </div>
         </div>
 
-        <div class="play-img">
-            <img ng-src="{{playerDetails.bigimage | serverimage1}}" alt="">
-            <!-- <img src="img/players/sample.png" alt=""> -->
-        </div>
         <div class="player-details player-inform text-center">
             <div class="row-flex">
                 <div class="col-flex">
