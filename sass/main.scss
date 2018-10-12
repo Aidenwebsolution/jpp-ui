@@ -4,6 +4,7 @@
     @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
     @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
     @import "../bower_components/flexslider/flexslider.css";
+    @import "../bower_components/fancybox/dist/jquery.fancybox";
     @import "../bower_components/fancyBox/source/jquery.fancybox.css";
     @import "../bower_components/fancyBox/source/helpers/jquery.fancybox-thumbs.css";
     @import "../bower_components/font-awesome/css/font-awesome.min.css";
@@ -1262,6 +1263,10 @@
         background-image: url("../img/fancybox_sprite.png");
     }
 
+    .fancybox-inner img {
+        opacity: 1;
+    }
+
     .border-player {
         border: 1px solid #B41E72;
         z-index: 999;
@@ -1269,6 +1274,10 @@
         width: 60%;
         text-align: center;
         margin: 0 auto;
+    }
+
+    .mh-45 {
+        max-height: 45px !important;
     }
 
     .name-sponser {

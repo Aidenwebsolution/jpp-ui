@@ -1,27 +1,27 @@
 <div ng-right-click oncontextmenu="return false;" class="disableSave">
-<section>
-  <div class="banner-title">
-    <img src="img/banner/gallery.jpg" class="img-responsive" title="gallery" alt="Jaipur Pink Panthers">
-    <section>
-      <div class="page-title text-center">
-        <div class="border-blue"></div>
-        <div class="panther-punch">
-          <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
-        </div>
-        <div class="title-name ">
+  <section>
+    <div class="banner-title">
+      <img src="img/banner/gallery.jpg" class="img-responsive" title="gallery" alt="Jaipur Pink Panthers">
+      <section>
+        <div class="page-title text-center">
+          <div class="border-blue"></div>
+          <div class="panther-punch">
+            <img src="img/object/panther-punch.png" title="Panther-Punch" alt="Jaipur Pink Panthers">
+          </div>
+          <div class="title-name ">
             <h1 class="bold-mrgin"><img src="img/english/photo-gallery.png" class="img-responsive" alt="title"></h1>
           </div>
-        <!--
+          <!--
         <div class="title-name">
           <a ui-sref="gallery" class="color-primary"><h1  class="bold-mrgin">{{'Photo Gallery'|translate}}</h1></a>
         </div>-->
-      </div>
-    </section>
-  </div>
+        </div>
+      </section>
+    </div>
 
-</section>
+  </section>
 
-<!-- <section>
+  <!-- <section>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -34,39 +34,42 @@
     </div>
   </div>
 </section> -->
-<section class="mt70">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
+  <section class="mt70">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
           <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='en'">{{gallerycategory}}</h1>
           <h1 class="color-primary uppercase-text mobile-font-h1" ng-if="currentlang=='hi'">{{hindigallerycategory}}</h1>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="mb200 mt50">
-  <div class="container">
-    <div class="gallery-slider">
+  </section>
+  <section class="mb200 mt50">
+    <div class="container">
+      <div class="gallery-slider">
 
-      <div class="row">
-        <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-          <div class="slider">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+            <div class="slider">
 
 
-                  <div class="row" >
-                    <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="slide in slides track by $index">
-                      <div class="slider-imgholder">
-                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{slide.image | serverimage}}" title="{{gallery.alternate}}">
-                        <img ng-src="{{slide.image | serverimage}}" alt="{{gallery.alternate}}" class="img-responsive" alt="Jaipur Pink Panthers">
-                      </a>
-                      </div>
-                    </div>
+              <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3 img-slide-padding" ng-repeat="slide in slides track by $index">
+                  <div class="slider-imgholder">
+                    <a class="fancybox-thumb" fancybox-box fancybox-thumb data-fancybox="group" rel="thumbFancybox"
+                      href="{{slide.image | serverimage}}" title="{{gallery.alternate}}">
+                      <img ng-src="{{slide.image | serverimage}}" alt="{{gallery.alternate}}" class="img-responsive"
+                        alt="Jaipur Pink Panthers">
+                    </a>
                   </div>
 
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>

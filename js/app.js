@@ -530,26 +530,55 @@ firstapp.directive('onlyDigits', function () {
         }
     };
 });
-firstapp.directive('fancybox', function ($compile, $parse) {
+firstapp.directive('fancyboxBox', function ($document) {
     return {
         restrict: 'EA',
         replace: false,
+        link: function (scope, element, attr) {
+            var $element = $(element);
+            var target;
+            if (attr.rel) {
+                target = $("[rel='" + attr.rel + "']");
+            } else {
+                target = element;
+            }
+
+            target.fancybox({
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                closeBtn: true,
+                helpers: {
+                    media: {}
+                }
+            });
+        }
+    };
+});
+firstapp.directive('fancyboxThumb', function () {
+    return {
+        restrict: 'C',
+        replace: false,
         link: function ($scope, element, attrs) {
-            $element = $(element);
-            console.log("Checking Fancybox");
-            setTimeout(function () {
-                $(".various").fancybox({
-                    maxWidth: 800,
-                    maxHeight: 600,
-                    fitToView: false,
-                    width: '70%',
-                    height: '70%',
-                    autoSize: false,
-                    closeClick: false,
-                    openEffect: 'none',
-                    closeEffect: 'none'
-                });
-            }, 100);
+            $('.fancybox-thumb').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                loop: 'true',
+                arrows: 'true',
+                buttons: [
+                    'fullScreen',
+                    'thumbs',
+                    'close'
+                ],
+                thumbs: {
+                    axis: 'x'
+                },
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    }
+                }
+            });
+
         }
     };
 });

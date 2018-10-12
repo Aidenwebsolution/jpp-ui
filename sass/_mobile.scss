@@ -226,9 +226,11 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .view-slider .flexslider .flex-direction-nav .flex-next {
         right: -22px;
     }
+
     .head-table.head-position {
         position: static;
     }
+
     .bg-players .play-img {
         position: relative;
         width: 330px;
@@ -992,7 +994,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
 
     .cycle-mobile {
         display: block !important;
-        width: 55% !important;
+        width: 75% !important;
         margin: 0 auto !important;
     }
 
