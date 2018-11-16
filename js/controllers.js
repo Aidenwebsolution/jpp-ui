@@ -1828,37 +1828,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.season1 = [{
-                "img": "img/seasonfive/1.png",
+                "img": "img/seasonfive/Day-1.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
                 "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-puneri-paltan-and-bengal-warriors-vs-tamil-thalaivas-dec14-2018"
             },
             {
-                "img": "img/seasonfive/2.png",
+                "img": "img/seasonfive/Day-2.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
                 "slug": "vivo-pro-kabaddi-up-yoddha-vs-tamil-thalaivas-and-jaipur-pink-panthers-vs-u-mumba-dec15-2018"
             },
             {
-                "img": "img/seasonfive/3.png",
+                "img": "img/seasonfive/Day-3.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
                 "slug": "pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
             },
             {
-                "img": "img/seasonfive/4.png",
+                "img": "img/seasonfive/Day-4.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
                 "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-dabang-delhi-kc-dec20-2018"
             },
             {
-                "img": "img/seasonfive/5.png",
+                "img": "img/seasonfive/Day-5.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
                 "slug": "vivo-pro-kabaddi-bengaluru-bulls-vs-telugu-titans-and-jaipur-pink-panthers-vs-haryana-steelers-dec18-2018"
             },
             {
-                "img": "img/seasonfive/6.png",
+                "img": "img/seasonfive/Day-6.jpg",
                 "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017/event",
                 "slug": "vivo-pro-kabaddi-patna-pirates-vs-bengaluru-bulls-and-jaipur-pink-panthers-vs-gujarat-fortunegiants-dec19-2018"
