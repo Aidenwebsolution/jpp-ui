@@ -10,22 +10,46 @@
 <section>
 
   <div class="ticket_container container_fluid text-center ">
-    <img src="img/seasonfive/banner.png" class="img-responsive" style="margin-top:90px; border-bottom: 4px solid #4ecaf5;">
-    <img src="img/seasonfive/title.png" class="img-responsive" style="margin: 0 auto; display:inline-block; transform: translate(0,-50%); width: 30%;">
-    <div style="margin-top:-30px;"> Powered By :
-      <span><a href="https://paytm.com/" target="_blank">
-                <img  class="ticket-powered-img" src="img/seasonfive/paytm.png"></a> | 
-                <a href="https://insider.in" target="_blank">
-                  <img  class="ticket-powered-img" src="img/seasonfive/insider.png"></a>
+    <!-- <img src="img/seasonfive/banner.png" class="img-responsive" style="margin-top:90px; border-bottom: 4px solid #4ecaf5;"> -->
+    <img src="img/seasonfive/Banner_jpp_home.jpg" class="img-responsive" style="margin-top:90px; border-bottom: 4px solid #4ecaf5;">
+    <!-- <img src="img/seasonfive/title.png" class="img-responsive" style="margin: 0 auto; display:inline-block; transform: translate(0,-50%); width: 30%;"> -->
+    <img src="img/seasonfive/seasonn.png" class="img-responsive" style="margin: -17px auto; display:inline-block; transform: translate(0,-50%); width: 19%;">
+
+    <div class="marg-top" style="margin-top:-53px; position:relative">
+      <span>
+        <a href="http://m.p-y.tm/jppkl" target="_blank" class="bor-right">
+          <img class="ticket-powered-img1" src="img/seasonfive/paytm.png">
+        </a>
+        <span></span>
+        <a href="https://insider.in" target="_blank">
+          <img class="ticket-powered-img2" src="img/seasonfive/insider.png">
+        </a>
+      </span>
+
+
+    </div>
+
+
+    <!-- <div style="margin-top:-30px;"> Powered By :
+      <span>
+        <a href="https://paytm.com/" target="_blank">
+          <img class="ticket-powered-img" src="img/seasonfive/paytm.png">
+        </a> |
+        <a href="https://insider.in" target="_blank">
+          <img class="ticket-powered-img" src="img/seasonfive/insider.png">
+        </a>
       </span>
       <br class="visible-xxs" />
       <span> Mobility Partner :
-      <a href="https://www.uber.com" target="_blank">
-                <img  class="" src="img/seasonfive/uber.png" style="width:40px;"/></a>
-    </span>
-    </div>
+        <a href="https://www.uber.com" target="_blank">
+          <img class="" src="img/seasonfive/uber.png" style="width:40px;" />
+        </a>
+      </span>
+    </div> -->
     <div class="popupframe">
-      <div class="closebutton"> <img src="img/close.png" ng-click="closeiframe()"></div>
+      <div class="closebutton">
+        <img src="img/close.png" ng-click="closeiframe()">
+      </div>
       <div id="insider-embed">
 
       </div>
@@ -37,7 +61,7 @@
 
       <!-- <a href="{{x.url}}">  -->
       <img class="pointer ticket-bookticket ondesktop" ng-src="{{x.img}}" ng-click="openiframe(x)">
-      <img class="pointer ticket-bookticket onmob" ng-src="{{x.img1}}" ng-click="openiframe(x)">
+      <!-- <img class="pointer ticket-bookticket onmob" ng-src="{{x.img1}}" ng-click="openiframe(x)"> -->
       <!-- </a> -->
     </div>
     <div id="ticket-block" class="ticket-block" ng-repeat="x in season">
@@ -47,7 +71,9 @@
       <!-- </a> -->
     </div>
 
-    <a ui-sref="ticket-merchandise"><img src="img/seasonfive/merchandise.png" class="img-responsive" style="margin-top:50px;"></a>
+    <a ui-sref="ticket-merchandise">
+      <img src="img/seasonfive/merchandise.png" class="img-responsive" style="margin-top:50px;">
+    </a>
 
   </div>
 

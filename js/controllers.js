@@ -1828,50 +1828,74 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.season1 = [{
-                "img": "img/seasonfive/weekend.png",
-                "img1": "img/seasonfive/weekendm.png",
-                "url": " https://insider.in/event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23d14471f310206b81dab/Tickets",
-                "embed": "event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23d14471f310206b81dab/Tickets"
-            },
-            {
-                "img": "img/seasonfive/weekday.png",
-                "img1": "img/seasonfive/weekdaym.png",
-                "url": " https://insider.in/event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23ce7471f310206b81d93/Tickets",
-                "embed": "event/pro-kabaddi-league-2017-combo-passes-of-jaipur-pink-panthers/buy/shows/59b23ce7471f310206b81d93/Tickets"
-            }
-
-        ]
-        $scope.season = [{
                 "img": "img/seasonfive/1.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017"
+                "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-puneri-paltan-and-bengal-warriors-vs-tamil-thalaivas-dec14-2018"
             },
             {
                 "img": "img/seasonfive/2.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
-                "slug": "pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017"
+                "slug": "vivo-pro-kabaddi-up-yoddha-vs-tamil-thalaivas-and-jaipur-pink-panthers-vs-u-mumba-dec15-2018"
             },
             {
                 "img": "img/seasonfive/3.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
                 "slug": "pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
             },
             {
                 "img": "img/seasonfive/4.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
-                "slug": "pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017"
+                "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-dabang-delhi-kc-dec20-2018"
             },
             {
                 "img": "img/seasonfive/5.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
-                "slug": "pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017"
+                "slug": "vivo-pro-kabaddi-bengaluru-bulls-vs-telugu-titans-and-jaipur-pink-panthers-vs-haryana-steelers-dec18-2018"
             },
             {
                 "img": "img/seasonfive/6.png",
+                "img1": "img/seasonfive/weekendm.png",
                 "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017/event",
-                "slug": "pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017"
+                "slug": "vivo-pro-kabaddi-patna-pirates-vs-bengaluru-bulls-and-jaipur-pink-panthers-vs-gujarat-fortunegiants-dec19-2018"
             }
-        ];
+
+        ]
+        // $scope.season = [{
+        //         "img": "img/seasonfive/1.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-gujarat-fortune-giants-puneri-paltan-vs-bengal-warriors-oct6-2017/event",
+        //         "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-puneri-paltan-and-bengal-warriors-vs-tamil-thalaivas-dec14-2018"
+        //     },
+        //     {
+        //         "img": "img/seasonfive/2.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-haryana-steelers-vs-telugu-titans-jaipur-pink-panthers-vs-u-mumba-oct7-2017/event",
+        //         "slug": "vivo-pro-kabaddi-up-yoddha-vs-tamil-thalaivas-and-jaipur-pink-panthers-vs-u-mumba-dec15-2018"
+        //     },
+        //     {
+        //         "img": "img/seasonfive/3.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017/event",
+        //         "slug": "pro-kabaddi-tickets-gujarat-fortunegiants-vs-patna-pirates-jaipur-pink-panthers-vs-puneri-paltan-oct8-2017"
+        //     },
+        //     {
+        //         "img": "img/seasonfive/4.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-u-mumba-vs-tamil-thalaiva-jaipur-pink-panthers-vs-dabang-delhi-oct10-2017/event",
+        //         "slug": "vivo-pro-kabaddi-jaipur-pink-panthers-vs-dabang-delhi-kc-dec20-2018"
+        //     },
+        //     {
+        //         "img": "img/seasonfive/5.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-dabang-delhi-vs-bengaluru-bulls-jaipur-pink-panthers-vs-haryana-steelers-oct11-2017/event",
+        //         "slug": "vivo-pro-kabaddi-bengaluru-bulls-vs-telugu-titans-and-jaipur-pink-panthers-vs-haryana-steelers-dec18-2018"
+        //     },
+        //     {
+        //         "img": "img/seasonfive/6.png",
+        //         "url": "https://insider.in/pro-kabaddi-tickets-jaipur-pink-panthers-vs-up-yoddha-oct12-2017/event",
+        //         "slug": "vivo-pro-kabaddi-patna-pirates-vs-bengaluru-bulls-and-jaipur-pink-panthers-vs-gujarat-fortunegiants-dec19-2018"
+        //     }
+        // ];
 
         $scope.openiframe = function (x) {
             $(".popupframe").css("display", "block");
@@ -1883,12 +1907,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // $(window).scrollTop($("#ticket-block").offset().top);
 
             if (x.slug) {
-                console.log("slug");
+                console.log("slug", x.slug);
                 insiderEmbed.init({
                     mountId: 'insider-embed',
                     eventSlug: x.slug,
                     frameHeight: 650,
-                    merchantId: "5981711f07502f3d7b989f2e"
+                    merchantId: "5bdb15d9db6575001ae62ce6"
                 });
 
             } else {
@@ -1897,14 +1921,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     mountId: 'insider-embed',
                     embedPath: x.embed,
                     frameHeight: 650,
-                    merchantId: "5981711f07502f3d7b989f2e"
+                    merchantId: "5bdb15d9db6575001ae62ce6"
                 });
             }
             // insiderEmbed.init({      
             //     mountId  : 'insider-embed',
             //           eventSlug        : x.slug,
             //           frameHeight       : 650,
-            //           merchantId       : "5981711f07502f3d7b989f2e",
+            //           merchantId       : "5bdb15d9db6575001ae62ce6",
             //         
             // }); 
 
@@ -1924,7 +1948,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //         mountId  : 'insider-embed',
         //             embedPath: x.embed,
         //               frameHeight       : 650,
-        //               merchantId       : "5981711f07502f3d7b989f2e",
+        //               merchantId       : "5bdb15d9db6575001ae62ce6",
         //             
         //     }); 
 
