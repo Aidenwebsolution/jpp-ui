@@ -1387,10 +1387,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     }
     .onmob {
         display: block;
-    }
-    .ondesktop {
-        display: none;
-    }
+    } // .ondesktop {
+    //     display: none;
+    // }
     .appimageblock {
         /*margin-left: 75px;*/
         position: absolute;
@@ -1745,7 +1744,7 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     } // end footer
     // ticket 
     .ticket-block {
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
         padding: 10px;
     } //ticket
