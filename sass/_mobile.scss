@@ -1409,6 +1409,16 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
     .page-title {
         bottom: -30px;
     }
+    .head-menu {
+        li {
+            font-size: 14px;
+            text-align: center;
+            padding-left: 6px;
+        }
+    }
+    .pr8 {
+        padding: 0 8px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1834,6 +1844,9 @@ $screen-lg: 1200px !default; // @media only screen and (min-device-width: 1200px
         position: absolute;
         width: 2px;
         height: 24px;
+    }
+    .li-footer .h26 {
+        height: auto;
     }
 }
 
