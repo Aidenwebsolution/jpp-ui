@@ -129,8 +129,8 @@
         <ul class="list-inline lined" mycircle style="width:18000px;">
             <li>
                 <span class="color-pink bold">Top Fan Tweets:
-                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the loss.. We can do
-                anything if we believe truly ourselves
+                </span>@JaipurPanthers #RoarForPanthers #Panthers We shouldn't tell our weakness for the
+                loss.. We can do anything if we believe truly ourselves
                 <span>by @renceabishek</span>
             </li>
             <li>@JaipurPanthers @ProKabaddi . “Never let the fear of striking out get in your way.” roar like a panther n attack
@@ -431,10 +431,10 @@
                                     </ul>
                                 </div>
                                 <div class="text-center button-set">
-                                    <div class="text-center display-inline spacing-lr">
-                                        <!--ng-show="latestMatchOn"-->
-                                        <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn" ng-if="latestmatch.ishome==1" target="_blank">BOOK TICKETS</a>
-                                    </div>
+                                    <!-- <div class="text-center display-inline spacing-lr"> -->
+                                    <!--ng-show="latestMatchOn"-->
+                                    <!-- <a ng-href="{{latestmatch.bookticket}}" class="btn btn-sucess big-btn" ng-if="latestmatch.ishome==1" target="_blank">BOOK TICKETS</a> -->
+                                    <!-- </div> -->
                                     <div class="text-center display-inline spacing-lr">
                                         <!--ng-show="latestMatchOn"-->
                                         <a ng-href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}&dates={{calendarDate.from}}/{{calendarDate.to}}&location={{latestmatch.stadium | spaceToPlus}}&details={{latestmatch.team1 | spaceToPlus}}+vs+{{latestmatch.team2 | spaceToPlus}}+{{latestmatch.starttimedate | spaceToPlus}}+(IST)+{{latestmatch.stadium | spaceToPlus}}+http://jaipurpinkpanthers.com/&trp=true&pli=1&sf=true&output=xml#eventpage_6"
@@ -716,7 +716,7 @@
         <div class="row margin0">
             <div class="col-md-6 padding0">
                 <div class="by-ticket">
-                    <a ui-sref="ticket" ng-if="currentlang=='en'">
+                    <a ui-sref="ticket">
                         <img src="img/homes/buyticktes.jpg" alt="" class="full-image">
                     </a>
                     <!-- <a ui-sref="home" ng-if="currentlang=='hi'">
